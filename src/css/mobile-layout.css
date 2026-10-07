@@ -1,0 +1,258 @@
+/* MOBILE-UI-066: a small-screen layout layer. Desktop stage geometry and
+   the story battle's landscape layout remain owned by their existing sheets. */
+@media (max-width:899px), (max-height:520px) {
+  /* Dialogs scroll within the visible screen, including browser safe areas. */
+  .audio-overlay, .rules-overlay, .detail {
+    padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right))
+      max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));
+  }
+  .audio-modal, .rules-modal, .detail-card, .story-log-dialog {
+    box-sizing:border-box;
+    max-height:calc(100dvh - max(8px,env(safe-area-inset-top)) - max(8px,env(safe-area-inset-bottom)));
+    overflow:auto;
+    overscroll-behavior:contain;
+    padding:16px;
+  }
+  .audio-head, .rules-head {
+    top:-16px;
+    margin:-16px -16px 0;
+    padding:16px;
+    background:#102725;
+  }
+  .audio-head>div, .rules-head>div {min-width:0}
+  .audio-close, .rules-close {flex-shrink:0;min-width:44px;min-height:44px}
+  .audio-group {padding:12px}
+  .audio-label {font-size:14px}
+  .audio-label small, .audio-sub {font-size:12px}
+  .audio-value {font-size:14px}
+  .audio-range {min-height:44px;touch-action:pan-y}
+  .detail-actions {position:sticky;bottom:-16px;background:#102725;padding:12px 0;margin-top:12px}
+  .detail-actions button {min-height:44px;min-width:0;flex:1}
+  .detail-icon[data-portrait] {max-height:28dvh}
+  .rules-scroll {overscroll-behavior-x:contain}
+
+  /* The reading area yields space to the text instead of enforcing a tall
+     decorative spacer. Long choices remain scrollable at normal font size. */
+  .story-stage.story-performance {height:100dvh;min-height:100dvh}
+  .story-performance .story-stage-header {
+    flex-shrink:0;
+    padding-top:max(10px,env(safe-area-inset-top));
+    padding-left:max(12px,env(safe-area-inset-left));
+    padding-right:max(12px,env(safe-area-inset-right));
+  }
+  .story-performance .story-stage-space {min-height:24px;flex:1 1 auto}
+  .story-performance .story-stage-bottom {
+    flex:0 1 auto;
+    max-height:calc(100dvh - 160px);
+    overflow:auto;
+    overscroll-behavior:contain;
+    padding-top:24px;
+    padding-bottom:max(12px,env(safe-area-inset-bottom));
+  }
+  .story-performance .story-read-controls button {min-width:96px;min-height:44px}
+  .story-performance .story-stage-header h1 {margin:4px 0}
+  .story-performance button .story-key {display:none!important}
+
+  /* Free duel: keep the controls in the viewport; retain a real centre board
+     for drag/drop, visible resources, and the existing card proportions. */
+  body:has(.duel-screen.nd-stage) #app {
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:100dvh!important;
+    margin:0!important;
+    padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right))
+      max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))!important;
+    display:flex!important;
+    flex-direction:column;
+    gap:6px;
+    overflow:visible;
+  }
+  body:has(.duel-screen.nd-stage) #app>.topbar,
+  body:has(.duel-screen.nd-stage)>.audio-toggle {display:none!important}
+  #app .duel-screen.nd-stage {
+    /* Intrinsic rows are never compressed underneath their contents. On a
+       short viewport or with extra statuses, the page can scroll naturally. */
+    flex:1 0 auto!important;
+    height:auto!important;
+    min-height:min-content!important;
+    max-height:none!important;
+    padding:0!important;
+    margin:0!important;
+    gap:6px!important;
+    align-content:stretch!important;
+  }
+  #app .duel-screen.nd-stage>.duel-side {
+    width:100%!important;
+    min-height:min-content!important;
+    padding:8px!important;
+    align-self:stretch!important;
+    height:auto!important;
+  }
+  #app .duel-screen.nd-stage .duel-side-inner {
+    display:grid!important;
+    grid-template-columns:36px minmax(0,1fr)!important;
+    grid-template-areas:"portrait identity" "resources resources" "statuses statuses"!important;
+    gap:4px 8px!important;
+    padding:0!important;
+  }
+  #app .duel-screen.nd-stage .duel-avatar {width:36px!important;height:46px!important;min-height:0!important}
+  #app .duel-screen.nd-stage .duel-identity {flex-direction:column!important;align-items:flex-start!important;gap:0!important;border:0;padding:0}
+  #app .duel-screen.nd-stage .duel-name {font-size:16px!important;line-height:1.4!important;letter-spacing:1px}
+  #app .duel-screen.nd-stage .duel-owner {font-size:12px!important;letter-spacing:0}
+  #app .duel-screen.nd-stage .duel-hp {height:auto!important;min-height:0!important;gap:4px!important;flex-wrap:wrap}
+  #app .duel-screen.nd-stage .duel-hp strong {
+    min-width:0!important;
+    width:auto!important;
+    height:auto!important;
+    padding:0 6px!important;
+    font-size:22px!important;
+    line-height:1.25!important;
+  }
+  #app .duel-screen.nd-stage .duel-hpbar {height:6px!important;margin:3px 0!important}
+  #app .duel-screen.nd-stage .duel-shield-row {font-size:12px!important;line-height:1.5!important;gap:2px!important;margin:0!important}
+  #app .duel-screen.nd-stage .duel-shield-row strong {min-width:0;font-size:12px!important}
+  #app .duel-screen.nd-stage .duel-shield {display:none!important}
+  /* Status labels retain their full text. An unusually buff-heavy fighter
+     gets a horizontal status strip rather than pushing cards off screen. */
+  #app .duel-screen.nd-stage .duel-status-row {
+    gap:4px;margin:0;padding-top:4px;max-width:100%;flex-wrap:nowrap!important;
+    overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x;
+  }
+  #app .duel-screen.nd-stage .duel-status {font-size:12px;padding:2px 4px;flex:0 0 auto;white-space:nowrap}
+  #app .duel-screen.nd-stage .retro-arena,
+  #app .duel-screen.nd-stage .retro-board {height:100%!important;min-height:0!important;max-height:none!important;overflow:visible!important}
+  #app .duel-screen.nd-stage .retro-board {padding:8px 4px 20px!important;grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr)!important;gap:4px!important}
+  #app .duel-screen.nd-stage .retro-card-slot,
+  #app .duel-screen.nd-stage .retro-card-slot .card3d {width:64px!important;min-width:64px!important;max-width:64px!important;height:90px!important;max-height:90px!important;flex-basis:64px!important}
+  #app .duel-screen.nd-stage .retro-center {width:64px!important;min-width:64px!important;height:78px!important;min-height:0!important;padding:4px!important;transform:none!important;gap:4px!important}
+  #app .duel-screen.nd-stage .retro-center .round-mini {font-size:12px!important;line-height:1.3!important;letter-spacing:0!important}
+  #app .duel-screen.nd-stage .retro-center .vsx {font-size:24px!important}
+  #app .duel-screen.nd-stage .retro-card-slot.empty .slot-label {font-size:12px;letter-spacing:0;bottom:-20px}
+  #app .duel-screen.nd-stage>.duel-hand-panel,
+  #app .duel-screen.nd-stage .duel-hand {
+    min-height:0!important;
+    max-height:none!important;
+    height:100%!important;
+    margin:0!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  #app .duel-screen.nd-stage .duel-hand {display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important}
+  #app .duel-screen.nd-stage .duel-hand .card {
+    width:72px!important;min-width:72px!important;max-width:72px!important;
+    height:102px!important;max-height:102px!important;flex:0 0 72px!important;
+    margin:0!important;transform:none!important;
+  }
+  #app .duel-screen.nd-stage .duel-hand .card b {font-size:14px!important;letter-spacing:0!important}
+  #app .duel-screen.nd-stage .duel-hand:has(> :nth-child(4)) {
+    justify-content:flex-start!important;overflow-x:auto!important;overflow-y:hidden!important;
+    padding:4px!important;scroll-padding:4px;touch-action:pan-x;
+  }
+  #app .duel-screen.nd-stage .player-hand:has(> :nth-child(4))>.card {touch-action:pan-x!important}
+  #app .duel-screen.nd-stage .enemy-card-back {margin:0!important;transform:none!important}
+  body:has(.duel-screen.nd-stage) #app>.battle-dock {
+    flex:0 0 auto;
+    min-height:0!important;
+    margin:0!important;
+    padding:6px!important;
+    gap:4px!important;
+  }
+  body:has(.duel-screen.nd-stage) #app>.battle-dock button {min-height:44px!important;padding:8px!important}
+  body:has(.duel-screen.nd-stage) #app>.battle-dock .battle-state {font-size:12px!important;letter-spacing:0;line-height:1.4}
+}
+
+@media (max-width:899px) and (orientation:portrait) {
+  #app .duel-screen.nd-stage {
+    grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;
+    grid-template-rows:auto 44px minmax(116px,1fr) 110px!important;
+  }
+  body[data-environment] #app .duel-screen.nd-stage::before {inset:138px 0 0!important;transform:none}
+  #app .duel-screen.nd-stage .duel-hand .enemy-card-back {
+    width:30px!important;min-width:30px!important;max-width:30px!important;
+    height:42px!important;max-height:42px!important;flex:0 0 30px!important;
+  }
+  body:has(.duel-screen.nd-stage) #app>.battle-dock {display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto auto!important}
+  body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state {grid-column:1/-1!important;grid-row:1!important;text-align:center;padding:0 2px 2px}
+  body:has(.duel-screen.nd-stage) #app>.battle-dock>button {grid-row:2!important;grid-column:auto!important}
+}
+
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape) {
+  #app .duel-screen.nd-stage {grid-template-rows:auto minmax(94px,1fr) 94px!important;gap:4px!important}
+  #app .duel-screen.nd-stage>.duel-side {padding:6px!important}
+  #app .duel-screen.nd-stage .duel-side-inner {
+    grid-template-columns:36px minmax(0,1fr)!important;
+    grid-template-areas:"portrait identity" "portrait resources" "statuses statuses"!important;
+    gap:0 8px!important;
+  }
+  #app .duel-screen.nd-stage .duel-identity {flex-direction:row!important;align-items:baseline!important;gap:8px!important}
+  #app .duel-screen.nd-stage .duel-copy {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px}
+  #app .duel-screen.nd-stage .duel-hpbar {grid-column:1/-1;grid-row:2}
+  #app .duel-screen.nd-stage .duel-shield-row {gap:8px!important}
+  #app .duel-screen.nd-stage .duel-hand {gap:6px!important}
+  #app .duel-screen.nd-stage .retro-board {padding:0 4px!important}
+  #app .duel-screen.nd-stage .duel-hand .card,
+  #app .duel-screen.nd-stage .duel-hand .enemy-card-back {
+    width:64px!important;min-width:64px!important;max-width:64px!important;
+    height:90px!important;max-height:90px!important;flex:0 0 64px!important;
+  }
+  body:has(.duel-screen.nd-stage) #app>.battle-dock {grid-template-columns:auto minmax(0,1fr) auto auto!important;padding:3px 6px!important}
+  body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state {text-align:center}
+  .story-performance .story-stage-header {
+    display:grid;grid-template-columns:max-content minmax(0,1fr) max-content;
+    align-items:center;gap:8px;flex-wrap:nowrap;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:8px;
+  }
+  .story-performance .story-stage-header>div {grid-column:2;grid-row:1;order:0;width:auto;margin:0!important}
+  .story-performance .story-stage-header>button:first-child {grid-column:1;grid-row:1}
+  .story-performance .story-stage-header>button:last-child {grid-column:3;grid-row:1}
+  .story-performance .story-stage-header button {min-width:44px;padding-inline:12px}
+  .story-performance .story-stage-bottom {min-height:0;max-height:none;padding-top:22px}
+  .story-performance .story-dialogue-panel>.story-read-controls {position:sticky;bottom:0;z-index:1;background:#102725;padding:4px 0}
+}
+
+/* A rotated small phone cannot stack a HUD, board and full-size hand in
+   320px. Share the lower row between the board and the two hand trays.
+   If enlarged text or safe areas need more room, let the page grow instead
+   of compressing the HUD's grid row underneath the cards. */
+@media (max-height:340px) and (orientation:landscape) {
+  #app .duel-screen.nd-stage {
+    grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;
+    grid-template-rows:auto 36px 94px!important;
+  }
+  #app .duel-screen.nd-stage .retro-center {min-height:0!important;max-height:none!important}
+  #app .duel-screen.nd-stage .duel-copy {column-gap:4px}
+  #app .duel-screen.nd-stage .duel-shield-row {gap:4px!important}
+  #app .duel-screen.nd-stage .duel-hand .enemy-card-back {
+    width:24px!important;min-width:24px!important;max-width:24px!important;
+    height:34px!important;max-height:34px!important;flex:0 0 24px!important;
+  }
+}
+
+@media (max-width:620px) {
+  /* One complete portrait at a time; arrows and swipe retain the carousel. */
+  .setup-wrap {--hero-w:200px;--hero-h:284px}
+  .setup-wrap .setup-stage {grid-template-columns:minmax(0,1fr)!important;gap:18px}
+  .setup-stage .duel-side {padding:0 4px!important}
+  .setup-stage .vs-column {display:none}
+  .setup-stage .side-head {margin:0 0 8px}
+  .setup-stage .side-label {font-size:14px;letter-spacing:2px}
+  .setup-stage .carousel-nav {gap:16px}
+  .setup-wrap .carousel-arrow {width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}
+  .setup-stage .carousel-card .carousel-name {font-size:24px!important;bottom:66px}
+  .setup-stage .carousel-card .carousel-tag {font-size:12px!important;bottom:42px}
+  .setup-stage .carousel-card .carousel-hint {font-size:12px;bottom:18px}
+  .setup-wrap .choice-detail {max-width:none}
+  .setup-wrap .choice-detail summary {min-height:44px;box-sizing:border-box;font-size:14px}
+  .setup-wrap .choice-detail .detail-body {font-size:14px}
+  .setup-wrap .detail-pill {font-size:12px}
+  .setup-wrap .ai-choice {min-height:52px}
+  .setup-wrap .ai-choice .ai-name {font-size:16px}
+  .setup-wrap .ai-choice .ai-desc {font-size:14px}
+  .setup-footer .audio-settings-btn, .setup-footer .rules-btn {font-size:14px!important;min-height:44px!important}
+  .story-performance .story-stage-header>div {margin-top:2px}
+}
+
+@media (hover:none) and (pointer:coarse) {
+  .story-performance button .story-key, .story-performance button kbd {display:none!important}
+  #app .duel-screen.nd-stage .duel-hand .card:hover:not(:disabled) {transform:none!important}
+}
