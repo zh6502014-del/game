@@ -1,0 +1,1030 @@
+{
+  "schema": 1,
+  "dependency_groups": {
+    "browser": [
+      "*.js",
+      "*.css",
+      "*.html",
+      "assets/**",
+      "config/**",
+      "tests/*.cjs"
+    ]
+  },
+  "areas": {
+    "story-reading": {
+      "task": "章節閱讀、對話、進程與存檔",
+      "files": [
+        "story-campaign.js",
+        "story-campaign-data.js",
+        "story-mode.js",
+        "story-stage-assets.js",
+        "story-art.js",
+        "story-performance.css",
+        "story-stage.css",
+        "story-campaign.css",
+        "story-search-assets.js",
+        "skin-store.js"
+      ],
+      "globals": [
+        "NDStory.mount/resume",
+        "NDCampaign.nodes/encounters/snapshot/performanceState",
+        "NDStoryPerformances",
+        "NDStoryReadingGroups",
+        "NDStageAssets.resolve",
+        "NDSkins"
+      ],
+      "depends_on": [
+        "Nightfall-Duel-Story.html 載入順序",
+        "NDStorySearch",
+        "NDStoryPuzzles",
+        "NDStoryEnergyBattle",
+        "tests/story-test-helpers.cjs"
+      ],
+      "tests": [
+        "story-reading",
+        "story-skin-collection",
+        "story-dialogue",
+        "story-performance",
+        "story-campaign",
+        "story-storage",
+        "skin-store",
+        "story-layers",
+        "story-layers-art",
+        "story-skins"
+      ],
+      "limits": "閱讀/對話 terminal fixture 僅驗流程，需另選引擎／實戰測試才涉及規則。",
+      "priority_files": [
+        "story-campaign.js",
+        "story-campaign-data.js",
+        "story-mode.js",
+        "story-stage-assets.js",
+        "story-art.js",
+        "story-performance.css",
+        "story-stage.css",
+        "story-campaign.css",
+        "story-search-assets.js",
+        "skin-store.js",
+        "Nightfall-Duel-Story.html"
+      ]
+    },
+    "story-search": {
+      "task": "場景搜尋、放大、拖曳和命中",
+      "files": [
+        "story-search.js",
+        "story-search.css",
+        "story-search-assets.js"
+      ],
+      "globals": [
+        "NDStorySearch",
+        "NDStorySearchAssets"
+      ],
+      "depends_on": [
+        "story-campaign.js",
+        "story-stage-assets.js",
+        "story-puzzles.js",
+        "assets/story",
+        "tests/story-test-helpers.cjs"
+      ],
+      "tests": [
+        "story-search",
+        "story-interact-search",
+        "story-reading"
+      ],
+      "limits": "互動幾何、進度與中斷；不涵蓋所有故事狀態。"
+    },
+    "story-puzzles": {
+      "task": "拼圖和解謎回饋",
+      "files": [
+        "story-puzzles.js",
+        "story-puzzles.css",
+        "scripts/export-map-puzzles.py"
+      ],
+      "globals": [
+        "NDStoryPuzzles"
+      ],
+      "depends_on": [
+        "story-campaign.js",
+        "story-search.js",
+        "assets/story"
+      ],
+      "tests": [
+        "story-puzzles",
+        "story-puzzle-feedback",
+        "story-interact-puzzles",
+        "story-map-art"
+      ],
+      "limits": "原畫與 SVG 衍生素材另依美術工單 strict 檢查。"
+    },
+    "story-energy": {
+      "task": "獨立故事戰鬥引擎與呈現",
+      "files": [
+        "story-energy-engine.js",
+        "story-energy-ui.js",
+        "story-energy-ui.css",
+        "story-battle-fx.js",
+        "story-battle-fx.css",
+        "story-battle-sfx.js"
+      ],
+      "globals": [
+        "NDStoryEnergyEngine.create/legalActions/act/endTurn/skill/RULES",
+        "NDStoryEnergyBattle.start/snapshot/close",
+        "NDStoryBattleFx.bind/boss/devour/throwCard/trap/defeat/lethal/burnFlames/mirror/cardClasses/rosterVisible/TUNE（國王戰特效，見 docs/design/STORY-BATTLE-FX-029.md）"
+      ],
+      "depends_on": [
+        "story-campaign.js encounter 設定／完成回呼",
+        "純引擎不依赖 game.js、DOM 或存檔"
+      ],
+      "tests": [
+        "story-energy-engine",
+        "story-energy-frames",
+        "story-battle",
+        "story-energy-ui",
+        "story-energy-flow"
+      ],
+      "limits": "有限契約／合法行動樣本，不宣稱全狀態、最優策略或平衡證明。"
+    },
+    "duel-ui": {
+      "task": "對決、卡片、拖曳及共用版面",
+      "files": [
+        "game.js",
+        "game-art.js",
+        "card-art.js",
+        "icon-registry.js",
+        "png-frames.css",
+        "prestige-ui.css",
+        "styles.css",
+        "story-performance.css",
+        "card-surface.css",
+        "hud.css",
+        "unified-art.css",
+        "arena-finish.css",
+        "story-energy-ui.css",
+        "story-battle-fx.css",
+        "story-puzzles.css",
+        "story-search.css",
+        "story-stage.css",
+        "character-art.css",
+        "ui-controls.css",
+        "card-theme.css",
+        "story-campaign.css",
+        "index.html",
+        "art-gallery.html",
+        "icon-gallery.html",
+        "Nightfall-Duel-Story.html",
+        "frame-gallery.html",
+        "Nightfall-Duel-V12.12.39-Test.html",
+        "visual-system.css"
+      ],
+      "globals": [
+        "game.js script globals: S, render, startGame",
+        "NDVisuals",
+        "ND_CARD_ART",
+        "ND_ICON_DEFS"
+      ],
+      "depends_on": [
+        "HTML script/link 載入順序",
+        "所有 root CSS、JS",
+        "NDSkins",
+        "NDCombatFX",
+        "NDEnvironment"
+      ],
+      "tests": [
+        "smoke",
+        "ui-smoke",
+        "ui-controls",
+        "ui-consistency",
+        "css-check",
+        "drag-surface",
+        "drag-multitouch",
+        "card-drop-area",
+        "asset-versions",
+        "visual-system"
+      ],
+      "limits": "game.js 同時含規則與呈現；UI 工單不能默改 RNG/AI/傷害。固定 HTTP 舊測試只列人工候選。",
+      "priority_files": [
+        "game.js",
+        "game-art.js",
+        "card-art.js",
+        "icon-registry.js",
+        "png-frames.css",
+        "prestige-ui.css",
+        "styles.css",
+        "card-surface.css",
+        "hud.css",
+        "unified-art.css",
+        "arena-finish.css",
+        "character-art.css",
+        "ui-controls.css",
+        "card-theme.css",
+        "index.html",
+        "art-gallery.html",
+        "icon-gallery.html",
+        "frame-gallery.html",
+        "Nightfall-Duel-V12.12.39-Test.html",
+        "visual-system.css"
+      ]
+    },
+    "fx-audio": {
+      "task": "戰鬥特效、環境及音效",
+      "files": [
+        "game.js",
+        "combat-fx.js",
+        "environment.js",
+        "assets/coinFlip.wav",
+        "assets/audio/**"
+      ],
+      "globals": [
+        "NDCombatFX.play/cancel/freeShield",
+        "NDEnvironment.sync/leave/cancel/cast/playSkills",
+        "game.js globals: AudioBank, initAudio, toggleAudio, showAudioSettings"
+      ],
+      "depends_on": [
+        "game.js 已結算結果、AudioBank 與音量儲存",
+        "共用 CSS",
+        "assets/coinFlip.wav",
+        "assets/audio（未來新增時人工核對）"
+      ],
+      "tests": [
+        "art-effects",
+        "job-attacks",
+        "unified-art",
+        "ui-controls"
+      ],
+      "limits": "沒有獨立音訊聽感自動驗收；需人工測播放、音量、取消，呈現不能消耗戰鬥 RNG。"
+    },
+    "art-assets": {
+      "task": "本地 runtime 素材與衍生檔",
+      "files": [
+        "assets/**",
+        "scripts/slice-frames.py"
+      ],
+      "globals": [
+        "NDStoryArt",
+        "NDStageAssets",
+        "ND_CARD_ART"
+      ],
+      "depends_on": [
+        "config/art-budgets.json",
+        "docs/art-asset-budget.md",
+        "素材原稿／generation 記錄"
+      ],
+      "tests": [
+        "art-budget",
+        "story-stage-assets",
+        "story-art84",
+        "story-map-art",
+        "basic-art",
+        "card-back",
+        "png-frames",
+        "gallery-layout"
+      ],
+      "limits": "候選測試不代替本工單素材 strict budget／來源及視覺檢查。"
+    },
+    "workflow-tools": {
+      "task": "範圍、容量、資源版本與本工作流工具",
+      "files": [
+        "scripts/workflow.py",
+        "tests/workflow.py",
+        "config/workflow-map.json",
+        "scripts/check-change-scope.py",
+        "tests/change-scope.py",
+        "scripts/check-art-budget.py",
+        "tests/art-budget.py",
+        "config/art-budgets.json",
+        "scripts/version-assets.py",
+        "tests/asset-versions.py",
+        "tests/story-test-helpers.cjs"
+      ],
+      "globals": [],
+      "depends_on": [
+        "Python 標準庫",
+        "Node suites 需 node 在 PATH",
+        "瀏覽器需 Playwright/Chrome；環境未完整確證時人工核對"
+      ],
+      "tests": [
+        "workflow",
+        "change-scope",
+        "art-budget",
+        "asset-versions"
+      ],
+      "limits": "工具提供選測建議與證據，不自動 cache、跳過審查或更新資源。 run 使用 OS／Python／Node 明確白名單環境；launcher 其餘變數不傳入測試。priority_suites 僅供排序，不減少候選或自動跳測。"
+    }
+  },
+  "suites": {
+    "art-budget": {
+      "argv": [
+        "{python}",
+        "tests/art-budget.py"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "scripts/check-art-budget.py",
+        "config/art-budgets.json",
+        "assets/icons/*.svg"
+      ],
+      "timeout": 120,
+      "notes": "容量工具 fixture＋專案既有 icon；不是所有素材驗收。"
+    },
+    "art-effects": {
+      "argv": [
+        "{node}",
+        "tests/art-effects.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "asset-versions": {
+      "argv": [
+        "{python}",
+        "tests/asset-versions.py"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "scripts/version-assets.py",
+        "*.html",
+        "*.js",
+        "*.css"
+      ],
+      "timeout": 120,
+      "notes": "HTML 本機 JS/CSS 內容版本一致性。"
+    },
+    "basic-art": {
+      "argv": [
+        "{node}",
+        "tests/basic-art.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "card-back": {
+      "argv": [
+        "{node}",
+        "tests/card-back.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "change-scope": {
+      "argv": [
+        "{python}",
+        "tests/change-scope.py"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "scripts/check-change-scope.py"
+      ],
+      "timeout": 120,
+      "notes": "範圍工具暫存 fixture；不判斷語意授權。"
+    },
+    "css-check": {
+      "argv": [
+        "{node}",
+        "tests/css-check.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "card-drop-area": {
+      "argv": [
+        "{node}",
+        "tests/card-drop-area.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "game.js",
+        "card-surface.css",
+        "styles.css"
+      ],
+      "timeout": 600,
+      "notes": "40%可見卡面重疊門檻、合法目標、鬆手重算及清理；獨立Chrome測試，不驗戰鬥平衡。",
+      "requirements": "Node及Playwright可用，獨立origin／context；依測試檔入口設定執行。"
+    },
+    "drag-multitouch": {
+      "argv": [
+        "{node}",
+        "tests/drag-multitouch.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "drag-surface": {
+      "argv": [
+        "{node}",
+        "tests/drag-surface.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "flip-material": {
+      "argv": [
+        "{node}",
+        "tests/flip-material.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "flip-readback": {
+      "argv": [
+        "{node}",
+        "tests/flip-readback.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "gallery-layout": {
+      "argv": [
+        "{node}",
+        "tests/gallery-layout.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "hud-polish": {
+      "argv": [
+        "{node}",
+        "tests/hud-polish.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "job-attacks": {
+      "argv": [
+        "{node}",
+        "tests/job-attacks.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "physical-motion": {
+      "argv": [
+        "{node}",
+        "tests/physical-motion.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "png-frames": {
+      "argv": [
+        "{node}",
+        "tests/png-frames.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "prestige-layout": {
+      "argv": [
+        "{node}",
+        "tests/prestige-layout.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "skin-store": {
+      "argv": [
+        "{node}",
+        "tests/skin-store.cjs"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "story-art.js",
+        "skin-store.js",
+        "story-mode.js",
+        "story-campaign-data.js",
+        "story-campaign.js"
+      ],
+      "timeout": 120,
+      "notes": "VM 存檔相容案例，使用假 localStorage。"
+    },
+    "smoke": {
+      "argv": [
+        "{node}",
+        "tests/smoke.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-art84": {
+      "argv": [
+        "{python}",
+        "tests/story-art84.py"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "tests/story-stage-assets.py"
+      ],
+      "timeout": 600,
+      "notes": "相容轉接到 story-stage-assets；與原稿／Pillow 依賴一併人工執行。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-battle": {
+      "argv": [
+        "{node}",
+        "tests/story-battle.cjs"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "story-energy-engine.js",
+        "story-art.js",
+        "story-mode.js",
+        "story-campaign-data.js",
+        "story-campaign.js"
+      ],
+      "timeout": 120,
+      "notes": "實際 encounter 設定＋有限合法行動取樣；terminal fixture 分開列示。"
+    },
+    "story-campaign": {
+      "argv": [
+        "{node}",
+        "tests/story-campaign.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-dialogue": {
+      "argv": [
+        "{node}",
+        "tests/story-dialogue.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "test-results/change-scopes/STORY-DIALOGUE-010-before.json"
+      ],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-energy-engine": {
+      "argv": [
+        "{node}",
+        "tests/story-energy-engine.cjs"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "story-energy-engine.js"
+      ],
+      "timeout": 120,
+      "notes": "純引擎契約案例；不覆蓋瀏覽器或完整平衡。"
+    },
+    "story-energy-flow": {
+      "argv": [
+        "{node}",
+        "tests/story-energy-flow.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-energy-frames": {
+      "argv": [
+        "{node}",
+        "tests/story-energy-frames.cjs"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "story-energy-engine.js",
+        "test-results/change-scopes/STORY-BATTLE-UI-001-before.json"
+      ],
+      "timeout": 120,
+      "notes": "可信舊快照的引擎語意比較；保留原基線。"
+    },
+    "story-energy-ui": {
+      "argv": [
+        "{node}",
+        "tests/story-energy-ui.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-interact-puzzles": {
+      "argv": [
+        "{node}",
+        "tests/story-interact-puzzles.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-interact-search": {
+      "argv": [
+        "{node}",
+        "tests/story-interact-search.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-layers": {
+      "argv": [
+        "{node}",
+        "tests/story-layers.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-layers-art": {
+      "argv": [
+        "{node}",
+        "tests/story-layers-art.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-map-art": {
+      "argv": [
+        "{node}",
+        "tests/story-map-art.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-mode": {
+      "argv": [
+        "{node}",
+        "tests/story-mode.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "相容轉接到 story-campaign；請選 story-campaign 執行。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-performance": {
+      "argv": [
+        "{node}",
+        "tests/story-performance.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "docs/archive/design/STORY-READING-014-narrative.md"
+      ],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-puzzle-feedback": {
+      "argv": [
+        "{node}",
+        "tests/story-puzzle-feedback.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-puzzles": {
+      "argv": [
+        "{node}",
+        "tests/story-puzzles.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-skin-collection": {
+      "argv": [
+        "{node}",
+        "tests/story-skin-collection.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "tests/story-test-helpers.cjs"
+      ],
+      "timeout": 600,
+      "notes": "STORY-SKIN-016 收藏／獎勵呈現與存檔相容；獨立Chrome測試，非新Skin或戰鬥平衡驗收。",
+      "requirements": "Node及Playwright可用，獨立origin／context；依測試檔入口設定執行。"
+    },
+    "story-reading": {
+      "argv": [
+        "{node}",
+        "tests/story-reading.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "docs/archive/design/STORY-READING-014-narrative.md",
+        "test-results/change-scopes/STORY-READING-014-before.json"
+      ],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-search": {
+      "argv": [
+        "{node}",
+        "tests/story-search.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-skins": {
+      "argv": [
+        "{node}",
+        "tests/story-skins.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-stage-assets": {
+      "argv": [
+        "{python}",
+        "tests/story-stage-assets.py"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [
+        "tests/story-stage-assets.py"
+      ],
+      "timeout": 600,
+      "notes": "需要 Pillow、固定 Node 路徑及原稿/reference 素材；人工核對完整依賴後執行。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "story-storage": {
+      "argv": [
+        "{node}",
+        "tests/story-storage.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "text-zoom": {
+      "argv": [
+        "{node}",
+        "tests/text-zoom.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "ui-consistency": {
+      "argv": [
+        "{node}",
+        "tests/ui-consistency.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "ui-controls": {
+      "argv": [
+        "{node}",
+        "tests/ui-controls.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "ui-smoke": {
+      "argv": [
+        "{node}",
+        "tests/ui-smoke.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "CLI 不執行瀏覽器：需獨立 context、Playwright/Chrome 版本及測試 origin 人工核對；隔離瀏覽器流程／呈現案例；terminal fixture 不構成戰鬥規則或平衡覆蓋；OS 字型、瀏覽器套件仍需人工核對。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "unified-art": {
+      "argv": [
+        "{node}",
+        "tests/unified-art.cjs"
+      ],
+      "kind": "manual",
+      "groups": [
+        "browser"
+      ],
+      "dependencies": [],
+      "timeout": 600,
+      "notes": "需外部固定 HTTP origin／人工啟動與核對；CLI 不執行此舊入口。",
+      "requirements": "人工準備 Node/Python 相依套件、獨立測試 origin 與不覆寫既有 test-results 的輸出安排。"
+    },
+    "workflow": {
+      "argv": [
+        "{python}",
+        "tests/workflow.py"
+      ],
+      "kind": "deterministic",
+      "dependencies": [
+        "tests/workflow.py"
+      ],
+      "timeout": 120,
+      "notes": "工作流 CLI 的暫存假專案行為測試。"
+    },
+    "visual-system": {
+      "argv": [
+        "{node}",
+        "tests/visual-system.cjs"
+      ],
+      "kind": "manual",
+      "dependencies": [],
+      "groups": [
+        "browser"
+      ],
+      "timeout": 600,
+      "notes": "ART-UI-021 隔離瀏覽器呈現、圖片與主要互動；人工啟動，不代表全劇情與規則覆蓋。",
+      "requirements": "Node、Playwright與Chrome；localhost:8765；test-results/art-ui-021獨立證據。"
+    }
+  }
+}

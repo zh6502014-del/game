@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nightfall｜圖示規範與對照</title><link rel="stylesheet" href="ui-font.css?v=aa7a869c0ed9">
+<link rel="stylesheet" href="character-art.css?v=18eb7db030d7"><style>
+body{margin:0;background:#07171b!important;color:#d9bd82;font:14px/1.6 system-ui;padding:32px 24px}body::before{content:none!important}
+main{position:relative;max-width:1180px;margin:auto}h1,h2{font-family:Georgia,'Songti TC',serif;color:#f1e0b9;line-height:1.35}h1{font-size:32px;margin:8px 0 16px}h2{font-size:22px;margin:32px 0 12px}p{color:#b7c1b0;max-width:76ch;margin:8px 0 16px}
+a{color:#e4c78a;text-underline-offset:4px}a:focus-visible{outline:2px solid #f5dca1;outline-offset:3px}.gallery-links{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0}.gallery-links a{display:inline-flex;align-items:center;min-height:44px}
+.portraits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.role-pair{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:center;padding:16px;border:1px solid #a78d5866;background:#102624}.role-pair>img{width:56px;height:76px;object-fit:cover;object-position:center top;border:1px solid #9e864b}.role-pair p{margin:0;color:#d9bd82;font-size:12px}.role-pair span{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-height:32px}.role-pair small{color:#a5b5aa;font-size:12px}
+.icon-row{display:grid;grid-template-columns:128px minmax(0,1fr);gap:16px;align-items:center;padding:16px 0;border-top:1px solid #a78d5840}.icon-name{color:#f1e0b9;font-weight:600;overflow-wrap:anywhere}.icon-name code{display:block;font:12px/1.6 ui-monospace,monospace;color:#96aaa4;font-weight:400}.icon-samples{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px}.icon-sample{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}.icon-stage{display:grid;place-items:center;min-height:72px;width:100%;box-sizing:border-box;border:1px solid transparent;color:#d9bd82}.icon-stage.selected{background:#b6953020;border-color:#d9bd82}.icon-stage.disabled>.nd-icon{opacity:.38}.icon-sample small{font-size:12px;color:#a5b5aa;line-height:1.5;text-align:center}.icon-source{min-height:72px;width:100%;display:grid;place-items:center;border:1px solid #a78d582e;box-sizing:border-box}.icon-source img{width:24px;height:24px}footer{margin-top:32px;padding-top:16px;border-top:1px solid #a78d5840;color:#96aaa4;font-size:12px}
+@media(max-width:1000px){.portraits{grid-template-columns:repeat(2,minmax(0,1fr))}.icon-row{grid-template-columns:1fr;gap:12px}.icon-name code{display:inline;margin-left:12px}}
+@media(max-width:700px){body{padding:20px 16px}h1{font-size:27px}.icon-samples{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.icon-row{padding:20px 0}.role-pair{grid-template-columns:1fr;justify-items:center;padding:12px}.role-pair p{width:100%}.role-pair span{justify-content:center}.icon-name code{display:block;margin-left:0}}
+</style><link rel="stylesheet" href="visual-system.css?v=1ffd1bb7d49b">
+<main><h1>Nightfall · 圖示規範與對照</h1><p>古金雕刻 × 深墨綠琺瑯。44 款功能圖示共用 24×24 座標、1.75 主線、圓形端點與斜角接合。名稱保留文字，圖示不作為唯一資訊來源；徽章容器與裝飾邊框獨立處理。</p><nav class="gallery-links" aria-label="展示頁導覽"><a href="index.html">返回首頁</a><a href="art-gallery.html">卡面與環境</a><a href="frame-gallery.html">PNG 邊框</a></nav><h2>職業與招式分開辨識</h2><p>每組上方為職業，下方為技能。坦克、防禦與護盾同屬盾形語言，分別以內盾、勾記、加號區分。</p><div class="portraits"></div><h2>尺寸、狀態與 SVG 原檔</h2><p>每列包含 14／16／20／24／32／64px、選取、停用，以及獨立 SVG 原檔。14px 對應 HUD 小圖示；原檔應與 24px 內嵌版保持相同造型。</p><div class="grid"></div><footer>本頁檢查功能圖示；場地刻紋、肖像角飾等裝飾 SVG 使用各自畫布，不套用 24×24 功能圖示規格。</footer></main><script src="icon-registry.js?v=647fb39a9f0d"></script><script src="card-art.js?v=78a26988ac6b"></script>
+<script src="game-art.js?v=189e0b93d53c"></script>
+<script src="environment.js?v=dcab52c7a19d"></script><script>
+const roleSkills={swordsman:'slash',tank:'shield',assassin:'flash',gunner:'critical'};
+for(const [job,skill] of Object.entries(roleSkills)){
+ const pair=document.createElement('div');pair.className='role-pair';
+ const image=document.createElement('img');image.src=`assets/characters/${job}.webp`;image.alt='';
+ const labels=document.createElement('p');
+ for(const [key,type] of [[job,'職業'],[skill,'技能']]){
+  const line=document.createElement('span'),kind=document.createElement('small');kind.textContent=type;
+  line.append(NDVisuals.icon(key,24),kind,document.createTextNode(ND_ICON_DEFS[key].label));labels.append(line);
+ }
+ pair.append(image,labels);document.querySelector('.portraits').append(pair);
+}
+const groups=[
+ ['職業',['swordsman','tank','assassin','gunner']],
+ ['卡牌與招式',['attack','defense','dodge','slash','shield','flash','critical','spirit','domain']],
+ ['戰鬥狀態與結果',['hp','lock','burn','night','counter','steal','hit','miss','victory','defeat','draw','round','sun','seal']],
+ ['操作與導覽',['journal','rules','audio','mute','play','close','back','retry','copy','expand','collapse','left','right','selected','warning','card','settings']]
+];
+for(const [title,keys] of groups){
+ const group=document.createElement('section'),heading=document.createElement('h2');heading.textContent=title;group.append(heading);
+ for(const key of keys){
+  const definition=ND_ICON_DEFS[key],row=document.createElement('div');row.className='icon-row';row.dataset.iconKey=key;
+  const name=document.createElement('div');name.className='icon-name';name.textContent=definition.label;
+  const code=document.createElement('code');code.textContent=key;name.append(code);
+  const samples=document.createElement('div');samples.className='icon-samples';
+  for(const [label,size,state] of [...[14,16,20,24,32,64].map(size=>[`${size}px`,size,'']),['選取',24,'selected'],['停用',24,'disabled']]){
+   const sample=document.createElement('div');sample.className='icon-sample';
+   const stage=document.createElement('span');stage.className=`icon-stage ${state}`;stage.append(NDVisuals.icon(key,size));
+   const caption=document.createElement('small');caption.textContent=label;sample.append(stage,caption);samples.append(sample);
+  }
+  const source=document.createElement('div');source.className='icon-sample';
+  const link=document.createElement('a');link.className='icon-source';link.href=`assets/icons/${key}.svg`;link.setAttribute('aria-label',`${definition.label} SVG 原檔`);
+  const image=document.createElement('img');image.src=link.href;image.alt='';link.append(image);
+  const caption=document.createElement('small');caption.textContent='SVG 原檔';source.append(link,caption);samples.append(source);
+  row.append(name,samples);group.append(row);
+ }
+ document.querySelector('.grid').append(group);
+}
+</script></html>
