@@ -1,0 +1,16 @@
+{
+  "asset": "search-panel",
+  "toolMode": "built-in image_gen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept. Asset type: ONE standalone transparent removable cupboard cover panel for a dark fantasy hidden-object game. Primary request: a single loose rectangular wooden cover board that fits upright across the FRONT of a low desk cubby opening. This is a nearly VERTICAL furniture panel seen from a camera 25 degrees above the desk, so a thin top edge is visible. Do NOT make it a horizontal tabletop board or an isometric crate. Broad face about 1.55 times as wide as tall, frontal view with very mild oblique perspective; left vertical edge slightly larger than right, both sides nearly vertical. Dark aged walnut, three tightly joined horizontal planks inside a very narrow plain wooden perimeter; subtle rubbed amber highlights and shallow scratches matching an old rustic writing desk. No holes or gaps between planks; fully opaque concealment face. A small carved fingertip notch on the upper-right edge indicates this panel can be removed, no big handle, no hinges, no lock, no door frame or cabinet body. Modest wood edge thickness, no elaborate ornament. Soft warm light from upper LEFT, weak cool fill from RIGHT. Semi-realistic painterly dark fantasy material. Single complete panel centered on genuinely transparent alpha background with small clean margin, approximately 512x512 small asset. No room, tabletop, shelf, recorder, object behind it, hands, writing, symbols, UI or watermark. No cast shadow beyond the physical board, no ground shadow, no glow. Exactly one cover panel, no sprite sheet.",
+  "inputImages": [],
+  "artistReviewedReferences": [
+    "assets/story/backgrounds/search-lab.webp",
+    "assets/story/backgrounds/search-hideout.webp",
+    "assets/story/props/paper.webp",
+    "assets/story/props/gun-0.webp"
+  ],
+  "referenceUse": "Files visually inspected for perspective, palette and lighting; no image inputs supplied for new generation",
+  "targetSize": "approximately 512x512, tool determines actual source dimensions",
+  "viewpoint": "near-vertical cubby front, viewer above 25 degrees"
+}

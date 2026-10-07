@@ -1,0 +1,16 @@
+{
+  "asset": "search-cloth",
+  "toolMode": "built-in image_gen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept. Asset type: ONE standalone transparent movable tool-cloth sprite for a dark fantasy hidden-object game. Primary request: a SINGLE broad old workshop cloth loosely spread across an invisible horizontal tabletop, used to cover three small tools beneath it. Camera about 25 degrees above the tabletop, shallow downward oblique angle, NOT straight overhead and NOT front-hanging fabric. Broad low foreshortened footprint, approximately twice as wide as its visible height. Deep muted blue-green/charcoal woven cloth with a narrow faded brown hem, some soft low folds and one front-right corner curling slightly upward as a grasp point. It remains a broad solid continuous covering with no holes and no internal transparency. Low mound-like folds are okay but do NOT show or imprint gun parts underneath. Dark fantasy painterly fabric with visible subtle fibers and worn edge, restrained antique palette. Soft warm light from upper LEFT, subdued cool fill from RIGHT, no luminous pattern, no embroidery motifs, no writing. Center complete cloth on genuine transparent alpha, small clear margin; target small approximately 512x512 canvas. Exactly one cloth, no folded stack, no hands, no tools, no gun, no background or tabletop. No cast or ground shadow outside the physical cloth, no aura, no UI, no labels, no watermark, no sprite sheet. Game code will slide this same cloth away; generate only one covering state.",
+  "inputImages": [],
+  "artistReviewedReferences": [
+    "assets/story/backgrounds/search-lab.webp",
+    "assets/story/backgrounds/search-hideout.webp",
+    "assets/story/props/paper.webp",
+    "assets/story/props/gun-0.webp"
+  ],
+  "referenceUse": "Files visually inspected for perspective, palette and lighting; no image inputs supplied for new generation",
+  "targetSize": "approximately 512x512, tool determines actual source dimensions",
+  "viewpoint": "lies flat on tabletop, camera 25 degrees above tabletop"
+}
