@@ -1,0 +1,48 @@
+/* STORY-FRAMES-031: story mode wears the same engraved metal frames as the card duel.
+   Reuses assets/frames/v2 through the --frame-* tokens in png-frames.css; no new art.
+   Load after visual-system.css (it flattens button borders and sets plain dialog borders).
+   Tuning: --sf-w is the frame thickness; surfaces that scroll keep the frame on the dialog itself,
+   buttons that cannot take a border-image (they are reset on purpose) draw it on ::before instead. */
+:root{--sf-w:16px;--sf-pad:22px}
+@media(max-width:700px){:root{--sf-w:10px;--sf-pad:14px}}
+
+/* Containers: direct nine-slice border. */
+.story-shell .story-overall,
+.story-shell .story-puzzle-list,
+.story-shell .story-reader,
+.story-shell .story-skin,
+.puzzle-dialog,.story-search-dialog,.story-route-dialog,.story-maze-dialog,.story-lightbox,
+.story-energy-overlay .seb-modal,.story-energy-overlay .seb-result{
+ border:1px solid #a78d58!important;border-radius:0!important;
+ border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;
+ border-image-width:var(--sf-w)!important;border-image-repeat:repeat!important;border-image-outset:0!important;
+}
+/* Frame overlaps the padding, so give each surface room to clear it. */
+.story-shell .story-overall{padding:calc(var(--sf-w) + 6px) calc(var(--sf-w) + 10px);box-shadow:var(--visual-shadow)}
+.puzzle-dialog,.story-search-dialog,.story-route-dialog,.story-maze-dialog,.story-lightbox{padding:max(var(--sf-pad),calc(var(--sf-w) + 6px))}
+.story-energy-overlay .seb-modal,.story-energy-overlay .seb-result{padding:calc(var(--sf-w) + 10px)}
+.story-shell .story-skin{overflow:hidden}
+.story-shell .story-skin>img{margin:calc(var(--sf-w) - 4px) calc(var(--sf-w) - 4px) 0;width:calc(100% - 2*(var(--sf-w) - 4px))}
+
+/* Chapter cards are buttons: draw the frame on a non-interactive overlay with the hero frame, exactly how duel cards do it. */
+.story-shell .campaign-node-grid button{position:relative;border-color:#a78d58!important;border-radius:0;padding:calc(var(--sf-w) + 10px) calc(var(--sf-w) + 14px)}
+.story-shell .campaign-node-grid button::before{
+ content:"";position:absolute;inset:0;box-sizing:border-box;pointer-events:none;z-index:1;
+ border:1px solid #a78d58;border-radius:0;
+ border-image-source:var(--frame-hero);border-image-slice:var(--frame-hero-slice);
+ border-image-width:calc(var(--sf-w) - 2px);border-image-repeat:repeat;border-image-outset:0;
+}
+.story-shell .campaign-node-grid button:disabled{border-style:solid}
+.story-shell .campaign-node-grid button:disabled::before{opacity:.55;filter:saturate(.6)}
+.story-shell .campaign-node-grid button:not(:disabled):hover::before{filter:brightness(1.18)}
+.story-shell .campaign-node-grid button:not(:disabled)::after{right:calc(var(--sf-w) + 8px);bottom:calc(var(--sf-w) + 4px)}
+
+/* Dialogue / reward panels in the performance stage (the frame itself is set in story-performance.css). */
+.story-performance .story-stage-panel.story-dialogue-panel{padding:calc(var(--sf-w) + 6px) calc(var(--sf-w) + 14px)}
+@media(max-width:600px){
+ .story-performance .story-stage-panel.story-dialogue-panel{padding:calc(var(--sf-w) + 4px) calc(var(--sf-w) + 6px)}
+}
+
+/* SIDEQUEST-UI-054: log dialogs (線索紀錄, 已讀故事紀錄) keep their close button at the top right, pinned while the list scrolls,
+   the same place every side-game dialog puts it. It is the first child so it sticks from the start. */
+dialog.story-log-dialog>[data-close]{position:sticky;top:calc(var(--sf-w) + 2px);z-index:2;float:right;min-width:72px;margin:0 0 8px 12px}

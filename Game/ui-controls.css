@@ -1,0 +1,77 @@
+/* Shared control component. Loaded after the legacy theme and PNG frame layer.
+   Only .nd-control opts in; card faces, artwork and puzzle hit targets stay separate. */
+:root{
+ --nd-control-size:44px;
+ --nd-icon-action:20px;
+ --nd-control-gap:8px;
+ --nd-control-ink:#102725;
+ --nd-control-text:#eedbb2;
+ --nd-control-gold:#c9ac72;
+ --nd-control-edge:#a78d586b;
+}
+.nd-control{
+ box-sizing:border-box;min-height:var(--nd-control-size)!important;
+ display:inline-flex!important;align-items:center;justify-content:center;
+ gap:var(--nd-control-gap);line-height:1.5;vertical-align:middle;
+}
+.nd-control>.nd-icon{
+ width:var(--nd-icon-action);height:var(--nd-icon-action);
+ flex:0 0 var(--nd-icon-action);margin:0;vertical-align:middle;
+}
+.nd-control:not(.start){
+ padding:8px 16px;border:1px solid var(--nd-control-edge);
+ border-radius:4px;background:linear-gradient(#263e35,var(--nd-control-ink));
+ color:var(--nd-control-text);box-shadow:inset 0 1px #ead69d1a,0 2px 4px #0004;
+ text-decoration:none;cursor:pointer;
+}
+.nd-control:not(.start):hover:not(:disabled){background:linear-gradient(#37503e,#19352f);border-color:var(--nd-control-gold)}
+.nd-control:focus-visible,.audio-range:focus-visible{outline:2px solid #f5dca1;outline-offset:3px}
+.nd-control:disabled{opacity:.45;cursor:not-allowed}
+.nd-control.nd-icon-button{
+ width:var(--nd-control-size)!important;min-width:var(--nd-control-size)!important;
+ height:var(--nd-control-size)!important;min-height:var(--nd-control-size)!important;
+ padding:0!important;flex:none;gap:0;border-radius:4px;
+}
+.audio-toggle.nd-control{border-radius:12px;background:#102725ed;color:var(--nd-control-text);opacity:1}
+.setup-footer .nd-control:not(.start),.result-screen>.audio-settings-btn.nd-control{font-size:12px!important;letter-spacing:.5px}
+.audio-actions>.nd-control,.detail-actions>.nd-control:not(.start),.copy-log-btn.nd-control,.story-battle-banner>.nd-control,.story-log-dialog>.nd-control{font-size:14px;letter-spacing:0}
+.result-screen>.nd-control{display:flex!important;width:min(350px,100%);margin:16px auto;white-space:normal}
+.story-header>a.nd-control{min-width:44px;font-size:14px;padding:8px 12px;box-shadow:none;background:transparent;border-color:transparent}
+.story-battle-banner{display:flow-root}
+.story-battle-banner>.nd-control{margin:0 0 8px 16px}
+.rules-title,.audio-title{display:flex;align-items:center;gap:8px}
+.rules-title>.nd-icon,.audio-title>.nd-icon{flex:none;width:24px;height:24px}
+.detail-pill{display:inline-flex;align-items:center;gap:4px}
+.detail-pill>.nd-icon{width:16px;height:16px;flex:none}
+/* Keep the native slider's keyboard/pointer behavior, with a generous touch target. */
+.audio-range{height:var(--nd-control-size);margin:0;accent-color:var(--nd-control-gold);background:transparent}
+.audio-value{font-size:12px;line-height:1.5;min-width:4ch;white-space:nowrap}
+@media(max-width:700px){
+ .audio-actions{flex-wrap:wrap}
+ .audio-actions>.nd-control{flex:1 1 160px;min-width:0}
+ .story-header{gap:8px}
+ .story-header>a.nd-control{padding:8px}
+}
+
+/* 2026-09-28 故事頁導覽：返回連結靠左、功能分頁群組靠右，不再平均撐開造成大空隙。 */
+.story-header{justify-content:flex-start;gap:10px}
+.story-header>a+button{margin-left:auto}
+@media(max-width:620px){
+ .story-header{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px 6px}
+ .story-header>a:first-child{grid-column:1/3;justify-self:start}
+ .story-header>a:nth-child(2){grid-column:3/6;justify-self:end}
+ .story-header>a+button{margin-left:0}
+ .story-header>button{min-width:0;padding:8px 2px;font-size:12px;white-space:nowrap}
+}
+
+/* 2026-09-28 可讀性：出牌限制提示、狀態徽章說明、回合結算摘要、章節解鎖條件 */
+.nd-hint-toast{position:fixed;z-index:9000;max-width:min(320px,calc(100vw - 16px));padding:8px 12px;border:1px solid #c9a96a;border-radius:4px;background:#07181af2;color:#f3e6c4;font-size:13px;line-height:1.5;box-shadow:0 8px 20px #000a;pointer-events:none;animation:nd-hint-in .16s ease-out}
+@keyframes nd-hint-in{from{opacity:0;translate:0 4px}to{opacity:1;translate:0 0}}
+.nd-status-tip{font:inherit;color:inherit;cursor:help;appearance:none;-webkit-appearance:none}
+.nd-status-tip:focus-visible{outline:2px solid #f5dca1;outline-offset:2px}
+.duel-hand .card[disabled]{cursor:not-allowed}
+.nd-round-summary{position:absolute;left:50%;top:calc(100% + 8px);translate:-50% 0;display:flex;gap:6px;white-space:nowrap;pointer-events:none;animation:nd-hint-in .2s ease-out}
+.nd-round-summary>span{display:flex;align-items:baseline;gap:4px;padding:3px 8px;border:1px solid #b89a5c80;border-radius:3px;background:#06141acc;color:#f1e2bd;font-size:12px;font-weight:600}
+.nd-round-summary small{color:#b8a987;font-weight:400;font-size:10px}
+.campaign-lock-reason{display:block;margin-top:4px;font-style:normal;font-size:12px;color:#f4dc9f}
+@media(prefers-reduced-motion:reduce){.nd-hint-toast,.nd-round-summary{animation:none}}
