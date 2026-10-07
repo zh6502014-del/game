@@ -1,0 +1,346 @@
+{
+  "name": "Nightfall Duel Skill FX v3",
+  "texture_size": [
+    1024,
+    1024
+  ],
+  "coordinate_system": "Top-left origin, pixels; x/y inclusive, width/height sizes. Crop each supplied rectangle; smoke and rock sheets have unequal row spacing.",
+  "assets": [
+    {
+      "file": "fx-dust-burst.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-rock-debris.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 341,
+          "height": 546
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "x": 341,
+          "y": 0,
+          "width": 342,
+          "height": 546
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "x": 683,
+          "y": 0,
+          "width": 341,
+          "height": 546
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "x": 0,
+          "y": 546,
+          "width": 341,
+          "height": 478
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "x": 341,
+          "y": 546,
+          "width": 342,
+          "height": 478
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "x": 683,
+          "y": 546,
+          "width": 341,
+          "height": 478
+        }
+      ]
+    },
+    {
+      "file": "fx-crystal-spikes.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-ground-fissure.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-crystal-shackle.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-shadow-smoke.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-smoke-wisps.png",
+      "background": "transparent-alpha",
+      "compositing": "source-over",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 287
+        },
+        {
+          "index": 2,
+          "row": 2,
+          "column": 1,
+          "x": 0,
+          "y": 287,
+          "width": 1024,
+          "height": 227
+        },
+        {
+          "index": 3,
+          "row": 3,
+          "column": 1,
+          "x": 0,
+          "y": 514,
+          "width": 1024,
+          "height": 253
+        },
+        {
+          "index": 4,
+          "row": 4,
+          "column": 1,
+          "x": 0,
+          "y": 767,
+          "width": 1024,
+          "height": 257
+        }
+      ]
+    },
+    {
+      "file": "fx-sword-arc.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-gold-shockwave.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-gold-motes.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 341,
+          "height": 341
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "x": 341,
+          "y": 0,
+          "width": 342,
+          "height": 341
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "x": 683,
+          "y": 0,
+          "width": 341,
+          "height": 341
+        },
+        {
+          "index": 4,
+          "row": 2,
+          "column": 1,
+          "x": 0,
+          "y": 341,
+          "width": 341,
+          "height": 342
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 2,
+          "x": 341,
+          "y": 341,
+          "width": 342,
+          "height": 342
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 3,
+          "x": 683,
+          "y": 341,
+          "width": 341,
+          "height": 342
+        },
+        {
+          "index": 7,
+          "row": 3,
+          "column": 1,
+          "x": 0,
+          "y": 683,
+          "width": 341,
+          "height": 341
+        },
+        {
+          "index": 8,
+          "row": 3,
+          "column": 2,
+          "x": 341,
+          "y": 683,
+          "width": 342,
+          "height": 341
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 3,
+          "x": 683,
+          "y": 683,
+          "width": 341,
+          "height": 341
+        }
+      ]
+    },
+    {
+      "file": "fx-resonance-orb.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    },
+    {
+      "file": "fx-resonance-ripple.png",
+      "background": "#000000",
+      "compositing": "screen / additive",
+      "frames": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        }
+      ]
+    }
+  ]
+}
