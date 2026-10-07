@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "task": "STORY-SEARCH-001-backgrounds",
+  "tool": "built-in image_gen",
+  "runtimeBudgetBytesPerFile": 460800,
+  "runtimeBudgetBytesTotal": 921600,
+  "backgrounds": [
+    {
+      "id": "search-lab",
+      "title": "研究工作臺・尋物共用底圖",
+      "usage": [
+        "E2 文件搜尋",
+        "E3 武器零件搜尋"
+      ],
+      "path": "assets/story/backgrounds/search-lab.webp",
+      "prompt": "Use case: illustration-story. Asset: reusable close-view hidden-object game BACKGROUND plate, opaque landscape 16:9, target around 1536x864 pixels, no need for larger rendering. Input image 1 is STYLE AND MATERIAL REFERENCE ONLY, not the composition. Create one near view of an old research workbench in this same semi-realistic dark gothic fantasy laboratory. Camera is gently looking down at about 25 degrees so the player clearly sees most of the tabletop. Broad dark worn wood and muted ink-green leather inset tabletop fills approximately 75 percent of the frame, from 12 to 94 percent width and 24 to 92 percent height. A narrow strip of old stone wall and dark bookcase edges provides depth at the very back; no distant room vista. Antique brass edging and small fixed fittings, refined but weathered, calm low-contrast detail. Very sparse non-target decorative clutter only at the far rear corners: a simple closed dark ceramic cup and an unlabelled brown glass jar, both small. Keep broad uninterrupted open tabletop at left-center and center for separate paper or component sprites; keep the tabletop right area entirely open for a separately added lamp sprite. Soft warm diffuse light from OFFSCREEN upper left, subtle cool blue ambient light, evenly readable surface, no harsh pool or circular halo. Important: DO NOT draw any paper, sheet, document, scroll, book lying on the table, blueprint, design diagram, gun, weapon components, machinery parts, crystals, crystal core, recorder, recording equipment, lamp, lantern, candle, flame, cast shadow of any absent target object, or glow for an absent object. No human, hand, face, letters, numbers, text, UI, frame, watermark. Background only: all collectable/interactable target objects will be composited later, so do not pre-paint them or their shadows.",
+      "refs": [
+        "assets/story/backgrounds/lab.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-8f711d3f-0ddd-4b4b-aef9-f6806d9ad6c0.png",
+      "originalPath": "storage/source-art/STORY-SEARCH-001-backgrounds/search-lab.png",
+      "status": "complete",
+      "composition": {
+        "tabletop": {
+          "x": [
+            7,
+            95
+          ],
+          "y": [
+            30,
+            74
+          ]
+        },
+        "safePlacement": {
+          "x": [
+            12,
+            90
+          ],
+          "y": [
+            34,
+            70
+          ]
+        },
+        "suggestedPaperParts": {
+          "x": [
+            20,
+            64
+          ],
+          "y": [
+            40,
+            66
+          ]
+        },
+        "suggestedLampCenter": {
+          "x": 79,
+          "y": 50
+        },
+        "coordinates": "percentage of full uncropped image"
+      },
+      "visualQA": "Original inspected: no target papers, plans, weapons/components, crystal/core, recorder or lamps; no target shadows or glow. Non-target cup/jar at rear left and decorative armillary at upper right. Main tabletop clear.",
+      "original": {
+        "path": "storage/source-art/STORY-SEARCH-001-backgrounds/search-lab.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2333308,
+        "sha256": "6923e32dd0dcd74bf75f15f8a9b85c51e342372c955ce22c3eedcb4f6f5f722e"
+      },
+      "runtime": {
+        "path": "assets/story/backgrounds/search-lab.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 175806,
+        "sha256": "4e5244614ef73e25b83508c540844720105174abc72f241d499d1694fe7b0087"
+      },
+      "derivative": {
+        "tool": "Pillow 12.3.0",
+        "operation": "proportional thumbnail then WebP",
+        "maxDimensions": [
+          1536,
+          864
+        ],
+        "resampling": "LANCZOS",
+        "mode": "RGB",
+        "format": "WEBP",
+        "quality": 83,
+        "method": 6,
+        "crop": false,
+        "upscale": false
+      }
+    },
+    {
+      "id": "search-hideout",
+      "title": "藏身處桌面與開放櫃格・尋物共用底圖",
+      "usage": [
+        "C9 紀錄器搜尋",
+        "C9 點燈"
+      ],
+      "path": "assets/story/backgrounds/search-hideout.webp",
+      "prompt": "Use case: illustration-story. Asset: reusable close-view hidden-object game BACKGROUND plate, opaque landscape 16:9, target around 1536x864 pixels, no need for larger rendering. Input image 1 is STYLE AND MATERIAL REFERENCE ONLY. Create a near view of an old wooden work desk with an open cubby compartment on the left in the same quiet gothic stone hideout. Camera gently looking down about 25 degrees so the player can inspect the tabletop. Composition: a broad dark worn wood tabletop across center and right, approximately x36-96 percent and y33-84 percent. At the lower-left beside the main surface, built into the side of the desk, one clearly visible open cubby shelf approximately x12-40 percent and y57-85 percent, facing the viewer with a wide flat empty shelf base at around y77 percent. This cubby is fully OPEN with no door and no front obstruction; suitable to add a separate small recorder sprite later at center x27 percent y71 percent, but DO NOT include a recorder now. The right tabletop region x66-90 percent y35-69 percent must be empty, for a separate small oil lamp sprite later at x78 percent y48 percent, but DO NOT include any lamp, flame, lamp shadow, or lamp glow now. Tiny non-target clutter only at the back: a simple shallow ceramic bowl with nothing in it and a short folded dark-green cloth near the upper middle edge. A narrow strip of worn stone wall and old wooden furniture in the back, subtle gothic bronze hardware. Mostly clear tabletop, clearly readable cubby interior, no distracting large foreground object. Soft warm diffuse light arrives from OFFSCREEN upper left, low cool blue ambient fill, no black void in the cubby, no visible light source. Semi-realistic dark fantasy illustration matching image 1, antique gold and ink-green, worn natural materials. Important: no paper, sheet, document, scroll, map, blueprint, design diagram, books lying on the table, gun, weapon components, machinery parts, crystals, crystal core, recorder, recording device, lamp, lantern, candle, flame, cast shadow or localized glow for any absent target object. No people, faces, hands, animals, written text, letters, numbers, UI, frame or watermark. This background must not contain ANY of the separately composited quest objects.",
+      "refs": [
+        "assets/story/backgrounds/shelter.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-619ba0ba-a105-4bbb-8a0b-709c63d2e66e.png",
+      "originalPath": "storage/source-art/STORY-SEARCH-001-backgrounds/search-hideout.png",
+      "correction": {
+        "prompt": "Use case: precise-object-edit. This image is a layered hidden-object game background. Make exactly one local content correction: remove the cropped tall bulbous brass pedestal/vase visible at the upper edge around x18 percent (between the small lidded container and the stone wall). Replace that small area naturally with the stone wall and wood behind it. This object can be mistaken for part of the interactive lamp, so it must be absent. Keep the entire rest of the image unchanged: identical camera, desk geometry, tabletop textures, empty left open cubby, tabletop empty space, ceramic bowl, small folded cloth, muted antique gold/ink-green palette, lighting and proportions. Do not add any lamp, candle, lantern, flame, glow, lamp shadow, paper, document, plan, weapon parts, crystal core or recorder. No new objects, text, people or UI. Landscape 16:9, output around1536x864 if available.",
+        "referenceSource": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-986f1c2f-2d78-4bb7-9376-217510d645c7.png",
+        "reason": "Remove cropped brass pedestal to avoid ambiguity with a lamp; unchanged composition."
+      },
+      "status": "complete",
+      "composition": {
+        "tabletopSafePlacement": {
+          "x": [
+            43,
+            94
+          ],
+          "y": [
+            27,
+            59
+          ]
+        },
+        "cubbyOpening": {
+          "x": [
+            8,
+            40
+          ],
+          "y": [
+            43,
+            86
+          ]
+        },
+        "cubbyBase": {
+          "x": [
+            10,
+            37
+          ],
+          "y": [
+            60,
+            80
+          ]
+        },
+        "suggestedRecorderCenter": {
+          "x": 27,
+          "y": 70
+        },
+        "suggestedLampCenter": {
+          "x": 78,
+          "y": 48
+        },
+        "coordinates": "percentage of full uncropped image"
+      },
+      "visualQA": "Final original inspected: no target papers, plans, weapon components, core, recorder or lamps; no target shadows/glow. Left open cubby fully accessible without an additional foreground layer, broad empty tabletop on right. Background decoration restricted to container/bowl/cloth/storage boxes.",
+      "original": {
+        "path": "storage/source-art/STORY-SEARCH-001-backgrounds/search-hideout.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2346202,
+        "sha256": "47adc101016747bc8f17bdfef011b2847ca05151c81fdbd6dc3977c7d7320de2"
+      },
+      "runtime": {
+        "path": "assets/story/backgrounds/search-hideout.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 197994,
+        "sha256": "eefd258de9d1498d701e41b1b74aefac248a622ed66deba650ba3d44005d5cc8"
+      },
+      "derivative": {
+        "tool": "Pillow 12.3.0",
+        "operation": "proportional thumbnail then WebP",
+        "maxDimensions": [
+          1536,
+          864
+        ],
+        "resampling": "LANCZOS",
+        "mode": "RGB",
+        "format": "WEBP",
+        "quality": 83,
+        "method": 6,
+        "crop": false,
+        "upscale": false
+      }
+    }
+  ],
+  "totals": {
+    "runtimeBytes": 373800,
+    "originalBytes": 4679510
+  },
+  "validation": {
+    "runtimeStrictCommand": "python3 scripts/check-art-budget.py --strict assets/story/backgrounds/search-lab.webp assets/story/backgrounds/search-hideout.webp",
+    "runtimeStrictResult": "WITHIN_BUDGET, 2 files, 0.36 MiB, 0 over budget; exit 0",
+    "sourceStrictCommand": "python3 scripts/check-art-budget.py --strict --kind source source-art/STORY-SEARCH-001-backgrounds/",
+    "sourceStrictResult": "WITHIN_BUDGET, 2 files, 4.46 MiB, 0 over budget; exit 0",
+    "completeDecode": "Pillow load() passed for each original and each WebP",
+    "runtimeVisualQA": "Viewed both final 1535x864 WebP files: readable aged tabletop textures and bronze edges; no target objects or text; cubby opening and shelf base distinguishable, no severe block artifacts. Actual game overlays and mobile viewport pending product integration.",
+    "status": "frozen-for-integration"
+  }
+}

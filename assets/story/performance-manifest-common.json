@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "scenes": [
+    {
+      "node": "C1",
+      "slot": 1,
+      "title": "中轉處確認聯絡方式",
+      "prompt": "Use case: illustration-story. Create ONE entirely new widescreen 16:9 cinematic scene for Nightfall Duel C1 stage1. Reference image is identity/costume/style reference ONLY, not a composition to duplicate. At a quiet intermediary contact station in a medieval dark-fantasy town, ONLY three travelers: Shuo (same black-haired young adult swordsman in green cloak as reference center), Gran (same broad bearded armored man as reference right), and Phosphor (same black-bob-haired girl with ochre scarf). They stand by a stone arch and consult a small folded route note and contact token, confirming the route to Eve before meeting her. Shuo holds the note at chest height, Gran watches the lane, girl safely beside them holding her worn notebook. NO Eve, NO Rin, no other main character; no violence. New outdoor setting misty twilight, hanging old-gold lantern, rain-dark stone. Semi-realistic high detail dark fantasy matching reference faces, materials and wardrobe, cold blue mist and warm antique gold. Medium-wide composition, all heads and hands with crop room. No legible text, no UI, no card frame, no logos, no collage.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-arrival.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-05259279-483a-4d80-ae0b-7d1969edcb80.png",
+      "id": "c1-stage-1",
+      "path": "assets/story/c1-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "abf1c2416f73cac767caef1b473fe44a2cc0fdae35864e4468bd6c5e445b85b7",
+      "status": "complete"
+    },
+    {
+      "node": "C1",
+      "slot": 3,
+      "title": "攤開各自資料",
+      "prompt": "Use case: illustration-story. ONE new cinematic 16:9 scene for Nightfall Duel C1 stage3, matching the attached reference identity/costumes/style. After first introductions, FOUR people calmly spread their separate evidence across a broad wooden research table: Eve the short auburn-haired woman in worn cream researcher coat sits left opening her laboratory notebook, Shuo the dark-haired young swordsman in green cloak stands behind setting down route notes, Gran the broad bearded gold-armored protector stands right, Phosphor the black-bob-haired girl with ochre scarf safely sets her closed worn book on the table herself. No fifth person, Rin has NOT joined. New composition from slightly elevated three-quarter angle, clearly separated hands and papers, papers only abstract tiny unreadable marks and maps. Quiet collaborative discovery, no claims of solved mystery. Medieval dark fantasy improvised study, candlelight reflected in aged brass, cold night-blue window. Semi-realistic detailed painted realism, preserve same faces and outfits as reference. Wide shot, visible tabletop and four faces, comfortable crop space, no text/UI/card borders/logo/collage.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-arrival.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-2504907f-51ec-4ed3-8fda-d2d311e4f2cb.png",
+      "id": "c1-stage-3",
+      "path": "assets/story/c1-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7745c0d733e01ceea0fc96a133deebb2806254788c8351097bdb0a06c907fc9e",
+      "status": "complete"
+    },
+    {
+      "node": "C2",
+      "slot": 1,
+      "title": "低強度測試",
+      "prompt": "Use case: illustration-story. Generate ONE independent new 16:9 Nightfall Duel C2 stage1 illustration, use attached scene only to preserve exact character identities, costumes and visual style. Quiet consensual observation BEFORE any discomfort: Eve, auburn-haired woman in worn ivory researcher coat, calmly adjusts a small brass dial on a low-power enclosed dusk-crystal instrument sitting on a workbench far from the girl. Soft faint blue glow, completely benign passive measurement of an artifact. Phosphor, same black-bob-haired girl with ochre scarf, sits comfortably on an ordinary wooden stool beside her notebook, both hands free, curious and calm. Gran, same broad bearded armored adult, stands nearby listening protectively, relaxed. Nothing attached to the girl's body: no wires, no restraints, no touching her, no pain, no beams hitting anyone. Three characters only. Wider room view, new side angle with apparatus foreground right and conversation left; correct separated anatomy. Medieval dark fantasy research hideout, warm candles and cool moonlit windows, antique gold brass, blue night shadows, semi-realistic detailed painterly realism matching reference. All faces/hands comfortably in frame, no typography/UI/cardframe/logo.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-8ff66c48-de97-411b-acc0-ae825e30d5e6.png",
+      "id": "c2-stage-1",
+      "path": "assets/story/c2-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ac58cdaeaa0aecfae9089c34ead513ebc2c5df4429a47d93b7d2f5394357959c",
+      "status": "complete"
+    },
+    {
+      "node": "C2",
+      "slot": 3,
+      "title": "伊芙道歉、磷請求找父親",
+      "prompt": "Use case: illustration-story. ONE new 16:9 Nightfall Duel C2 stage3. Attached reference only fixes three characters' faces/costumes and painterly style. AFTER the apparatus has been switched OFF, intimate quiet conversation in a safe research hideout: Eve (same adult short auburn-haired woman, worn ivory researcher coat and red scarf) sits at eye level across from Phosphor (same black bob-haired girl, ochre scarf), apologizing with open relaxed hands, a sober caring expression. Girl holds a small family notebook and asks for help finding her absent father. Gran same bearded gold-armored man stands back respectfully. Girl is unharmed, composed and self-possessed; no distress or experimentation. Instrument is dark, dim crystal without glowing beam, put aside in blurred background. A simple wooden table, candle, rain on arched window. New two-person-focused composition with Gran background, medium-wide, all faces and fingers clear with crop room. Same dark fantasy realism, antique brass gold and cool-blue nocturnal palette. Do not add any new character, no father portrait, no new answers, no text/UI/border/logos.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-4b231bfb-22a4-4aa6-bbd9-fe128fb09395.png",
+      "id": "c2-stage-3",
+      "path": "assets/story/c2-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "471744b74462b5a8eb473ae6a9c590a034938237c61d78e671282972c924bdd4",
+      "status": "complete"
+    },
+    {
+      "node": "C3",
+      "slot": 1,
+      "title": "落腳處遭包圍",
+      "prompt": "Use case: illustration-story. Create ONE new 16:9 Nightfall Duel scene C3 stage1, reference image 1 (party-arrival) fixes Shuo and Eve identities, reference2 supplies exterior architectural style only. Inside the temporary study at night, adult Shuo (dark hair tied up, green cloak and gold trimmed armor) checks through a narrow shutter gap. Eve (short auburn-haired adult woman in worn ivory research coat) quietly closes a box of notes behind him. Outside through the distant window, a few very small adult city patrol silhouettes with lanterns are stationed at different street exits; no combat, no weapon pointed, no violence or injury. This is the discovery that the exits are being watched, before Rin's arrival. Do NOT depict Rin. No girl in this particular composition, no children in danger. A worried but controlled pause, luggage and manuscripts foreground. Camera indoors looking diagonally toward window, medium-wide with faces readable. Consistent semi-realistic dark fantasy, aged gold materials, candlelit warm study contrasted cold fog outside. Do not reuse reference composition; no text, lettering, card border, UI or logos.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-arrival.png",
+        "/Users/songer/Desktop/Game/assets/story/party-rescue.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-811a5e95-7873-469c-94c4-952aabde6559.png",
+      "id": "c3-stage-1",
+      "path": "assets/story/c3-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5152c2347d39c8ccbedb5cb752adfbf0ba0d680c890107e5e90ec829881c42e6",
+      "status": "complete"
+    },
+    {
+      "node": "C3",
+      "slot": 3,
+      "title": "暫時安全處展示封存頁",
+      "prompt": "Use case: illustration-story. ONE new 16:9 cinematic scene Nightfall Duel C3 stage3. Reference1 defines Rin (female hooded purple assassin), Gran (broad bearded armored man), Phosphor (black bob girl ochre scarf). Reference2 defines Eve red-haired female researcher. Scene AFTER everyone has safely relocated: in a modest quiet stone storage room lit by a single lantern, Phosphor voluntarily opens her satchel and proudly lays an old sealed administrative page on a crate serving as table, inviting the adults to examine it. Rin stands a respectful distance on the other side, purple hood and light linen bandage on HER RIGHT hand, interested but guarded. Gran stands beside the girl calmly, Eve at side carrying closed research case. No Shuo required in this composition. Four people precisely; girl comfortable and safe; no chasing, violence, blood or injured child. A distinct setting from laboratory, sparse crates and rough stone, cool dawn-like night light at tiny window. Preserve faces and clothes, semi-realistic dark fantasy, antique gold hardware and cold-blue shadows. Broad medium shot, good face and hand spacing and crop room. Document abstract seal and unreadable marks, no readable words, no UI, no card borders.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-rescue.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-24f8795e-6b8e-4723-b206-896c5070da2e.png",
+      "id": "c3-stage-3",
+      "path": "assets/story/c3-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c44f2bee8eaf74aaa9bde9be0849d4231d2bbcaadd548fa73055d5ace7701f1d",
+      "status": "complete"
+    },
+    {
+      "node": "C4",
+      "slot": 1,
+      "title": "磷取出封存頁",
+      "prompt": "Use case: illustration-story. ONE new 16:9 cinematic Nightfall Duel scene C4 stage1. Attached image fixes identity/style/costumes. New close-medium composition centered on Phosphor, the same black-bob-haired girl in ochre scarf, retrieving a folded sealed administrative page from between the covers of her father's worn notebook on a study table. She carefully draws it out herself. Eve, short auburn-haired adult researcher in worn cream coat, listens from left; Rin, the same female dark-haired purple-hooded woman with HER RIGHT hand wrapped in linen, waits slightly farther back at right, guarded, not grabbing anything. Gran can be a soft-focus adult silhouette in back, no extra faces needed. This is the deliberate presentation of a previously acquired document, not magical revelation. Lamp light on paper folds and reddish wax seal; content abstract faint unreadable marks only. Same semi-realistic dark fantasy, old-gold metal, cold blue night through window. Substantially different composition from reference: girl's notebook and careful paper retrieval central foreground, adults secondary. Crop room around heads/hands, natural correct fingers. No violence, no weapons drawn, no text/UI/border/logo.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-419a978f-57b6-4e5d-9720-e2f2359944aa.png",
+      "id": "c4-stage-1",
+      "path": "assets/story/c4-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f47726a374ce621629fbf77fe37b9a25465b827d2ee5d86331b5c1b034fe5fd1",
+      "status": "complete"
+    },
+    {
+      "node": "C4",
+      "slot": 3,
+      "title": "凜確認預謀並歸還文件",
+      "prompt": "Use case: illustration-story. ONE independent new 16:9 Nightfall Duel C4 stage3 cinematic illustration. Reference fixes same cast and attire. After comparing the dates and realizing the headquarters purge was planned before her mission, Rin the same FEMALE dark-haired purple-hooded assassin solemnly slides the examined sealed administrative sheet back across the tabletop toward Phosphor. Rin's own RIGHT hand has worn linen bandages; her other hand wears a dark glove. Her expression is controlled anger and disbelief, not threatening. Girl with black bob/ochre scarf calmly receives her own document with both hands. Eve the short auburn-haired adult woman in worn ivory researcher coat watches from opposite side with unresolved suspicion; Gran the bearded protector in gold armor behind girl. Four figures only, no smiling reconciliation, no guilt verdict and no culprit revealed. Distinct wide composition focused on deliberate handoff across table, all heads fully within image with generous margin, hands clearly separated natural five fingers. Candlelit study with stacked maps and dark blue window, textured antique brass, cold night atmosphere, semi-realistic dark fantasy consistent reference. Pages have faint abstract unreadable marks, no text, no caption, no UI, no card frame or logo.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-43f3-7ca1-afec-e7ce493125b9/exec-5b330b2f-eb90-4370-b6c6-e9919aa81ab9.png",
+      "id": "c4-stage-3",
+      "path": "assets/story/c4-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "6b978ff68875b32e0b363c4e3c3674f23f4b9560c0c44a601cd48a87d475b09a",
+      "status": "complete"
+    }
+  ]
+}

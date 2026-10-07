@@ -1,0 +1,58 @@
+{
+  "ticket": "ART-RECORDER-028",
+  "assets": [
+    {
+      "kind": "background",
+      "path": "assets/story/backgrounds/recorder-028.webp",
+      "width": 1280,
+      "height": 775,
+      "format": "webp",
+      "hasAlpha": false,
+      "bytes": 236908,
+      "sha256": "7d4928258e7aaa43d11eae22bf9d92a537e1d3c665ee328e54abb0036f96e54d",
+      "source": "storage/source-art/ART-RECORDER-028/recorder-panel.png",
+      "generationRecord": "storage/source-art/ART-RECORDER-028/generation.json"
+    },
+    {
+      "kind": "icon",
+      "id": "recorder-0",
+      "path": "assets/puzzles/recorder-028/recorder-0.svg",
+      "format": "svg",
+      "viewBox": "0 0 100 100",
+      "bytes": 2516,
+      "sha256": "16a2948ab5ba78c0376f205fd52b0e0f859e564a49f224a48c67f7bf9a11d91d",
+      "source": "assets/puzzles/recorder-0.svg",
+      "sourceSha256": "eb78900d62c19efc4c4b41bf68c44b69a62fb3d14540efe9f4b93849cc65adee",
+      "mode": "native SVG edit; gradients, enamel, bevels and metal details; original matching silhouette retained"
+    },
+    {
+      "kind": "icon",
+      "id": "recorder-1",
+      "path": "assets/puzzles/recorder-028/recorder-1.svg",
+      "format": "svg",
+      "viewBox": "0 0 100 100",
+      "bytes": 2914,
+      "sha256": "c49977d1edf3aaf55f7dce17971faaace1ed9392e8b1dc30766373c2634a869a",
+      "source": "assets/puzzles/recorder-1.svg",
+      "sourceSha256": "e971e87c09099c8b7f4964027392cbd7325bdfb26b497495be3cdec8ea9201d6",
+      "mode": "native SVG edit; gradients, enamel, bevels and metal details; original matching silhouette retained"
+    },
+    {
+      "kind": "icon",
+      "id": "recorder-2",
+      "path": "assets/puzzles/recorder-028/recorder-2.svg",
+      "format": "svg",
+      "viewBox": "0 0 100 100",
+      "bytes": 2899,
+      "sha256": "52333ab230922f371e1a7bcebd98dc36316f4b7b371240d7c2d29ae317e4f56e",
+      "source": "assets/puzzles/recorder-2.svg",
+      "sourceSha256": "bcf533d6102a0a21a28e37aa1a992c8531d4326d0ffd41ac5bc03ac1e9eef4d6",
+      "mode": "native SVG edit; gradients, enamel, bevels and metal details; original matching silhouette retained"
+    }
+  ],
+  "totalRuntimeBytes": 245237,
+  "runtimeBudgetBytes": 675840,
+  "sourceRasterBytes": 2918345,
+  "sourceRasterCount": 1,
+  "oldAssetsRetained": true
+}

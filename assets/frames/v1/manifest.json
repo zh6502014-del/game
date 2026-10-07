@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "source": "../../../storage/source-art/frame-originals-v1/hero.png",
+    "atlas": "hero.png",
+    "trim": [
+      61,
+      67,
+      1194,
+      1185
+    ],
+    "size": [
+      1133,
+      1118
+    ],
+    "slice": 224,
+    "repeat": "repeat",
+    "center": "transparent"
+  },
+  "panel": {
+    "source": "../../../storage/source-art/frame-originals-v1/panel.png",
+    "atlas": "panel.png",
+    "trim": [
+      71,
+      69,
+      1183,
+      1182
+    ],
+    "size": [
+      1112,
+      1113
+    ],
+    "slice": 208,
+    "repeat": "repeat",
+    "center": "transparent"
+  },
+  "thin": {
+    "source": "../../../storage/source-art/frame-originals-v1/thin.png",
+    "atlas": "thin.png",
+    "trim": [
+      61,
+      61,
+      1194,
+      1188
+    ],
+    "size": [
+      1133,
+      1127
+    ],
+    "slice": 176,
+    "repeat": "repeat",
+    "center": "transparent"
+  }
+}

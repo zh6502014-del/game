@@ -1,0 +1,620 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "npcs": {
+    "phosphor": "preteen girl, dark straight bob, ochre scarf, slate-blue travel coat; visual age only, not canonical",
+    "father": "gentle narrow male face, straight shoulder-length dark hair, brown cloak; younger in flashbacks, graying in present",
+    "herman": "thin older male, swept-back silver hair, round spectacles, charcoal research coat",
+    "master": "stern older male, tied silver hair, dark gold oath uniform"
+  },
+  "scenes": [
+    {
+      "id": "assassin-lab",
+      "group": "凜",
+      "title": "研究室對峙",
+      "path": "assets/story/assassin-lab.png",
+      "refs": [
+        "assets/characters/assassin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Adult female Rin silently blocks a laboratory exit, a sheathed dagger at her side. Herman, a thin older male scientist with swept-back silver hair, round spectacles and charcoal research coat, faces her across a brass crystal apparatus. No injury yet, tense questioning, no attack. IMPORTANT: Completely new WIDE LANDSCAPE 16:9 scene composition, NOT portrait. Reference supplies identity only. Characters smaller inside environment.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-f2e1ce70-6614-41e5-8829-9c7dc2250cbf.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "fe94d401a16821a21e6eeffc27a43f7a6f7592f019de92194bb2609b9547363e",
+      "bytes": 2452707
+    },
+    {
+      "id": "assassin-resonance",
+      "group": "凜",
+      "title": "右手灼傷與銃口反衝",
+      "path": "assets/story/assassin-resonance.png",
+      "refs": [
+        "assets/characters/assassin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. An unstable crystal pistol held by Herman, thin older male with swept-back silver hair and round glasses, emits a BACKFLOW into its own grip; he falls backward under the shock. Female Rin at the edge shields her newly grazed RIGHT hand. Fragmented translucent laboratory memories overlap reality. No stabbing, no knife touching Herman, no gore. The gun backflow is the cause of collapse. IMPORTANT: Completely new WIDE LANDSCAPE 16:9 scene composition, NOT portrait. Reference supplies identity only. Characters smaller inside environment.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-2c010459-fe8e-48ac-bfc9-2e62349f842f.png",
+      "revision": {
+        "prompt": "Edit image 1 preserving female Rin, Herman and gun energy-backflow event, their identities. Replace the outdoor ruin background entirely with the ENCLOSED interior research laboratory of image 2: complete stone walls, roof, laboratory bench and metal machinery, no open street, no visible sky. Show small red burn on Rin RIGHT hand (the hand on image-left), no gore. Herman collapsing because energy returns from his pistol grip, Rin is not stabbing him. Reduce the floating memory fragments to faint broken reflections blended into the room, not giant solid shards or separate comic panels. Wide 16:9, no text.",
+        "refs": [
+          "assets/story/assassin-resonance.png",
+          "assets/story/assassin-lab.png"
+        ]
+      },
+      "width": 1672,
+      "height": 941,
+      "sha256": "5cc1da49873ed9d133f7e601367c169bd3f176ac3f325b0b438754a0796834d3",
+      "bytes": 2629642
+    },
+    {
+      "id": "assassin-home",
+      "group": "凜",
+      "title": "尺烏據點清洗",
+      "path": "assets/story/assassin-home.png",
+      "refs": [
+        "assets/characters/assassin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Female Rin hides outside a breached intelligence headquarters, watching armored cleanup agents searching empty records and covered motionless bodies in the distance. The doorway frames her isolation. Her right hand is bandaged. No gore, no heroic battle. IMPORTANT: Completely new WIDE LANDSCAPE 16:9 scene composition, NOT portrait. Reference supplies identity only. Characters smaller inside environment.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-512e93df-6da9-42b1-976e-248fb08248b4.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "74a33ae74e6ae10defdc46989d094b93f77d350b856b10ce3d8aa8d4667068fb",
+      "bytes": 2471384
+    },
+    {
+      "id": "assassin-trail",
+      "group": "凜",
+      "title": "追蹤伊芙",
+      "path": "assets/story/assassin-trail.png",
+      "refs": [
+        "assets/characters/assassin.png",
+        "assets/characters/gunner.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Bandaged-right-hand female Rin watches discreetly from a rain-dark rooftop as Eve, auburn short-haired female researcher in a scorched ivory research coat, carries a records case down a distant street. Rin follows clues cautiously without approaching. IMPORTANT: Completely new WIDE LANDSCAPE 16:9 scene composition, NOT portrait. Reference supplies identity only. Characters smaller inside environment.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-9e548ad3-610a-41a9-bb30-1cd264b2ea93.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "dadc4059f538a1095a1e3cc5ed894a1b734dbd53f0dbe4e5225b5e0d579e5435",
+      "bytes": 2617647
+    },
+    {
+      "id": "swordsman-bookmark",
+      "group": "朔",
+      "title": "鐘樓贈書籤",
+      "path": "assets/story/swordsman-bookmark.png",
+      "refs": [
+        "assets/characters/swordsman.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Younger adult Shuo, clean-shaven with same facial landmarks as reference, in modest ivory-gold oath-guard uniform, offers a rough wooden bookmark to a young adult male bell singer: gentle narrow face, dark straight shoulder-length hair, pale linen robe. They sit beside a barred bell-tower window with a travel book. Small hopeful friendship. IMPORTANT: New WIDE LANDSCAPE 16:9 environment scene. Do not reproduce reference portrait framing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-117afa98-005a-4325-9604-c35fbc3dda3f.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "e071575974e99ea2f11ff1ee573e66c4f125e721de823c83a62d41d4c8cee702",
+      "bytes": 2536713
+    },
+    {
+      "id": "swordsman-records",
+      "group": "朔",
+      "title": "核對未撤離城市",
+      "path": "assets/story/swordsman-records.png",
+      "refs": [
+        "assets/characters/swordsman.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Young Shuo in oath uniform watches the same gentle narrow-faced dark shoulder-length-haired young male singer compare coded maps, population ledgers and transfer routes by candlelight inside the bell tower. Worried discovery of contradictory evacuation claims. Papers have indistinct marks, absolutely no legible text. IMPORTANT: New WIDE LANDSCAPE 16:9 environment scene. Do not reproduce reference portrait framing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-ba76a93c-fa8e-46a5-90bf-19c0b1ee3aea.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "2fe4c55a9d48907159c8399c6f1fd58b5d822cf4dd76e2795365f6d89bdab074",
+      "bytes": 2382119
+    },
+    {
+      "id": "swordsman-master",
+      "group": "朔",
+      "title": "擋住師父掩護逃亡",
+      "path": "assets/story/swordsman-master.png",
+      "refs": [
+        "assets/characters/swordsman.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Young Shuo in oath uniform, severed shoulder cord and lightly wounded sword hand, struggles backward holding off his master: stern silver-haired older male oath swordsman with tied hair and dark gold uniform. The narrow-faced young male singer escapes through a distant passage clutching papers. Shuo only delays the stronger master, NOT winning, no lethal strike. IMPORTANT: New WIDE LANDSCAPE 16:9 environment scene. Do not reproduce reference portrait framing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-d56207aa-2fbd-45a5-bfd9-72ebc8f648bc.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "82466aa657ef150a1bc5b2d3c9f0b2d08af34cfc057788c33515c4fd5d6427ce",
+      "bytes": 2650773
+    },
+    {
+      "id": "swordsman-return",
+      "group": "朔",
+      "title": "磷帶回書籤",
+      "path": "assets/story/swordsman-return.png",
+      "refs": [
+        "assets/characters/swordsman.png",
+        "assets/characters/tank.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Mature Shuo recognizes the old roughly carved wooden bookmark held out by Phosphor: a small preteen girl with straight dark bobbed hair, ochre scarf, slate-blue travel coat and satchel. Gran stands behind her protectively. Quiet shock and memory in a caravan shelter. Girl fully clothed, ordinary human, no magical aura. IMPORTANT: New WIDE LANDSCAPE 16:9 environment scene. Do not reproduce reference portrait framing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-8b420838-3a01-40af-9a91-47abea26b522.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "97c74ee450169ab0d1ac0098df626ecb58daf008bc9ede4721f8f7e05b81b1e8",
+      "bytes": 2556947
+    },
+    {
+      "id": "tank-bell",
+      "group": "格蘭",
+      "title": "暮鐘提前與撤離",
+      "path": "assets/story/tank-bell.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/tank.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Younger adult Gran with same broad face, shorter beard and simple steel-teal recruit armor, directs townspeople toward a high-ground evacuation trail as distant bell-tower resonance darkens a small town prematurely. Panicked townspeople carrying bags, readable escape geography, no dome shield. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition, not portrait. In recruit scenes Gran has less ornate practical armor and younger less bearded face. Added scene reference if present locks Phosphor face and clothing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-ba5c74af-6261-4b90-843c-ed8a71416654.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "847d2068efb53dda25a09747177a6e172d1805b3c5104b00a238133b07742295",
+      "bytes": 2568870
+    },
+    {
+      "id": "tank-return",
+      "group": "格蘭",
+      "title": "折返接應母女",
+      "path": "assets/story/tank-return.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/tank.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Young recruit Gran turns back along a narrowing evacuation path to a weary mother with a long dark braid and rust-brown dress and her small daughter wearing a pale gray coat. He hands the daughter safely to another rescue worker while guiding the mother. Distant encroaching unnatural darkness, a human rescue not a fight. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition, not portrait. In recruit scenes Gran has less ornate practical armor and younger less bearded face. Added scene reference if present locks Phosphor face and clothing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-66128aed-84e0-4757-9749-1f57b101a2c4.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "4e466f005216fadf27bf2a226049f0af319c01db69a85fec9aede453a163d962",
+      "bytes": 2539422
+    },
+    {
+      "id": "tank-shield",
+      "group": "格蘭",
+      "title": "第一面盾崩裂前的救援",
+      "path": "assets/story/tank-shield.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/tank.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Young recruit Gran braces a cracked rescue shield into the ground at a narrow evacuation choke point. Tiny failing crystal inserts provide ONLY a small pocket of stability immediately behind him. Mother in rust-brown dress with dark braid and daughter in gray coat reach a rescuers hand. Darkness remains overwhelming beyond the shield; no giant energy dome, no destruction of night. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition, not portrait. In recruit scenes Gran has less ornate practical armor and younger less bearded face. Added scene reference if present locks Phosphor face and clothing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-9d4d02f5-7934-491c-b4f0-afdbc6a35266.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "be8395446b461d8d655dfc0f7a3310b7ad2ce213edce25a887fbe0d541f3aa6d",
+      "bytes": 2543730
+    },
+    {
+      "id": "tank-refusal",
+      "group": "格蘭",
+      "title": "拒絕交出磷",
+      "path": "assets/story/tank-refusal.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/tank.png",
+        "/Users/songer/Desktop/Game/assets/story/swordsman-return.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Mature Gran stands calmly between an association official demanding custody and Phosphor, small preteen girl with straight dark bob, ochre scarf, slate-blue coat and satchel, gripping his sleeve. Official refuses to provide a receipt. Checkpoint shelter, a firm humane refusal, no attack or capture. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition, not portrait. In recruit scenes Gran has less ornate practical armor and younger less bearded face. Added scene reference if present locks Phosphor face and clothing.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-01649c65-53d6-48ea-998e-1d4d1aa44d19.png",
+      "revision": {
+        "prompt": "Edit image 1. Replace ONLY the central slim sword-bearing protector with GRAN, the broad mature bearded armored tank man from image 2. GRAN MUST be the central person standing between girl and official, with his large teal rescue shield at his side; same broad face, full beard, heavier stocky build as image 2. No Shuo swordsman anywhere. Keep the little girl, composition, opposing official, checkpoint. Girl grips Gran sleeve. No writing, no UI. Wide 16:9. Image 1 currently has the wrong hero; correction is mandatory.",
+        "refs": [
+          "assets/story/tank-refusal.png",
+          "assets/characters/tank.png"
+        ]
+      },
+      "width": 1672,
+      "height": 941,
+      "sha256": "855ad212d7c8b539b4449979fa5bfc5e6ab84bd5daa98d3ec89a1fb01768b063",
+      "bytes": 2540506
+    },
+    {
+      "id": "gunner-echo",
+      "group": "伊芙",
+      "title": "聽見女孩殘響",
+      "path": "assets/story/gunner-echo.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/assassin-lab.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve with same short auburn hair and face as reference wears an unburned ivory researcher coat. She listens closely beside an experimental crystal and brass receiver. Herman, thin older silver-haired male scientist with round glasses, watches measurements. Crystal shows only an indistinct fleeting memory silhouette, NOT a person imprisoned literally inside a large gem. IMPORTANT: New WIDE LANDSCAPE 16:9 composition. An ENCLOSED INTERIOR laboratory/workroom, stone walls and roof, equipment, no open ruined courtyard. Last references fix Eve coat design, Herman or Phosphor identity only; adapt burning/unburned coat to scene.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-c7250754-3bc2-4c2c-89c3-d20f01f85811.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "f13c07889ff8f0f5af0b98a305d38a5d1a7bba7735914f61be43bd95224ab906",
+      "bytes": 2506257
+    },
+    {
+      "id": "gunner-sealed",
+      "group": "伊芙",
+      "title": "研究遭封鎖",
+      "path": "assets/story/gunner-sealed.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/assassin-lab.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve in ivory researcher coat and Herman, thin older silver-haired man with round glasses, secretly pack research copies at a laboratory table while access seals and approaching officials appear beyond frosted glass. A hidden route to the lower laboratory, quiet urgency. No readable letters. IMPORTANT: New WIDE LANDSCAPE 16:9 composition. An ENCLOSED INTERIOR laboratory/workroom, stone walls and roof, equipment, no open ruined courtyard. Last references fix Eve coat design, Herman or Phosphor identity only; adapt burning/unburned coat to scene.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-5698754a-f910-4c00-bee5-79f658a52951.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "4379f16d31cfcfb77b6c2afe93d5456355d6bb0c0a5575f83e42d8be4bad0e3f",
+      "bytes": 2344385
+    },
+    {
+      "id": "gunner-basement",
+      "group": "伊芙",
+      "title": "地下三層取回資料",
+      "path": "assets/story/gunner-basement.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve alone in a basement backup workroom retrieves a case of research copies, portable brass resonance components and partial instrument logs. Ivory research coat, lamplight, abandoned chair belonging to her late mentor, fear and careful investigation. No image of mentor death; she did not witness it. IMPORTANT: New WIDE LANDSCAPE 16:9 composition. An ENCLOSED INTERIOR laboratory/workroom, stone walls and roof, equipment, no open ruined courtyard. Last references fix Eve coat design, Herman or Phosphor identity only; adapt burning/unburned coat to scene.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-3dddff52-3bea-4f75-8ddb-deba6113360d.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "929a8c1f0efc8fd32ab0fe0c1b4266046f176618b79b0885901a51eb0d1752b5",
+      "bytes": 2361080
+    },
+    {
+      "id": "gunner-first-shot",
+      "group": "伊芙",
+      "title": "第一槍逃離",
+      "path": "assets/story/gunner-first-shot.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve in a scorched ivory research coat fires a compact improvised brass-and-crystal pistol at a MECHANICAL DOOR LOCK while protecting a records case. Broken crystal fuse visible in the device, restrained ember trail, smoke and distant laboratory fire behind her. She is escaping, not an expert soldier, no modern firearm. IMPORTANT: New WIDE LANDSCAPE 16:9 composition. An ENCLOSED INTERIOR laboratory/workroom, stone walls and roof, equipment, no open ruined courtyard. Last references fix Eve coat design, Herman or Phosphor identity only; adapt burning/unburned coat to scene.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-0a10f308-af89-48d0-a333-01c1dd613357.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "082642eb7ee4767a70705862a57a038c95c239532f03a25dc79d39662a08a4e9",
+      "bytes": 2539828
+    },
+    {
+      "id": "gunner-stop",
+      "group": "伊芙",
+      "title": "停止磷的共振測試",
+      "path": "assets/story/gunner-stop.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/characters/tank.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/swordsman-return.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve in scorched research coat switches OFF a small resonance apparatus as Gran gently stops her hand. Phosphor, preteen girl with dark bob, ochre scarf and slate-blue coat, trembles nearby and clutches her satchel. Eve realizes she must protect the living child. Device dims, compassionate apology, no restraint or torture. IMPORTANT: New WIDE LANDSCAPE 16:9 composition. An ENCLOSED INTERIOR laboratory/workroom, stone walls and roof, equipment, no open ruined courtyard. Last references fix Eve coat design, Herman or Phosphor identity only; adapt burning/unburned coat to scene.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-afe07824-fcd0-4e73-b38d-60dbb4de41bf.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "de500345ee3fa6c3888d83a5e3f8432dad4b5940dcc0cd72b2a7bd858c923700",
+      "bytes": 2620006
+    },
+    {
+      "id": "phosphor-memory",
+      "group": "磷與養父",
+      "title": "逃亡生活與陌生記憶",
+      "path": "assets/story/phosphor-memory.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-records.png",
+        "/Users/songer/Desktop/Game/assets/story/swordsman-return.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. Reference is for painting style ONLY, do not copy the swordsman face for the father. Same narrow-faced singer now older, dark shoulder-length hair with a few gray strands, weathered brown cloak, carries a bag with old wooden bookmark. His preteen adopted daughter Phosphor, straight dark bob, ochre scarf, slate-blue coat, points to an empty ruined bakery corner she strangely recognizes. Father studies an old map with concern; ordinary human child, no prophecy. IMPORTANT: New WIDE LANDSCAPE 16:9 environmental composition. Reference image 1: the gentle dark-haired UNARMORED man on the RIGHT is the father, age him appropriately; the armored swordsman on LEFT is NOT in this scene. Reference image 2 if present: retain ONLY little girl identity, not the warriors. Supporting characters described are the only main people. No modern objects or readable letters.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-b097391a-9b44-4a08-b495-ad907baa9f90.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "cabae22eacaf6d7ce4601916f10dad699225419970b85cb7660c9add1d8af859",
+      "bytes": 2494336
+    },
+    {
+      "id": "phosphor-files",
+      "group": "磷與養父",
+      "title": "新文件交接後遭跟蹤",
+      "path": "assets/story/phosphor-files.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-records.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. Reference is for painting style ONLY, do not copy the swordsman face for the father. Older narrow-faced male fugitive singer with graying shoulder-length dark hair and weathered brown cloak hides newly received administrative papers inside his coat while leaving a disused contact point. Two indistinct watchers down a rain-soaked lane. Do not identify who leaked papers, suspense not certainty. IMPORTANT: New WIDE LANDSCAPE 16:9 environmental composition. Reference image 1: the gentle dark-haired UNARMORED man on the RIGHT is the father, age him appropriately; the armored swordsman on LEFT is NOT in this scene. Reference image 2 if present: retain ONLY little girl identity, not the warriors. Supporting characters described are the only main people. No modern objects or readable letters.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-55dde915-4092-4649-91b9-4eb9077fab8b.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "4f2a98b581c052e9feac0ecd6ed5b4afc4f0e0b0ed8702bacbafd88c8e24aafc",
+      "bytes": 2361637
+    },
+    {
+      "id": "phosphor-parting",
+      "group": "磷與養父",
+      "title": "父女分離",
+      "path": "assets/story/phosphor-parting.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-records.png",
+        "/Users/songer/Desktop/Game/assets/story/swordsman-return.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. Reference is for painting style ONLY, do not copy the swordsman face for the father. Older narrow-faced fugitive singer in brown cloak gives a worn satchel containing wooden bookmark, papers and small wrapped crystal to adopted daughter Phosphor, preteen girl with dark bob, ochre scarf and slate-blue travel coat. At a fork in a dim passage, he indicates a safe side exit while staying in the visible route. Quiet painful parting, father alive, no confirmed capture. IMPORTANT: New WIDE LANDSCAPE 16:9 environmental composition. Reference image 1: the gentle dark-haired UNARMORED man on the RIGHT is the father, age him appropriately; the armored swordsman on LEFT is NOT in this scene. Reference image 2 if present: retain ONLY little girl identity, not the warriors. Supporting characters described are the only main people. No modern objects or readable letters.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-e8106360-0c5c-4bbe-b695-9ea048dc7c80.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "eedef7449ee97fc7bd2b4b0d2e6e1505dfcb86eb4eb3f4ea1247517f3879d198",
+      "bytes": 2484724
+    },
+    {
+      "id": "party-arrival",
+      "group": "共同主線",
+      "title": "三人找到伊芙",
+      "path": "assets/story/party-arrival.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/swordsman.png",
+        "/Users/songer/Desktop/Game/assets/characters/tank.png",
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Mature Shuo, mature Gran and Phosphor (preteen dark bob, ochre scarf, slate-blue coat) arrive at Eves modest improvised research refuge. Eve in scorched ivory researcher coat cautiously accepts a paper credential. Four people only: Rin has not joined them. IMPORTANT: New WIDE LANDSCAPE 16:9 scene, not character lineup portrait. Eve is the auburn-haired WOMAN in WHITE researcher coat, Rin the black-haired WOMAN in VIOLET hood, Gran the broad BEARDED armored man with SHIELD, Shuo the slender topknot sword man. Last scene reference locks little girl Phosphor only. Include ONLY the people named in scene; no extra duplicate heroes. All interiors are enclosed rooms.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-1f51c488-85a3-49e8-8109-77eabaa9c143.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "ef31effed4932bae158cf519a1944ba06dd6631f4a40b65754b6d9f250d66773",
+      "bytes": 2562540
+    },
+    {
+      "id": "party-rescue",
+      "group": "共同主線",
+      "title": "凜現身救援",
+      "path": "assets/story/party-rescue.png",
+      "refs": [
+        "assets/characters/assassin.png",
+        "assets/characters/tank.png",
+        "assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. A calm nonviolent aftermath scene for Nightfall Duel, wide 16:9 semi-realistic dark fantasy painting. The adult black-haired WOMAN in violet hood from reference 1 quietly holds open a rear wooden doorway and gestures toward a clear safe alley. Her right hand is bandaged. Adult broad bearded guardian Gran from reference 2 carries a travel bag and escorts the fully clothed small girl from reference 3 through the door. The child walks safely beside Gran, no one touches or threatens her. Theme: an unexpected helper reveals herself by guiding the group to safety. No pursuers visible, no confrontation, no drawn weapons, no injury, no combat, no gore, no text. Reference 3 is ONLY for girl face, dark bob, ochre scarf and slate-blue coat. Antique gold lamp light, cool teal morning mist, intact walls, clear three-person composition. Rin's act of opening the escape route is the focal action.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-599c014c-9807-4fdb-a13a-1da76ab7a676.png",
+      "revision": {
+        "prompt": "Precise small edit only: female Rin on the LEFT of this image currently has bandages on her left hand extended toward the center. Move the bandages to her anatomical RIGHT hand holding the door at far image-left. Her extended left palm should have no bandages, normal uninjured skin or dark glove. Keep all faces, outfits, three characters, nonviolent safe doorway scene, wide composition and lighting unchanged. No new weapons, no blood, no conflict.",
+        "refs": [
+          "assets/story/party-rescue.png"
+        ]
+      },
+      "width": 1672,
+      "height": 941,
+      "sha256": "adaf24adc9f718c7a3923265cd14d975a801f1c19fb01fe1ff4c38acb7aa862c",
+      "bytes": 2464445
+    },
+    {
+      "id": "party-orders",
+      "group": "共同主線",
+      "title": "核對清洗命令",
+      "path": "assets/story/party-orders.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png",
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Female Rin with bandaged right hand and Eve in scorched researcher coat independently compare copied administrative documents at a refuge table. Phosphor (dark bob, ochre scarf, slate-blue coat) retains the remaining papers. Date stamps and sealed forms are indistinct, no legible writing, truth pieced together rather than omniscience. IMPORTANT: New WIDE LANDSCAPE 16:9 scene, not character lineup portrait. Eve is the auburn-haired WOMAN in WHITE researcher coat, Rin the black-haired WOMAN in VIOLET hood, Gran the broad BEARDED armored man with SHIELD, Shuo the slender topknot sword man. Last scene reference locks little girl Phosphor only. Include ONLY the people named in scene; no extra duplicate heroes. All interiors are enclosed rooms.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-d5b358c4-bf51-4b29-a8ac-d9921d8c329c.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "e35beff19e3d48fe851a3ed22ded6a6658c19ead329415338637cfce18698470",
+      "bytes": 2526576
+    },
+    {
+      "id": "party-gun",
+      "group": "共同主線",
+      "title": "伊芙舉槍質問",
+      "path": "assets/story/party-gun.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png",
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve in scorched researcher coat raises her compact improvised brass crystal pistol toward female Rin during a tense questioning. Rin shows her bandaged right hand and does not attack. Several paces apart, side-on composition, no firing, no forgiveness yet, no child in line of fire. IMPORTANT: New WIDE LANDSCAPE 16:9 scene, not character lineup portrait. Eve is the auburn-haired WOMAN in WHITE researcher coat, Rin the black-haired WOMAN in VIOLET hood, Gran the broad BEARDED armored man with SHIELD, Shuo the slender topknot sword man. Last scene reference locks little girl Phosphor only. Include ONLY the people named in scene; no extra duplicate heroes. All interiors are enclosed rooms.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-050f68e5-4258-4125-8246-ecfa02ab2d7b.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "8850f9769da2910647948b3335a3ef1578dd44ffd8f68ce0e6ab5af240960e3b",
+      "bytes": 2680649
+    },
+    {
+      "id": "party-stay",
+      "group": "共同主線",
+      "title": "降低槍口准許同行",
+      "path": "assets/story/party-stay.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png",
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve deliberately lowers her compact crystal pistol while maintaining guarded distance from female Rin with bandaged right hand. Phosphor, dark-bobbed preteen in ochre scarf and slate-blue coat, holds the papers beside them. Tense conditional cooperation, no smiles, embrace or suggestion that Eve has forgiven Rin. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition. Eve is auburn-haired WOMAN in white research coat; Rin black-haired WOMAN in violet hood; Gran broad BEARDED shield guardian; Shuo slender topknot swordsman; Phosphor small bob-haired girl with ochre scarf. No duplicate or swapped heroes. Last reference locks girl face. Include only scene-named characters. Interiors have enclosed stone walls and ceiling, not outdoor ruins. Emotional restrained storytelling.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-2c02e12b-5eed-4c52-97c9-d7a398ac0651.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "8e357a63509ef568b9f0db2823ae6394976425b796a52dcb9af9bd681f21c359",
+      "bytes": 2565515
+    },
+    {
+      "id": "party-road",
+      "group": "共同主線",
+      "title": "旅途分歧與共同約定",
+      "path": "assets/story/party-road.png",
+      "refs": [
+        "assets/characters/assassin.png",
+        "assets/characters/swordsman.png",
+        "assets/characters/tank.png",
+        "assets/skins/gunner-origin.png",
+        "assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Five travelers pause at a road junction: female Rin with right-hand bandage favors a hidden path, Gran gestures toward distant stranded travelers, mature Shuo weighs a map, Eve in scorched researcher coat protects a records case, Phosphor in ochre scarf and slate-blue coat holds her fathers notebook. Disagreement handled as equals, no one uses the child as a tool. IMPORTANT: WIDE 16:9 environment, exactly FIVE main characters. Ref 1 Rin violet-hooded adult woman, ref 2 Shuo topknot swordsman, ref 3 Gran broad bearded guardian, ref 4 Eve auburn-haired woman in ivory research coat, ref 5 ONLY locks Phosphor dark bob and ochre scarf. Preserve all five distinct faces; no duplication. Keep weapons sheathed, no fighting. Recorder scene has NO father present; it is audio, not a hologram.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-9bf45d02-4321-4ac6-aa23-e8c4d571fd1d.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "bdd3901095adc5cff4bad7c37ea8880d1a3448d8f3606d5e895e0ed4ad75ec3a",
+      "bytes": 2845096
+    },
+    {
+      "id": "party-zone",
+      "group": "共同主線",
+      "title": "比對第一號觀測區",
+      "path": "assets/story/party-zone.png",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/gunner.png",
+        "/Users/songer/Desktop/Game/assets/characters/swordsman.png",
+        "/Users/songer/Desktop/Game/assets/skins/gunner-origin.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Eve in scorched researcher coat and mature Shuo compare old terrain maps, mining diagrams and a small crystal while Phosphor (dark bob, ochre scarf, slate-blue coat) watches uneasily. A fragmented faint maternal silhouette appears as uncertain memory near crystal, NOT a definite matching infant identity, not a holographic answer. No legible text. IMPORTANT: New WIDE LANDSCAPE 16:9 full environment composition. Eve is auburn-haired WOMAN in white research coat; Rin black-haired WOMAN in violet hood; Gran broad BEARDED shield guardian; Shuo slender topknot swordsman; Phosphor small bob-haired girl with ochre scarf. No duplicate or swapped heroes. Last reference locks girl face. Include only scene-named characters. Interiors have enclosed stone walls and ceiling, not outdoor ruins. Emotional restrained storytelling.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-defbb75c-cfa2-4837-babb-317d1463e19c.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "136c7ffdc2af6e46ecb23f384f24e125cae1dda382ebcf222a6d9f4a8fa2941b",
+      "bytes": 2702115
+    },
+    {
+      "id": "party-recorder",
+      "group": "共同主線",
+      "title": "最後藏身處播放紀錄",
+      "path": "assets/story/party-recorder.png",
+      "refs": [
+        "assets/characters/assassin.png",
+        "assets/characters/swordsman.png",
+        "assets/characters/tank.png",
+        "assets/skins/gunner-origin.png",
+        "assets/story/gunner-stop.png"
+      ],
+      "prompt": "Use case: illustration-story. New standalone Nightfall Duel cinematic semi-realistic dark fantasy painting, landscape 16:9. Same painterly realism and facial identities as references, antique gold materials, cool teal night mist; lighting motivated by scene. Clear staged storytelling, natural anatomically credible hands, believable weapons. No text, lettering, logos, card frames, UI, watermark, collage or gore. Faces and key objects crop-safe. References for main playable characters only; supporting people are defined below. Inside a broken-into hideout, Phosphor (dark bob, ochre scarf, slate-blue coat) lights a small oil lamp beside a brass audio recorder. Eve in scorched researcher coat connects its cable, Shuo stands at doorway, Gran prepares water, female Rin with bandaged right hand watches the window. Five distinct people, solemn listening to missing fathers recorded doubts, father NOT visibly present and fate unresolved. IMPORTANT: WIDE 16:9 environment, exactly FIVE main characters. Ref 1 Rin violet-hooded adult woman, ref 2 Shuo topknot swordsman, ref 3 Gran broad bearded guardian, ref 4 Eve auburn-haired woman in ivory research coat, ref 5 ONLY locks Phosphor dark bob and ochre scarf. Preserve all five distinct faces; no duplication. Keep weapons sheathed, no fighting. Recorder scene has NO father present; it is audio, not a hologram.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-81704c0a-ae3f-424a-96ed-cb5523e0b9ab.png",
+      "revision": null,
+      "width": 1672,
+      "height": 941,
+      "sha256": "2f47840cf63ac07aaa8bb6b9bf49b40d2c2c573cdc5d6db9445f79bcbdc4532b",
+      "bytes": 2539974
+    }
+  ],
+  "skins": [
+    {
+      "id": "assassin-origin",
+      "job": "assassin",
+      "title": "斷羽",
+      "path": "assets/skins/assassin-origin.png",
+      "refs": [
+        "assets/characters/assassin.png"
+      ],
+      "prompt": "Use case: stylized-concept. Generate a new standalone Nightfall Duel character skin illustration using the attached assassin image strictly as face, female identity, and dark fantasy painting style reference. Portrait 2:3, knee-up crop-safe head and hands, no text/UI/frame/watermark. Skin: Rin, Severed Feather (斷羽). Same adult East Asian woman with black hair and violet hood. Her dark intelligence-service uniform is restrained and practical, its crow insignia has been visibly cut away leaving a plain torn patch. Her RIGHT hand is wrapped in slightly blood-stained bandages from a resonance burn; left hand rests on sheathed dagger. She stands alone outside the shadowed doorway of her destroyed secret-order headquarters, a door she can never return through. Haunted controlled expression. Cold teal shadows, antique gold edge light, detailed leather and cloth, somber mist, no gore, no corpses foreground. Distinct new costume and scene, not a copy of reference pose.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-8c3f4935-9368-4e2c-b741-9ca5c258b509.png",
+      "revision": null,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8ef61b99bf15a6e20a8ccc75b04648e10bb7ea82d5beb1d169f0e0616f7a3c2e",
+      "bytes": 2627317
+    },
+    {
+      "id": "swordsman-origin",
+      "job": "swordsman",
+      "title": "逆命之刃",
+      "path": "assets/skins/swordsman-origin.png",
+      "refs": [
+        "assets/characters/swordsman.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create a new independent Nightfall Duel character skin illustration. Reference locks face, gender and semi-realistic dark fantasy painting style. Vertical 2:3 knee-up character-centered portrait. Crop-safe full head, hands and weapon. No text, UI, card frame, watermark or gore. Antique gold light, cool teal shadows, detailed cloth and metal. Younger adult Shuo with recognizable face, little facial hair, ivory-gold oath uniform and severed shoulder cord, a lightly wounded sword hand. Braced in defensive retreat, protecting a friends exit from a stronger master suggested in distant background. Not a victorious pose.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-a24d0170-db14-460f-8f66-d704f8a37d70.png",
+      "revision": null,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "dee14c4d469e92fe396ac993daffe90b7811a8549dd164c33a3855627bc2fc6e",
+      "bytes": 2685331
+    },
+    {
+      "id": "tank-origin",
+      "job": "tank",
+      "title": "初壁",
+      "path": "assets/skins/tank-origin.png",
+      "refs": [
+        "assets/characters/tank.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create a new independent Nightfall Duel character skin illustration. Reference locks face, gender and semi-realistic dark fantasy painting style. Vertical 2:3 knee-up character-centered portrait. Crop-safe full head, hands and weapon. No text, UI, card frame, watermark or gore. Antique gold light, cool teal shadows, detailed cloth and metal. Younger adult Gran with recognizable broad face and short beard, modest steel-teal recruit armor, bracing a cracked rescue shield into ground. Failing small crystal inserts only stabilize a few steps behind him. Evacuation path behind him, no energy dome, night remains beyond.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-d27925af-37f8-4a0f-b0b1-15a2460696b3.png",
+      "revision": {
+        "prompt": "Edit this Gran skin image, retain vertical 2:3 composition, distinctive broad facial bone structure, stocky body, cracked shield and evacuation setting. Make Gran clearly a YOUNGER ADULT RECRUIT: reduce full beard to short dark stubble, remove weathered wrinkles, remove ornate crown-like headpiece leaving simple short hair, replace richly gold engraved plate with functional plain steel-teal plates and leather straps with only restrained brass edging. He crouches and leans both hands/body weight into the cracked rescue shield planted in ground, no decorative mace. Shield remains prominent, small failing crystal inserts. Determined strained face, not proud veteran pose. Do not generate a child; same man earlier in adult life. No text, no energy dome.",
+        "refs": [
+          "assets/skins/tank-origin.png"
+        ]
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "25362c58eb7b027060de7b912f7b32cb6122cd6ffbb8a81a229052529aa276ba",
+      "bytes": 2999029
+    },
+    {
+      "id": "gunner-origin",
+      "job": "gunner",
+      "title": "餘燼",
+      "path": "assets/skins/gunner-origin.png",
+      "refs": [
+        "assets/characters/gunner.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create a new independent Nightfall Duel character skin illustration. Reference locks face, gender and semi-realistic dark fantasy painting style. Vertical 2:3 knee-up character-centered portrait. Crop-safe full head, hands and weapon. No text, UI, card frame, watermark or gore. Antique gold light, cool teal shadows, detailed cloth and metal. Same female Eve with short auburn hair wearing a scorched ivory researchers coat over practical clothes. Compact improvised brass crystal pistol with breakaway crystal fuse in one hand, research papers and records case protected with the other arm. Burning research wing behind her, cautious inexperienced stance, not a modern gun or professional hunter.",
+      "status": "complete",
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-10968d72-8b0b-4fa3-b499-11ff248600e4.png",
+      "revision": null,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8acae345294eda0b0ba1693989466f189904e640e3ddb1d35ee0fcd705198c75",
+      "bytes": 2885799
+    }
+  ],
+  "note": "角色外觀沿用既有插畫，凜採女性；NPC 視覺年齡並非正史設定。party-rescue 改採安全撤離瞬間。PNG 為未轉檔生成原圖；有修正者另記 revision。"
+}

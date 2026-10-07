@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none" stroke="#c5a469" opacity=".24">
+<path d="M400 24 776 250 400 476 24 250Z" stroke-width="1"/><path d="M400 52 730 250 400 448 70 250Z" opacity=".6"/>
+<ellipse cx="400" cy="250" rx="284" ry="175"/><ellipse cx="400" cy="250" rx="269" ry="163" stroke-dasharray="2 12"/>
+<path d="M400 55V165m0 170v110M70 250h220m220 0h220M170 109l157 97m146 88 157 97M170 391l157-97m146-88 157-97"/>
+<path d="m400 113 97 137-97 137-97-137Zm0 38 71 99-71 99-71-99Z" stroke-width="2"/>
+<path d="m400 24 9 13-9 13-9-13ZM24 250l13-9 13 9-13 9Zm752 0-13-9-13 9 13 9ZM400 476l9-13-9-13-9 13Z" fill="#c5a469"/>
+</svg>

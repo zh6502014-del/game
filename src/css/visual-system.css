@@ -1,0 +1,286 @@
+/* ART-UI-021 — shared presentation layer.
+   Enamel surfaces, restrained antique metal, warm reading ink. Artwork keeps its
+   own palette. No card geometry, game state, hit-target or 3D face rules live here. */
+:root {
+  --visual-ink: #081916;
+  --visual-panel: #102720;
+  --visual-raised: #1a332b;
+  --visual-gold: #c2a36b;
+  --visual-gold-light: #ecd5a3;
+  --visual-edge: #9c845452;
+  --visual-text: #efe6d2;
+  --visual-muted: #b8c4b8;
+  --visual-enamel: radial-gradient(ellipse at 12% 0%, #35534352, transparent 65%), linear-gradient(125deg, #132c25, #0a1c18);
+  --visual-shadow: 0 16px 40px #0006, inset 0 1px #ead7a310;
+  --nd-control-text: var(--visual-text);
+  --nd-control-gold: var(--visual-gold);
+  --nd-control-ink: var(--visual-ink);
+  --nd-control-edge: var(--visual-edge);
+}
+
+/* Home: keep the character's complete face in the image window; the lower
+   scrim carries the copy, so the illustration needs no colour correction. */
+.home-shell { color: var(--visual-text); }
+.home-top { color: var(--visual-gold-light); border-color: var(--visual-edge); }
+.home-intro h1 { color: var(--visual-text); font-weight: 500; }
+.home-intro > p:last-child { color: var(--visual-muted); }
+.home-mode { min-height: 460px; background: var(--visual-ink); box-shadow: var(--visual-shadow); }
+.home-mode .home-mode-art { object-position: 50% 0%; }
+.home-mode::before { background: linear-gradient(180deg, #07171100 18%, #07171122 33%, #071711e8 65%, #071711 100%); }
+.home-mode::after { border-image-width: 20px !important; }
+.home-mode-copy { padding: 30px; }
+.home-mode h2 { font-weight: 500; letter-spacing: .08em; color: var(--visual-gold-light); }
+.home-mode-copy > p:not(.home-eyebrow) { color: #d6ddd0; line-height: 1.8; }
+.home-eyebrow { color: var(--visual-gold); }
+.home-mode .home-tags span { background: #152c23b3; border-color: var(--visual-edge); color: var(--visual-gold-light); }
+.home-mode .home-cta { border-color: #c2a36b40; color: var(--visual-gold-light); }
+.home-footer { color: var(--visual-muted); }
+
+/* Secondary controls are quiet enamel. Engraving is reserved for the artwork
+   and major surfaces, while a solid gold primary action is easy to find. */
+body :is(.home-audio,
+.nd-control:not(.start):not(.audio-toggle),
+.setup-wrap .carousel-arrow,
+.battle-dock > button,
+.setup-wrap .ai-choice,
+.story-shell button:not(.story-scene),
+.story-stage-header button,
+.story-read-controls button,
+.story-actions button,
+.story-log-dialog button,
+.story-lightbox button,
+.puzzle-head > button,
+.puzzle-tools > button,
+.search-head > button,
+.search-views > button,
+.search-footer > button,
+.story-route-controls > button,
+.gallery-controls > button):not(.card):not(.carousel-card):not(.carousel-dot):not(.audio-toggle):not(.story-scene):not(.puzzle-slot) {
+  /* Match the legacy frame specificity only for its border-image reset. */
+  border-image: none !important;
+}
+.home-audio,
+.nd-control:not(.start):not(.audio-toggle),
+.setup-wrap .carousel-arrow,
+.battle-dock > button,
+.setup-wrap .ai-choice,
+.story-shell button:not(.story-scene),
+.story-stage-header button,
+.story-read-controls button,
+.story-actions button,
+.story-log-dialog button,
+.story-lightbox button,
+.puzzle-head > button,
+.puzzle-tools > button,
+.search-head > button,
+.search-views > button,
+.search-footer > button,
+.story-route-controls > button,
+.gallery-controls > button {
+  border: 1px solid var(--visual-edge);
+  background: linear-gradient(#20392f, #10261f);
+  color: var(--visual-text);
+  box-shadow: inset 0 1px #ead7a310, 0 3px 8px #0003;
+  border-radius: 4px;
+}
+:is(.home-audio, .nd-control, .carousel-arrow, .story-shell button, .story-stage-header button, .story-read-controls button, .story-actions button, .gallery-controls button):hover:not(:disabled) {
+  border-color: var(--visual-gold);
+  background: linear-gradient(#2d4739, #173026);
+}
+.nd-control.start,
+.nd-control.start:hover:not(:disabled),
+.setup-footer .start,
+.setup-footer .start:hover:not(:disabled),
+.detail-actions .start,
+.story-read-controls button:last-child:not(:first-child),
+.story-search-dialog [data-search-continue],
+.story-route-controls [data-route-confirm] {
+  background: linear-gradient(120deg, #d2b57a, #b09159);
+  color: #13241b;
+  border-color: #e3c98b;
+  box-shadow: inset 0 1px #fff0b955, 0 5px 16px #0005;
+  text-shadow: none;
+}
+:is(button, a, summary, input):focus-visible { outline-color: var(--visual-gold-light); outline-offset: 4px; }
+
+/* Selection: brighter title and a structural border, without an extra halo. */
+.setup-kicker, .side-label { color: var(--visual-gold); }
+.setup-sub, .setup-note { color: var(--visual-muted); }
+.setup-title { color: var(--visual-text); text-shadow: 0 3px 12px #0009; }
+.setup-stage .carousel-card.selected { box-shadow: 0 0 0 2px #b99a6159, 0 18px 32px #0009 !important; }
+.setup-stage .carousel-card::before { border-image-width: 16px !important; }
+.setup-stage .carousel-card .carousel-name { color: var(--visual-text) !important; font-weight: 500; text-shadow: 0 3px 10px #000; }
+.setup-stage .carousel-card .carousel-tag { color: #d0d9cb; }
+.setup-stage .carousel-card .carousel-hint { color: var(--visual-gold-light); }
+.setup-stage .carousel-card .class-crest { background: #11291fea; border-color: var(--visual-edge); color: var(--visual-gold-light); }
+.setup-wrap .choice-detail { background: #0b211be6; border-image-width: 12px !important; }
+.choice-detail summary { color: var(--visual-gold-light); }
+.choice-detail .detail-body { color: var(--visual-muted); }
+.setup-wrap .ai-choice { background: var(--visual-enamel); border-image: none !important; border: 1px solid var(--visual-edge) !important; border-radius: 4px !important; }
+.setup-wrap .ai-choice.selected { border-color: var(--visual-gold) !important; box-shadow: inset 0 3px var(--visual-gold), 0 6px 16px #0004; }
+.ai-choice .ai-name { color: var(--visual-gold-light); }
+.ai-choice .ai-desc { color: var(--visual-muted); }
+.setup-footer .skin-controls { background: #0c211bd9; border-color: var(--visual-edge); }
+.skin-controls button[aria-pressed=true] { border-color: var(--visual-gold); box-shadow: inset 0 -3px var(--visual-gold); }
+
+/* Duel: the board, HUD and toolbar share one material; health and status colours
+   and opaque, physically rotating card faces are deliberately left intact. */
+.app .battle-hud { background: var(--visual-enamel) !important; box-shadow: var(--visual-shadow) !important; }
+.app .battle-hud::before { border-image-width: 16px !important; }
+.duel-side .duel-name { color: var(--visual-gold-light); }
+.duel-screen .duel-avatar::after { border-image-width: 12px !important; }
+.app .battle-dock { background: var(--visual-enamel); border-image-width: 14px !important; }
+.battle-dock .battle-state { color: var(--visual-muted); }
+.duel-screen .retro-center { background: radial-gradient(ellipse at top, #304332, #0c211b 76%) !important; color: var(--visual-gold-light); }
+
+/* Dialogs and detail windows use the same deep enamel, with warm readable copy. */
+.rules-modal, .audio-modal, .detail-card,
+.story-log-dialog, .story-lightbox, .puzzle-dialog, .story-search-dialog, .story-route-dialog,
+.story-maze-dialog {
+  background: var(--visual-enamel) !important;
+  color: var(--visual-text);
+  border-color: var(--visual-edge);
+  box-shadow: 0 24px 80px #000b, inset 0 1px #e8d3a31a !important;
+}
+.rules-modal, .audio-modal, .detail-card { border-image-width: 16px !important; }
+:is(.rules-modal, .audio-modal, .detail-card, .story-log-dialog, .story-lightbox, .puzzle-dialog, .story-search-dialog, .story-route-dialog, .story-maze-dialog) :is(h2,h3) { color: var(--visual-gold-light); }
+.rules-table th { background: #294031; color: var(--visual-gold-light); }
+.rules-table td { background: #10271fcc; color: #d5dece; border-color: #a38b5738; }
+.audio-row { border-color: var(--visual-edge); }
+/* Scroll-stability fix: the sticky audio-settings header (.audio-head) combined
+   with the modal's border-image frame and inset box-shadow can trigger a
+   compositing/repaint glitch during scroll, where old row text briefly shows
+   through or doubles up under the header ("滾動跑版"). Promoting the header to
+   its own GPU layer and re-locking its background as the final, authoritative
+   declaration (after the other five files' competing !important rules) fixes
+   this without touching the existing cascade. */
+.audio-modal { isolation: isolate; }
+.audio-head {
+  background-color: #12282b !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+}
+.audio-sub, .detail-text { color: #d5dece; }
+.detail-icon[data-card-illustration] .character-image { background: #071a14; }
+/* A definite image window prevents the grid item's intrinsic portrait height
+   from overflowing the preview. Keep the complete painting centered here;
+   hand cards and rotating faces retain their own crop rules. */
+.detail-card .detail-icon[data-portrait] > .character-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  object-position: 50% 50% !important;
+}
+.detail-card .detail-icon > .character-image[hidden] { display: none; }
+.story-lightbox figure img { background: #071a14; }
+.story-log-dialog details { border-color: var(--visual-edge); }
+
+/* Campaign hub: chapter cards and navigation now belong to the same world as
+   the battle table, rather than looking like a separate blue dashboard. */
+.story-shell { color: var(--visual-text); }
+.story-shell .story-header { border-color: var(--visual-edge); }
+.story-shell .story-intro h1 { color: var(--visual-text); font-weight: 500; }
+.story-shell .story-intro p:not(.story-eyebrow) { color: var(--visual-muted); line-height: 1.75; }
+.story-shell .story-overall { padding: 16px 20px; background: #0c221ac9; border-left: 1px solid var(--visual-edge); }
+.story-overall strong { color: var(--visual-gold-light); }
+.story-shell .campaign-routes { gap: 8px; padding-bottom: 20px; border-bottom: 1px solid var(--visual-edge); }
+.story-shell .campaign-routes button { color: var(--visual-muted); }
+.story-shell .campaign-routes button[aria-pressed=true] { background: #304533; border-color: var(--visual-gold); color: var(--visual-gold-light); box-shadow: inset 0 -3px var(--visual-gold); }
+.story-shell .campaign-node-grid button { position: relative; background: var(--visual-enamel); border: 1px solid #9c84546e; padding: 24px; gap: 14px; box-shadow: var(--visual-shadow); }
+.campaign-node-grid button:not(:disabled)::after { content: '›'; position: absolute; right: 20px; bottom: 17px; color: var(--visual-gold); font: 28px Georgia,serif; pointer-events: none; }
+.story-shell .campaign-node-grid button:not(:disabled):hover { background: radial-gradient(ellipse at top left, #49634766, transparent 75%), #152d23; }
+.story-shell .campaign-node-grid button:disabled { opacity: .65; box-shadow: none; border-style: dashed; background: #0b1f18c9; }
+.campaign-node-grid strong { color: var(--visual-text); font-weight: 600; }
+.campaign-node-grid span { color: var(--visual-gold-light); }
+.campaign-node-grid small { color: var(--visual-muted); font-size: 13px; }
+.story-shell .story-collection { padding: 24px; }
+.story-reader, .story-puzzle-list, .story-collection { background: var(--visual-enamel); border-color: var(--visual-edge); box-shadow: var(--visual-shadow); }
+.story-reader p, .story-gallery p, .story-puzzle-list p { color: var(--visual-muted); }
+.story-shell .story-puzzle-choices button { background: #1a3227; border-color: var(--visual-edge); }
+.story-puzzle-choices small { color: var(--visual-muted); font-size: 13px; }
+
+/* Collected art is a picture with its own caption rail. Keeping that rail in
+   document flow prevents long unlock descriptions from covering the portrait. */
+.story-shell .story-skin { aspect-ratio: auto; display: flex; flex-direction: column; background: #0d221b; border-color: var(--visual-edge); border-radius: 4px; box-shadow: var(--visual-shadow); }
+.story-shell .story-skin > img { display: block; width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
+.story-shell .story-skin > div { position: relative; width: 100%; padding: 16px; flex: 1; background: linear-gradient(#183125, #0d221b); border-top: 1px solid var(--visual-edge); }
+.story-shell .story-skin h3 { font-size: 17px; line-height: 1.5; margin: 0 0 8px; color: var(--visual-gold-light); }
+.story-shell .story-skin :is(p, small) { font-size: 12px; color: var(--visual-muted); line-height: 1.7; }
+.story-shell .story-skin > div button { font-size: 12px; width: 100%; margin-top: 8px; }
+.story-shell .story-scene { border: 1px solid var(--visual-edge); border-radius: 4px; box-shadow: var(--visual-shadow); }
+.story-shell .story-scene span { background: #11281f; color: var(--visual-gold-light); font-size: 13px; padding: 12px 16px; line-height: 1.6; }
+
+/* Story stage: change the subtitle material only; actor crops, prop coordinates,
+   layered lighting and the story's fixed-stage layout remain scene-owned. */
+.story-stage .story-stage-panel { background: linear-gradient(115deg, #0a211beF, #102a21f5); color: var(--visual-text); }
+.story-performance .story-stage-panel.story-dialogue-panel { background: linear-gradient(115deg, #0a211bef, #102a21f5); }
+.story-stage-header { background: linear-gradient(#061811b3, #06181100); }
+.story-performance .story-line-speaker strong, .story-performance .story-speaker strong { color: var(--visual-gold-light); }
+.story-performance .story-reading-line[data-voice-kind=narration] { color: #c4d0be; }
+.story-performance .story-reading-heading { color: var(--visual-gold); }
+.story-performance .story-voice-kind { color: var(--visual-muted); border-color: var(--visual-edge); }
+.story-performance .story-read-controls { border-color: var(--visual-edge); }
+.story-performance .performance-speaker-marker { background: #102b21ed; border-color: var(--visual-gold); }
+.story-battle-banner { background: var(--visual-enamel); border-color: var(--visual-edge); color: var(--visual-text); }
+
+/* Puzzle and search artwork stays unfiltered, at its authored coordinates.
+   Their tray, inventory and detail panels carry the common materials. */
+.puzzle-dialog .puzzle-board { border-color: #9c84546e; background: radial-gradient(ellipse, #28432f, #0c2118); }
+.puzzle-dialog .puzzle-piece { background: #182f25; border-color: #9c845478; color: var(--visual-text); }
+.puzzle-dialog .puzzle-piece[aria-pressed=true] { background: #314531; border-color: var(--visual-gold-light); box-shadow: inset 0 -3px var(--visual-gold); }
+.puzzle-dialog .puzzle-piece:disabled { border-style: dashed; background: #10241c; }
+.puzzle-feedback, .search-footer { border-color: var(--visual-edge); }
+.puzzle-asset-state, .search-loading { background: #10281f; color: var(--visual-text); }
+.search-checklist li { background: #182f25; border-color: var(--visual-edge); }
+.search-detail { background: #102a20fa; border-color: var(--visual-gold); }
+.search-detail [data-search-collect] { background: #bea16b; color: #10241a; }
+.search-detail [data-search-detail-close] { background: #1d382b; }
+.search-views button[aria-pressed=true] { background: #314531; border-color: var(--visual-gold); box-shadow: inset 0 -3px var(--visual-gold); }
+
+/* The story battle keeps its landscape contract, status colours and shaped
+   cards. Only surrounding plates and dialog materials are reconciled. */
+.story-energy-overlay { --seb-gold: var(--visual-gold); --seb-bright: var(--visual-gold-light); --seb-text: var(--visual-text); --seb-muted: var(--visual-muted); }
+.story-energy-overlay .seb-action-rail { background: var(--visual-enamel); border-color: #9c845478; }
+.story-energy-overlay .seb-modal, .story-energy-overlay .seb-result, .story-energy-overlay .seb-hover-preview { background: var(--visual-enamel); border-color: var(--visual-gold); }
+.story-energy-overlay .seb-primary { background: linear-gradient(120deg, #d2b57a, #b09159); color: #13241b; }
+.story-energy-overlay .seb-header { border-color: var(--visual-edge); }
+.story-energy-overlay .seb-unit-name { background: linear-gradient(#2b4331, #12271e); color: var(--visual-gold-light); }
+.story-energy-overlay .seb-rotate-host { background: radial-gradient(ellipse at 50% 35%, #304c37, #081e16 80%); }
+
+/* Art, frame and icon specimens use the same exhibition backdrop and panels. */
+.gallery .art-panel, .specimens .png-frame, .role-pair { background: var(--visual-enamel); border-color: var(--visual-edge); box-shadow: var(--visual-shadow); }
+.gallery h1, .gallery h2, .gallery .art-panel h3 { color: var(--visual-gold-light); }
+.gallery .art-panel { border-image-width: 14px !important; }
+.gallery .original { color: var(--visual-gold-light); text-underline-offset: 4px; }
+.gallery p, .role-pair small { color: var(--visual-muted); }
+.icon-stage.selected { background: #304533; border-color: var(--visual-gold); }
+
+@media (max-width: 700px) {
+  .home-mode { min-height: 430px; }
+  .home-mode-copy { padding: 24px; }
+  .home-mode::after { border-image-width: 16px !important; }
+  .setup-stage .carousel-card::before { border-image-width: 12px !important; }
+  .app .battle-hud::before { border-image-width: 12px !important; }
+  .duel-screen .duel-avatar::after { border-image-width: 10px !important; }
+  .story-shell .story-overall { padding: 12px; }
+  .story-shell .campaign-node-grid button { padding: 20px; }
+  .story-shell .story-collection { padding: 16px; }
+  .story-shell .story-cards { gap: 12px; }
+  .story-shell .story-skin > div { padding: 12px; }
+  .story-shell .story-skin h3 { font-size: 16px; }
+}
+@media (max-width: 390px) {
+  .home-mode-copy { padding: 22px; }
+  .story-shell .story-cards { grid-template-columns: 1fr; }
+  .story-shell .story-skin > img { aspect-ratio: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-mode, .campaign-node-grid button { transition: none; }
+}

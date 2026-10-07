@@ -1,0 +1,85 @@
+/* Final shared art/layout layer. Scene decoration never captures input. */
+:root{--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px}
+#nd-environment{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .7s ease;background:#08191d}
+#nd-environment.active{opacity:1}.environment-backdrop{position:absolute;inset:0;background-position:center;background-size:cover;transition:opacity .7s ease;opacity:0}
+.environment-backdrop.day{background-color:#605943}.environment-backdrop.night{background-color:#101a31}
+#nd-environment[data-environment=day] .day,#nd-environment[data-environment=night] .night{opacity:1}
+#nd-environment::after{content:"";position:absolute;inset:0;background:linear-gradient(#07141c38,#0410196b),radial-gradient(ellipse,transparent 30%,#020d17b3)}
+.environment-fog{position:absolute;inset:45% -5% 0;background:radial-gradient(ellipse at 50% 80%,#b7c0a316,transparent 65%);animation:environmentMist 18s ease-in-out infinite alternate}
+[data-environment=night] .environment-fog{background:radial-gradient(ellipse at 50% 80%,#b39ed422,transparent 65%)}
+@keyframes environmentMist{to{transform:translateX(3%)}}
+body[data-environment] .app{position:relative;z-index:2}
+body[data-environment=day] .duel-screen::before{background-color:#293d2bcc!important;box-shadow:inset 0 0 0 4px #17231c, inset 0 0 0 5px #c6b37a44,inset 0 0 70px #18180b66}
+body[data-environment=night] .duel-screen::before{background-color:#18243e!important;box-shadow:inset 0 0 0 4px #101725,inset 0 0 0 5px #a191c066,inset 0 0 70px #0a1027aa}
+.duel-screen::before{transition:background-color .7s,box-shadow .7s;background-image:url('../../assets/icons/arena-engraving.svg')!important;background-size:85% auto!important;background-position:center!important;background-repeat:no-repeat!important;background-blend-mode:soft-light}
+.retro-center{gap:6px!important}.retro-center .round-mini{font-size:12px!important;letter-spacing:0!important}
+.environment-domain{position:absolute;inset:140px 4% 100px;z-index:0;pointer-events:none;border-radius:45%;opacity:0;background:url('../../assets/icons/arena-engraving.svg') center/contain no-repeat,radial-gradient(ellipse,#8dccab22,transparent 65%);border:1px solid #a5cda660;transition:opacity .4s;box-shadow:inset 0 0 50px #659c7044}
+body[data-domain=true] .environment-domain{opacity:.65}
+.environment-cast{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;overflow:hidden}
+.duel-screen>.environment-cast{inset:136px 0 10px;border-radius:12px;z-index:0}
+.duel-screen>.retro-arena,.duel-screen>.duel-hand-panel{z-index:2}
+.cast-swordsman{background:linear-gradient(135deg,transparent 35%,#f2e0aa88 49%,transparent 62%)}
+.cast-tank{background:radial-gradient(ellipse at 20% 80%,transparent 30%,#8fd1ce80 55%,transparent 75%);box-shadow:inset 0 0 65px #91c8ca55}
+.cast-assassin{background:linear-gradient(100deg,#08051666 20%,#a58bc75c 50%,#08051677 80%)}
+.cast-gunner{background:radial-gradient(ellipse at 70% 60%,#d48b5688,transparent 70%);box-shadow:inset 0 -40px 100px #9f483c66}
+.cast-spirit{background:linear-gradient(160deg,transparent 25%,#fff0bf80 48%,#d4b97966 52%,transparent 65%)}
+.cast-domain{background:url('../../assets/icons/arena-engraving.svg') center/85% no-repeat,radial-gradient(ellipse,#90be8755,transparent);box-shadow:inset 0 0 80px #a8cc8077}
+.environment-cast[data-side=ai]{transform:scaleX(-1)}
+/* A single illustration window and title rail for all playable cards. */
+.duel-screen .duel-hand .card .icon[data-card-illustration],.duel-screen .retro-card-slot .front .icon[data-card-illustration]{position:absolute!important;inset:4px 4px 29px!important;width:auto!important;height:auto!important;max-width:none!important;padding:0!important;border:0!important;border-radius:3px!important;background:#102024!important;box-shadow:none!important;filter:none!important}
+.icon[data-card-illustration] .character-image{width:100%;height:100%;object-fit:cover}
+.card:has([data-card-illustration])>b,.front:has([data-card-illustration])>b{position:absolute!important;left:4px;right:4px;bottom:6px!important;font-size:14px!important;line-height:1.2!important;letter-spacing:0!important;text-align:center}
+[data-category=special] .class-crest{border-style:double;border-width:3px;color:#ffe9b4;background:#354532}
+.card[data-category=special],.card3d[data-category=special] .front{outline:1px solid #d4cb9180;outline-offset:2px}
+[data-category=basic] .class-crest{border-radius:50%;background:#182c29e8}
+.detail-icon[data-card-illustration]{height:clamp(190px,36svh,360px)!important;width:100%!important;margin:0!important;aspect-ratio:2/3;flex:none;border-radius:4px}
+.detail-icon[data-card-illustration] .character-image{object-fit:contain;background:#061419}
+.detail-card{width:min(420px,100%)!important;max-height:calc(100svh - 32px);overflow:auto!important;padding:24px!important}.detail-name{font-size:24px!important;line-height:1.2;margin:16px 0 8px!important;text-align:center}.detail-type{font-size:12px!important;margin:0 0 16px!important}.detail-text{font-size:14px!important;line-height:1.6!important;text-align:left!important}.detail-actions{gap:12px;margin-top:24px}.detail-actions button{flex:1;min-width:0;min-height:44px}
+/* The two image faces share a rigid metal edge and independent cast shadow. */
+.coin-flip-scene{width:108px!important;height:108px!important;filter:none!important;perspective:700px}
+.coin-flip-scene::before{content:"";position:absolute;left:15%;right:15%;bottom:-16px;height:12px;background:#0008;filter:blur(5px);border-radius:50%;animation:coinShadow .82s linear both}
+.coin-flip-coin{animation:coinRigidFlip .82s linear forwards!important;transform-style:preserve-3d!important}
+.coin-face{border:0!important;box-shadow:none!important;background:none!important;overflow:visible!important}
+.coin-face.sun{transform:translateZ(2px)}.coin-face.moon{transform:rotateY(180deg) translateZ(2px)}
+.coin-face::before{content:none!important}.coin-symbol{position:absolute!important;inset:0;font-size:0!important}.coin-symbol>.nd-icon{position:absolute;inset:25%;width:50%;height:50%;z-index:-1}
+.coin-art{display:block;width:100%;height:100%;object-fit:contain}.coin-art-failed{border-radius:50%;background:radial-gradient(#bb9c55,#4a462c);border:2px solid #bba16a}
+.coin-flip-coin::before{content:"";position:absolute;left:calc(50% - 2px);top:0;width:4px;height:100%;background:repeating-linear-gradient(#c4a05a 0 2px,#654c2c 2px 3px);transform:rotateY(90deg)}
+.coin-result{font-size:14px!important;top:calc(50% + 76px)!important;white-space:nowrap;line-height:1.4;letter-spacing:1px!important}
+@keyframes coinRigidFlip{0%{transform:translateY(0) rotateY(var(--coin-start-rotation))}25%{transform:translateY(-24px) rotateY(calc(var(--coin-start-rotation) + (var(--coin-final-rotation) - var(--coin-start-rotation)) * .25))}50%{transform:translateY(-32px) rotateY(calc(var(--coin-start-rotation) + (var(--coin-final-rotation) - var(--coin-start-rotation)) * .5))}75%{transform:translateY(-24px) rotateY(calc(var(--coin-start-rotation) + (var(--coin-final-rotation) - var(--coin-start-rotation)) * .75))}100%{transform:translateY(0) rotateY(var(--coin-final-rotation))}}
+@keyframes coinShadow{50%{opacity:.35;transform:scale(.65)}100%{opacity:1;transform:scale(1)}}
+/* Shared spacing and typography. Titles center; reading text aligns left. */
+button:not(.card):not(.carousel-card):not(.puzzle-slot),summary{min-height:44px!important}button .nd-icon{vertical-align:middle}.setup-sub,.carousel-tag,.carousel-hint,.setup-kicker,.side-label,.choice-detail summary,.detail-pill,.ai-more,.battle-state,.battle-dock button span{font-size:12px!important}
+.choice-detail .detail-body,.ai-choice .ai-desc,.rules-modal,.audio-modal,.journal-overlay,.result-stats,.audio-sub,.audio-label small{font-size:14px!important;line-height:1.6!important}
+.choice-detail .detail-body,.ai-choice .ai-desc,.detail-text,.rules-section,.audio-sub,.log,.journal-log{text-align:left!important;letter-spacing:0!important}
+.ai-choice{display:flex;flex-direction:column;gap:8px;padding:16px!important}.ai-choice .ai-name{font-size:16px!important;text-align:center;width:100%}.ai-choice .ai-desc{margin:0!important}.ai-mind{gap:12px}.setup-divider{margin:24px 0 16px}.setup-footer{gap:16px;margin-top:24px}
+.choice-detail{margin-top:16px}.detail-pills{gap:8px;margin-bottom:12px}.choice-detail .detail-body{padding:8px 8px 16px}.carousel-tag{letter-spacing:0!important}.carousel-hint{letter-spacing:1px!important}
+.rules-modal,.audio-modal{padding:24px!important}.rules-head,.audio-head{gap:16px;align-items:flex-start}.rules-title,.audio-title{line-height:1.2!important;margin:0 0 12px}.rules-close,.audio-close{width:44px;min-width:44px}.audio-row{gap:12px;padding:16px 0}.audio-value,.result-stats{font-variant-numeric:tabular-nums}.audio-value{text-align:right}.rules-table td{vertical-align:top;line-height:1.6;padding:12px}.result-stats{gap:16px}.battle-dock{gap:12px;padding:12px 16px}.battle-state{text-align:center}
+@media(max-width:700px){
+ .app,.app:has(.duel-screen){padding:16px!important}.setup-wrap{padding:0!important}.setup-title{font-size:34px!important;letter-spacing:6px!important}.setup-sub{letter-spacing:0}.setup-stage{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:0}.carousel-card{max-width:100%}.carousel-card .carousel-name{bottom:58px}.carousel-card .carousel-tag{bottom:35px;font-size:12px!important;line-height:1.25}.carousel-card .carousel-hint{bottom:12px;font-size:12px!important}.carousel-nav{gap:4px}.carousel-arrow{width:44px!important;min-width:44px!important}.carousel-dots{gap:2px}.choice-detail summary{gap:4px;font-size:12px!important;line-height:1.4}.choice-detail .detail-body{padding:8px 0 16px}.detail-pills{gap:4px}.detail-pill{padding:4px!important}
+ .ai-mind{grid-template-columns:1fr!important;gap:8px}.ai-choice{display:grid;grid-template-columns:64px 1fr;align-items:center;padding:12px!important;gap:12px}.ai-choice .ai-name{text-align:left}.setup-footer .audio-settings-btn,.setup-footer .rules-btn{font-size:12px!important}.setup-footer{gap:12px}.setup-footer .start{font-size:16px!important}
+ .duel-screen>.duel-side{padding:12px 8px!important}.duel-screen{grid-template-rows:auto minmax(220px,27svh) 134px!important}.retro-center{width:64px!important;height:84px!important;min-width:64px!important;border-radius:32px}.retro-center .vsx{font-size:20px!important}.retro-center .round-mini{font-size:12px!important;max-width:56px;text-align:center}.retro-card-slot.empty.slot.you .slot-label{font-size:12px}.duel-screen .duel-hand .card b,.duel-screen .retro-card-slot .front b{font-size:12px!important;letter-spacing:0!important}
+ .detail-card{padding:16px!important}.detail-icon[data-card-illustration]{height:30svh!important;min-height:160px}.detail-actions{gap:8px}.battle-dock{gap:8px;padding:12px 8px}.battle-state{line-height:1.5}.rules-modal,.audio-modal{padding:16px!important;width:100%;max-height:calc(100svh - 32px)}.rules-table{min-width:480px}.rules-table-wrap{overflow-x:auto}.coin-flip-scene{width:88px!important;height:88px!important}
+}
+@media(max-width:360px){:root{--hero-w:120px;--hero-h:238px}.carousel-nav{gap:2px}.carousel-dots{max-width:24px}.carousel-card .carousel-name{font-size:20px!important}.setup-title{font-size:30px!important}.setup-footer{grid-template-columns:1fr!important}.setup-footer .audio-settings-btn,.setup-footer .rules-btn{grid-column:1!important;grid-row:auto!important}.detail-actions{flex-wrap:wrap}.detail-actions button{flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){#nd-environment,.environment-backdrop,.environment-domain,.duel-screen::before{transition:none!important}.environment-fog,.coin-flip-scene::before{animation:none!important}.environment-cast{display:none}.coin-flip-coin{animation:none!important;transform:rotateY(var(--coin-final-rotation))}.coin-result{animation:none!important;opacity:1!important}}
+body[data-environment=day] .duel-screen::before{background-color:#172c27ed!important}
+.coin-symbol>.nd-icon{z-index:0}.coin-art{position:relative;z-index:1}
+/* Keep cosmetic collection controls aligned with the shared footer. */
+.setup-footer .skin-controls{grid-column:1/-1;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;padding:16px;border:1px solid #a9905544;background:#102325cc;border-radius:4px;font-size:14px}
+.skin-controls button{padding:8px 12px;background:#1d3633;color:#e5d2a8;border:1px solid #9d885477;border-radius:3px}.skin-controls button[aria-pressed=true]{border-color:#e5c486;box-shadow:inset 0 0 0 2px #d2b37533}.skin-controls button:disabled{opacity:.5}.skin-controls small{flex-basis:100%;font-size:12px}.home-return,.story-entry{font-size:14px;line-height:1.5;padding:12px;text-align:center}.setup-footer .home-return,.setup-footer .story-entry{grid-column:auto}.carousel-track{scroll-behavior:auto!important}
+@media(max-width:700px){.setup-footer .home-return,.setup-footer .story-entry,.setup-footer .skin-controls{grid-column:1/-1!important;grid-row:auto!important}.skin-controls button{flex:1 1 120px}.setup-footer .skin-controls{padding:12px;gap:8px}}
+/* Absolute artwork must remain anchored even when dense hands remove transforms. */
+.duel-hand .card{position:relative!important;overflow:hidden!important}
+.carousel-track{position:relative;isolation:isolate}/* Resource badges participate in flow so enlarged numerals cannot be clipped. */
+.retro-center{height:auto!important;min-height:96px;padding:12px 4px!important}.retro-center .round-mini{white-space:normal!important;text-align:center;line-height:1.3!important}.retro-center .vsx{line-height:1!important}
+@media(max-width:700px){.retro-center{min-height:84px}}
+/* Directional scene accents move through the field; the outer layer controls intensity. */
+.cast-swordsman,.cast-spirit{background:none}
+.cast-swordsman::before,.cast-spirit::before{content:"";position:absolute;inset:-50%;background:linear-gradient(135deg,transparent 43%,#f8e6bca0 49%,transparent 56%);animation:sceneSweep .3s ease-out both}
+.cast-spirit::before{background:linear-gradient(155deg,transparent 42%,#fff1c8a0 49%,#c6ab6770 51%,transparent 57%)}
+.cast-assassin::before{content:"";position:absolute;inset:-20%;background:linear-gradient(100deg,transparent 35%,#a088c15c 50%,transparent 63%);animation:sceneSweep .3s ease-out both}
+.cast-tank::before{content:"";position:absolute;inset:8%;border:2px solid #b2e4de99;border-radius:50%;box-shadow:0 0 24px #87b6b966;animation:sceneWard .3s ease-out both}
+.cast-gunner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 65%,#f6c178 0 2px,transparent 3px),radial-gradient(circle at 62% 73%,#f6c178 0 2px,transparent 3px),radial-gradient(circle at 78% 56%,#f6c178 0 1px,transparent 3px);animation:sceneEmbers .3s ease-out both}
+@keyframes sceneSweep{from{transform:translateX(-35%)}to{transform:translateX(35%)}}
+@keyframes sceneWard{from{transform:scale(.6)}to{transform:scale(1.1)}}
+@keyframes sceneEmbers{from{transform:translateY(12px);opacity:1}to{transform:translateY(-16px);opacity:0}}

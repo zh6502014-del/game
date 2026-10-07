@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "backgrounds": [
+    {
+      "id": "lab",
+      "path": "assets/story/backgrounds/lab.png",
+      "title": "曜火研究室",
+      "prompt": "Use case: precise-object-edit. Asset: reusable empty background plate for a layered visual novel game. Image 1 is a style/environment reference and edit target. A completely unoccupied gothic crystal research laboratory inspired by the reference. Cool blue tall lancet windows, dark bookcases, old brass crystal measurement equipment and quiet amber lamps. Put a low empty workbench and equipment in the MIDGROUND/BACKGROUND, leave the lower third open dark stone floor and the central foreground empty. The crystal contains only a small soft light, no imagery. Remove EVERY person from the reference, including all faces, hands, silhouettes, figures, reflections, and the person-shaped apparition inside the crystal. No prominent objects blocking the left or right foreground. Preserve the semi-realistic dark fantasy illustration style, antique brass and aged gold materials, muted green-black and cold blue night palette, realistic stone and subtle atmosphere. Landscape 16:9 composition. Low contrast and uncluttered foreground; enough architectural depth to place transparent character art in front. Absolutely no people, human parts, creatures, ghosts, portraits, statues, face shapes, written text, captions, readable symbols, UI, frame, watermark. A clean background environment only.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-96993654-e1d6-4dc8-ba32-15944f71a3e0.png",
+      "status": "complete",
+      "visualQA": "Inspected generated output: empty environment, no people or body fragments; clear foreground for compositing.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "09a2577ba0dc5ec3cc1f4cbbadbe1906f38993204124025a344f552e9296b604"
+    },
+    {
+      "id": "shelter",
+      "path": "assets/story/backgrounds/shelter.png",
+      "title": "旅途中石室藏身處",
+      "prompt": "Use case: precise-object-edit. Asset: reusable empty background plate for a layered visual novel game. Image 1 is a style/environment reference and edit target. A completely unoccupied humble gothic stone hideout inspired by the reference. Worn masonry, an open narrow window with cold night sky, books on a rear shelf, small amber oil lamp on an old table positioned in the MIDGROUND, a few blank folded papers. Leave broad empty dark standing areas across the left, center and right foreground for separate character overlays. Remove EVERY character and all human faces, bodies, hands, silhouettes, shadows and reflections. The table must be behind the future characters, not a hard obstruction across the bottom. Do not include the recorder or its mechanical horn; this is a reusable shelter, not the final recording event. Preserve the semi-realistic dark fantasy illustration style, antique brass and aged gold materials, muted green-black and cold blue night palette, realistic stone and subtle atmosphere. Landscape 16:9 composition. Low contrast and uncluttered foreground; enough architectural depth to place transparent character art in front. Absolutely no people, human parts, creatures, ghosts, portraits, statues, face shapes, written text, captions, readable symbols, UI, frame, watermark. A clean background environment only.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-ba099e11-4e32-40b3-990c-a85e0a2defa8.png",
+      "status": "complete",
+      "visualQA": "Inspected generated output: no people or body fragments; midground table, open dark foreground; edge props outside main character positions.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e5c6f687ac2c2b06d4dbdb7cdb61e59b67c6c8d598df7070d892c143c41fed9b"
+    },
+    {
+      "id": "tower",
+      "path": "assets/story/backgrounds/tower.png",
+      "title": "鐘樓書室",
+      "prompt": "Use case: precise-object-edit. Asset: reusable empty background plate for a layered visual novel game. Image 1 is a style/environment reference and edit target. A completely unoccupied interior of the same gothic bell tower inspired by the reference. Aged bronze bell and ropes high at the left rear, open arched stone windows looking onto distant gothic towers under a moonlit misty sky. A modest old reading desk with closed books and two EMPTY wooden chairs at the back, kept away from the central foreground. Broad empty dark stone floor across front left, center and right for standing character overlays. Remove both characters and all people, body parts, garments, shadows, reflections or portraits. Keep the aged gold detail and cold night environment. Preserve the semi-realistic dark fantasy illustration style, antique brass and aged gold materials, muted green-black and cold blue night palette, realistic stone and subtle atmosphere. Landscape 16:9 composition. Low contrast and uncluttered foreground; enough architectural depth to place transparent character art in front. Absolutely no people, human parts, creatures, ghosts, portraits, statues, face shapes, written text, captions, readable symbols, UI, frame, watermark. A clean background environment only.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-bookmark.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-03b92ed8-0821-4c73-8c54-8e973be73cb6.png",
+      "status": "complete",
+      "visualQA": "Inspected generated output: no people or body fragments; two empty chairs and desk in rear, broad clear foreground; bell and window architecture consistent.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c6e6fdfc9240c8637d65f3948c279c1820444d104acebfa2293d80868bd49302"
+    },
+    {
+      "id": "road",
+      "path": "assets/story/backgrounds/road.png",
+      "title": "城外霧中舊路",
+      "prompt": "Use case: precise-object-edit. Asset: reusable empty background plate for a layered visual novel game. Image 1 is a style/environment reference and edit target. A completely unoccupied old road outside a gothic walled city inspired by the reference. A broad worn stone and earth path recedes into cool blue night mist, low broken moss-covered walls at the rear sides, distant ruined towers, very subtle amber gate lamps. No large foreground table or map, no foreground sign or objects blocking the center or either side. The lower third is broad open low-contrast road for compositing full-length or waist-up character sprites. Remove EVERY person from the source including all main characters and ALL tiny background travelers, silhouettes, riders, animals, faces and reflections. The road must be visibly empty. Preserve the semi-realistic dark fantasy illustration style, antique brass and aged gold materials, muted green-black and cold blue night palette, realistic stone and subtle atmosphere. Landscape 16:9 composition. Low contrast and uncluttered foreground; enough architectural depth to place transparent character art in front. Absolutely no people, human parts, creatures, ghosts, portraits, statues, face shapes, written text, captions, readable symbols, UI, frame, watermark. A clean background environment only.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-road.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-598c2368-d619-4b19-aeb3-009437312e58.png",
+      "status": "complete",
+      "visualQA": "Inspected generated output: no main or distant people, no body fragments; broad empty foreground road, low walls behind, cool night and antique amber lights.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "cc74f7faefa2ab8186f2b04a174e7ded454e845c56466c49d6a89e4641226105"
+    }
+  ]
+}

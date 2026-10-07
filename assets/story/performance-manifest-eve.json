@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "scenes": [
+    {
+      "id": "e1-stage-1",
+      "node": "E1",
+      "slot": 1,
+      "title": "準備樣本測試",
+      "prompt": "Create one independent landscape 16:9 cinematic illustration for Nightfall Duel, no text, watermark, borders or UI. Reference1 fixes Eve's face (adult woman with short tousled red hair, ivory research coat, red scarf) and Herman (thin elderly man, swept silver hair, round glasses, charcoal coat); reference2 fixes the makeshift brass crystal gun when needed. Preserve these precise faces and outfits; use a new composition not a crop. Semi-realistic dark fantasy, antique gold metal, cool blue night with warm practical lamplight, anatomical hands and plausible props, faces and key objects inset from crop edges. This scene: Eve and her mentor Herman prepare an ordinary unlit crystal sample before testing, Eve carefully sets the sample into a brass holder at the table, Herman adjusts the inactive instrument. Wide laboratory view, no vision or apparition yet. Only specified characters present; unresolved lore not visually answered.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-first-shot.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-b12e4ade-37f1-4199-bb43-1e1ea33843d2.png",
+      "path": "assets/story/e1-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2f7793721d50523cf1e77796d230d2e63ed6836971c96f7be1dc8f7b4ae99736"
+    },
+    {
+      "id": "e1-stage-3",
+      "node": "E1",
+      "slot": 3,
+      "title": "師徒比對舊紀錄",
+      "prompt": "Create one independent landscape 16:9 cinematic illustration for Nightfall Duel, no text, watermark, borders or UI. Reference1 fixes Eve's face (adult woman with short tousled red hair, ivory research coat, red scarf) and Herman (thin elderly man, swept silver hair, round glasses, charcoal coat); reference2 fixes the makeshift brass crystal gun when needed. Preserve these precise faces and outfits; use a new composition not a crop. Semi-realistic dark fantasy, antique gold metal, cool blue night with warm practical lamplight, anatomical hands and plausible props, faces and key objects inset from crop edges. This scene: After an unsettling test Eve and Herman sit beside an inactive instrument comparing two old research ledgers, thoughtful shared concern, over-the-table two-shot with matching charts drawn as abstract marks, no supernatural vision visible and no definite answer. Only specified characters present; unresolved lore not visually answered.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-first-shot.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-7f45588d-e4a4-44a7-aeaf-f8639e7c5f1a.png",
+      "path": "assets/story/e1-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ec3558c295f7cb9b9a4148ff20bab63f45f7e6b07488cdc6e04a52e0e8b0da0e"
+    },
+    {
+      "id": "e2-stage-3",
+      "node": "E2",
+      "slot": 3,
+      "title": "整理副本與異常讀值",
+      "prompt": "Create one independent landscape 16:9 cinematic illustration for Nightfall Duel, no text, watermark, borders or UI. Reference1 fixes Eve's face (adult woman with short tousled red hair, ivory research coat, red scarf) and Herman (thin elderly man, swept silver hair, round glasses, charcoal coat); reference2 fixes the makeshift brass crystal gun when needed. Preserve these precise faces and outfits; use a new composition not a crop. Semi-realistic dark fantasy, antique gold metal, cool blue night with warm practical lamplight, anatomical hands and plausible props, faces and key objects inset from crop edges. This scene: Eve alone in a dim basement archive sorts recovered copies and abnormal instrument readings into a leather portfolio, tense discovery, brass ruler and dim crystal gauge, shelves and narrow stairway, mentor absent, no clear answer about the anomaly. Only specified characters present; unresolved lore not visually answered.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-first-shot.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-aabdbd06-e457-4c9a-a8f8-06f3952c1b04.png",
+      "path": "assets/story/e2-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9e20501a4c3575f9546f188f252c3327aa1f2dbb28f4510f213a0382feac7096"
+    },
+    {
+      "id": "e3-stage-1",
+      "node": "E3",
+      "slot": 1,
+      "title": "工作臺上的零件",
+      "prompt": "Create one independent landscape 16:9 cinematic illustration for Nightfall Duel, no text, watermark, borders or UI. Reference1 fixes Eve's face (adult woman with short tousled red hair, ivory research coat, red scarf) and Herman (thin elderly man, swept silver hair, round glasses, charcoal coat); reference2 fixes the makeshift brass crystal gun when needed. Preserve these precise faces and outfits; use a new composition not a crop. Semi-realistic dark fantasy, antique gold metal, cool blue night with warm practical lamplight, anatomical hands and plausible props, faces and key objects inset from crop edges. This scene: Eve leans over a makeshift repair workbench. In foreground are separate visibly unassembled components of the brass crystal pistol from reference 2: metal grip, short barrel, crystal chamber and copper wire, separated with clear physical gaps. She studies the parts before assembly. A distant glow through a doorway hints at the emergency but no gun assembled and no firing. Only specified characters present; unresolved lore not visually answered.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-first-shot.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-dfebe57b-6567-4cbc-a659-db3a1c4ba591.png",
+      "path": "assets/story/e3-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "2d17e597f56a05ba17f28a681dccf3755ede95666af97b490793d3fe398915b0"
+    },
+    {
+      "id": "e3-stage-2",
+      "node": "E3",
+      "slot": 2,
+      "title": "組裝完成、準備破鎖",
+      "prompt": "Create one independent landscape 16:9 cinematic illustration for Nightfall Duel, no text, watermark, borders or UI. Reference1 fixes Eve's face (adult woman with short tousled red hair, ivory research coat, red scarf) and Herman (thin elderly man, swept silver hair, round glasses, charcoal coat); reference2 fixes the makeshift brass crystal gun when needed. Preserve these precise faces and outfits; use a new composition not a crop. Semi-realistic dark fantasy, antique gold metal, cool blue night with warm practical lamplight, anatomical hands and plausible props, faces and key objects inset from crop edges. This scene: Eve has just assembled the same improvised brass crystal pistol from reference 2, its recognizable short chamber and grip. She holds it lowered near her waist with finger off trigger, carrying a protected portfolio under the other arm, looking toward a closed heavy service door and lock. Ready to leave the workbench. No firing, no muzzle flash, no broken lock, no enemy shown. Only specified characters present; unresolved lore not visually answered.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/gunner-echo.png",
+        "/Users/songer/Desktop/Game/assets/story/gunner-first-shot.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-b52f99e4-3e33-4c7e-a499-a18c1a91159a.png",
+      "path": "assets/story/e3-stage-2.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "7543ab179cc425ffa320c798b0907cc2ee75a92ce91a182542985f6e76af8efe"
+    }
+  ]
+}

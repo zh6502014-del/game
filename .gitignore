@@ -1,0 +1,33 @@
+# Local archive: preserve its guide and move index, keep large originals off GitHub.
+/storage/*
+!/storage/README.md
+!/storage/moved-files.json
+!/storage/source-art-manifest.json
+
+# Generated verification output and local tooling
+/test-results/
+/node_modules/
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+/.codex/
+/.agents/
+/.claude/
+/.idea/
+/.vscode/
+
+# OS metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local environment values / credentials (templates may be shared)
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.log

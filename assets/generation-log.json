@@ -1,0 +1,79 @@
+{
+  "mode": "built-in image_gen",
+  "assets": {
+    "attack": {
+      "prompt": "Use case: stylized-concept. Asset: vertical 2:3 full bleed card illustration for Nightfall Duel. Reference image sets painting style, antique gold/ink green materials and warm upper-left/cool teal lighting only. Subject: close dramatic view of an engraved sword sweeping diagonally into another blade, restrained gold contact sparks; anonymous gloved hand, no recognizable hero. Semi-realistic dark fantasy oil-painted realism, misty ruined courtyard, grounded metal. Clear central silhouette readable at 68px wide; focal blade/contact in upper two thirds, dark low detail lower fifth. No text, border, card frame, UI, logo. Generate one new ATTACK card artwork.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-7d7cd5c0-cb32-44ac-b10f-1f6a286fcc4e.png"
+    },
+    "defense": {
+      "prompt": "Use case: stylized-concept. New vertical 2:3 full bleed Nightfall Duel card illustration. Close-up anonymous engraved steel shield receiving a sword strike, restrained sparks, no recognizable character or face, strong shield silhouette. Match reference semi-realistic dark fantasy painterly realism, antique gold metal, warm upper-left/cool teal light, ruined courtyard. Readable central focal subject upper75%, darker low detail lower fifth. No text/frame/UI/logo.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-dd655d36-abd9-4464-9877-32e52087ddd1.png"
+    },
+    "dodge": {
+      "prompt": "Use case: stylized-concept. New vertical 2:3 full bleed Nightfall Duel card illustration. Anonymous dark cloaked fighter evading a passing sword by sidestepping, face hidden and no specific hero identity, clear silhouette, restrained motion, no duplicate limbs. Match reference semi-realistic dark fantasy painterly realism, antique gold metal, warm upper-left/cool teal light, ruined courtyard. Readable central focal subject upper75%, darker low detail lower fifth. No text/frame/UI/logo.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-0bab9d46-b4ed-41d4-b2cb-2cf4d89ad969.png"
+    },
+    "swordsman": {
+      "prompt": "Use case: stylized-concept. New vertical 2:3 full bleed Nightfall Duel card painting, same semi-realistic dark fantasy painted realism and warm upper-left antique gold/cool teal rim light as reference. Same exact male swordsman identity, ivory-gold armor, green cloak and sword as reference; dynamic controlled diagonal sword slash, face and blade clearly visible. Ruined courtyard, clear central silhouette, figure and weapon safe inside crop, low-detail dark lower fifth. No text, frame, logo, UI. One illustration.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-db0d883b-fcb7-4cb7-9857-54f200a87b6c.png"
+    },
+    "tank": {
+      "prompt": "Use case: stylized-concept. One new vertical 2:3 full bleed skill card illustration. Preserve exact character identity, face, clothing and equipment from reference; show braced behind his raised steel-teal shield, gold impact sparks on shield. Same semi-realistic dark fantasy painted realism, antique gold engraving, warm upper-left/cool teal light, ruined courtyard. Readable silhouette at small size, face and signature weapon in central upper 75%, dark lower fifth. No text/frame/UI/logos.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-b048e3dc-466b-433d-a4de-dba258ffd214.png"
+    },
+    "assassin": {
+      "prompt": "Use case: stylized-concept. One new vertical 2:3 full bleed skill card illustration. Preserve exact character identity, face, clothing and equipment from reference; show lunging forward with twin daggers, violet cloak flowing, anatomically natural action. Same semi-realistic dark fantasy painted realism, antique gold engraving, warm upper-left/cool teal light, ruined courtyard. Readable silhouette at small size, face and signature weapon in central upper 75%, dark lower fifth. No text/frame/UI/logos.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-96cf5ff7-58fc-404e-bc7a-3f0418a02b94.png"
+    },
+    "gunner": {
+      "prompt": "Use case: stylized-concept. One new vertical 2:3 full bleed skill card illustration. Preserve exact character identity, face, clothing and equipment from reference; show aiming and firing her antique long rifle, small copper-red muzzle flash, natural grip. Same semi-realistic dark fantasy painted realism, antique gold engraving, warm upper-left/cool teal light, ruined courtyard. Readable silhouette at small size, face and signature weapon in central upper 75%, dark lower fifth. No text/frame/UI/logos.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-7438b828-7058-43bb-8c09-6abd6003ffe1.png"
+    },
+    "spirit": {
+      "prompt": "Use case: stylized-concept. New vertical 2:3 full bleed Nightfall Duel card painting, same semi-realistic dark fantasy painted realism and warm upper-left antique gold/cool teal rim light as reference. Same exact male swordsman identity and ivory-gold green clothing as reference, releasing a sweeping crescent of golden-white sword energy along ground; distinct from an ordinary slash, keep face and blade visible. Ruined courtyard, clear central silhouette, figure and weapon safe inside crop, low-detail dark lower fifth. No text, frame, logo, UI. One illustration.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-841f52e9-ca22-4ef8-8422-72403290609c.png"
+    },
+    "domain": {
+      "prompt": "Use case: stylized-concept. New vertical 2:3 full bleed Nightfall Duel card illustration. Same exact tank hero face and steel-teal plate equipment as reference, shield planted while an enveloping ink-green translucent protective dome and antique-gold circular runes rise from the floor, powerful centered figure. Match reference semi-realistic dark fantasy painterly realism, antique gold metal, warm upper-left/cool teal light, ruined courtyard. Readable central focal subject upper75%, darker low detail lower fifth. No text/frame/UI/logo.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-e6bb2539-c971-4f63-8c51-f7b295d1706a.png"
+    },
+    "sun": {
+      "prompt": "Use case: stylized-concept. Generate a single perfectly circular ancient gold coin, orthographic straight-on face, centered and fills 88% of square canvas. Raised sun disc with simple sculpted triangular rays, ink-green enamel recesses, engraved border and fine milled rim, worn antique gold, warm upper-left lighting matching reference. No letters/numbers/UI. Truly transparent background, no cast shadow, no perspective, no surrounding scene. Premium dark fantasy painted realistic material. Reference is material/style only.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-8c7388f7-304f-4bf3-a5f9-7f5e497e7070.png"
+    },
+    "moon": {
+      "prompt": "Use case: precise-object-edit. Create reverse face of this exact circular coin. Keep identical dimensions, orthographic camera, antique gold engraved outer rim, lighting direction, green enamel and wear. Replace ONLY central sun with a large raised antique gold crescent moon and tiny four-point star in the hollow, subtle muted violet enamel inside the crescent region. No letters or numbers. Real transparent background, no cast shadow. Same circular silhouette and size.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-d72830d2-50ca-4127-a576-e710e71e9d60.png"
+    },
+    "day": {
+      "prompt": "Use case: lighting-weather. Edit reference environment ONLY lighting and sky: overcast daytime, pale warm cloud-filtered sun, muted antique gold light, deep green shadows. Keep EXACT camera, architecture, columns, flagstones and composition. No people, cards, UI, text. Low contrast center65% for game.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-c2b2d023-d582-4f20-9f70-24016057e1a6.png"
+    },
+    "night": {
+      "prompt": "Use case: lighting-weather. Change ONLY time of day of this EXACT scene to night assault: cool moonlight, deep teal shadows, moon-violet haze, restrained warm fires in side braziers. Preserve exact camera and every building, pillar, floor circle and foreground shape. Dark fantasy painted realism, low contrast center for UI. Wide same aspect ratio. No characters/text/cards/UI.",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-74d47859-fd15-4d52-9188-23b6e5a56806.png"
+    }
+  },
+  "revisions": [
+    {
+      "task": "BASIC-ART-003",
+      "date": "2026-09-23",
+      "manifest": "assets/cards/basic-v2/generation.json",
+      "scope": [
+        "attack",
+        "defense",
+        "dodge"
+      ],
+      "originalsPreserved": true
+    },
+    {
+      "task": "CARD-BACK-004",
+      "date": "2026-09-23",
+      "manifest": "assets/cards/back-gold-v2.json",
+      "scope": [
+        "shared-card-back"
+      ],
+      "originalsPreserved": true
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "task": "CARD-BACK-004",
+  "date": "2026-09-23",
+  "mode": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "asset": "assets/cards/back-gold-v2.png",
+  "description": "簡化共用牌背：古金菱形寶石封印、上下月牙、低對比深墨綠琺瑯留白與克制薄框。",
+  "source": "/Users/songer/.codex/generated_images/01a0ceb0-ecef-7d73-bd84-b698846d0080/exec-6b802ea1-2565-4841-a1b9-fdf6519a5a7c.png",
+  "references": [
+    "assets/cards/back-gold-v1.png",
+    "assets/cards/basic-v2/defense.png"
+  ],
+  "originalsPreserved": true,
+  "image": {
+    "width": 1060,
+    "height": 1484,
+    "aspectRatio": "5:7",
+    "format": "PNG",
+    "bitDepth": 8,
+    "colorType": 2,
+    "colorModel": "RGB",
+    "opaque": true,
+    "bytes": 2169056,
+    "sha256": "616a2e1cfbeb7f6caac81c347fbf8324aaf2e1350a2a908d49b11c011ae39457"
+  },
+  "generationHistory": [
+    {
+      "step": 1,
+      "intent": "Remove dense ornament while preserving seal identity",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/cards/back-gold-v1.png",
+        "/Users/songer/Desktop/Game/assets/cards/basic-v2/defense.png"
+      ],
+      "prompt": "Use case: precise-object-edit\nAsset type: Production game card-back texture, full-bleed opaque PNG, vertical 5:7 canvas, front-on orthographic flat texture, no perspective or surrounding scene.\nInput images: Image 1 (back-gold-v1.png) is the edit target and identity reference. Image 2 (basic-v2/defense.png) is only the material, palette and restrained detail reference. Do not place a shield or character on the card back.\nPrimary request: Simplify the existing Nightfall Duel card back so its central seal reads immediately at a tiny 60-pixel card width, while looking finely crafted at large size. Preserve the identity of its central elongated diamond seal with a faceted deep-green gemstone and antique-gold bevels, plus small matching crescent accents above and below. Preserve the existing dark-fantasy antique-gold and ink-green palette.\nComposition: One clear vertically centered diamond emblem, occupying about 35 percent of canvas width and 38 percent of height. Use broad uninterrupted deep ink-green negative space around it. Keep the whole design centered and balanced with top/bottom crescent accents as secondary motifs. The crescent accents should be compact and much smaller than the central diamond. The green gem is polished but not luminous.\nBorder: A single restrained thin antique-gold beveled rectangular inner border, with only one simple geometric accent in each corner. The border is inset safely: at least 7 percent of the width at the sides, and 8 percent of the height at top and bottom. Keep all meaningful art within this safe frame; no ornament reaches the image edge. Fill the canvas to every edge with opaque deep ink-green material. If the output canvas is 2:3 instead of 5:7, keep the same generous top/bottom safe area so centered cover cropping does not cut the border.\nMaterials and lighting: Luxurious dark green enamel on a rigid card, quiet velvety surface, subtle patina and fine microtexture only visible close up. Antique brushed and engraved gold with realistic bevel highlights, soft warm upper-left light and subdued cool teal shadows, matching Image 2's palette and physically believable metal. Central emblem outline is crisp and readable; broad gold planes and sparse shallow engraved grooves, not filigree.\nChanges required: Remove the curling ivy, foliage, lace-like engraving, numerous starbursts, repeated ornamental dots, dense rays and all ornate filler from Image 1. Reduce overall ornament density very substantially. Most of the card must be calm, dark green open material. Do not replace removed detail with new decoration.\nConstraints: Entire image opaque, no transparency or checkerboard. No text, letters, labels, numbers, watermark, figures, weapons, profession logos, user interface, particle sparks, glowing magical effects, white bloom, glass transparency, architecture, extra frames, dense floral ornament, illustration scene, mockup background or drop shadow outside the card. Preserve a polished semi-realistic dark-fantasy material finish, not a flat vector icon. Deliver one clean card-back image only.",
+      "output": "/Users/songer/.codex/generated_images/01a0ceb0-ecef-7d73-bd84-b698846d0080/exec-69c9a130-8412-4900-bccb-781c1f135b14.png",
+      "selected": false
+    },
+    {
+      "step": 2,
+      "intent": "Quiet the background, inset thin border, reduce corner ornaments",
+      "references": [
+        "/Users/songer/.codex/generated_images/01a0ceb0-ecef-7d73-bd84-b698846d0080/exec-69c9a130-8412-4900-bccb-781c1f135b14.png"
+      ],
+      "prompt": "Use case: precise-object-edit.\nThis is a targeted material-polish edit of the attached game card back. Retain the exact central elongated antique-gold diamond, green faceted gem, paired crescents and star motifs, their positions, symmetry, scale, crisp silhouette and crafted metallic appearance. Retain 5:7 vertical canvas and opaque full-bleed ink-green surface.\nChange the BACKGROUND ONLY to a very quiet deep ink-green enamel surface with extremely subtle soft gradients and almost invisible fine satin grain. Remove the visibly branching marble/crackle/vein texture entirely. It should be calm uninterrupted dark-green negative space with no visible pattern at thumbnail size. Keep realistic material richness with broad soft upper-left reflection but no glossy bright patch. This is refined dark-fantasy craftsmanship, not flat vector art.\nAlso move the existing single thin gold border inward slightly so it is 8 percent of canvas width from each side and 7 percent of canvas height from top/bottom. Reduce its four corner star ornaments to half their current size. Keep the border very thin. Preserve continuous dark-green full-bleed background outside the border for an external game UI frame to overlay.\nDo not add any extra decoration. No new symbols, floral detail, vines, rays, filigree, text, letters, numbers, watermark, glowing particles, mockup scene, perspective, transparent pixels, checkerboard, character or weapon. Deliver only the flat finished opaque card-back texture. The main emblem and metal stay unchanged; only calm the background and inset/minimize the thin border.",
+      "output": "/Users/songer/.codex/generated_images/01a0ceb0-ecef-7d73-bd84-b698846d0080/exec-6b802ea1-2565-4841-a1b9-fdf6519a5a7c.png",
+      "selected": true
+    }
+  ],
+  "integration": {
+    "recommendedFit": "cover",
+    "recommendedPosition": "50% 50%",
+    "sharedAcrossAllCards": true,
+    "externalFrame": "Preserve existing shared PNG frame. Full-bleed opaque ink-green margin is intentional; do not stretch the texture.",
+    "flip": "Preserve opaque front/back faces and existing backface visibility; this file does not change animation."
+  },
+  "validation": {
+    "visualInspection": "Generated final viewed: no foliage or radial filler, quiet negative space, complete central diamond and crescent accents, thin inset border; no text or profession-specific symbols.",
+    "fileInspection": "PNG IHDR 1060×1484, 8-bit RGB (color type 2), no alpha, native 5:7. Copied from generated source without image processing.",
+    "notPerformed": [
+      "Browser integration",
+      "Responsive in-game card-back previews",
+      "Flip animation regression",
+      "Asset failure fallback"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "scenes": [
+    {
+      "id": "p1-stage-1",
+      "node": "P1",
+      "slot": 1,
+      "title": "災區道路尋聲",
+      "prompt": "Use case: illustration-story. Create a NEW standalone 16:9 cinematic semi-realistic dark fantasy scene for Nightfall Duel P1 stage1. Reference image is only identity/style reference: retain the young man's narrow gentle face, long dark hair and worn brown cloak, but make a completely new composition. He is alone walking down a misty abandoned roadside in an old ruined settlement after the darkness has receded, pauses and turns his head toward a faint cry out of frame. Full torso three-quarter view with road opening into distance. He has NOT found or picked up a baby yet; no visible baby, no other people, no bodies. Moonlit slate-blue mist, muted ancient gold lantern details, detailed painterly cinematic materials matching reference. No text, letters, UI, frame, logos or watermark. Keep face and important props away from extreme edges; leave lower area subdued for overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-found.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-17d575cc-0cea-4f3e-ad9d-bd950d9197cb.png",
+      "path": "assets/story/p1-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "1108faa7728d965c921b4dc93e59d40b0d13f135236d8c0504a6b1f66a2c0fb7",
+      "status": "complete"
+    },
+    {
+      "id": "p1-stage-3",
+      "node": "P1",
+      "slot": 3,
+      "title": "帶孩子離開",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; invent a distinct composition. Young adoptive father with same young gentle narrow face, long dark hair and worn brown cloak walks AWAY from ruined settlement, cradling the same safely swaddled baby carefully against chest. New wide side view on road beyond an arch, a quiet protective expression. Baby asleep, completely safe, no magical origin revelations. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-found.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-6bae7ee2-8fbb-4152-a2a5-66dba69c0422.png",
+      "path": "assets/story/p1-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "61e036702ce46b4902a34be5588187e5929f3cafddb8a1315a831a776e0b5fc5",
+      "status": "complete"
+    },
+    {
+      "id": "p2-stage-1",
+      "node": "P2",
+      "slot": 1,
+      "title": "父親教磷認路",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; create a distinct composition. Same father now slightly older with subtle gray strands, same narrow gentle face, brown travel cloak, teaching same preteen dark-bob girl with ochre scarf and slate-blue coat to recognize a fork in a country road. Father kneels beside a weathered unlettered route marker while child studies direction, a small folded map. Different peaceful roadside composition; no supernatural visions. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-memory.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-8a4239c3-7dc5-4efa-a58f-eaf8433969ce.png",
+      "path": "assets/story/p2-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f790ad90103d26ee858a127753d78509720c7c22b198ef25a4cdcf7ac6c6616e",
+      "status": "complete"
+    },
+    {
+      "id": "p2-stage-3",
+      "node": "P2",
+      "slot": 3,
+      "title": "父親核對舊地圖",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; create a distinct composition. Same father, gentle narrow face dark hair slight gray at temples brown travel cloak, silently compares an old map at a candlelit table inside a modest temporary inn. Same dark-bob preteen girl ochre scarf slate coat watching his thoughtful face. Map only indistinct geographical lines no readable text. Mood protective hesitation, no secret answer visually confirmed. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-memory.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-64e37e01-6f96-4116-8bb0-c9ffdf04290f.png",
+      "path": "assets/story/p2-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "10260639dc85cbf95df9d4a9259383cc0e54474dd28e90aae204e2705cf99919",
+      "status": "complete"
+    },
+    {
+      "id": "p3-stage-1",
+      "node": "P3",
+      "slot": 1,
+      "title": "接近舊聯絡點",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; create a distinct composition. Same brown-cloaked father and dark-bob preteen girl ochre scarf slate coat approaching an old disused contact point, a shuttered stone passage beside quiet courtyard. Father checking surroundings, daughter close beside him. Medium wide side view, empty doorway ahead; no handover yet, no combat or pursuers grabbing child. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-parting.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-57447172-469a-4ddb-be79-3f1eecf4a8c7.png",
+      "path": "assets/story/p3-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bc102165614c47d841f9f33bc40e9b0144c84b4dfbe9f9812ffe5a30fc5dec1f",
+      "status": "complete"
+    },
+    {
+      "id": "p3-stage-3",
+      "node": "P3",
+      "slot": 3,
+      "title": "父女轉移藏身處",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; create a distinct composition. Same father carrying a small travel pack and folded papers, guiding same dark-bob preteen daughter ochre scarf slate coat into a different narrow safe lane toward a modest temporary shelter. Both walking together purposeful calm urgency, child safe. New rear three-quarter medium-wide composition, faces partly visible. No combat, no grabbing, no certainty about mysteries. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-parting.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-a0b9b4f9-e40f-4e2a-9eec-72d588b60e67.png",
+      "path": "assets/story/p3-stage-3.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "9fc94a14c4c3edd79c73ccd6b66767493582be5cded055794199340ad89a3a05",
+      "status": "complete"
+    },
+    {
+      "id": "p4-stage-1",
+      "node": "P4",
+      "slot": 1,
+      "title": "父親坦白收養經過",
+      "prompt": "Use case: illustration-story. NEW independent 16:9 Nightfall Duel cinematic story background. Input image is identity/style REFERENCE ONLY, not a crop or retouch; create a distinct composition. Same father in brown cloak sitting opposite his daughter inside a dim modest hideout. Same dark-bob preteen girl ochre scarf slate-blue coat, serious hurt expression, listens as father admits a difficult family truth. Eye-level intimate two shot, small packed leather satchel on table between them, hands simple resting on knees/table. No handing items yet. No flashback, no imagery claiming identity. Semi-realistic dark fantasy detailed painterly realism, antique gold materials, subdued warm light against cool blue night mist matching reference. Preserve faces, age stage, gender, costume identifiers and natural hands. No text, readable letters, UI, frames, logos, watermark, no modern items. No invented answers to story mysteries. Keep important faces/props in central safe area and lower quarter subdued for dialogue overlay.",
+      "references": [
+        "/Users/songer/Desktop/Game/assets/story/phosphor-parting.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1a-f746-7df1-b5cb-c86111893f5e/exec-eb151f3e-c306-4a59-b788-5c8afcc12145.png",
+      "path": "assets/story/p4-stage-1.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "f187e8089aa3cd8767a6f07552f39f8c54e514af8ea34a624ebf3d0c4b8ae41e",
+      "status": "complete"
+    }
+  ]
+}

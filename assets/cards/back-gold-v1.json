@@ -1,0 +1,9 @@
+{
+  "tool": "imagegen",
+  "date": "2026-09-23",
+  "prompt": "Create a single production-ready original BACK FACE artwork for the dark fantasy card game Nightfall Duel. Use the reference only for antique gold engraved metal craftsmanship, restrained dark emerald palette and semi-realistic material rendering, NOT the swords, characters, scene or action. Portrait 5:7 aspect ratio (ideally 1120x1580 or near), flat orthographic straight-on full-bleed rectangular printed card surface filling the entire image, zero perspective, no card mockup, no surrounding tabletop, no cast shadow outside. Fully opaque background. Rich very dark ink-green leather/enamel field, subtle embossed restrained botanical filigree, elegant thin antique-gold inset border with precise cut-corner flourishes. A single striking original central geometric seal: elongated nested diamond with a small luminous emerald inset at center, framed by balanced engraved sun-ray and crescent motifs symmetrically paired above and below. Clear large silhouette legible at 60px width. Restrained collectible luxury, gently worn gold, subdued warm highlights, realistic shallow relief not giant bulky jewelry, no oversaturated magic glow. Composition approximately 180-degree rotationally symmetric; decoration no faction/person/class cues. Four corners and motifs safely inset 8% from all edges so a few percent of cover crop is safe. Fill outermost edges with continuous dark green material. No letters, numbers, words, watermark, icon font, text label or transparent regions. This is the common hidden card back, an artwork texture rather than a UI screenshot.",
+  "reference": "assets/cards/attack.png",
+  "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-f30ca8cd-60e7-465f-9f4c-cb4ea6c5ba36.png",
+  "output": "assets/cards/back-gold-v1.png",
+  "scope": "All hidden opponent-hand cards and both players' unrevealed board cards. No rule changes."
+}

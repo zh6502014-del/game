@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "task": "STORY-LAYERS-CAST",
+  "tool": "built-in image_gen",
+  "actors": [
+    {
+      "id": "shuo-young",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only Shuo, the young adult swordsman on the LEFT of reference. Preserve his exact handsome angular East Asian face, dark eyes, black loosely tied topknot, light moustache and short chin beard, cream tunic, antique gold engraved shoulder armor and bracers, forest green cloak/scarf. Healthy uninjured hands; standing calmly in a natural neutral listening and speaking pose with one relaxed open hand, both hands fully visible. Do not include the other man or books.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/swordsman-bookmark.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-ea3982cf-1326-46b9-b56a-967787bed2c5.png",
+      "path": "assets/story/actors/shuo-young.png",
+      "status": "complete",
+      "visualQA": "Face, both hands and silhouette inspected; matches referenced young Shuo. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 584589,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "9faa4a8b256196a5a9bb6a0584810b1050ca8dcca2e96faa074a8b0f33c77613"
+    },
+    {
+      "id": "gran-young",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only Gran, the central knight in the reference. A somewhat younger new recruit version retaining his exact square face, deep brown eyes, dark swept hair, short dark beard, sturdy athletic proportions. Practical recruit light steel-and-leather armor, modest antique brass trim, chainmail and a dark green scarf; no veteran heavy ornate gold plate suit, no crown. Standing calm with natural relaxed hands fully visible, no sword drawn, no shield needed.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/tank-bell.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-08ebc0cd-226b-46c4-a559-77f7bdd28502.png",
+      "path": "assets/story/actors/gran-young.png",
+      "status": "complete",
+      "visualQA": "Face, both hands and silhouette inspected; matches referenced Gran with practical recruit equipment. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 590918,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "32350eea6268b494a1230c02118aa36c6949337019aba4a4f49056e3526eff21"
+    },
+    {
+      "id": "phosphor",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only Phosphor, the girl on the RIGHT in both references, preserve her exact face and child proportions, short dark bob, large thoughtful dark eyes, mustard yellow wool scarf, worn blue-gray long-sleeved travel tunic, small brown leather satchel strap. Fully clothed. Neutral gentle attentive talking pose with both hands naturally relaxed and clearly visible. No other people, no map, no book.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/phosphor-memory.png",
+        "assets/story/phosphor-parting.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-3ae9545e-8db8-443b-afbd-95b4f9fdb9b6.png",
+      "path": "assets/story/actors/phosphor.png",
+      "status": "complete",
+      "visualQA": "Face, both hands and silhouette inspected; bob hair, scarf and child proportions match reference. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 738443,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "4f33d26e0798e0c9658a7395b09657a03800e517906efa2d07f8e0a0e7c19a63"
+    },
+    {
+      "id": "father",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only the adoptive father on LEFT of both references. Preserve his same angular East Asian face, dark eyes, dark wavy loosely tied hair, small moustache and chin beard, weathered brown cloak and scarf, ivory long-sleeved tunic, leather traveling straps. Show only subtle natural strands of gray at temples to distinguish this later time; do not turn him into a different elderly man. Neutral protective thoughtful speaking pose, relaxed hands clearly visible, no map, no child, no book.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/phosphor-memory.png",
+        "assets/story/phosphor-parting.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-a938e87e-f440-47c9-ab78-b9a306131bd9.png",
+      "path": "assets/story/actors/father.png",
+      "status": "complete",
+      "visualQA": "Face, both hands and silhouette inspected; keeps father's angular features, worn brown cloak and subtle gray at temples. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 516559,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "be86c80534c020bfe014cb38ff95ddbab32904fc26a72de56ebc3c3b3e89761f"
+    },
+    {
+      "id": "father-young",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only the young adoptive father, the adult in FIRST reference, and the man on RIGHT of SECOND reference. Match his youthful clean shaven slender angular East Asian face, long loose black hair, ivory layered robe, weathered brown traveling cloak and scarf. This is his younger appearance in the disaster-rescue period, not the green-cloaked swordsman. Stand calm and attentive with both hands relaxed and fully visible. No baby, no other people, no book.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/phosphor-found.png",
+        "assets/story/swordsman-bookmark.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-361e84be-72b5-45a9-b139-9a9ee0f56a7c.png",
+      "path": "assets/story/actors/father-young.png",
+      "status": "complete",
+      "visualQA": "Face, both hands and silhouette inspected; youthful clean-shaven father, long hair and ivory robe/brown traveling cloak retained. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 553761,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "19a16a7932febd047755f02b6b59d805254bf62318117131c6f90b7e4742687a"
+    },
+    {
+      "id": "herman",
+      "prompt": "Use case: identity-preserve. Asset type: reusable cutout character sprite for Nightfall Duel story dialogue. Reference image(s) specify exact identity and costume, not the scenery.\nSubject: Only Herman, the elderly male scientist on RIGHT of reference. Preserve his exact lined angular face, swept back silver-gray hair, thin silver moustache and small short silver beard, round wire-rim spectacles, dark charcoal scholar coat with antique gold filigree, high ivory shirt collar and brown-black cravat. Thoughtful restrained speaking pose, hands relaxed and anatomically natural, both visible. No woman, no crystal apparatus, no documents.\nStyle: same highly detailed semi-realistic dark fantasy illustration, natural face anatomy, restrained antique gold and dark fabric textures.\nComposition: SINGLE isolated standing character only, portrait 2:3, top of head to mid-thigh visible; preserve entire head, both shoulders, arms and hands, with generous transparent margin around silhouette. View nearly front-on, slight natural three-quarter turn.\nLighting: soft neutral diffuse light suitable for compositing on different backgrounds, no dramatic scene-specific cast light.\nBackground: genuinely fully TRANSPARENT alpha channel PNG; empty outside subject. Clean fine hair and costume edges. NO painted checkerboard, no colored/white backdrop, no backdrop gradients, no ground, no floor, no environment, no cast shadow, no frame, no lettering or watermark.\nDo not add characters or storytelling props. This must be a transparent cutout asset, NOT a scene illustration.",
+      "refs": [
+        "assets/story/gunner-echo.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce97-944a-7d71-a267-fc0cde342876/exec-74aae2a9-e771-4b26-92df-fd5a0af77433.png",
+      "path": "assets/story/actors/herman.png",
+      "status": "complete",
+      "visualQA": "Face, round spectacles, silver hair/beard, hands and silhouette inspected against reference. Actual transparent alpha verified.",
+      "tool": "built-in image_gen",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "transparentPixels": 580727,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "sha256": "ab03403e5fd3f5431918294e399d9fdd7ffedabb721572247a672eb2d0b591f9"
+    }
+  ]
+}

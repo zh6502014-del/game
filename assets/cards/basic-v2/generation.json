@@ -1,0 +1,56 @@
+{
+  "task": "BASIC-ART-003",
+  "date": "2026-09-23",
+  "mode": "built-in image_gen",
+  "intent": "Simplify basic-card backgrounds and preserve clear subject silhouettes at small play sizes.",
+  "assets": {
+    "attack": {
+      "prompt": "Use case: precise-object-edit. Asset: one vertical 2:3 full-bleed raster illustration for a BASIC card in Nightfall Duel, shown only 68px wide in play. Edit the supplied card painting into a much clearer, simpler version. Preserve its premium semi-realistic dark-fantasy painted realism, restrained antique-gold metal, deep ink-green palette, warm upper-left key light and cool teal rim light. The user specifically requests a strongly readable subject contour and radically simplified card background. Background must be only smooth smoky ink-green/charcoal value gradients with very faint soft atmosphere: REMOVE all castle architecture, windows, stonework, flames, moon, floor debris and detailed scenery. Keep realistic material and volume on the main subject, but simplify busy engraving into a few broad tasteful engraved bands. Strong figure-ground contrast, crisp exterior silhouette, quiet negative space. Main subject safe inside central 78% width and upper 82% height, with dark empty lower 12%; do not crop the defining silhouette. NO text, numbers, logo, border, UI, card frame, infographic, or flat vector/icon rendering. Opaque background. Generate one artwork only, not a sheet. Subject/composition: ATTACK. Replace the cluttered clash with ONE large, broad steel sword in a clear upward diagonal, antique-gold guard and one cropped dark leather-gloved hand at its lower end. Entire blade tip and guard clearly visible, with breathing space. Blade is the dominant simple bright shape; a restrained short warm slash glint communicates the strike. No second weapon, opponent or torso, no shower of particles. Sword plus glove fills approximately 75% height, central and readable as ATTACK at thumbnail size. Use the reference only to preserve the sword material/design language and painterly treatment; rebuild the cleaner composition.",
+      "reference": "assets/cards/attack.png",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-a4fdfb1e-8234-4b2e-ac6d-77932696a73b.png",
+      "output": "assets/cards/basic-v2/attack.png",
+      "display": {
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "originalPreserved": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "fe276d970c8dd33ac9891c4ec2918eebf0a9e2497075aefcde06eea540bd7b63"
+    },
+    "defense": {
+      "prompt": "Use case: precise-object-edit. Asset: one vertical 2:3 full-bleed raster illustration for a BASIC card in Nightfall Duel, shown only 68px wide in play. Edit the supplied card painting into a much clearer, simpler version. Preserve its premium semi-realistic dark-fantasy painted realism, restrained antique-gold metal, deep ink-green palette, warm upper-left key light and cool teal rim light. The user specifically requests a strongly readable subject contour and radically simplified card background. Background must be only smooth smoky ink-green/charcoal value gradients with very faint soft atmosphere: REMOVE all castle architecture, windows, stonework, flames, moon, floor debris and detailed scenery. Keep realistic material and volume on the main subject, but simplify busy engraving into a few broad tasteful engraved bands. Strong figure-ground contrast, crisp exterior silhouette, quiet negative space. Main subject safe inside central 78% width and upper 82% height, with dark empty lower 12%; do not crop the defining silhouette. NO text, numbers, logo, border, UI, card frame, infographic, or flat vector/icon rendering. Opaque background. Generate one artwork only, not a sheet. Subject/composition: DEFENSE. ONE large braced steel shield with a clean broad oval/kite silhouette and antique-gold beveled rim, shown in a very slight three-quarter view but mostly face-on. Whole shield perimeter visible inside canvas with clear breathing room, fills about 70% width and 75% height. Quiet steel-teal main face with one broad simple central boss/ridge and sparse gold engraving confined to rim; soft warm light on left bevel, cool edge on right. No incoming sword or impact sparks, no person or extra props. At tiny size the shield contour must unmistakably read as DEFENSE. Keep painterly realistic materials and the reference's dark-fantasy style.",
+      "reference": "assets/cards/defense.png",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-24eb5a6a-c471-4a57-9e6d-61b71f175a52.png",
+      "output": "assets/cards/basic-v2/defense.png",
+      "display": {
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "originalPreserved": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "6936eb77ad63768b8f7ffa4e45e1363870ad4561f49f3fe21cf6041d7e8052c5"
+    },
+    "dodge": {
+      "prompt": "Use case: precise-object-edit. Asset: one vertical 2:3 full-bleed raster illustration for a BASIC card in Nightfall Duel, shown only 68px wide in play. Edit the supplied card painting into a much clearer, simpler version. Preserve its premium semi-realistic dark-fantasy painted realism, restrained antique-gold metal, deep ink-green palette, warm upper-left key light and cool teal rim light. The user specifically requests a strongly readable subject contour and radically simplified card background. Background must be only smooth smoky ink-green/charcoal value gradients with very faint soft atmosphere: REMOVE all castle architecture, windows, stonework, flames, moon, floor debris and detailed scenery. Keep realistic material and volume on the main subject, but simplify busy engraving into a few broad tasteful engraved bands. Strong figure-ground contrast, crisp exterior silhouette, quiet negative space. Main subject safe inside central 78% width and upper 82% height, with dark empty lower 12%; do not crop the defining silhouette. NO text, numbers, logo, border, UI, card frame, infographic, or flat vector/icon rendering. Opaque background. Generate one artwork only, not a sheet. Subject/composition: DODGE. ONE anonymous hooded fighter in a sweeping lateral evasive lean, feet and torso making one clear curved silhouette. Simple ink-green cloak trails in one broad arc to show a sidestep; face hidden, no specific hero identity. One thin incoming steel blade passes through EMPTY SPACE at the right side, visibly missing the torso; keep a broad clean gap between blade and person, no contact and no impact sparks. Full key body contour, hood, hands and boots visible within the safe area; don't crop figure into an unrecognizable close-up. Cloak has a few broad readable folds, no dense filigree, no duplicate limbs or ghost bodies. Place a soft desaturated teal atmospheric value behind the dark figure and use restrained gold edge light for clear separation, without a halo outline or neon effects. Must read as evasive movement at tiny size, not a standing portrait.",
+      "reference": "assets/cards/dodge.png",
+      "source": "/Users/songer/.codex/generated_images/01a0c3f1-3e13-7950-91ee-b52434ba4169/exec-609301a6-5549-4475-b697-5d7a42a9d2ba.png",
+      "output": "assets/cards/basic-v2/dodge.png",
+      "display": {
+        "fit": "contain",
+        "position": "50% 50%"
+      },
+      "originalPreserved": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "fe469986ec67a14ef234f3567228d595f874adf0194c63b76284840289c94837"
+    }
+  }
+}

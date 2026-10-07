@@ -1,0 +1,178 @@
+{
+  "swordsman": {
+    "label": "劍客",
+    "file": "swordsman.svg"
+  },
+  "tank": {
+    "label": "坦克",
+    "file": "tank.svg"
+  },
+  "assassin": {
+    "label": "刺客",
+    "file": "assassin.svg"
+  },
+  "gunner": {
+    "label": "槍手",
+    "file": "gunner.svg"
+  },
+  "attack": {
+    "label": "攻擊",
+    "file": "attack.svg"
+  },
+  "defense": {
+    "label": "防禦",
+    "file": "defense.svg"
+  },
+  "dodge": {
+    "label": "閃躲",
+    "file": "dodge.svg"
+  },
+  "slash": {
+    "label": "斬擊",
+    "file": "slash.svg"
+  },
+  "shield": {
+    "label": "護盾",
+    "file": "shield.svg"
+  },
+  "flash": {
+    "label": "閃擊",
+    "file": "flash.svg"
+  },
+  "critical": {
+    "label": "爆擊",
+    "file": "critical.svg"
+  },
+  "spirit": {
+    "label": "劍氣",
+    "file": "spirit.svg"
+  },
+  "domain": {
+    "label": "領域",
+    "file": "domain.svg"
+  },
+  "hp": {
+    "label": "生命",
+    "file": "hp.svg"
+  },
+  "lock": {
+    "label": "封鎖",
+    "file": "lock.svg"
+  },
+  "burn": {
+    "label": "灼傷",
+    "file": "burn.svg"
+  },
+  "night": {
+    "label": "夜襲",
+    "file": "night.svg"
+  },
+  "counter": {
+    "label": "反擊",
+    "file": "counter.svg"
+  },
+  "steal": {
+    "label": "偷牌",
+    "file": "steal.svg"
+  },
+  "hit": {
+    "label": "命中",
+    "file": "hit.svg"
+  },
+  "miss": {
+    "label": "落空",
+    "file": "miss.svg"
+  },
+  "journal": {
+    "label": "戰況",
+    "file": "journal.svg"
+  },
+  "rules": {
+    "label": "規則",
+    "file": "rules.svg"
+  },
+  "audio": {
+    "label": "音效",
+    "file": "audio.svg"
+  },
+  "mute": {
+    "label": "靜音",
+    "file": "mute.svg"
+  },
+  "play": {
+    "label": "開始",
+    "file": "play.svg"
+  },
+  "close": {
+    "label": "關閉",
+    "file": "close.svg"
+  },
+  "back": {
+    "label": "返回",
+    "file": "back.svg"
+  },
+  "retry": {
+    "label": "再戰",
+    "file": "retry.svg"
+  },
+  "copy": {
+    "label": "複製",
+    "file": "copy.svg"
+  },
+  "expand": {
+    "label": "展開",
+    "file": "expand.svg"
+  },
+  "collapse": {
+    "label": "收合",
+    "file": "collapse.svg"
+  },
+  "left": {
+    "label": "上一個",
+    "file": "left.svg"
+  },
+  "right": {
+    "label": "下一個",
+    "file": "right.svg"
+  },
+  "victory": {
+    "label": "勝利",
+    "file": "victory.svg"
+  },
+  "defeat": {
+    "label": "敗北",
+    "file": "defeat.svg"
+  },
+  "draw": {
+    "label": "平手",
+    "file": "draw.svg"
+  },
+  "round": {
+    "label": "回合",
+    "file": "round.svg"
+  },
+  "seal": {
+    "label": "封印",
+    "file": "seal.svg"
+  },
+  "sun": {
+    "label": "白天",
+    "file": "sun.svg"
+  },
+  "selected": {
+    "label": "已選定",
+    "file": "selected.svg"
+  },
+  "warning": {
+    "label": "注意",
+    "file": "warning.svg"
+  },
+  "card": {
+    "label": "卡牌",
+    "file": "card.svg"
+  },
+  "settings": {
+    "label": "設定",
+    "file": "settings.svg"
+  }
+}

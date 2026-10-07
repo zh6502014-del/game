@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "task": "STORY-084-ART",
+  "scenes": [
+    {
+      "node": "A1",
+      "slot": 1,
+      "title": "首腦交付任務",
+      "path": "assets/story/a1-stage-1.png",
+      "prompt": "Use case: illustration-story. Create a NEW independent cinematic wide 16:9 Nightfall Duel scene. Semi-realistic dark fantasy, antique gold, cool teal night shadows, natural hands, detailed cloth. Reference 1 locks FEMALE Rin's face, black hair, violet hood and practical dark uniform. A1 opening: inside an enclosed secret-order stone office, a shadowed adult chief at a table hands Rin a sealed task envelope and access token; Rin stands attentively receiving the task. Before injury: both hands normal, no bandages. No Herman here. Different composition from references. Keep faces/hands/key props within central 70 percent and leave lower edge background for dialogue crop. No text, legible letters, UI, frame, collage or watermark.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-8b062f11-6688-4630-b4be-46e5c534ef5c.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d0c0dd7fec817c78cc58fb7518d74f91b9a2f2a604882c9c5917f60640e77231",
+      "bytes": 2053457
+    },
+    {
+      "node": "A1",
+      "slot": 2,
+      "title": "潛入設施",
+      "path": "assets/story/a1-stage-2.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Female Rin, same violet hood and black hair, slips through an unoccupied stone service passage toward a research facility. She checks a small brass access token against the door mechanism. Before injury, no bandages, all weapons sheathed, cautious infiltration.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-b2ef949c-892e-4b9c-a2c5-f30fb2d7b4c9.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "957a720e675ccdfc3295aef1227bbb929ae8d2665d597368640a3cb868d6352a",
+      "bytes": 2485105
+    },
+    {
+      "node": "A2",
+      "slot": 1,
+      "title": "實驗台前對抗",
+      "path": "assets/story/a2-stage-1.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Inside a CLOSED research laboratory, female Rin faces older Dr Herman across an experimental bench. Herman has swept silver hair, round glasses, charcoal research coat, and readies a prototype brass crystal pistol low beside the bench. Rin watches tensely, right hand uninjured. Pre-accident: no discharge, no wound, no explosion, no death. Wide side composition, restrained tension.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png",
+        "/Users/songer/Desktop/Game/assets/story/assassin-lab.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-86605356-850a-47a7-b126-cbac6dc72c12.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "708600723e2eb3329215305634d3b7d3a4206b65f3f1a3d4516a635a987393da",
+      "bytes": 2512324
+    },
+    {
+      "node": "A2",
+      "slot": 3,
+      "title": "帶傷離開維修通道",
+      "path": "assets/story/a2-stage-3.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. After laboratory accident: female Rin alone exits a cramped stone maintenance passage, holding her bandaged RIGHT hand protectively with her left. Violet hood, same face. Lab cold light behind, quiet escape, nobody else, no corpse or blood.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png",
+        "/Users/songer/Desktop/Game/assets/story/assassin-lab.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-0eec17b3-8802-4648-bb71-ad9215b4eea8.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "ee6619cdedc9e123c3d435840030abf788ab3bc8ddc1657dd9a1c8dece3413aa",
+      "bytes": 2488467
+    },
+    {
+      "node": "A3",
+      "slot": 1,
+      "title": "接近無人守衛的據點",
+      "path": "assets/story/a3-stage-1.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Female Rin with bandaged RIGHT hand approaches her former secret-order headquarters at night. Empty guard post and ajar heavy door, suspicious silence, no battle or bodies visible. Side distant view reveals architecture and her face in profile.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-2e077445-5140-4d96-b87a-564a70ca4296.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "22e41525b6f982cb9c58fe32ac3f6e52bc8bd3d84aef93630005a8a36d4afbc0",
+      "bytes": 2297366,
+      "revision": {
+        "prompt": "Edit only Rin's hands in this image. Her anatomical RIGHT hand is currently at far viewer-left holding a dagger: REMOVE dagger and wrap that hand and wrist in pale bandages. Her anatomical LEFT hand is at image center hanging nearest the doorway: REMOVE all bandages from that hand, show a normal dark leather glove. Thus only viewer-left hand is bandaged. Keep face, pose, female identity, costume, architecture, 16:9 composition, lighting identical. No other changes.",
+        "refs": [
+          "/Users/songer/Desktop/Game/assets/story/a3-stage-1.png"
+        ],
+        "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-a05b108f-6e87-4f0a-bb96-5992eec41c26.png"
+      }
+    },
+    {
+      "node": "A3",
+      "slot": 3,
+      "title": "據點外割去標誌",
+      "path": "assets/story/a3-stage-3.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Female Rin outside abandoned headquarters in moonlit shadows, uses left-hand small knife to carefully cut a crow-insignia cloth patch away from her own uniform; her RIGHT hand bandaged. Clear action involving garment only, no injury or body cutting. Somber resolve, no attacker. Her anatomical right is on viewer-left in frontal composition. Make bandage on viewer-left hand, cutting knife held in viewer-right left hand.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/characters/assassin.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-5cee98be-a0fe-4539-a5c1-37668313ebcc.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a6717d8f908ecf9a3f35e84a9bc45d9d5e9b38453b1314670906fbb59ce23041",
+      "bytes": 2462927
+    },
+    {
+      "node": "S1",
+      "slot": 1,
+      "title": "朔帶書進鐘樓",
+      "path": "assets/story/s1-stage-1.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Young adult Shuo, same black topknot, clean youthful recognizable face, ivory-gold oath uniform, arrives inside enclosed clock tower carrying a worn travel book tucked under his arm. A male singer friend with gentle narrow face, shoulder-length dark hair, pale ivory singer robes waits beside window. No child, both are young adults. Clock gears in background, quiet friendship.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-bookmark.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-9e7cdc6e-0ac4-47cb-ae32-921fb43bff54.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "fb10b69474f860358fbf7e7df81650fe1430c421f634827bfcf3fff96c8a6a0e",
+      "bytes": 2452167
+    },
+    {
+      "node": "S1",
+      "slot": 3,
+      "title": "兩人看旅行記",
+      "path": "assets/story/s1-stage-3.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Young adult Shuo and his male singer friend sit side by side on a clock tower window bench sharing an open travel book with indistinct landscape sketches. Same faces and costumes as reference: Shuo black topknot, ivory-gold uniform; friend shoulder-length straight dark hair, pale ivory singer robes. Wooden bookmark visible between pages. Warm candle friendship, no text, no child, no fight.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-bookmark.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-5f10eb93-e6fd-4a5a-8d14-331826650c5b.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d2e9316aea34c8743712a5cbd8b3b2f4149364466122088e986a04d9befd39b1",
+      "bytes": 2569427
+    },
+    {
+      "node": "S2",
+      "slot": 1,
+      "title": "取得座標對照",
+      "path": "assets/story/s2-stage-1.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Young adult Shuo inside an enclosed administrative archive obtains folded coordinate charts from a records shelf and lays them alongside an evacuation ledger. His face and ivory-gold oath uniform match reference, before breaking shoulder cord. Wary discovery, detailed old maps without legible words, no accusation scene yet.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-records.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-6c4a26f4-767b-4afe-a626-0f8c48ffb88f.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5c62a3f0fa4db19a86d45a9cb899c758af61244ec118350667e7d4fb5e7f31df",
+      "bytes": 2272401,
+      "revision": {
+        "prompt": "Recompose this image to show a DIFFERENT EARLIER MOMENT: only Shuo, the TOPKNOT MAN ON LEFT, is present. He stands in profile at an archive shelf, one arm reaching to pull a folded coordinate chart OUT of an open wooden archive drawer, other hand holding a closed ledger at his waist. Remove the loose-haired man completely, remove the central table reading pose. Tall archive drawers and shelves dominate right half, candle on wall. Preserve Shuo facial identity, ivory and dark green gold uniform, realistic dark fantasy style, landscape 16:9, no readable text. This is retrieval, NOT two men comparing a spread-out map.",
+        "refs": [
+          "/Users/songer/Desktop/Game/assets/story/s2-stage-1.png"
+        ],
+        "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-2c4028fd-9973-4f82-b1fa-03c678b6fb50.png"
+      }
+    },
+    {
+      "node": "S2",
+      "slot": 3,
+      "title": "延後儀式遭拒",
+      "path": "assets/story/s2-stage-3.png",
+      "prompt": "Use case: illustration-story. NEW independent Nightfall Duel cinematic painting, landscape 16:9, semi-realistic dark fantasy, antique gold materials, cool teal night shadows, natural anatomy and hands. Reference images lock faces, gender, costume and setting only; use a fresh composition showing the requested moment. Faces and main props crop-safe central 70%, lower edge has room for dialogue. No text, legible lettering, UI, frame, watermark, collage, gore or modern objects. Young adult Shuo in ivory-gold oath uniform stands in a closed council antechamber holding an evacuation ledger and asking an administrative elder to delay a ritual. Elder behind desk makes a firm dismissive gesture, brass bell apparatus dormant behind. Shuo troubled, no fight, no proof of universal conspiracy shown. Keep Shuo face from reference. Only Shuo (topknot man) from reference appears; omit singer friend. Use completely different council desk composition.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/swordsman-records.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce1b-8519-7322-a382-0fd639cbcd5b/exec-733ab9b0-6887-4c35-a51b-8af6a92e15e2.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e4bea4dd2b6fda2722c1b2acb256eeb8de6aef917b92da5c7a2c93a7eacb1ac3",
+      "bytes": 2165887
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "actors": [
+    {
+      "id": "shuo-wounded",
+      "path": "assets/story/actors/shuo-wounded.png",
+      "title": "年輕朔・受傷撤離",
+      "prompt": "Use case: background-extraction and identity-preserve. Asset: transparent PNG reusable character sprite for a layered dark fantasy visual novel. Extract ONLY the young adult male swordsman in the foreground of image 1, preserving his exact face, black tied-up hair with stray strands, light facial hair, ivory and aged-gold patterned young swordsman robes, dark bronze bracers, broken dark red shoulder cord, and injured sword-gripping hand. Repose him slightly into a natural standing exhausted but fully conscious defensive/resting stance, calm wary expression. He has merely survived and retreated from his master, NOT defeated anyone: no victory pose, no raised trophy. Sword lowered in his right hand, hand with a small non-graphic injury stain, no fresh dripping blood. Thigh-up framing, complete head/hair, shoulders, arms/hands, and lowered sword guard visible with generous transparent margin. A 2:3 portrait composition, one isolated character only. Genuine transparent alpha background, NOT checkerboard, NOT solid background. No environment, shadows on a floor, buildings, background silhouettes, master, friend, smoke, weapons floating separately, text, UI, card frame or watermark. Keep semi-realistic painterly fantasy style and realistic anatomy and identity. Slight cool ambient and warm neutral edge lighting suitable for compositing on both tower and road.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/skins/swordsman-origin.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0ce96-e973-7922-a8b6-463d0c94b824/exec-76b4b06c-7ffd-4e2c-bd68-f1b227472c1c.png",
+      "status": "complete",
+      "visualQA": "Viewed reference and output: same young male face, black topknot, ivory/antique gold robes, broken red shoulder cord, injured right sword hand, lowered sword and exhausted alert posture; no master or victory pose. True generated alpha preserved without postprocessing.",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6217e1dd5bafd4737fe757a45ace570f9221e4e546657f442b0d0540ff5eb589",
+      "alpha": {
+        "mode": "RGBA",
+        "min": 0,
+        "max": 254,
+        "transparentPixels": 541726,
+        "nearOpaquePixels": 921693,
+        "partiallyTransparentPixels": 109445,
+        "totalPixels": 1572864,
+        "samples": {
+          "(1023, 0)": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "(0, 0)": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "(50, 500)": [
+            6,
+            4,
+            1,
+            0
+          ],
+          "(512, 500)": [
+            117,
+            79,
+            51,
+            252
+          ],
+          "(20, 1000)": [
+            91,
+            66,
+            42,
+            0
+          ],
+          "(1023, 1535)": [
+            135,
+            109,
+            90,
+            4
+          ],
+          "(0, 1535)": [
+            113,
+            86,
+            62,
+            0
+          ]
+        }
+      }
+    }
+  ]
+}

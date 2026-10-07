@@ -1,0 +1,68 @@
+{
+  "ticket": "ART-UI-021",
+  "operation": "Resize existing transparent nine-slice atlas; preserve design and alpha. No image generation.",
+  "tool": "sharp 0.35.4",
+  "resize": "fit inside 768x768; lanczos3; no enlargement; lossless WebP",
+  "frames": {
+    "hero": {
+      "source": "assets/frames/v1/hero.webp",
+      "sourceSha256": "80f623c1deb78d5c34c60251dc451c16a7696417aacb69ee01c24508027a9bd5",
+      "sourceWidth": 1133,
+      "sourceHeight": 1118,
+      "sourceBytes": 472140,
+      "path": "assets/frames/v2/hero.webp",
+      "width": 768,
+      "height": 758,
+      "bytes": 217518,
+      "alpha": true,
+      "slice": [
+        151.871199,
+        151.837599,
+        151.871199,
+        151.837599
+      ],
+      "repeat": "repeat",
+      "center": "transparent"
+    },
+    "panel": {
+      "source": "assets/frames/v1/panel.webp",
+      "sourceSha256": "c863c6811a7aaca27803efce5ec5fe3840e101de9865bb0cc63213fd506f6058",
+      "sourceWidth": 1112,
+      "sourceHeight": 1113,
+      "sourceBytes": 478864,
+      "path": "assets/frames/v2/panel.webp",
+      "width": 767,
+      "height": 768,
+      "bytes": 227986,
+      "alpha": true,
+      "slice": [
+        143.525606,
+        143.467626,
+        143.525606,
+        143.467626
+      ],
+      "repeat": "repeat",
+      "center": "transparent"
+    },
+    "thin": {
+      "source": "assets/frames/v1/thin.webp",
+      "sourceSha256": "b04b9feec84e6335de47496016a7aa5778a094442108aaa66157bc159387b8cb",
+      "sourceWidth": 1133,
+      "sourceHeight": 1127,
+      "sourceBytes": 287446,
+      "path": "assets/frames/v2/thin.webp",
+      "width": 768,
+      "height": 764,
+      "bytes": 135806,
+      "alpha": true,
+      "slice": [
+        119.311446,
+        119.300971,
+        119.311446,
+        119.300971
+      ],
+      "repeat": "repeat",
+      "center": "transparent"
+    }
+  }
+}

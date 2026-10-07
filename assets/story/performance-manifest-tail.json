@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "scenes": [
+    {
+      "id": "c5-stage-1",
+      "node": "C5",
+      "slot": 1,
+      "title": "伊芙注意右手傷痕",
+      "prompt": "Use case: illustration-story. New independent WIDE 16:9 cinematic semi-realistic dark fantasy game story scene, same exact character identities, costumes and painterly detail as references. Antique brass and gold, cool teal night with warm lamplight. No lettering, UI, frame, watermark, collage. Characters comfortably inside crop-safe center. C5 stage 1: a quiet medium two-shot inside a temporary stone sanctuary, BEFORE anyone raises a weapon. Red-haired female researcher Eve in worn ivory research coat notices the purple-hooded adult female Rin's bandaged RIGHT hand resting on the edge of a brass table. Eve's eyes follow the unusual mark, Rin becomes guarded. Eve's weapon stays holstered and out of her hands. Calm tense questioning, no violence, no blood detail, no child. Composition entirely different from references: near table level, lamp between the two women, others outside frame.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-0bdfd8de-1248-4168-9287-d2aee836d6ca.png",
+      "path": "assets/story/c5-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "fe95d1e0478862031bc6d8241fc2542cfb4bf2b5bac832f3ccda4a28e60a84b6"
+    },
+    {
+      "id": "c5-stage-3",
+      "node": "C5",
+      "slot": 3,
+      "title": "凜說出私人研究片段",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Close medium shot of female Rin quietly recounting a memory to Eve in the temporary stone sanctuary, emphasis Rin speaking with her bandaged right hand relaxed and open on the table, Eve listening warily in partial profile at edge. No supernatural projected memory images, no research answers visualized. Keep Eve's pistol low at her side, skeptical not forgiving.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-7cb75dea-48ba-422d-9695-b2047158bea3.png",
+      "path": "assets/story/c5-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3cc1b404b0b7f30aa38c2646aa8791e96fce216dee86e96b6fb275129df7763e"
+    },
+    {
+      "id": "c6-stage-1",
+      "node": "C6",
+      "slot": 1,
+      "title": "磷提醒不能以片段下結論",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. At a safe temporary shelter, Phosphor calmly asks Eve a difficult question, a child choosing her own words, both standing near a lamp and closed research folio. Gran listening several steps back. Rin outside the composition. All weapons holstered, no one threatening the girl, no immediate danger. Thoughtful conversation about uncertain evidence.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-6b58eb96-8188-4c6e-91bd-0ec540dc289c.png",
+      "path": "assets/story/c6-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "63c65faf0028a32fbec8e6f4946a650ec7bebd630be04c58885b2978d798011c"
+    },
+    {
+      "id": "c6-stage-3",
+      "node": "C6",
+      "slot": 3,
+      "title": "訂下同行條件",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Wide side view in temporary stone sanctuary: Eve lays one closed document folio on table and firmly sets conditions for traveling together. Purple hooded female Rin stands opposite and nods soberly, bandaged RIGHT hand visible but kept away from documents. No smiles, no embraces, no forgiveness. Shuo checks door in distant background. No girl necessary.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-d22e5811-d99c-401f-83a6-d9cd52ee7e8a.png",
+      "path": "assets/story/c6-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "481bd74b12b18b94480aa432fe813d52aca1ac1ec5486cf70a813adb4385ad31"
+    },
+    {
+      "id": "c7-stage-1",
+      "node": "C7",
+      "slot": 1,
+      "title": "發現路旁求援",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Wide outdoor view of misty old stone road at a branching lane. Gran notices a small group of tired ordinary travelers with bundles asking directions near a broken waymarker. His four companions stop on road several steps behind. No attack or injury, no writing visible, cool evening atmosphere. Emphasize geography and pause before deciding whether to help.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-17892322-76e9-488a-8f70-c5ef26f1cb18.png",
+      "path": "assets/story/c7-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "3ffaeaa8a2de68df242db59da92d6eba9491ad67a24254498b1e6cb8f5f79b8e"
+    },
+    {
+      "id": "c7-stage-3",
+      "node": "C7",
+      "slot": 3,
+      "title": "眾人回到追查路線",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Wide rear three-quarter view of the same five travelers walking together along a narrow safe forest-edge stone path after agreeing a common route. Gran on outer edge with shield, Phosphor carrying her own satchel beside Eve, Shuo checking path, Rin slightly behind scanning surroundings. Calm guarded cooperation, no battle, no magical navigation markers, no certainty of destination. A distant lantern marks ordinary trail.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-5db2d68c-1e47-4d2d-a8eb-dd26851f823a.png",
+      "path": "assets/story/c7-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "b18e22fb15d67b406f4564a43929eaaf995425ba9bd1ac4fffce2e5721d0ba4b"
+    },
+    {
+      "id": "c8-stage-1",
+      "node": "C8",
+      "slot": 1,
+      "title": "整理災區舊圖",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Overhead-oblique close view of a travel table: Eve and Phosphor spread several old maps, mineral ledgers and sketches of streets, faces visible in upper third, brass lamp beside them. Blank/abstract nonlegible marks only, not real text. Maps are intact documents, not torn fragments. No magical projections, no visions, no identity conclusions. Careful preparation to compare records.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-d0376986-4278-4756-968d-e2a03eab64c5.png",
+      "path": "assets/story/c8-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "d80a47a8d3ceac77f73a4a9d635393e2c15358dbe07e255ff58517721e527abf"
+    },
+    {
+      "id": "c8-stage-3",
+      "node": "C8",
+      "slot": 3,
+      "title": "磷詢問父親是否知情",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Emotional medium shot of Phosphor looking up from a closed old map at Eve, asking about her father. Eve pauses without knowing an answer, her hands resting beside documents. Gran and Shuo subdued in background. Small quiet roadside shelter at blue dusk. No father appearing, no ghost, no baby flashback, no proof of parentage. Girl thoughtful, not in danger.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-161c3f64-68a8-470c-8113-f6d2bde85d78.png",
+      "path": "assets/story/c8-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "22036ce8a45d520556edcf164e78e301d6d114bca97d687408df91f65ab0c10f"
+    },
+    {
+      "id": "c9-stage-1",
+      "node": "C9",
+      "slot": 1,
+      "title": "依記號找到入口",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Wide exterior establishing shot at night of the last old stone hiding place. Shuo kneels to identify a subtle knife-cut waymark on wooden doorframe, Rin watches an empty lane, Gran waits with Phosphor and Eve behind. Door has old damage but no visible attacker or body. Lantern light and moonlit mist. Do not show recorder or reveal contents of the room yet.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-e7a0c297-5088-40d7-8031-13c9be9f869e.png",
+      "path": "assets/story/c9-stage-1.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "c7750714fddcbb143213e780f9550385071a4582aefae8b9291adbedb49de13e"
+    },
+    {
+      "id": "c9-stage-3",
+      "node": "C9",
+      "slot": 3,
+      "title": "留言結束後的五人",
+      "prompt": "Use case: illustration-story. Generate a new standalone WIDE 16:9 semi-realistic dark fantasy cinematic painting. References supply exact recurring faces and clothing: Rin is an ADULT WOMAN in purple embroidered hood with a bandaged RIGHT hand; Eve is an adult red-haired woman in distressed ivory researcher coat; Shuo is adult man with black topknot and dark green cloak; Gran is large older bearded man in antique gold dark armor; Phosphor is a young girl with dark bob, ochre scarf and slate coat. Same painterly realism, antique brass/gold, cool night light with motivated warm lamps. No letters, captions, UI, borders, watermarks, collage. Natural hands, 16:9 landscape, crop-safe faces and props, no answers to unresolved mysteries. Entirely new framing, not reuse of reference composition. Wide intimate aftermath in father's empty stone hideout. Same room and brass recorder as reference, but changed composition: Phosphor sits quietly by lit oil lamp with one hand near the recorder's replay button, Eve has moved back respectfully, Shuo at doorway, Gran preparing water flask, female Rin at window watching outside. Recording ended, empty father's chair, no father or ghost visible. Quiet unresolved ending, not reunion or proof of death.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-gun.png",
+        "/Users/songer/Desktop/Game/assets/story/party-recorder.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-a6702aeb-3c6a-45be-9317-a71ece33418c.png",
+      "path": "assets/story/c9-stage-3.png",
+      "status": "complete",
+      "width": 1672,
+      "height": 941,
+      "sha256": "0a73551ee5d45a40ee38cd00c0c8847ec1ca325a51d70f12a016d490e2320175"
+    }
+  ]
+}

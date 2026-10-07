@@ -1,0 +1,202 @@
+{
+ "fx-dust-burst": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-dust-burst.webp",
+    "w": 512,
+    "h": 199
+   }
+  ]
+ },
+ "fx-rock-debris": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-rock-debris-1.webp",
+    "w": 81,
+    "h": 128
+   },
+   {
+    "file": "fx-rock-debris-2.webp",
+    "w": 77,
+    "h": 128
+   },
+   {
+    "file": "fx-rock-debris-3.webp",
+    "w": 86,
+    "h": 128
+   },
+   {
+    "file": "fx-rock-debris-4.webp",
+    "w": 71,
+    "h": 128
+   },
+   {
+    "file": "fx-rock-debris-5.webp",
+    "w": 106,
+    "h": 128
+   },
+   {
+    "file": "fx-rock-debris-6.webp",
+    "w": 95,
+    "h": 128
+   }
+  ]
+ },
+ "fx-crystal-spikes": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-crystal-spikes.webp",
+    "w": 370,
+    "h": 400
+   }
+  ]
+ },
+ "fx-ground-fissure": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-ground-fissure.webp",
+    "w": 512,
+    "h": 120
+   }
+  ]
+ },
+ "fx-crystal-shackle": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-crystal-shackle.webp",
+    "w": 400,
+    "h": 400
+   }
+  ]
+ },
+ "fx-shadow-smoke": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-shadow-smoke.webp",
+    "w": 397,
+    "h": 400
+   }
+  ]
+ },
+ "fx-smoke-wisps": {
+  "blend": "normal",
+  "frames": [
+   {
+    "file": "fx-smoke-wisps-1.webp",
+    "w": 256,
+    "h": 65
+   },
+   {
+    "file": "fx-smoke-wisps-2.webp",
+    "w": 256,
+    "h": 59
+   },
+   {
+    "file": "fx-smoke-wisps-3.webp",
+    "w": 256,
+    "h": 67
+   },
+   {
+    "file": "fx-smoke-wisps-4.webp",
+    "w": 256,
+    "h": 58
+   }
+  ]
+ },
+ "fx-sword-arc": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-sword-arc.webp",
+    "w": 119,
+    "h": 512
+   }
+  ]
+ },
+ "fx-gold-shockwave": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-gold-shockwave.webp",
+    "w": 512,
+    "h": 512
+   }
+  ]
+ },
+ "fx-gold-motes": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-gold-motes-1.webp",
+    "w": 72,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-2.webp",
+    "w": 68,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-3.webp",
+    "w": 62,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-4.webp",
+    "w": 71,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-5.webp",
+    "w": 71,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-6.webp",
+    "w": 71,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-7.webp",
+    "w": 61,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-8.webp",
+    "w": 71,
+    "h": 72
+   },
+   {
+    "file": "fx-gold-motes-9.webp",
+    "w": 69,
+    "h": 72
+   }
+  ]
+ },
+ "fx-resonance-orb": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-resonance-orb.webp",
+    "w": 512,
+    "h": 261
+   }
+  ]
+ },
+ "fx-resonance-ripple": {
+  "blend": "add-alpha",
+  "frames": [
+   {
+    "file": "fx-resonance-ripple.webp",
+    "w": 512,
+    "h": 512
+   }
+  ]
+ }
+}

@@ -1,0 +1,400 @@
+{
+  "task": "STORY-INTERACT-012-ART",
+  "status": "frozen-for-engineering-review",
+  "mode": "built-in image_gen",
+  "budget": {
+    "runtimeSingleBytes": 102400,
+    "runtimeTotalBytes": 307200,
+    "maxWidth": 512,
+    "maxHeight": 512
+  },
+  "assets": [
+    {
+      "id": "search-folio",
+      "generation": {
+        "asset": "search-folio",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE standalone transparent movable folio-cover sprite for a dark fantasy hidden-object game. Primary request: a single CLOSED flat leather document folio cover, wide enough to cover two side-by-side research pages. It lies flat on an invisible horizontal tabletop, viewed from camera only about 25 degrees above the tabletop, NOT a vertical book and NOT a 90 degree overhead view. The visible top is a broad foreshortened trapezoid; back edge slightly narrower than front, modest left spine and very thin front edge. A warm dark brown leather rectangle with subtle deep ink-green wear, restrained antique brass corner caps and a small simple pull tab on front-right edge. Old functional research storage, not ornate treasure. Broad continuous opaque surface, no holes, no open pages, no paper beneath it, no book stack. A little rubbing and crease detail, no text, symbols, writing or UI. Semi-realistic painterly material matching a dark antique research desk. Soft warm light from upper LEFT, cooler subdued reflection from RIGHT. Actual transparent alpha background, isolated complete cover with clean small transparent margin. No tabletop/background, no hands, no target objects, no cast shadow or ground shadow outside the physical silhouette, no glow. Approximate small 512x512 canvas; single candidate, no sprite sheet. The cover is lifted by game code; generate only this one closed cover state.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/search-lab.webp",
+          "assets/story/backgrounds/search-hideout.webp",
+          "assets/story/props/paper.webp",
+          "assets/story/props/gun-0.webp"
+        ],
+        "referenceUse": "Files visually inspected for perspective, palette and lighting; no image inputs supplied for new generation",
+        "targetSize": "approximately 512x512, tool determines actual source dimensions",
+        "viewpoint": "lies flat on tabletop, camera 25 degrees above tabletop",
+        "artistReferenceHashes": {
+          "assets/story/backgrounds/search-lab.webp": "4e5244614ef73e25b83508c540844720105174abc72f241d499d1694fe7b0087",
+          "assets/story/backgrounds/search-hideout.webp": "eefd258de9d1498d701e41b1b74aefac248a622ed66deba650ba3d44005d5cc8",
+          "assets/story/props/paper.webp": "e543ddd911315eda63a50d9bba565c045efe4089ca90410cae7847378ae68409",
+          "assets/story/props/gun-0.webp": "77b90307b080e970958c406cd4c0a8c2ad865f0d50722323d83987eab876937a"
+        }
+      },
+      "toolOutputPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-88a9378f-ee94-4d14-b631-3af52a43b497.png",
+      "source": {
+        "path": "storage/source-art/STORY-INTERACT-012/search-folio.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1602930,
+        "sha256": "f1919771ac7576e5c43491f66f12e847acd03d984456b3be28711f233fa66eaf",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          0,
+          21,
+          1246,
+          1228
+        ],
+        "alphaBoundsAt16": [
+          31,
+          306,
+          1243,
+          931
+        ],
+        "alphaBoundsAt128": [
+          31,
+          307,
+          1242,
+          930
+        ]
+      },
+      "runtime": {
+        "path": "assets/story/props/search-folio.webp",
+        "width": 512,
+        "height": 267,
+        "bytes": 54700,
+        "sha256": "dfeb8110fe3b289bedf19d060aaddc796e38d83a4af8097a47b92e1c81bf857d",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          1,
+          0,
+          511,
+          267
+        ],
+        "alphaBoundsAt16": [
+          3,
+          3,
+          509,
+          264
+        ],
+        "alphaBoundsAt128": [
+          3,
+          4,
+          508,
+          263
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "cropping": "trim outer transparent margin at alpha>=16, retain 8 source pixels of padding",
+        "sourceCropBox": [
+          23,
+          298,
+          1251,
+          939
+        ],
+        "resize": "proportional contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "smallDisplay": "Composited at 256 CSS px wide on #142622 and inspected in tool image output.",
+        "confirmed": [
+          "physical cover only",
+          "no target objects or text",
+          "genuine alpha",
+          "warm-left/cool-right material response",
+          "no external ground shadow or emitted glow"
+        ],
+        "integrationRule": "Keep intrinsic aspect ratio with contain; viewpoint is already rendered; do not apply additional vertical foreshortening."
+      }
+    },
+    {
+      "id": "search-cloth",
+      "generation": {
+        "asset": "search-cloth",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE standalone transparent movable tool-cloth sprite for a dark fantasy hidden-object game. Primary request: a SINGLE broad old workshop cloth loosely spread across an invisible horizontal tabletop, used to cover three small tools beneath it. Camera about 25 degrees above the tabletop, shallow downward oblique angle, NOT straight overhead and NOT front-hanging fabric. Broad low foreshortened footprint, approximately twice as wide as its visible height. Deep muted blue-green/charcoal woven cloth with a narrow faded brown hem, some soft low folds and one front-right corner curling slightly upward as a grasp point. It remains a broad solid continuous covering with no holes and no internal transparency. Low mound-like folds are okay but do NOT show or imprint gun parts underneath. Dark fantasy painterly fabric with visible subtle fibers and worn edge, restrained antique palette. Soft warm light from upper LEFT, subdued cool fill from RIGHT, no luminous pattern, no embroidery motifs, no writing. Center complete cloth on genuine transparent alpha, small clear margin; target small approximately 512x512 canvas. Exactly one cloth, no folded stack, no hands, no tools, no gun, no background or tabletop. No cast or ground shadow outside the physical cloth, no aura, no UI, no labels, no watermark, no sprite sheet. Game code will slide this same cloth away; generate only one covering state.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/search-lab.webp",
+          "assets/story/backgrounds/search-hideout.webp",
+          "assets/story/props/paper.webp",
+          "assets/story/props/gun-0.webp"
+        ],
+        "referenceUse": "Files visually inspected for perspective, palette and lighting; no image inputs supplied for new generation",
+        "targetSize": "approximately 512x512, tool determines actual source dimensions",
+        "viewpoint": "lies flat on tabletop, camera 25 degrees above tabletop",
+        "artistReferenceHashes": {
+          "assets/story/backgrounds/search-lab.webp": "4e5244614ef73e25b83508c540844720105174abc72f241d499d1694fe7b0087",
+          "assets/story/backgrounds/search-hideout.webp": "eefd258de9d1498d701e41b1b74aefac248a622ed66deba650ba3d44005d5cc8",
+          "assets/story/props/paper.webp": "e543ddd911315eda63a50d9bba565c045efe4089ca90410cae7847378ae68409",
+          "assets/story/props/gun-0.webp": "77b90307b080e970958c406cd4c0a8c2ad865f0d50722323d83987eab876937a"
+        }
+      },
+      "toolOutputPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-4dd3ee57-8c15-4259-88cd-442d286fa3d2.png",
+      "source": {
+        "path": "storage/source-art/STORY-INTERACT-012/search-cloth.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1373646,
+        "sha256": "d8795739715c4f1d481ca21344a22b88fe1912c67b2b54be78891e3d32b1d37a",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          0,
+          49,
+          1253,
+          1198
+        ],
+        "alphaBoundsAt16": [
+          11,
+          337,
+          1243,
+          927
+        ],
+        "alphaBoundsAt128": [
+          12,
+          338,
+          1242,
+          926
+        ]
+      },
+      "runtime": {
+        "path": "assets/story/props/search-cloth.webp",
+        "width": 512,
+        "height": 249,
+        "bytes": 42166,
+        "sha256": "fe24c236d6a7f9e4a445cfa7bab5eb5c6785776c6c4499e38ad20db0760f6208",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          1,
+          1,
+          512,
+          249
+        ],
+        "alphaBoundsAt16": [
+          3,
+          3,
+          509,
+          246
+        ],
+        "alphaBoundsAt128": [
+          4,
+          4,
+          508,
+          245
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "cropping": "trim outer transparent margin at alpha>=16, retain 8 source pixels of padding",
+        "sourceCropBox": [
+          3,
+          329,
+          1251,
+          935
+        ],
+        "resize": "proportional contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "smallDisplay": "Composited at 256 CSS px wide on #142622 and inspected in tool image output.",
+        "confirmed": [
+          "physical cover only",
+          "no target objects or text",
+          "genuine alpha",
+          "warm-left/cool-right material response",
+          "no external ground shadow or emitted glow"
+        ],
+        "integrationRule": "Keep intrinsic aspect ratio with contain; viewpoint is already rendered; do not apply additional vertical foreshortening."
+      }
+    },
+    {
+      "id": "search-panel",
+      "generation": {
+        "asset": "search-panel",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE standalone transparent removable cupboard cover panel for a dark fantasy hidden-object game. Primary request: a single loose rectangular wooden cover board that fits upright across the FRONT of a low desk cubby opening. This is a nearly VERTICAL furniture panel seen from a camera 25 degrees above the desk, so a thin top edge is visible. Do NOT make it a horizontal tabletop board or an isometric crate. Broad face about 1.55 times as wide as tall, frontal view with very mild oblique perspective; left vertical edge slightly larger than right, both sides nearly vertical. Dark aged walnut, three tightly joined horizontal planks inside a very narrow plain wooden perimeter; subtle rubbed amber highlights and shallow scratches matching an old rustic writing desk. No holes or gaps between planks; fully opaque concealment face. A small carved fingertip notch on the upper-right edge indicates this panel can be removed, no big handle, no hinges, no lock, no door frame or cabinet body. Modest wood edge thickness, no elaborate ornament. Soft warm light from upper LEFT, weak cool fill from RIGHT. Semi-realistic painterly dark fantasy material. Single complete panel centered on genuinely transparent alpha background with small clean margin, approximately 512x512 small asset. No room, tabletop, shelf, recorder, object behind it, hands, writing, symbols, UI or watermark. No cast shadow beyond the physical board, no ground shadow, no glow. Exactly one cover panel, no sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/search-lab.webp",
+          "assets/story/backgrounds/search-hideout.webp",
+          "assets/story/props/paper.webp",
+          "assets/story/props/gun-0.webp"
+        ],
+        "referenceUse": "Files visually inspected for perspective, palette and lighting; no image inputs supplied for new generation",
+        "targetSize": "approximately 512x512, tool determines actual source dimensions",
+        "viewpoint": "near-vertical cubby front, viewer above 25 degrees",
+        "artistReferenceHashes": {
+          "assets/story/backgrounds/search-lab.webp": "4e5244614ef73e25b83508c540844720105174abc72f241d499d1694fe7b0087",
+          "assets/story/backgrounds/search-hideout.webp": "eefd258de9d1498d701e41b1b74aefac248a622ed66deba650ba3d44005d5cc8",
+          "assets/story/props/paper.webp": "e543ddd911315eda63a50d9bba565c045efe4089ca90410cae7847378ae68409",
+          "assets/story/props/gun-0.webp": "77b90307b080e970958c406cd4c0a8c2ad865f0d50722323d83987eab876937a"
+        }
+      },
+      "toolOutputPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-e1f94251-750d-4146-a005-952d885a2fa8.png",
+      "source": {
+        "path": "storage/source-art/STORY-INTERACT-012/search-panel.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1855723,
+        "sha256": "02bbc02fa032cfe6a4718221cdf6faf300108de86e6e6da52b17c70c03a4e96c",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          0,
+          21,
+          1224,
+          1228
+        ],
+        "alphaBoundsAt16": [
+          35,
+          287,
+          1221,
+          1010
+        ],
+        "alphaBoundsAt128": [
+          35,
+          288,
+          1220,
+          1010
+        ]
+      },
+      "runtime": {
+        "path": "assets/story/props/search-panel.webp",
+        "width": 512,
+        "height": 315,
+        "bytes": 73798,
+        "sha256": "b1259abe78adb8122a96ca13fa8d8661e3ded23143d7abe014b675201405285b",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBounds": [
+          1,
+          1,
+          511,
+          315
+        ],
+        "alphaBoundsAt16": [
+          3,
+          3,
+          509,
+          312
+        ],
+        "alphaBoundsAt128": [
+          4,
+          4,
+          508,
+          311
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "cropping": "trim outer transparent margin at alpha>=16, retain 8 source pixels of padding",
+        "sourceCropBox": [
+          27,
+          279,
+          1229,
+          1018
+        ],
+        "resize": "proportional contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "smallDisplay": "Composited at 256 CSS px wide on #142622 and inspected in tool image output.",
+        "confirmed": [
+          "physical cover only",
+          "no target objects or text",
+          "genuine alpha",
+          "warm-left/cool-right material response",
+          "no external ground shadow or emitted glow"
+        ],
+        "integrationRule": "Keep intrinsic aspect ratio; near-vertical cabinet face. Mild skew to align actual cubby front is permitted; do not treat as flat tabletop prop."
+      }
+    }
+  ],
+  "totals": {
+    "runtimeBytes": 170664,
+    "sourceBytes": 4832299
+  },
+  "frozenAtUtc": "2026-09-24T17:24:05.376203+00:00",
+  "generatedCallCount": 3,
+  "generatedAssetCount": 3,
+  "spriteSheetsUsed": false,
+  "sourceBudgetExceptions": [],
+  "checks": [
+    {
+      "command": "python3 scripts/check-art-budget.py --strict assets/story/props/search-folio.webp assets/story/props/search-cloth.webp assets/story/props/search-panel.webp",
+      "exitCode": 0,
+      "result": "WITHIN_BUDGET; 3 files, 0 over budget"
+    },
+    {
+      "command": "python3 scripts/check-art-budget.py --strict --kind source source-art/STORY-INTERACT-012",
+      "exitCode": 0,
+      "result": "WITHIN_BUDGET; 3 files, 0 over budget"
+    }
+  ],
+  "integratedSnapshotsInspected": [
+    "test-results/story-interact-012-search/research-covered-390.png",
+    "test-results/story-interact-012-search/gun-covered-1440.png",
+    "test-results/story-interact-012-search/hideout-covered-1440.png"
+  ],
+  "integratedSnapshotResult": "No blocking art issue in these three sampled covered-state screenshots; perspective and concealment visually acceptable.",
+  "unverifiedByArtAgent": [
+    "Independent pointer/keyboard exercise",
+    "All reveal/open/re-entry states",
+    "All viewport and zoom combinations",
+    "Real mobile performance"
+  ]
+}

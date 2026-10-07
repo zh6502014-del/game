@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "scenes": [
+    {
+      "id": "rin",
+      "name": "凜",
+      "description": "Extract ONLY Rin, the FEMALE assassin on the far RIGHT of reference1, purple hood and black leather armor with antique gold details. Restore her RIGHT hand to its healthy unbandaged state for before the accident. Neutral alert speaking expression, empty hands relaxed near waist, NO bandages, no weapon raised.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Rin, the FEMALE assassin on the far RIGHT of reference1, purple hood and black leather armor with antique gold details. Restore her RIGHT hand to its healthy unbandaged state for before the accident. Neutral alert speaking expression, empty hands relaxed near waist, NO bandages, no weapon raised. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-5f99b86d-16d7-425f-a4bf-a9b5dd27fa24.png",
+      "path": "assets/story/actors/rin.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "0e0994ce601e8eb84afb855ba0917e5d9828ba3f4457e4a47ed4b20288bda84a",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 495885,
+        "transparent_fraction": 0.3153
+      }
+    },
+    {
+      "id": "rin-wounded",
+      "name": "凜",
+      "description": "Extract ONLY Rin, the FEMALE assassin on the far RIGHT of reference1, same purple hood and black leather armor. Her ANATOMICAL RIGHT hand/wrist (viewer LEFT when facing front) is wrapped with worn pale cloth, held gently near her torso; left hand is in a dark leather glove. Tired guarded expression. Preserve correct right-hand injury, no large blood marks.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Rin, the FEMALE assassin on the far RIGHT of reference1, same purple hood and black leather armor. Her ANATOMICAL RIGHT hand/wrist (viewer LEFT when facing front) is wrapped with worn pale cloth, held gently near her torso; left hand is in a dark leather glove. Tired guarded expression. Preserve correct right-hand injury, no large blood marks. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-7b2fb9f4-2b72-4fd4-bcbd-c58c85c2e3d5.png",
+      "path": "assets/story/actors/rin-wounded.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "68481aa2bb81262529b6f71d218c0f292d6ae02b49036840a10095434bf27e63",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 524618,
+        "transparent_fraction": 0.3335
+      }
+    },
+    {
+      "id": "shuo",
+      "name": "朔",
+      "description": "Extract ONLY Shuo, the adult male swordsman in the CENTER RIGHT of reference1 between the girl and purple-hooded woman. Dark tied-up hair, green-dark cloak, antique gold leather/metal light armor. Quiet concerned listening expression. Arms relaxed, sword SHEATHED. No shield, no heavy beard.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Shuo, the adult male swordsman in the CENTER RIGHT of reference1 between the girl and purple-hooded woman. Dark tied-up hair, green-dark cloak, antique gold leather/metal light armor. Quiet concerned listening expression. Arms relaxed, sword SHEATHED. No shield, no heavy beard. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-e735dec3-aa0c-4335-a63d-a3841ff4331d.png",
+      "path": "assets/story/actors/shuo.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "2a99466642b1a054908ad4e29155169c20fb4d571c1e85eb2666fce4f2247526",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 600688,
+        "transparent_fraction": 0.3819
+      }
+    },
+    {
+      "id": "gran",
+      "name": "格蘭",
+      "description": "Extract ONLY Gran, the tall broad bearded adult MAN behind the girl in reference1, dark heavy engraved antique-gold armor with neck cloak. Neutral protective stance, empty hands resting near his waist. NO separate shield to obstruct torso, no helmet obscuring face.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Gran, the tall broad bearded adult MAN behind the girl in reference1, dark heavy engraved antique-gold armor with neck cloak. Neutral protective stance, empty hands resting near his waist. NO separate shield to obstruct torso, no helmet obscuring face. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-99140278-1477-43d6-8f2e-2deb91feefb8.png",
+      "path": "assets/story/actors/gran.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "f1ad52ac5d11d39f75c2c1e10afbff6777cc380ef6b86b4b2fc7807a0dc62e52",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 485099,
+        "transparent_fraction": 0.3084
+      }
+    },
+    {
+      "id": "eve",
+      "name": "伊芙",
+      "description": "Extract ONLY Eve, adult WOMAN on the far LEFT of reference1, short tousled red hair, worn ivory research coat, red scarf, leather belts and gloves. Thoughtful talking pose with open empty hands near waist. NO GUN anywhere. Character alone, no book or clipboard.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Eve, adult WOMAN on the far LEFT of reference1, short tousled red hair, worn ivory research coat, red scarf, leather belts and gloves. Thoughtful talking pose with open empty hands near waist. NO GUN anywhere. Character alone, no book or clipboard. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-42b85439-f908-40a8-be29-2ac6fdd72767.png",
+      "path": "assets/story/actors/eve.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "7f0f6cd22497a8f9ad217461b082309c4c0c635e826be9be373be6ca7495e194",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 564366,
+        "transparent_fraction": 0.3588
+      }
+    },
+    {
+      "id": "eve-armed",
+      "name": "伊芙",
+      "description": "Extract ONLY Eve, adult WOMAN on the far LEFT of reference1, short tousled red hair, worn ivory research coat, red scarf, leather belts and gloves. Same face, alert tense posture. She holds her small improvised antique brass crystal pistol lowered near her waist with safe trigger finger. Only ONE pistol, no firing/muzzle flash. This pose is for after assembling the pistol, not aiming at anyone.",
+      "prompt": "Use case: background-extraction, identity-preserve. Create ONE reusable visual novel character sprite on a genuinely TRANSPARENT RGBA PNG background. Only one isolated character. Extract ONLY Eve, adult WOMAN on the far LEFT of reference1, short tousled red hair, worn ivory research coat, red scarf, leather belts and gloves. Same face, alert tense posture. She holds her small improvised antique brass crystal pistol lowered near her waist with safe trigger finger. Only ONE pistol, no firing/muzzle flash. This pose is for after assembling the pistol, not aiming at anyone. Preserve the exact character facial identity and body proportions from the reference. Semi-realistic dark fantasy painting, neutral soft lighting, retain antique gold textures. Front three-quarter view, upright standing portrait cropped at mid-thigh, entire head, both shoulders, both arms and hands inside canvas with transparent margin. NO surrounding scene, no environment, no furniture, no other people, no ground plane, no painted checkerboard, no colored/white/black rectangle, no text, no card frame. All area outside the single character silhouette must be real alpha zero. Character fills most portrait canvas height.",
+      "refs": [
+        "/Users/songer/Desktop/Game/assets/story/party-stay.png",
+        "/Users/songer/Desktop/Game/assets/story/party-orders.png"
+      ],
+      "source": "/Users/songer/.codex/generated_images/01a0c9a7-3f07-7b52-b3d5-ef3756f0754a/exec-ea62704a-1f34-4f32-a2d7-a130cf3c1dc0.png",
+      "path": "assets/story/actors/eve-armed.png",
+      "status": "complete",
+      "width": 1024,
+      "height": 1536,
+      "png_color_type": 6,
+      "sha256": "d9c076d82cf5c3f8e9e60a30f03a51233afabe794190b7cef67a350c8a5cc2af",
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparent_pixels": 530435,
+        "transparent_fraction": 0.3372
+      }
+    }
+  ]
+}

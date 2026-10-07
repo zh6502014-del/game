@@ -1,0 +1,93 @@
+/* Authoritative battle HUD. Art, numbers and status each have their own layout area. */
+.battle-hud{--portrait-accent:#d4c498;--hud-edge:#9a8553;--hud-ink:#112925}
+.battle-hud[data-job=tank]{--portrait-accent:#a3c9c5}
+.battle-hud[data-job=assassin]{--portrait-accent:#b9acd3}
+.battle-hud[data-job=gunner]{--portrait-accent:#d0a08a}
+.duel-screen>.battle-hud.duel-side{
+ width:96%!important;height:auto!important;min-height:0!important;max-height:none!important;
+ align-self:stretch!important;padding:20px!important;overflow:visible!important;
+ border:1px solid #9a855366!important;border-radius:8px!important;
+ background:radial-gradient(ellipse at 0 0,#40625238,transparent 70%),linear-gradient(120deg,#102624f5,#091b20f5)!important;
+ box-shadow:inset 0 1px #e7d5a22e,inset 0 0 0 4px #07151380,0 12px 24px #0005!important;
+}
+.duel-screen>.battle-hud.enemy{background:radial-gradient(ellipse at 100% 0,#57616b25,transparent 70%),linear-gradient(240deg,#15282bf5,#0b1c22f5)!important;border-color:#9a855366!important}
+.battle-hud::before{content:"";position:absolute;inset:8px;border:1px solid #b6a06a1f;border-radius:3px;pointer-events:none}
+.duel-side-inner{display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-areas:"portrait identity" "portrait resources" "statuses statuses";gap:8px 20px;min-width:0;min-height:0;align-items:center;text-align:left}
+.enemy .duel-side-inner{grid-template-columns:minmax(0,1fr) 96px;grid-template-areas:"identity portrait" "resources portrait" "statuses statuses";text-align:left}
+.duel-identity{grid-area:identity;min-width:0;display:flex;align-items:baseline;gap:12px;border-bottom:1px solid #cab57c26;padding-bottom:8px}
+.enemy .duel-identity{flex-direction:row-reverse}
+.duel-owner{color:#a2b4ad;font-size:12px;line-height:1.5;letter-spacing:2px;white-space:nowrap}
+.duel-name{color:#f1ddb1;font:700 22px/1.4 Georgia,'Songti TC',serif;letter-spacing:3px;margin:0;white-space:nowrap}
+.duel-copy{grid-area:resources;min-width:0}
+.battle-hud .duel-avatar{grid-area:portrait;position:relative;align-self:start;margin:0;width:96px;height:116px;display:block;overflow:visible;font-size:0;border:0;border-radius:0;background:#061518;isolation:isolate;box-shadow:0 8px 16px #0006}
+.portrait-window{position:absolute;inset:4px 4px 8px;overflow:hidden;clip-path:polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px);background:#0b1c20}
+.duel-avatar .character-image{position:absolute;display:block;width:var(--portrait-width);height:auto;max-width:none;left:var(--portrait-left);top:var(--portrait-top);object-fit:contain;filter:contrast(1.04)}
+.duel-avatar::after{content:"";position:absolute;inset:0;background:url('../../assets/icons/collector-portrait-frame.svg') center/100% 100% no-repeat;pointer-events:none;z-index:2}
+.duel-avatar::before{content:"";position:absolute;inset:4px;border-radius:inherit;box-shadow:inset 0 -20px 18px -14px #051619,inset 0 0 12px #07151870;z-index:1;pointer-events:none}
+.duel-avatar .class-crest{position:absolute;display:grid;place-items:center;inset:auto auto 0 calc(50% - 13px);width:26px;height:22px;box-sizing:border-box;z-index:3;border-radius:3px;border:1px solid #b59b60;background:linear-gradient(#254039,#0b2020);color:var(--portrait-accent);box-shadow:0 2px 5px #0009}
+.duel-avatar .class-crest svg{width:16px;height:16px;margin:0}
+.duel-avatar.portrait-failed .class-crest{display:none}
+.duel-avatar .portrait-fallback{inset:24%;width:52%;height:52%;color:var(--portrait-accent)}
+.duel-hp,.duel-shield-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin:0;font:500 12px/1.5 system-ui;color:#b8c9bf}
+.duel-hp>span,.duel-shield-row>span{display:flex;align-items:center;gap:4px;letter-spacing:1px;flex:none;white-space:nowrap}
+.duel-hp .nd-icon,.duel-shield-row .nd-icon{width:14px;height:14px;flex:none}
+.duel-hp strong{position:relative;isolation:isolate;display:block;box-sizing:content-box;margin-left:auto;min-width:min(5ch,calc(100cqw - 16px));padding:2px 8px;text-align:right;font:500 26px/1.4 Georgia,serif;font-variant-numeric:lining-nums tabular-nums;letter-spacing:0;white-space:nowrap;color:#f8e6bd;text-shadow:0 2px 3px #000;clip-path:none;overflow:visible;border:0;background:none}
+.duel-hp strong::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#ac875010,#b8995830);border-right:2px solid #b99c60;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%,0 8px)}
+.duel-hpbar{height:8px;margin:4px 0 8px;padding:1px;box-sizing:border-box;overflow:hidden;border:1px solid #bca36a50;border-radius:2px;background:#020d10;box-shadow:inset 0 2px 3px #000b}
+.duel-hpfill{height:100%;background:linear-gradient(90deg,#56745d,#bed298);transition:width .35s ease}
+.enemy .duel-hpfill{background:linear-gradient(90deg,#775766,#d1a29b)}
+.duel-shield-row{color:#a5c0c7}
+.duel-shield-row strong{margin-left:auto;min-width:6.5ch;text-align:right;font:600 14px/1.5 system-ui;font-variant-numeric:tabular-nums;white-space:nowrap;color:#c9dddf}
+.duel-shield-row small{font:inherit;color:#91a8ac}
+.duel-shield{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;height:4px;margin-top:4px}
+.duel-shield i{height:4px;width:auto;border:1px solid #527d784d;border-radius:1px;background:#142e30}
+.duel-shield i.filled{background:#9bbfbe;box-shadow:0 0 6px #9bbfbe20}
+.duel-status-row{grid-area:statuses;display:flex;flex-wrap:wrap;align-content:start;gap:8px;margin-top:8px;padding-top:12px;border-top:1px solid #a6905d26;min-width:0}
+.duel-status-row:empty{display:none}
+.enemy .duel-status-row{justify-content:flex-end}
+.duel-status{display:inline-flex;align-items:center;gap:4px;border:1px solid #a7b8ab38;border-radius:3px;background:linear-gradient(#35514650,#162e2d80);color:#d0dfd5;font:500 12px/1.5 system-ui;padding:4px 8px;white-space:normal;overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
+.duel-status .nd-icon{width:14px;height:14px;flex:none;color:var(--portrait-accent)}
+.battle-hud.low-hp .duel-hp strong{color:#ffc0a6}
+.battle-hud.low-hp .duel-hpbar{border-color:#d5907066;box-shadow:0 0 8px #b6502820}
+.duel-screen{grid-template-rows:auto minmax(250px,1fr) 160px!important}
+@media(max-width:1000px){
+ .duel-screen>.battle-hud.duel-side{padding:16px!important}
+ .duel-side-inner{grid-template-columns:80px minmax(0,1fr);column-gap:16px}
+ .enemy .duel-side-inner{grid-template-columns:minmax(0,1fr) 80px}
+ .battle-hud .duel-avatar{width:80px;height:100px}
+ .duel-name{font-size:20px}
+}
+@media(max-width:700px){
+ .duel-screen>.battle-hud.duel-side{width:100%!important;padding:12px!important}
+ .duel-side-inner,.enemy .duel-side-inner{display:flex;flex-wrap:wrap;gap:12px 8px;text-align:left}
+ .battle-hud .duel-avatar{width:56px;height:70px;margin:0;flex:none}
+ .duel-copy,.duel-status-row{flex:1 0 100%}
+ .duel-avatar .class-crest{width:22px;height:18px;left:calc(50% - 11px);bottom:0}
+ .duel-avatar .class-crest svg{width:14px;height:14px}
+ .duel-identity,.enemy .duel-identity{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border:0;padding:0;flex:1 0 max-content}
+ .duel-owner{font-size:12px;letter-spacing:0}
+ .duel-name{font-size:16px;letter-spacing:1px;line-height:1.5}
+ .duel-hp strong{font-size:20px;padding:2px 4px}
+ .duel-hp,.duel-shield-row{gap:4px}
+ .duel-hp>span,.duel-shield-row>span{letter-spacing:0}
+ .duel-shield-row strong{font-size:12px}
+ .duel-status-row,.enemy .duel-status-row{justify-content:flex-start;gap:4px;margin:0;padding-top:8px}
+ .duel-status{padding:4px}
+ .duel-screen{grid-template-rows:auto minmax(220px,27svh) 134px!important}
+}
+/* Container width also responds to enlarged text, without clipping resource values. */
+.duel-copy{container-type:inline-size}
+
+@media(prefers-reduced-motion:reduce){.duel-hpfill{transition:none}}
+/* Shared enamel treatment; silhouettes and labels carry meaning as well as tint. */
+.duel-status:has([data-icon=lock]){border-color:#b8875366;color:#ebc79e;background:#392b2080}
+.duel-status:has([data-icon=burn]){border-color:#c9785766;color:#f0ba9f;background:#3c251f80}
+.duel-status:has([data-icon=night]){border-color:#9b89bf66;color:#d7cef1;background:#2b254580}
+.duel-status:has([data-icon=shield]){border-color:#81aba866;color:#c4e0df;background:#203a3b80}
+.duel-status:has([data-icon=domain]){border-color:#9eb88766;color:#d5e8c3}
+
+/* Bound images even if an older presentation adapter is still cached. */
+.duel-avatar>.character-image{inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);max-width:100%;object-fit:cover;object-position:50% 0;border-radius:inherit}
+
+/* NPC emblems use the same bounded portrait cell as the playable characters. */
+.duel-avatar .story-npc-emblem{box-sizing:border-box;display:block;width:100%;height:100%;padding:18px;object-fit:contain}

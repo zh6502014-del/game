@@ -1,0 +1,902 @@
+{
+  "task": "STORY-SEARCH-001-props",
+  "status": "frozen-for-engineering-review",
+  "mode": "built-in image_gen; one independent generation per asset",
+  "runtimeBudgetBytesPerFile": 102400,
+  "assets": [
+    {
+      "id": "paper",
+      "generation": {
+        "asset": "paper",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent game prop for Nightfall Duel, a dark fantasy hidden-object game. Primary request: a single blank old research paper leaf, upright portrait rectangle with slightly irregular worn edges and one modest folded corner, no writing, no symbols, no seal, no other objects. Viewpoint: almost front-on, very shallow top-down view, no dramatic perspective. Painterly realistic parchment fibers, muted warm ivory and aged ochre edge wear, clean readable silhouette. Gentle warm light from upper left, weak cool ambient fill. Center the complete paper with about 5 percent transparent padding on every side. Aim for a small approximately 512 by 512 pixel square asset, not a large illustration. Background must be genuinely transparent alpha, not a painted checkerboard. No floor, no desk, no drop shadow, no cast shadow outside the paper, no glow, no border, no frame, no UI, no lettering, no watermark. The game supplies all text and shadows separately. Exactly one paper leaf; do not create a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/lab.png",
+          "assets/story/backgrounds/shelter.png"
+        ],
+        "referenceUse": "Visual style review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-f3aa1778-880d-47f4-87d3-8e2af5b144cc.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/paper.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1831667,
+        "sha256": "e9235586a9a353fa3ead7dd7e2a64b9f3391ae42ff476eae75dd316f339c3dee",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          0,
+          77,
+          1238,
+          1254
+        ],
+        "transparentPixels": 662934,
+        "opaquePixels": 195,
+        "partialAlphaPixels": 909387
+      },
+      "runtime": {
+        "path": "assets/story/props/paper.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 44776,
+        "sha256": "e543ddd911315eda63a50d9bba565c045efe4089ca90410cae7847378ae68409",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          0,
+          31,
+          501,
+          485
+        ],
+        "transparentPixels": 110508,
+        "opaquePixels": 1049,
+        "partialAlphaPixels": 150587,
+        "alphaBoundingBoxAt16": [
+          82,
+          33,
+          433,
+          480
+        ],
+        "alphaBoundingBoxAt128": [
+          83,
+          34,
+          433,
+          480
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "通用資料紙頁",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "gun-0",
+      "generation": {
+        "asset": "gun-0",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent modular game prop, gun-0 receiver for Nightfall Duel. Primary request: ONLY the detached central receiver/body of a fictional antique crystal-powered hand cannon, not a complete gun. Side elevation, muzzle connection faces RIGHT, grip connection on UNDERSIDE, shallow top plane only, near-orthographic side view. Broad horizontal rectangular ink-green patinated steel receiver, about twice as wide as tall, slightly sloped shoulder at upper right, antique brass edge trim, a small circular mechanical socket on the broad visible side; visible connector neck at right for a separate barrel and small underside attachment for a separate grip. No attached barrel, no grip, no crystal, no fuse plate, no hand. Semi-realistic dark fantasy painterly metal matching antiqued gold and deep green laboratory instruments, restrained engraving without text. Soft warm upper-left light and cool ambient fill. Single intact object centered, complete silhouette with 5 percent transparent padding. Target roughly 512x512 square game sprite. Genuinely transparent background with clean alpha around the solid object, no checkerboard, no floor or scenery, no cast shadow outside the object, no glow, no sparks, no text/UI/watermark. Exactly one detached receiver; not a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/skins/gunner-origin.png",
+          "assets/puzzles/gun-0.svg",
+          "assets/story/backgrounds/lab.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-0d7d3bba-0a5a-41ac-bcc9-9a87932e79d9.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/gun-0.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1138203,
+        "sha256": "914bedb47d89a40f7db032a2e740b5e1b7edacacb6d34d8a3003c8f700cb1469",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          31,
+          21,
+          1236,
+          1230
+        ],
+        "transparentPixels": 1078131,
+        "opaquePixels": 135,
+        "partialAlphaPixels": 494250
+      },
+      "runtime": {
+        "path": "assets/story/props/gun-0.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 41516,
+        "sha256": "77b90307b080e970958c406cd4c0a8c2ad865f0d50722323d83987eab876937a",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          12,
+          62,
+          504,
+          489
+        ],
+        "transparentPixels": 179673,
+        "opaquePixels": 973,
+        "partialAlphaPixels": 81498,
+        "alphaBoundingBoxAt16": [
+          15,
+          129,
+          502,
+          376
+        ],
+        "alphaBoundingBoxAt128": [
+          15,
+          130,
+          501,
+          376
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "機匣",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "barrel connection points right",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "gun-1",
+      "generation": {
+        "asset": "gun-1",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent modular game prop, gun-1 barrel for Nightfall Duel. Primary request: ONLY the detached barrel of a fictional antique crystal-powered hand cannon, not a whole gun. Precisely horizontal orientation, muzzle faces RIGHT and receiver connector at LEFT. Near-orthographic SIDE ELEVATION, tiny amount of top-plane visibility, no foreshortening. Short broad heavy brass barrel with deep green steel inlays, about three times as wide as tall; clearly stepped muzzle collar on right and narrow receiver mounting connector left, a little restrained etched decoration, no text. Whole detached object stays mechanically simple and clearly readable at small scale. Semi-realistic painterly dark fantasy antique metal, softly worn, upper-left soft warm lighting and weak cool fill. Center complete silhouette with about 5 percent transparent padding, aim for approximately 512x512 square game sprite. Genuinely transparent alpha background. No receiver, no trigger, no grip, no crystal, no hand, no other components, no floor or cast shadow outside object, no smoke/glow, no scenery, no labels, no UI, no watermark, no sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/skins/gunner-origin.png",
+          "assets/puzzles/gun-1.svg",
+          "assets/story/backgrounds/lab.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-4b394691-bfe8-49b9-bc0e-a78977ae8e4e.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/gun-1.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 972040,
+        "sha256": "903110a611e874d4b02403b70477d0405916329c93121eb03beda6824dbf9b1c",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          0,
+          49,
+          1210,
+          1222
+        ],
+        "transparentPixels": 1161953,
+        "opaquePixels": 267,
+        "partialAlphaPixels": 410296
+      },
+      "runtime": {
+        "path": "assets/story/props/gun-1.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 35970,
+        "sha256": "4e78d481e5d229f2a007d61ec5c84d81b8bddc369343a9338d91dbfe2b208dcd",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          17,
+          20,
+          495,
+          390
+        ],
+        "transparentPixels": 193463,
+        "opaquePixels": 735,
+        "partialAlphaPixels": 67946,
+        "alphaBoundingBoxAt16": [
+          19,
+          163,
+          493,
+          346
+        ],
+        "alphaBoundingBoxAt128": [
+          20,
+          164,
+          492,
+          346
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "銃管",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "barrel connection points right",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "gun-2",
+      "generation": {
+        "asset": "gun-2",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent modular game prop, gun-2 grip for Nightfall Duel. Primary request: ONLY a detached pistol grip/handle for a fictional antique crystal-powered hand cannon. Near-orthographic side elevation, broad top mounting socket is horizontal and at TOP, long handle descends toward lower-left with a mild backward rake, no dramatic perspective. Distinct tapered leather grip silhouette about twice as tall as wide; dark worn brown leather panels with thin antique gold/brass framing and tiny deep green steel connector at top. Bottom slightly rounded brass end cap. The grip is a separate solid piece: NO receiver, NO barrel, NO trigger guard, NO trigger, no crystal, no hand or other objects. Semi-realistic painterly dark fantasy material, restrained ornamentation, legible silhouette, soft warm upper-left lighting with cool ambient fill. Center entire detached handle on a roughly 512x512 square transparent image, generous clean border so all edges visible. Genuinely transparent alpha, no checkerboard, no floor, no shadow outside object, no glow, no text, no labels, no UI, no watermark. Exactly one grip, not a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/skins/gunner-origin.png",
+          "assets/puzzles/gun-2.svg",
+          "assets/story/backgrounds/lab.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-a13167b9-0137-4d90-97b1-20d525224a89.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/gun-2.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1120740,
+        "sha256": "ca9a256edc724d36e65931fe428133576f3e5d140b45f9f78c31bc451fad4cf2",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          43,
+          83,
+          1200,
+          1228
+        ],
+        "transparentPixels": 1137642,
+        "opaquePixels": 788,
+        "partialAlphaPixels": 434086
+      },
+      "runtime": {
+        "path": "assets/story/props/gun-2.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 41338,
+        "sha256": "a8e384808e33a8dc49e796c7bf4e56075e50ec24340e05f957a626b04237a67d",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          43,
+          34,
+          428,
+          489
+        ],
+        "transparentPixels": 188974,
+        "opaquePixels": 831,
+        "partialAlphaPixels": 72339,
+        "alphaBoundingBoxAt16": [
+          91,
+          36,
+          421,
+          482
+        ],
+        "alphaBoundingBoxAt128": [
+          92,
+          37,
+          420,
+          482
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "握柄",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "gun-3",
+      "generation": {
+        "asset": "gun-3",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent modular game prop, gun-3 crystal core for Nightfall Duel. Primary request: a SINGLE detached faceted diamond-shaped dusk crystal core for a fictional antique magical hand cannon. Upright elongated rhombus silhouette with pointed top and bottom, about 1.5 times as tall as wide. Front-on view with clear polished facets, very shallow dimensionality. Solid translucent-looking deep teal/blue mineral body with restrained pale amber highlights WITHIN the object only, enclosed in a thin worn antique brass rim and a tiny brass mounting tab at the bottom. It is a physical replaceable component, not an effect. Dark fantasy painterly realistic gemstone and metal, soft warm upper-left reflected light and weak cool fill. Full object centered, about 80 percent of square canvas height, target approximately 512x512 game sprite. Real transparent alpha background. NO emitted glow, NO aura, NO bloom, no floating particles, no shadow beyond the physical silhouette, no floor, no gun, no barrel, no hand, no labels or writing, no frame, no UI, no watermark. Exactly one crystal core, not a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/skins/gunner-origin.png",
+          "assets/puzzles/gun-3.svg",
+          "assets/story/backgrounds/lab.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-610e5a06-4091-4967-a292-a3d77153e65c.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/gun-3.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 836673,
+        "sha256": "62b79f097f79583a4e81f00d040500973ac9364c65589160b03d15bc7c01f1c1",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          49,
+          21,
+          1196,
+          1222
+        ],
+        "transparentPixels": 1247965,
+        "opaquePixels": 316,
+        "partialAlphaPixels": 324235
+      },
+      "runtime": {
+        "path": "assets/story/props/gun-3.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 33166,
+        "sha256": "1efae51b4a608f30807b0b5ed38352cc3b62c70f86f8c3a55f39a3d202ba42bc",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          40,
+          12,
+          428,
+          488
+        ],
+        "transparentPixels": 207500,
+        "opaquePixels": 523,
+        "partialAlphaPixels": 54121,
+        "alphaBoundingBoxAt16": [
+          142,
+          15,
+          371,
+          486
+        ],
+        "alphaBoundingBoxAt128": [
+          142,
+          15,
+          370,
+          486
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "暮晶核心",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "gun-4",
+      "generation": {
+        "asset": "gun-4",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent modular game prop, gun-4 overload fuse plate for Nightfall Duel. Primary request: a SINGLE small detached antique brass safety fuse plate for a fictional crystal-powered hand cannon. Perfectly front-facing flat mechanical component with a clear PLUS-SHAPED silhouette: broad horizontal middle bar, short central upright tab above and below, gently chamfered outer corners. About equally wide and tall, very shallow thickness visible along lower-right edge. A dark ink-green enamel insert and a simple pale ceramic strip in the center suggest a sacrificial fuse, a couple of tiny rivets, no writing. Semi-realistic painterly dark fantasy antiqued gold and deep green material, soft warm upper-left light and cool ambient fill. Exactly one solid compact component centered in approximately 512x512 square canvas with clean margin. Background genuinely transparent alpha. No attached gun, no other pieces, no wires, no electric arcs, no emitted light or glow, no cast shadow outside the object, no floor/scenery, no text, labels, UI or watermark. Not a sprite sheet. Its cross silhouette must be readable at very small size.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/skins/gunner-origin.png",
+          "assets/puzzles/gun-4.svg",
+          "assets/story/backgrounds/lab.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-d3970113-014c-41dd-8de8-6f3dc80c0eb4.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/gun-4.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1247106,
+        "sha256": "4bc57c7c240cf5546c12f300e4281210a12471b353228def691fe284149e3a7d",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          0,
+          17,
+          1232,
+          1230
+        ],
+        "transparentPixels": 1060044,
+        "opaquePixels": 407,
+        "partialAlphaPixels": 512065
+      },
+      "runtime": {
+        "path": "assets/story/props/gun-4.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 43520,
+        "sha256": "72f10250c1bcf079d6d8dd814e04464dd87d39e2a097f39da62e558c50502eb2",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          34,
+          9,
+          479,
+          489
+        ],
+        "transparentPixels": 176559,
+        "opaquePixels": 1033,
+        "partialAlphaPixels": 84552,
+        "alphaBoundingBoxAt16": [
+          37,
+          85,
+          476,
+          427
+        ],
+        "alphaBoundingBoxAt128": [
+          37,
+          85,
+          475,
+          427
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "保險片",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "recorder",
+      "generation": {
+        "asset": "recorder",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent portable recorder prop for Nightfall Duel dark fantasy investigation. Primary request: a single small portable antique mechanical voice recorder, a compact rectangular ink-green enamel and tarnished brass box, rounded reinforced corners, a narrow carry handle folded along top, one small circular engraved speaker grille on front LEFT and three distinct recessed plug sockets along the RIGHT edge. No readable writing or numbers. A tiny dormant dark crystal window suggests fictional record storage; do not make it glow. No modern cassette tapes, no vinyl turntable, no microphone stalk, no cable or separate connectors. Front elevation with only very shallow top and right edge visible, body about 1.4 times as wide as tall. Painterly realistic dark fantasy workmanship matching antique laboratory instruments, restrained gold trim, clear silhouette, soft warm upper-left lighting and cool fill. Complete single device centered with clean margin, target approximately 512x512 square game sprite. Genuinely transparent alpha background; no scenery, no tabletop, no floor, no cast shadow outside the solid device, no aura, no UI, no watermark, no labels. Exactly one recorder, not a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/shelter.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-a523d8cc-2bdb-413d-8e19-c4b11a09f7d3.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/recorder.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1988018,
+        "sha256": "d86f2d8acb1f1ae103f8d6ada16cae71041e20faf038be64ec0421912afb570b",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          0,
+          0,
+          1174,
+          1214
+        ],
+        "transparentPixels": 733909,
+        "opaquePixels": 397,
+        "partialAlphaPixels": 838210
+      },
+      "runtime": {
+        "path": "assets/story/props/recorder.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 76946,
+        "sha256": "90e313d1de28bd55d7ad39a2f61321290d2ca7c926de9e65f29b4bbda6276e65",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          33,
+          0,
+          479,
+          489
+        ],
+        "transparentPixels": 122607,
+        "opaquePixels": 1247,
+        "partialAlphaPixels": 138290,
+        "alphaBoundingBoxAt16": [
+          36,
+          73,
+          477,
+          422
+        ],
+        "alphaBoundingBoxAt128": [
+          37,
+          74,
+          476,
+          421
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "紀錄器",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    },
+    {
+      "id": "lamp",
+      "generation": {
+        "asset": "lamp",
+        "toolMode": "built-in image_gen",
+        "intent": "generate",
+        "prompt": "Use case: stylized-concept. Asset type: ONE isolated transparent unlit tabletop lamp prop for Nightfall Duel. Primary request: a small antique brass oil table lamp that is completely UNLIT. Upright near-front elevation, very shallow top visibility. A compact wide brass foot, dark ink-green metal oil reservoir, narrow short neck and a slender clear smoky glass chimney enclosing an UNLIT dark wick. Restrained worn gold details, silhouette about twice as tall as wide. No handle, no separate accessories. Semi-realistic painterly dark fantasy style matching antique study furniture. Only soft reflected warm light from upper left with cool ambient fill; the lamp itself emits absolutely no light. Glass may show subtle reflected highlights but must reveal a clearly dark wick and no flame. Complete lamp centered on approximately 512x512 square transparent canvas with clear edge margin. Genuinely transparent alpha background, including open space around the chimney. No flame, no candle, no glowing glass, no halo, no cast shadow outside the object, no tabletop or scenery, no text, labels, UI or watermark. Exactly one unlit lamp, not a sprite sheet.",
+        "inputImages": [],
+        "artistReviewedReferences": [
+          "assets/story/backgrounds/shelter.png"
+        ],
+        "referenceUse": "Visual style and geometry review only; not supplied as imagegen reference input",
+        "targetSize": "approximately 512x512; built-in output dimensions are not guaranteed"
+      },
+      "generatedToolPath": "/Users/songer/.codex/generated_images/01a0d0ab-c522-73a3-8960-1de11d0e311c/exec-3f1c943e-68bf-4a32-ae3c-2ddc8f3508fa.png",
+      "source": {
+        "path": "storage/source-art/STORY-SEARCH-001-props/lamp.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 751132,
+        "sha256": "31cd670059e72c1ae943c5b65c64ce0a7a02edf1b48a300974e3d3bfd006a2a6",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          57,
+          6,
+          1226,
+          1236
+        ],
+        "transparentPixels": 1268290,
+        "opaquePixels": 382,
+        "partialAlphaPixels": 303844
+      },
+      "runtime": {
+        "path": "assets/story/props/lamp.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 31350,
+        "sha256": "b90ae2282256811b93cb2ab59d7a61c41209d35cdae22b10b186087a56f7a100",
+        "mode": "RGBA",
+        "alphaExtrema": [
+          0,
+          255
+        ],
+        "alphaBoundingBox": [
+          40,
+          3,
+          430,
+          505
+        ],
+        "transparentPixels": 210884,
+        "opaquePixels": 858,
+        "partialAlphaPixels": 50402,
+        "alphaBoundingBoxAt16": [
+          166,
+          6,
+          344,
+          502
+        ],
+        "alphaBoundingBoxAt128": [
+          167,
+          6,
+          344,
+          501
+        ]
+      },
+      "derivation": {
+        "software": "Pillow",
+        "resize": "contain within 512x512, no upscale",
+        "filter": "LANCZOS",
+        "crop": null,
+        "format": "WebP",
+        "quality": 90,
+        "method": 6,
+        "exact": true,
+        "alpha_quality": 100,
+        "paintingOrSynthesis": false
+      },
+      "visualReview": {
+        "status": "passed asset-level review",
+        "sourceInspected": true,
+        "runtimeInspected": true,
+        "displayCheck": "All eight composited at 256x256 on #142622 in an in-thread QA contact sheet; individual source images inspected.",
+        "confirmed": [
+          "independent object",
+          "transparent background",
+          "consistent antique gold and ink-green style where material applies",
+          "no scene background",
+          "no UI or text",
+          "no external cast shadow or emitted glow"
+        ],
+        "limits": [
+          "Browser placement, minimum-size mobile targets, puzzle-slot alignment and light-on rendering require product integration QA."
+        ]
+      },
+      "label": "未點亮桌燈",
+      "integration": {
+        "canvas": "512x512, original proportional canvas retained",
+        "fit": "Use identical image and alpha-mask contain mapping; do not stretch.",
+        "alphaNote": "Very low alpha stray pixels exist outside visible silhouette. Use bbox at alpha>=16 for automated object bounds; source alpha preserved.",
+        "direction": "upright",
+        "maxDetailCssPx": 256
+      }
+    }
+  ],
+  "totals": {
+    "runtimeBytes": 348582,
+    "sourceBytes": 9885579
+  },
+  "frozenAtUtc": "2026-09-24T15:12:52.459400+00:00",
+  "generatedCallCount": 8,
+  "generatedAssetCount": 8,
+  "spriteSheetsUsed": false,
+  "sourceBudgetExceptions": [],
+  "checks": [
+    {
+      "command": "python3 scripts/check-art-budget.py --strict assets/story/props",
+      "exitCode": 0,
+      "result": "WITHIN_BUDGET: 8 files, 0 over budget"
+    },
+    {
+      "command": "python3 scripts/check-art-budget.py --strict --kind source source-art/STORY-SEARCH-001-props",
+      "exitCode": 0,
+      "result": "WITHIN_BUDGET: 8 files, 0 over budget"
+    }
+  ],
+  "unverified": [
+    "Final browser integration",
+    "Mobile target hit area and local zoom",
+    "Puzzle sprite/mask alignment",
+    "Lamp light-on state"
+  ]
+}
