@@ -1,0 +1,32 @@
+{
+ "ticket": "HERO-DROP-FX",
+ "date": "2026-10-06",
+ "items": [
+  {
+   "id": "fx-hero-backlight",
+   "title": "1 立繪背光",
+   "size": "1024×1536（直式 2:3）",
+   "runtime": "assets/story/fx-060/fx-hero-backlight.webp · 512×768 · ≤120 KiB",
+   "use": "拖曳「護盾／領域展開」時，放在玩家立繪正後方（screen 疊加）。待命時緩慢呼吸，重疊時亮到最高。",
+   "prompt": "Use case: stylized-concept. Create one Nightfall Duel game VFX asset, vertical 2:3 PNG about 1024x1536. A richly HAND-PAINTED realistic dark-fantasy LIGHT EFFECT with visible fine brush texture, elegant restrained antique-gold and warm white light, amber falloff, very subtle cool teal mist only at the outer edge. Subject: ONE soft tall BACKLIGHT GLOW meant to sit behind a standing knee-up figure (the figure is NOT drawn). A vertical almond / mandorla-shaped aura, centred horizontally, occupying about 70% of the width and 85% of the height. Brightest warm white-gold zone in the upper third (where head and shoulders would be), gently fading downward; the lower 15% fades completely to black. Inside: delicate vertical rising strands of light and thin heat-haze wisps drifting upward, a few tiny embers near the top edge. The centre must stay SOFT and translucent, not a solid filled shape, no hard outline, no human silhouette cut-out. Fully inside the canvas with an empty black margin of at least 8% on every side. Reference B is a material swatch cropped from the game's own painted art: use only its antique-gold / aged-bronze hues, engraved-filigree feel and painterly brushwork; do NOT draw the card, armour, person or scene. Reference C is an already-approved effect sprite from this game's set: match its brushwork, edge softness and warm white-gold glow so the set stays consistent. Reference A is only a placement diagram of the current game screen; do not copy anything from it. Background: completely opaque PURE FLAT BLACK #000000 outside the effect, additive/screen compositing asset. Smooth local light falloff fades fully into exact black; not a grey or tinted canvas. No vignette, background gradient, noise, stars or scenery. No transparent background, character, person, silhouette, hands, weapons, metal objects, floor, text, letters, numbers, runes that look like writing, grid lines, frame, border, logo, watermark or labels."
+  },
+  {
+   "id": "fx-hero-sigil",
+   "title": "2 守護紋環",
+   "size": "1024×1024（正方）",
+   "runtime": "assets/story/fx-060/fx-hero-sigil.webp · 512×512 · ≤120 KiB",
+   "use": "立繪頭肩後方的金色紋環。待命時慢慢旋轉、半透明；重疊時變亮並微微放大。",
+   "prompt": "Use case: stylized-concept. Create one Nightfall Duel game VFX asset, square 1024x1024 PNG. A richly HAND-PAINTED realistic dark-fantasy LIGHT EFFECT with visible fine brush texture, glowing antique-gold engraved light, warm white highlights. Subject: ONE circular GUARDIAN SIGIL RING made of light, seen perfectly straight on (not elliptical). Outer diameter about 82% of the canvas, centred. Structure: two thin concentric luminous bands close together, between them a band of fine ornamental filigree scrollwork (abstract curls, no letters or runes); EIGHT small elongated DIAMOND-shaped nodes evenly spaced around the ring (at 0, 45, 90 ... degrees), the top, bottom, left and right diamonds slightly larger, echoing the game's diamond card-back motif. A faint inner third ring of tiny dots. Very soft warm glow hugging the lines. The wide centre stays PURE BLACK and empty: no disc, no face, no symbol, no star, no rays crossing the centre. Symmetrical, clean, elegant, readable when shrunk to 300px. Fully inside canvas with clear margin. Reference B is a material swatch cropped from the game's own painted art: use only its antique-gold / aged-bronze hues, engraved-filigree feel and painterly brushwork; do NOT draw the card, armour, person or scene. Reference C is an already-approved effect sprite from this game's set: match its brushwork, edge softness and warm white-gold glow so the set stays consistent. Reference A is only a placement diagram of the current game screen; do not copy anything from it. Background: completely opaque PURE FLAT BLACK #000000 outside the effect, additive/screen compositing asset. Smooth local light falloff fades fully into exact black; not a grey or tinted canvas. No vignette, background gradient, noise, stars or scenery. No transparent background, character, person, silhouette, hands, weapons, metal objects, floor, text, letters, numbers, runes that look like writing, grid lines, frame, border, logo, watermark or labels."
+  }
+ ],
+ "reuse": [
+  [
+   "fx-gold-shockwave.webp",
+   "放開出牌的一瞬間，從立繪胸口擴散一圈（已有，不用生）"
+  ],
+  [
+   "fx-gold-motes-1~9.webp",
+   "待命時零星光點從腳邊往上飄（已有，不用生）"
+  ]
+ ]
+}
