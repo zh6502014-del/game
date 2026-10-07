@@ -1,0 +1,25 @@
+{
+  "task_id": "ART-ARCHIVE-MATERIALS-055",
+  "asset_id": "archive-folder-v2",
+  "mode": "built-in image_gen",
+  "classification": "stylized-concept",
+  "prompt": "Use case: stylized-concept\nAsset type: a single reusable transparent archive-folder cover sprite for the dark-fantasy game Nightfall Duel.\nPrimary request: redraw the old folder into a refined, believable administrative archive folder, restrained aged beige pressboard with a very narrow dark forest-green cloth spine along its left edge and tiny muted antique-brass details. It should look carefully maintained and lightly worn, not ruined, stained, torn, moldy or crumpled.\nInput images: Image 1 is the existing archive-folder.webp, a SHAPE AND LABEL POSITION reference only. Image 2 is archive-drawer-closeup.webp, a PALETTE AND MATERIAL MOOD reference only. Do not include any part of the drawer or room.\nComposition/framing: one upright folder, perfectly straight-on orthographic front elevation, no tilt, no perspective depth. Portrait canvas approximately 816 × 1024 pixels, same width-to-height ratio as the 406 × 512 reference. Fit the whole folder silhouette closely inside the canvas with a tiny even transparent safety margin. The folder has a small raised indexing tab on the upper LEFT, exactly like the reference. The blank cream paper label must remain centered at x=23.7% of the full canvas width and y=5.7% of full canvas height. Label safe rectangle approximately x=7.2% to 40.2%, y=2.2% to 9.2%, comfortably large for four HTML digits added later. The main shoulder begins near y=11% and extends to the right edge. Keep the contour readable and complete.\nMaterials/textures: clean warm muted beige dense cardboard, subtle fine fibers, gently polished corners, a narrow deep-green cloth binding on the extreme left occupying only 4% of the width, extremely restrained antique-gold fine edging. Broad uninterrupted plain front face. The pale tab label is absolutely empty.\nLighting/mood: soft neutral diffuse illumination across the face; no baked-in environmental illumination, no glow, no cast shadow or surrounding contact shadow. The asset must sit naturally in a green-black antique filing drawer, not look like a bright magical card.\nBackground: real transparent alpha everywhere outside the exact folder silhouette, no checkerboard drawn into pixels, no white/black rectangular background.\nConstraints: a single isolated folder cover, NO writing, NO letters or numbers, NO stamp, NO seal, NO logo, NO coat of arms, NO large icon, NO giant tie-string, NO straps across the face, NO folded-over corner, NO holes or tears. Preserve an entirely blank empty top-left label for HTML overlay. Do not crop any part of the folder.",
+  "transparent_background": true,
+  "referenced_image_paths": [
+    "/Users/songer/Desktop/Game_claude/assets/story/complete-020/props/archive-folder.webp",
+    "/Users/songer/Desktop/Game_claude/assets/story/complete-020/backgrounds/archive-drawer-closeup.webp"
+  ],
+  "intended_source_size": [
+    816,
+    1024
+  ],
+  "intended_runtime_box": [
+    406,
+    512
+  ],
+  "label_center_percent": [
+    23.7,
+    5.7
+  ],
+  "status": "prepared"
+}

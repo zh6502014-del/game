@@ -1,0 +1,54 @@
+{
+  "ticket": "ART-RECORDER-028",
+  "mode": "built-in image_gen edit",
+  "request": {
+    "prompt": "Use case: compositing. Asset type: background artwork for an interactive fantasy recorder repair puzzle, one horizontal image, approximately 1536 x 930 pixels (aspect ratio 1.65:1). Input image is the authoritative material and product-design reference: the same small antique recording device with dark forest-green enamel, rubbed brass edges, ornate speaker grille and violet crystal. Transform it into a beautiful straight-down orthographic maintenance view of the recorder resting flat on a dark worn wooden workbench. Recompose its broad removable service face into a wide rectangular panel that occupies almost the full image. The device feels hand-built, weighty, plausible, and belongs in the same realistic dark-fantasy illustration world. Keep subtle engraved brass corner brackets, tiny recessed screws, scuffed emerald enamel, tarnished edge molding, a small speaker mesh strip along the upper edge, slender insulated copper cables hugging the lower edge, and a handle toward the far top edge. Crucial interaction constraint: the entire broad central area from x=8% to 93% and y=25% to 72% must be an uninterrupted flat dark green enamel service plate with very restrained scratches and low contrast texture. All three matching socket silhouettes and removable parts will be rendered by live SVG controls later. Do NOT paint any sockets, holes, cutouts, modules, buttons, knobs, crystals, cables, grids, patterns or circular motifs in this central area. Confine mechanical fittings and decorative detail to the outside edges, especially top 20% and bottom 22%. Avoid any object protruding into the central working area. Slight dimensional bevels and contact shadows on the outer frame, but the central panel is visually flat and viewed exactly head-on, not perspective. Use soft warm grazing lamplight from upper left, subtle cool bounce, readable texture without blown highlights, antique gold and deep green-black palette. Sophisticated detailed game prop painting with realistic materials, no sci-fi neon or modern circuit board appearance. No hands, characters, tools lying across the plate, smoke or sparks. No text, letters, numbers, runes, labels, watermarks, UI frames, callouts or schematic markings. Only the finished workbench/device background artwork; opaque background.",
+    "referenced_image_paths": [
+      "/Users/songer/Desktop/Game_claude/assets/story/props/recorder.webp"
+    ],
+    "transparent_background": false
+  },
+  "source": {
+    "path": "source-art/ART-RECORDER-028/recorder-panel.png",
+    "width": 1612,
+    "height": 976,
+    "format": "png",
+    "hasAlpha": false,
+    "bytes": 2918345,
+    "sha256": "ab0f3aa57300a10a1b02a89a3ac23ed730ef78eb17df7e57e6f0e6fd75b571c3"
+  },
+  "runtime": {
+    "path": "assets/story/backgrounds/recorder-028.webp",
+    "width": 1280,
+    "height": 775,
+    "format": "webp",
+    "hasAlpha": false,
+    "bytes": 236908,
+    "sha256": "7d4928258e7aaa43d11eae22bf9d92a537e1d3c665ee328e54abb0036f96e54d"
+  },
+  "references": [
+    {
+      "path": "/Users/songer/Desktop/Game_claude/assets/story/props/recorder.webp",
+      "width": 512,
+      "height": 512,
+      "format": "webp",
+      "hasAlpha": true,
+      "bytes": 76946,
+      "sha256": "90e313d1de28bd55d7ad39a2f61321290d2ca7c926de9e65f29b4bbda6276e65"
+    }
+  ],
+  "derivative": {
+    "library": "sharp",
+    "resize": {
+      "width": 1280,
+      "height": 776,
+      "fit": "inside",
+      "withoutEnlargement": true
+    },
+    "webp": {
+      "quality": 84,
+      "effort": 6
+    }
+  },
+  "originalPreserved": true
+}

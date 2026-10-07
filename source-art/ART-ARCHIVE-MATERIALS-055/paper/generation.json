@@ -1,0 +1,59 @@
+{
+  "task": "ART-ARCHIVE-MATERIALS-055",
+  "entries": [
+    {
+      "id": "archive-paper-ivory",
+      "prompt": "Use case: stylized-concept. Asset type: seamless paper material for a dark-fantasy archive document reading UI. Create ONE square 512x512 macro material texture, straight orthographic view, filling the entire frame edge to edge. Warm light ivory rag paper with exceptionally fine natural cotton fibers and barely visible tonal mottling. The whole tile is nearly even in luminance, pale cream roughly #e9dfc6, calm enough for dense dark-brown Traditional Chinese body text to be placed over it later. Restrained, refined antique administrative paper, not a treasure map. Absolutely no document silhouette, outer margin, torn edge, frames, text, letters, numbers, stamps, seals, ruling lines, tables, folds, creases, stains, shadows, vignette, objects or hands. No added writing. Flat diffuse neutral lighting. Make all four boundaries mutually continuous for seamless repetition; no feature at the boundary. Single opaque material tile; no transparency. Fine physical paper tooth only, low contrast, no dramatic aging.",
+      "mode": "built-in image_gen",
+      "transparent_background": false,
+      "referenced_image_paths": [],
+      "source_path": "/Users/songer/.codex/generated_images/01a10176-2ff3-71f0-85f9-897e2e91133a/exec-831285d7-3637-4c00-affe-4f58b4d2264a.png",
+      "original": {
+        "path": "/Users/songer/Desktop/Game_claude/source-art/ART-ARCHIVE-MATERIALS-055/paper/originals/archive-paper-ivory.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2390312,
+        "sha256": "6d855f56276ff9ecb5aac033efb50d726a92c1201f9cc1102dc2556284a21626"
+      },
+      "runtime": {
+        "path": "/Users/songer/Desktop/Game_claude/source-art/ART-ARCHIVE-MATERIALS-055/paper/runtime/archive-paper-ivory.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 15566,
+        "sha256": "c4b7b662b5980952b19099684029e4f0533985366fe14de52680ee7fc4f8fad5",
+        "has_alpha": false,
+        "quality": 85,
+        "effort": 6,
+        "fit": "inside"
+      },
+      "qa": "Generated image inspected: one flat unmarked material tile, no edge silhouette, no writing or objects. Fine grain and subtle fibers, no strong crease/stain. Tiling seam visibility must be assessed in the rendered reader."
+    },
+    {
+      "id": "archive-paper-note",
+      "prompt": "Use case: stylized-concept. Asset type: seamless marginal-note paper material for a dark-fantasy archive reading UI. Create ONE square 512x512 macro material texture, straight orthographic view, filling the entire frame edge to edge. Warm pale honey-beige handmade stationery, roughly #ddc99f, with very fine short flax fibers and exceptionally restrained tonal mottling. Uniform flat diffuse light, low-contrast unobtrusive texture suitable for highly readable dark-brown Traditional Chinese handwriting overlaid later. Refined clerk's note paper, subtly warmer than official ivory paper. Absolutely no document silhouette, outer margin, torn edge, frame, text, letters, numbers, stamps, seals, rules, tables, folds, creases, stains, objects, hands, shadows or vignette. No visible writing or symbols. All four boundaries naturally match for seamless repeating material. Single opaque square material tile, no transparency. Keep the texture delicate; no high contrast speckles or gritty dirt.",
+      "mode": "built-in image_gen",
+      "transparent_background": false,
+      "referenced_image_paths": [],
+      "source_path": "/Users/songer/.codex/generated_images/01a10176-2ff3-71f0-85f9-897e2e91133a/exec-32d29874-ad87-4b96-a14a-cd3ad4f8f71d.png",
+      "original": {
+        "path": "/Users/songer/Desktop/Game_claude/source-art/ART-ARCHIVE-MATERIALS-055/paper/originals/archive-paper-note.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 2611754,
+        "sha256": "7f1a8dc214c9ef293c9deae21f8f07d4e21bec1d1024303dc53f4ee089c864c3"
+      },
+      "runtime": {
+        "path": "/Users/songer/Desktop/Game_claude/source-art/ART-ARCHIVE-MATERIALS-055/paper/runtime/archive-paper-note.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 21530,
+        "sha256": "ce1eb997c0c40ed38576518a2065ec8cb9a1ecc911cc7cdb14e7bd913197d954",
+        "has_alpha": false,
+        "quality": 85,
+        "effort": 6,
+        "fit": "inside"
+      },
+      "qa": "Generated image inspected: one flat unmarked material tile, no edge silhouette, no writing or objects. Fine grain and subtle fibers, no strong crease/stain. Tiling seam visibility must be assessed in the rendered reader."
+    }
+  ]
+}

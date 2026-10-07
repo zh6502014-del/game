@@ -1,0 +1,10 @@
+[
+  {
+    "id": "archive-paper-ivory",
+    "prompt": "Use case: stylized-concept. Asset type: seamless paper material for a dark-fantasy archive document reading UI. Create ONE square 512x512 macro material texture, straight orthographic view, filling the entire frame edge to edge. Warm light ivory rag paper with exceptionally fine natural cotton fibers and barely visible tonal mottling. The whole tile is nearly even in luminance, pale cream roughly #e9dfc6, calm enough for dense dark-brown Traditional Chinese body text to be placed over it later. Restrained, refined antique administrative paper, not a treasure map. Absolutely no document silhouette, outer margin, torn edge, frames, text, letters, numbers, stamps, seals, ruling lines, tables, folds, creases, stains, shadows, vignette, objects or hands. No added writing. Flat diffuse neutral lighting. Make all four boundaries mutually continuous for seamless repetition; no feature at the boundary. Single opaque material tile; no transparency. Fine physical paper tooth only, low contrast, no dramatic aging."
+  },
+  {
+    "id": "archive-paper-note",
+    "prompt": "Use case: stylized-concept. Asset type: seamless marginal-note paper material for a dark-fantasy archive reading UI. Create ONE square 512x512 macro material texture, straight orthographic view, filling the entire frame edge to edge. Warm pale honey-beige handmade stationery, roughly #ddc99f, with very fine short flax fibers and exceptionally restrained tonal mottling. Uniform flat diffuse light, low-contrast unobtrusive texture suitable for highly readable dark-brown Traditional Chinese handwriting overlaid later. Refined clerk's note paper, subtly warmer than official ivory paper. Absolutely no document silhouette, outer margin, torn edge, frame, text, letters, numbers, stamps, seals, rules, tables, folds, creases, stains, objects, hands, shadows or vignette. No visible writing or symbols. All four boundaries naturally match for seamless repeating material. Single opaque square material tile, no transparency. Keep the texture delicate; no high contrast speckles or gritty dirt."
+  }
+]

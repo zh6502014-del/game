@@ -1,0 +1,23 @@
+/* ART-ARCHIVE-MATERIALS-055: material-only preview, loaded after production styles.
+   Keep text, scroll, focus and all action geometry owned by the reader. */
+#story-search-dialog[data-scene=archive-vault] .search-archive-sheet {
+  background-color:#e9dfc6;
+  background-image:linear-gradient(#f1ead74d,#f1ead74d),url('../paper/runtime/archive-paper-ivory.webp');
+  background-repeat:repeat;
+  background-size:auto,512px 512px;
+  border-color:#bba478;
+  box-shadow:0 8px 24px #0003,inset 0 0 20px #8a693a0d;
+}
+#story-search-dialog[data-scene=archive-vault] .search-doc-part[data-kind=note] {
+  background-color:#dfcba5;
+  background-image:linear-gradient(#e6d6b52e,#e6d6b52e),url('../paper/runtime/archive-paper-note.webp');
+  background-size:auto,512px 512px;
+  border-left-color:#8b6a3a;
+  box-shadow:0 2px 5px #523c2112;
+}
+#story-search-dialog[data-scene=archive-vault] .search-doc-part[data-kind=royal] {
+  background-color:#ecdfc0;
+  background-image:linear-gradient(#ede2c566,#ede2c566),url('../paper/runtime/archive-paper-ivory.webp');
+  background-size:auto,512px 512px;
+  border-color:#8b5140;
+}
