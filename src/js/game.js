@@ -58,7 +58,7 @@ const AUDIO_URLS={
   // AUDIO-MIX-061: "shield" and "lock" used to reuse the hit / cardInvalid files and sounded identical to them; they now use their own synthesized cues.
   // "defeat" has no remote file: the downloaded sad-trumpet clip sounded comical, so the synthesized low toll plays instead.
 };
-const AUDIO_DEFAULTS={setupBgm:.11,bgm:.144,resultBgm:.12,cardPickup:.28,cardPlace:.42,cardFlip:.5,cardInvalid:.38,hit:.55,shield:.5,lock:.45,burn:.48,counter:.58,coinFlip:.624,victory:.864,defeat:.55};
+const AUDIO_DEFAULTS={setupBgm:.1,bgm:.1,resultBgm:.1,cardPickup:.1,cardPlace:.1,cardFlip:.1,cardInvalid:.1,hit:.1,shield:.1,lock:.1,burn:.1,counter:.1,coinFlip:.1,victory:.1,defeat:.1};
 const AUDIO_LABELS={
   setupBgm:["備戰音樂","職業選擇頁"],bgm:["戰鬥音樂","決鬥進行中"],resultBgm:["結算音樂","戰鬥結束"],
   cardPickup:["拿牌","拖曳拿起卡牌"],cardPlace:["放牌","卡牌放入位置"],cardFlip:["翻牌","Reveal／翻面"],cardInvalid:["無效操作","禁止操作提示"],
@@ -67,17 +67,17 @@ const AUDIO_LABELS={
 };
 let audioVolumes={};
 try{audioVolumes=JSON.parse(localStorage.getItem("nightfallAudioVolumesV1")||"{}")}catch(e){audioVolumes={};}
-/* DUEL-SFX-062 — the duel cues follow an existing slider instead of adding 22 new ones. Each file is mastered for a
-   level of .8; the group slider scales it by (user value / group default). */
+/* Duel cues share the user volume of their existing group slider. */
 const ND_SFX_GROUP={duelSwingBlade:"hit",duelSwingHeavy:"hit",duelSwingShadow:"hit",duelShot:"hit",duelSwingSpirit:"hit",
   duelHitBlade:"hit",duelHitHeavy:"hit",duelHitShadow:"hit",duelHitBullet:"hit",duelHitCrit:"hit",duelHitSpirit:"hit",duelEvade:"hit",duelCastClass:"hit",duelCastSpirit:"hit",
   duelCounter:"counter",duelBlockShield:"shield",duelWard:"shield",duelShieldUp:"shield",duelCastDomain:"shield",duelDomainHeal:"shield",
   duelBurn:"burn",duelNightfall:"lock"};
 function getAudioVolume(k){
   const grp=ND_SFX_GROUP[k];
-  if(grp){const gd=AUDIO_DEFAULTS[grp]||.5;return Math.max(0,Math.min(1,.8*getAudioVolume(grp)/gd));}
-  const d=AUDIO_DEFAULTS[k]??.55;
-  const v=Number(audioVolumes[k]);
+  if(grp)return getAudioVolume(grp);
+  const d=AUDIO_DEFAULTS[k]??.1;
+  const saved=audioVolumes?.[k];
+  const v=typeof saved==="number"||typeof saved==="string"&&saved.trim()!==""?Number(saved):NaN;
   return Number.isFinite(v)?Math.max(0,Math.min(1,v)):d;
 }
 const AudioBank={};
@@ -135,6 +135,7 @@ function toggleAudio(){
   }
   const b=document.querySelector(".audio-toggle");
   if(b)b.textContent=audioEnabled?"🔊":"🔇";
+  if(document.body.dataset.mode==="home"||document.body.dataset.mode==="story")return;
   if(typeof renderGame==="function" && S)renderGame();
   else if(typeof renderSetup==="function")renderSetup();
 }
@@ -1609,13 +1610,18 @@ function setAudioVolume(k,v){
   const val=Math.max(0,Math.min(1,Number(v)||0));
   audioVolumes[k]=val;
   try{localStorage.setItem("nightfallAudioVolumesV1",JSON.stringify(audioVolumes))}catch(e){}
-  if(AudioBank[k]){try{AudioBank[k].volume=val}catch(e){}}
-  if(ND_SFX_POOLS[k])ND_SFX_POOLS[k].forEach(a=>{try{a.volume=Math.min(1,sfxVolume(k,"file"))}catch(e){}});
+  const keys=[k,...Object.keys(ND_SFX_GROUP).filter(name=>ND_SFX_GROUP[name]===k)];
+  keys.forEach(name=>{
+    if(AudioBank[name]){try{AudioBank[name].volume=getAudioVolume(name)}catch(e){}}
+    if(ND_SFX_POOLS[name])ND_SFX_POOLS[name].forEach(a=>{try{a.volume=Math.min(1,sfxVolume(name,"file"))}catch(e){}});
+  });
+  if(ND_BGM_FALLBACK.master&&musicKey(ND_BGM_FALLBACK.mode)===k)ND_BGM_FALLBACK.updateVolume();
 }
 function resetAudioVolumes(){
+  const keys=new Set([...Object.keys(audioVolumes||{}),...Object.keys(AUDIO_DEFAULTS),...Object.keys(AudioBank),...Object.keys(ND_SFX_POOLS)]);
   audioVolumes={};
   try{localStorage.removeItem("nightfallAudioVolumesV1")}catch(e){}
-  Object.keys(AUDIO_DEFAULTS).forEach(k=>setAudioVolume(k,AUDIO_DEFAULTS[k]));
+  keys.forEach(k=>setAudioVolume(k,AUDIO_DEFAULTS[k]??.1));
 }
 function ensureSfxPool(name){
   if(ND_SFX_POOLS[name]?.length)return ND_SFX_POOLS[name];
@@ -1790,10 +1796,13 @@ const ND_BGM_FALLBACK={
     try{
       this.ctx=new (window.AudioContext||window.webkitAudioContext)();
       this.master=this.ctx.createGain();
-      this.master.gain.value=0.055;
+      this.updateVolume();
       this.master.connect(this.ctx.destination);
       return this.ctx;
     }catch(e){this.ctx=null;this.master=null;return null;}
+  },
+  updateVolume(){
+    if(this.master)this.master.gain.value=.055*getAudioVolume(musicKey(this.mode));
   },
   tone(freq,when,dur,type='triangle',amp=.18){
     const ctx=this.ctx;if(!ctx||!this.master)return;
@@ -1826,6 +1835,7 @@ const ND_BGM_FALLBACK={
     // 2026-09-28: every tap re-requests music; do not restart an already running loop (caused stutter).
     if(this.started&&this.timer&&this.mode===mode&&ctx.state==='running')return;
     this.mode=mode;
+    this.updateVolume();
     const resume=()=>{
       if(ctx.state==='suspended')ctx.resume().catch(()=>{});
       this.started=true;
