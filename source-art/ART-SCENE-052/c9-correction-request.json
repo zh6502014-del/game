@@ -1,0 +1,11 @@
+{
+  "ticket": "ART-SCENE-052",
+  "mode": "built-in imagegen",
+  "reason": "First candidate has bandaged hand gripping dagger and only four discernible monsters; content correction required.",
+  "prompt": "Use case: precise-object-edit. Correct only the hand anatomy/pose of Rin (purple-hooded foreground-center woman) and the count of monsters in the FIRST reference image. Keep the composition, other four heroes, their faces, correct sword/shield/gun, costume details, mine architecture, night lighting and dark realistic style unchanged. Second reference is Rin's canonical appearance and WHICH hand is bandaged.\nCRITICAL: change Rin's body to a clearly readable three-quarter FRONT pose, facing viewer slightly but looking past her shoulder toward the monsters. Her anatomical RIGHT hand and right forearm are fully present, wrapped in pale linen; she holds this right wrapped hand AGAINST HER CHEST, empty. Her anatomical LEFT hand and left forearm have black leather glove and dark bracer, absolutely NO white bandages; in that LEFT hand she holds the SHORT dagger at her left hip with the blade pointing toward the tunnel. Place this left dagger-hand and right bandaged empty hand apart so both can be checked. Only one short dagger, NO sword. In the current image the bandaged arm incorrectly holds the dagger: that must be corrected, do not copy that error.\nThere must be five crystal humanoid enemies total: preserve the four distinct existing enemies and add ONE smaller clearly distinct crystal humanoid behind the front creature at the left inner edge of the mine entrance, so the fifth is readable without crowding. Still exactly five heroes including unarmed child behind Gran.\nNo other people. No contact, no gore, no injured child. Natural realistic human arms with two hands each. No text/UI. Same cinematic dark fantasy, near 1536x864 16:9.",
+  "referenced_image_paths": [
+    "/Users/songer/.codex/generated_images/01a10172-8b36-7be2-a97c-4e3b0849bfd2/exec-d4fff504-621b-4b04-bdab-d2b7821f0c92.png",
+    "/Users/songer/Desktop/Game_claude/assets/story/actors/rin-wounded.webp"
+  ],
+  "transparent_background": false
+}

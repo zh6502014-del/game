@@ -1,0 +1,38 @@
+[
+  {
+    "id": "enemy-blade",
+    "use": "E3 研究區追兵、C3 阻路追兵、C4 外廊看守",
+    "ref": "swordsman",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. Adult ordinary foot soldier of the institute guard, an unremarkable weathered face with short cropped hair and light stubble, wearing plain uniform light armor: dull steel-grey cuirass over dark green quilted gambeson, simple riveted pauldron, minimal trim with almost no gold, holding a plain straight arming sword ready in a cautious guard stance. Reads clearly as a nameless soldier, not a hero. Must not resemble the reference swordsman: different face, no topknot, no ivory-gold armor, no deep green cloak."
+  },
+  {
+    "id": "enemy-gunner",
+    "use": "C4 外廊警戒槍手、C4 內庫槍手",
+    "ref": "gunner",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. Adult male sentry gunner of the institute guard, tired alert eyes, short dark hair under a plain dark cap, dull olive-brown leather coat with simple brass buckles and a bandolier, holding an antique flintlock musket at the ready with a believable two-handed grip; no modern military gear. Must not resemble the reference gunner: not female, no auburn hair, no oxblood coat."
+  },
+  {
+    "id": "enemy-shield",
+    "use": "C4 內庫盾衛",
+    "ref": "tank",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. Adult vault shield-guard in heavy dull gunmetal plate armor with a closed helmet and a narrow eye slit, so the face is hidden, a large plain tower shield held in front with scuffed unadorned surface, short mace or shortsword in the other hand, planted defensive stance. Much plainer and less gilded than the reference tank: no raised visor, no antique gold trim, no steel-teal colouring, no ornate emblem."
+  },
+  {
+    "id": "enemy-shadow",
+    "use": "C3 截路追兵",
+    "ref": "assassin",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. Adult light-armored pursuer, agile forward-leaning stance, charcoal and grey-brown dark leather jerkin, half-face cloth mask with a short cowl leaving eyes visible, one curved short blade held low, slim silhouette, plain equipment. Must not resemble the reference assassin: no moon-violet cloak or hood, not a female hero look, no twin daggers at waist."
+  },
+  {
+    "id": "enemy-abyss-claw",
+    "use": "C9 冥淵·晶爪 ×3",
+    "ref": "assassin",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. An Abyssal (冥淵) claw-type creature: a humanoid form whose upper body, more than half, has turned into pale teal-white translucent crystal, both hands replaced by long sharp crystal claws, crystal shards sprouting from shoulders and spine, face partly crystal with a hollow half-remaining human face, ragged torn clothes on the still-human lower body, slender predatory crouch, faint cold teal glow inside the crystal. Eerie and sad rather than gory: no blood, no exposed organs."
+  },
+  {
+    "id": "enemy-abyss-body",
+    "use": "C9 冥淵·晶軀 ×2",
+    "ref": "tank",
+    "prompt": "Use case: stylized-concept. Premium semi-realistic dark fantasy Nightfall Duel game illustration. Warm upper-left antique gold light, cool teal rim light, engraved materials, misty ruined stone courtyard at night. Vertical 2:3 knee-up portrait, crop-safe face and weapon. No text, card frame, UI, logo, watermark or gore. Use the reference image for painting style, framing and lighting ONLY, not for identity or costume. An Abyssal (冥淵) body-type creature: a heavy hunched humanoid whose torso and both arms are a bulky mass of pale teal-white translucent crystal, one huge crystalline arm held forward like a shield or club, thick crystal plates over the chest and shoulders, a human face remnant on one side of the head, torn work clothes visible at the waist and legs, broad slow lumbering stance, faint cold teal glow inside the crystal. Eerie and sad rather than gory: no blood, no exposed organs."
+  }
+]

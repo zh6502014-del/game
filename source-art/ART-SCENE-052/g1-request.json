@@ -1,0 +1,17 @@
+{
+  "ticket": "ART-SCENE-052",
+  "mode": "built-in imagegen",
+  "intent": "compositing",
+  "prompt": "Use case: compositing, identity-preserve. Asset type: wide narrative scene background for original dark fantasy game. Primary request: show Louis in the royal control room actually WEARING and operating the finished ancient crystal head-mounted device. The existing empty-room illustration has an oversized ring on a pedestal that reads as a belt; correct this story beat by showing the same recognizable king wearing a clearly head-sized engineered circlet on his head.\nImage 1 is the exact environment/style reference: gothic royal control room at night, dark green banners, antique brass pressure gauges and machinery, bundled cables, tall window with moonlit spired capital. Image 2 is the canonical identity and clothing reference for Louis: middle-aged tired face, long tousled dark hair with gray, gray beard, black fur mantle, richly engraved antique-gold armor, dark green/black royal robes. Match him closely.\nComposition: waist-up three-quarter portrait of Louis at the control console in the central-right part of the room, with his HEAD near image center so a portrait viewport crop still contains his face and headgear. His head and shoulders are large enough to instantly read the device, about one-third image height. He turns slightly toward viewer, stern focused expression, his gloved hand rests on a physical console lever. No extra people. The cathedral window and moonlit tower remain visible behind him at left.\nThe headset is a practical antique brass and dark leather ring that FITS SNUGLY AROUND HIS FOREHEAD, temples and BACK OF HEAD. A SMALL frosted pale teal crystal disk mounted at center forehead above brows, two compact mechanical crystal contacts sitting at temples, short curved structural arches tracing the sides and back of the skull. Keep his eyes, nose and face fully visible. Real engineered close-fitting headgear with clear anchors and humane fit, not a giant ring hovering around head. A few thin dark insulated cables lead visibly from rear/temple connectors to the royal console behind his shoulder, sitting naturally, not plugging into skin. Restrained dim teal emission only. Remove the standalone oversized ring display in reference 1; no large circle on pedestal or in hands. Make headwear unmistakable, not a belt, collar, necklace, wristwatch, headphones, VR mask or disconnected crown. No crystal mutations on his body in this scene.\nSerious dark fantasy, painterly cinematic realism, physically grounded materials, weathered engraved brass, dark fur, linen and stone, restrained dark green and antique gold palette, warm lantern side light with cool moon ambience. Keep face/headgear center at roughly x55 percent and y33 percent with readable edges. Bottom 20 percent uncluttered dark console/robe area for game dialogue overlay; top central 10 percent clear of face. Target near1536x864,16:9,opaque. No text/UI/logo/watermark.",
+  "referenced_image_paths": [
+    "/Users/songer/Desktop/Game_claude/assets/story/complete-020/backgrounds/royal-control.webp",
+    "/Users/songer/Desktop/Game_claude/assets/story/actors/louis.webp"
+  ],
+  "transparent_background": false,
+  "target": {
+    "width": 1536,
+    "height": 864,
+    "kind": "background",
+    "maxBytes": 614400
+  }
+}
