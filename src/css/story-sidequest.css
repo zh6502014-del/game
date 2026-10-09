@@ -13,7 +13,7 @@
 /* Dialog frame */
 .sq-dialog{color:var(--sq-text);background:radial-gradient(ellipse at 50% 0,#27453a,#0c1818 66%)!important}
 .sq-dialog>header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid transparent;border-image:linear-gradient(90deg,#d9b865cc,#8d795633 72%,transparent) 1}
-.sq-dialog>header h2{margin:0;font-family:Georgia,"Noto Serif TC","Songti TC",serif;font-size:1.35rem;font-weight:600;line-height:1.35;letter-spacing:.02em;color:var(--sq-ink)}
+.sq-dialog>header h2{margin:0;font-family:"Noto Serif TC",serif;font-size:1.35rem;font-weight:600;line-height:1.35;letter-spacing:.02em;color:var(--sq-ink)}
 .sq-dialog>header>button{flex:none;min-width:64px}
 .puzzle-objective,.story-maze-objective,.story-route-objective,.sq-dialog .search-help{font-size:.9rem;line-height:1.65;color:var(--sq-text)}
 .sq-dialog:not([data-scene=archive-vault]) .search-help{margin:0 0 12px}

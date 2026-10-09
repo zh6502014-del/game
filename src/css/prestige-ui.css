@@ -69,7 +69,7 @@ button:focus-visible,summary:focus-visible{outline:2px solid #ffe0a3!important;o
 .home-audio{border:1px solid #c5a46966;border-radius:4px;background:#09171cc9;padding:10px 16px;font-size:12px;cursor:pointer}
 .home-intro{text-align:center;padding:42px 0 32px}
 .home-eyebrow{font-size:10px;letter-spacing:3px;color:#d5b77c;margin:0 0 14px}
-.home-intro h1{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(30px,4vw,52px);font-weight:600;line-height:1.4;letter-spacing:5px;margin:0 0 16px;text-shadow:0 4px 20px #000}
+.home-intro h1{font-family:"Noto Serif TC",serif;font-size:clamp(30px,4vw,52px);font-weight:600;line-height:1.4;letter-spacing:5px;margin:0 0 16px;text-shadow:0 4px 20px #000}
 .home-intro>p:last-child{font-size:14px;line-height:1.8;color:#c2c8bd;margin:0}
 .home-modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .home-mode{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:440px;border:1px solid #aa895a99;border-radius:8px;overflow:hidden;background:#081419;color:inherit;text-decoration:none;box-shadow:0 18px 45px #0007;transition:transform .2s,border-color .2s}
@@ -80,7 +80,7 @@ button:focus-visible,summary:focus-visible{outline:2px solid #ffe0a3!important;o
 /* 2026-09-28 可讀性修正：png-frames.css 以 ::after 繪製邊框，原本的漸層遮罩被覆蓋；改由 ::before 承擔。 */
 .home-mode::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#06101500 16%,#06101599 44%,#061015ee 68%,#061015 100%)}
 .home-mode-copy{width:100%;padding:28px;text-shadow:0 1px 3px #000c}
-.home-mode h2{font-size:30px;letter-spacing:3px;margin:0 0 12px;font-family:Georgia,"Noto Serif TC",serif}
+.home-mode h2{font-size:30px;letter-spacing:3px;margin:0 0 12px;font-family:"Noto Serif TC",serif}
 .home-mode-copy>p:not(.home-eyebrow){color:#c9cfc3;font-size:14px;line-height:1.9;margin:0 0 18px;max-width:34em}
 .home-tags{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:#c9b789}
 .home-tags span{border:1px solid #9d875a66;padding:5px 9px;border-radius:3px;background:#06101566}

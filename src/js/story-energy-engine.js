@@ -545,7 +545,13 @@
 
   function runEnemy(state, rng, events, frames) {
     const restrained = state.enemyPolicy === "restrained";
-    for (const actor of state.units.filter(entry => entry.side === "enemy")) {
+    const actors = state.units.filter(entry => entry.side === "enemy");
+    // H1 keeps the king centered visually, but his turn precedes the flanking rats.
+    const kingIndex = actors.findIndex(entry => entry.id === "louis-armored" && entry.ratRules && entry.hp > 0);
+    if (kingIndex > 0 && actors.some(entry => entry.trap && entry.hp > 0 && entry.id.startsWith("crystal-rat-"))) {
+      actors.unshift(actors.splice(kingIndex, 1)[0]);
+    }
+    for (const actor of actors) {
       if (state.status !== "playing") break;
       kingRatPlay(state, actor, rng, events, frames);
       if (state.status !== "playing") break;

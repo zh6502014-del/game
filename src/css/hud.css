@@ -17,7 +17,7 @@
 .duel-identity{grid-area:identity;min-width:0;display:flex;align-items:baseline;gap:12px;border-bottom:1px solid #cab57c26;padding-bottom:8px}
 .enemy .duel-identity{flex-direction:row-reverse}
 .duel-owner{color:#a2b4ad;font-size:12px;line-height:1.5;letter-spacing:2px;white-space:nowrap}
-.duel-name{color:#f1ddb1;font:700 22px/1.4 Georgia,'Songti TC',serif;letter-spacing:3px;margin:0;white-space:nowrap}
+.duel-name{color:#f1ddb1;font:700 22px/1.4 "Noto Serif TC",serif;letter-spacing:3px;margin:0;white-space:nowrap}
 .duel-copy{grid-area:resources;min-width:0}
 .battle-hud .duel-avatar{grid-area:portrait;position:relative;align-self:start;margin:0;width:96px;height:116px;display:block;overflow:visible;font-size:0;border:0;border-radius:0;background:#061518;isolation:isolate;box-shadow:0 8px 16px #0006}
 .portrait-window{position:absolute;inset:4px 4px 8px;overflow:hidden;clip-path:polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px);background:#0b1c20}
@@ -28,16 +28,16 @@
 .duel-avatar .class-crest svg{width:16px;height:16px;margin:0}
 .duel-avatar.portrait-failed .class-crest{display:none}
 .duel-avatar .portrait-fallback{inset:24%;width:52%;height:52%;color:var(--portrait-accent)}
-.duel-hp,.duel-shield-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin:0;font:500 12px/1.5 system-ui;color:#b8c9bf}
+.duel-hp,.duel-shield-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;margin:0;font:500 12px/1.5 "Noto Serif TC",serif;color:#b8c9bf}
 .duel-hp>span,.duel-shield-row>span{display:flex;align-items:center;gap:4px;letter-spacing:1px;flex:none;white-space:nowrap}
 .duel-hp .nd-icon,.duel-shield-row .nd-icon{width:14px;height:14px;flex:none}
-.duel-hp strong{position:relative;isolation:isolate;display:block;box-sizing:content-box;margin-left:auto;min-width:min(5ch,calc(100cqw - 16px));padding:2px 8px;text-align:right;font:500 26px/1.4 Georgia,serif;font-variant-numeric:lining-nums tabular-nums;letter-spacing:0;white-space:nowrap;color:#f8e6bd;text-shadow:0 2px 3px #000;clip-path:none;overflow:visible;border:0;background:none}
+.duel-hp strong{position:relative;isolation:isolate;display:block;box-sizing:content-box;margin-left:auto;min-width:min(5ch,calc(100cqw - 16px));padding:2px 8px;text-align:right;font:500 26px/1.4 "Noto Serif TC",serif;font-variant-numeric:lining-nums tabular-nums;letter-spacing:0;white-space:nowrap;color:#f8e6bd;text-shadow:0 2px 3px #000;clip-path:none;overflow:visible;border:0;background:none}
 .duel-hp strong::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#ac875010,#b8995830);border-right:2px solid #b99c60;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%,0 8px)}
 .duel-hpbar{height:8px;margin:4px 0 8px;padding:1px;box-sizing:border-box;overflow:hidden;border:1px solid #bca36a50;border-radius:2px;background:#020d10;box-shadow:inset 0 2px 3px #000b}
 .duel-hpfill{height:100%;background:linear-gradient(90deg,#56745d,#bed298);transition:width .35s ease}
 .enemy .duel-hpfill{background:linear-gradient(90deg,#775766,#d1a29b)}
 .duel-shield-row{color:#a5c0c7}
-.duel-shield-row strong{margin-left:auto;min-width:6.5ch;text-align:right;font:600 14px/1.5 system-ui;font-variant-numeric:tabular-nums;white-space:nowrap;color:#c9dddf}
+.duel-shield-row strong{margin-left:auto;min-width:6.5ch;text-align:right;font:600 14px/1.5 "Noto Serif TC",serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#c9dddf}
 .duel-shield-row small{font:inherit;color:#91a8ac}
 .duel-shield{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;height:4px;margin-top:4px}
 .duel-shield i{height:4px;width:auto;border:1px solid #527d784d;border-radius:1px;background:#142e30}
@@ -45,7 +45,7 @@
 .duel-status-row{grid-area:statuses;display:flex;flex-wrap:wrap;align-content:start;gap:8px;margin-top:8px;padding-top:12px;border-top:1px solid #a6905d26;min-width:0}
 .duel-status-row:empty{display:none}
 .enemy .duel-status-row{justify-content:flex-end}
-.duel-status{display:inline-flex;align-items:center;gap:4px;border:1px solid #a7b8ab38;border-radius:3px;background:linear-gradient(#35514650,#162e2d80);color:#d0dfd5;font:500 12px/1.5 system-ui;padding:4px 8px;white-space:normal;overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
+.duel-status{display:inline-flex;align-items:center;gap:4px;border:1px solid #a7b8ab38;border-radius:3px;background:linear-gradient(#35514650,#162e2d80);color:#d0dfd5;font:500 12px/1.5 "Noto Serif TC",serif;padding:4px 8px;white-space:normal;overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
 .duel-status .nd-icon{width:14px;height:14px;flex:none;color:var(--portrait-accent)}
 .battle-hud.low-hp .duel-hp strong{color:#ffc0a6}
 .battle-hud.low-hp .duel-hpbar{border-color:#d5907066;box-shadow:0 0 8px #b6502820}

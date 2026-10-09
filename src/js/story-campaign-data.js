@@ -16,7 +16,7 @@ window.NDCampaignShared=[["P1", "從路邊抱起的孩子", "p1-morwell-ruins", 
   function add(id,titles,existing,steps) {
     performances[id]={frames:titles.map((title,index)=>{
       const art=existing[index] || id.toLowerCase()+'-stage-'+(index+1);
-      return {id:art,title,path:'assets/story/'+art+'.webp'};
+      return {id:art,title,path:'assets/story/illustrations/class-origin/'+art+'.webp'};
     }),steps:[...steps,{type:'complete',frame:2,text:'收錄這段記憶，保存本節點進度。'}].map((step,index)=>({id:id+'-step-'+String(index+1).padStart(2,'0'),...step}))};
   }
   add('A1',['首腦交付任務','潛入設施','研究室對峙'],{2:'assassin-lab'},[
@@ -31,7 +31,7 @@ window.NDCampaignShared=[["P1", "從路邊抱起的孩子", "p1-morwell-ruins", 
     n(2,'凜沒有回答，向前逼近。博士退向實驗台。')]);
   add('A2',['實驗台前對抗','銃口反衝','帶傷離開維修通道'],{1:'assassin-resonance'},[
     n(0,'凜逼近實驗台，赫爾曼仍在尋找退路。她必須先取得對抗優勢。'),
-    b(0,'A2','戰勝赫爾曼，推進研究室事件。戰勝不代表殺死博士。'),
+    b(0,'A2','制伏赫爾曼。'),
     n(0,'退路被封住，赫爾曼拿起尚未完成的實驗銃。封存樣本為它提供能量。'),
     n(1,'博士開槍。凜側身避讓，子彈擦過右手，撞上身後的金屬設施。'),
     n(1,'壓縮能量爆開，沿尚未切斷的管線反衝槍體。兩人的時間感與陌生記憶短暫交疊。'),
@@ -43,7 +43,7 @@ window.NDCampaignShared=[["P1", "從路邊抱起的孩子", "p1-morwell-ruins", 
     n(0,'凜回到尺烏，想問首腦為何任務說明與那些碎片不同。門前卻沒有守衛。'),
     a(0,'留在暗處觀察','她放慢腳步，沒有沿原定接應路線入內。'),
     n(1,'她看見熟悉的人與首腦倒在據點裡。清洗者正在翻找檔案、確認現場。'),
-    i(1,[['內部通道','清洗者使用只向內部開放的入口。'],['清洗者的話','「出外勤的還沒回來。等。」對方仍在等她。']]),
+    i(1,[['內部通道','清洗者使用只向內部開放的入口。'],['清洗者的話','「等。她遲早會回來。」對方守在入口，仍在等她。']]),
     a(1,'記住裝備後撤離','凜記下來人的裝備與行動方式，沒有接近首腦，也沒有踏入伏擊。'),
     n(2,'尺烏沒有其他生還者。凜在據點外割去制服標誌，右手布條仍滲著血。'),
     n(2,'隔日告示指控尺烏叛國。她只能判斷有人要清除整個組織，尚不知道命令由誰發出。')]);
@@ -265,8 +265,6 @@ window.NDCampaignShared=[["P1", "從路邊抱起的孩子", "p1-morwell-ruins", 
     n(2,'最後一隻冥淵倒下，身上的晶體像碎玻璃一樣散落。沒有人說話，磷也沒有走近去看。'),
     n(2,'坑道的另一頭傳來急促的腳步聲。一個男人和一名女子朝五人的方向跑來，男人一邊跑，一邊喊著磷的名字。'),
     n(2,'磷認出了那個聲音：是納爾瓦。他身旁還有一名她從沒見過的女子，手腕上的裝置裂損，神情比他還要緊張。')]);
-  // Modular searches extend the timeline without renumbering any existing step IDs.
-  const searchStep=(id,frame,sceneId,items,text)=>({id,type:'search',frame,sceneId,searchScene:sceneId,items:items.map(([id,label,text])=>({id,label,text})),text});
   const files=performances.E2.steps;
   const f7=files.findIndex(t=>t.id==='E2-step-07'),f8=files.findIndex(t=>t.id==='E2-step-08');
   // C8 no longer ends on Phosphor's question; step-05 is dropped (IDs of other steps unchanged) and step-06 leads into C9.
@@ -291,14 +289,6 @@ window.NDCampaignShared=[["P1", "從路邊抱起的孩子", "p1-morwell-ruins", 
   // E2 has no mini-game: the two file steps are told as narration over changing scene art.
   files[f7]={id:files[f7].id,...n(1,'工作間的桌上留著研究副本：死亡、夜域停留時間與晶體純度有關，暮晶要經過漫長時間才會形成。旁邊還有她曾參與的實驗銃設計圖，之後也許能改成可攜的形式。')};
   files[f8]={id:files[f8].id,...n(2,'自動備份的讀值在開槍前已有一段未解異常，之後才出現回流並中斷。導師的筆記寫著：「不能只研究夜域。形成晶體的材料，是死在裡面的人。」最後一頁只有一行：「這件事，不能讓她一起扛。」伊芙這才明白，那句「不需要妳了」是什麼意思。')};
-  performances.E3.steps.splice(2,0,searchStep('E3-search-parts',0,'gun-parts',[
-    ['gun-0','機匣','備用裝置的機匣可承接其餘零件，改成可攜形式。'],
-    ['gun-1','銃管','找到銃管，準備與機匣接合。'],
-    ['gun-2','握柄','握柄讓伊芙能握住改裝後的裝置。'],
-    ['gun-3','暮晶核心','取出備用暮晶核心；完成組裝後才限制輸出並蓄能。'],
-    ['gun-4','保險片','過載時碎裂並切斷能量路徑的保險片，不能省略。']
-  ],'依備用設計，在工作臺找齊五件零件。查看物件後收取，再開始組裝。'));
-  performances.E3.steps.find(t=>t.id==='E3-step-03').searchScene='gun-parts';
   window.NDStoryPerformances=performances;
 })();
 

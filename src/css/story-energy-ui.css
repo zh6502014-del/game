@@ -1,5 +1,5 @@
 /* STORY-BATTLE-UI-001: isolated landscape story arena; no global combat styles. */
-.story-energy-overlay{--seb-gold:#cbb178;--seb-bright:#f5deb0;--seb-text:#ede4cf;--seb-muted:#bac5b5;--seb-hand:clamp(100px,21vh,190px);position:fixed;inset:0;z-index:10000;overflow:hidden;isolation:isolate;background:#07120f;color:var(--seb-text);font:400 14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.story-energy-overlay{--seb-gold:#cbb178;--seb-bright:#f5deb0;--seb-text:#ede4cf;--seb-muted:#bac5b5;--seb-hand:clamp(100px,21vh,190px);position:fixed;inset:0;z-index:10000;overflow:hidden;isolation:isolate;background:#07120f;color:var(--seb-text);font:400 14px/1.5 "Noto Serif TC",serif;color-scheme:dark;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
 .story-energy-overlay *,.story-energy-overlay *::before,.story-energy-overlay *::after{box-sizing:border-box}
 .story-energy-overlay [hidden]{display:none!important}
 .story-energy-overlay h1,.story-energy-overlay h2,.story-energy-overlay p{margin:0;padding:0;overflow-wrap:anywhere}
@@ -15,7 +15,7 @@
 .story-energy-overlay .seb-header{display:grid;grid-template-columns:minmax(160px,1fr) minmax(200px,2fr) auto;align-items:center;gap:18px;min-width:0;border-bottom:1px solid #97805a66;padding:0 4px 8px}
 .story-energy-overlay .seb-title-block{min-width:0}
 .story-energy-overlay .seb-eyebrow{display:block;color:#bba774;font-size:10px;letter-spacing:2.4px;font-weight:700}
-.story-energy-overlay .seb-title{font-family:Georgia,"Noto Serif TC",serif;font-size:clamp(17px,1.9vw,25px);font-weight:700;line-height:1.25;color:#f1ddaf}
+.story-energy-overlay .seb-title{font-family:"Noto Serif TC",serif;font-size:clamp(17px,1.9vw,25px);font-weight:700;line-height:1.25;color:#f1ddaf}
 .story-energy-overlay .seb-meta{display:flex;justify-content:center;align-items:center;column-gap:12px;row-gap:1px;flex-wrap:wrap;text-align:center;min-width:0}
 .story-energy-overlay .seb-round{font-size:16px;color:var(--seb-bright);font-variant-numeric:tabular-nums}
 .story-energy-overlay .seb-phase{font-size:12px;color:#c0ddbc;border:1px solid #76836a;border-radius:20px;padding:1px 8px}
@@ -37,7 +37,7 @@
 .story-energy-overlay .seb-unit.seb-targetable{border-color:#d7edb2;box-shadow:0 0 0 3px #66824f,0 0 20px #c2ed8266}
 .story-energy-overlay .seb-unit.seb-drop-hover{border-color:#fff3c8;box-shadow:0 0 0 5px #d6bc74,0 0 30px #f5dc92aa}
 .story-energy-overlay .seb-portrait{display:block;position:absolute;inset:1px 1px 23px;border-radius:47% 47% 4px 4px;overflow:hidden;background:radial-gradient(ellipse,#506149,#18281c)}
-.story-energy-overlay .seb-art-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#e0c792;font:700 25px Georgia,serif;letter-spacing:7px}
+.story-energy-overlay .seb-art-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#e0c792;font:700 25px "Noto Serif TC",serif;letter-spacing:7px}
 .story-energy-overlay .seb-art-image{position:absolute;display:block;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 14%;pointer-events:none;-webkit-user-drag:none}
 .story-energy-overlay .seb-unit-crown{position:absolute;left:50%;top:-9px;transform:translateX(-50%);padding:0 10px;border:1px solid #a48a53;border-radius:30px;background:#18281e;font-size:10px;color:#f0d6a1;white-space:nowrap;z-index:2}
 .story-energy-overlay .seb-allowances{position:absolute;left:5px;right:5px;top:16px;display:flex;justify-content:space-between;gap:3px;z-index:2;pointer-events:none}
@@ -51,11 +51,11 @@
 .story-energy-overlay .seb-shield{position:absolute;right:-12px;top:43%;display:flex;align-items:center;gap:3px;min-width:35px;padding:1px 6px;color:#d8f0ec;background:#244544;border:1px solid #83aca0;border-radius:5px 5px 12px 12px;font-variant-numeric:tabular-nums;z-index:3}
 .story-energy-overlay .seb-shield small{font-size:10px}
 .story-energy-overlay .seb-shield strong{font-size:15px}
-.story-energy-overlay .seb-unit-name{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;height:25px;padding:0 3px;color:#f7e5b9;background:linear-gradient(#394332,#18271e);border-top:1px solid #a58a56;font-family:Georgia,"Noto Serif TC",serif;font-size:14px;font-weight:700;line-height:1.15;text-shadow:0 2px #000;overflow-wrap:anywhere}
+.story-energy-overlay .seb-unit-name{position:absolute;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;height:25px;padding:0 3px;color:#f7e5b9;background:linear-gradient(#394332,#18271e);border-top:1px solid #a58a56;font-family:"Noto Serif TC",serif;font-size:14px;font-weight:700;line-height:1.15;text-shadow:0 2px #000;overflow-wrap:anywhere}
 .story-energy-overlay .seb-status-strip{display:flex;justify-content:center;align-items:center;gap:3px;min-width:0;line-height:1.25;white-space:nowrap}
 .story-energy-overlay .seb-unit-job{color:#b8c1a8;font-size:11px}
 .story-energy-overlay .seb-status{display:inline-block;font-size:10px;color:#f2ddb0;background:#293622;border:1px solid #8d8e60;padding:1px 3px;border-radius:3px}
-.story-energy-overlay .seb-unit-info{position:absolute;bottom:17px;left:50%;transform:translate(-50%,50%);width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important;padding:0;border:0;background:transparent;box-shadow:none;font:italic 700 15px Georgia,serif;color:transparent;z-index:4;opacity:0;pointer-events:none;display:flex;align-items:center;justify-content:center;line-height:1}
+.story-energy-overlay .seb-unit-info{position:absolute;bottom:17px;left:50%;transform:translate(-50%,50%);width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important;padding:0;border:0;background:transparent;box-shadow:none;font:italic 700 15px "Noto Serif TC",serif;color:transparent;z-index:4;opacity:0;pointer-events:none;display:flex;align-items:center;justify-content:center;line-height:1}
 .story-energy-overlay .seb-unit-info:focus-visible,.story-energy-overlay .seb-unit-wrap:hover .seb-unit-info{opacity:1;color:#eed8a4;background:#1c2b24e8;border:1px solid #ac9565;border-radius:50%;width:44px!important;height:44px!important;pointer-events:auto}
 .story-energy-overlay .seb-target-label{display:none;position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);padding:4px 8px;background:#dce7b7;color:#142412;border:1px solid #faf2c4;border-radius:4px;font-weight:800;font-size:12px;white-space:nowrap;box-shadow:0 2px 7px #0008;z-index:4}
 .story-energy-overlay .seb-targetable .seb-target-label{display:block}
@@ -78,14 +78,14 @@
 .story-energy-overlay .seb-enemy-energy .seb-gem,.story-energy-overlay .seb-player-energy .seb-gem{width:11px;height:17px}
 .story-energy-overlay .seb-enemy-energy .seb-energy-value,.story-energy-overlay .seb-player-energy .seb-energy-value{font-size:14px}
 .story-energy-overlay .seb-player-energy .seb-gems{justify-content:flex-end}
-.story-energy-overlay .seb-selected-name{font-family:Georgia,serif;color:#e7d4aa;font-size:14px;margin-top:4px}
+.story-energy-overlay .seb-selected-name{font-family:"Noto Serif TC",serif;color:#e7d4aa;font-size:14px;margin-top:4px}
 .story-energy-overlay .seb-attack-control{font-size:12px;padding:7px 3px}
 .story-energy-overlay .seb-attack-control[aria-disabled="true"]{color:#a8b4a2;border-style:dashed;background:#17261e}
 .story-energy-overlay .seb-end-turn{font-size:15px;padding:12px 4px;min-height:52px;border-radius:25px;letter-spacing:1px}
 .story-energy-overlay .seb-rail-note{color:#aebda7;font-size:11px;line-height:1.5}
 .story-energy-overlay .seb-hand{position:relative;display:grid;grid-template-columns:minmax(120px,1fr) auto minmax(120px,1fr);align-items:center;gap:18px;min-height:0;padding:3px 20px 0;background:radial-gradient(ellipse at 50% 110%,#5d624237,transparent 70%)}
 .story-energy-overlay .seb-hand-label{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
-.story-energy-overlay .seb-hand-label strong{font-family:Georgia,"Noto Serif TC",serif;font-size:18px;font-weight:600;color:#dfcba1}
+.story-energy-overlay .seb-hand-label strong{font-family:"Noto Serif TC",serif;font-size:18px;font-weight:600;color:#dfcba1}
 .story-energy-overlay .seb-hand-label span{font-size:11px;color:#aebda5}
 .story-energy-overlay .seb-hand-note{font-size:11px;color:#aebda5;white-space:pre-line}
 .story-energy-overlay .seb-hand-cards{display:flex;align-items:flex-end;justify-content:center;gap:14px;height:100%;min-height:0;padding:4px 2px 0}
@@ -99,16 +99,16 @@
 .story-energy-overlay .seb-skill-art .seb-art-image{object-position:50% 25%}
 .story-energy-overlay .seb-skill-cost{position:absolute;top:1px;left:1px;display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:linear-gradient(#bfd9b0,#4c8c71);border:2px solid #e3df9e;border-radius:50%;color:#0b2019;text-shadow:0 1px #fff5;font-size:20px;font-weight:900;z-index:2;line-height:1}
 .story-energy-overlay .seb-skill-owner{position:absolute;bottom:28px;left:1px;right:1px;font-size:11px;font-weight:500;color:#e0d2b0;text-shadow:0 1px 3px #000;line-height:1.3}
-.story-energy-overlay .seb-skill-name{position:absolute;bottom:5px;left:1px;right:1px;font:700 15px Georgia,"Noto Serif TC",serif;line-height:1.3;color:#f4dfaf;text-shadow:0 1px 3px #000;white-space:nowrap}
+.story-energy-overlay .seb-skill-name{position:absolute;bottom:5px;left:1px;right:1px;font:700 15px "Noto Serif TC",serif;line-height:1.3;color:#f4dfaf;text-shadow:0 1px 3px #000;white-space:nowrap}
 .story-energy-overlay .seb-skill-lock{position:absolute;top:42%;left:0;right:0;background:#111d17c9;color:#d4d9c3;padding:2px;font-size:11px;z-index:2}
-.story-energy-overlay .seb-skill-info{position:absolute;top:0;right:-6px;min-width:44px;min-height:44px;padding:0;border:0;background:transparent;color:#f3e5bd;font:italic 700 15px Georgia,serif;text-shadow:0 1px 4px #000;box-shadow:none;z-index:3}
+.story-energy-overlay .seb-skill-info{position:absolute;top:0;right:-6px;min-width:44px;min-height:44px;padding:0;border:0;background:transparent;color:#f3e5bd;font:italic 700 15px "Noto Serif TC",serif;text-shadow:0 1px 4px #000;box-shadow:none;z-index:3}
 .story-energy-overlay .seb-skill-info::before{content:"";position:absolute;inset:11px;border:1px solid #c8b37c;background:#13251bcf;border-radius:50%;z-index:-1}
 .story-energy-overlay .seb-result{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:9;width:min(440px,86%);padding:24px;text-align:center;border:2px solid #c2a467;border-radius:15px;background:linear-gradient(135deg,#263e2ef7,#0d211bf7);box-shadow:0 16px 60px #000e,inset 0 0 0 4px #ffffff05}
-.story-energy-overlay .seb-result h2{font:700 28px Georgia,serif;margin:7px 0;color:#f4deb1}
+.story-energy-overlay .seb-result h2{font:700 28px "Noto Serif TC",serif;margin:7px 0;color:#f4deb1}
 .story-energy-overlay .seb-result-reason{font-size:13px;color:#d7debd}
 .story-energy-overlay .seb-modal-backdrop{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:20px;background:#020806c9;backdrop-filter:blur(5px);touch-action:pan-y}
 .story-energy-overlay .seb-modal{width:min(530px,96%);max-height:calc(100dvh - 32px);overflow:auto;padding:24px;background:linear-gradient(135deg,#233d2d,#10261d);border:2px solid #bca06e;border-radius:14px;box-shadow:0 18px 70px #000c;touch-action:pan-y;user-select:text}
-.story-energy-overlay .seb-modal h2{font:700 25px Georgia,serif;color:#ead3a0;margin-bottom:13px}
+.story-energy-overlay .seb-modal h2{font:700 25px "Noto Serif TC",serif;color:#ead3a0;margin-bottom:13px}
 .story-energy-overlay .seb-modal p{font-size:14px;color:#d9e0c9;margin:9px 0}
 .story-energy-overlay .seb-modal-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
 .story-energy-overlay .seb-modal-actions .seb-button{min-width:125px}
@@ -126,7 +126,7 @@
 .story-energy-overlay .seb-rotate-host{position:absolute;inset:0;z-index:20;background:radial-gradient(ellipse at 50% 35%,#314b34,#071811 80%)}
 .story-energy-overlay .seb-rotate{display:flex;height:100%;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:18px;padding:32px}
 .story-energy-overlay .seb-rotate-icon{display:block;font-size:80px;color:#dcc48d;line-height:1}
-.story-energy-overlay .seb-rotate h2{font:700 26px Georgia,serif;color:#f3dca6}
+.story-energy-overlay .seb-rotate h2{font:700 26px "Noto Serif TC",serif;color:#f3dca6}
 .story-energy-overlay .seb-rotate p{max-width:300px;color:#c5d1b7;font-size:14px;line-height:1.8}
 .story-energy-overlay[data-rotated="true"] .seb-shell{visibility:hidden}
 .story-energy-overlay[data-busy="true"] .seb-skill-card,.story-energy-overlay[data-busy="true"] .seb-unit{cursor:wait}
@@ -223,7 +223,7 @@
 .story-energy-overlay .seb-unit-crown{display:none}
 .story-energy-overlay .seb-status-strip{min-height:22px;align-items:flex-start;flex-wrap:wrap;white-space:normal;padding:2px 4px;text-align:center}
 .story-energy-overlay .seb-unit-job,.story-energy-overlay .seb-status{font-size:11px;line-height:1.25}
-.story-energy-overlay .seb-unit-info{top:50%;bottom:auto;left:auto;right:-48px;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;padding:0;border:1px solid #b79c67;border-radius:50%;background:#13251bef;color:#f3dfb1;box-shadow:0 3px 9px #0009;font:italic 700 15px Georgia,serif;line-height:1;opacity:1;pointer-events:auto;z-index:6}
+.story-energy-overlay .seb-unit-info{top:50%;bottom:auto;left:auto;right:-48px;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;padding:0;border:1px solid #b79c67;border-radius:50%;background:#13251bef;color:#f3dfb1;box-shadow:0 3px 9px #0009;font:italic 700 15px "Noto Serif TC",serif;line-height:1;opacity:1;pointer-events:auto;z-index:6}
 .story-energy-overlay .seb-unit-info:focus-visible,.story-energy-overlay .seb-unit-wrap:hover .seb-unit-info{color:#f3dfb1;background:#27412f;border-color:#e4ca8e}
 .story-energy-overlay .seb-target-label{top:38%;font-size:12px;padding:4px 10px}
 .story-energy-overlay .seb-battle-message{font-size:12px;align-items:center}.story-energy-overlay .seb-battle-message>span{padding:3px 10px;background:#10231ee6}
@@ -379,7 +379,7 @@
 }
 
 /* STORY-HOTKEY: small key hint on the end-turn button (hidden on touch-only screens). */
-.story-energy-overlay .seb-end-turn .seb-key{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid #0000004d;border-radius:4px;background:#0000001f;font:700 11px/1.4 Georgia,serif;letter-spacing:0;vertical-align:middle;opacity:.75}
+.story-energy-overlay .seb-end-turn .seb-key{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid #0000004d;border-radius:4px;background:#0000001f;font:700 11px/1.4 "Noto Serif TC",serif;letter-spacing:0;vertical-align:middle;opacity:.75}
 @media(hover:none){.story-energy-overlay .seb-end-turn .seb-key{display:none}}
 
 /* STORY-STUN-HALO: refined stun marker — a faint ring above the head with four stars orbiting it in 3D-ish depth
@@ -424,3 +424,11 @@
 @media(prefers-reduced-motion:reduce){.story-energy-overlay .seb-narrate{animation:none}}
 .story-energy-overlay .seb-skill-art.seb-cone-art{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#1d4a46,#08181a 75%)}
 .story-energy-overlay .seb-skill-art.seb-cone-art .seb-art-image{position:static;width:120%;height:auto;max-height:none;object-fit:contain;transform:rotate(-38deg) translateY(-8%);filter:drop-shadow(0 0 8px #6fe3d4aa)}
+
+.story-energy-overlay .seb-toast{position:fixed;z-index:25;top:max(10px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(460px,calc(100vw - 24px));padding:9px 14px 10px;border:1px solid #b9a068;border-left:3px solid #e3c27a;border-radius:8px;background:#0b1d17ec;box-shadow:0 6px 18px #0009;color:#e1d7b3;pointer-events:auto;cursor:pointer;animation:seb-toast-in .28s ease-out both,seb-toast-out .4s ease-in 4.8s forwards}
+.story-energy-overlay .seb-toast .seb-toast-title{display:block;font:700 13px "Noto Serif TC",serif;color:#ead3a0;margin-bottom:3px}
+.story-energy-overlay .seb-toast p{margin:2px 0;font-size:12px;line-height:1.45;color:#d9e0c9}
+.story-energy-overlay .seb-toast .seb-toast-line{color:#f1deae}
+@keyframes seb-toast-in{from{opacity:0;transform:translate(-50%,-8px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes seb-toast-out{to{opacity:0;transform:translate(-50%,-6px)}}
+@media(prefers-reduced-motion:reduce){.story-energy-overlay .seb-toast{animation:none}}

@@ -78,6 +78,6 @@ body[data-environment=night] .app .retro-center{background:radial-gradient(circl
 /* A deliberate two-line round counter never strands the round limit on its own. */
 .app .retro-center .round-mini{display:flex!important;flex-direction:column;align-items:center;gap:2px;max-width:100%}
 .app .round-caption{font-size:12px;letter-spacing:1px;line-height:1.2}
-.app .round-count{font:600 16px/1.3 Georgia,serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#f1ddb3}
+.app .round-count{font:600 16px/1.3 "Noto Serif TC",serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#f1ddb3}
 .app .round-limit{font:inherit;color:#a5b1a2}
 @media(max-width:700px){.app .round-count{font-size:14px}}

@@ -2,7 +2,7 @@
 .puzzle-dialog::backdrop{background:#02070ddb;backdrop-filter:blur(4px)}
 .puzzle-dialog *{box-sizing:border-box}
 .puzzle-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.puzzle-head h2{margin:0;font-size:1.35rem;line-height:1.35;font-family:Georgia,serif;color:#ead9ad}
+.puzzle-head h2{margin:0;font-size:1.35rem;line-height:1.35;font-family:"Noto Serif TC",serif;color:#ead9ad}
 .puzzle-eyebrow{color:#c7b17d;font-size:11px;letter-spacing:.1em;margin:0 0 4px}
 .puzzle-dialog button{font:inherit;color:inherit;background:#1b2b33;border:1px solid #637773;border-radius:6px;cursor:pointer;min-height:44px;padding:8px 12px}
 .puzzle-dialog button:focus-visible{outline:3px solid #c8e7e6;outline-offset:3px}
@@ -44,7 +44,7 @@
 .puzzle-feedback [data-puzzle-detail]{font-size:.8125rem;line-height:1.6;margin:0;color:#c5d1c5}
 .puzzle-status{grid-column:2;color:#e7c58d;line-height:1.55;font-size:.75rem;margin:0}
 .puzzle-finish{padding:14px;background:linear-gradient(110deg,#284435,#172c25);border:1px solid #ac9662;border-radius:8px;margin:12px 0}
-.puzzle-finish h3{margin:0 0 8px;color:#ecdbad;font-family:Georgia,serif;font-size:1.25rem}
+.puzzle-finish h3{margin:0 0 8px;color:#ecdbad;font-family:"Noto Serif TC",serif;font-size:1.25rem}
 .puzzle-finish p{line-height:1.8}
 .puzzle-finish[hidden]{display:none}
 .puzzle-dialog footer{display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:6px 12px;font-size:.75rem;color:#a6b5b3;max-width:800px;margin:0 auto}
@@ -133,7 +133,7 @@
 .puzzle-dialog[data-puzzle=recorder] .puzzle-objective{margin:14px 0 20px;font-size:.9375rem;color:#ccd5c3}
 .puzzle-dialog[data-puzzle=recorder] .puzzle-workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,18rem);grid-template-areas:"board tray" "board feedback";gap:16px 24px;align-items:start;margin-bottom:20px}
 .puzzle-dialog[data-puzzle=recorder] .puzzle-surface{display:contents}
-.puzzle-dialog[data-puzzle=recorder] .puzzle-board.puzzle-recorder{grid-area:board;align-self:center;width:100%;max-width:none;margin:0;aspect-ratio:1.65;border:1px solid #b59b633d;border-radius:12px;background:url("../../assets/story/backgrounds/recorder-028.webp") center/100% 100% no-repeat,radial-gradient(ellipse at 50% 36%,#304335,#0b1914 75%);box-shadow:0 18px 30px #0007,inset 0 0 24px #0006}
+.puzzle-dialog[data-puzzle=recorder] .puzzle-board.puzzle-recorder{grid-area:board;align-self:center;width:100%;max-width:none;margin:0;aspect-ratio:1.65;border:1px solid #b59b633d;border-radius:12px;background:url("../../assets/story/backgrounds/recorder.webp") center/100% 100% no-repeat,radial-gradient(ellipse at 50% 36%,#304335,#0b1914 75%);box-shadow:0 18px 30px #0007,inset 0 0 24px #0006}
 .puzzle-dialog[data-puzzle=recorder] .puzzle-board:before{display:none}
 .puzzle-dialog[data-puzzle=recorder] .puzzle-board .puzzle-slot{background:none;border:0;box-shadow:none;opacity:1;z-index:1}
 .puzzle-dialog[data-puzzle=recorder] .puzzle-slot svg{overflow:visible;filter:drop-shadow(0 2px 1px #020604b3)}

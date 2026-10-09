@@ -1,0 +1,3676 @@
+{
+  "version": 1,
+  "archive": "source-art.tar.gz",
+  "archiveSha256": "09080d15749d4036db1c5e1d75f21ffb25fd2c73d33e9f889b684a26509fea5b",
+  "files": [
+    {
+      "path": ".DS_Store",
+      "bytes": 12292,
+      "sha256": "59817e67dc71ea58c99bad5ab0bbbb119de3099cab3318897a32d8622f8b0590",
+      "mode": 420,
+      "mtime_ns": 1791362830555823404
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/.DS_Store",
+      "bytes": 6148,
+      "sha256": "0d6a266b44df76803f363d915b773c44043bc522441afba9a8f4eafa9c808b91",
+      "mode": 420,
+      "mtime_ns": 1791360958870972886
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/TASK.md",
+      "bytes": 2398,
+      "sha256": "28c40dc3904d7c1d30dd02a6a63647cd884d2fa5ec1941b337beb3e3ede1342d",
+      "mode": 420,
+      "mtime_ns": 1791120105201321545
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/demo/build-preview.cjs",
+      "bytes": 3121,
+      "sha256": "ca068cedbdcfc3c1ab0cc51d080e67ac924a860971c236e514f8e8ab9d4d3e1f",
+      "mode": 420,
+      "mtime_ns": 1791120915772219407
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/demo/index.html",
+      "bytes": 3784,
+      "sha256": "c0f8ee16af3b0a7a803685d8d04af98d606e2c87264667d6ba7ad8c81f484c08",
+      "mode": 420,
+      "mtime_ns": 1791120916086851406
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/demo/materials.css",
+      "bytes": 1107,
+      "sha256": "aeabd95ed5dc694389d636131d9fc98c98fe32e228d768e461635cfc6e6a43ab",
+      "mode": 420,
+      "mtime_ns": 1791120605943437471
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/demo/source-styles.json",
+      "bytes": 506,
+      "sha256": "ee5c648dae4a335cbf380c7aa76d5f592bb7ef6541159d4ca104a92aa28d77b9",
+      "mode": 420,
+      "mtime_ns": 1791120916087600495
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/demo/verify-preview.cjs",
+      "bytes": 6333,
+      "sha256": "86f832a66cc5b9daa6157d7e01bdf700a796c2d4d7a89eb82e401b1160a82a4a",
+      "mode": 420,
+      "mtime_ns": 1791120605985046398
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/fallback-390-0428.png",
+      "bytes": 50404,
+      "sha256": "dfd1f5557c338670f5597d4b373146e54fe8b0b4025c1a74ce4796b374fee668",
+      "mode": 420,
+      "mtime_ns": 1791120929312473831
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/initial-demo-path-failure.json",
+      "bytes": 3201,
+      "sha256": "33a5703aa6fb943ca7f9a1433fa0c817596b0012d7fc79668ce17302a4a10165",
+      "mode": 420,
+      "mtime_ns": 1791120915922162433
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-1440-0426.png",
+      "bytes": 1011904,
+      "sha256": "68c866d8bd11a23a8ab4ef4603629b3a04d4e600747ba29062dea78cfd194c11",
+      "mode": 420,
+      "mtime_ns": 1791120926528772707
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-1440-0428.png",
+      "bytes": 959487,
+      "sha256": "3bce90c6549658964c2975a7bcd1a3dd3b0714a74362ed9c92683752516c8030",
+      "mode": 420,
+      "mtime_ns": 1791120926769269804
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-1440-initial.png",
+      "bytes": 842123,
+      "sha256": "badc1b5bc3300989c6f2809c774214fa364f0dbfbd4329d4dd8401d72ab7f065",
+      "mode": 420,
+      "mtime_ns": 1791120925581160890
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-390-0426.png",
+      "bytes": 295430,
+      "sha256": "d4006178e9789ab6e5cc905dcd1b3d3a87977de8ab22e30d00b788a64c602878",
+      "mode": 420,
+      "mtime_ns": 1791120927584414688
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-390-0428.png",
+      "bytes": 269130,
+      "sha256": "f8aa5edd45e6408dd991a15bb369de87e2b730d15dc7aace3d2a32642c687c86",
+      "mode": 420,
+      "mtime_ns": 1791120927805422843
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/new-390-initial.png",
+      "bytes": 230130,
+      "sha256": "f1526f660696cd9a15034bbdca4993449fbcc21b616f3910d9470ba60206308d",
+      "mode": 420,
+      "mtime_ns": 1791120927247629269
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/old-1440-0426.png",
+      "bytes": 962280,
+      "sha256": "08932cf9c6d93d5ffcee80db85b5012c783cf9bd80460a284389b99191185668",
+      "mode": 420,
+      "mtime_ns": 1791120928770053125
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/evidence/results.json",
+      "bytes": 8162,
+      "sha256": "b3255c06757b3f42371d8590728c40e93dd75d40c120f423449c9b4dcdc1357f",
+      "mode": 420,
+      "mtime_ns": 1791120929437074038
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/.DS_Store",
+      "bytes": 6148,
+      "sha256": "7a515c45d9dd948c82c6ae4a111bf326534c1542ae210876c736d744fe5ddabb",
+      "mode": 420,
+      "mtime_ns": 1791362251432934012
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/QA.md",
+      "bytes": 3359,
+      "sha256": "267812947a738ef0379191c382c734abfdb3082466b439c27bced3bf94e3e16c",
+      "mode": 420,
+      "mtime_ns": 1791120379355747916
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/budget-checks.json",
+      "bytes": 919,
+      "sha256": "5ab0b7240b19cccdc58300ffd640b963fb2b9c0b9b663d8645496681dcc154dc",
+      "mode": 420,
+      "mtime_ns": 1791120379330778836
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/derive.cjs",
+      "bytes": 5216,
+      "sha256": "049b1f3a629934bbfc84ae18c8b82304a56a05c8e2eaa5044f225ff9c62e5ea2",
+      "mode": 420,
+      "mtime_ns": 1791120326900058964
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/generation.json",
+      "bytes": 13081,
+      "sha256": "fcba058e512a441b6ef0307bd5455589ca85bd06b4f8632f14abcfb88b44460b",
+      "mode": 420,
+      "mtime_ns": 1791120331847645547
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/original/archive-folder-v2.png",
+      "bytes": 3318815,
+      "sha256": "c98cfdc695b3e2149b636daf6145fcfac3b76b14be93bb17c8c1660a7ecf6466",
+      "mode": 420,
+      "mtime_ns": 1791120327239929264
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/prompt.json",
+      "bytes": 3168,
+      "sha256": "c84a76ebade04476b1e655a89ca3c96c7fc096de6cf38d07a98f9b1c724f97b1",
+      "mode": 420,
+      "mtime_ns": 1791120198602563563
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/folder/runtime/archive-folder-v2.webp",
+      "bytes": 78758,
+      "sha256": "8a0088a45f8a2835a1dde1e979b2f8e84c718e6530c7b3e555a1035de1c588ba",
+      "mode": 420,
+      "mtime_ns": 1791120331784004148
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/.DS_Store",
+      "bytes": 6148,
+      "sha256": "6b6e65fdf35818cc35f3e03273bcd71c5b0efab3b967e1f83cd5b9a3a9daef50",
+      "mode": 420,
+      "mtime_ns": 1791362251435886665
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/derive.cjs",
+      "bytes": 2439,
+      "sha256": "2e655e24eebad81bebc7c9cbf89921be9a6f1b423a0b250054da59d088ccc109",
+      "mode": 420,
+      "mtime_ns": 1791120352762350346
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/generation.json",
+      "bytes": 4636,
+      "sha256": "d19302b9faa9913f569280c499cd5a6bd3e51e146fd55df3be52ed1358d3a1c5",
+      "mode": 420,
+      "mtime_ns": 1791120353301864456
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/originals/archive-paper-ivory.png",
+      "bytes": 2390312,
+      "sha256": "6d855f56276ff9ecb5aac033efb50d726a92c1201f9cc1102dc2556284a21626",
+      "mode": 420,
+      "mtime_ns": 1791120353165796419
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/originals/archive-paper-note.png",
+      "bytes": 2611754,
+      "sha256": "7f1a8dc214c9ef293c9deae21f8f07d4e21bec1d1024303dc53f4ee089c864c3",
+      "mode": 420,
+      "mtime_ns": 1791120353237277716
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/prompts.json",
+      "bytes": 2130,
+      "sha256": "b17402b657b35d5bc35d32487b939621797fd889957c46ce791b2abc0762dc97",
+      "mode": 420,
+      "mtime_ns": 1791120186820113012
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/runtime/archive-paper-ivory.webp",
+      "bytes": 15566,
+      "sha256": "c4b7b662b5980952b19099684029e4f0533985366fe14de52680ee7fc4f8fad5",
+      "mode": 420,
+      "mtime_ns": 1791120353232029548
+    },
+    {
+      "path": "ART-ARCHIVE-MATERIALS-055/paper/runtime/archive-paper-note.webp",
+      "bytes": 21530,
+      "sha256": "ce1eb997c0c40ed38576518a2065ec8cb9a1ecc911cc7cdb14e7bd913197d954",
+      "mode": 420,
+      "mtime_ns": 1791120353300010399
+    },
+    {
+      "path": "ART-MANA-053/design.json",
+      "bytes": 675,
+      "sha256": "2641630d60e0987d025e7f42d02048cd840662e80e292fa88d52524e3a44fbb6",
+      "mode": 420,
+      "mtime_ns": 1791037717811749867
+    },
+    {
+      "path": "ART-RECORDER-028/generation.json",
+      "bytes": 3653,
+      "sha256": "d75569386730795b4ed0873bc161ca7e7d2272ed9f51b7c2e6bfb351b1d74370",
+      "mode": 420,
+      "mtime_ns": 1790856693613906496
+    },
+    {
+      "path": "ART-RECORDER-028/recorder-panel.png",
+      "bytes": 2918345,
+      "sha256": "ab0f3aa57300a10a1b02a89a3ac23ed730ef78eb17df7e57e6f0e6fd75b571c3",
+      "mode": 420,
+      "mtime_ns": 1790856692605905862
+    },
+    {
+      "path": "ART-RECORDER-028/request.json",
+      "bytes": 2457,
+      "sha256": "854fe518dc5bb7a543752a46bba0a9de8b9dbb56140cf35b472268147662c6be",
+      "mode": 420,
+      "mtime_ns": 1790856515784023604
+    },
+    {
+      "path": "ART-SCENE-052/c9-abyss-emergence.png",
+      "bytes": 2771971,
+      "sha256": "7d1c7804d14f12a24372063faebedef7edc945f45667f36931e4ca9637f03fa5",
+      "mode": 420,
+      "mtime_ns": 1791025947390651250
+    },
+    {
+      "path": "ART-SCENE-052/c9-correction-request.json",
+      "bytes": 2141,
+      "sha256": "070a270866269b69640c428edf96d8e9309cf8d375eec84e23687946a4891997",
+      "mode": 420,
+      "mtime_ns": 1791025809675326595
+    },
+    {
+      "path": "ART-SCENE-052/c9-request.json",
+      "bytes": 3583,
+      "sha256": "0499c65e400b510844aad7e31c7902cad2013577ad48dd9ddead7deb2ab59267",
+      "mode": 420,
+      "mtime_ns": 1791025700839305931
+    },
+    {
+      "path": "ART-SCENE-052/g1-headset-worn.png",
+      "bytes": 2309267,
+      "sha256": "3b8ab37fcb1904491329bcab2a2824ebfc198dc6cea1e1e95b1afe3062724892",
+      "mode": 420,
+      "mtime_ns": 1791025947715547871
+    },
+    {
+      "path": "ART-SCENE-052/g1-request.json",
+      "bytes": 3337,
+      "sha256": "3a7fd633c9d22f8e7172870cea426612de92bfd50937b0112d4386349f7b04ac",
+      "mode": 420,
+      "mtime_ns": 1791025878655436908
+    },
+    {
+      "path": "AUDIO-DARK-051/generation.json",
+      "bytes": 17446,
+      "sha256": "ca69de81316d3d1af0acca3f30cdf29c214e8f1f06eac67137b0c398d543cd67",
+      "mode": 420,
+      "mtime_ns": 1791026216457215838
+    },
+    {
+      "path": "AUDIO-DARK-051/previous-audio.json",
+      "bytes": 17671,
+      "sha256": "3b02bd0b194632ac7c640c4e1a7cb7959b690168fb5c7bf21558747bc504878f",
+      "mode": 420,
+      "mtime_ns": 1791025669158606770
+    },
+    {
+      "path": "DUEL-SFX-062/duel-sfx-audition.html",
+      "bytes": 319245,
+      "sha256": "694c2a5a0ac8bccae24272c87e835421184ccf3ac48653d1bf4940a72359f21c",
+      "mode": 384,
+      "mtime_ns": 1791296482044649874
+    },
+    {
+      "path": "DUEL-SFX-062/loudness-report.json",
+      "bytes": 2954,
+      "sha256": "717dcd960362624b3e7dec682c9b12edfcf147cfa3a75e4f0a7305d967b6c763",
+      "mode": 384,
+      "mtime_ns": 1791296482674231295
+    },
+    {
+      "path": "ENEMY-PORTRAITS/.DS_Store",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+      "mode": 420,
+      "mtime_ns": 1791362657079380209
+    },
+    {
+      "path": "ENEMY-PORTRAITS/crystal-wolf.png",
+      "bytes": 2556307,
+      "sha256": "5fc86761ef416361c7ade4726e448a95673d36f541ceb7bae217ecca18533cff",
+      "mode": 384,
+      "mtime_ns": 1790942646269236538
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-abyss-body.png",
+      "bytes": 2786729,
+      "sha256": "7ba2ad6dcecfc32d493da5091561ef37fa7302b93378ff331f971e095c8492e2",
+      "mode": 384,
+      "mtime_ns": 1790601356895123634
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-abyss-claw.png",
+      "bytes": 2617877,
+      "sha256": "7bf8a6b29619eab7e746f1096e153f0ff2b870927b152f816d06c41c62a1896f",
+      "mode": 384,
+      "mtime_ns": 1790601304055543056
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-blade.png",
+      "bytes": 2662017,
+      "sha256": "ea35062e61a18cbf59d7e5195bead1d79f55bd64d18bc687e3fb682586ecb04e",
+      "mode": 384,
+      "mtime_ns": 1790601068242617858
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-gunner.png",
+      "bytes": 2811306,
+      "sha256": "00a5215fa1e32ad269a7ab39cb3c006bf0500ceae7cb5e5a50f77661f8a2ab35",
+      "mode": 384,
+      "mtime_ns": 1790601120663607182
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-shadow.png",
+      "bytes": 2684365,
+      "sha256": "edf2249a602697edbaf23e2079b13b7ef4954def1c0819bb12c856da577ace47",
+      "mode": 384,
+      "mtime_ns": 1790601253776990392
+    },
+    {
+      "path": "ENEMY-PORTRAITS/enemy-shield.png",
+      "bytes": 2911882,
+      "sha256": "cc292f69f292d9ba46d7d9aabab45d5a0cf359941bf3cc0ff7c523675c58bdbd",
+      "mode": 384,
+      "mtime_ns": 1790601181761962349
+    },
+    {
+      "path": "HERO-DROP-FX/.DS_Store",
+      "bytes": 6148,
+      "sha256": "973bb30519110379e2b77f4c4f5ddea7336e44149aa673508a283d7cf35dcd27",
+      "mode": 420,
+      "mtime_ns": 1791362671517614992
+    },
+    {
+      "path": "HERO-DROP-FX/generated/fx-hero-backlight.png",
+      "bytes": 1613168,
+      "sha256": "0ef8c1754682878c26943b85ed8b00f2055604365ff0f7e3535e40358ea2dfeb",
+      "mode": 384,
+      "mtime_ns": 1791296490695505032
+    },
+    {
+      "path": "HERO-DROP-FX/generated/fx-hero-sigil.png",
+      "bytes": 1396903,
+      "sha256": "5db701af0f7382c74017d15652fdddcf3fd3492f6490609ff7de1a780ccd5039",
+      "mode": 384,
+      "mtime_ns": 1791296498355216999
+    },
+    {
+      "path": "KING-AWAKEN-FX/.DS_Store",
+      "bytes": 6148,
+      "sha256": "c3896bba7b07c99b083f4576ea02e1d26ccd04f11ceb0cab8371fe4438f1f11b",
+      "mode": 420,
+      "mtime_ns": 1791362683543707671
+    },
+    {
+      "path": "KING-AWAKEN-FX/king-awaken-fx-package.html",
+      "bytes": 220655,
+      "sha256": "905a4cbcd5455dbdbd2e306b8f92ca8020908defdc2e92c920e75fbab77a1be9",
+      "mode": 384,
+      "mtime_ns": 1791127395431085314
+    },
+    {
+      "path": "KING-AWAKEN-FX/king-awaken-fx-preview.html",
+      "bytes": 1699625,
+      "sha256": "f2c434571ea4b52e9af89bf1f62bfcc65b19258447340dff81fc656f03ec3c8a",
+      "mode": 384,
+      "mtime_ns": 1791158052566392202
+    },
+    {
+      "path": "KING-AWAKEN-FX/prompts-king-awaken-fx.json",
+      "bytes": 16369,
+      "sha256": "a05615ce1d93e1500a1e36486155aa9979559ce06dc4a72cf35ae3592c2736a8",
+      "mode": 384,
+      "mtime_ns": 1791127396025462206
+    },
+    {
+      "path": "KING-AWAKEN-FX/story-skill-fx.king.js",
+      "bytes": 24828,
+      "sha256": "e0015ab2ee8f7fd67c4b09e8b5d389b8af1295578cbe850842790e6b2c3d1f66",
+      "mode": 384,
+      "mtime_ns": 1791158053133559189
+    },
+    {
+      "path": "SKILL-FX-060/.DS_Store",
+      "bytes": 6148,
+      "sha256": "0c76b8c155c915d679a69b01c31960dcdf029438a492250baaa163e09cdac9ad",
+      "mode": 420,
+      "mtime_ns": 1791362830549239825
+    },
+    {
+      "path": "SKILL-FX-060/generated/atlas.json",
+      "bytes": 6900,
+      "sha256": "36661e2288227d76ded7d8624004e9d4ba37aa9aa4b99c8a129188d1f3342893",
+      "mode": 384,
+      "mtime_ns": 1791123557901124028
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-crystal-cone.png",
+      "bytes": 489814,
+      "sha256": "d24c225c09d4a2d34f04ca48ba73b359bed9a09c873f595571cb67193dfd03f1",
+      "mode": 384,
+      "mtime_ns": 1791210214076737277
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-crystal-shackle.png",
+      "bytes": 1107634,
+      "sha256": "27624fa91f0b042d07c846f8649b9c2a3452595024ea8a39cd47128c1526b5bb",
+      "mode": 384,
+      "mtime_ns": 1791123572965042495
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-crystal-spikes.png",
+      "bytes": 1263951,
+      "sha256": "5595edba7cdb2909c896efe629a307666cea6626cd4b1754116e7d8515a0a357",
+      "mode": 384,
+      "mtime_ns": 1791123593761149431
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-dust-burst.png",
+      "bytes": 720488,
+      "sha256": "fca473a61a9b0808e7233e53077cdc0290a972fedfba5cf3a018f0c6b01fb543",
+      "mode": 384,
+      "mtime_ns": 1791123602671912675
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-gold-motes.png",
+      "bytes": 288077,
+      "sha256": "fd939335170fed09bdc0fb73b2467214537e1ed7bbf38bf0e044614446015e1a",
+      "mode": 384,
+      "mtime_ns": 1791123607318538437
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-gold-shockwave.png",
+      "bytes": 648907,
+      "sha256": "648dacefee56d5fc00645ac02cff2112ff05ce7bc76d19e9bf8d3ba5946ba317",
+      "mode": 384,
+      "mtime_ns": 1791123614293343619
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-ground-fissure.png",
+      "bytes": 186159,
+      "sha256": "2fa7d64786e0d15ff2e1bc86561012a700d5163ba89c95a8525d82dcf6e5d2ac",
+      "mode": 384,
+      "mtime_ns": 1791123617491142547
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-resonance-orb.png",
+      "bytes": 381792,
+      "sha256": "9f1cf02dfc8e87a222f8ede1f519e2609ba1cbe47f13d46b9a761ad3cb050f40",
+      "mode": 384,
+      "mtime_ns": 1791123623237617441
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-resonance-ripple.png",
+      "bytes": 864205,
+      "sha256": "ee14fdafe840f50eec1b91985575df6e2b1e0581af975230e1424c7cd5f90183",
+      "mode": 384,
+      "mtime_ns": 1791123635644306038
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-rock-debris.png",
+      "bytes": 944419,
+      "sha256": "661eb53981a3e828ad934f913524593fd2e735fdeab1285b4c9f631a05c45610",
+      "mode": 384,
+      "mtime_ns": 1791123650643438853
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-shadow-smoke.png",
+      "bytes": 1150800,
+      "sha256": "b6149c8a34653a8686464746cee9d61340e1c0b0ab99ceadfa1a8d27fe782851",
+      "mode": 384,
+      "mtime_ns": 1791123672108105783
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-smoke-wisps.png",
+      "bytes": 1167404,
+      "sha256": "3bce8aa78eeb2f3337134e87dd678269a8b922a5817624dc9facde123192ff1b",
+      "mode": 384,
+      "mtime_ns": 1791123694884334707
+    },
+    {
+      "path": "SKILL-FX-060/generated/fx-sword-arc.png",
+      "bytes": 183526,
+      "sha256": "40ccb60c04a04cafae5ce3db7d366f5cfff2c24f612bc2f2f67c7d5ca95bf425",
+      "mode": 384,
+      "mtime_ns": 1791123700584948223
+    },
+    {
+      "path": "SKILL-FX-060/generated/prompts.txt",
+      "bytes": 53336,
+      "sha256": "843269125dc8d93f40bf97d21dc0f2bd7d2636634d529f96c3971d6c21746093",
+      "mode": 384,
+      "mtime_ns": 1791123701790748745
+    },
+    {
+      "path": "SKILL-FX-060/preview/gen_skill_fx_sfx.py",
+      "bytes": 14538,
+      "sha256": "6308325b55f066c9938c39ba4f8b5ae9d0c2b10fca1efbc287b9a0a7f41bc1a5",
+      "mode": 384,
+      "mtime_ns": 1791125109996317775
+    },
+    {
+      "path": "SKILL-FX-060/preview/skill-fx-sfx.js",
+      "bytes": 4822,
+      "sha256": "50ff332be899734a84e96c611cb80b975c688cc835eb4d97c824e46d8b70da72",
+      "mode": 384,
+      "mtime_ns": 1791124379291931516
+    },
+    {
+      "path": "SKILL-FX-060/preview/story-skill-fx.js",
+      "bytes": 19611,
+      "sha256": "57cae019def2fb8fa89679f563bc2ab564dd3d2997da293342b82b211aba751d",
+      "mode": 384,
+      "mtime_ns": 1791125111521842492
+    },
+    {
+      "path": "STORY-ART-020/.DS_Store",
+      "bytes": 6148,
+      "sha256": "a4b5704b8bf8e694f2090810f3b31dc8bc037d2955cff1a5af8fc78ed09135c5",
+      "mode": 420,
+      "mtime_ns": 1791362880624264960
+    },
+    {
+      "path": "STORY-ART-020/C4-archive-cabinet-package.html",
+      "bytes": 1644777,
+      "sha256": "7d2bc5eef595893e76e8c20f8dba48790f7a11aadf92584e75f5ebfa2a6f6f39",
+      "mode": 384,
+      "mtime_ns": 1790949985930187709
+    },
+    {
+      "path": "STORY-ART-020/C4-archive-closeup-package.html",
+      "bytes": 496545,
+      "sha256": "2dd5205b9b337cb9412efb1408538350f9e919ff4ff39df7ef954e8e13c53254",
+      "mode": 384,
+      "mtime_ns": 1790951305984062683
+    },
+    {
+      "path": "STORY-ART-020/C9-ABYSS-C8-MAP-package.html",
+      "bytes": 269525,
+      "sha256": "0b1d01e476b7d37fb1546d49365c5ebd4fb4bd3776afbcd0c51ee5d14ef75956",
+      "mode": 420,
+      "mtime_ns": 1791289276290535106
+    },
+    {
+      "path": "STORY-ART-020/C9-abyss-regen-package.html",
+      "bytes": 1011852,
+      "sha256": "bd14fcf17ff18fcaca8ffa322862961090271940d5ca0b0b7b8a537495f6751b",
+      "mode": 384,
+      "mtime_ns": 1791044611685671877
+    },
+    {
+      "path": "STORY-ART-020/__pycache__/_make_ref_sheets.cpython-310.pyc",
+      "bytes": 3931,
+      "sha256": "d59a6e9101428c50da5b7a913f38a717f1878b09201643b815bf8cecd325ea0b",
+      "mode": 384,
+      "mtime_ns": 1790946981653598830
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/a1-eve-storms-out.png",
+      "bytes": 2640525,
+      "sha256": "63a92dd6cc4a9fa57b417175824abc590d3e31b528c6679c210ac56b86c117e7",
+      "mode": 384,
+      "mtime_ns": 1791038413359219121
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/a2-herman-recoil.png",
+      "bytes": 2549151,
+      "sha256": "47def3a0660cdcf48150850e4126a2711e5a1b2a3222a72e3e74c9fd3d384709",
+      "mode": 384,
+      "mtime_ns": 1791117374970657018
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/b1-shuo-aftermath.png",
+      "bytes": 2466082,
+      "sha256": "9a3baddb745f15af5eacc7df38c303ce1a767045241ac4f983f10e2021d62c26",
+      "mode": 384,
+      "mtime_ns": 1791117373832433024
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/b1-shuo-wolves.png",
+      "bytes": 3034169,
+      "sha256": "1c1c21a92651e203fa3e233fc73825af065e99b36773930799e49e4a9f1824a1",
+      "mode": 384,
+      "mtime_ns": 1791038418592400532
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/b2-city-bookmark.png",
+      "bytes": 2278688,
+      "sha256": "6d06224c0a51f63d05f55b7b80f02f83b9a8a6aea280a8a58e634bcf7b759643",
+      "mode": 384,
+      "mtime_ns": 1791038424715910727
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/bg-deepholm-mine.png",
+      "bytes": 2989920,
+      "sha256": "87d4cec619d258663fe3e00e934929ea920ec81a7b30611f879e52e11c4ee737",
+      "mode": 384,
+      "mtime_ns": 1791038430947340862
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/bg-mine-lab.png",
+      "bytes": 3050582,
+      "sha256": "8bdbd294127793a24521da4f7bace762335d76f452be980bae3dbfc01f5e2adf",
+      "mode": 384,
+      "mtime_ns": 1791038436835681369
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/c4-archive-meeting.png",
+      "bytes": 2455555,
+      "sha256": "b55163c54967529621726d02ada679673c99642854b99cd0ecac41d06694f634",
+      "mode": 384,
+      "mtime_ns": 1791038442122213746
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/c4-rin-joins.png",
+      "bytes": 2420925,
+      "sha256": "e43537ae84f2cc2e496881b24886f5cc7a4fb768c5235b7ed3e3dfc50ffae7d0",
+      "mode": 384,
+      "mtime_ns": 1791038445769442322
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/c5-eve-gun-rin.png",
+      "bytes": 2865317,
+      "sha256": "7892c118ba389fff41dee6bcfd53c05f38cd1033607a08c40e7e5cb5356f58ac",
+      "mode": 384,
+      "mtime_ns": 1791038449608253355
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/c9-abyss-clash.png",
+      "bytes": 2760005,
+      "sha256": "fac1188e92e192de6b0007d355f2dbf82f702ea4fdd3bfd7f77c4dadb013870d",
+      "mode": 384,
+      "mtime_ns": 1791117371362673735
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/e3-lab-safe.png",
+      "bytes": 2697122,
+      "sha256": "d0f10e7b5b55fdc5c51b085a40c72003eb88369db0404d126b04d1527c2c079f",
+      "mode": 384,
+      "mtime_ns": 1791038453583401725
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/e3-letter.png",
+      "bytes": 2525664,
+      "sha256": "5e85e426fc13324096d6c299e71ea93dba70dde308889ef2f5ecfaa0bc8e8353",
+      "mode": 384,
+      "mtime_ns": 1791038456908738532
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/e3-rin-rooftop.png",
+      "bytes": 2686063,
+      "sha256": "dc762472c20437d066b290ef18a5d452463a62141546aa933a33d95db13bcdf6",
+      "mode": 384,
+      "mtime_ns": 1791038460877136979
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/enemy-griffin.png",
+      "bytes": 2635301,
+      "sha256": "b3dbf2468b1b8b4f737e31c84c3cef73dde7fe30efe4be0f2fc1197f793ff8c4",
+      "mode": 384,
+      "mtime_ns": 1791038465002913554
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/farewell-outskirts.png",
+      "bytes": 3039116,
+      "sha256": "4ed6d3533feec2db88dc590ec9ec604874bf8ed57fc15670d89f8e5f966cd2a8",
+      "mode": 384,
+      "mtime_ns": 1791038469011812421
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/herman-battle.png",
+      "bytes": 2844228,
+      "sha256": "7768af047570ee49fe99c5b0cfc45d16d89786182abdaada1fdab0c501d07bf1",
+      "mode": 384,
+      "mtime_ns": 1791122899536939796
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/ito-battle.png",
+      "bytes": 2751598,
+      "sha256": "ad93d061667097361c38f6f194a8f7f5b5eca4ba3fd49f8b6b6fd4a43e9dc82b",
+      "mode": 384,
+      "mtime_ns": 1791122859863799736
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/ito-sprite.png",
+      "bytes": 3095295,
+      "sha256": "765a0862880431345e568f1a5a173a651e4417adc56b2b894afcf2e0244feed0",
+      "mode": 384,
+      "mtime_ns": 1791122843396587136
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/mine-gran-last-stand.png",
+      "bytes": 2652036,
+      "sha256": "88a8cf91a84b1b1413a1508f39f213dff6da7e4765c8324809f56eaf0170163c",
+      "mode": 384,
+      "mtime_ns": 1791038472774039373
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/mine-griffin-battle.png",
+      "bytes": 3286148,
+      "sha256": "514536956e6c0177c200a2eb027eb081fc43c8255c8da4a6a5585f1a67958028",
+      "mode": 384,
+      "mtime_ns": 1791038477972341770
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/mine-narva-wounded.png",
+      "bytes": 2938259,
+      "sha256": "9beb89beb288be160ca348e9bb1fe29e4c0e71a2e904e0756adb40c07270269b",
+      "mode": 384,
+      "mtime_ns": 1791038482874130421
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/mine-recorder.png",
+      "bytes": 2824658,
+      "sha256": "327c45c710a54c926399d2531d4cefb03332a4b8008dcaa6c014fdc9ad834700",
+      "mode": 384,
+      "mtime_ns": 1791038488033094096
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/p1-morwell-ruins.png",
+      "bytes": 2745606,
+      "sha256": "8d1f4bb2c97bbb5f5dc2c92e5edd3f8cca0ab9912443d7cf560f14d0a10ac499",
+      "mode": 384,
+      "mtime_ns": 1791117370195086672
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/p3-notice-board.png",
+      "bytes": 2608626,
+      "sha256": "8678f719e578ec0475e320c5a7f51961d5ee26215279a491d623f52625f5ee50",
+      "mode": 384,
+      "mtime_ns": 1791117368834073810
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/prologue-bell-prayer.png",
+      "bytes": 2826310,
+      "sha256": "15ef31bbfc608eff23bacb637e21966739924e35e07a266b8303ede448a78552",
+      "mode": 384,
+      "mtime_ns": 1791038492038404628
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/prologue-nightfall.png",
+      "bytes": 2865143,
+      "sha256": "b0163e0def00e811f21fd7cc7ffe1c27ba54e617639e9f19c26f3dd6251c9de8",
+      "mode": 384,
+      "mtime_ns": 1791038496350440134
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/prologue-vesperland.png",
+      "bytes": 2362709,
+      "sha256": "b6f124e019cc293afe43399e919911cfe4053335c9ccaf26cc7558991fa23aca",
+      "mode": 384,
+      "mtime_ns": 1791038499651052566
+    },
+    {
+      "path": "STORY-ART-020/_incoming-050/truth-table.png",
+      "bytes": 2578932,
+      "sha256": "d8a19b9faa72544a58837d89828cacd7d32e424e246c308b659a235c17a25ea2",
+      "mode": 384,
+      "mtime_ns": 1791038503361586201
+    },
+    {
+      "path": "STORY-ART-020/_make_archive_cabinet_refs.py",
+      "bytes": 3284,
+      "sha256": "ae18c34027122c8508c404fa50003be0a7805597001a86bc1feaf5c734d3ca01",
+      "mode": 420,
+      "mtime_ns": 1790947064539998341
+    },
+    {
+      "path": "STORY-ART-020/_make_archive_closeup_refs.py",
+      "bytes": 2709,
+      "sha256": "d45d54f7a9f56d6893af6fa221063f62cce83270642cc02421c8ad4122c55945",
+      "mode": 420,
+      "mtime_ns": 1790951266406863773
+    },
+    {
+      "path": "STORY-ART-020/_make_c9_map_kit.py",
+      "bytes": 10059,
+      "sha256": "3573dbcec8901a04a816ff63bd1088c14ecd7786f8603ad62b4ef1a07498f50c",
+      "mode": 420,
+      "mtime_ns": 1791289275746853127
+    },
+    {
+      "path": "STORY-ART-020/_make_h1_fallen_kit.py",
+      "bytes": 5412,
+      "sha256": "d0c2df14570f9d71a5ea844841834045add2b8fd1506b423d769224ca06e8e96",
+      "mode": 384,
+      "mtime_ns": 1791211332803454157
+    },
+    {
+      "path": "STORY-ART-020/_make_h2_coin_kit.py",
+      "bytes": 25327,
+      "sha256": "1bf87c73d29f4aa8a9a8190cdb9ceb60a270b2ac38a49434e6b50fb44421e3f9",
+      "mode": 384,
+      "mtime_ns": 1791206088286334372
+    },
+    {
+      "path": "STORY-ART-020/_make_h2_night_aim_kit.py",
+      "bytes": 5024,
+      "sha256": "ddaeaec047626b707097e59ef2f3be504c49356c60fe948cb402f8c13145af1a",
+      "mode": 420,
+      "mtime_ns": 1791290072213073215
+    },
+    {
+      "path": "STORY-ART-020/_make_h2_sun_draw_kit.py",
+      "bytes": 4988,
+      "sha256": "16a013b1303432ca47438d4a70b8e21ce6ee23d74fddb081a16deec9150bd95f",
+      "mode": 420,
+      "mtime_ns": 1791289498213452379
+    },
+    {
+      "path": "STORY-ART-020/_make_missing_kit_0410.py",
+      "bytes": 10027,
+      "sha256": "6e75630fad1a7b793365b0170311562f9f6f8ac4636b484f48c653e544cf99ea",
+      "mode": 420,
+      "mtime_ns": 1791075083070132251
+    },
+    {
+      "path": "STORY-ART-020/_make_ref_sheets.py",
+      "bytes": 3564,
+      "sha256": "22cd2bd8a15d139836f131f68664108823031f27ea17e87c1547fea39f473f65",
+      "mode": 420,
+      "mtime_ns": 1790945065862118480
+    },
+    {
+      "path": "STORY-ART-020/_make_royal_kit.py",
+      "bytes": 9793,
+      "sha256": "2fd97d866cbafbd72bde4476ef7dc32647dab03a7597a757b580863e6f0a367e",
+      "mode": 420,
+      "mtime_ns": 1791290391066448131
+    },
+    {
+      "path": "STORY-ART-020/_make_scene_audit_kit.py",
+      "bytes": 14370,
+      "sha256": "0517921d74b96a08378dcf967ea422c2981facccd198d0c8829aecf6127a1354",
+      "mode": 420,
+      "mtime_ns": 1791207960954928779
+    },
+    {
+      "path": "STORY-ART-020/a1-eve-storms-out.png",
+      "bytes": 2640525,
+      "sha256": "63a92dd6cc4a9fa57b417175824abc590d3e31b528c6679c210ac56b86c117e7",
+      "mode": 384,
+      "mtime_ns": 1791038413359219121
+    },
+    {
+      "path": "STORY-ART-020/a2-herman-picks-gun.png",
+      "bytes": 2585631,
+      "sha256": "2864eb30ddee92101d45c48d514b0151e431690931141bcfe823872de99b9a71",
+      "mode": 384,
+      "mtime_ns": 1790949991202642059
+    },
+    {
+      "path": "STORY-ART-020/a2-herman-recoil.png",
+      "bytes": 2549151,
+      "sha256": "47def3a0660cdcf48150850e4126a2711e5a1b2a3222a72e3e74c9fd3d384709",
+      "mode": 384,
+      "mtime_ns": 1791117374970657018
+    },
+    {
+      "path": "STORY-ART-020/a3-chiwu-outside.png",
+      "bytes": 2304016,
+      "sha256": "cdf41fbcd196cbfcce1439cbab307e3901ba3e1058304edd4939b613a36c82a3",
+      "mode": 384,
+      "mtime_ns": 1791211336295666690
+    },
+    {
+      "path": "STORY-ART-020/archive-cabinet-body.png",
+      "bytes": 1771471,
+      "sha256": "7d85cb7a1f7ca79254d2ff8b1966626b17e1cdc19727d87118e9fc5e522dda5c",
+      "mode": 384,
+      "mtime_ns": 1790950694840634251
+    },
+    {
+      "path": "STORY-ART-020/archive-drawer-closeup.png",
+      "bytes": 2250238,
+      "sha256": "1b633032a37ce4d4321c7e8f36e6a192043c4c2bfea5b7ade0a023d0350a1529",
+      "mode": 384,
+      "mtime_ns": 1791019626372150991
+    },
+    {
+      "path": "STORY-ART-020/archive-drawer-front.png",
+      "bytes": 1603563,
+      "sha256": "d49f19a2730193a75a059f1d66fb614fb16a46d265574de536a0cfc6349cb66e",
+      "mode": 384,
+      "mtime_ns": 1790950701989497703
+    },
+    {
+      "path": "STORY-ART-020/archive-folder.png",
+      "bytes": 2560686,
+      "sha256": "72a5c1d9890401706d45e1ce4c81c56c2348331aad495e8b3636f75d85291a6e",
+      "mode": 384,
+      "mtime_ns": 1791019624373393735
+    },
+    {
+      "path": "STORY-ART-020/b1-chapter-cover.png",
+      "bytes": 2645792,
+      "sha256": "00e5777e580267c761530fa7b3ccc1f387b3b448c1881af62ed2ce776ec32157",
+      "mode": 384,
+      "mtime_ns": 1790949987718210203
+    },
+    {
+      "path": "STORY-ART-020/b1-shuo-aftermath.png",
+      "bytes": 2466082,
+      "sha256": "9a3baddb745f15af5eacc7df38c303ce1a767045241ac4f983f10e2021d62c26",
+      "mode": 384,
+      "mtime_ns": 1791117373832433024
+    },
+    {
+      "path": "STORY-ART-020/b1-shuo-wolves.png",
+      "bytes": 3034169,
+      "sha256": "1c1c21a92651e203fa3e233fc73825af065e99b36773930799e49e4a9f1824a1",
+      "mode": 384,
+      "mtime_ns": 1791038418592400532
+    },
+    {
+      "path": "STORY-ART-020/b1-soldiers-arrive.png",
+      "bytes": 2189145,
+      "sha256": "a7bb2a4c5f90859e2554864d99db6ca8d972f14281c350a9ff55149f7866bd83",
+      "mode": 384,
+      "mtime_ns": 1791211317794510689
+    },
+    {
+      "path": "STORY-ART-020/b1-wolf-battle.png",
+      "bytes": 2994112,
+      "sha256": "db8417364d49fec1c842755bf0c9da57dd3bf1637157701d9b95900537855377",
+      "mode": 384,
+      "mtime_ns": 1790943857568943198
+    },
+    {
+      "path": "STORY-ART-020/b2-city-bookmark.png",
+      "bytes": 2278688,
+      "sha256": "6d06224c0a51f63d05f55b7b80f02f83b9a8a6aea280a8a58e634bcf7b759643",
+      "mode": 384,
+      "mtime_ns": 1791038424715910727
+    },
+    {
+      "path": "STORY-ART-020/bg-deepholm-mine.png",
+      "bytes": 2989920,
+      "sha256": "87d4cec619d258663fe3e00e934929ea920ec81a7b30611f879e52e11c4ee737",
+      "mode": 384,
+      "mtime_ns": 1791038430947340862
+    },
+    {
+      "path": "STORY-ART-020/bg-mine-lab.png",
+      "bytes": 3050582,
+      "sha256": "8bdbd294127793a24521da4f7bace762335d76f452be980bae3dbfc01f5e2adf",
+      "mode": 384,
+      "mtime_ns": 1791038436835681369
+    },
+    {
+      "path": "STORY-ART-020/c4-archive-meeting.png",
+      "bytes": 2455555,
+      "sha256": "b55163c54967529621726d02ada679673c99642854b99cd0ecac41d06694f634",
+      "mode": 384,
+      "mtime_ns": 1791038442122213746
+    },
+    {
+      "path": "STORY-ART-020/c4-archive.png",
+      "bytes": 2222269,
+      "sha256": "6e6e90f12174752e5af2697d7ae06cbd5dc8a53d5b9092a02df4026abd17b89f",
+      "mode": 384,
+      "mtime_ns": 1790594325941670655
+    },
+    {
+      "path": "STORY-ART-020/c4-inner.png",
+      "bytes": 2333858,
+      "sha256": "f0bc29ee13c156d941c1fac79db937d44a0cc9d060a2226a1451c2b5e57a047f",
+      "mode": 384,
+      "mtime_ns": 1790594725321347889
+    },
+    {
+      "path": "STORY-ART-020/c4-outer-blockade.png",
+      "bytes": 2038602,
+      "sha256": "78fbdb7d7725a4b54e18a9d52026c2248371c6a57a33f0591c6f6ae983788033",
+      "mode": 384,
+      "mtime_ns": 1791211287925480853
+    },
+    {
+      "path": "STORY-ART-020/c4-outer.png",
+      "bytes": 2322277,
+      "sha256": "2b9a289c2124161642e164344a7cc2a48e85cbf2da1937573a2b8c9c70e414f5",
+      "mode": 384,
+      "mtime_ns": 1790594323439644616
+    },
+    {
+      "path": "STORY-ART-020/c4-rin-joins.png",
+      "bytes": 2420925,
+      "sha256": "e43537ae84f2cc2e496881b24886f5cc7a4fb768c5235b7ed3e3dfc50ffae7d0",
+      "mode": 384,
+      "mtime_ns": 1791038445769442322
+    },
+    {
+      "path": "STORY-ART-020/c5-eve-gun-rin.png",
+      "bytes": 2865317,
+      "sha256": "7892c118ba389fff41dee6bcfd53c05f38cd1033607a08c40e7e5cb5356f58ac",
+      "mode": 384,
+      "mtime_ns": 1791038449608253355
+    },
+    {
+      "path": "STORY-ART-020/c9-abyss-clash-corrected.png",
+      "bytes": 2783037,
+      "sha256": "463f7087153665fa17bcd42d5bc1c9cbc5dd4999f6da30bcb0c34a6f5a23534f",
+      "mode": 384,
+      "mtime_ns": 1791290293041842605
+    },
+    {
+      "path": "STORY-ART-020/c9-abyss-clash.png",
+      "bytes": 2760005,
+      "sha256": "fac1188e92e192de6b0007d355f2dbf82f702ea4fdd3bfd7f77c4dadb013870d",
+      "mode": 384,
+      "mtime_ns": 1791117371362673735
+    },
+    {
+      "path": "STORY-ART-020/c9-abyss-emergence-v3.png",
+      "bytes": 3017688,
+      "sha256": "0d132724fb75489302fb9e6de514f1f944440e8d939c9582ad2f63c285524801",
+      "mode": 384,
+      "mtime_ns": 1791045359110615970
+    },
+    {
+      "path": "STORY-ART-020/c9-zone.png",
+      "bytes": 2616075,
+      "sha256": "796cf6bcf881acf63d97657d17de1fe0e6c729270c064d0d11fa55e052cda880",
+      "mode": 384,
+      "mtime_ns": 1790595882244287929
+    },
+    {
+      "path": "STORY-ART-020/d1-corrected.png",
+      "bytes": 2366159,
+      "sha256": "69e6ca4203ca11507adfc442aa237e76ee60a51df2513ac27894fd38b0810547",
+      "mode": 384,
+      "mtime_ns": 1790503987609826588
+    },
+    {
+      "path": "STORY-ART-020/d1.png",
+      "bytes": 2529981,
+      "sha256": "fe0ecc1157a274f859cca188247ebd60f0d8960cc8e62c72abe0354c57f7b343",
+      "mode": 384,
+      "mtime_ns": 1790501947801286688
+    },
+    {
+      "path": "STORY-ART-020/d2-reunion.png",
+      "bytes": 2813521,
+      "sha256": "08c39adfb9bffaf6d21944742083154ca64130f4bde7642c2e2f4f522ced543b",
+      "mode": 384,
+      "mtime_ns": 1790682240543048096
+    },
+    {
+      "path": "STORY-ART-020/d2.png",
+      "bytes": 2791146,
+      "sha256": "0098ccc19a206c4a33489df6b7d9e0f635acfd04669c8e8ac0e00c61128954ab",
+      "mode": 384,
+      "mtime_ns": 1790502078866243047
+    },
+    {
+      "path": "STORY-ART-020/d3.png",
+      "bytes": 2718528,
+      "sha256": "e18d329054c84958a44bf8eab0cdfc814d2f48b5a8639c524f59f54abf7cf740",
+      "mode": 384,
+      "mtime_ns": 1790503874497932882
+    },
+    {
+      "path": "STORY-ART-020/d4.png",
+      "bytes": 2725549,
+      "sha256": "0a2f5336196bc9ae59b624674cfe81ae8e3f54c40f53a2fafa7b67868a2d91cd",
+      "mode": 384,
+      "mtime_ns": 1790503158944110406
+    },
+    {
+      "path": "STORY-ART-020/d5.png",
+      "bytes": 2704812,
+      "sha256": "b62943f4632a54e9ba75b394cf33fa2b16281f49d27bcc586e1ecbfd0506bd71",
+      "mode": 384,
+      "mtime_ns": 1790594318911408090
+    },
+    {
+      "path": "STORY-ART-020/d6.png",
+      "bytes": 2733564,
+      "sha256": "76377567d716ba6d3b81b7b388d596fbe9fe3ab3216bfd0d5791b45a2f7ff9c0",
+      "mode": 384,
+      "mtime_ns": 1790594321303140923
+    },
+    {
+      "path": "STORY-ART-020/d7.png",
+      "bytes": 2626204,
+      "sha256": "c116315a949a8a739fba915bfb258d9c3d98b60580d65a95b21ebb0d0cc574b9",
+      "mode": 384,
+      "mtime_ns": 1790503823206250149
+    },
+    {
+      "path": "STORY-ART-020/derive.py",
+      "bytes": 2399,
+      "sha256": "72561e5af72523cf5452d01db14bb9028578ba73cca84ebeb054e2ceb8dd8e3c",
+      "mode": 384,
+      "mtime_ns": 1790950722578467926
+    },
+    {
+      "path": "STORY-ART-020/e3-lab-safe.png",
+      "bytes": 2697122,
+      "sha256": "d0f10e7b5b55fdc5c51b085a40c72003eb88369db0404d126b04d1527c2c079f",
+      "mode": 384,
+      "mtime_ns": 1791038453583401725
+    },
+    {
+      "path": "STORY-ART-020/e3-letter.png",
+      "bytes": 2525664,
+      "sha256": "5e85e426fc13324096d6c299e71ea93dba70dde308889ef2f5ecfaa0bc8e8353",
+      "mode": 384,
+      "mtime_ns": 1791038456908738532
+    },
+    {
+      "path": "STORY-ART-020/e3-rin-rooftop.png",
+      "bytes": 2686063,
+      "sha256": "dc762472c20437d066b290ef18a5d452463a62141546aa933a33d95db13bcdf6",
+      "mode": 384,
+      "mtime_ns": 1791038460877136979
+    },
+    {
+      "path": "STORY-ART-020/enemy-griffin.png",
+      "bytes": 2635301,
+      "sha256": "b3dbf2468b1b8b4f737e31c84c3cef73dde7fe30efe4be0f2fc1197f793ff8c4",
+      "mode": 384,
+      "mtime_ns": 1791038465002913554
+    },
+    {
+      "path": "STORY-ART-020/f1.png",
+      "bytes": 2595468,
+      "sha256": "8b5ae7b09010abc8db1fd50885cc83ac6566403780c6979786a06c5615b670e0",
+      "mode": 384,
+      "mtime_ns": 1790595868346677666
+    },
+    {
+      "path": "STORY-ART-020/f2-dispatch.png",
+      "bytes": 2439969,
+      "sha256": "a00d0bc37dc4619b8e282770eeb7f83823d216fc8919c4d30fdb3432638304ad",
+      "mode": 384,
+      "mtime_ns": 1790682243373877843
+    },
+    {
+      "path": "STORY-ART-020/f3-ramp.png",
+      "bytes": 2949775,
+      "sha256": "57107ed412ba3460fbed6a1e08815d34b41017f66302dfe56df1c5b0af0c81df",
+      "mode": 384,
+      "mtime_ns": 1790682245921038282
+    },
+    {
+      "path": "STORY-ART-020/f4.png",
+      "bytes": 2857742,
+      "sha256": "23e825018aa999de5b696a691f88fbb20a2b04d6f8407cde163308bf70926b73",
+      "mode": 384,
+      "mtime_ns": 1790595874612191769
+    },
+    {
+      "path": "STORY-ART-020/farewell-outskirts.png",
+      "bytes": 3039116,
+      "sha256": "4ed6d3533feec2db88dc590ec9ec604874bf8ed57fc15670d89f8e5f966cd2a8",
+      "mode": 384,
+      "mtime_ns": 1791038469011812421
+    },
+    {
+      "path": "STORY-ART-020/father-wounded-corrected.png",
+      "bytes": 2727032,
+      "sha256": "212cb37a1d9f14472abf2aba5d832ca2b1d91e93b3122bc96650ee60bd69ea05",
+      "mode": 384,
+      "mtime_ns": 1790502930586808715
+    },
+    {
+      "path": "STORY-ART-020/father-wounded.png",
+      "bytes": 2922002,
+      "sha256": "9f0ca11c42f53ffdcdbd28f91abc01bbab95b9855377306c5911999269072a21",
+      "mode": 384,
+      "mtime_ns": 1790501915046646658
+    },
+    {
+      "path": "STORY-ART-020/g1-table.png",
+      "bytes": 2198675,
+      "sha256": "91ecd0d97ba537262652ef2d563f0237f8ab9cbd321f101492dca73b13c69e74",
+      "mode": 384,
+      "mtime_ns": 1790682248673602343
+    },
+    {
+      "path": "STORY-ART-020/g1.png",
+      "bytes": 2423657,
+      "sha256": "affede58efddd7dddefa213764a6791956c4121567adbb09257c8ae0f5c3a507",
+      "mode": 384,
+      "mtime_ns": 1790595878154155118
+    },
+    {
+      "path": "STORY-ART-020/generation-attempts.json",
+      "bytes": 7092,
+      "sha256": "c65fbed7f320864a1eae1cfefd5bb7d840e9128245fbc497d63f3530ce70cbe9",
+      "mode": 384,
+      "mtime_ns": 1790513339665864558
+    },
+    {
+      "path": "STORY-ART-020/h1-ending.png",
+      "bytes": 2885111,
+      "sha256": "427b924ba42b92a042eabec10d795340c8fc4a9f66c7d4a6d72de19b2ac53623",
+      "mode": 384,
+      "mtime_ns": 1790946042213587052
+    },
+    {
+      "path": "STORY-ART-020/h1-louis-fallen-050-kit.html",
+      "bytes": 172964,
+      "sha256": "0c71ec68b9111080c89d619936c28ccc1dabe9064d4a45f2d96a5112f628e0e3",
+      "mode": 420,
+      "mtime_ns": 1791211336310838027
+    },
+    {
+      "path": "STORY-ART-020/h1-louis-fallen.png",
+      "bytes": 2661686,
+      "sha256": "dace882cd946d6f75e5528cbb39382f2574368148bde216ffc7dbf0d38f914bd",
+      "mode": 384,
+      "mtime_ns": 1791212451525153107
+    },
+    {
+      "path": "STORY-ART-020/h2-bell-explosion.png",
+      "bytes": 2990805,
+      "sha256": "df37e45449a4df4eeb9a10a58707682323b482d5288a5a44de512f90ac34ae15",
+      "mode": 384,
+      "mtime_ns": 1791210079722707275
+    },
+    {
+      "path": "STORY-ART-020/h2-coin-art-kit.html",
+      "bytes": 1899678,
+      "sha256": "cf77762d3f026263d6a5a8fb6b2b56634e05de3f4927aeff8205765ea2bbb940",
+      "mode": 420,
+      "mtime_ns": 1791206091476585716
+    },
+    {
+      "path": "STORY-ART-020/h2-coin-night.png",
+      "bytes": 1982806,
+      "sha256": "e08e8b31adf102f1d3727f7f4ebe3247623ffd4bd4c42e3d53b8d1fff0fd4383",
+      "mode": 384,
+      "mtime_ns": 1791210086073313526
+    },
+    {
+      "path": "STORY-ART-020/h2-coin-sun.png",
+      "bytes": 1994444,
+      "sha256": "7f6185203d4a9772e56b02892aa9608d651c74849f3de8a19e9999f80b079a60",
+      "mode": 384,
+      "mtime_ns": 1791210093645605408
+    },
+    {
+      "path": "STORY-ART-020/h2-coin-toss.png",
+      "bytes": 2522877,
+      "sha256": "81a270806cd3413ce5e80333b4a3963d88fb7bf01966ee21ceb06aa5c5f9d5e3",
+      "mode": 384,
+      "mtime_ns": 1791210102813313201
+    },
+    {
+      "path": "STORY-ART-020/h2-crystal-charcoal.png",
+      "bytes": 2111654,
+      "sha256": "c33a1527c5fcfbdda05ca08d6833d71962492069ec7e466683c91a92439b4c84",
+      "mode": 384,
+      "mtime_ns": 1791210120535273076
+    },
+    {
+      "path": "STORY-ART-020/h2-flashback-eve-gun.png",
+      "bytes": 3046294,
+      "sha256": "1de522dc43618f41a23f12eda770723cd075e008e5f3f275c42cd883e6ba3488",
+      "mode": 384,
+      "mtime_ns": 1791210136674156771
+    },
+    {
+      "path": "STORY-ART-020/h2-frontline.png",
+      "bytes": 2751934,
+      "sha256": "641a763b0af111522e2455a1a6d5c8dc7a797e38b85abd1b35863bcb8ba9c29c",
+      "mode": 384,
+      "mtime_ns": 1791210149987288849
+    },
+    {
+      "path": "STORY-ART-020/h2-ito-arrives.png",
+      "bytes": 2860844,
+      "sha256": "e76874081fe50534a4bf8ed6bc2ff0d1064ea3b1b08f8d286cb0f8f88fb0f977",
+      "mode": 384,
+      "mtime_ns": 1791210158621161958
+    },
+    {
+      "path": "STORY-ART-020/h2-ito-gunpoint.png",
+      "bytes": 2521872,
+      "sha256": "d0b097d1193bec4916c17361ff51a5c07e0733e77eb0f6b5fda825c254d70346",
+      "mode": 384,
+      "mtime_ns": 1791210166126939201
+    },
+    {
+      "path": "STORY-ART-020/h2-night-aim-kit.html",
+      "bytes": 102921,
+      "sha256": "9eb279b7c47f65956c148e672c08a13778cf40dba87422a4901775ef9af1cf25",
+      "mode": 420,
+      "mtime_ns": 1791290072421128057
+    },
+    {
+      "path": "STORY-ART-020/h2-night-aim.png",
+      "bytes": 2615278,
+      "sha256": "c606045cc46649e18bc57ef50b87e02c971882a17da421dfa23fdfc6361de5e3",
+      "mode": 384,
+      "mtime_ns": 1791290628023651255
+    },
+    {
+      "path": "STORY-ART-020/h2-night-battle.png",
+      "bytes": 2747785,
+      "sha256": "ba14b97d3b1d4f61d51bf9aa0a67dc8f32b3db613755ff796c9ef1651b0c6e96",
+      "mode": 384,
+      "mtime_ns": 1791210172183472655
+    },
+    {
+      "path": "STORY-ART-020/h2-night-last-shot-corrected.png",
+      "bytes": 2601955,
+      "sha256": "cbf33e78854b853828ea9dec0e2bcf8f1683749ca1fca3ddde9587bac5b589e3",
+      "mode": 384,
+      "mtime_ns": 1791211214995969032
+    },
+    {
+      "path": "STORY-ART-020/h2-night-last-shot.png",
+      "bytes": 2622656,
+      "sha256": "1046cdb9c54ff6aa9e7b38ac4b1050e9bc4c32f5a56bf13b1490e29df0b4e931",
+      "mode": 384,
+      "mtime_ns": 1791210186117342333
+    },
+    {
+      "path": "STORY-ART-020/h2-rin-blocks.png",
+      "bytes": 2838444,
+      "sha256": "7071a1d2ad39406b2c65068c038144ecde1bb4cedf24774609e215e1da1e73a0",
+      "mode": 384,
+      "mtime_ns": 1791210192718945011
+    },
+    {
+      "path": "STORY-ART-020/h2-soldiers-flee.png",
+      "bytes": 2686913,
+      "sha256": "fe55d4529f089fb99714820b31104e487ed256984789f27435f33a3cb1d276c0",
+      "mode": 384,
+      "mtime_ns": 1791210199435532292
+    },
+    {
+      "path": "STORY-ART-020/h2-sun-draw-kit.html",
+      "bytes": 100701,
+      "sha256": "3655c85987049fc04133b79a4e2bc008f0e988d6ea5efea342eaacf477b40978",
+      "mode": 420,
+      "mtime_ns": 1791289498436426124
+    },
+    {
+      "path": "STORY-ART-020/h2-sun-draw.png",
+      "bytes": 2220631,
+      "sha256": "dd2c29e812529722862d5f92209d5d17b5e15d94b39b8b997ce89f74048c028a",
+      "mode": 384,
+      "mtime_ns": 1791290314578304509
+    },
+    {
+      "path": "STORY-ART-020/h2-sun-shot.png",
+      "bytes": 2940154,
+      "sha256": "a259b2b3c89a1638c26b1e2878ff8548c6ebd10dc23e7777cee59295cbe38f59",
+      "mode": 384,
+      "mtime_ns": 1791210206233956978
+    },
+    {
+      "path": "STORY-ART-020/incoming/.DS_Store",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+      "mode": 420,
+      "mtime_ns": 1791362846233348172
+    },
+    {
+      "path": "STORY-ART-020/incoming/a2-herman-picks-gun-gen.png",
+      "bytes": 2585631,
+      "sha256": "2864eb30ddee92101d45c48d514b0151e431690931141bcfe823872de99b9a71",
+      "mode": 384,
+      "mtime_ns": 1790949991202642059
+    },
+    {
+      "path": "STORY-ART-020/incoming/archive-cabinet-body-gen.png",
+      "bytes": 1771471,
+      "sha256": "7d85cb7a1f7ca79254d2ff8b1966626b17e1cdc19727d87118e9fc5e522dda5c",
+      "mode": 384,
+      "mtime_ns": 1790950694840634251
+    },
+    {
+      "path": "STORY-ART-020/incoming/archive-drawer-closeup-gen.png",
+      "bytes": 2250238,
+      "sha256": "1b633032a37ce4d4321c7e8f36e6a192043c4c2bfea5b7ade0a023d0350a1529",
+      "mode": 384,
+      "mtime_ns": 1791019626372150991
+    },
+    {
+      "path": "STORY-ART-020/incoming/archive-drawer-front-gen.png",
+      "bytes": 1603563,
+      "sha256": "d49f19a2730193a75a059f1d66fb614fb16a46d265574de536a0cfc6349cb66e",
+      "mode": 384,
+      "mtime_ns": 1790950701989497703
+    },
+    {
+      "path": "STORY-ART-020/incoming/archive-folder-gen.png",
+      "bytes": 2560686,
+      "sha256": "72a5c1d9890401706d45e1ce4c81c56c2348331aad495e8b3636f75d85291a6e",
+      "mode": 384,
+      "mtime_ns": 1791019624373393735
+    },
+    {
+      "path": "STORY-ART-020/incoming/b1-chapter-cover-gen.png",
+      "bytes": 2645792,
+      "sha256": "00e5777e580267c761530fa7b3ccc1f387b3b448c1881af62ed2ce776ec32157",
+      "mode": 384,
+      "mtime_ns": 1790949987718210203
+    },
+    {
+      "path": "STORY-ART-020/incoming/b1-wolf-battle-gen.png",
+      "bytes": 2994112,
+      "sha256": "db8417364d49fec1c842755bf0c9da57dd3bf1637157701d9b95900537855377",
+      "mode": 384,
+      "mtime_ns": 1790943857568943198
+    },
+    {
+      "path": "STORY-ART-020/incoming/c9-abyss-emergence-v3-gen.png",
+      "bytes": 3017688,
+      "sha256": "0d132724fb75489302fb9e6de514f1f944440e8d939c9582ad2f63c285524801",
+      "mode": 384,
+      "mtime_ns": 1791045359110615970
+    },
+    {
+      "path": "STORY-ART-020/incoming/d2-reunion.png",
+      "bytes": 2813521,
+      "sha256": "08c39adfb9bffaf6d21944742083154ca64130f4bde7642c2e2f4f522ced543b",
+      "mode": 384,
+      "mtime_ns": 1790682240543048096
+    },
+    {
+      "path": "STORY-ART-020/incoming/f2-dispatch.png",
+      "bytes": 2439969,
+      "sha256": "a00d0bc37dc4619b8e282770eeb7f83823d216fc8919c4d30fdb3432638304ad",
+      "mode": 384,
+      "mtime_ns": 1790682243373877843
+    },
+    {
+      "path": "STORY-ART-020/incoming/f3-ramp.png",
+      "bytes": 2949775,
+      "sha256": "57107ed412ba3460fbed6a1e08815d34b41017f66302dfe56df1c5b0af0c81df",
+      "mode": 384,
+      "mtime_ns": 1790682245921038282
+    },
+    {
+      "path": "STORY-ART-020/incoming/g1-table.png",
+      "bytes": 2198675,
+      "sha256": "91ecd0d97ba537262652ef2d563f0237f8ab9cbd321f101492dca73b13c69e74",
+      "mode": 384,
+      "mtime_ns": 1790682248673602343
+    },
+    {
+      "path": "STORY-ART-020/incoming/h1-louis-fallen-gen.png",
+      "bytes": 2885111,
+      "sha256": "427b924ba42b92a042eabec10d795340c8fc4a9f66c7d4a6d72de19b2ac53623",
+      "mode": 384,
+      "mtime_ns": 1790950285388144167
+    },
+    {
+      "path": "STORY-ART-020/louis-cutout-source.png",
+      "bytes": 683556,
+      "sha256": "209c3e50072d0f4b0e938746cd063fdccd5cbb79621a5706a74b466b96cfcebd",
+      "mode": 384,
+      "mtime_ns": 1790945053562865768
+    },
+    {
+      "path": "STORY-ART-020/manifest-before-mage-revision.json",
+      "bytes": 45549,
+      "sha256": "c5a1b33824510b67bd9bdeeae5ccfd8d4a58d9b3706aefc54133fde1305cec1b",
+      "mode": 384,
+      "mtime_ns": 1790513339678192273
+    },
+    {
+      "path": "STORY-ART-020/manifest.json",
+      "bytes": 224532,
+      "sha256": "3f16f3969db6788cc25a00fa05fc99843667171469ca9e0f5ebfef33f53d2f66",
+      "mode": 384,
+      "mtime_ns": 1791291867576853494
+    },
+    {
+      "path": "STORY-ART-020/mine-gran-last-stand.png",
+      "bytes": 2652036,
+      "sha256": "88a8cf91a84b1b1413a1508f39f213dff6da7e4765c8324809f56eaf0170163c",
+      "mode": 384,
+      "mtime_ns": 1791038472774039373
+    },
+    {
+      "path": "STORY-ART-020/mine-griffin-battle.png",
+      "bytes": 3286148,
+      "sha256": "514536956e6c0177c200a2eb027eb081fc43c8255c8da4a6a5585f1a67958028",
+      "mode": 384,
+      "mtime_ns": 1791038477972341770
+    },
+    {
+      "path": "STORY-ART-020/mine-narva-wounded.png",
+      "bytes": 2938259,
+      "sha256": "9beb89beb288be160ca348e9bb1fe29e4c0e71a2e904e0756adb40c07270269b",
+      "mode": 384,
+      "mtime_ns": 1791038482874130421
+    },
+    {
+      "path": "STORY-ART-020/mine-recorder.png",
+      "bytes": 2824658,
+      "sha256": "327c45c710a54c926399d2531d4cefb03332a4b8008dcaa6c014fdc9ad834700",
+      "mode": 384,
+      "mtime_ns": 1791038488033094096
+    },
+    {
+      "path": "STORY-ART-020/p1-morwell-ruins.png",
+      "bytes": 2745606,
+      "sha256": "8d1f4bb2c97bbb5f5dc2c92e5edd3f8cca0ab9912443d7cf560f14d0a10ac499",
+      "mode": 384,
+      "mtime_ns": 1791117370195086672
+    },
+    {
+      "path": "STORY-ART-020/p3-notice-board.png",
+      "bytes": 2608626,
+      "sha256": "8678f719e578ec0475e320c5a7f51961d5ee26215279a491d623f52625f5ee50",
+      "mode": 384,
+      "mtime_ns": 1791117368834073810
+    },
+    {
+      "path": "STORY-ART-020/prologue-bell-prayer.png",
+      "bytes": 2826310,
+      "sha256": "15ef31bbfc608eff23bacb637e21966739924e35e07a266b8303ede448a78552",
+      "mode": 384,
+      "mtime_ns": 1791038492038404628
+    },
+    {
+      "path": "STORY-ART-020/prologue-nightfall.png",
+      "bytes": 2865143,
+      "sha256": "b0163e0def00e811f21fd7cc7ffe1c27ba54e617639e9f19c26f3dd6251c9de8",
+      "mode": 384,
+      "mtime_ns": 1791038496350440134
+    },
+    {
+      "path": "STORY-ART-020/prologue-vesperland.png",
+      "bytes": 2362709,
+      "sha256": "b6f124e019cc293afe43399e919911cfe4053335c9ccaf26cc7558991fa23aca",
+      "mode": 384,
+      "mtime_ns": 1791038499651052566
+    },
+    {
+      "path": "STORY-ART-020/relay-aid.png",
+      "bytes": 2972771,
+      "sha256": "d4cbf4e920ec3207b97f6634387274f71b376dd5a8348ee426a3a70b20487dcb",
+      "mode": 384,
+      "mtime_ns": 1790501789792338056
+    },
+    {
+      "path": "STORY-ART-020/relay-device.png",
+      "bytes": 1390888,
+      "sha256": "734c57fa315dd581684c0ec2a9b5e02a89f49b78298c602092644d06eeb0cc1a",
+      "mode": 384,
+      "mtime_ns": 1790501879363895380
+    },
+    {
+      "path": "STORY-ART-020/relay-documents.png",
+      "bytes": 1731205,
+      "sha256": "cf0d8e140742dbb7bfaabb80a3792823129d6c9751943568b1c804a0e7a82ebd",
+      "mode": 384,
+      "mtime_ns": 1790502028821079290
+    },
+    {
+      "path": "STORY-ART-020/relay-exterior.png",
+      "bytes": 2976272,
+      "sha256": "b8f1fb09ab3bde00e8c8a396d629fcde0b941fef04ba38996448e250847db53d",
+      "mode": 384,
+      "mtime_ns": 1790501652478100298
+    },
+    {
+      "path": "STORY-ART-020/relay-interior.png",
+      "bytes": 2789879,
+      "sha256": "e3689da138e84a90378766bfdfa19e0e1659bc46636821142ad6ec59cfd880c7",
+      "mode": 384,
+      "mtime_ns": 1790501838517451560
+    },
+    {
+      "path": "STORY-ART-020/relay-plan.png",
+      "bytes": 2559109,
+      "sha256": "1fee4733adf0007de7801b576544dc0666a544b356599b7d3a2da58a140235c2",
+      "mode": 384,
+      "mtime_ns": 1790502249180895166
+    },
+    {
+      "path": "STORY-ART-020/reserved-king/.DS_Store",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+      "mode": 420,
+      "mtime_ns": 1791362921490479296
+    },
+    {
+      "path": "STORY-ART-020/reserved-king/crystal-rat-source.png",
+      "bytes": 2827192,
+      "sha256": "21d7565f3d58443e8c4dcce62b012fd9454bb7fe9f0f1b8f8f7207e0e1de0be1",
+      "mode": 384,
+      "mtime_ns": 1790690048921863889
+    },
+    {
+      "path": "STORY-ART-020/reserved-king/louis-corrupted.png",
+      "bytes": 2900679,
+      "sha256": "13c00b86e996868e1e50b8f0e51216622901cec5057e888d43b474d762cde368",
+      "mode": 384,
+      "mtime_ns": 1790683269808264830
+    },
+    {
+      "path": "STORY-ART-020/reserved-king/louis-normal.png",
+      "bytes": 2587730,
+      "sha256": "b1f79567aeed27cc3e28e3a9fd03f9ca2165612a7e6fb6714088caf221b9bdb4",
+      "mode": 384,
+      "mtime_ns": 1790683263603427391
+    },
+    {
+      "path": "STORY-ART-020/rin-awakened.png",
+      "bytes": 2911616,
+      "sha256": "4a7fc5b3579d265b21ace443356f44345d9cd9cd07bfc94faec5934c5f7248e5",
+      "mode": 384,
+      "mtime_ns": 1791210212514951055
+    },
+    {
+      "path": "STORY-ART-020/royal-control-corrected.png",
+      "bytes": 1866933,
+      "sha256": "873763a93cc1eaba5ee6c7f176ad932c84f450f115aa5d6645c3caa92b6abc27",
+      "mode": 384,
+      "mtime_ns": 1791291848192971369
+    },
+    {
+      "path": "STORY-ART-020/royal-control-h1.png",
+      "bytes": 2022412,
+      "sha256": "313c3db9d1ed66b736932295cd3cc03df131c2d3226f99ec6ded7d4c6c03abb0",
+      "mode": 384,
+      "mtime_ns": 1791291860524686006
+    },
+    {
+      "path": "STORY-ART-020/royal-control.png",
+      "bytes": 2309062,
+      "sha256": "cd9dd20dd1a17f54c1ca32e92de0ec07fb361b2d011aabada6285927aa8fea4a",
+      "mode": 384,
+      "mtime_ns": 1790595886179441856
+    },
+    {
+      "path": "STORY-ART-020/truth-table.png",
+      "bytes": 2578932,
+      "sha256": "d8a19b9faa72544a58837d89828cacd7d32e424e246c308b659a235c17a25ea2",
+      "mode": 384,
+      "mtime_ns": 1791038503361586201
+    },
+    {
+      "path": "STORY-C3-COMPOSITION-027/c3-shelter-ambush.png",
+      "bytes": 2744759,
+      "sha256": "f5789a677250262e69bed5e97b75fb6ecf683559a150bbac228642fb2188bec8",
+      "mode": 420,
+      "mtime_ns": 1790855140663964462
+    },
+    {
+      "path": "STORY-C3-COMPOSITION-027/generation.json",
+      "bytes": 4831,
+      "sha256": "7ceb0f0b7992cb7631ba6501e0164a25bb8e1c9695535a10dec583523922e49a",
+      "mode": 420,
+      "mtime_ns": 1790855141434731392
+    },
+    {
+      "path": "STORY-C3-COMPOSITION-027/request.json",
+      "bytes": 3138,
+      "sha256": "7a545807a13b4aeba21d6752a3ec5bae1f455c78d1600fecc3283821605b21c5",
+      "mode": 420,
+      "mtime_ns": 1790855007554610552
+    },
+    {
+      "path": "STORY-INTERACT-012/derive.py",
+      "bytes": 3143,
+      "sha256": "52ca20160a5a49e1476b0bbe0439ad11f94ec7d1b973da6cf97898256efc01f0",
+      "mode": 420,
+      "mtime_ns": 1790269260294722319
+    },
+    {
+      "path": "STORY-INTERACT-012/search-cloth.png",
+      "bytes": 1373646,
+      "sha256": "d8795739715c4f1d481ca21344a22b88fe1912c67b2b54be78891e3d32b1d37a",
+      "mode": 420,
+      "mtime_ns": 1790268937289469600
+    },
+    {
+      "path": "STORY-INTERACT-012/search-cloth.request.json",
+      "bytes": 2062,
+      "sha256": "bebd10ceee169b53b1b53a1f381e0c4cd3298ebaa5054c31bcf5f21ebc3fedb6",
+      "mode": 420,
+      "mtime_ns": 1790269260526613116
+    },
+    {
+      "path": "STORY-INTERACT-012/search-folio.png",
+      "bytes": 1602930,
+      "sha256": "f1919771ac7576e5c43491f66f12e847acd03d984456b3be28711f233fa66eaf",
+      "mode": 420,
+      "mtime_ns": 1790268862595055342
+    },
+    {
+      "path": "STORY-INTERACT-012/search-folio.request.json",
+      "bytes": 2066,
+      "sha256": "436a70642c6d36a6b6ea5f87028ea1a270553a8a71eeabf19544799798537d3c",
+      "mode": 420,
+      "mtime_ns": 1790269260408044457
+    },
+    {
+      "path": "STORY-INTERACT-012/search-panel.png",
+      "bytes": 1855723,
+      "sha256": "02bbc02fa032cfe6a4718221cdf6faf300108de86e6e6da52b17c70c03a4e96c",
+      "mode": 420,
+      "mtime_ns": 1790268993986219287
+    },
+    {
+      "path": "STORY-INTERACT-012/search-panel.request.json",
+      "bytes": 2148,
+      "sha256": "f9e94442aa06ff9fe72afb324cb484853ed7393b3e66bc119f57b0b8728092a0",
+      "mode": 420,
+      "mtime_ns": 1790269260655460477
+    },
+    {
+      "path": "STORY-MAP-ART-015/archive-mine-20261006.png",
+      "bytes": 3754333,
+      "sha256": "5fb2e56494adf050893cdd26bdb577e8000666b63e2c65d4c099e1247b58d650",
+      "mode": 384,
+      "mtime_ns": 1791290268421081823
+    },
+    {
+      "path": "STORY-MAP-ART-015/archive.png",
+      "bytes": 3754333,
+      "sha256": "5fb2e56494adf050893cdd26bdb577e8000666b63e2c65d4c099e1247b58d650",
+      "mode": 420,
+      "mtime_ns": 1791290382972946303
+    },
+    {
+      "path": "STORY-MAP-ART-015/evac.png",
+      "bytes": 3328067,
+      "sha256": "a3783d9671039a0c52c34a721266eb27ad216990244440fe265bc5c8989d09ea",
+      "mode": 420,
+      "mtime_ns": 1790273123242946267
+    },
+    {
+      "path": "STORY-MAP-ART-015/prompt-mine-map-20261006.txt",
+      "bytes": 1557,
+      "sha256": "f3e2992965811e1a286e94d851d14ebf961acacd3c44432fdb1127f157c54311",
+      "mode": 420,
+      "mtime_ns": 1791288311066240154
+    },
+    {
+      "path": "STORY-MAP-ART-015/prompts.json",
+      "bytes": 12829,
+      "sha256": "5c06dcaa89681409c69cab6e670b3d59adad8cf65c8ec0acefaadb95249727df",
+      "mode": 420,
+      "mtime_ns": 1790274829221416473
+    },
+    {
+      "path": "STORY-NARVA-025/.DS_Store",
+      "bytes": 6148,
+      "sha256": "c728b55b5d65b08b1827bccb5b768408df1e890cd23ffc359f325b749b7ca0a8",
+      "mode": 420,
+      "mtime_ns": 1791362495906834574
+    },
+    {
+      "path": "STORY-NARVA-025/actors-metadata.json",
+      "bytes": 8404,
+      "sha256": "27f6778cfad0b9ce0a2b5bcbb15ccb42519d3ef5504b81d2755df2f7a52dd332",
+      "mode": 420,
+      "mtime_ns": 1790773839457640188
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/generated-paths.json",
+      "bytes": 1138,
+      "sha256": "e82617d5f2483eb2f39d3a1e0ac0ecde1020747b39cf45197cc22d41306a0262",
+      "mode": 420,
+      "mtime_ns": 1790775926280336390
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/metadata.json",
+      "bytes": 30249,
+      "sha256": "a587316a93c3e076b0126d95e1d4a4c9af2b5d7a6f4962913fbc454590c4fb44",
+      "mode": 420,
+      "mtime_ns": 1790775989695999463
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/p2-stage-1.png",
+      "bytes": 2639915,
+      "sha256": "1a04bcce10004c06657db8cb1786aefba95ca78977442bce801a5b43e99a2068",
+      "mode": 420,
+      "mtime_ns": 1790775987695610692
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/p2-stage-3.png",
+      "bytes": 2198017,
+      "sha256": "93a0f4238f524116874bf43e7ccff048900f573f7865cc07744331b03d2eecb6",
+      "mode": 420,
+      "mtime_ns": 1790775988105270824
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/p3-stage-1.png",
+      "bytes": 2521279,
+      "sha256": "a5913f8598cbf760ea06c3234516c5fca7ed624a20c5c434f6efd2aba02fb655",
+      "mode": 420,
+      "mtime_ns": 1790775988476121194
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/p3-stage-3.png",
+      "bytes": 2584571,
+      "sha256": "c389a05641f2b56420e64addc93dcf467bbe9ff563279b0b7a726c1cbad47c8e",
+      "mode": 420,
+      "mtime_ns": 1790775988873381359
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/p4-stage-1.png",
+      "bytes": 2477387,
+      "sha256": "e8dfe12c2332dd3e0352c4a3dc34b99f66d40d3b2316fc963e3ec5c926660ede",
+      "mode": 420,
+      "mtime_ns": 1790775989287783570
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/phosphor-files.png",
+      "bytes": 2351327,
+      "sha256": "cabddcde418f895759072bd707177ff0eb211a4ffef6ea16fdca0b45659122d6",
+      "mode": 420,
+      "mtime_ns": 1790775986869302513
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/phosphor-memory.png",
+      "bytes": 2437503,
+      "sha256": "cf45ac6822ceb3a62f06f22fae8f99cd5bed258c76b3de4be345e705f7803d2e",
+      "mode": 420,
+      "mtime_ns": 1790775986395144298
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/phosphor-parting.png",
+      "bytes": 2528192,
+      "sha256": "6606d926b2e34d27083406c744304ad9e785ffdbd0f0935adc13663321c3150b",
+      "mode": 420,
+      "mtime_ns": 1790775987286149635
+    },
+    {
+      "path": "STORY-NARVA-025/adult-scenes/requests.json",
+      "bytes": 16463,
+      "sha256": "82e1af2e254b6a6576444e9f10ce55f2d499c186b60c21a8a78e88508422d82f",
+      "mode": 420,
+      "mtime_ns": 1790773501554900262
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/chapter-D3.png",
+      "bytes": 2655867,
+      "sha256": "b55a7565573b72321a709d2cba70e42cb1d1655f6201cc0b8657937240ad07c6",
+      "mode": 420,
+      "mtime_ns": 1790774532909073287
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/chapter-D6.png",
+      "bytes": 2547586,
+      "sha256": "42164dad89133a1eee7417d8e6745488c66eaf5e31d773a861552a6282a9d8bf",
+      "mode": 420,
+      "mtime_ns": 1790774533291865748
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/chapter-D7.png",
+      "bytes": 2577353,
+      "sha256": "b532f6562f14e7c25e0050bf7f3d6b71fe1b1c813efd78fe01921247c70ff2ec",
+      "mode": 420,
+      "mtime_ns": 1790774533597658457
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/d2-reunion.png",
+      "bytes": 2703850,
+      "sha256": "2307f1f5caa55c40b1e0f2e2f696af9c11227897a90b7bbfb476e9a953705260",
+      "mode": 420,
+      "mtime_ns": 1790774533968373064
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/derive.cjs",
+      "bytes": 1978,
+      "sha256": "6f6389f04a5d7bc8537beeb5991455d21d038effb4cae7fe824f3ce1724a8831",
+      "mode": 420,
+      "mtime_ns": 1790774532580105209
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/f1.png",
+      "bytes": 2417267,
+      "sha256": "e3ad7c256014a8d8a3366e56f16b35a5ec379212fe1993c900d9189e39968241",
+      "mode": 420,
+      "mtime_ns": 1790774534471275172
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/generated-files.json",
+      "bytes": 835,
+      "sha256": "748e0295a42fc9d81fa8cb9b308ebb948182f724cf15b470fa8e5ce60a65fdd5",
+      "mode": 420,
+      "mtime_ns": 1790774532495101665
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/metadata.json",
+      "bytes": 18701,
+      "sha256": "422d2f5dba31d12d9f70859134617cc03e2afd2ce9998dd8598fee1f9dd800e6",
+      "mode": 420,
+      "mtime_ns": 1790774534795643499
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/request-d7-retry.json",
+      "bytes": 1458,
+      "sha256": "0cc448cfe550aa1064a9d4b683edd2e87d601e4735b334732ad3a5e1349f3ee7",
+      "mode": 420,
+      "mtime_ns": 1790774312330842635
+    },
+    {
+      "path": "STORY-NARVA-025/continuation-scenes/requests.json",
+      "bytes": 10053,
+      "sha256": "a430d013a5300f5bf2ba2409d41ae1a85a7b075b1780cffb344584013f48a639",
+      "mode": 420,
+      "mtime_ns": 1790773797517059524
+    },
+    {
+      "path": "STORY-NARVA-025/father-framed.png",
+      "bytes": 2872948,
+      "sha256": "5d54736d37f5b387d45fdf99576a915a3e68b8af990e981e220ff893504d865c",
+      "mode": 420,
+      "mtime_ns": 1790773625841206652
+    },
+    {
+      "path": "STORY-NARVA-025/father-wounded.png",
+      "bytes": 3054986,
+      "sha256": "64950aa1d6537c6fced1d2b6d38dc9aeaa89b8d981c39fba87812024e539b807",
+      "mode": 420,
+      "mtime_ns": 1790773131614640651
+    },
+    {
+      "path": "STORY-NARVA-025/father-young.png",
+      "bytes": 2852449,
+      "sha256": "6e2f6915e05f11c540772c666f0c7ba951c05ca6e53b3ae8237ef253197125ae",
+      "mode": 420,
+      "mtime_ns": 1790772917422037330
+    },
+    {
+      "path": "STORY-NARVA-025/father.png",
+      "bytes": 2882534,
+      "sha256": "e94ca4cad909d0db1e51110b70ff25b4e3fea52c1ec7563db14d6ddbd7c2f70b",
+      "mode": 420,
+      "mtime_ns": 1790773001056713092
+    },
+    {
+      "path": "STORY-NARVA-025/prompts.json",
+      "bytes": 4855,
+      "sha256": "f426c24ec497a3f1aa6fa492ca57068536887210f479bee5037fcec5f0ad5cd0",
+      "mode": 420,
+      "mtime_ns": 1790773821717847009
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/manifest.json",
+      "bytes": 31374,
+      "sha256": "a530d81e95bbbbf9c66e21ab856b032234b91dc4954ba7582c7c7d1d48a5c3d9",
+      "mode": 420,
+      "mtime_ns": 1790775664663732412
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/p1-stage-1.png",
+      "bytes": 2419791,
+      "sha256": "eae57ce32a9601b3c88a5e57cc2dee2795789610ee2ce74a0084107a886b51f8",
+      "mode": 420,
+      "mtime_ns": 1790775547187353412
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/prompts.json",
+      "bytes": 16854,
+      "sha256": "9d32526073d111b4372f90d3758f6335762265ddbc1c4cfe2da3af20d2320701",
+      "mode": 420,
+      "mtime_ns": 1790773682259264642
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/retry-prompts.json",
+      "bytes": 2930,
+      "sha256": "5ef742ba7b21ec861668733cc8f64fe9798a0996339e68ab84eeb5492f19b94e",
+      "mode": 420,
+      "mtime_ns": 1790774520205700501
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/s1-stage-1.png",
+      "bytes": 2367377,
+      "sha256": "88edee6c15d6298820989f9b0cb2ea7a0921bbff9b23b74bd63d9d04b6da61a8",
+      "mode": 420,
+      "mtime_ns": 1790775546665446884
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/s1-stage-3.png",
+      "bytes": 2534312,
+      "sha256": "5c177b953796951684ddf03ce75ed74aa70d397047cbf79ffcf6278bf1125013",
+      "mode": 420,
+      "mtime_ns": 1790775546915955026
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/swordsman-bookmark.png",
+      "bytes": 2489929,
+      "sha256": "8a18dd3d597332c5799d539ac2edd042b6aebd3a05b4eb25f515f9ca043c381e",
+      "mode": 420,
+      "mtime_ns": 1790775545822329272
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/swordsman-master.png",
+      "bytes": 2618092,
+      "sha256": "e80a39c7aa6f92e856ba98bc153690ef3bb1c50a65da7264cc29d57c4297b7ba",
+      "mode": 420,
+      "mtime_ns": 1790775546381232128
+    },
+    {
+      "path": "STORY-NARVA-025/young-scenes/swordsman-records.png",
+      "bytes": 2328581,
+      "sha256": "1e3b6d4222848768e7c385ef7f4346fe3ac8170d74f8f92e6728e4db2e213967",
+      "mode": 420,
+      "mtime_ns": 1790775546120943507
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/metadata.json",
+      "bytes": 4654,
+      "sha256": "3a4dcbf2f06ad4dd3748e5ca691a2114efee75b96c6b9fb6ce1614219a82e99b",
+      "mode": 420,
+      "mtime_ns": 1790854100776378198
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/p1-stage-3.png",
+      "bytes": 2747280,
+      "sha256": "89989505b70563ce87f2bdd5744b49c7b4a563631307e4851af71b29b2bdd7b2",
+      "mode": 420,
+      "mtime_ns": 1790854099273701821
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/phosphor-found.png",
+      "bytes": 2657714,
+      "sha256": "2a924edf9c648061949695130ca5d7ec30972298a9be069b893c32705953db71",
+      "mode": 420,
+      "mtime_ns": 1790853962832712725
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/repaint-request.json",
+      "bytes": 1248,
+      "sha256": "3c158d06cefbf22bc515423be0e61741ac908b9b8c679e77e3326acf84f411cf",
+      "mode": 420,
+      "mtime_ns": 1790853846128859293
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/requests.json",
+      "bytes": 1106,
+      "sha256": "da225814e455f4ccae484f020f0e561fee730adf6cbe4ebab72933a03f4ad7a0",
+      "mode": 420,
+      "mtime_ns": 1790853846022291559
+    },
+    {
+      "path": "STORY-NARVA-025-FIX/walking-request.json",
+      "bytes": 1075,
+      "sha256": "6ac60034c7f268c2cbcb407726ac81a9700444be6f52ff93c0197dff862e293a",
+      "mode": 420,
+      "mtime_ns": 1790853962942672253
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/.DS_Store",
+      "bytes": 6148,
+      "sha256": "e1db3cdfe0466b82c073634442548c09efcec764631f1d2e6b357b4899e02681",
+      "mode": 420,
+      "mtime_ns": 1791362533593570178
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/DELIVERY.md",
+      "bytes": 5450,
+      "sha256": "ea87da900156ef4334116ccc4d75a67bcd7a48130e92367b15e5b69c8b834fff",
+      "mode": 420,
+      "mtime_ns": 1791119743370780859
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/TASK.md",
+      "bytes": 2290,
+      "sha256": "92216affc0f1e010c07c60c559ccb5f9d57bdeb715ff3d25b2e7b64a8cf6e682",
+      "mode": 420,
+      "mtime_ns": 1791119743375175479
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/.DS_Store",
+      "bytes": 6148,
+      "sha256": "bcc1d439c6405a0eca233515e34b8645635cd4d0c76e2e5b18ffe04ea6289b20",
+      "mode": 420,
+      "mtime_ns": 1791362495905879789
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/canonical-edit-record.json",
+      "bytes": 2946,
+      "sha256": "51efa84ecbcd1ab0a1ffd5ce8486204f8ca9e18f40af1f5447c43a2912572dc0",
+      "mode": 420,
+      "mtime_ns": 1791119487594941451
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/final-QA.json",
+      "bytes": 2112,
+      "sha256": "f1bc560b5cb914b63919d75091184188341b06eea85e2e66d9316d004c1e7453",
+      "mode": 420,
+      "mtime_ns": 1791119487856551685
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/final-edit-records.json",
+      "bytes": 2368,
+      "sha256": "ffbe38e5b695c9588cde9cd337afaa6e8220cf9aaad3d3b41bdfa8678ea56688",
+      "mode": 420,
+      "mtime_ns": 1791119052926896096
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/generation.json",
+      "bytes": 32857,
+      "sha256": "4db949fcf08856851bc2600bb8ebd906ba1c267d895618e562503aa71288cdcf",
+      "mode": 420,
+      "mtime_ns": 1791119487855963139
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/a1-eve-storms-out.png",
+      "bytes": 2525268,
+      "sha256": "9d5ef638e13062feb1cbc520ae86017ddcb582ec330af99fd0940cbfd10ed59f",
+      "mode": 420,
+      "mtime_ns": 1791027125728194842
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/e3-lab-safe.png",
+      "bytes": 2570285,
+      "sha256": "7eb40f348598fa4517cc6ab56492c18cadce7aca6e4eca81ac5004b90f8393c9",
+      "mode": 420,
+      "mtime_ns": 1791027125848427407
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/e3-letter.png",
+      "bytes": 2589357,
+      "sha256": "6ff3da17ffe447146d371f654c99fb4803039f10a5e3ac53b8d20de99dd7f39a",
+      "mode": 420,
+      "mtime_ns": 1791045779115899927
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/e3-rin-rooftop.png",
+      "bytes": 2629912,
+      "sha256": "86867025cd6b7e4c9b25a8cccb9b30c75dfea79e281b8d471aa2be42bed54f71",
+      "mode": 420,
+      "mtime_ns": 1791045876943150266
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/prologue-bell-prayer.png",
+      "bytes": 2945533,
+      "sha256": "a32744884d0b070f5bfaadd448e89431e2a02006d41efd34d86bc515d956c3fc",
+      "mode": 420,
+      "mtime_ns": 1791026356932961795
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/prologue-nightfall.png",
+      "bytes": 2621791,
+      "sha256": "359c8f938db845ddf83353685f751f0cce1def11603e49cdad1b3502eb3b903f",
+      "mode": 420,
+      "mtime_ns": 1791049280340418821
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/originals/prologue-vesperland.png",
+      "bytes": 2249672,
+      "sha256": "84123f6367c0b15944de36e7640b4921a4b814f4e19b0b3049e5f5709b05795e",
+      "mode": 420,
+      "mtime_ns": 1791119462729710864
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-a/prompts.json",
+      "bytes": 8543,
+      "sha256": "cf82b0e7b5216c8ab681dc5836f971b6473e5482fa12b94948be18e078d472d5",
+      "mode": 420,
+      "mtime_ns": 1791025987483217159
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/.DS_Store",
+      "bytes": 6148,
+      "sha256": "bcc1d439c6405a0eca233515e34b8645635cd4d0c76e2e5b18ffe04ea6289b20",
+      "mode": 420,
+      "mtime_ns": 1791362519659431851
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/final-QA.json",
+      "bytes": 848,
+      "sha256": "b28f3900baaeb0c5a5447074c831bf27329d04c1062043ddfbc16f53d93639c7",
+      "mode": 420,
+      "mtime_ns": 1791119072478301123
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/final-edit-records.json",
+      "bytes": 5071,
+      "sha256": "12c5d1b07e2805b7240c300d99900bf3d1744877d19e35d1d635fe64bc39c53a",
+      "mode": 420,
+      "mtime_ns": 1791119053098913719
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/generation.json",
+      "bytes": 37881,
+      "sha256": "cbd8b269fbd9e10e1b2dc169d46b81449a64e5cf07b353e73ebcfb9944626650",
+      "mode": 420,
+      "mtime_ns": 1791119053225494885
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/make-reference-sheet.cjs",
+      "bytes": 1266,
+      "sha256": "98d5dfafe4e4a792c60d253d61412233c17a74a8258c978bcda40836b8bcb324",
+      "mode": 420,
+      "mtime_ns": 1791026858916846354
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/b1-shuo-wolves.png",
+      "bytes": 3045076,
+      "sha256": "cda3aa85e258cfdc7ec6bd2bd9c6abc1649943b1112690126634dee7e2eae176",
+      "mode": 420,
+      "mtime_ns": 1791026384304144511
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/b2-city-bookmark.png",
+      "bytes": 2329373,
+      "sha256": "8d5b8dff23583e2b60905faf64b35449fed4a24fdbf1aca4b3dd994c72596c84",
+      "mode": 420,
+      "mtime_ns": 1791026515774427748
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/bg-deepholm-mine.png",
+      "bytes": 2617619,
+      "sha256": "1b853d0f1d4a79c0d69ff5bbd640ae3106a087a0040614fc8701e10c5819ed34",
+      "mode": 420,
+      "mtime_ns": 1791048999893724786
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/c4-archive-meeting.png",
+      "bytes": 2495259,
+      "sha256": "b764d8263b4df90bffd0a5a3e1c7cf0aef1099ce32d5915b208424098d4626bd",
+      "mode": 420,
+      "mtime_ns": 1791045976320569357
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/c4-rin-joins.png",
+      "bytes": 2514022,
+      "sha256": "7d4ca2b1c06fdfc9312bd61960311df83b4be718eb15c9fc856c09c3b40e01ee",
+      "mode": 420,
+      "mtime_ns": 1791118944396227199
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/c5-eve-gun-rin.png",
+      "bytes": 2624781,
+      "sha256": "55266382168e24c2ed8c69da3382fc6b6d58f49d7e7536eca108c61ac88af0b7",
+      "mode": 420,
+      "mtime_ns": 1791119015639723556
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/originals/farewell-outskirts.png",
+      "bytes": 2849199,
+      "sha256": "25dee39c7285dcc316a8a3b4ec30a8b2c8f73011bf12ccf5b33d952e6896fc9e",
+      "mode": 420,
+      "mtime_ns": 1791026120476244945
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-b/prompts.json",
+      "bytes": 9769,
+      "sha256": "c1e61524b6dabf6927e873b11d30da3b8851c15d9af6c1dff664292b4661a5ad",
+      "mode": 420,
+      "mtime_ns": 1791025987483577836
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/.DS_Store",
+      "bytes": 6148,
+      "sha256": "bcc1d439c6405a0eca233515e34b8645635cd4d0c76e2e5b18ffe04ea6289b20",
+      "mode": 420,
+      "mtime_ns": 1791362533592433686
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/canonical-griffin-edit-prompt.txt",
+      "bytes": 1379,
+      "sha256": "8e0c75e41b5fe8cae0c35abec73a49bd91412122c795f7a46e9a11cbcc580b71",
+      "mode": 420,
+      "mtime_ns": 1791119479904200253
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/final-source-qa.json",
+      "bytes": 4209,
+      "sha256": "fb3ecdeaaddcff3df61638eec585179c655bd2574068917fdc2e9a6eefbf5311",
+      "mode": 420,
+      "mtime_ns": 1791119507874511581
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/generation.json",
+      "bytes": 63884,
+      "sha256": "d38638fed256956240943a21e990324f710dfc76ef26931e1a61074a399b685f",
+      "mode": 420,
+      "mtime_ns": 1791119507793430123
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/bg-mine-lab.png",
+      "bytes": 2766014,
+      "sha256": "7e3112236b546b00145cf774a998f549b5f433cf3e5ca3e89a5998a95527b2d2",
+      "mode": 420,
+      "mtime_ns": 1791026507285253086
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/enemy-griffin.png",
+      "bytes": 2362188,
+      "sha256": "185fc7e84814c71f995b47b2c807ef25848a7670b25c198d378367c5e095077f",
+      "mode": 420,
+      "mtime_ns": 1791026282661095225
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/mine-gran-last-stand.png",
+      "bytes": 2512462,
+      "sha256": "be12f7a9d983d174e1eaab7d6c21ccb4160406b08ca8178fefecf8091046356c",
+      "mode": 420,
+      "mtime_ns": 1791026507273395481
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/mine-griffin-battle.png",
+      "bytes": 2761594,
+      "sha256": "4821e461941a19ec683ee15ee924f8eb9465bd3f16106613b3c4b4efd1e3f919",
+      "mode": 420,
+      "mtime_ns": 1791119507786420524
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/mine-narva-wounded.png",
+      "bytes": 2818413,
+      "sha256": "d0032ea811bdb76c59c634435d213d3db490213737d61c031af1a598f3e7fdf3",
+      "mode": 420,
+      "mtime_ns": 1791118881968207090
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/mine-recorder.png",
+      "bytes": 2626654,
+      "sha256": "4756e47bfb58bf1c0c7f85e592fcd48da5b0bc5fa280f0e49e97e46ccb8f063f",
+      "mode": 420,
+      "mtime_ns": 1791045815475054424
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/originals/truth-table.png",
+      "bytes": 2676118,
+      "sha256": "36aca645206d7b8f74fc0e23e6f4b6b301a3d5c8d36915b3b9310081e2273537",
+      "mode": 420,
+      "mtime_ns": 1791046554471676470
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/prepare-references.cjs",
+      "bytes": 13299,
+      "sha256": "aaadb4e0debc1295c5f8d0337655418332df41386b356eedf5962fa16d0159e5",
+      "mode": 420,
+      "mtime_ns": 1791026506824889234
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/batch-c/prompts.json",
+      "bytes": 8912,
+      "sha256": "3bb694e116d549fb8a7d1b3e0dedefac50b66a4db3103f4daa3cfb77cdb78c88",
+      "mode": 420,
+      "mtime_ns": 1791025987483979098
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/budget-checks.json",
+      "bytes": 14028,
+      "sha256": "fbde930dd90b2ad675a8e1a1031be69c7f72e642dc0b462fa6a5ce5cfa8f32cd",
+      "mode": 420,
+      "mtime_ns": 1791119670353750661
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/contact-sheet.jpg",
+      "bytes": 524323,
+      "sha256": "379fa697af2388f45a905fc373d4e26bce051b0c90458341babb2c903d32acbd",
+      "mode": 420,
+      "mtime_ns": 1791119628808585793
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/.DS_Store",
+      "bytes": 6148,
+      "sha256": "4855c443cc124674b284a732fc847ab8f3d626d70c6a0e50a9b330e1993d16cd",
+      "mode": 420,
+      "mtime_ns": 1791362624723671552
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/actor/enemy-griffin.webp",
+      "bytes": 148670,
+      "sha256": "0b7a92a21b6b3eb08f4d57b1f16f6652a449fd898b45d193a265800680d27d2e",
+      "mode": 420,
+      "mtime_ns": 1791119627016418806
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/a1-eve-storms-out.webp",
+      "bytes": 276962,
+      "sha256": "d272d33d55f90cf06a353977951630082e915648d5698f86a98774dfc08f839f",
+      "mode": 420,
+      "mtime_ns": 1791119623025859534
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/b1-shuo-wolves.webp",
+      "bytes": 416008,
+      "sha256": "570f5628019f8b4bb9abbb29a2cef0e3d8beda54cc1f28dad9748be0997fb9f7",
+      "mode": 420,
+      "mtime_ns": 1791119624526200371
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/b2-city-bookmark.webp",
+      "bytes": 241616,
+      "sha256": "d3c4efbfbca7b375cbd0d05c5f7108877e80acc893d96882e35da03349de4a16",
+      "mode": 420,
+      "mtime_ns": 1791119624775925883
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/bg-deepholm-mine.webp",
+      "bytes": 314868,
+      "sha256": "09f6eefaa08c8b5d7342cfe21ab9278577fb8d11f11c920f41ddded40d5e1c37",
+      "mode": 420,
+      "mtime_ns": 1791119625902223311
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/bg-mine-lab.webp",
+      "bytes": 357670,
+      "sha256": "0843b3f20851497b70e4afa44f1e03f3dccc53d2b0cca33456ae8fc0413e2aa3",
+      "mode": 420,
+      "mtime_ns": 1791119627355064924
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/c4-archive-meeting.webp",
+      "bytes": 275184,
+      "sha256": "5e6e47665982a78f3e55da19ec2baa63bbd209a30c9aa1c27f40f4c5080b65b7",
+      "mode": 420,
+      "mtime_ns": 1791119625051515982
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/c4-rin-joins.webp",
+      "bytes": 286300,
+      "sha256": "535797983aed6b96b9ee599d04a10315c30e9353280404f2534d93dabf5ac3cb",
+      "mode": 420,
+      "mtime_ns": 1791119625327146124
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/c5-eve-gun-rin.webp",
+      "bytes": 305738,
+      "sha256": "d4ce299ae5be6e9e4f24deb5ffe1b043dfb72591bbfa04c11251426a03657bfe",
+      "mode": 420,
+      "mtime_ns": 1791119625612466762
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/e3-lab-safe.webp",
+      "bytes": 302486,
+      "sha256": "92917190e14b1fd7656e82c74bc2bc73bbb8ceb9dac084ccfe638680b91865b5",
+      "mode": 420,
+      "mtime_ns": 1791119623309992996
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/e3-letter.webp",
+      "bytes": 310208,
+      "sha256": "024023d12cef0d81704401bf684e49cb6770ed99cf848eb95dc44da58d579d89",
+      "mode": 420,
+      "mtime_ns": 1791119623593531577
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/e3-rin-rooftop.webp",
+      "bytes": 311112,
+      "sha256": "bc0abfdda1d519bcbc10e9bb82540a5cc4975c12b5094edefe2fdc2d93be451b",
+      "mode": 420,
+      "mtime_ns": 1791119623880672063
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/farewell-outskirts.webp",
+      "bytes": 352296,
+      "sha256": "a34ea9412861d24cc111430d9158f7794b933ac321de99c639901aaddc9afe95",
+      "mode": 420,
+      "mtime_ns": 1791119624190204483
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/mine-gran-last-stand.webp",
+      "bytes": 277178,
+      "sha256": "49163ab48814fa636b0f9dd40bacc38c2a95a0091254fc25e002544832b1bbef",
+      "mode": 420,
+      "mtime_ns": 1791119626840173316
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/mine-griffin-battle.webp",
+      "bytes": 338588,
+      "sha256": "91e0469c09e9528ab95490833a1260f1b337ac0be2122a4e5e5320b2efdca6a8",
+      "mode": 420,
+      "mtime_ns": 1791119627676078022
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/mine-narva-wounded.webp",
+      "bytes": 339342,
+      "sha256": "62687f73bc319a90da0916aa589fda1bbbdeebe9e9a9f6ccb6d39439bcc35a89",
+      "mode": 420,
+      "mtime_ns": 1791119626560487432
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/mine-recorder.webp",
+      "bytes": 297348,
+      "sha256": "228a155eecbc88b60163c64b21f66d9bf796f0838cbaefd2c02945b23183a42e",
+      "mode": 420,
+      "mtime_ns": 1791119626248935787
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/prologue-bell-prayer.webp",
+      "bytes": 388662,
+      "sha256": "31162cd87e31cae564f81208d45099e59097f471985b5836c328cc8488667084",
+      "mode": 420,
+      "mtime_ns": 1791119622726728700
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/prologue-nightfall.webp",
+      "bytes": 290826,
+      "sha256": "2dc9d905fa50e5dbbd52bc5f5c50004a4569770d1f2dabc64d4b460229041360",
+      "mode": 420,
+      "mtime_ns": 1791119622394805720
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/prologue-vesperland.webp",
+      "bytes": 232656,
+      "sha256": "02f0b03d6e17995272cd2ca9afcc6d33bc1618495182ba2cab4a6db850ab2952",
+      "mode": 420,
+      "mtime_ns": 1791119622112271855
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery/backgrounds/truth-table.webp",
+      "bytes": 312838,
+      "sha256": "a8373af05fbcaf7a9715ce2f1ab5eaa216559005fba2aff58c9ccf472cfd4b98",
+      "mode": 420,
+      "mtime_ns": 1791119627973083172
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery-manifest.json",
+      "bytes": 19321,
+      "sha256": "8bd6ac996f5444ac48c27620c8b78e56a0d5ddccb26318526ca7fe244c567ec8",
+      "mode": 420,
+      "mtime_ns": 1791119743374630141
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/delivery-validation.json",
+      "bytes": 252,
+      "sha256": "2ed69da4d7dd7e7eea283cfd0cc8d22c6b5f03606300a022ea6e1e88acafa702",
+      "mode": 420,
+      "mtime_ns": 1791119743373937427
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/gallery.html",
+      "bytes": 17239,
+      "sha256": "285db51c5763514f7ccff77cfbe09925767a7d9fef6ef9a7961114b3a44fdcd0",
+      "mode": 420,
+      "mtime_ns": 1791119627985590358
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/input-sha256.txt",
+      "bytes": 115,
+      "sha256": "1700cc9f6251a2ed03756767edfe84ff6ed87a71f9b73c5f64333c6e8a54203b",
+      "mode": 420,
+      "mtime_ns": 1791025987485150550
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/package-art.cjs",
+      "bytes": 9649,
+      "sha256": "85ee0da0aeb13ddbcd6fb8acfcd4f4b406af0d3de68dcc821c191bb0b0236a75",
+      "mode": 420,
+      "mtime_ns": 1791118883048436264
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/product-visual-review.json",
+      "bytes": 8177,
+      "sha256": "e7b0f8d3740aed51bbb199904c050f93bd5f64b635510b0be5711501fbdf3b6c",
+      "mode": 420,
+      "mtime_ns": 1791119743370268397
+    },
+    {
+      "path": "STORY-REWRITE-050-GEN-20261003/prompts.json",
+      "bytes": 27218,
+      "sha256": "e2f095b006cd8232ae25ecfb46215dde5df009433efe72461728ada4426988f4",
+      "mode": 420,
+      "mtime_ns": 1791025987482889482
+    },
+    {
+      "path": "STORY-SCENES-029/bell-stairs.png",
+      "bytes": 2502376,
+      "sha256": "3ec2e91301100af23737299c86449ddaee6c0c054f13ab3c217d2f9db59589aa",
+      "mode": 384,
+      "mtime_ns": 1790862253283864280
+    },
+    {
+      "path": "STORY-SCENES-029/maku-street.png",
+      "bytes": 2657609,
+      "sha256": "e05023d800e672c7fc5df0c193e5db192d8984827c70c2bacf43020c2931b597",
+      "mode": 384,
+      "mtime_ns": 1790862204096038654
+    },
+    {
+      "path": "STORY-SCENES-029/reception-camp.png",
+      "bytes": 2320343,
+      "sha256": "d8efb363b0ed659363b169271439b48c53a0a70287b27b6840cc6c98216d1d9e",
+      "mode": 384,
+      "mtime_ns": 1790862229279668025
+    },
+    {
+      "path": "STORY-SCENES-029/relay-guardroom.png",
+      "bytes": 2391174,
+      "sha256": "349a8fd72fc7839f8e98814a69bfdc574b246937508e5b18e347a9fed2dd5dd9",
+      "mode": 384,
+      "mtime_ns": 1790862275704137761
+    },
+    {
+      "path": "STORY-SCENES-029/relay-power.png",
+      "bytes": 2367934,
+      "sha256": "513d90488be5604f8ff671f9dc190a98407746772031dbc920f6975c91fecd31",
+      "mode": 384,
+      "mtime_ns": 1790862298448047899
+    },
+    {
+      "path": "STORY-SEARCH-001-backgrounds/search-hideout.png",
+      "bytes": 2346202,
+      "sha256": "47adc101016747bc8f17bdfef011b2847ca05151c81fdbd6dc3977c7d7320de2",
+      "mode": 420,
+      "mtime_ns": 1790260319575583816
+    },
+    {
+      "path": "STORY-SEARCH-001-backgrounds/search-lab.png",
+      "bytes": 2333308,
+      "sha256": "6923e32dd0dcd74bf75f15f8a9b85c51e342372c955ce22c3eedcb4f6f5f722e",
+      "mode": 420,
+      "mtime_ns": 1790259300120216012
+    },
+    {
+      "path": "STORY-SEARCH-001-props/derive.py",
+      "bytes": 3680,
+      "sha256": "680a4b9041527bbd30b60283f854505588ce8936ffb76ec38da8fc5a01681885",
+      "mode": 420,
+      "mtime_ns": 1790259254056327462
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-0.png",
+      "bytes": 1138203,
+      "sha256": "914bedb47d89a40f7db032a2e740b5e1b7edacacb6d34d8a3003c8f700cb1469",
+      "mode": 420,
+      "mtime_ns": 1790259174858850718
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-0.request.json",
+      "bytes": 1787,
+      "sha256": "ca37d1bcf23b5f04cd196e8104e20acb2418248c3565028f264e6e2c17291522",
+      "mode": 420,
+      "mtime_ns": 1790259612005262136
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-1.png",
+      "bytes": 972040,
+      "sha256": "903110a611e874d4b02403b70477d0405916329c93121eb03beda6824dbf9b1c",
+      "mode": 420,
+      "mtime_ns": 1790259251443943024
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-1.request.json",
+      "bytes": 1637,
+      "sha256": "72c369080591ed2b4f49cf41a2c5baee59fe6d190112e16d44c0d751b2dec205",
+      "mode": 420,
+      "mtime_ns": 1790259765765322328
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-2.png",
+      "bytes": 1120740,
+      "sha256": "ca9a256edc724d36e65931fe428133576f3e5d140b45f9f78c31bc451fad4cf2",
+      "mode": 420,
+      "mtime_ns": 1790259338742694139
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-2.request.json",
+      "bytes": 1639,
+      "sha256": "2b184eecb411c3da07c69b23492948c445ef65320cac515f03aa9c2d46091136",
+      "mode": 420,
+      "mtime_ns": 1790260635246181011
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-3.png",
+      "bytes": 836673,
+      "sha256": "62b79f097f79583a4e81f00d040500973ac9364c65589160b03d15bc7c01f1c1",
+      "mode": 420,
+      "mtime_ns": 1790259372114343405
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-3.request.json",
+      "bytes": 1615,
+      "sha256": "fa4dd387a835fedbd8a59e929a4f7aa3443fcccdc589a23d9815f2f6ecdef662",
+      "mode": 420,
+      "mtime_ns": 1790260635360874057
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-4.png",
+      "bytes": 1247106,
+      "sha256": "4bc57c7c240cf5546c12f300e4281210a12471b353228def691fe284149e3a7d",
+      "mode": 420,
+      "mtime_ns": 1790259719748605728
+    },
+    {
+      "path": "STORY-SEARCH-001-props/gun-4.request.json",
+      "bytes": 1641,
+      "sha256": "f100a9bbfb01aef5befae01c7009ee85e3223f36b69d77dc2a7740d054cc290d",
+      "mode": 420,
+      "mtime_ns": 1790261621422324061
+    },
+    {
+      "path": "STORY-SEARCH-001-props/lamp.png",
+      "bytes": 751132,
+      "sha256": "31cd670059e72c1ae943c5b65c64ce0a7a02edf1b48a300974e3d3bfd006a2a6",
+      "mode": 420,
+      "mtime_ns": 1790260049188315272
+    },
+    {
+      "path": "STORY-SEARCH-001-props/lamp.request.json",
+      "bytes": 1542,
+      "sha256": "b9a29cf32d80b378626542211464e4adc679fd75682513038979c2d6010aa9e5",
+      "mode": 420,
+      "mtime_ns": 1790261621659684300
+    },
+    {
+      "path": "STORY-SEARCH-001-props/paper.png",
+      "bytes": 1831667,
+      "sha256": "e9235586a9a353fa3ead7dd7e2a64b9f3391ae42ff476eae75dd316f339c3dee",
+      "mode": 420,
+      "mtime_ns": 1790259160708480954
+    },
+    {
+      "path": "STORY-SEARCH-001-props/paper.request.json",
+      "bytes": 1477,
+      "sha256": "db6449c25d6d47fdb9b8831ce40c5d7935808bc0f7e5c3a1f59fa4e2adb6f63b",
+      "mode": 420,
+      "mtime_ns": 1790259254176676750
+    },
+    {
+      "path": "STORY-SEARCH-001-props/recorder.png",
+      "bytes": 1988018,
+      "sha256": "d86f2d8acb1f1ae103f8d6ada16cae71041e20faf038be64ec0421912afb570b",
+      "mode": 420,
+      "mtime_ns": 1790259779040520430
+    },
+    {
+      "path": "STORY-SEARCH-001-props/recorder.request.json",
+      "bytes": 1652,
+      "sha256": "b2811be227a65565e190478b7961a4b822fb2b3a61720d069c6515686a0bb2d5",
+      "mode": 420,
+      "mtime_ns": 1790261621544789433
+    },
+    {
+      "path": "frame-originals-v1/hero.json",
+      "bytes": 1769,
+      "sha256": "8286a6b45b59bd02760bc5185e3437947edfac463515e8cf6baa53b64e85d17f",
+      "mode": 420,
+      "mtime_ns": 1790121432687308669
+    },
+    {
+      "path": "frame-originals-v1/hero.png",
+      "bytes": 742998,
+      "sha256": "b0c77914394f078a5762f253e204bcd4c1dd37c4ee75f628488f7afae87fbd20",
+      "mode": 420,
+      "mtime_ns": 1790121432400691390
+    },
+    {
+      "path": "frame-originals-v1/panel.json",
+      "bytes": 1762,
+      "sha256": "bc4120fce265474208d995cbca8398cf5c4f7f28626515f21edcab8f8fb75ad4",
+      "mode": 420,
+      "mtime_ns": 1790121432787726879
+    },
+    {
+      "path": "frame-originals-v1/panel.png",
+      "bytes": 697340,
+      "sha256": "df08a46f2380386e716d1993d69957efae13df4e1005ec413ad387ecf8d96fbc",
+      "mode": 420,
+      "mtime_ns": 1790121432404334068
+    },
+    {
+      "path": "frame-originals-v1/thin.json",
+      "bytes": 1765,
+      "sha256": "26bf0a1b9fe150c69bbb56c36b8f3d6150af49405d780394676063d87f78497f",
+      "mode": 420,
+      "mtime_ns": 1790121432895358086
+    },
+    {
+      "path": "frame-originals-v1/thin.png",
+      "bytes": 438216,
+      "sha256": "2a813c6d6f44aa1d27960c05aeb8f539c0d8ff43002dbf8c61f9edf1be810a16",
+      "mode": 420,
+      "mtime_ns": 1790121432408640862
+    },
+    {
+      "path": "legacy-png/.DS_Store",
+      "bytes": 6148,
+      "sha256": "6363b2b0101b814449dbf03c1a5e4198b77406ea6c42a932dfaf219b92ae47be",
+      "mode": 420,
+      "mtime_ns": 1791362683543128342
+    },
+    {
+      "path": "legacy-png/assets/.DS_Store",
+      "bytes": 6148,
+      "sha256": "617a044ef99c95d6e5ae6163155c6a8edcb2e339813685d0e8de1e1611f917e1",
+      "mode": 420,
+      "mtime_ns": 1791362289231104248
+    },
+    {
+      "path": "legacy-png/assets/cards/.DS_Store",
+      "bytes": 6148,
+      "sha256": "ee4b7ce266c1d816f064832198db50e334b903e4e7fab571646ec8a5d97325a4",
+      "mode": 420,
+      "mtime_ns": 1791362268597971979
+    },
+    {
+      "path": "legacy-png/assets/cards/assassin.png",
+      "bytes": 2868651,
+      "sha256": "50ba1dac6bcf17c3dda7f3b07328b7558161f5ddf7d91f147ef769c0fc050e0d",
+      "mode": 420,
+      "mtime_ns": 1790092325882366061
+    },
+    {
+      "path": "legacy-png/assets/cards/attack.png",
+      "bytes": 2537351,
+      "sha256": "a9f7883c484166a9bf443330f2c550bf57b8705d7f4e23fcbc9524b1fb79d8aa",
+      "mode": 420,
+      "mtime_ns": 1790091950256625533
+    },
+    {
+      "path": "legacy-png/assets/cards/back-gold-v2.png",
+      "bytes": 2169056,
+      "sha256": "616a2e1cfbeb7f6caac81c347fbf8324aaf2e1350a2a908d49b11c011ae39457",
+      "mode": 420,
+      "mtime_ns": 1790174431199726820
+    },
+    {
+      "path": "legacy-png/assets/cards/basic-v2/attack.png",
+      "bytes": 2113341,
+      "sha256": "fe276d970c8dd33ac9891c4ec2918eebf0a9e2497075aefcde06eea540bd7b63",
+      "mode": 420,
+      "mtime_ns": 1790172927063290358
+    },
+    {
+      "path": "legacy-png/assets/cards/basic-v2/defense.png",
+      "bytes": 2417742,
+      "sha256": "6936eb77ad63768b8f7ffa4e45e1363870ad4561f49f3fe21cf6041d7e8052c5",
+      "mode": 420,
+      "mtime_ns": 1790172927072156549
+    },
+    {
+      "path": "legacy-png/assets/cards/basic-v2/dodge.png",
+      "bytes": 2111797,
+      "sha256": "fe469986ec67a14ef234f3567228d595f874adf0194c63b76284840289c94837",
+      "mode": 420,
+      "mtime_ns": 1790172927079438090
+    },
+    {
+      "path": "legacy-png/assets/cards/defense.png",
+      "bytes": 2741211,
+      "sha256": "803846815c9021938f1344f66b44f7ed6c9015eb35593e70e55003b7596404e9",
+      "mode": 420,
+      "mtime_ns": 1790092517456912160
+    },
+    {
+      "path": "legacy-png/assets/cards/dodge.png",
+      "bytes": 2566401,
+      "sha256": "051043171cccfdce3a0f1445867be07ef26f67c467286e9c59e841ace55d650c",
+      "mode": 420,
+      "mtime_ns": 1790092517419180393
+    },
+    {
+      "path": "legacy-png/assets/cards/domain.png",
+      "bytes": 3093075,
+      "sha256": "7e4592c931724367d576681972690dc383e79b93f8c157b697977e4b76c125c2",
+      "mode": 420,
+      "mtime_ns": 1790092517434198618
+    },
+    {
+      "path": "legacy-png/assets/cards/gunner.png",
+      "bytes": 2690115,
+      "sha256": "e260d3251eb1af8fc9c2ee4944a07ff1f860a7c29b03e06097117ea3985bd08c",
+      "mode": 420,
+      "mtime_ns": 1790092325881367445
+    },
+    {
+      "path": "legacy-png/assets/cards/spirit.png",
+      "bytes": 2924568,
+      "sha256": "bac7b73c7d24a7e06e55e8bb9141892d7f10b1f2cb977aa1c9afc0b997a8c09d",
+      "mode": 420,
+      "mtime_ns": 1790092060717882395
+    },
+    {
+      "path": "legacy-png/assets/cards/swordsman.png",
+      "bytes": 2750826,
+      "sha256": "16d2ebc703bd485587c1ea0cdcbab38c795d776b0d4544d7b95f60599629647a",
+      "mode": 420,
+      "mtime_ns": 1790092060714239597
+    },
+    {
+      "path": "legacy-png/assets/cards/tank.png",
+      "bytes": 3129681,
+      "sha256": "b9b9275be877d3caa69ceedf00636324ba8b5052e513e5fc9058e447ae843dc1",
+      "mode": 420,
+      "mtime_ns": 1790092325881341815
+    },
+    {
+      "path": "legacy-png/assets/characters/assassin.png",
+      "bytes": 2699074,
+      "sha256": "e56e7548f20258ac679dfa923453cb1fea6326c0000cf46afbbc88d5298d20a0",
+      "mode": 420,
+      "mtime_ns": 1789995861602755189
+    },
+    {
+      "path": "legacy-png/assets/characters/gunner.png",
+      "bytes": 2630107,
+      "sha256": "c70450475c6f945f3abb902830b38a70eabbcf6dd74dc3cc0d692850feabb0e4",
+      "mode": 420,
+      "mtime_ns": 1789995861607666135
+    },
+    {
+      "path": "legacy-png/assets/characters/nightfall-hall.png",
+      "bytes": 2482775,
+      "sha256": "4919806b368345557475dc95dd01a18c1fd71702211e2ee1c3110a6ae83f2c03",
+      "mode": 420,
+      "mtime_ns": 1790077732927850127
+    },
+    {
+      "path": "legacy-png/assets/characters/swordsman.png",
+      "bytes": 2692318,
+      "sha256": "383986ad78639754971b8e3cbdafd8708c912131f5742785e8bb151ab6a5fc59",
+      "mode": 420,
+      "mtime_ns": 1789995861592686176
+    },
+    {
+      "path": "legacy-png/assets/characters/tank.png",
+      "bytes": 2992507,
+      "sha256": "51f69045bbaaf5535e4b645e62b64d66365ac3eebb1000cfd47935f96adf64aa",
+      "mode": 420,
+      "mtime_ns": 1789995861598003864
+    },
+    {
+      "path": "legacy-png/assets/coins/moon.png",
+      "bytes": 3093865,
+      "sha256": "1b6dea181beade1ae1f557daa8672d4b2c0259bd6ea07cfb51750f9f76de23c2",
+      "mode": 420,
+      "mtime_ns": 1790093276035036206
+    },
+    {
+      "path": "legacy-png/assets/coins/sun.png",
+      "bytes": 3157844,
+      "sha256": "b765498e781a61d562a6412c5b0088fb56228f922096dbcc3a7268602ce0a893",
+      "mode": 420,
+      "mtime_ns": 1790092811369628549
+    },
+    {
+      "path": "legacy-png/assets/environments/day.png",
+      "bytes": 2632761,
+      "sha256": "24888b957f1e6211b061bb7031323878756cc5d6e1410bcbd3255db5d6584bcc",
+      "mode": 420,
+      "mtime_ns": 1790092811414466262
+    },
+    {
+      "path": "legacy-png/assets/environments/night.png",
+      "bytes": 2426640,
+      "sha256": "7cb4f818de05a2a8159aafd0fd29458974441e572c60f3ea54ed1b49188c01cd",
+      "mode": 420,
+      "mtime_ns": 1790093275939325571
+    },
+    {
+      "path": "legacy-png/assets/frames/.DS_Store",
+      "bytes": 6148,
+      "sha256": "ed74680f6a31b52fcb5d1dcec84a41067d28d82f64236a667518ab45a651ff8a",
+      "mode": 420,
+      "mtime_ns": 1791362282015173322
+    },
+    {
+      "path": "legacy-png/assets/frames/v1/hero.png",
+      "bytes": 686885,
+      "sha256": "8a8ac2b8c1da0dd440663cd4949a672e2863ffe36856a38ef5b41000041027a1",
+      "mode": 420,
+      "mtime_ns": 1790163530720757008
+    },
+    {
+      "path": "legacy-png/assets/frames/v1/panel.png",
+      "bytes": 653087,
+      "sha256": "d443d153998426c68ffc27f0686c4216ab40ca8e969e0fdf9bec09845a50e11c",
+      "mode": 420,
+      "mtime_ns": 1790163530967316031
+    },
+    {
+      "path": "legacy-png/assets/frames/v1/thin.png",
+      "bytes": 400656,
+      "sha256": "7e3f7f741194f47771540dcfe52aee5598995846592f6637df704009cbb0e42d",
+      "mode": 420,
+      "mtime_ns": 1790163531204000950
+    },
+    {
+      "path": "legacy-png/assets/maps/nightfall-world-map-v1.png",
+      "bytes": 2979849,
+      "sha256": "d0489b2b2c6685fe3eb077c11f17f25d62086869af2cebd5e0e90f744389080e",
+      "mode": 420,
+      "mtime_ns": 1790101233478037357
+    },
+    {
+      "path": "legacy-png/assets/skins/assassin-origin.png",
+      "bytes": 2627317,
+      "sha256": "8ef61b99bf15a6e20a8ccc75b04648e10bb7ea82d5beb1d169f0e0616f7a3c2e",
+      "mode": 420,
+      "mtime_ns": 1790092688877918839
+    },
+    {
+      "path": "legacy-png/assets/skins/gunner-origin.png",
+      "bytes": 2885799,
+      "sha256": "8acae345294eda0b0ba1693989466f189904e640e3ddb1d35ee0fcd705198c75",
+      "mode": 420,
+      "mtime_ns": 1790092955671994209
+    },
+    {
+      "path": "legacy-png/assets/skins/swordsman-origin.png",
+      "bytes": 2685331,
+      "sha256": "dee14c4d469e92fe396ac993daffe90b7811a8549dd164c33a3855627bc2fc6e",
+      "mode": 420,
+      "mtime_ns": 1790092955656387091
+    },
+    {
+      "path": "legacy-png/assets/skins/tank-origin.png",
+      "bytes": 2999029,
+      "sha256": "25362c58eb7b027060de7b912f7b32cb6122cd6ffbb8a81a229052529aa276ba",
+      "mode": 420,
+      "mtime_ns": 1790098822933112025
+    },
+    {
+      "path": "legacy-png/assets/story/a1-stage-1.png",
+      "bytes": 2053457,
+      "sha256": "d0c0dd7fec817c78cc58fb7518d74f91b9a2f2a604882c9c5917f60640e77231",
+      "mode": 420,
+      "mtime_ns": 1790164395458511710
+    },
+    {
+      "path": "legacy-png/assets/story/a1-stage-2.png",
+      "bytes": 2485105,
+      "sha256": "957a720e675ccdfc3295aef1227bbb929ae8d2665d597368640a3cb868d6352a",
+      "mode": 420,
+      "mtime_ns": 1790164532942259908
+    },
+    {
+      "path": "legacy-png/assets/story/a2-stage-1.png",
+      "bytes": 2512324,
+      "sha256": "708600723e2eb3329215305634d3b7d3a4206b65f3f1a3d4516a635a987393da",
+      "mode": 420,
+      "mtime_ns": 1790164628614882112
+    },
+    {
+      "path": "legacy-png/assets/story/a2-stage-3.png",
+      "bytes": 2488467,
+      "sha256": "ee6619cdedc9e123c3d435840030abf788ab3bc8ddc1657dd9a1c8dece3413aa",
+      "mode": 420,
+      "mtime_ns": 1790164725527321935
+    },
+    {
+      "path": "legacy-png/assets/story/a3-stage-1.png",
+      "bytes": 2297366,
+      "sha256": "22e41525b6f982cb9c58fe32ac3f6e52bc8bd3d84aef93630005a8a36d4afbc0",
+      "mode": 420,
+      "mtime_ns": 1790165566550301909
+    },
+    {
+      "path": "legacy-png/assets/story/a3-stage-3.png",
+      "bytes": 2462927,
+      "sha256": "a6717d8f908ecf9a3f35e84a9bc45d9d5e9b38453b1314670906fbb59ce23041",
+      "mode": 420,
+      "mtime_ns": 1790165698271832228
+    },
+    {
+      "path": "legacy-png/assets/story/actors/eve-armed.png",
+      "bytes": 2920276,
+      "sha256": "d9c076d82cf5c3f8e9e60a30f03a51233afabe794190b7cef67a350c8a5cc2af",
+      "mode": 420,
+      "mtime_ns": 1790173529425165772
+    },
+    {
+      "path": "legacy-png/assets/story/actors/eve.png",
+      "bytes": 2891761,
+      "sha256": "7f0f6cd22497a8f9ad217461b082309c4c0c635e826be9be373be6ca7495e194",
+      "mode": 420,
+      "mtime_ns": 1790173438652629614
+    },
+    {
+      "path": "legacy-png/assets/story/actors/father-young.png",
+      "bytes": 2879131,
+      "sha256": "19a16a7932febd047755f02b6b59d805254bf62318117131c6f90b7e4742687a",
+      "mode": 420,
+      "mtime_ns": 1790174278684349656
+    },
+    {
+      "path": "legacy-png/assets/story/actors/father.png",
+      "bytes": 2805886,
+      "sha256": "be86c80534c020bfe014cb38ff95ddbab32904fc26a72de56ebc3c3b3e89761f",
+      "mode": 420,
+      "mtime_ns": 1790173927585428715
+    },
+    {
+      "path": "legacy-png/assets/story/actors/gran-young.png",
+      "bytes": 2823924,
+      "sha256": "32350eea6268b494a1230c02118aa36c6949337019aba4a4f49056e3526eff21",
+      "mode": 420,
+      "mtime_ns": 1790173514722109914
+    },
+    {
+      "path": "legacy-png/assets/story/actors/gran.png",
+      "bytes": 2833239,
+      "sha256": "f1ad52ac5d11d39f75c2c1e10afbff6777cc380ef6b86b4b2fc7807a0dc62e52",
+      "mode": 420,
+      "mtime_ns": 1790173364073248744
+    },
+    {
+      "path": "legacy-png/assets/story/actors/herman.png",
+      "bytes": 2597871,
+      "sha256": "ab03403e5fd3f5431918294e399d9fdd7ffedabb721572247a672eb2d0b591f9",
+      "mode": 420,
+      "mtime_ns": 1790174485882119417
+    },
+    {
+      "path": "legacy-png/assets/story/actors/phosphor.png",
+      "bytes": 2564993,
+      "sha256": "4f33d26e0798e0c9658a7395b09657a03800e517906efa2d07f8e0a0e7c19a63",
+      "mode": 420,
+      "mtime_ns": 1790173706563101053
+    },
+    {
+      "path": "legacy-png/assets/story/actors/rin-wounded.png",
+      "bytes": 2824023,
+      "sha256": "68481aa2bb81262529b6f71d218c0f292d6ae02b49036840a10095434bf27e63",
+      "mode": 420,
+      "mtime_ns": 1790172905003188014
+    },
+    {
+      "path": "legacy-png/assets/story/actors/rin.png",
+      "bytes": 2835214,
+      "sha256": "0e0994ce601e8eb84afb855ba0917e5d9828ba3f4457e4a47ed4b20288bda84a",
+      "mode": 420,
+      "mtime_ns": 1790172833878211737
+    },
+    {
+      "path": "legacy-png/assets/story/actors/shuo-wounded.png",
+      "bytes": 2927569,
+      "sha256": "6217e1dd5bafd4737fe757a45ace570f9221e4e546657f442b0d0540ff5eb589",
+      "mode": 420,
+      "mtime_ns": 1790173771648867488
+    },
+    {
+      "path": "legacy-png/assets/story/actors/shuo-young.png",
+      "bytes": 2681446,
+      "sha256": "9faa4a8b256196a5a9bb6a0584810b1050ca8dcca2e96faa074a8b0f33c77613",
+      "mode": 420,
+      "mtime_ns": 1790173021601509452
+    },
+    {
+      "path": "legacy-png/assets/story/actors/shuo.png",
+      "bytes": 2523084,
+      "sha256": "2a99466642b1a054908ad4e29155169c20fb4d571c1e85eb2666fce4f2247526",
+      "mode": 420,
+      "mtime_ns": 1790173032467243075
+    },
+    {
+      "path": "legacy-png/assets/story/assassin-home.png",
+      "bytes": 2471384,
+      "sha256": "74a33ae74e6ae10defdc46989d094b93f77d350b856b10ce3d8aa8d4667068fb",
+      "mode": 420,
+      "mtime_ns": 1790093660023361206
+    },
+    {
+      "path": "legacy-png/assets/story/assassin-lab.png",
+      "bytes": 2452707,
+      "sha256": "fe94d401a16821a21e6eeffc27a43f7a6f7592f019de92194bb2609b9547363e",
+      "mode": 420,
+      "mtime_ns": 1790093587156839013
+    },
+    {
+      "path": "legacy-png/assets/story/assassin-resonance.png",
+      "bytes": 2629642,
+      "sha256": "5cc1da49873ed9d133f7e601367c169bd3f176ac3f325b0b438754a0796834d3",
+      "mode": 420,
+      "mtime_ns": 1790095165757475615
+    },
+    {
+      "path": "legacy-png/assets/story/assassin-trail.png",
+      "bytes": 2617647,
+      "sha256": "dadc4059f538a1095a1e3cc5ed894a1b734dbd53f0dbe4e5225b5e0d579e5435",
+      "mode": 420,
+      "mtime_ns": 1790093944443848133
+    },
+    {
+      "path": "legacy-png/assets/story/backgrounds/lab.png",
+      "bytes": 2454761,
+      "sha256": "09a2577ba0dc5ec3cc1f4cbbadbe1906f38993204124025a344f552e9296b604",
+      "mode": 420,
+      "mtime_ns": 1790172502862580657
+    },
+    {
+      "path": "legacy-png/assets/story/backgrounds/road.png",
+      "bytes": 2981690,
+      "sha256": "cc74f7faefa2ab8186f2b04a174e7ded454e845c56466c49d6a89e4641226105",
+      "mode": 420,
+      "mtime_ns": 1790172869159167528
+    },
+    {
+      "path": "legacy-png/assets/story/backgrounds/shelter.png",
+      "bytes": 2264456,
+      "sha256": "e5c6f687ac2c2b06d4dbdb7cdb61e59b67c6c8d598df7070d892c143c41fed9b",
+      "mode": 420,
+      "mtime_ns": 1790172649823898554
+    },
+    {
+      "path": "legacy-png/assets/story/backgrounds/tower.png",
+      "bytes": 2490466,
+      "sha256": "c6e6fdfc9240c8637d65f3948c279c1820444d104acebfa2293d80868bd49302",
+      "mode": 420,
+      "mtime_ns": 1790172765803691745
+    },
+    {
+      "path": "legacy-png/assets/story/c1-stage-1.png",
+      "bytes": 2616531,
+      "sha256": "abf1c2416f73cac767caef1b473fe44a2cc0fdae35864e4468bd6c5e445b85b7",
+      "mode": 420,
+      "mtime_ns": 1790165391707551479
+    },
+    {
+      "path": "legacy-png/assets/story/c1-stage-3.png",
+      "bytes": 2593387,
+      "sha256": "7745c0d733e01ceea0fc96a133deebb2806254788c8351097bdb0a06c907fc9e",
+      "mode": 420,
+      "mtime_ns": 1790165517519172788
+    },
+    {
+      "path": "legacy-png/assets/story/c2-stage-1.png",
+      "bytes": 2461038,
+      "sha256": "ac58cdaeaa0aecfae9089c34ead513ebc2c5df4429a47d93b7d2f5394357959c",
+      "mode": 420,
+      "mtime_ns": 1790165670271625638
+    },
+    {
+      "path": "legacy-png/assets/story/c2-stage-3.png",
+      "bytes": 2415726,
+      "sha256": "471744b74462b5a8eb473ae6a9c590a034938237c61d78e671282972c924bdd4",
+      "mode": 420,
+      "mtime_ns": 1790165786034008384
+    },
+    {
+      "path": "legacy-png/assets/story/c3-stage-1.png",
+      "bytes": 2157059,
+      "sha256": "5152c2347d39c8ccbedb5cb752adfbf0ba0d680c890107e5e90ec829881c42e6",
+      "mode": 420,
+      "mtime_ns": 1790165973523129702
+    },
+    {
+      "path": "legacy-png/assets/story/c3-stage-3.png",
+      "bytes": 2463759,
+      "sha256": "c44f2bee8eaf74aaa9bde9be0849d4231d2bbcaadd548fa73055d5ace7701f1d",
+      "mode": 420,
+      "mtime_ns": 1790166088933340430
+    },
+    {
+      "path": "legacy-png/assets/story/c4-stage-1.png",
+      "bytes": 2321811,
+      "sha256": "f47726a374ce621629fbf77fe37b9a25465b827d2ee5d86331b5c1b034fe5fd1",
+      "mode": 420,
+      "mtime_ns": 1790166261328652978
+    },
+    {
+      "path": "legacy-png/assets/story/c4-stage-3.png",
+      "bytes": 2539328,
+      "sha256": "6b978ff68875b32e0b363c4e3c3674f23f4b9560c0c44a601cd48a87d475b09a",
+      "mode": 420,
+      "mtime_ns": 1790166415780519962
+    },
+    {
+      "path": "legacy-png/assets/story/c5-stage-1.png",
+      "bytes": 2441469,
+      "sha256": "fe95d1e0478862031bc6d8241fc2542cfb4bf2b5bac832f3ccda4a28e60a84b6",
+      "mode": 420,
+      "mtime_ns": 1790164441166197896
+    },
+    {
+      "path": "legacy-png/assets/story/c5-stage-3.png",
+      "bytes": 2469020,
+      "sha256": "3cc1b404b0b7f30aa38c2646aa8791e96fce216dee86e96b6fb275129df7763e",
+      "mode": 420,
+      "mtime_ns": 1790164614725268722
+    },
+    {
+      "path": "legacy-png/assets/story/c6-stage-1.png",
+      "bytes": 2520413,
+      "sha256": "63c65faf0028a32fbec8e6f4946a650ec7bebd630be04c58885b2978d798011c",
+      "mode": 420,
+      "mtime_ns": 1790164758381719589
+    },
+    {
+      "path": "legacy-png/assets/story/c6-stage-3.png",
+      "bytes": 2562459,
+      "sha256": "481bd74b12b18b94480aa432fe813d52aca1ac1ec5486cf70a813adb4385ad31",
+      "mode": 420,
+      "mtime_ns": 1790164870102468014
+    },
+    {
+      "path": "legacy-png/assets/story/c7-stage-1.png",
+      "bytes": 2570192,
+      "sha256": "3ffaeaa8a2de68df242db59da92d6eba9491ad67a24254498b1e6cb8f5f79b8e",
+      "mode": 420,
+      "mtime_ns": 1790164978255274177
+    },
+    {
+      "path": "legacy-png/assets/story/c7-stage-3.png",
+      "bytes": 2721990,
+      "sha256": "b18e22fb15d67b406f4564a43929eaaf995425ba9bd1ac4fffce2e5721d0ba4b",
+      "mode": 420,
+      "mtime_ns": 1790165097365952492
+    },
+    {
+      "path": "legacy-png/assets/story/c8-stage-1.png",
+      "bytes": 2885698,
+      "sha256": "d80a47a8d3ceac77f73a4a9d635393e2c15358dbe07e255ff58517721e527abf",
+      "mode": 420,
+      "mtime_ns": 1790165337740240216
+    },
+    {
+      "path": "legacy-png/assets/story/c8-stage-3.png",
+      "bytes": 2459139,
+      "sha256": "22036ce8a45d520556edcf164e78e301d6d114bca97d687408df91f65ab0c10f",
+      "mode": 420,
+      "mtime_ns": 1790165520748852015
+    },
+    {
+      "path": "legacy-png/assets/story/c9-stage-1.png",
+      "bytes": 2663509,
+      "sha256": "c7750714fddcbb143213e780f9550385071a4582aefae8b9291adbedb49de13e",
+      "mode": 420,
+      "mtime_ns": 1790165594791631341
+    },
+    {
+      "path": "legacy-png/assets/story/c9-stage-3.png",
+      "bytes": 2577975,
+      "sha256": "0a73551ee5d45a40ee38cd00c0c8847ec1ca325a51d70f12a016d490e2320175",
+      "mode": 420,
+      "mtime_ns": 1790165673633574486
+    },
+    {
+      "path": "legacy-png/assets/story/e1-stage-1.png",
+      "bytes": 2449667,
+      "sha256": "2f7793721d50523cf1e77796d230d2e63ed6836971c96f7be1dc8f7b4ae99736",
+      "mode": 420,
+      "mtime_ns": 1790166077897233844
+    },
+    {
+      "path": "legacy-png/assets/story/e1-stage-3.png",
+      "bytes": 2426320,
+      "sha256": "ec3558c295f7cb9b9a4148ff20bab63f45f7e6b07488cdc6e04a52e0e8b0da0e",
+      "mode": 420,
+      "mtime_ns": 1790166281353901148
+    },
+    {
+      "path": "legacy-png/assets/story/e2-stage-3.png",
+      "bytes": 2320312,
+      "sha256": "9e20501a4c3575f9546f188f252c3327aa1f2dbb28f4510f213a0382feac7096",
+      "mode": 420,
+      "mtime_ns": 1790166495199431896
+    },
+    {
+      "path": "legacy-png/assets/story/e3-stage-1.png",
+      "bytes": 2434462,
+      "sha256": "2d17e597f56a05ba17f28a681dccf3755ede95666af97b490793d3fe398915b0",
+      "mode": 420,
+      "mtime_ns": 1790166577059283137
+    },
+    {
+      "path": "legacy-png/assets/story/e3-stage-2.png",
+      "bytes": 2539979,
+      "sha256": "7543ab179cc425ffa320c798b0907cc2ee75a92ce91a182542985f6e76af8efe",
+      "mode": 420,
+      "mtime_ns": 1790166781579896212
+    },
+    {
+      "path": "legacy-png/assets/story/gunner-basement.png",
+      "bytes": 2361080,
+      "sha256": "929a8c1f0efc8fd32ab0fe0c1b4266046f176618b79b0885901a51eb0d1752b5",
+      "mode": 420,
+      "mtime_ns": 1790094815932893991
+    },
+    {
+      "path": "legacy-png/assets/story/gunner-echo.png",
+      "bytes": 2506257,
+      "sha256": "f13c07889ff8f0f5af0b98a305d38a5d1a7bba7735914f61be43bd95224ab906",
+      "mode": 420,
+      "mtime_ns": 1790094976700556397
+    },
+    {
+      "path": "legacy-png/assets/story/gunner-first-shot.png",
+      "bytes": 2539828,
+      "sha256": "082642eb7ee4767a70705862a57a038c95c239532f03a25dc79d39662a08a4e9",
+      "mode": 420,
+      "mtime_ns": 1790095165747513294
+    },
+    {
+      "path": "legacy-png/assets/story/gunner-sealed.png",
+      "bytes": 2344385,
+      "sha256": "4379f16d31cfcfb77b6c2afe93d5456355d6bb0c0a5575f83e42d8be4bad0e3f",
+      "mode": 420,
+      "mtime_ns": 1790094726787090778
+    },
+    {
+      "path": "legacy-png/assets/story/gunner-stop.png",
+      "bytes": 2620006,
+      "sha256": "de500345ee3fa6c3888d83a5e3f8432dad4b5940dcc0cd72b2a7bd858c923700",
+      "mode": 420,
+      "mtime_ns": 1790094893562555432
+    },
+    {
+      "path": "legacy-png/assets/story/p1-stage-1.png",
+      "bytes": 2458777,
+      "sha256": "1108faa7728d965c921b4dc93e59d40b0d13f135236d8c0504a6b1f66a2c0fb7",
+      "mode": 420,
+      "mtime_ns": 1790165473546081066
+    },
+    {
+      "path": "legacy-png/assets/story/p1-stage-3.png",
+      "bytes": 2614055,
+      "sha256": "61e036702ce46b4902a34be5588187e5929f3cafddb8a1315a831a776e0b5fc5",
+      "mode": 420,
+      "mtime_ns": 1790165794930692315
+    },
+    {
+      "path": "legacy-png/assets/story/p2-stage-1.png",
+      "bytes": 2744991,
+      "sha256": "f790ad90103d26ee858a127753d78509720c7c22b198ef25a4cdcf7ac6c6616e",
+      "mode": 420,
+      "mtime_ns": 1790166087222692370
+    },
+    {
+      "path": "legacy-png/assets/story/p2-stage-3.png",
+      "bytes": 2244430,
+      "sha256": "10260639dc85cbf95df9d4a9259383cc0e54474dd28e90aae204e2705cf99919",
+      "mode": 420,
+      "mtime_ns": 1790166213535879731
+    },
+    {
+      "path": "legacy-png/assets/story/p3-stage-1.png",
+      "bytes": 2670757,
+      "sha256": "bc102165614c47d841f9f33bc40e9b0144c84b4dfbe9f9812ffe5a30fc5dec1f",
+      "mode": 420,
+      "mtime_ns": 1790166502730630398
+    },
+    {
+      "path": "legacy-png/assets/story/p3-stage-3.png",
+      "bytes": 2627265,
+      "sha256": "9fc94a14c4c3edd79c73ccd6b66767493582be5cded055794199340ad89a3a05",
+      "mode": 420,
+      "mtime_ns": 1790167605187592149
+    },
+    {
+      "path": "legacy-png/assets/story/p4-stage-1.png",
+      "bytes": 2414849,
+      "sha256": "f187e8089aa3cd8767a6f07552f39f8c54e514af8ea34a624ebf3d0c4b8ae41e",
+      "mode": 420,
+      "mtime_ns": 1790167905028457403
+    },
+    {
+      "path": "legacy-png/assets/story/party-arrival.png",
+      "bytes": 2562540,
+      "sha256": "ef31effed4932bae158cf519a1944ba06dd6631f4a40b65754b6d9f250d66773",
+      "mode": 420,
+      "mtime_ns": 1790096568477144122
+    },
+    {
+      "path": "legacy-png/assets/story/party-gun.png",
+      "bytes": 2680649,
+      "sha256": "8850f9769da2910647948b3335a3ef1578dd44ffd8f68ce0e6ab5af240960e3b",
+      "mode": 420,
+      "mtime_ns": 1790097163498115301
+    },
+    {
+      "path": "legacy-png/assets/story/party-orders.png",
+      "bytes": 2526576,
+      "sha256": "e35beff19e3d48fe851a3ed22ded6a6658c19ead329415338637cfce18698470",
+      "mode": 420,
+      "mtime_ns": 1790096682662789583
+    },
+    {
+      "path": "legacy-png/assets/story/party-recorder.png",
+      "bytes": 2539974,
+      "sha256": "2f47840cf63ac07aaa8bb6b9bf49b40d2c2c573cdc5d6db9445f79bcbdc4532b",
+      "mode": 420,
+      "mtime_ns": 1790098822933245659
+    },
+    {
+      "path": "legacy-png/assets/story/party-rescue.png",
+      "bytes": 2464445,
+      "sha256": "adaf24adc9f718c7a3923265cd14d975a801f1c19fb01fe1ff4c38acb7aa862c",
+      "mode": 420,
+      "mtime_ns": 1790098822930573821
+    },
+    {
+      "path": "legacy-png/assets/story/party-road.png",
+      "bytes": 2845096,
+      "sha256": "bdd3901095adc5cff4bad7c37ea8880d1a3448d8f3606d5e895e0ed4ad75ec3a",
+      "mode": 420,
+      "mtime_ns": 1790098624143074870
+    },
+    {
+      "path": "legacy-png/assets/story/party-stay.png",
+      "bytes": 2565515,
+      "sha256": "8e357a63509ef568b9f0db2823ae6394976425b796a52dcb9af9bd681f21c359",
+      "mode": 420,
+      "mtime_ns": 1790097014348296523
+    },
+    {
+      "path": "legacy-png/assets/story/party-zone.png",
+      "bytes": 2702115,
+      "sha256": "136c7ffdc2af6e46ecb23f384f24e125cae1dda382ebcf222a6d9f4a8fa2941b",
+      "mode": 420,
+      "mtime_ns": 1790097163496106267
+    },
+    {
+      "path": "legacy-png/assets/story/phosphor-files.png",
+      "bytes": 2361637,
+      "sha256": "4f2a98b581c052e9feac0ecd6ed5b4afc4f0e0b0ed8702bacbafd88c8e24aafc",
+      "mode": 420,
+      "mtime_ns": 1790095673819536090
+    },
+    {
+      "path": "legacy-png/assets/story/phosphor-found.png",
+      "bytes": 2370847,
+      "sha256": "0dfebddd045dbc6c895716b52bb361c9daf96126278d4452442b66e3fbcf35f0",
+      "mode": 420,
+      "mtime_ns": 1790095767492746949
+    },
+    {
+      "path": "legacy-png/assets/story/phosphor-memory.png",
+      "bytes": 2494336,
+      "sha256": "cabae22eacaf6d7ce4601916f10dad699225419970b85cb7660c9add1d8af859",
+      "mode": 420,
+      "mtime_ns": 1790095596559682965
+    },
+    {
+      "path": "legacy-png/assets/story/phosphor-parting.png",
+      "bytes": 2484724,
+      "sha256": "eedef7449ee97fc7bd2b4b0d2e6e1505dfcb86eb4eb3f4ea1247517f3879d198",
+      "mode": 420,
+      "mtime_ns": 1790095767517065644
+    },
+    {
+      "path": "legacy-png/assets/story/s1-stage-1.png",
+      "bytes": 2452167,
+      "sha256": "fb10b69474f860358fbf7e7df81650fe1430c421f634827bfcf3fff96c8a6a0e",
+      "mode": 420,
+      "mtime_ns": 1790166050279163837
+    },
+    {
+      "path": "legacy-png/assets/story/s1-stage-3.png",
+      "bytes": 2569427,
+      "sha256": "d2e9316aea34c8743712a5cbd8b3b2f4149364466122088e986a04d9befd39b1",
+      "mode": 420,
+      "mtime_ns": 1790166262711363673
+    },
+    {
+      "path": "legacy-png/assets/story/s2-stage-1.png",
+      "bytes": 2272401,
+      "sha256": "5c62a3f0fa4db19a86d45a9cb899c758af61244ec118350667e7d4fb5e7f31df",
+      "mode": 420,
+      "mtime_ns": 1790167932938561559
+    },
+    {
+      "path": "legacy-png/assets/story/s2-stage-3.png",
+      "bytes": 2165887,
+      "sha256": "e4bea4dd2b6fda2722c1b2acb256eeb8de6aef917b92da5c7a2c93a7eacb1ac3",
+      "mode": 420,
+      "mtime_ns": 1790168492684606910
+    },
+    {
+      "path": "legacy-png/assets/story/swordsman-bookmark.png",
+      "bytes": 2536713,
+      "sha256": "e071575974e99ea2f11ff1ee573e66c4f125e721de823c83a62d41d4c8cee702",
+      "mode": 420,
+      "mtime_ns": 1790093944454877496
+    },
+    {
+      "path": "legacy-png/assets/story/swordsman-master.png",
+      "bytes": 2650773,
+      "sha256": "82466aa657ef150a1bc5b2d3c9f0b2d08af34cfc057788c33515c4fd5d6427ce",
+      "mode": 420,
+      "mtime_ns": 1790093944422288656
+    },
+    {
+      "path": "legacy-png/assets/story/swordsman-records.png",
+      "bytes": 2382119,
+      "sha256": "2fe4c55a9d48907159c8399c6f1fd58b5d822cf4dd76e2795365f6d89bdab074",
+      "mode": 420,
+      "mtime_ns": 1790093859623983145
+    },
+    {
+      "path": "legacy-png/assets/story/swordsman-return.png",
+      "bytes": 2556947,
+      "sha256": "97c74ee450169ab0d1ac0098df626ecb58daf008bc9ede4721f8f7e05b81b1e8",
+      "mode": 420,
+      "mtime_ns": 1790093944489607215
+    },
+    {
+      "path": "legacy-png/assets/story/tank-bell.png",
+      "bytes": 2568870,
+      "sha256": "847d2068efb53dda25a09747177a6e172d1805b3c5104b00a238133b07742295",
+      "mode": 420,
+      "mtime_ns": 1790094273451665640
+    },
+    {
+      "path": "legacy-png/assets/story/tank-refusal.png",
+      "bytes": 2540506,
+      "sha256": "855ad212d7c8b539b4449979fa5bfc5e6ab84bd5daa98d3ec89a1fb01768b063",
+      "mode": 420,
+      "mtime_ns": 1790095165795652986
+    },
+    {
+      "path": "legacy-png/assets/story/tank-return.png",
+      "bytes": 2539422,
+      "sha256": "4e466f005216fadf27bf2a226049f0af319c01db69a85fec9aede453a163d962",
+      "mode": 420,
+      "mtime_ns": 1790094473809295893
+    },
+    {
+      "path": "legacy-png/assets/story/tank-shield.png",
+      "bytes": 2543730,
+      "sha256": "be8395446b461d8d655dfc0f7a3310b7ad2ce213edce25a887fbe0d541f3aa6d",
+      "mode": 420,
+      "mtime_ns": 1790094337643114090
+    }
+  ],
+  "totalBytes": 877519343
+}

@@ -7,27 +7,28 @@
   shelter:{path:'assets/story/backgrounds/shelter.webp',title:'藏身處'},
   tower:{path:'assets/story/backgrounds/tower.webp',title:'鐘樓內部'},
   road:{path:'assets/story/backgrounds/road.webp',title:'城外舊路'},
-  archiveOuter:{path:'assets/story/complete-020/backgrounds/c4-outer.webp',title:'文件庫外廊'},
-  archiveHall:{path:'assets/story/complete-020/backgrounds/c4-archive.webp',title:'行政文件庫'},
-  archiveInner:{path:'assets/story/complete-020/backgrounds/c4-inner.webp',title:'文件庫內庫'},
-  chiwuOutside:{path:'assets/story/complete-020/backgrounds/a3-chiwu-outside.webp',title:'尺烏據點門外'},
-  mine:{path:'assets/story/complete-020/backgrounds/bg-deepholm-mine.webp',title:'迪普霍姆礦坑'},
-  mineLab:{path:'assets/story/complete-020/backgrounds/bg-mine-lab.webp',title:'礦坑深處'},
-  royalControl:{path:'assets/story/complete-020/backgrounds/royal-control.webp',title:'王室控制室'},
-  royalControlH1:{path:'assets/story/complete-020/backgrounds/royal-control-h1.webp',title:'王室控制室'},
-  bossHall:{path:'assets/story/complete-020/backgrounds/boss-hall-interior.webp',title:'尺烏基地內部'},
+  archiveOuter:{path:'assets/story/backgrounds/locations/c4-outer.webp',title:'文件庫外廊'},
+  archiveHall:{path:'assets/story/backgrounds/locations/c4-archive.webp',title:'行政文件庫'},
+  archiveInner:{path:'assets/story/backgrounds/locations/c4-inner.webp',title:'文件庫內庫'},
+  chiwuOutside:{path:'assets/story/backgrounds/locations/a3-chiwu-outside.webp',title:'尺烏據點門外'},
+  mine:{path:'assets/story/backgrounds/locations/bg-deepholm-mine.webp',title:'迪普霍姆礦坑'},
+  mineLab:{path:'assets/story/backgrounds/locations/bg-mine-lab.webp',title:'礦坑深處'},
+  royalControl:{path:'assets/story/backgrounds/locations/royal-control.webp',title:'王室控制室'},
+  royalControlH1:{path:'assets/story/backgrounds/h1-control-room/royal-control-h1.webp',title:'王室控制室'},
+  bossHall:{path:'assets/story/backgrounds/locations/boss-hall-interior.webp',title:'尺烏基地內部'},
   // Location keys that continuation() already asks for (F2-*, F3-*, G1 step 10+). They were never defined, so those
   // scenes had no background path, failed to decode, and the stage kept the previous frame with no characters on it.
-  table:{path:'assets/story/complete-020/backgrounds/g1-table.webp',title:'紀錄室長桌'},
+  table:{path:'assets/story/backgrounds/locations/g1-table.webp',title:'紀錄室長桌'},
   // STORY-SCENES-029: five location plates that replace borrowed generic backgrounds.
-  makuStreet:{path:'assets/story/scenes-029/maku-street.webp',title:'暮城入口街道'},
-  bellStairs:{path:'assets/story/scenes-029/bell-stairs.webp',title:'鐘樓維修階梯'},
+  makuStreet:{path:'assets/story/backgrounds/street-scenes/maku-street.webp',title:'暮城入口街道'},
+  bellStairs:{path:'assets/story/backgrounds/street-scenes/bell-stairs.webp',title:'鐘樓維修階梯'},
  };
  const names={rin:'凜','rin-wounded':'凜',shuo:'朔','shuo-young':'朔','shuo-wounded':'朔',gran:'格蘭','gran-young':'格蘭',eve:'伊芙','eve-armed':'伊芙',phosphor:'磷',father:'納爾瓦','father-young':'納爾瓦',herman:'赫爾曼',ito:'伊藤',boss:'尺烏首腦',louis:'路易斯'};
  const matchesSpeaker = (actor, speaker) => actor.name === speaker || (actor.id === 'father' && speaker === '父親') || (actor.id === 'father-young' && speaker === '鳴者');
  const actors=Object.fromEntries(Object.entries(names).map(([id,name])=>[id,{id,name,path:`assets/story/actors/${id}.webp`}]));
- for(const id of ['father','father-young'])actors[id].path=`assets/story/actors/narva-025/${id}.webp`;
- actors['father-wounded']={id:'father-wounded',name:'納爾瓦',path:'assets/story/actors/narva-025/father-wounded.webp'};
+ actors['eve-armed'].path='assets/story/actors/gun-unify/eve-armed.webp';
+ for(const id of ['father','father-young'])actors[id].path=`assets/story/actors/narva/${id}.webp`;
+ actors['father-wounded']={id:'father-wounded',name:'納爾瓦',path:'assets/story/actors/narva/father-wounded.webp'};
  // A frame identifies a narrative beat, not a new bitmap. Locations and cast are shared.
  const stage=(background,cast,art)=>({background,cast,art});
  const layouts={
@@ -76,7 +77,7 @@
  const artById=new Map(window.NDStoryArt.scenes.map(scene=>[scene.id,scene]));
  // A voice label describes the current line; it never adds a person to the scene.
  function speakerPresentation(step,scene={}){
-  const prompts={inspect:'調查',search:'尋物',action:'行動',puzzle:'拼合',task:'查證與接力',route:'撤離路線',battle:'戰鬥目標',choice:'選擇',complete:'收錄'};
+  const prompts={inspect:'調查',action:'行動',puzzle:'拼合',task:'查證與接力',route:'撤離路線',battle:'戰鬥目標',choice:'選擇',complete:'收錄'};
   if(step.type!=='dialogue')return {name:step.type==='narration'?'旁白':step.type==='choice'?'你的選擇':step.type==='complete'?'記憶收錄':'當前任務',kind:step.type==='narration'?'narration':'task',label:step.type==='narration'?'敘述':prompts[step.type]||'提示',actorId:null};
   if(step.speaker==='納爾瓦的錄音'||step.speaker==='父親的錄音')return {name:'納爾瓦',kind:'recording',label:'錄音',actorId:null};
   if(step.speaker==='赫爾曼的信')return {name:'赫爾曼',kind:'offscreen',label:'信',actorId:null};
@@ -98,7 +99,7 @@
   const shots = { D2: [[1, 11, 'd2-reunion', '中繼站外的重逢']], D7: [[9, 18, 'f1', '警告與王室委託']], F4: [[7, 13, 'f4', '鐘聲暫歇']], G1: [], H1: [[16, 17, 'h1-louis-showdown', '與路易斯決戰']] };
   const position = (window.NDStoryPerformances?.[nodeId]?.steps || []).findIndex(item => item.id === step.id) + 1;
   const shot = step.royalCutaway ? null : (shots[nodeId] || []).find(([from, to]) => position >= from && position <= to);
-  if (shot) return { id: `${nodeId}:${step.id}:illustration`, kind: 'illustration', background: { id: shot[2], path: ['d2-reunion','f1'].includes(shot[2]) ? `assets/story/narva-025/${shot[2]}.webp` : `assets/story/complete-020/chapters/${shot[2]}.webp`, title: shot[3] }, actors: [], title: shot[3] };
+  if (shot) return { id: `${nodeId}:${step.id}:illustration`, kind: 'illustration', background: { id: shot[2], path: shot[2]==='h1-louis-showdown' ? 'assets/story/illustrations/gun-unify/h1-louis-showdown.webp' : ['d2-reunion','f1'].includes(shot[2]) ? `assets/story/illustrations/swordsman-stills/${shot[2]}.webp` : `assets/story/illustrations/chapters/${shot[2]}.webp`, title: shot[3] }, actors: [], title: shot[3] };
   const supplied = window.NDStoryChapterArt || {};
   const frame = step.frame;
   const castByNode = {
@@ -156,6 +157,8 @@
  function resolve(nodeId,step){
   // A merged chapter keeps each beat's original scene layout, addressed by the id prefix of its steps.
   {const home=String(step.id).split('-')[0],m=window.NDStoryMergedNodes?.[home];if(m&&m.into===nodeId){nodeId=home;step={...step,frame:step.frame-m.offset};}}
+  // H1-VALVE-ACTION-081: this action is an authored single reading beat.
+  if(nodeId==='H1'&&step.id==='H1-r04')return {id:'H1:H1-r04:turn-valve',kind:'illustration',background:{id:'h1-turn-valve',path:'assets/story/illustrations/h1-valve-action/turn-valve.webp',title:'格蘭與朔合力轉動主閥'},actors:[],title:'格蘭與朔合力轉動主閥'};
   // H2「硬幣」: every beat is a full-frame illustration (its performance frame), no layered cast.
   if(nodeId==='H2')return null;
   // STORY-REWRITE-050-ART: step-level illustrations for the rewritten storyline.
@@ -183,6 +186,7 @@
   'E3-letter-d':'e3-letter',
   'E3-letter-e':'e3-letter',
   'E3-letter-f':'e3-letter',
+  'E3-step-03':'e3-lab-safe',
   'E3-step-08-b':'e3-rin-rooftop',
   'P3-r10':'farewell-outskirts',
   'P3-r11':'farewell-outskirts',
@@ -288,6 +292,8 @@
   'A1-step-06':'assassin-lab',
   'A1-step-07':'assassin-lab',
   'A1-step-08':'assassin-lab',
+  'A3-step-06':'a3-treason-notice',
+  'A3-step-07':'a3-treason-notice',
   'A3-step-07-b':'assassin-trail',
   'E2-step-01':'gunner-sealed',
   'E2-step-02':'gunner-sealed',
@@ -324,7 +330,6 @@
    'B1-r18':['road',['shuo','phosphor']],
    'A3-step-01':['chiwuOutside',['rin-wounded']],
    'A3-step-02':['chiwuOutside',['rin-wounded']],
-   'A3-step-06':['chiwuOutside',['rin-wounded']],
    'C9-r17':['mineLab',['shuo','rin-wounded']],
    'G1-r01':['table',['father-wounded','gran']],
    'G1-r17':['table',['father-wounded','phosphor']],
@@ -334,16 +339,6 @@
   if(STAGE_FIX[step.id]){const [bgKey,cast]=STAGE_FIX[step.id],speaker=step.type==='dialogue'?cast.find(id=>matchesSpeaker(actors[id],step.speaker)):null;const portraits=cast.map((id,index)=>({...actors[id],position:cast.length===1?'center':index?'right':'left',active:id===speaker}));const bg={id:bgKey,...backgrounds[bgKey]};return {id:`${nodeId}:${step.id}:${cast.join('+')}`,kind:'layered',background:bg,actors:portraits,title:bg.title};}
   {const mapped=REWRITE_ART[step.id],image=mapped&&artById.get(mapped);if(image)return {id:`${nodeId}:${step.id}:${mapped}`,kind:'illustration',background:{...image},actors:[],title:image.title};}
   const nextScene=continuation(nodeId,step);if(nextScene)return nextScene;
-  const search=window.NDStorySearchAssets?.scenes[step.searchScene];
-  if(search){
-   const covers=search.covers||[],covered=new Set(covers.flatMap(p=>p.targets));
-   // The story stage uses the same closed covers as the searching surface.
-   // Only the recorder explicitly brought onto the table may bypass a cover.
-   const visible=search.placements.filter(p=>p.decorative||!covered.has(p.id)||(p.id==='recorder'&&step.recorderOnTable));
-   const props=visible.map(p=>({...p,...(p.id==='recorder'&&step.recorderOnTable?{x:62,y:45,w:19,h:24}:{}),path:window.NDStorySearchAssets.props[p.prop].path,name:window.NDStorySearchAssets.props[p.prop].label,lit:p.id==='lamp'&&Boolean(step.lampLit),retained:p.id==='recorder'&&Boolean(step.recorderOnTable)}));
-   props.push(...covers.map(p=>({...p,path:window.NDStorySearchAssets.props[p.prop].path,name:p.label,decorative:true})));
-   return {id:`${nodeId}:${step.id}:search:${Boolean(step.lampLit)}`,kind:'search',background:search.background,actors:[],title:search.title,searchScene:step.searchScene,props};
-  }
   const entry=layouts[nodeId]?.[step.frame];
   if(!entry)return null;
   let {background,cast,art}=entry;

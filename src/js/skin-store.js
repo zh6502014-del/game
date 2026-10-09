@@ -14,7 +14,7 @@ function progress(job){
 }
 function unlocked(job){return !!skins[job]&&progress(job)>=3;}
 function equipped(job){return unlocked(job)&&choices[job]===skins[job].id?choices[job]:'base';}
-function path(job,id='base'){return skins[job]&&id===skins[job].id?skins[job].path:`assets/characters/${job}.webp`;}
+function path(job,id='base'){return skins[job]&&id===skins[job].id?skins[job].path:(job==='gunner'?'assets/story/actors/gun-unify/gunner.webp':`assets/characters/${job}.webp`);}
 function equip(job,id){if(!skins[job]||(id!=='base'&&(id!==skins[job].id||!unlocked(job))))return {ok:false,persisted:false};choices[job]=id;let persisted=true;try{localStorage.setItem(KEY,JSON.stringify(choices));}catch{persisted=false;}window.dispatchEvent(new Event('nd-skin-change'));return {ok:true,persisted};}
 function controls(job){const s=skins[job],current=equipped(job);return `<div class="skin-controls" aria-label="玩家外觀"><span>角色外觀</span><button type="button" aria-pressed="${current==='base'}" onclick="equipSetupSkin('${job}','base')">原始外觀</button><button type="button" aria-pressed="${current===s.id}" ${unlocked(job)?'':'disabled'} onclick="equipSetupSkin('${job}','${s.id}')">${s.title}${unlocked(job)?'':' · 完成故事線解鎖'}</button><small id="skin-save-status" role="status"></small></div>`;}
 window.NDSkins=Object.freeze({unlocked,equipped,equip,path,controls,noteProgress(job,value){sessionProgress[job]=Math.max(sessionProgress[job]||0,value);}});

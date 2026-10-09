@@ -326,9 +326,9 @@
     return ok;
   }
   window.NDSkillFX = {load, play, timeScale: 1, kinds: Object.keys(SKILLS), ready: false};
-  // In the game the sprites load from assets/story/fx-060 as soon as this file runs; the preview page loads its own copies.
+  // In the game the sprites load from assets/story/fx/awaken as soon as this file runs; the preview page loads its own copies.
   if (!window.ND_SKILL_FX_NO_AUTOLOAD && document.currentScript) {
-    const base = 'assets/story/fx-060';
+    const base = 'assets/story/fx/awaken';
     load(base).then(() => { window.NDSkillFX.ready = true; }).catch(e => console.warn('skill fx sprites not loaded; using the simple fallback', e));
   }
 })();

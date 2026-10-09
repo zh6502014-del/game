@@ -5,103 +5,103 @@
   "version": 1,
   "chapters": {
     "A1": {
-      "path": "assets/story/chapters-020/a1.webp",
+      "path": "assets/story/illustrations/node-posters/a1.webp",
       "title": "研究室對峙",
       "objectPosition": "50% 50%",
       "artId": "assassin-lab"
     },
     "A3": {
-      "path": "assets/story/chapters-020/a3.webp",
+      "path": "assets/story/illustrations/node-posters/a3.webp",
       "title": "尺烏據點清洗",
       "objectPosition": "50% 50%",
       "artId": "assassin-home"
     },
     "S1": {
-      "path": "assets/story/narva-025/swordsman-bookmark.webp",
+      "path": "assets/story/illustrations/swordsman-stills/swordsman-bookmark.webp",
       "title": "鐘樓贈書籤",
       "objectPosition": "50% 50%",
       "artId": "swordsman-bookmark"
     },
     "S2": {
-      "path": "assets/story/narva-025/swordsman-records.webp",
+      "path": "assets/story/illustrations/swordsman-stills/swordsman-records.webp",
       "title": "核對未撤離城市",
       "objectPosition": "50% 50%",
       "artId": "swordsman-records"
     },
     "S3": {
-      "path": "assets/story/narva-025/swordsman-master.webp",
+      "path": "assets/story/illustrations/swordsman-stills/swordsman-master.webp",
       "title": "擋住伊藤掩護逃亡",
       "objectPosition": "50% 50%",
       "artId": "swordsman-master"
     },
     "T1": {
-      "path": "assets/story/chapters-020/t1.webp",
+      "path": "assets/story/illustrations/node-posters/t1.webp",
       "title": "暮鐘提前與撤離",
       "objectPosition": "50% 50%",
       "artId": "tank-bell"
     },
     "T2": {
-      "path": "assets/story/chapters-020/t2.webp",
+      "path": "assets/story/illustrations/node-posters/t2.webp",
       "title": "折返接應母女",
       "objectPosition": "50% 50%",
       "artId": "tank-return"
     },
     "T3": {
-      "path": "assets/story/chapters-020/t3.webp",
+      "path": "assets/story/illustrations/node-posters/t3.webp",
       "title": "第一面盾崩裂前的救援",
       "objectPosition": "50% 50%",
       "artId": "tank-shield"
     },
     "E1": {
-      "path": "assets/story/chapters-020/e1.webp",
+      "path": "assets/story/illustrations/node-posters/e1.webp",
       "title": "聽見女孩殘響",
       "objectPosition": "50% 50%",
       "artId": "gunner-echo"
     },
     "E2": {
-      "path": "assets/story/chapters-020/e2.webp",
+      "path": "assets/story/illustrations/node-posters/e2.webp",
       "title": "地下三層取回資料",
       "objectPosition": "50% 50%",
       "artId": "gunner-basement"
     },
     "E3": {
-      "path": "assets/story/chapters-020/e3.webp",
+      "path": "assets/story/illustrations/gun-unify/gunner-first-shot.webp",
       "title": "第一槍逃離",
       "objectPosition": "50% 50%",
       "artId": "gunner-first-shot"
     },
     "P1": {
-      "path": "assets/story/complete-020/chapters/p1-morwell-ruins.webp",
+      "path": "assets/story/illustrations/chapters/p1-morwell-ruins.webp",
       "title": "莫爾威爾廢墟抱起嬰兒",
       "objectPosition": "50% 50%",
       "artId": "p1-morwell-ruins"
     },
     "P3": {
-      "path": "assets/story/complete-020/chapters/farewell-outskirts.webp",
+      "path": "assets/story/illustrations/chapters/farewell-outskirts.webp",
       "title": "郊區送別",
       "objectPosition": "50% 50%",
       "artId": "farewell-outskirts"
     },
     "B1": {
-      "path": "assets/story/complete-020/chapters/b1-shuo-wolves.webp",
+      "path": "assets/story/illustrations/chapters/b1-shuo-wolves.webp",
       "title": "朔擊退晶狼",
       "objectPosition": "50% 50%",
       "artId": "b1-shuo-wolves"
     },
     "C4": {
-      "path": "assets/story/complete-020/chapters/c4-archive-meeting.webp",
+      "path": "assets/story/illustrations/chapters/c4-archive-meeting.webp",
       "title": "文件庫相遇",
       "objectPosition": "50% 50%",
       "artId": "c4-archive-meeting"
     },
     "C5": {
-      "path": "assets/story/complete-020/chapters/c5-eve-gun-rin.webp",
+      "path": "assets/story/illustrations/gun-unify/c5-eve-gun-rin.webp",
       "title": "伊芙舉槍質問",
       "objectPosition": "50% 50%",
       "artId": "c5-eve-gun-rin"
     },
     "C8": {
-      "path": "assets/story/complete-020/chapters/mine-recorder.webp",
+      "path": "assets/story/illustrations/chapters/mine-recorder.webp",
       "title": "礦坑",
       "objectPosition": "50% 50%",
       "artId": "mine-recorder"
@@ -112,7 +112,7 @@
       "id": "father-wounded",
       "name": "納爾瓦",
       "state": "wounded",
-      "path": "assets/story/actors/narva-025/father-wounded.webp"
+      "path": "assets/story/actors/narva/father-wounded.webp"
     }
   },
   "backgrounds": {
@@ -121,17 +121,17 @@
     "relay-documents": {
       "id": "relay-documents",
       "title": "中繼站文書",
-      "path": "assets/story/complete-020/props/relay-documents.webp"
+      "path": "assets/story/props/chapter-props/relay-documents.webp"
     },
     "relay-plan": {
       "id": "relay-plan",
       "title": "站內平面圖",
-      "path": "assets/story/complete-020/props/relay-plan.webp"
+      "path": "assets/story/props/chapter-props/relay-plan.webp"
     },
     "relay-device": {
       "id": "relay-device",
       "title": "腕部裝置",
-      "path": "assets/story/complete-020/props/relay-device.webp"
+      "path": "assets/story/props/chapter-props/relay-device.webp"
     }
   }
 };

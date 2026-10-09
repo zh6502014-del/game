@@ -256,3 +256,12 @@
   .story-performance button .story-key, .story-performance button kbd {display:none!important}
   #app .duel-screen.nd-stage .duel-hand .card:hover:not(:disabled) {transform:none!important}
 }
+
+/* DUEL-LEAVE-068: one extra control only in the free-duel dock. */
+@media (max-width:899px) and (orientation:portrait){
+ body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+ body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave)>button{min-width:0!important;gap:4px!important;padding:8px 4px!important}
+}
+@media (orientation:landscape) and (max-height:520px), (orientation:landscape) and (max-width:899px){
+ body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave){grid-template-columns:auto minmax(0,1fr) auto auto auto!important}
+}

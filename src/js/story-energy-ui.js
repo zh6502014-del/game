@@ -64,7 +64,7 @@ function node(tag, cls, text) {
     return '目前無法施放';
   }
   function localArt(u, card) {
-    const fallback = 'assets/' + (card ? 'cards/' : 'characters/') + u.job + '.webp';
+    const fallback = u.job === 'gunner' ? 'assets/story/actors/gun-unify/' + (card ? 'gunner-card' : 'gunner') + '.webp' : 'assets/' + (card ? 'cards/' : 'characters/') + u.job + '.webp';
     if (u.portrait) {
       try { const url = new URL(u.portrait, document.baseURI); if (url.origin === location.origin && /^(https?:|file:)$/.test(url.protocol)) return [u.portrait, fallback]; } catch (_) {}
     }
@@ -184,7 +184,7 @@ function node(tag, cls, text) {
     card.setAttribute('aria-label',u.name+'的'+cone.name+'，消耗'+cone.cost+'暮晶。'+cone.description+(legal?'點一下即對所有敵人施放。':reason));
     card.title=cone.name+' · '+cone.cost+' 暮晶：'+cone.description;
     const pic=node('span','seb-skill-art seb-cone-art');pic.setAttribute('aria-hidden','true');
-    const img=node('img','seb-art-image');img.alt='';img.draggable=false;img.decoding='async';img.src='assets/story/fx-060/fx-crystal-cone.webp';img.addEventListener('error',()=>{img.hidden=true;});pic.append(img);
+    const img=node('img','seb-art-image');img.alt='';img.draggable=false;img.decoding='async';img.src='assets/story/fx/awaken/fx-crystal-cone.webp';img.addEventListener('error',()=>{img.hidden=true;});pic.append(img);
     card.append(pic,node('span','seb-skill-cost',cone.cost),node('span','seb-skill-owner',u.name),node('strong','seb-skill-name',cone.name));
     if(!legal)card.append(node('span','seb-skill-lock',reason));
     holder.append(card);return holder;
@@ -261,6 +261,19 @@ function node(tag, cls, text) {
     else body.append(node('p','',PASSIVES[u.job]),node('p','',labels(s,u).join('；')||'目前沒有特殊狀態'),node('p','',ability.name+'（'+ability.cost+' 暮晶）：'+ability.description));
     openModal(s,isSkill?ability.name:u.name,body,'info',isSkill?'skill-info-'+id:'info-'+id);
   }
+  // Lightweight, non-blocking story reminder: never pauses playback, never takes focus, auto-dismisses.
+  function hideToast(s) {
+    if(s.toastTimer){clearTimeout(s.toastTimer);s.toastTimer=null;}
+    if(s.toast){s.toast.remove();s.toast=null;}
+  }
+  function showToast(s,lines,title,ms=5200) {
+    hideToast(s);
+    const box=node('aside','seb-toast');box.setAttribute('role','status');
+    box.append(node('strong','seb-toast-title',title),...lines);
+    box.addEventListener?.('click',()=>hideToast(s));
+    s.root.append(box);s.toast=box;
+    s.toastTimer=setTimeout(()=>{s.toastTimer=null;if(s.toast===box)hideToast(s);},ms);
+  }
   function hidePreview(s) {
     if(s.hoverTimer){clearTimeout(s.hoverTimer);s.hoverTimer=null;}
     if(s.preview){s.preview.remove();s.preview=null;}
@@ -298,6 +311,7 @@ function node(tag, cls, text) {
     return new Promise(resolve=>{const timer=setTimeout(()=>{s.waiters.delete(timer);resolve(current===s&&token===s.playToken);},ms);s.waiters.set(timer,resolve);});
   }
   function cancelPlayback(s,sync=true) {
+    hideToast(s);
     s.playToken++;for(const [timer,resolve] of s.waiters){clearTimeout(timer);resolve(false);}s.waiters.clear();clearFX(s,true);
     s.view=null;s.busy=false;
     if(sync&&current===s)render(s,s.state.status!=='playing'?'result-primary':undefined);
@@ -505,10 +519,25 @@ function node(tag, cls, text) {
     const message=s.shell.querySelector('.seb-battle-message');if(message)message.textContent=s.message;
     const okay=await wait(s,duration,token);clearFX(s);return okay;
   }
+  function isKingRatArrival(frame) {
+    return frame.events.some(e=>e.type==='transform'&&e.targetId==='louis-armored')&&
+      frame.events.some(e=>e.type==='summon'&&e.targetId?.startsWith('crystal-rat-'));
+  }
+  function readKingRatArrival(s,token) {
+    if(current!==s||token!==s.playToken)return Promise.resolve(false);
+    const narration='路易斯額前的暮晶猛然亮起，感應沿地面擴散。成群變異鼠從四周湧出，撲向眾人。';
+    const dialogue='伊芙：「他在控制牠們！」';
+    showToast(s,[node('p','seb-toast-narration',narration),node('p','seb-toast-line',dialogue)],'鼠群湧現');announce(s,narration+' '+dialogue);
+    return Promise.resolve(true);
+  }
   async function playback(s,result,before,focusTo) {
     const token=++s.playToken;
     const frames=result.frames?.length?result.frames:[{kind:'action',side:before.side,before,after:copy(s.state),events:result.events||[]}];
-    if(s.reduced.matches){s.view=null;s.busy=false;render(s,s.state.status!=='playing'?'result-primary':focusTo);announce(s,s.message);return;}
+    if(s.reduced.matches){
+      const arrival=frames.find(isKingRatArrival);
+      if(arrival){s.view=copy(arrival.after);render(s);if(!await readKingRatArrival(s,token))return;}
+      s.view=null;s.busy=false;render(s,s.state.status!=='playing'?'result-primary':focusTo);announce(s,s.message);return;
+    }
     for(const frame of frames){
       if(current!==s||token!==s.playToken)return;
       s.view=copy(frame.before);render(s);
@@ -516,6 +545,7 @@ function node(tag, cls, text) {
       if(!await returnActors(s,token))return;
       if(current!==s||token!==s.playToken)return;
       s.view=copy(frame.after);render(s);
+      if(isKingRatArrival(frame)&&!await readKingRatArrival(s,token))return;
       if(!await wait(s,70,token))return;
     }
     if(current!==s||token!==s.playToken)return;

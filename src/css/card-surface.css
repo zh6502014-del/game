@@ -18,7 +18,7 @@
 :is(.duel-screen .duel-hand .card, .card.nd-drag-ghost)>b{
  position:absolute!important;left:4px;right:4px;bottom:6px!important;z-index:5;
  margin:0!important;padding:0!important;text-align:center;
- font-family:Georgia,'Songti TC',serif;font-size:16px!important;line-height:1.2!important;
+ font-family:"Noto Serif TC",serif;font-size:16px!important;line-height:1.2!important;
  font-weight:700;letter-spacing:0!important;color:#ffecc0!important;text-shadow:0 2px 3px #000;
 }
 /* A dragged card stays rigid; target highlighting belongs to the receiving zone. */

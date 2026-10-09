@@ -593,8 +593,14 @@ function arena(){
 function renderGame(){
   if(S.end){renderResult();return}
   const p=S.p;
-  app.innerHTML=`${S.storyBattle?`<div class="story-battle-banner"><button onclick="leaveStoryBattle()">返回場景</button><strong>${S.storyBattle.name}</strong> · ${S.storyBattle.description}</div>`:''}<div class="topbar"><div><div class="kicker">NIGHTFALL DUEL</div><div class="round">ROUND ${Math.min(S.round,50)} / 50</div></div><div class="phase"><span class="phase-dot"></span>${S.phase==="player"?"YOUR MOVE":S.phase==="reveal"?"SHOWDOWN":"OPPONENT"}</div></div>${arena()}<nav class="battle-dock" aria-label="遊戲選單"><button onclick="showBattleJournal()">☷ <span>戰況</span></button><span class="battle-state">${S.phase==="player"?"點牌查看並出牌，或拖至你的放置區":S.phase==="reveal"?"揭曉命運":S.phase==="result"?"戰鬥結算":"對手行動中"}</span><button onclick="showRules()">◇ <span>規則</span></button><button onclick="showAudioSettings()">♫ <span>音效</span></button></nav>`;
+  app.innerHTML=`${S.storyBattle?`<div class="story-battle-banner"><button onclick="leaveStoryBattle()">返回場景</button><strong>${S.storyBattle.name}</strong> · ${S.storyBattle.description}</div>`:''}<div class="topbar"><div><div class="kicker">NIGHTFALL DUEL</div><div class="round">ROUND ${Math.min(S.round,50)} / 50</div></div><div class="phase"><span class="phase-dot"></span>${S.phase==="player"?"YOUR MOVE":S.phase==="reveal"?"SHOWDOWN":"OPPONENT"}</div></div>${arena()}<nav class="battle-dock" aria-label="遊戲選單"><button onclick="showBattleJournal()">☷ <span>戰況</span></button><span class="battle-state">${S.phase==="player"?"點牌查看並出牌，或拖至你的放置區":S.phase==="reveal"?"揭曉命運":S.phase==="result"?"戰鬥結算":"對手行動中"}</span><button onclick="showRules()">◇ <span>規則</span></button><button onclick="showAudioSettings()">♫ <span>音效</span></button>${!S.storyBattle?'<button type="button" class="duel-leave nd-control" onclick="leaveDuel()" aria-label="離開對戰，返回首頁" title="離開對戰，返回首頁">← <span>離開</span></button>':''}</nav>`;
   window.NDEnvironment?.sync(S);
+}
+function leaveDuel(){
+  if(!S || S.storyBattle)return;
+  if(window.confirm("離開這場對戰並返回首頁？目前對戰進度不會保存。")){
+    window.location.assign("index.html");
+  }
 }
 function getBattleLogText(){
   const rows=Array.isArray(S?.battleLog)?S.battleLog:[];
@@ -1856,8 +1862,10 @@ const ND_BGM_FALLBACK={
 // Wrap the final switchMusic definition with a reliability guard.
 // The original remote BGM remains the first choice; synth starts only when the remote layer
 // is missing, blocked, or still paused after the user gesture.
+let ndMusicHeld=false;
 const ND_originalSwitchMusic=switchMusic;
 switchMusic=function(mode,fade=true){
+  if(ndMusicHeld){currentMusicMode=mode;return;}
   ND_originalSwitchMusic(mode,fade);
   if(!audioEnabled)return;
   const key=musicKey(mode);
@@ -1871,7 +1879,7 @@ switchMusic=function(mode,fade=true){
 
 // One gesture is enough to unlock both remote media and the Web Audio fallback.
 document.addEventListener('pointerdown',()=>{
-  if(!audioEnabled)return;
+  if(!audioEnabled||ndMusicHeld)return;
   try{
     const mode=currentMusicMode||'setup';
     switchMusic(mode,false);
@@ -1879,6 +1887,22 @@ document.addEventListener('pointerdown',()=>{
   }catch(e){}
 },{passive:true});
 
+
+// Shield rhythm (T3) owns the whole mix while it is open: game BGM + synth fallback stay silent, then resume.
+window.NDMusicHold=function(on){
+  try{
+    if(on){
+      ndMusicHeld=true;
+      if(ndMusicFadeFrame){cancelAnimationFrame(ndMusicFadeFrame);ndMusicFadeFrame=0;}
+      if(musicFadeTimer){clearInterval(musicFadeTimer);musicFadeTimer=null;}
+      for(const k of ["setupBgm","bgm","resultBgm"]){const a=AudioBank[k];if(a&&!a.paused)try{a.pause()}catch(e){}}
+      ND_BGM_FALLBACK.stop();
+    }else if(ndMusicHeld){
+      ndMusicHeld=false;
+      if(audioEnabled)switchMusic(currentMusicMode||"setup",false);
+    }
+  }catch(e){}
+};
 
 /* 2026-09-28 — Audio reliability pass.
    1) Muting now also silences the Web Audio BGM fallback (it used to keep ticking after mute).

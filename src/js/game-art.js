@@ -64,7 +64,8 @@
   }
   function portrait(el,job,mode){
     const skin=skinFor(el,job);
-    const src=window.NDSkins?.path(job,skin)||`assets/characters/${job}.webp`;
+    const baseSrc=job==='gunner'?'assets/story/actors/gun-unify/gunner.webp':`assets/characters/${job}.webp`;
+    const src=window.NDSkins?.path(job,skin)||baseSrc;
     if(el.dataset.portrait===job&&el.dataset.source===src&&el.querySelector('img'))return;
     el.dataset.source=src;delete el.dataset.cardIllustration;el.classList.remove('portrait-failed');
     el.dataset.portrait=job;el.dataset.crop=mode;
@@ -72,7 +73,7 @@
     const fallback=icon(job);fallback.classList.add('portrait-fallback');
     const img=document.createElement('img');img.className='character-image';img.alt='';img.draggable=false;
     img.decoding='async';img.src=src;
-    img.addEventListener('error',()=>{if(img.dataset.fallback!=='yes'&&src!==`assets/characters/${job}.webp`){img.dataset.fallback='yes';if(mode==='face')applyFaceCrop(el,job,'base');img.src=`assets/characters/${job}.webp`;return;}el.classList.add('portrait-failed');img.hidden=true;});
+    img.addEventListener('error',()=>{if(img.dataset.fallback!=='yes'&&src!==baseSrc){img.dataset.fallback='yes';if(mode==='face')applyFaceCrop(el,job,'base');img.src=baseSrc;return;}el.classList.add('portrait-failed');img.hidden=true;});
     const badge=document.createElement('span');badge.className='class-crest';badge.append(icon(mode==='card'?(window.ND_CARD_ART?.[job]?.icon||job):job,16));
     if(mode==='face'){
       const windowEl=document.createElement('span');windowEl.className='portrait-window';windowEl.append(img);

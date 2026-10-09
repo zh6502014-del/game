@@ -6,4 +6,4 @@
 
 地圖片使用同一200×200局部示意，各片按所在象限平移後裁成原輪廓，拼合時路線／河道可接續；這是紙片整理，不是方格導航或預知夜域的玩法。
 
-2026-09-25，STORY-MAP-ART-015：遊戲地圖改用 `assets/story/props/map-art-v2/` 的八塊透明 WebP。撤離、觀測各有一幅獨立內建 imagegen 精繪原畫；同幅原畫按既有輪廓／象限座標導出四片，保留本資料夾的 SVG 原稿和形狀契約。`scripts/export-map-puzzles.py` 記錄可重製的導出方式，`assets/story/map-puzzle-art-manifest.json` 對照來源、完整提示詞紀錄、尺寸、容量及雜湊。地理仍是局部示意；未改配對答案，也未新增宮格連路玩法。
+2026-09-25，STORY-MAP-ART-015：遊戲地圖改用 `assets/story/props/map-art/` 的八塊透明 WebP。撤離、觀測各有一幅獨立內建 imagegen 精繪原畫；同幅原畫按既有輪廓／象限座標導出四片，保留本資料夾的 SVG 原稿和形狀契約。`scripts/export-map-puzzles.py` 記錄可重製的導出方式，`assets/story/_records/map-puzzle-art.json` 對照來源、完整提示詞紀錄、尺寸、容量及雜湊。地理仍是局部示意；未改配對答案，也未新增宮格連路玩法。

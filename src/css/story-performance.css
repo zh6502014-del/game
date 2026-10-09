@@ -168,7 +168,7 @@
 .story-performance .story-reading-line[data-narrator="true"] .story-line-text{color:#cbd5cc}
 
 /* STORY-HOTKEY */
-.story-performance button .story-key{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid #ffffff40;border-radius:4px;background:#00000038;font:700 11px/1.5 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em;vertical-align:1px;opacity:.85;white-space:nowrap}
+.story-performance button .story-key{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid #ffffff40;border-radius:4px;background:#00000038;font:700 11px/1.5 "Noto Serif TC",serif;letter-spacing:.02em;vertical-align:1px;opacity:.85;white-space:nowrap}
 .story-performance button:disabled .story-key{opacity:.4}
 @media(hover:none){.story-performance button .story-key{display:none}}
 

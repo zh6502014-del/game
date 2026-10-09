@@ -1,0 +1,65 @@
+{
+  "task": "PROJECT-CLEANUP-062",
+  "moves": [
+    {
+      "from": "source-art",
+      "to": "storage/source-art",
+      "files": 518
+    },
+    {
+      "from": "backups",
+      "to": "storage/backups",
+      "files": 298
+    },
+    {
+      "from": "Claude outputs",
+      "to": "storage/previews",
+      "files": 12
+    },
+    {
+      "from": "_tmp",
+      "to": "storage/temp",
+      "files": 2
+    },
+    {
+      "from": "_to_delete",
+      "to": "storage/unused",
+      "files": 2
+    },
+    {
+      "from": "assets/audio/dark-051",
+      "to": "storage/unused-assets/audio/dark-051",
+      "files": 37
+    },
+    {
+      "from": "assets/frames/v1/originals",
+      "to": "storage/source-art/frame-originals-v1",
+      "files": 6
+    },
+    {
+      "from": "assets/frames/v1/slices",
+      "to": "storage/unused-assets/frames/v1/slices",
+      "files": 24
+    },
+    {
+      "from": ".DS_Store",
+      "to": "storage/os-metadata/.DS_Store",
+      "files": 1
+    },
+    {
+      "from": "docs/.DS_Store",
+      "to": "storage/os-metadata/docs/.DS_Store",
+      "files": 1
+    },
+    {
+      "from": "assets/.DS_Store",
+      "to": "storage/os-metadata/assets/.DS_Store",
+      "files": 1
+    },
+    {
+      "from": "combat-visuals.css",
+      "to": "storage/unused-code/combat-visuals.css",
+      "files": 1
+    }
+  ]
+}

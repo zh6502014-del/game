@@ -19,7 +19,7 @@ html,body{
   radial-gradient(circle at 50% -10%,rgba(216,179,106,.075),transparent 32%),
   radial-gradient(circle at 8% 55%,rgba(118,199,216,.035),transparent 28%),
   #07080b;
-  color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+  color:var(--text);font-family:"Noto Serif TC",serif
 }
 body{min-height:100vh;position:relative}
 body:before{
@@ -273,7 +273,7 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .stat{border:1px solid #353b45;border-radius:12px;padding:9px 12px;font-size:11px;background:#15181e}
 .battle-log-export{margin-top:18px;text-align:left}
 .battle-log-export .hand-head{margin-bottom:8px}
-.battle-log-text{width:100%;min-height:180px;max-height:320px;resize:vertical;box-sizing:border-box;border:1px solid #353b45;border-radius:12px;padding:10px;background:#0f1115;color:#c9cdd4;font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;overflow:auto}
+.battle-log-text{width:100%;min-height:180px;max-height:320px;resize:vertical;box-sizing:border-box;border:1px solid #353b45;border-radius:12px;padding:10px;background:#0f1115;color:#c9cdd4;font:11px/1.5 "Noto Serif TC",serif;white-space:pre;overflow:auto}
 .copy-log-btn{width:100%;margin-top:8px;border:1px solid rgba(216,179,106,.34);background:linear-gradient(180deg,rgba(216,179,106,.10),rgba(216,179,106,.04));color:#d8b36a;border-radius:13px;padding:11px 14px;font-weight:900;cursor:pointer}
 .copy-log-btn:active{transform:scale(.99)}
 @media(max-width:430px){
@@ -685,7 +685,7 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-placeholder){
   border-radius:999px;
   color:#d8b36a;
   background:rgba(20,16,8,.72);
-  font:900 7px/1 system-ui,-apple-system,sans-serif;
+  font:900 7px/1 "Noto Serif TC",serif;
   letter-spacing:.7px;
   pointer-events:none;
 }
@@ -752,7 +752,7 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-placeholder){
 .audio-mute{flex:1;border:1px solid #4b3e26;background:linear-gradient(180deg,#2a2418,#18150f);color:#f0d18d;border-radius:12px;padding:10px 12px;font-weight:900;cursor:pointer}
 @media(max-width:560px){.audio-row{grid-template-columns:1fr 44px;gap:8px}.audio-range{grid-column:1 / -1;grid-row:2}.audio-value{grid-column:2;grid-row:1}.audio-label{grid-column:1;grid-row:1}}
 
-.audio-toggle{position:fixed;right:14px;top:14px;z-index:50;border:1px solid rgba(255,255,255,.14);background:rgba(10,12,18,.78);color:#dfe7f2;border-radius:10px;padding:7px 10px;font:800 12px/1 system-ui;cursor:pointer;backdrop-filter:blur(8px)}
+.audio-toggle{position:fixed;right:14px;top:14px;z-index:50;border:1px solid rgba(255,255,255,.14);background:rgba(10,12,18,.78);color:#dfe7f2;border-radius:10px;padding:7px 10px;font:800 12px/1 "Noto Serif TC",serif;cursor:pointer;backdrop-filter:blur(8px)}
 
 /* V12.12.14 — Coin SFX is procedurally generated in this file; no third-party audio asset/license dependency. */
 /* V12.6 — Combat Feel */
@@ -869,7 +869,7 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){transition
   content:"FREE · 放到角色上";right:8px;bottom:7px;
   padding:3px 7px;border:1px solid rgba(216,179,106,.48);border-radius:999px;
   color:#ead18f;background:rgba(20,16,8,.82);
-  font:900 7px/1 system-ui,-apple-system,sans-serif;letter-spacing:.8px;
+  font:900 7px/1 "Noto Serif TC",serif;letter-spacing:.8px;
   box-shadow:0 0 16px rgba(216,179,106,.08);
 }
 .arena-hud .fighter.player.nd-drop-target{
@@ -880,7 +880,7 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){transition
   content:"✕ 不可放置";right:8px;bottom:7px;
   padding:3px 7px;border:1px solid rgba(152,102,102,.42);border-radius:999px;
   color:#c4868e;background:rgba(32,12,16,.80);
-  font:900 7px/1 system-ui,-apple-system,sans-serif;letter-spacing:.8px;
+  font:900 7px/1 "Noto Serif TC",serif;letter-spacing:.8px;
 }
 
 @media(max-width:430px){
@@ -1102,8 +1102,8 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){transition
 .retro-card-slot.slot.enemy{justify-self:center}
 .retro-card-slot.slot.you{justify-self:center}
 .retro-card-slot.you.ready{border-style:solid;border-color:#d8b36a;box-shadow:0 0 0 4px rgba(216,179,106,.045),inset 0 0 30px rgba(216,179,106,.05),0 0 28px rgba(216,179,106,.08);background:rgba(216,179,106,.028)}
-.retro-card-slot.you.ready:after{content:"DROP CARD HERE";position:absolute;bottom:-18px;left:0;right:0;text-align:center;color:#d8b36a;font:900 7px/1 system-ui;letter-spacing:1.7px}
-.retro-card-slot .slot-label{position:absolute;top:7px;font:800 7px/1 system-ui;letter-spacing:1.2px;color:#555e6a}
+.retro-card-slot.you.ready:after{content:"DROP CARD HERE";position:absolute;bottom:-18px;left:0;right:0;text-align:center;color:#d8b36a;font:900 7px/1 "Noto Serif TC",serif;letter-spacing:1.7px}
+.retro-card-slot .slot-label{position:absolute;top:7px;font:800 7px/1 "Noto Serif TC",serif;letter-spacing:1.2px;color:#555e6a}
 .retro-center{display:flex;align-items:center;justify-content:center;gap:9px;color:#6b7480;width:100%}
 .retro-center .vsx{font-size:10px;letter-spacing:2px;font-weight:950;white-space:nowrap}
 .retro-center .line{width:54px;height:1px;background:linear-gradient(90deg,transparent,#3e4651,transparent)}
@@ -2043,7 +2043,7 @@ body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){transition
   background:transparent !important;
   padding:0 !important;
   color:#969eaa !important;
-  font:900 8px/1.1 system-ui !important;
+  font:900 8px/1.1 "Noto Serif TC",serif !important;
   letter-spacing:1.1px !important;
   text-align:center !important;
   white-space:nowrap !important;
@@ -2532,10 +2532,10 @@ body[data-mode="story"]{background:radial-gradient(ellipse at 75% 0%,#262524 0,t
 .story-header>span{letter-spacing:3px;color:#968d7c}
 .story-intro{display:flex;justify-content:space-between;align-items:center;padding:38px 0 28px;gap:20px}
 .story-eyebrow{font-size:11px;letter-spacing:3px;color:#c5a56a;text-transform:uppercase}
-.story-intro h1{font-family:Georgia,'Noto Serif TC',serif;font-size:clamp(27px,4vw,46px);font-weight:500;letter-spacing:5px;margin:12px 0}
+.story-intro h1{font-family:"Noto Serif TC",serif;font-size:clamp(27px,4vw,46px);font-weight:500;letter-spacing:5px;margin:12px 0}
 .story-intro p:not(.story-eyebrow){color:#aaa99f;font-size:14px}
 .story-overall{display:grid;gap:8px;min-width:115px;color:#a9a393;font-size:12px}
-.story-overall strong{font-family:Georgia,serif;color:#ddc38e;font-size:42px;font-weight:400}
+.story-overall strong{font-family:"Noto Serif TC",serif;color:#ddc38e;font-size:42px;font-weight:400}
 .story-overall small{font-size:18px;color:#817867}
 .story-roles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .story-roles button{display:flex;align-items:center;gap:15px;border-color:#373a3d;padding:16px}
@@ -2549,17 +2549,17 @@ body[data-mode="story"]{background:radial-gradient(ellipse at 75% 0%,#262524 0,t
 .story-portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .story-portrait>div{position:absolute;bottom:0;left:0;right:0;padding:100px 28px 30px;background:linear-gradient(transparent,rgba(7,10,14,.94) 48%)}
 .story-portrait span{font-size:11px;letter-spacing:4px;color:#dbc396}
-.story-portrait h2{font-family:Georgia,serif;font-size:35px;letter-spacing:5px;font-weight:400;margin:12px 0}
+.story-portrait h2{font-family:"Noto Serif TC",serif;font-size:35px;letter-spacing:5px;font-weight:400;margin:12px 0}
 .story-portrait p{font-size:13px;color:#d5cdbd;line-height:1.8}
 .story-portrait small{color:#aaa192;font-size:10px}
 .story-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:18px}
 .story-route button{padding:16px 12px;display:grid;gap:9px;border-color:#36383a}
 .story-route button[aria-current="step"]{border-color:#b59863;background:#24231f}
-.story-route span{font-size:20px;font-family:Georgia,serif;color:#c5a56a}
+.story-route span{font-size:20px;font-family:"Noto Serif TC",serif;color:#c5a56a}
 .story-route b{font-size:13px;font-weight:500;line-height:1.6}
 .story-route small{font-size:10px;color:#b3a58e}
 .story-reader{padding:26px 30px;border:1px solid #393a38;background:linear-gradient(125deg,#1b1d20,#111519);border-radius:6px}
-.story-reader h2{font-family:Georgia,serif;font-size:27px;font-weight:500;letter-spacing:2px;margin:13px 0 20px}
+.story-reader h2{font-family:"Noto Serif TC",serif;font-size:27px;font-weight:500;letter-spacing:2px;margin:13px 0 20px}
 .story-reader p{line-height:2;color:#c1bfb6;font-size:14px}
 .story-objective{border-left:2px solid #ae8c53;padding:0 18px;margin:24px 0}
 .story-objective span{display:block;font-size:11px;color:#a39375;margin-bottom:8px}

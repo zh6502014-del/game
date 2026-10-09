@@ -1,41 +1,25 @@
 /* Shared shape matching: no dependencies, no persistence side effects. */
 (() => {
 'use strict';
-const parts = {"gun": [{"id": "gun-0", "label": "機匣", "x": 24.375, "y": 31.958, "w": 36.825, "h": 31.061, "crop": [13, 127, 491, 251], "hitW": 34, "hitH": 27}, {"id": "gun-1", "label": "銃管", "x": 59.4, "y": 36.289, "w": 35.85, "h": 23.141, "crop": [17, 161, 478, 187], "hitW": 34}, {"id": "gun-2", "label": "握柄", "x": 27.528, "y": 62.643, "w": 14.028, "h": 31.185, "crop": [89, 34, 334, 450]}, {"id": "gun-3", "label": "暮晶核心", "x": 11, "y": 34.5, "w": 8.2, "h": 27.583, "crop": [140, 13, 233, 475], "assembled": {"x": 43.25, "y": 33.3, "w": 4.4, "h": 14.8}}, {"id": "gun-4", "label": "保險片", "x": 43, "y": 7.5, "w": 12, "h": 15.465, "crop": [35, 83, 443, 346], "assembled": {"x": 28.025, "y": 24.55, "w": 6.5, "h": 8.377}}], "evac": [{"id": "evac-0", "label": "街口", "path": "assets/story/props/map-art-v2/evac-0.webp", "shape": "M0 0H100V35Q65 25 65 50Q65 75 100 65V100H65Q75 65 50 65Q25 65 35 100H0Z", "x": 15, "y": 16, "w": 35, "h": 35}, {"id": "evac-1", "label": "通道", "path": "assets/story/props/map-art-v2/evac-1.webp", "shape": "M0 0H100V100H65Q75 65 50 65Q25 65 35 100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 16, "w": 35, "h": 35}, {"id": "evac-2", "label": "高地", "path": "assets/story/props/map-art-v2/evac-2.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V35Q65 25 65 50Q65 75 100 65V100H0Z", "x": 15, "y": 51, "w": 35, "h": 35}, {"id": "evac-3", "label": "接應處", "path": "assets/story/props/map-art-v2/evac-3.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 51, "w": 35, "h": 35}], "archive": [{"id": "archive-0", "label": "礦坑口", "path": "assets/story/props/map-art-v2/archive-0.webp", "shape": "M0 0H100V35Q65 25 65 50Q65 75 100 65V100H65Q75 65 50 65Q25 65 35 100H0Z", "x": 15, "y": 16, "w": 35, "h": 35}, {"id": "archive-1", "label": "主坑道", "path": "assets/story/props/map-art-v2/archive-1.webp", "shape": "M0 0H100V100H65Q75 65 50 65Q25 65 35 100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 16, "w": 35, "h": 35}, {"id": "archive-2", "label": "崩塌區", "path": "assets/story/props/map-art-v2/archive-2.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V35Q65 25 65 50Q65 75 100 65V100H0Z", "x": 15, "y": 51, "w": 35, "h": 35}, {"id": "archive-3", "label": "結晶洞室", "path": "assets/story/props/map-art-v2/archive-3.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 51, "w": 35, "h": 35}], "recorder": [{"id": "recorder-0", "label": "供能接頭", "path": "assets/puzzles/recorder-028/recorder-0.svg", "shape": "M50 5L95 90H5Z", "x": 12, "y": 29, "w": 23, "h": 38}, {"id": "recorder-1", "label": "讀取模組", "path": "assets/puzzles/recorder-028/recorder-1.svg", "shape": "M10 10H70L90 30V90H10Z", "x": 39, "y": 29, "w": 23, "h": 38}, {"id": "recorder-2", "label": "輸出接頭", "path": "assets/puzzles/recorder-028/recorder-2.svg", "shape": "M30 5H70V25H95V75H70V95H30V75H5V25H30Z", "x": 66, "y": 29, "w": 23, "h": 38}]};
+const parts = {"gun": [{"id": "gun-0", "label": "本體", "x": 17.5, "y": 18.5625, "w": 46.625, "h": 55.74728, "crop": [77, 118, 414, 300]}, {"id": "gun-1", "label": "槍管外殼", "x": 58.75, "y": 21.8625, "w": 35.0, "h": 10.5, "crop": [26, 219, 462, 84]}, {"id": "gun-2", "label": "木握柄", "x": 15.25, "y": 41.04375, "w": 18.125, "h": 34.67762, "crop": [53, 56, 351, 407]}, {"id": "gun-3", "label": "菱形暮晶", "x": 36.5, "y": 23.71875, "w": 9.5, "h": 19.75703, "crop": [112, 73, 288, 363], "assembled": {"x": 36.5, "y": 23.71875, "w": 9.5, "h": 19.75703}}], "evac": [{"id": "evac-0", "label": "街口", "path": "assets/story/props/map-art/evac-0.webp", "shape": "M0 0H100V35Q65 25 65 50Q65 75 100 65V100H65Q75 65 50 65Q25 65 35 100H0Z", "x": 15, "y": 16, "w": 35, "h": 35}, {"id": "evac-1", "label": "通道", "path": "assets/story/props/map-art/evac-1.webp", "shape": "M0 0H100V100H65Q75 65 50 65Q25 65 35 100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 16, "w": 35, "h": 35}, {"id": "evac-2", "label": "高地", "path": "assets/story/props/map-art/evac-2.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V35Q65 25 65 50Q65 75 100 65V100H0Z", "x": 15, "y": 51, "w": 35, "h": 35}, {"id": "evac-3", "label": "接應處", "path": "assets/story/props/map-art/evac-3.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 51, "w": 35, "h": 35}], "archive": [{"id": "archive-0", "label": "礦坑口", "path": "assets/story/props/map-art/archive-0.webp", "shape": "M0 0H100V35Q65 25 65 50Q65 75 100 65V100H65Q75 65 50 65Q25 65 35 100H0Z", "x": 15, "y": 16, "w": 35, "h": 35}, {"id": "archive-1", "label": "主坑道", "path": "assets/story/props/map-art/archive-1.webp", "shape": "M0 0H100V100H65Q75 65 50 65Q25 65 35 100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 16, "w": 35, "h": 35}, {"id": "archive-2", "label": "崩塌區", "path": "assets/story/props/map-art/archive-2.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V35Q65 25 65 50Q65 75 100 65V100H0Z", "x": 15, "y": 51, "w": 35, "h": 35}, {"id": "archive-3", "label": "結晶洞室", "path": "assets/story/props/map-art/archive-3.webp", "shape": "M0 0H35Q25 -35 50 -35Q75 -35 65 0H100V100H0V65Q-35 75 -35 50Q-35 25 0 35Z", "x": 50, "y": 51, "w": 35, "h": 35}], "recorder": [{"id": "recorder-0", "label": "供能接頭", "path": "assets/puzzles/recorder/recorder-0.svg", "shape": "M50 5L95 90H5Z", "x": 12, "y": 29, "w": 23, "h": 38}, {"id": "recorder-1", "label": "讀取模組", "path": "assets/puzzles/recorder/recorder-1.svg", "shape": "M10 10H70L90 30V90H10Z", "x": 39, "y": 29, "w": 23, "h": 38}, {"id": "recorder-2", "label": "輸出接頭", "path": "assets/puzzles/recorder/recorder-2.svg", "shape": "M30 5H70V25H95V75H70V95H30V75H5V25H30Z", "x": 66, "y": 29, "w": 23, "h": 38}]};
 const scenes = {
- gun:{title:'伊芙 · 組裝暮晶銃',intro:'把工作間找到的零件放進相同輪廓。這是臨時裝置，仍需要蓄能與輸出限制。',done:'伊芙裝好保險片，確認過載時能切斷能量路徑。她限制輸出並蓄能，準備朝門鎖開出第一槍。',note:'保險片用來降低回流風險，不代表武器可以無限射擊。'},
+ gun:{title:'伊芙 · 組裝暮晶銃',intro:'將四片外觀放入相符的輪廓。',done:'暮晶銃已拼合。伊芙握住博士留給她的武器。',note:''},
  evac:{title:'格蘭 · 撤離簡圖',intro:'出發前整理已勘查的路線。把各區圖塊放回對應輪廓，確認高地接應通道。',done:'備用路線已確認。暮鐘卻比推估更早響起，格蘭跟著隊伍放棄原集合點，轉往高地通道。',note:'簡圖只整理已知路況，不能預知夜域，也不是永久安全的保證。'},
  archive:{title:'迪普霍姆 · 礦坑地圖',intro:'把納爾瓦筆記裡的礦坑地圖圖塊放回對應的輪廓。',done:'地圖拼好了。納爾瓦標出的坑道，一路通往礦坑深處。',note:''},
  recorder:{title:'共同主線 · 修復錄音裝置',intro:'伊芙取出隨身的小型接線配件，將三個接頭放入相同形狀的插槽，修復納爾瓦留下的錄音裝置。',done:'伊芙接妥接頭，錄音裝置的指示燈重新亮起。裝置能播放，但只能播出還留在裡面的那一段。',note:'這裡只修復播放功能，不會確認納爾瓦如今的下落。'}
 };
 // Presentation-only task context; placement rules and story progress stay unchanged.
 const taskContext = {
- gun:{goal:'拼合五件零件，確認臨時暮晶銃的結構。',ready:'逐件核對用途，再放入對應輪廓。',complete:'五件零件已就位，確認組裝結果後繼續。'},
+ gun:{goal:'拼合博士留下的暮晶銃。',ready:'選擇圖塊，放入相符輪廓。',complete:'四片已就位。'},
  evac:{goal:'拼合已勘查的撤離簡圖，確認高地接應通道。',ready:'檢視各區用途，將圖塊放回已知位置。',complete:'撤離簡圖已拼合，確認接應路線後繼續。'},
  archive:{goal:'把四塊地圖放回原位，找出納爾瓦走的坑道。',ready:'先看資料來源，再放回對應輪廓。',complete:'四份資料已歸位，繼續查看比對所得的線索。'},
  recorder:{goal:'錄音裝置的三條線路都斷了。接妥三個配件，讓它能再次播放。',ready:'斷線處還在冒細小的火花。核對每個接頭的用途，依輪廓裝入。',complete:'三條線路都接通了，指示燈亮起，喇叭網格後傳來細微的底噪。確認後繼續聽取錄音。'}
 };
 const partContext = {
- "gun-0": {
-  "inspect": "機匣是接合零件的本體。先核對它在設計中的輪廓與位置。",
-  "done": "機匣已放回設計位置，其餘零件將以它為接合基準。"
- },
- "gun-1": {
-  "inspect": "銃管接在機匣前端。檢查方向，再放入相符的長形輪廓。",
-  "done": "銃管已對準接合位置，還要核對其餘零件。"
- },
- "gun-2": {
-  "inspect": "握柄讓改裝後的裝置能被握持。找出設計下方的接合處。",
-  "done": "握柄已固定在握持處，讓改裝後的裝置能被穩定握住。"
- },
- "gun-3": {
-  "inspect": "暮晶提供裝置所需的能量。核心先歸位，組裝完整後才蓄能。",
-  "done": "暮晶核心已放入預定位置，完成組裝後才限制輸出並蓄能。"
- },
- "gun-4": {
-  "inspect": "保險片在過載時切斷能量回流，是這件臨時武器的重要限制。",
-  "done": "保險片已接入能量路徑，過載時將碎裂並切斷回流。"
- },
+ "gun-0": {"inspect": "深鋼與古銅裝飾的本體。", "done": "本體已就位。"},
+ "gun-1": {"inspect": "帶有兩道古銅環的長形外殼。", "done": "槍管外殼已就位。"},
+ "gun-2": {"inspect": "帶木紋與刻花的握柄。", "done": "木握柄已就位。"},
+ "gun-3": {"inspect": "青綠色的菱形暮晶。", "done": "菱形暮晶已就位。"},
  "evac-0": {
   "inspect": "街口圖塊記錄出發一帶的路口，是辨認撤離路線的起點。",
   "done": "街口位置已標明，還要和通道、接應處一起核對。"

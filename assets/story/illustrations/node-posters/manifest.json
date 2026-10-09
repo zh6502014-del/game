@@ -1,0 +1,792 @@
+{
+  "ticket": "STORY-ART-020",
+  "kind": "background",
+  "sourcePolicy": "Existing original files retained in place, not duplicated or deleted. Original generation details remain in assets/story/_records/npc-prompts.json.",
+  "assets": [
+    {
+      "nodeId": "A1",
+      "title": "研究室對峙",
+      "artId": "assassin-lab",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/assassin-lab.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2452707,
+        "sha256": "fe94d401a16821a21e6eeffc27a43f7a6f7592f019de92194bb2609b9547363e"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/a1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 240840,
+        "sha256": "61abc51ac2976ce1a739389f531cd316e31cddbaed53f2e92dc47e8ead5609aa"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "A2",
+      "title": "右手灼傷與銃口反衝",
+      "artId": "assassin-resonance",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/assassin-resonance.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2629642,
+        "sha256": "5cc1da49873ed9d133f7e601367c169bd3f176ac3f325b0b438754a0796834d3"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/a2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 284294,
+        "sha256": "67d2dbaba6acdac69d56103a1b72236cf4c1f33035f7eb30e59d9f12150d358c"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "A3",
+      "title": "尺烏據點清洗",
+      "artId": "assassin-home",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/assassin-home.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2471384,
+        "sha256": "74a33ae74e6ae10defdc46989d094b93f77d350b856b10ce3d8aa8d4667068fb"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/a3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 227350,
+        "sha256": "bc6518a1058f2eb29e9a0e3f80a8470210f9bfc3b2645fdc8d57e153d5a94706"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "S1",
+      "title": "鐘樓贈書籤",
+      "artId": "swordsman-bookmark",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/swordsman-bookmark.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2536713,
+        "sha256": "e071575974e99ea2f11ff1ee573e66c4f125e721de823c83a62d41d4c8cee702"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/s1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 225268,
+        "sha256": "1da533dc007bcd7a38ac263b97f41f75be511284e830dd2d90211ca2e2f4d107"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "S2",
+      "title": "核對未撤離城市",
+      "artId": "swordsman-records",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/swordsman-records.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2382119,
+        "sha256": "2fe4c55a9d48907159c8399c6f1fd58b5d822cf4dd76e2795365f6d89bdab074"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/s2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 219924,
+        "sha256": "49e8154d1471a341fda73ebaaebab1735f864f4f99cab1b7d82fa2c7beb3177c"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "S3",
+      "title": "擋住師父掩護逃亡",
+      "artId": "swordsman-master",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/swordsman-master.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2650773,
+        "sha256": "82466aa657ef150a1bc5b2d3c9f0b2d08af34cfc057788c33515c4fd5d6427ce"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/s3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 251068,
+        "sha256": "d58ee558df59557700f7b799e08012bdf5af162ca312e95df0c3440d2de5edae"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "T1",
+      "title": "暮鐘提前與撤離",
+      "artId": "tank-bell",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/tank-bell.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2568870,
+        "sha256": "847d2068efb53dda25a09747177a6e172d1805b3c5104b00a238133b07742295"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/t1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 245536,
+        "sha256": "efd31abcd2d114d45f6201e8dff0ab1d61e59a170267c77947b65c3638222594"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "T2",
+      "title": "折返接應母女",
+      "artId": "tank-return",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/tank-return.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2539422,
+        "sha256": "4e466f005216fadf27bf2a226049f0af319c01db69a85fec9aede453a163d962"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/t2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 242920,
+        "sha256": "34b8816c4b62cc62c0ac626db74759f48f433adad1367b8203f38db2fe1ee454"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "T3",
+      "title": "第一面盾崩裂前的救援",
+      "artId": "tank-shield",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/tank-shield.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2543730,
+        "sha256": "be8395446b461d8d655dfc0f7a3310b7ad2ce213edce25a887fbe0d541f3aa6d"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/t3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 245832,
+        "sha256": "654935d421fea5a624ea5ff1c0df511b020b48ed6bea9e58e4a50ee68f1bb6d6"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "E1",
+      "title": "聽見女孩殘響",
+      "artId": "gunner-echo",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/gunner-echo.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2506257,
+        "sha256": "f13c07889ff8f0f5af0b98a305d38a5d1a7bba7735914f61be43bd95224ab906"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/e1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 261674,
+        "sha256": "4fcb2fcd0f0bda5815f6d70d65e6ecaac88d788d5a93dfc686a242ef028cdd3b"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "E2",
+      "title": "地下三層取回資料",
+      "artId": "gunner-basement",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/gunner-basement.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2361080,
+        "sha256": "929a8c1f0efc8fd32ab0fe0c1b4266046f176618b79b0885901a51eb0d1752b5"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/e2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 229460,
+        "sha256": "4337a2ce7bf7ad6ce1260518ad65ed96a4a6b216c30254d2d8ba7e0e8df7023a"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "E3",
+      "title": "第一槍逃離",
+      "artId": "gunner-first-shot",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/gunner-first-shot.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2539828,
+        "sha256": "082642eb7ee4767a70705862a57a038c95c239532f03a25dc79d39662a08a4e9"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/e3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 262770,
+        "sha256": "db0b5486670f737700c830f4130158f0f7dd9974ea21207a33cbf35514ce49d3"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "P2",
+      "title": "逃亡生活與陌生記憶",
+      "artId": "phosphor-memory",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/phosphor-memory.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2494336,
+        "sha256": "cabae22eacaf6d7ce4601916f10dad699225419970b85cb7660c9add1d8af859"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/p2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 237804,
+        "sha256": "9a7ab4ce8f15c10c70006578c84e139d2d23cd10dbec82edb5a23227f2a33a8e"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "P3",
+      "title": "新文件交接後遭跟蹤",
+      "artId": "phosphor-files",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/phosphor-files.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2361637,
+        "sha256": "4f2a98b581c052e9feac0ecd6ed5b4afc4f0e0b0ed8702bacbafd88c8e24aafc"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/p3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 212804,
+        "sha256": "ee4b857d4462e2e34ca4145afd8b5955a1a7c3001600d001ffe983d3e52b316f"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "P4",
+      "title": "父女分離",
+      "artId": "phosphor-parting",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/phosphor-parting.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2484724,
+        "sha256": "eedef7449ee97fc7bd2b4b0d2e6e1505dfcb86eb4eb3f4ea1247517f3879d198"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/p4.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 239842,
+        "sha256": "f1712943abdedda33cbaa3ee63a315403a8a12aa31cb01b97eb74f16291f1453"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "B1",
+      "title": "拒絕交出磷",
+      "artId": "tank-refusal",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/tank-refusal.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2540506,
+        "sha256": "855ad212d7c8b539b4449979fa5bfc5e6ab84bd5daa98d3ec89a1fb01768b063"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/b1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 254680,
+        "sha256": "5be3f933725ec960dcbbd1d72ae42979dc94c095dc970ef7a791b238bc21b577"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "B2",
+      "title": "磷帶回書籤",
+      "artId": "swordsman-return",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/swordsman-return.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2556947,
+        "sha256": "97c74ee450169ab0d1ac0098df626ecb58daf008bc9ede4721f8f7e05b81b1e8"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/b2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 237582,
+        "sha256": "4d67a99b9cdbcbb08c5e627fb1940876b75b9fa850c1130f8de37f74f2af5db2"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "B3",
+      "title": "追蹤伊芙",
+      "artId": "assassin-trail",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/assassin-trail.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2617647,
+        "sha256": "dadc4059f538a1095a1e3cc5ed894a1b734dbd53f0dbe4e5225b5e0d579e5435"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/b3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 263294,
+        "sha256": "829abf19bdb45e5040f0fdc6ec80b9a614c1784e3a68eb75d2a27f21cf1b86df"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C1",
+      "title": "三人找到伊芙",
+      "artId": "party-arrival",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-arrival.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2562540,
+        "sha256": "ef31effed4932bae158cf519a1944ba06dd6631f4a40b65754b6d9f250d66773"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c1.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 254972,
+        "sha256": "e610188b79a5e2f546043315a7b2270d9fe75797a0e79dc7374361ee723eda92"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C2",
+      "title": "停止磷的共振測試",
+      "artId": "gunner-stop",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/gunner-stop.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2620006,
+        "sha256": "de500345ee3fa6c3888d83a5e3f8432dad4b5940dcc0cd72b2a7bd858c923700"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c2.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 269484,
+        "sha256": "54a5c070045b1766cc3476b740f0c018976528a066e1f2e4fbfb1951656b2ba5"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C3",
+      "title": "凜現身救援",
+      "artId": "party-rescue",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-rescue.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2464445,
+        "sha256": "adaf24adc9f718c7a3923265cd14d975a801f1c19fb01fe1ff4c38acb7aa862c"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c3.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 242352,
+        "sha256": "d2aab1c022c7226421320c8f9350da090a6ae0753fd2d73b039247525d50a942"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C4",
+      "title": "核對清洗命令",
+      "artId": "party-orders",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-orders.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2526576,
+        "sha256": "e35beff19e3d48fe851a3ed22ded6a6658c19ead329415338637cfce18698470"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c4.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 257860,
+        "sha256": "61a662307fb93abdedb81b638bf8058ac0177a15245568ba7585d3043e3434bd"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C5",
+      "title": "伊芙舉槍質問",
+      "artId": "party-gun",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-gun.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2680649,
+        "sha256": "8850f9769da2910647948b3335a3ef1578dd44ffd8f68ce0e6ab5af240960e3b"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c5.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 276806,
+        "sha256": "685c7486c0124a5ecdde2a286e3245cff3c983a87155f3a408ca6556c843843e"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C6",
+      "title": "降低槍口准許同行",
+      "artId": "party-stay",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-stay.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2565515,
+        "sha256": "8e357a63509ef568b9f0db2823ae6394976425b796a52dcb9af9bd681f21c359"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c6.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 258876,
+        "sha256": "1fe7b4de800fe9cd1d6f2c87d5d7bfcd38754c7f84a3ddd1189d0f10bf4efd2f"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C7",
+      "title": "旅途分歧與共同約定",
+      "artId": "party-road",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-road.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2845096,
+        "sha256": "bdd3901095adc5cff4bad7c37ea8880d1a3448d8f3606d5e895e0ed4ad75ec3a"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c7.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 317928,
+        "sha256": "29df50d36fce4035b9189c10922874f8a3188aad8ea1ced7eb8adc94634b7f10"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C8",
+      "title": "比對第一號觀測區",
+      "artId": "party-zone",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-zone.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2702115,
+        "sha256": "136c7ffdc2af6e46ecb23f384f24e125cae1dda382ebcf222a6d9f4a8fa2941b"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c8.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 298536,
+        "sha256": "fef0d2c9c2a3817f5da869cc68d967aa6d893abf7ab1ff7b8b15cb7f14bbb129"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    },
+    {
+      "nodeId": "C9",
+      "title": "最後藏身處播放紀錄",
+      "artId": "party-recorder",
+      "source": {
+        "path": "storage/source-art/legacy-png/assets/story/party-recorder.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2539974,
+        "sha256": "2f47840cf63ac07aaa8bb6b9bf49b40d2c2c573cdc5d6db9445f79bcbdc4532b"
+      },
+      "runtime": {
+        "path": "assets/story/illustrations/node-posters/c9.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 256848,
+        "sha256": "109780085111e447bb40c5b9f5b04cd16f41f8a786ffa29b68ef43486fb4e3a4"
+      },
+      "derivation": {
+        "operation": "proportional resize and WebP conversion; no new generation",
+        "maxSize": [
+          1536,
+          864
+        ],
+        "quality": 86,
+        "method": 6,
+        "alpha": false
+      }
+    }
+  ],
+  "runtimeBytes": 7028398,
+  "sourceBytes": 71116085
+}

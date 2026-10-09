@@ -17,7 +17,7 @@
   // S2: from the tower gate (west of 0,0) to the shift-change exit (east of 4,4).
   'escape-tiles': {
    title: '朔 · 鐘樓逃生路線',
-   intro: '座標對照已在手，儀式卻不會延後。朔攤開鐘樓周邊的舊街區圖，要替朋友找出換班空檔能走完的路：點街區旋轉路口，把路從左上的鐘樓側門，接到右下的換班出口。',
+   intro: '納爾瓦要出城警告莫爾威爾的居民，朔決定帶他離開。旋轉路段，接通左上的鐘樓側門與右下的撤離出口。',
    done: '路線接通：鐘樓側門經巷道連到換班出口。守衛換班只有一次空檔，朔把每個轉角都記在心裡。',
    note: '街區圖只用來規劃逃生路線，不能保證沿途沒有守衛，也不代表朋友已經安全離開。',
    mapLabel: '鐘樓周邊街區圖',
@@ -91,16 +91,24 @@
  }
  const engines = Object.fromEntries(Object.entries(configs).map(([id, cfg]) => [id, engine(cfg)]));
 
+ // All street arms share the engine's BASE; only this layer rotates.
  const roadSvg = type => {
   const arms = { [UP]: 'M50 50V0', [RIGHT]: 'M50 50H100', [DOWN]: 'M50 50V100', [LEFT]: 'M50 50H0' };
-  return `<svg class="story-maze-road" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="${BASE[type].map(side => arms[side]).join('')}"/><circle cx="50" cy="50" r="10"/></svg>`;
+  const route = BASE[type].map(side => arms[side]).join('');
+  const paving = BASE[type].map(side => `<g transform="rotate(${side * 90} 50 50)"><path class="maze-paving" d="M42 8H58M42 18H58M42 28H58M42 38H58M50 0V8M47 8V18M53 18V28M47 28V38"/></g>`).join('');
+  return `<svg class="story-maze-road" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="maze-road-edge" d="${route}"/><path class="maze-road-bed" d="${route}"/>${paving}<circle class="maze-junction" cx="50" cy="50" r="7"/><path class="maze-route-trace" d="${route}"/></svg>`;
  };
- // Fixed city-block decoration; it never rotates with the road layer.
+ // Rooftops stay inside the corner lots (clear of both possible street axes).
+ // Geometry is deterministic and never consumes game RNG.
  const blocksSvg = (r, c) => {
-  const sets = [['6 6 22 18', '70 68 24 26'], ['70 6 24 22', '8 70 20 22'], ['6 70 26 24', '72 8 20 20'], ['68 68 26 24', '8 8 22 22']];
-  return `<svg class="story-maze-blocks" viewBox="0 0 100 100" aria-hidden="true" focusable="false">${sets[(r * 7 + c * 5) % 4].map(v => { const [x, y, w, h] = v.split(' '); return `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3"/>`; }).join('')}</svg>`;
+  const lots = [[7, 7], [69, 7], [7, 69], [69, 69]];
+  const houses = lots.map(([x, y], i) => {
+   const tall = (r + c + i) % 2 === 0, w = tall ? 20 : 25, h = tall ? 25 : 19;
+   return `<g class="maze-house" transform="translate(${x} ${y})"><rect class="maze-house-shadow" x="3" y="4" width="${w}" height="${h}"/><rect class="maze-house-wall" width="${w}" height="${h}"/><path class="maze-roof-light" d="M0 0H${w}L${w - 4} ${h / 2}H4Z"/><path class="maze-roof-dark" d="M0 ${h}H${w}L${w - 4} ${h / 2}H4Z"/><path class="maze-roof-lines" d="M0 0L4 ${h / 2}L0 ${h}M${w} 0L${w - 4} ${h / 2}L${w} ${h}M4 ${h / 2}H${w - 4}M4 4H${w - 4}M4 ${h - 4}H${w - 4}"/><rect class="maze-chimney" x="${w - 7}" y="3" width="3" height="5"/><path class="maze-window" d="M6 ${h + 1}h3m5 0h3"/></g>`;
+  }).join('');
+  return `<svg class="story-maze-blocks" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path class="maze-survey" d="M3 34H34V3M66 3V34H97M3 66H34V97M66 97V66H97"/>${houses}</svg>`;
  };
- const gateSvg = kind => `<svg class="story-maze-gate story-maze-gate-${kind}" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><polygon points="${kind === 'in' ? '0,38 16,50 0,62' : '100,38 84,50 100,62'}"/></svg>`;
+ const gateSvg = kind => `<svg class="story-maze-gate story-maze-gate-${kind}" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g transform="${kind === 'in' ? '' : 'translate(100 0) scale(-1 1)'}"><path class="maze-gate-post" d="M0 33H7V40H0M0 60H7V67H0"/><polygon points="1,41 13,50 1,59"/></g></svg>`;
  const starSvg = () => '<svg class="story-maze-star" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><polygon points="50,6 61,36 93,36 67,55 77,86 50,67 23,86 33,55 7,36 39,36"/></svg>';
 
  let active = null;

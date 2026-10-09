@@ -1,0 +1,20 @@
+{
+  "ticket": "STORY-C3-COMPOSITION-027",
+  "assets": [
+    {
+      "id": "c3-shelter-ambush",
+      "path": "assets/story/c3-027/c3-shelter-ambush.webp",
+      "width": 1535,
+      "height": 864,
+      "format": "webp",
+      "hasAlpha": false,
+      "bytes": 274232,
+      "sha256": "6d0abf0b13af24b7b771a3eba3d7f1fb18d86c2ac94fc4dba3c2aff8a48d9b19",
+      "source": "storage/source-art/STORY-C3-COMPOSITION-027/c3-shelter-ambush.png",
+      "sourceSha256": "f5789a677250262e69bed5e97b75fb6ecf683559a150bbac228642fb2188bec8",
+      "replaces": "assets/story/illustrations/chapters/c3-shelter-ambush.webp",
+      "generationRecord": "storage/source-art/STORY-C3-COMPOSITION-027/generation.json"
+    }
+  ],
+  "totalRuntimeBytes": 274232
+}

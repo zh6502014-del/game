@@ -1810,17 +1810,12 @@
     say('C4', 'C4-step-30', '後面那個封袋，別打壞了。');
     drop('C4', ['C4-step-02', 'C4-step-03', 'C4-step-08', 'C4-step-09', 'C4-step-12', 'C4-step-14', 'C4-step-18', 'C4-step-19', 'C4-step-20', 'C4-step-21', 'C4-step-23', 'C4-step-25', 'C4-step-26', 'C4-step-28', 'C4-step-31', 'C4-step-34', 'C4-step-35', 'C4-step-37', 'C4-step-38', 'C4-step-39-f', 'C4-step-41', 'C4-step-43', 'C4-step-44', 'C4-step-50', 'C4-step-52']);
 
-    // STORY-C4-SEARCH-033: the cabinet hand-off is no longer narrated outright; the player
-    // searches the drawer itself for the one sealed order among the filed envelopes.
-    say('C4', 'C4-step-33', '兩名守衛倒下。伊芙打開櫃門——封存令跟其他件號擺在一起，得自己在裡面翻找。');
+    say('C4', 'C4-step-33', '兩名守衛倒下。伊芙打開櫃門，找出與索引對應的封存令。');
     P.C4.steps.splice(find('C4', 'C4-step-33') + 1, 0,
-      { id: 'C4-step-33-search', type: 'search', frame: 1, sceneId: 'archive-vault', searchScene: 'archive-vault',
-        text: '翻找乙列第四櫃，找出索引對應的封存命令。',
-        items: [{ id: 'sealed-order', label: '封存處置令', text: '找到了——件號對得上索引，是這一份。' } ] },
       { id: 'C4-step-34', type: 'narration', frame: 1, text: '她沒有就地拆閱；凜守住近側通路，朔確認來路，三人循側門退回藏身處。' }
     );
     // C4's reading groups were fixed at authoring time and never re-chunked after the drop()/say()
-    // edits above; rebuild them from the final step order so the new search beat groups correctly.
+    // edits above; rebuild them from the final step order so the new beat groups correctly.
     {
       const chunked = []; let pending = [];
       for (const step of P.C4.steps) {
@@ -2083,7 +2078,7 @@
     ]);
     say('A1', 'A1-step-06', '凜推門進去，站到唯一的出口前。赫爾曼看見她，沒有喊衛兵。');
     say('A1', 'A1-step-07', '是國王派你們來的吧。');
-    say('A1', 'A1-step-08', '我只負責你的命。', '凜');
+    say('A1', 'A1-step-08', '有人指控你洩漏國家機密。國王下了密令，要我取你的命。', '凜');
     // A2: the accident, without the shared-memory fragments.
     say('A2', 'A2-step-01', '凜向前逼近實驗台。赫爾曼還在找退路。');
     say('A2', 'A2-step-05', '壓縮的能量爆開，沿著管線反衝回槍身。');
@@ -2091,7 +2086,12 @@
     say('A2', 'A2-step-09', '外面傳來腳步聲。凜用布條纏住右手，從維修通道離開。她是為了殺他而來，他卻不是死在她手上。');
     drop('A2', ['A2-step-08']);
     // A3: framed and wanted; she goes after the woman who left the lab.
-    say('A3', 'A3-step-01', '凜回到尺烏，想問首腦為什麼博士會說出國王。門前卻沒有守衛。');
+    say('A3', 'A3-step-01', '凜回到尺烏，想問首腦，博士究竟洩漏了什麼。門前卻沒有守衛。');
+    after('A3', 'A3-step-03', [
+      D('A3-step-03-b', 1, '護衛', '據點裡的人都處理乾淨了，只有一個外勤還沒回來。'),
+      D('A3-step-03-c', 1, '護衛', '她叫凜。罪名：叛國、殺害王國研究員、竊取國家機密。人沒回來，東西還在她手上。'),
+      D('A3-step-03-d', 1, '護衛', '王令在此，即刻追捕。')
+    ]);
     say('A3', 'A3-step-06', '尺烏沒有其他生還者。凜在據點外割去制服標誌。');
     say('A3', 'A3-step-07', '隔天，告示貼滿暮城：尺烏叛國，暗殺博士，餘黨一名在逃。告示上畫的是她的臉。');
     after('A3', 'A3-step-07', [N('A3-step-07-b', get('A3', 'A3-step-07').frame, '她不能再用自己的名字走在街上。那晚研究室裡還有另一個人，那個被趕出去的紅髮女子。凜決定先找到她。')]);
@@ -2127,9 +2127,6 @@
         N('E3-letter-f', f0, '伊芙把信讀了兩遍，才把它和設計圖收進懷裡。')
       ]);
       drop('E3', ['E3-step-01', 'E3-step-02']);
-      const search = get('E3', 'E3-search-parts');
-      search.text = '布包裡的零件散開了。找齊五件，再開始組裝。';
-      search.items = [['gun-0', '機匣', '槍的主體。其餘零件都裝在它上面。'], ['gun-1', '銃管', '博士親手車出來的銃管。'], ['gun-2', '握柄', '握柄的尺寸，剛好合她的手。'], ['gun-3', '暮晶核心', '小小的暮晶核心，組好之後才能蓄能。'], ['gun-4', '保險片', '過載時會碎裂、切斷能量的保險片，不能省略。']].map(([id, label, text]) => ({ id, label, text }));
       say('E3', 'E3-step-03', '把零件放入對應的輪廓，組裝博士留下的槍。');
       say('E3', 'E3-step-04', '槍組好了。伊芙還不熟悉它，但這是博士留給她的。');
       after('E3', 'E3-step-04', [
@@ -2205,20 +2202,20 @@
     ], [['b2-stage-1', '暮城']]);
 
     // ── C4: the archive.
-    const vault = get('C4', 'C4-step-33-search'), outer = get('C4', 'C4-step-16'), inner = get('C4', 'C4-step-32');
+    const outer = get('C4', 'C4-step-16'), inner = get('C4', 'C4-step-32');
     replace('C4', [
-      [0, 'n', '深夜，朔帶著磷從側門溜進文件庫。架子高到看不見頂，燈只點到第三層。'],
+      [0, 'n', '深夜，朔帶著磷從側門溜進文件庫。'],
       [0, 'n', '磷攤開博士寄給父親的信。'],
       [1, 'n', '他們轉過乙列的架子，迎面撞上一個紅髮女人。她的手已經按在腰間的槍上。'],
       [1, 'd', '伊芙', '別動。你們是誰？'],
-      [1, 'd', '朔', '這句話，該我們問。'],
-      [1, 'd', '磷', '我們在找赫爾曼博士的東西。'],
-      [1, 'n', '伊芙的手停住了。'],
-      [1, 'd', '伊芙', '妳認識博士？'],
-      [1, 'd', '磷', '博士說，有些研究用的東西被送去了礦區。爸爸要我來找運送紀錄。'],
-      [1, 'd', '伊芙', '我是他的學生。研究所的東西？給我看看。'],
-      [1, 'n', '伊芙讀完信，望向一排排卷宗。最上層的走廊裡，凜蹲在欄杆的陰影後面，看著他們。'],
-      [1, 'x', { ...JSON.parse(JSON.stringify(vault)), text: '查找研究物資送往礦區的紀錄。', items: [{ id: 'sealed-order', label: '運送紀錄', text: '研究所的測試品、暮晶和實驗物資，全部運往迪普霍姆的礦坑。' }] }],
+      [1, 'd', '磷', '我們在找赫爾曼博士留下的紀錄。'],
+      [1, 'd', '伊芙', '妳怎麼知道他？'],
+      [1, 'd', '磷', '他是我爸爸的朋友。'],
+      [1, 'n', '伊芙的手慢慢離開槍柄。'],
+      [1, 'd', '伊芙', '我是他的學生。我也在找。'],
+      [1, 'd', '朔', '那就一起找。'],
+      [1, 'n', '磷把信遞給伊芙。信裡說，有些研究用的東西被送去了礦區。伊芙讀完，望向一排排卷宗。最上層的走廊裡，凜蹲在欄杆的陰影後面，看著他們。'],
+      [1, 'n', '伊芙在卷宗裡翻出一份運送紀錄：研究所的測試品、暮晶和實驗物資，全部運往迪普霍姆的礦坑。'],
       [1, 'd', '伊芙', '暮晶、實驗物資……還有測試品。收貨地點是迪普霍姆。'],
       [1, 'd', '磷', '爸爸去的就是那裡。'],
       [1, 'd', '朔', '這裡還附著王室命令，要士兵團看守礦坑。'],
@@ -2360,7 +2357,7 @@
     if (g1) { g1.title = '真相'; g1.background = 'table'; }
     if (h1) { h1.title = '暮鐘操控室'; }
 
-    // ── H2「硬幣」(docs/design/STORY-H2-coin.md): the ending after the King. A random coin picks one of two branches
+    // ── H2「硬幣」(docs/design/story/STORY-H2-coin.md): the ending after the King. A random coin picks one of two branches
     // (steps carry branch 'sun' | 'night'); story-campaign.js keeps only the rolled branch while the chapter is played.
     {
       P.H2 = { frames: [], steps: [] };
@@ -2572,6 +2569,50 @@
     // Evidence cards that repeated the same wording.
     const S = window.NDCampaignSpecs, fix = t => t.replace('共振前兆', '夜域前兆').replace('緩衝幾秒共振', '擋住夜域幾秒').replace('同一段共振', '同一段錄音');
     for (const k of ['T1', 'T3', 'E1']) if (S[k]) S[k] = S[k].map(row => row.map(fix));
+  }
+  // S2-COPY-076: the warning, evidence, refusal and escape form one causal sequence.
+  {
+    const steps = window.NDStoryPerformances.S2.steps;
+    const get = id => steps.find(step => step.id === id);
+    const set = (id, text) => { get(id).text = text; };
+    const dialogue = (id, speaker, text, anchor, before = false) => {
+      const index = steps.findIndex(step => step.id === anchor);
+      steps.splice(index + (before ? 0 : 1), 0, { id, type: 'dialogue', frame: steps[index].frame, speaker, text });
+    };
+    set('S2-step-01', '赫爾曼從曜火研究所秘密寄來一封信：「下一次儀式會把夜域引向莫爾威爾。那裡還有人，別開始詠唱。」納爾瓦藉口核對儀式資料，調出了封存紀錄。');
+    Object.assign(get('S2-step-02').items[0], { label: '座標', text: '儀式指定的位置，正是莫爾威爾的居民區。' });
+    const records = get('S2-step-03').items;
+    records[0].text = '撤離報告寫著「全數撤離」，居民名冊卻顯示仍有人留在當地。';
+    records[1].text = '過去幾次儀式結束後，目標地區都留下了死者名單。';
+    Object.assign(records[2], { label: '採掘紀錄', text: '那些死者名單上的地名，後來又出現在暮晶採掘紀錄裡。' });
+    set('S2-step-04', '撤離根本沒有完成。在確認所有人離開以前，我不會開始詠唱。');
+    set('S2-step-05', '回覆只有一句：「儀式照常進行。」當晚，鐘樓的出入口多了幾名守衛。');
+    set('S2-step-06', '他們明明告訴我……那裡已經沒有人了。');
+    set('S2-step-07', '納爾瓦攥緊了朔送他的書籤。朔看了一眼門外的守衛，壓低聲音。');
+    dialogue('S2-step-07-b', '朔', '你打算怎麼做？', 'S2-step-07');
+    dialogue('S2-maze-01-a', '納爾瓦', '我不唱，他們也會找別人。我得出去，讓莫爾威爾的人知道。', 'S2-maze-01', true);
+    set('S2-maze-01', '朔攤開鐘樓周邊的街區圖，指向側門。');
+    dialogue('S2-maze-01-b', '朔', '換班時，這裡有空檔。我帶你走。', 'S2-maze-01');
+    set('S2-maze-02', '旋轉路段，接通鐘樓側門與撤離出口。');
+    set('S2-maze-03', '兩人趁守衛換班，沿側門潛入巷道。快到出口時，朔停下了腳步。通道前，站著一個熟悉的身影。');
+    set('S2-step-08', '');
+    const groups = window.NDStoryReadingGroups.groups.S2;
+    groups.find(ids => ids.includes('S2-step-07')).push('S2-step-07-b');
+    groups.push(['S2-maze-01-a', 'S2-maze-01', 'S2-maze-01-b']);
+  }
+  // SHIELD-RHYTHM-077: keep mother and child behind the shield until the hold succeeds.
+  {
+    const P = window.NDStoryPerformances;
+    const set = (node, id, text) => { P[node].steps.find(step => step.id === id).text = text; };
+    set('T2', 'T2-step-04', '前面的士兵，準備接應！我帶她們過去。');
+    set('T2', 'T2-step-05', '格蘭扶著母親，讓女孩緊跟在她身邊，向接應的隊友靠近。');
+    set('T3', 'T3-step-02', '母女躲在盾後。暮晶片只能短暫撐住夜域的侵襲，格蘭咬緊牙關，守住這條通道。');
+    const steps = P.T3.steps, index = steps.findIndex(step => step.id === 'T3-step-02');
+    steps.splice(index + 1, 0, { id: 'T3-shield-rhythm', type: 'rhythm', frame: steps[index].frame,
+      text: '跟著鼓點撐住護盾三十秒，讓母女穿過通道。', label: '開始撐盾' });
+    const groups = window.NDStoryReadingGroups.groups.T3;
+    const groupIndex = groups.findIndex(ids => ids.includes('T3-step-02'));
+    groups.splice(groupIndex, 1, ['T3-step-02'], ['T3-step-03', 'T3-step-04']);
   }
   window.NDStoryChapters = Object.freeze(chapters.map(({ id, title, background }) => ({ id, title, background })));
 })();

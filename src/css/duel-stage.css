@@ -4,6 +4,7 @@
    landscape screens; story battles and narrow/portrait screens keep the
    previous layout. All geometry is in stage units (--u = 1/1600 of the stage). */
 .duel-hero{display:none}
+.battle-dock:has(>.duel-leave){grid-template-columns:auto minmax(0,1fr) auto auto auto}
 
 @media (min-width:900px) and (min-height:521px) and (orientation:landscape){
 body:has(.duel-screen.nd-stage){
@@ -61,13 +62,13 @@ body:has(.duel-screen.nd-stage) #app{
 #app .duel-screen.nd-stage>.duel-hero .duel-hero-backlight,
 #app .duel-screen.nd-stage>.duel-hero .duel-hero-sigil,
 #app .duel-screen.nd-stage>.duel-hero .duel-hero-motes{position:absolute;z-index:0;pointer-events:none;opacity:0;transition:opacity .3s ease,transform .3s ease}
-#app .duel-screen.nd-stage>.duel-hero .duel-hero-backlight{left:-30%;right:-30%;top:-16%;bottom:4%;background:url('../../assets/story/fx-060/fx-hero-backlight.webp') center/100% 100% no-repeat}
-#app .duel-screen.nd-stage>.duel-hero .duel-hero-sigil{left:50%;top:-17%;width:96%;aspect-ratio:1;transform:translateX(-50%) scale(.92);background:url('../../assets/story/fx-060/fx-hero-sigil.webp') center/contain no-repeat}
+#app .duel-screen.nd-stage>.duel-hero .duel-hero-backlight{left:-30%;right:-30%;top:-16%;bottom:4%;background:url('../../assets/story/fx/awaken/fx-hero-backlight.webp') center/100% 100% no-repeat}
+#app .duel-screen.nd-stage>.duel-hero .duel-hero-sigil{left:50%;top:-17%;width:96%;aspect-ratio:1;transform:translateX(-50%) scale(.92);background:url('../../assets/story/fx/awaken/fx-hero-sigil.webp') center/contain no-repeat}
 #app .duel-screen.nd-stage>.duel-hero .duel-hero-motes{inset:0}
-.duel-hero-motes i{position:absolute;bottom:22%;width:calc(26 * var(--u,1px));aspect-ratio:1;background:url('../../assets/story/fx-060/fx-gold-motes-2.webp') center/contain no-repeat;opacity:0}
-.duel-hero-motes i:nth-child(1){left:22%}.duel-hero-motes i:nth-child(2){left:38%;background-image:url('../../assets/story/fx-060/fx-gold-motes-5.webp')}
-.duel-hero-motes i:nth-child(3){left:55%}.duel-hero-motes i:nth-child(4){left:70%;background-image:url('../../assets/story/fx-060/fx-gold-motes-7.webp')}
-.duel-hero-motes i:nth-child(5){left:46%;background-image:url('../../assets/story/fx-060/fx-gold-motes-1.webp')}
+.duel-hero-motes i{position:absolute;bottom:22%;width:calc(26 * var(--u,1px));aspect-ratio:1;background:url('../../assets/story/fx/awaken/fx-gold-motes-2.webp') center/contain no-repeat;opacity:0}
+.duel-hero-motes i:nth-child(1){left:22%}.duel-hero-motes i:nth-child(2){left:38%;background-image:url('../../assets/story/fx/awaken/fx-gold-motes-5.webp')}
+.duel-hero-motes i:nth-child(3){left:55%}.duel-hero-motes i:nth-child(4){left:70%;background-image:url('../../assets/story/fx/awaken/fx-gold-motes-7.webp')}
+.duel-hero-motes i:nth-child(5){left:46%;background-image:url('../../assets/story/fx/awaken/fx-gold-motes-1.webp')}
 /* ready: card picked up */
 #app .duel-screen.nd-stage>.duel-hero.player.nd-drop-ready .duel-hero-backlight{opacity:.45;animation:nd-hero-breathe 1.6s ease-in-out infinite alternate}
 #app .duel-screen.nd-stage>.duel-hero.player.nd-drop-ready .duel-hero-sigil{opacity:.55;animation:nd-hero-sigil 14s linear infinite}
@@ -81,7 +82,7 @@ body:has(.duel-screen.nd-stage) #app{
 @keyframes nd-hero-breathe{from{opacity:.32}to{opacity:.58}}
 @keyframes nd-hero-sigil{from{transform:translateX(-50%) scale(.92) rotate(0)}to{transform:translateX(-50%) scale(.92) rotate(360deg)}}
 @keyframes nd-hero-mote{0%{opacity:0;transform:translateY(0) scale(.7)}20%{opacity:.9}100%{opacity:0;transform:translateY(calc(-260 * var(--u,1px))) scale(1)}}
-.duel-hero-burst{position:fixed;z-index:60;pointer-events:none;mix-blend-mode:screen;background:url('../../assets/story/fx-060/fx-gold-shockwave.webp') center/contain no-repeat}
+.duel-hero-burst{position:fixed;z-index:60;pointer-events:none;mix-blend-mode:screen;background:url('../../assets/story/fx/awaken/fx-gold-shockwave.webp') center/contain no-repeat}
 
 /* drop target for self-target cards (護盾 / 領域展開) */
 .duel-hero-drop{
@@ -260,8 +261,8 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock::before,
 body:has(.duel-screen.nd-stage) #app>.battle-dock::after{display:none!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button{
  position:absolute!important;bottom:calc(22 * var(--u))!important;pointer-events:auto!important;
- width:max(40px,calc(46 * var(--u)))!important;height:max(40px,calc(46 * var(--u)))!important;
- min-width:0!important;padding:0!important;margin:0!important;border-radius:50%!important;
+ width:max(44px,calc(46 * var(--u)))!important;height:max(44px,calc(46 * var(--u)))!important;
+ min-width:0!important;min-height:0!important;box-sizing:border-box!important;aspect-ratio:1!important;padding:0!important;margin:0!important;border-radius:50%!important;
  display:grid!important;place-items:center!important;
  background:#0b1f21e6!important;border:1px solid var(--gold2)!important;box-shadow:0 4px 12px #000a!important;
 }
@@ -269,8 +270,9 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock>button>span{
  position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;
 }
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(1){left:calc(24 * var(--u))!important}
-body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(2){right:calc(24 * var(--u) + max(40px,calc(46 * var(--u))) + 10px)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(2){right:calc(24 * var(--u) + max(44px,calc(46 * var(--u))) + 10px)!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(3){right:calc(24 * var(--u))!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>button.duel-leave{left:calc(24 * var(--u) + max(44px,calc(46 * var(--u))) + 10px)!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button:hover{border-color:#f0d79a!important;box-shadow:0 4px 12px #000a,0 0 12px #d9be8555!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{
  position:absolute!important;left:calc(640 * var(--u))!important;bottom:calc(252 * var(--u))!important;transform:translateX(-50%)!important;
