@@ -258,8 +258,7 @@
     "art-assets": {
       "task": "本地 runtime 素材與衍生檔",
       "files": [
-        "assets/**",
-        "scripts/slice-frames.py"
+        "assets/**"
       ],
       "globals": [
         "NDStoryArt",

@@ -233,3 +233,5 @@
 /* The old mobile shade went fully opaque from 55% down, which hid the painting. */
 .story-performance:has(.performance-image-host[data-kind=illustration]) .story-stage-shade{position:fixed;height:100dvh;background:linear-gradient(#050d16b0 0,#050d1610 18%,#070f1900 58%,#070f19a8 78%,#070f19e8 100%)}
 }
+/* Re-attached host (new text, same picture): do not replay the ken-burns zoom as if the image changed. Its end state is scale(1). */
+.story-performance .performance-image-host .story-stage-image.is-settled{animation:none}

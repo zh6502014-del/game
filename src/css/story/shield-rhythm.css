@@ -139,3 +139,7 @@ dialog.shield-rhythm-dialog{padding:var(--nd-sp-12) var(--nd-sp-18)}
 .shield-rhythm-dialog:is([data-phase=success],[data-phase=failed]) .sr-plate.held{opacity:0!important}
 .shield-rhythm-dialog:is([data-phase=success],[data-phase=failed]) .sr-night{transform:none!important}
 .shield-rhythm-dialog:is([data-phase=success],[data-phase=failed]) .sr-vignette{box-shadow:inset 0 0 40px #1b0606!important;opacity:.4!important}
+/* Rhythm play surface only: rapid taps/holds must not start a text selection or callout.
+   Dialog header, rules and result text stay selectable. */
+.shield-rhythm-dialog :is(.sr-stage,.sr-scene,.sr-track,.sr-lane,.sr-note,.sr-hit,.sr-hold,.sr-judge,.sr-guide,.sr-feedback,.sr-banner,.sr-count,.sr-hud,.sr-pips,.sr-dock,.sr-actions button){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+.shield-rhythm-dialog .sr-hit{touch-action:manipulation}

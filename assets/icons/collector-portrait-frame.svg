@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 116" fill="none" preserveAspectRatio="none">
-<defs><linearGradient id="g" x2=".8" y2="1"><stop stop-color="#f3dc9c"/><stop offset=".32" stop-color="#ac8950"/><stop offset=".65" stop-color="#645034"/><stop offset="1" stop-color="#bd995b"/></linearGradient></defs>
-<path fill="url(#g)" fill-rule="evenodd" d="M9 0H87L96 9V107L87 116H9L0 107V9ZM10 5L5 10V102L10 107H86L91 102V10L86 5Z"/>
-<path d="M10 3H86L93 10V105L86 112H10L3 105V10Z" stroke="#f8e3a2" stroke-opacity=".38" stroke-width=".65"/>
-<path d="M14 8H25M8 14V25M71 8H82L88 14V25M8 87V99L14 105H27M69 105H82L88 99V87" stroke="#d7b976" stroke-width=".8"/>
-<g stroke="#e0c183" stroke-width=".7"><path d="M1 18 9 9 18 1M78 1l9 8 8 9M1 98l8 9 9 8M78 115l9-8 8-9"/><path d="m5 12 3-1 3-6 1 3 6 3-3 1-3 6-1-3ZM78 11l6-3 1-3 3 6 3 1-6 3-1 3-3-6Z"/></g>
-<path d="M32 111h32M39 3l9 3 9-3" stroke="#291f12"/>
-</svg>

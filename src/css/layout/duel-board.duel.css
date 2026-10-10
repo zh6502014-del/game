@@ -88,7 +88,7 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(2){right:ca
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button:nth-of-type(3){right:calc(24 * var(--u))!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button.duel-leave{left:calc(24 * var(--u) + max(44px,calc(46 * var(--u))) + 10px)!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>button:hover{border-color:#f0d79a!important;box-shadow:0 4px 12px var(--nd-ink-67),0 0 12px #d9be8555!important}
-body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{position:absolute!important;left:calc(640 * var(--u))!important;bottom:calc(252 * var(--u))!important;transform:translateX(-50%)!important;width:auto!important;white-space:nowrap!important;margin:0!important;padding:0!important;background:none!important;border:0!important;font-size:max(12px,calc(14 * var(--u)))!important;letter-spacing:.2em!important;color:#cdbf98!important;text-shadow:0 2px 6px var(--nd-black)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{position:absolute!important;left:50%!important;bottom:calc(228 * var(--u))!important;transform:translateX(-50%)!important;width:auto!important;white-space:nowrap!important;margin:0!important;padding:0!important;background:none!important;border:0!important;font-size:max(12px,calc(14 * var(--u)))!important;letter-spacing:.2em!important;color:#cdbf98!important;text-shadow:0 2px 6px var(--nd-black)!important}
 }
 @media (prefers-reduced-motion:reduce){
 .duel-screen.nd-stage>.duel-hero img, .duel-hero-drop, .duel-hero-backlight, .duel-hero-sigil, .duel-hero-motes i{transition:none!important;animation:none!important}

@@ -4,7 +4,7 @@
 .aw-viewport[data-zoom=in]{cursor:grabbing}
 .aw-world{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
 .aw-plate{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;user-select:none;-webkit-user-drag:none}
-.aw-grid{position:absolute;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr)}
+.aw-grid{position:absolute;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(6,1fr)}
 .story-search-dialog .aw-drawer{position:relative;min-width:0;min-height:0;width:100%;height:100%;padding:0;border:0;border-radius:var(--nd-r-3);background:transparent;overflow:visible}
 .aw-drawer img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;user-select:none}
 .aw-drawer:hover img{filter:brightness(1.25)}

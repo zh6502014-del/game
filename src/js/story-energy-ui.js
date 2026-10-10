@@ -97,13 +97,35 @@ function node(tag, cls, text) {
     const src = s.view || s.state;
     try { return s.engine.attackValue ? s.engine.attackValue(src, u) : u.attack; } catch (e) { return u.attack; }
   }
+  // MOBILE-ACTION-MENU-088: on upright phones the skill-card row is gone; tapping an ally swaps the bottom
+  // bar for that ally's action menu (普攻 / 招式 / 晶錐 / 詳情 / 取消), then the player taps the target.
+  const compact = () => Boolean(window.matchMedia?.('(orientation:portrait) and (max-width:1024px)').matches);
+  function actionMenu(s, u) {
+    const menu=node('div','seb-action-menu');menu.setAttribute('role','menu');menu.setAttribute('aria-label',u.name+'的行動');
+    const has=type=>!s.busy&&actions(s,u.id).some(a=>a.type===type),live=unit(s,u.id,true);
+    const head=node('div','seb-menu-head');const who=node('span','seb-menu-who');who.append(node('strong','',u.name),node('span','',JOBS[u.job]));
+    const info=button('i','menu-info','menu-info-'+u.id,'seb-menu-icon');info.dataset.sebOwner=u.id;info.setAttribute('aria-label','查看'+u.name+'詳情');
+    const close=button('×','menu-close','menu-close-'+u.id,'seb-menu-icon');close.setAttribute('aria-label','取消');
+    head.append(who,info,close);
+    // Each action is a small card: picture on the left, name + one line of state on the right, 暮晶 cost in the corner.
+    const item=(action,kind,pic,label,sub,cost,ready)=>{const b=button('',action,action+'-'+u.id,'seb-menu-item seb-menu-'+kind+(ready?' seb-ready':' seb-menu-off'));b.dataset.sebOwner=u.id;b.setAttribute('role','menuitem');b.setAttribute('aria-disabled',String(!ready));
+      const text=node('span','seb-menu-text');text.append(node('strong','seb-menu-label',label),node('span','seb-menu-sub',sub));b.append(pic,text);if(cost!=null)b.append(node('span','seb-menu-cost',cost));return b;};
+    const emblem=node('span','seb-menu-pic seb-menu-emblem');emblem.setAttribute('aria-hidden','true');
+    menu.append(head);const row=node('div','seb-menu-actions');
+    row.append(item('menu-attack','attack',emblem,'普攻',has('attack')?'攻擊 '+num(attackNow(s,u)):unavailable(s,'attack',live),null,has('attack')));
+    const ability=abil(s,u),skillPic=art(u,true);skillPic.classList.add('seb-menu-pic');
+    row.append(item('menu-skill','skill',skillPic,ability.name,has('skill')?(ability.target==='self'?'點擊即施放':'選擇目標'):unavailable(s,'skill',live).replace('暮晶不足：需要 ','暮晶不足 · 需 '),ability.cost,has('skill')));
+    if(u.cone&&u.hp>0){const cone=s.engine.cone(u),pic=node('span','seb-menu-pic seb-skill-art seb-cone-art');const img=node('img','seb-art-image');img.alt='';img.draggable=false;img.src='assets/story/fx/awaken/fx-crystal-cone.webp';pic.append(img);
+      row.append(item('menu-cone','cone',pic,cone.name,has('cone')?'全體敵人':(u.coneUsed?'本回合已使用':'暮晶不足 · 需 '+cone.cost+' 點'),cone.cost,has('cone')));}
+    menu.append(row);return menu;
+  }
   function unitCard(s, u) {
     const wrap = node('article','seb-unit-wrap'); wrap.dataset.job=u.job; wrap.dataset.side=u.side;
     const card = button('', 'unit', 'unit-' + u.id, 'seb-unit');
     card.dataset.sebUnit=u.id; card.dataset.unitId=u.id; card.dataset.side=u.side; card.dataset.job=u.job;
     card.dataset.sebTarget=String(legalTargets(s).includes(u.id));
     card.classList.toggle('seb-targetable',legalTargets(s).includes(u.id));
-    card.classList.toggle('seb-selected',u.id===s.actorId);
+    card.classList.toggle('seb-selected',u.id===s.actorId);card.classList.toggle('seb-menu-open',u.id===s.menu);
     card.classList.toggle('seb-down',u.hp<=0);
     Fx.cardClasses(s,u,card,wrap);
     card.classList.toggle('seb-has-stun',u.hp>0&&Boolean(u.statuses.stun));
@@ -129,7 +151,7 @@ function node(tag, cls, text) {
     const burnFlames=null;
     const base=node('span','seb-unit-base');
     const identity=node('span','seb-unit-identity');
-    identity.append(node('strong','seb-unit-name',u.name),node('span','seb-unit-role',(u.isHero?'主角 · ':u.side==='player'?'夥伴 · ':'敵方 · ')+JOBS[u.job]));
+    identity.append(node('strong','seb-unit-name',u.name),node('span','seb-unit-jobtag',JOBS[u.job]),node('span','seb-unit-role',(u.isHero?'主角 · ':u.side==='player'?'夥伴 · ':'敵方 · ')+JOBS[u.job]));
     const stats=node('span','seb-stat-badges');
     const hp=node('span','seb-stat seb-hp');hp.append(node('small','','血'),node('strong','seb-hp-number',num(u.hp)));
     const shield=node('span','seb-stat seb-shield');shield.append(node('small','','盾'),node('strong','seb-shield-number',num(u.shield)));
@@ -143,6 +165,13 @@ function node(tag, cls, text) {
       allowances.append(chip('attack',mine&&attackReady,u.attacked,'普攻'),chip('skill',mine&&skillReady,u.skillUsed,'招式'));
       card.append(allowances);
     }
+    // MOBILE-UNIT-CARD-089: upright phones hide names; enemies show a job emblem instead, and same-named enemies get a
+    // stable letter (by order among every enemy that shares the name, so it never shifts when one falls).
+    if(u.side==='enemy'){
+      const emblem=node('span','seb-job-emblem');emblem.dataset.job=u.job;emblem.setAttribute('aria-hidden','true');emblem.title=JOBS[u.job];card.append(emblem);
+      const twins=display(s).units.filter(x=>x.side==='enemy'&&x.name===u.name);
+      if(twins.length>1){const tag=node('span','seb-dup-tag',String.fromCharCode(65+twins.findIndex(x=>x.id===u.id)));tag.setAttribute('aria-hidden','true');card.append(tag);}
+    }
     card.append(node('span','seb-target-label','目標'));
     wrap.append(card);
     // The unit button clips its own overflow, so the flame layer lives beside it in the same grid cell.
@@ -150,7 +179,7 @@ function node(tag, cls, text) {
     if(stunHalo)wrap.append(stunHalo);
     const status=node('div','seb-status-strip');
     const texts=labels(s,u,true);
-    if(!texts.length)status.append(node('span','seb-unit-job','狀態正常'));
+    if(!texts.length){status.classList.add('seb-status-normal');status.append(node('span','seb-unit-job','狀態正常'));}
     else for(const text of texts)status.append(node('span','seb-status',text));
     // The small "i" button is gone: tapping the portrait image opens the same ability/status hint (see onClick).
     wrap.append(status);return wrap;
@@ -221,21 +250,23 @@ function node(tag, cls, text) {
     const enemyEnergy=energy(s,'enemy');enemyEnergy.classList.add('seb-enemy-energy');field.append(enemyEnergy,roster(s,'enemy'));
     const message=node('div','seb-battle-message');message.setAttribute('aria-live','off');
     if(s.pending){const actor=unit(s,s.pending.actorId);message.append(node('span','',s.pending.type==='attack'?'選擇 '+actor.name+' 的普攻目標':'將「'+s.engine.skill(actor.job).name+'」交給'+(s.engine.skill(actor.job).target==='self'?'本人':'敵方目標')));}
-    else message.append(node('span','',s.message||(s.busy?'戰鬥演出中':'拖曳角色攻擊 · 拖曳招式施放')));
+    else message.append(node('span','',s.message||(s.busy?'戰鬥演出中':compact()?'點角色選擇行動':'拖曳角色攻擊 · 拖曳招式施放')));
     const playerEnergy=energy(s,'player');playerEnergy.classList.add('seb-player-energy');field.append(message,roster(s,'player'),playerEnergy);
     if(st.status!=='playing')field.append(resultPanel(s));
     s.shell.append(field);
     const hand=node('footer','seb-hand');hand.setAttribute('aria-label','全隊常駐招式卡');
     const handLabel=node('div','seb-hand-label');
-    const prompt=s.pending?(s.pending.type==='attack'?'選擇目標':'選擇招式目標'):(s.busy?'戰鬥演出中':s.message||'選擇角色或招式，再選擇目標');
-    handLabel.append(node('strong','',prompt),node('span','',s.pending?'點擊亮框角色，或按取消。':(window.matchMedia?.('(hover:none) and (pointer:coarse)').matches?'拖曳可直接操作；點角色圖片查看說明。':'拖曳可直接操作；點角色圖片查看說明；按 E 結束回合。')));
+    const prompt=s.menu&&!s.pending&&!s.busy?(unit(s,s.menu)?.name||'')+' · 選擇行動':s.pending?(s.pending.type==='attack'?'選擇目標':'選擇招式目標'):(s.busy?'戰鬥演出中':s.message||(compact()?'我方回合':'選擇角色或招式，再選擇目標'));
+    handLabel.append(node('strong','',prompt),node('span','',s.pending?'點擊亮框角色，或按取消。':(compact()?'點我方角色選擇行動，再點目標。':window.matchMedia?.('(hover:none) and (pointer:coarse)').matches?'拖曳可直接操作；點角色圖片查看說明。':'拖曳可直接操作；點角色圖片查看說明；按 E 結束回合。')));
     const cards=node('div','seb-hand-cards');for(const u of st.units.filter(x=>x.side==='player')){cards.append(skillCard(s,u));if(u.cone&&u.hp>0)cards.append(coneCard(s,u));}
     const rail=node('aside','seb-action-rail');rail.setAttribute('aria-label','回合操作');
     // The selected-name label ("凜 · 普攻") was removed with the attack button; the rail now only holds cancel + end turn.
     // The separate 普通攻擊 button was removed: attacks start by dragging a character or tapping it, then its target.
     if(s.pending)rail.append(button('取消','cancel-target','cancel-target'));
     const end=button(s.busy?'演出中…':'結束回合','end-turn','end-turn','seb-primary seb-end-turn');end.disabled=s.busy||st.status!=='playing';end.setAttribute('aria-keyshortcuts','E');if(!s.busy)end.append(node('kbd','seb-key','E'));rail.append(end);
-    hand.append(handLabel,cards,rail);
+    const menuUnit=s.menu&&!s.busy?unit(s,s.menu):null;
+    if(menuUnit&&menuUnit.hp>0&&compact()){hand.dataset.menu='open';hand.append(actionMenu(s,menuUnit));}
+    else{if(s.menu&&!menuUnit)s.menu=null;hand.append(handLabel,cards,rail);}
     s.shell.append(hand);
     s.rotate.replaceChildren(rotatePrompt(s));s.rotate.inert=!s.rotated;s.rotate.hidden=!s.rotated;
     if(!s.modal){if(s.rotated)focus(s,'rotate-leave');else if(!focus(s,focusTo||activeKey))s.root.focus({preventScroll:true});}
@@ -555,7 +586,7 @@ function node(tag, cls, text) {
   }
   function takeAction(s,action) {
     if(s.busy||s.rotated||s.modal||s.state.status!=='playing')return;
-    cancelGesture(s);hidePreview(s);s.pending=null;
+    cancelGesture(s);hidePreview(s);s.pending=null;s.menu=null;
     const before=copy(s.state);let result;
     try{result=action==='end-turn'?s.engine.endTurn(s.state):s.engine.act(s.state,action);}
     catch(error){s.message='這次行動未能完成，請返回故事後重試。';render(s);announce(s,s.message);return;}
@@ -567,7 +598,7 @@ function node(tag, cls, text) {
   }
   function choose(s,actorId,type) {
     if(s.busy||s.rotated||s.state.status!=='playing')return;
-    s.actorId=actorId;
+    s.actorId=actorId;s.menu=null;
     if(!actions(s,actorId).some(a=>a.type===type)){s.pending=null;s.message=unavailable(s,type,unit(s,actorId,true));render(s);announce(s,s.message);return;}
     s.pending={actorId,type};render(s);announce(s,'請選擇'+(type==='skill'&&s.engine.skill(unit(s,actorId).job).target==='self'?'本人':'敵方目標')+'；Escape 取消。');
   }
@@ -634,7 +665,7 @@ function node(tag, cls, text) {
     if(!g.dragging&&distance<8)return;
     if(!g.dragging){
       if(!actions(s,g.actorId).some(a=>a.type===g.type)){s.suppressClickUntil=performance.now()+500;cancelGesture(s);announce(s,unavailable(s,g.type,unit(s,g.actorId,true)));return;}
-      g.dragging=true;s.actorId=g.actorId;s.pending=null;s.root.classList.add('seb-is-dragging');g.source.classList.add('seb-drag-source');updateTargets(s,{actorId:g.actorId,type:g.type});
+      g.dragging=true;s.actorId=g.actorId;s.pending=null;if(s.menu){s.menu=null;s.shell.querySelector('.seb-action-menu')?.remove();}s.root.classList.add('seb-is-dragging');g.source.classList.add('seb-drag-source');updateTargets(s,{actorId:g.actorId,type:g.type});
       if(g.type==='skill')sound('cardPickup');
       try{s.root.setPointerCapture(e.pointerId);}catch(_){}
     }
@@ -661,7 +692,9 @@ function node(tag, cls, text) {
     }else cancelGesture(s);
   }
   function onClick(s,e) {
-    e.stopPropagation();const el=e.target.closest('[data-seb-action]');if(!el||!s.root.contains(el)||el.disabled)return;
+    e.stopPropagation();const el=e.target.closest('[data-seb-action]');
+    if(!el&&s.menu&&!s.modal){s.menu=null;render(s);return;}
+    if(!el||!s.root.contains(el)||el.disabled)return;
     if(e.detail!==0&&performance.now()<s.suppressClickUntil){e.preventDefault();return;}
     const action=el.dataset.sebAction;
     if(s.modal&&!['cancel-leave','confirm-leave','close-detail'].includes(action))return;
@@ -676,11 +709,23 @@ function node(tag, cls, text) {
     if(action==='skill-info'){details(s,el.dataset.sebOwner,true);return;}
     if(action==='unit-info'){details(s,el.dataset.sebOwner,false);return;}
     if(action==='cancel-target'){s.pending=null;render(s);return;}
+    if(action==='menu-close'){const id=s.menu;s.menu=null;render(s,'unit-'+id);return;}
+    if(action==='menu-info'){const id=el.dataset.sebOwner;s.menu=null;render(s);details(s,id,false);return;}
+    if(action==='menu-attack'){choose(s,el.dataset.sebOwner,'attack');return;}
+    if(action==='menu-skill'){
+      const id=el.dataset.sebOwner,u=unit(s,id,true),own=actions(s,id).filter(a=>a.type==='skill');
+      // Self skills (領域展開 …) have only one target: fire at once instead of asking for a tap on the same ally.
+      if(own.length&&abil(s,u).target==='self'){s.actorId=id;takeAction(s,own[0]);return;}
+      choose(s,id,'skill');return;
+    }
+    if(action==='menu-cone'){const id=el.dataset.sebOwner;s.menu=null;const cone=actions(s,id).find(a=>a.type==='cone');if(cone){s.actorId=id;takeAction(s,cone);}else{s.message='目前無法施放晶錐';render(s);announce(s,s.message);}return;}
     if(action==='unit'){
       const id=el.dataset.sebUnit;if(submitTarget(s,id))return;
       // Tapping the character picture (not the name/stat strip) shows the hint; legal attack targets above still win.
-      if(e.detail!==0&&e.target.closest('.seb-portrait')){details(s,id,false);return;}
-      const u=unit(s,id);if(u.side==='player')choose(s,id,'attack');else if(!s.pending)details(s,id,false);else announce(s,'此角色不是合法目標。');return;
+      if(e.detail!==0&&e.target.closest('.seb-portrait')&&!(compact()&&unit(s,id).side==='player'&&!s.pending)){details(s,id,false);return;}
+      const u=unit(s,id);
+      if(u.side==='player'&&compact()&&!s.pending){s.actorId=id;s.menu=s.menu===id?null:id;render(s,s.menu?'menu-attack-'+id:'unit-'+id);return;}
+      if(u.side==='player')choose(s,id,'attack');else if(!s.pending)details(s,id,false);else announce(s,'此角色不是合法目標。');return;
     }
     if(action==='skill')choose(s,el.dataset.sebOwner,'skill');
     if(action==='cone'){const cone=actions(s,el.dataset.sebOwner).find(a=>a.type==='cone');if(cone){s.actorId=el.dataset.sebOwner;takeAction(s,cone);}else{const u=unit(s,el.dataset.sebOwner,true);s.message=!u||u.hp<=0?'角色已倒下':u.coneUsed?'本回合已使用晶錐':'暮晶不足：需要 '+(u.cone?u.cone.cost:1)+' 點';render(s);announce(s,s.message);}}
@@ -691,7 +736,7 @@ function node(tag, cls, text) {
     e.stopPropagation();
     if(e.key==='Escape'){
       e.preventDefault();if(s.gesture){s.suppressClickUntil=performance.now()+500;cancelGesture(s);s.pending=null;render(s);return;}
-      if(s.modal)closeModal(s);else if(s.pending){s.pending=null;render(s);}else{const body=node('p','','這場戰鬥不會算作完成。返回故事後，可以重新挑戰。');openModal(s,'離開這場戰鬥？',body,'leave');}return;
+      if(s.modal)closeModal(s);else if(s.menu){const id=s.menu;s.menu=null;render(s,'unit-'+id);}else if(s.pending){s.pending=null;render(s);}else{const body=node('p','','這場戰鬥不會算作完成。返回故事後，可以重新挑戰。');openModal(s,'離開這場戰鬥？',body,'leave');}return;
     }
     // Hotkey: E ends the turn (same path as the button; takeAction ignores it while busy / in a modal / after the fight).
     if((e.key==='e'||e.key==='E')&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!e.repeat&&!/^(INPUT|TEXTAREA|SELECT)$/.test(e.target?.tagName||'')){
@@ -707,7 +752,7 @@ function node(tag, cls, text) {
   }
   function resize(s) {
     const next=(PORTRAIT_GATE&&innerWidth<=1024&&innerHeight>innerWidth);
-    cancelGesture(s);hidePreview(s);s.pending=null;
+    cancelGesture(s);hidePreview(s);s.pending=null;s.menu=null;
     if(s.busy)cancelPlayback(s,false);
     if(next!==s.rotated){closeModal(s);s.rotated=next;}
     render(s,next?'rotate-leave':undefined);
@@ -732,7 +777,7 @@ function node(tag, cls, text) {
     live.setAttribute('role','status');live.setAttribute('aria-live','polite');live.setAttribute('aria-atomic','true');fx.setAttribute('aria-hidden','true');
     const arrow=document.createElementNS('http://www.w3.org/2000/svg','svg');arrow.setAttribute('class','seb-drag-arrow');arrow.setAttribute('aria-hidden','true');
     root.append(shell,rotate,fx,arrow,live);
-    const s={config:copied,state,engine,root,shell,live,fx,arrow,rotate,onReturn,actorId:'hero',pending:null,message:'',busy:false,view:null,returned:false,modal:null,gesture:null,playToken:0,waiters:new Map(),animations:new Set(),poses:new Map(),suppressClickUntil:0,rotated:(PORTRAIT_GATE&&innerWidth<=1024&&innerHeight>innerWidth),reduced:matchMedia('(prefers-reduced-motion: reduce)'),previousFocus:document.activeElement,bodyOverflow:document.body.style.overflow,inertElements:[]};
+    const s={config:copied,state,engine,root,shell,live,fx,arrow,rotate,onReturn,actorId:'hero',pending:null,menu:null,message:'',busy:false,view:null,returned:false,modal:null,gesture:null,playToken:0,waiters:new Map(),animations:new Set(),poses:new Map(),suppressClickUntil:0,rotated:(PORTRAIT_GATE&&innerWidth<=1024&&innerHeight>innerWidth),reduced:matchMedia('(prefers-reduced-motion: reduce)'),previousFocus:document.activeElement,bodyOverflow:document.body.style.overflow,inertElements:[]};
     s.fxCanvas=document.createElement('canvas');s.fxCanvas.className='seb-skill-canvas';s.fxCanvas.setAttribute('aria-hidden','true');root.append(s.fxCanvas);
     for(const el of [...document.body.children])if(el instanceof HTMLElement&&!['SCRIPT','STYLE','LINK'].includes(el.tagName)){s.inertElements.push([el,el.inert]);el.inert=true;}
     root.addEventListener('click',e=>onClick(s,e));root.addEventListener('keydown',e=>onKey(s,e),true);

@@ -40,6 +40,8 @@ let assassinCoinQueue=Promise.resolve();
 const AUDIO_URLS={
   "setupBgm":"https://opengameart.org/sites/default/files/prepare_to_fight.mp3",
   "bgm":"https://lpc.opengameart.org/sites/default/files/Battle.mp3",
+  // HOT-MODE-090 — 熱血戰鬥曲：Battle March by PlayOnLoop.com (CC BY 3.0)。檔案缺少時 heatBgmFailed 會退回一般戰鬥曲。
+  "heatBgm":"assets/audio/duel/battle-march.mp3",
   "resultBgm":"https://opengameart.org/sites/default/files/upgrades_menu_asset_pack.ogg",
   "cardPickup":"https://opengameart.org/sites/default/files/cut.wav",
   "cardPlace":"https://opengameart.org/sites/default/files/contact1.wav",
@@ -58,9 +60,9 @@ const AUDIO_URLS={
   // AUDIO-MIX-061: "shield" and "lock" used to reuse the hit / cardInvalid files and sounded identical to them; they now use their own synthesized cues.
   // "defeat" has no remote file: the downloaded sad-trumpet clip sounded comical, so the synthesized low toll plays instead.
 };
-const AUDIO_DEFAULTS={setupBgm:.1,bgm:.1,resultBgm:.1,cardPickup:.1,cardPlace:.1,cardFlip:.1,cardInvalid:.1,hit:.1,shield:.1,lock:.1,burn:.1,counter:.1,coinFlip:.1,victory:.1,defeat:.1};
+const AUDIO_DEFAULTS={setupBgm:.1,bgm:.1,heatBgm:.1,resultBgm:.1,cardPickup:.1,cardPlace:.1,cardFlip:.1,cardInvalid:.1,hit:.1,shield:.1,lock:.1,burn:.1,counter:.1,coinFlip:.1,victory:.1,defeat:.1};
 const AUDIO_LABELS={
-  setupBgm:["備戰音樂","職業選擇頁"],bgm:["戰鬥音樂","決鬥進行中"],resultBgm:["結算音樂","戰鬥結束"],
+  setupBgm:["備戰音樂","職業選擇頁"],bgm:["戰鬥音樂","決鬥進行中"],heatBgm:["熱血音樂","熱血模式的備戰與戰鬥"],resultBgm:["結算音樂","戰鬥結束"],
   cardPickup:["拿牌","拖曳拿起卡牌"],cardPlace:["放牌","卡牌放入位置"],cardFlip:["翻牌","Reveal／翻面"],cardInvalid:["無效操作","禁止操作提示"],
   hit:["攻擊與命中","揮擊、命中、閃避"],shield:["護盾與防禦","護盾、格擋、領域"],lock:["封鎖與夜襲","攻擊封鎖、入夜"],burn:["灼傷","Burn 效果"],
   counter:["反擊","Tank Counter"],coinFlip:["硬幣","夜襲判定"],victory:["勝利","Victory"],defeat:["失敗","Defeat"]
@@ -100,6 +102,96 @@ const ND_MIX={
 };
 function sfxVolume(k,kind){const t=ND_MIX[kind]?.[k]||0;return getAudioVolume(k)*Math.pow(10,t/20);}
 let audioEnabled=true;
+/* HOT-MODE-090 — 「一般／熱血」風格：只換戰鬥音樂與介面配色（body.theme-hot），不碰規則、AI 與存檔。故事戰鬥一律用一般風格。 */
+let heatMode=false,heatBgmFailed=false,heatSwitching=false;
+try{heatMode=localStorage.getItem("nightfallHeatV1")==="1"}catch(e){}
+function heatActive(){try{return !!rankMode&&!storyBattleContext}catch(e){return false}}
+const HEAT_ART=["assets/ui/hot-badge.webp","assets/cards/back-flame-v1.webp","assets/fx/hot-embers.webp","assets/frames/hot/hero.webp","assets/frames/hot/panel.webp","assets/frames/hot/thin.webp"];
+let heatArtWarm=false;
+function applyHeatMode(){
+  const on=heatActive();
+  document.body.classList.toggle("theme-hot",on);
+  if(on&&!document.getElementById("nd-hot-embers")){const d=document.createElement("div");d.id="nd-hot-embers";d.setAttribute("aria-hidden","true");document.body.appendChild(d);}
+  if(on&&!heatArtWarm){heatArtWarm=true;HEAT_ART.forEach(u=>{try{const i=new Image();i.decoding="async";i.src=u}catch(e){}});}
+}
+function setHeatMode(on){
+  heatMode=!!on;
+  try{localStorage.setItem("nightfallHeatV1",heatMode?"1":"0")}catch(e){}
+  applyHeatMode();
+  // 切換當下就淡入／淡出換曲（點擊本身就是使用者手勢，可播放）。renderSetup 內的 ensureSetupMusic 會取消進行中的淡入淡出，所以先擋住它。
+  heatSwitching=true;
+  try{initAudio();switchMusic("setup",true)}catch(e){}
+  try{renderSetup()}finally{heatSwitching=false}
+}
+
+/* RANK-091 — 排位：只有「星數→段位」。6 大段位 × 每階 3 顆星；勝 +1（3 連勝起 +2）、敗 −1（不跌出目前段位下限）、平手不變。無經驗值、無點數。 */
+const RANK_TIERS=["守夜新兵","巡夜者","暮城衛士","鐘下守望","破曉者","夜幕決鬥者"];
+const RANK_AI=["conservative","conservative","aggressive","aggressive","strategic","strategic"];
+const JOB_AI={swordsman:"strategic",tank:"conservative",assassin:"strategic",gunner:"aggressive"};
+let rankMode=false,rankData={stars:0,streak:0};
+try{rankMode=localStorage.getItem("nightfallModeV1")==="rank";const r=JSON.parse(localStorage.getItem("nightfallRankV1")||"null");if(r&&Number.isFinite(r.stars))rankData={stars:Math.max(0,r.stars|0),streak:Math.max(0,r.streak|0)}}catch(e){}
+function saveRank(){try{localStorage.setItem("nightfallRankV1",JSON.stringify(rankData))}catch(e){}}
+function rankInfo(stars=rankData.stars){const tier=Math.min(5,Math.floor(stars/3));const inTier=tier===5?stars-15:stars%3;return{tier,name:RANK_TIERS[tier],inTier,top:tier===5}}
+function rankStarsHtml(stars=rankData.stars){const r=rankInfo(stars);
+  if(r.top)return `<span class="rank-stars"><img src="assets/ui/rank/star-on.webp" alt="" draggable="false"><b>×${r.inTier}</b></span>`;
+  return `<span class="rank-stars">${[0,1,2].map(i=>`<img src="assets/ui/rank/star-${i<r.inTier?'on':'off'}.webp" alt="" draggable="false">`).join("")}</span>`}
+function rankBadgeHtml(stars=rankData.stars){const r=rankInfo(stars);return `<div class="rank-card"><img class="rank-badge" src="assets/ui/rank/badge-${r.tier+1}.webp" alt="" draggable="false"><div class="rank-meta"><div class="rank-name">${r.name}</div>${rankStarsHtml(stars)}</div></div>`}
+function setRankMode(on){rankMode=!!on;try{localStorage.setItem("nightfallModeV1",rankMode?"rank":"free")}catch(e){}applyHeatMode();heatSwitching=true;try{initAudio();switchMusic("setup",true)}catch(e){}try{renderSetup()}finally{heatSwitching=false}}
+
+function renderRankSetup(c){
+  const r=rankInfo();
+  app.innerHTML=`
+  <div class="panel setup-wrap rank-setup">
+    <div class="setup-top rank-top">
+      <div class="setup-kicker">RANKED DUEL</div>
+      <div class="rank-hero"><img class="rank-hero-badge" src="assets/ui/rank/badge-${r.tier+1}.webp" alt="" draggable="false"><div class="rank-hero-name">${r.name}</div>${rankStarsHtml()}${rankData.streak>0?`<div class="rank-streak">連勝 ${rankData.streak}</div>`:""}</div>
+    </div>
+    <div class="setup-stage">
+      <section class="duel-side player">
+        <div class="side-inner">
+          <div class="side-head"><div class="side-label">你的英雄</div><div class="side-choice">${JOBS[c.playerJob].n}</div></div>
+          <div class="carousel" id="playerCarousel">
+            <div class="carousel-track">${c.renderCarousel('player',c.playerIndex,c.playerJob)}</div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" onclick="moveSetupCarousel('player',-1)" aria-label="上一個職業">‹</button>
+              <div class="carousel-dots">${c.dots(c.playerIndex)}</div>
+              <button class="carousel-arrow" onclick="moveSetupCarousel('player',1)" aria-label="下一個職業">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="vs-column"><div class="vs-badge">VS</div></div>
+      <section class="duel-side enemy mystery">
+        <div class="side-inner">
+          <div class="side-head"><div class="side-label">本場對手</div><div class="side-choice">？</div></div>
+          <div class="mystery-card"><div class="mystery-mark">？</div></div>
+        </div>
+      </section>
+    </div>
+    ${c.footerHtml}
+  </div>`;
+  requestAnimationFrame(()=>centerSetupCarousel('player',c.playerIndex));
+}
+function rankRibbonHtml(){
+  const r=rankInfo();
+  return `<div class="rank-ribbon" aria-label="排位賽"><div class="rank-ribbon-side"><img src="assets/ui/rank/badge-${r.tier+1}.webp" alt="" draggable="false"><span>${r.name}</span>${rankStarsHtml()}</div><div class="rank-ribbon-stake"><b>勝 +${rankData.streak>=2?2:1}</b><i></i><b>敗 −1</b></div></div>`;
+}
+function rankResultHtml(rk){
+  const b=rankInfo(rk.before),a=rankInfo(rk.after);
+  let stars;
+  if(a.top)stars=`<span class="rank-stars"><img class="${rk.delta>0?'star-new':''}" src="assets/ui/rank/star-on.webp" alt="" draggable="false"><b>×${a.inTier}</b></span>`;
+  else stars=`<span class="rank-stars">${[0,1,2].map(i=>{const on=i<a.inTier;const gained=on&&(rk.promoted||i>=b.inTier);const lost=!on&&rk.delta<0&&i<b.inTier;
+    return `<img class="${gained?'star-new':lost?'star-lost':''}" style="--d:${(gained?(rk.promoted?i:i-b.inTier):0)*.35+.5}s" src="assets/ui/rank/star-${on?'on':'off'}.webp" alt="" draggable="false">`}).join("")}</span>`;
+  return `<div class="rank-result ${rk.promoted?'promoted':''}"><div class="rank-card"><img class="rank-badge ${rk.promoted?'badge-promote':''}" src="assets/ui/rank/badge-${a.tier+1}.webp" alt="" draggable="false"><div class="rank-meta"><div class="rank-name">${a.name}</div>${stars}</div></div><div class="rank-delta ${rk.delta>0?'up':rk.delta<0?'down':''}">${rk.delta>0?'★ +'+rk.delta:rk.delta<0?'★ '+rk.delta:'★ 0'}${rk.promoted?' · 晉升':''}</div></div>`;
+}
+function applyRankResult(){
+  if(!S||S.rankDone||!S.rankRun)return null;S.rankDone=true;
+  const before=rankData.stars,bi=rankInfo(before);let delta=0;
+  if(S.w==="player"){rankData.streak++;delta=rankData.streak>=3?2:1}
+  else if(S.w==="ai"){rankData.streak=0;delta=-1}
+  let next=before+delta;if(delta<0)next=Math.max(next,bi.tier*3);
+  rankData.stars=Math.max(0,next);saveRank();
+  const ai=rankInfo();return{before,after:rankData.stars,delta,promoted:ai.tier>bi.tier,streak:rankData.streak}}
 let currentMusicMode="setup";
 let currentMusicKey=null;
 let musicFadeTimer=null;
@@ -112,14 +204,16 @@ function initAudio(){
       a.src=url;
       a.preload="auto";
       a.volume=getAudioVolume(k);
-      if(k==="setupBgm"||k==="bgm"||k==="resultBgm")a.loop=true;
+      if(k==="setupBgm"||k==="bgm"||k==="heatBgm"||k==="resultBgm")a.loop=true;
+      if(k==="heatBgm")a.addEventListener("error",()=>{heatBgmFailed=true;if(currentMusicKey==="heatBgm")try{switchMusic(currentMusicMode,false)}catch(e){}});
       AudioBank[k]=a;
       a.load();
     }catch(e){console.warn("Nightfall Duel audio init failed:",k,e)}
   });
 }
 function musicKey(mode){
-  return mode==="battle"?"bgm":mode==="result"?"resultBgm":"setupBgm";
+  const hot=heatActive()&&!heatBgmFailed; // 熱血風格：備戰大廳與戰鬥共用熱血曲（切換時立即換，開戰時不重播）；結算沿用一般結算曲
+  return mode==="battle"?(hot?"heatBgm":"bgm"):mode==="result"?"resultBgm":(hot?"heatBgm":"setupBgm");
 }
 function ensureBattleMusic(){switchMusic("battle",false)}
 function ensureSetupMusic(){switchMusic("setup",false)}
@@ -321,9 +415,10 @@ function cardTypeName(c){
 function summary(c){return c.s||""}
 
 function renderSetup(){
+  document.body.classList.remove("mode-rank");applyHeatMode();
   window.NDEnvironment?.leave();
   ensureAudioButton();
-  try{initAudio();ensureSetupMusic();}catch(e){}
+  try{initAudio();if(!heatSwitching)ensureSetupMusic();}catch(e){}
   const entries=Object.entries(JOBS);
   const playerIndex=Math.max(0,entries.findIndex(([k])=>k===playerJob));
   const aiIndex=Math.max(0,entries.findIndex(([k])=>k===aiJob));
@@ -342,6 +437,21 @@ function renderSetup(){
       <div class="carousel-hint">${selectedJob===k?'已選定':'選擇英雄'}</div>
     </button>`).join("");
   const dots=(selectedIndex)=>entries.map((_,i)=>`<i class="carousel-dot ${i===selectedIndex?'active':''}"></i>`).join("");
+  const footerHtml=`    <div class="setup-footer">
+      <button class="start" onclick="startGame()">${rankMode?"尋找對手　➜":"進入決鬥　➜"}</button>
+      <div class="heat-mode">
+        <div class="heat-switch" role="group" aria-label="對戰模式">
+          <button type="button" class="${rankMode?'':'on'}" aria-pressed="${!rankMode}" onclick="setRankMode(false)">自由</button>
+          <button type="button" class="${rankMode?'on':''}" aria-pressed="${rankMode}" onclick="setRankMode(true)">排位</button>
+        </div>
+      </div>
+      <a class="home-return" href="index.html">← 返回首頁</a>
+      <a class="story-entry" href="Nightfall-Duel-Story.html">故事模式 · 追尋鐘聲背後的名字 →</a>
+      ${window.NDSkins.controls(playerJob)}
+      <button class="audio-settings-btn" onclick="showAudioSettings()">🔊 音效設定</button>
+      <button class="rules-btn" onclick="showRules()">📖 遊戲規則與判定矩陣</button>
+    </div>`;
+  if(rankMode){renderRankSetup({entries,playerIndex,playerJob,role,renderCarousel,dots,footerHtml});return}
   app.innerHTML=`
   <div class="panel setup-wrap">
     <div class="setup-top">
@@ -395,23 +505,8 @@ function renderSetup(){
       </section>
     </div>
 
-    <div class="setup-divider"></div>
-    <div class="side-head"><div class="side-label">對手戰術</div><div class="side-choice">${AIS[aiType]}</div></div>
-    <div class="ai-mind">${Object.entries(AIS).map(([k,n])=>`
-      <button class="ai-choice ${aiType===k?'selected':''}" onclick="aiType='${k}';renderSetup()">
-        <div class="ai-name">${n}</div>
-        <div class="ai-desc">${k==='conservative'?'重視防禦與資源。':k==='aggressive'?'偏好傷害與收尾。':'依血量、上一回合與局勢調整。'}</div>
-      </button>`).join("")}</div>
-    <div class="ai-more">四位英雄・三種戰術・一場決鬥</div>
 
-    <div class="setup-footer">
-      <button class="start" onclick="startGame()">進入決鬥　➜</button>
-      <a class="home-return" href="index.html">← 返回首頁</a>
-      <a class="story-entry" href="Nightfall-Duel-Story.html">故事模式 · 追尋鐘聲背後的名字 →</a>
-      ${window.NDSkins.controls(playerJob)}
-      <button class="audio-settings-btn" onclick="showAudioSettings()">🔊 音效設定</button>
-      <button class="rules-btn" onclick="showRules()">📖 遊戲規則與判定矩陣</button>
-    </div>
+    ${footerHtml}
   </div>`;
   requestAnimationFrame(()=>{
     centerSetupCarousel('player',playerIndex);
@@ -593,7 +688,7 @@ function arena(){
 function renderGame(){
   if(S.end){renderResult();return}
   const p=S.p;
-  app.innerHTML=`${S.storyBattle?`<div class="story-battle-banner"><button onclick="leaveStoryBattle()">返回場景</button><strong>${S.storyBattle.name}</strong> · ${S.storyBattle.description}</div>`:''}<div class="topbar"><div><div class="kicker">NIGHTFALL DUEL</div><div class="round">ROUND ${Math.min(S.round,50)} / 50</div></div><div class="phase"><span class="phase-dot"></span>${S.phase==="player"?"YOUR MOVE":S.phase==="reveal"?"SHOWDOWN":"OPPONENT"}</div></div>${arena()}<nav class="battle-dock" aria-label="遊戲選單"><button onclick="showBattleJournal()">☷ <span>戰況</span></button><span class="battle-state">${S.phase==="player"?"點牌查看並出牌，或拖至你的放置區":S.phase==="reveal"?"揭曉命運":S.phase==="result"?"戰鬥結算":"對手行動中"}</span><button onclick="showRules()">◇ <span>規則</span></button><button onclick="showAudioSettings()">♫ <span>音效</span></button>${!S.storyBattle?'<button type="button" class="duel-leave nd-control" onclick="leaveDuel()" aria-label="離開對戰，返回首頁" title="離開對戰，返回首頁">← <span>離開</span></button>':''}</nav>`;
+  app.innerHTML=`${S.storyBattle?`<div class="story-battle-banner"><button onclick="leaveStoryBattle()">返回場景</button><strong>${S.storyBattle.name}</strong> · ${S.storyBattle.description}</div>`:''}${S.rankRun?rankRibbonHtml():""}<div class="topbar"><div><div class="kicker">NIGHTFALL DUEL</div><div class="round">ROUND ${Math.min(S.round,50)} / 50</div></div><div class="phase"><span class="phase-dot"></span>${S.phase==="player"?"YOUR MOVE":S.phase==="reveal"?"SHOWDOWN":"OPPONENT"}</div></div>${arena()}<nav class="battle-dock" aria-label="遊戲選單"><button onclick="showBattleJournal()">☷ <span>戰況</span></button><span class="battle-state">${S.phase==="player"?"點牌查看並出牌，或拖至你的放置區":S.phase==="reveal"?"揭曉命運":S.phase==="result"?"戰鬥結算":"對手行動中"}</span><button onclick="showRules()">◇ <span>規則</span></button><button onclick="showAudioSettings()">♫ <span>音效</span></button>${!S.storyBattle?'<button type="button" class="duel-leave nd-control" onclick="leaveDuel()" aria-label="離開對戰，返回首頁" title="離開對戰，返回首頁">← <span>離開</span></button>':''}</nav>`;
   window.NDEnvironment?.sync(S);
 }
 function leaveDuel(){
@@ -643,11 +738,14 @@ function renderResult(){
   if(S.storyBattle){renderStoryResult();return;}
   const title=S.w==="player"?"VICTORY":S.w==="ai"?"DEFEAT":"DRAW";
   const icon=S.w==="player"?"🏆":S.w==="ai"?"💀":"⚖️";
+  const rk=applyRankResult();
+  const rankHtml=rk?rankResultHtml(rk):"";
   app.innerHTML=`<div class="panel result-screen" data-outcome="${S.w}">
     <div class="kicker">NIGHTFALL DUEL · ${S.round} ROUNDS</div>
     <div class="result-icon">${icon}</div>
     <div class="result-title">${title}</div>
     <div class="result-sub">${S.w==="player"?"The night belongs to you.":S.w==="ai"?"The night wins.":"Neither fighter falls."}</div>
+    ${rankHtml}
     <div class="result-stats">
       <div class="stat">你 HP ${Math.max(0,S.p.hp)}</div><div class="stat">AI HP ${Math.max(0,S.a.hp)}</div>
       <div class="stat">回合 ${Math.min(S.round,50)}</div>
@@ -657,8 +755,8 @@ function renderResult(){
       <textarea class="battle-log-text" readonly onclick="this.select()">${getBattleLogText().replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}</textarea>
       <button id="copyBattleLogBtn" class="copy-log-btn" onclick="copyBattleLog()">複製戰績</button>
     </details>
-    <button class="start" onclick="startGame()">↻ 再戰一次</button>
-    <button class="secondary" onclick="S=null;try{ensureSetupMusic();}catch(e){};renderSetup()">返回備戰大廳</button>
+    ${S.rankRun?"":`<button class="start" onclick="startGame()">↻ 再戰一次</button>`}
+    <button class="${S.rankRun?"start":"secondary"}" onclick="S=null;try{ensureSetupMusic();}catch(e){};renderSetup()">返回備戰大廳</button>
     <button class="audio-settings-btn" onclick="showAudioSettings()">🔊 音效設定</button>
   </div>`;
 }
@@ -804,7 +902,7 @@ function showAudioSettings(){
   el.id="audioSettingsOverlay";el.className="audio-overlay";
   el.innerHTML=`<div class="audio-modal" role="dialog" aria-modal="true" aria-label="音效設定">
     <div class="audio-head"><div><div class="audio-title">🔊 音效設定</div><div class="audio-sub">分開調整每一層音樂與戰鬥音效。調整會立即生效並自動保存。</div></div><button class="audio-close" type="button">✕</button></div>
-    <div class="audio-group"><div class="audio-group-title">MUSIC</div>${makeRows(["setupBgm","bgm","resultBgm"])}</div>
+    <div class="audio-group"><div class="audio-group-title">MUSIC</div>${makeRows(["setupBgm","bgm","heatBgm","resultBgm"])}<div class="audio-credit">熱血戰鬥音樂：Battle March by PlayOnLoop.com（CC BY 3.0）</div></div>
     <div class="audio-group"><div class="audio-group-title">SOUND EFFECTS</div>${makeRows(["cardPickup","cardPlace","cardFlip","cardInvalid","hit","shield","lock","burn","counter","coinFlip","victory","defeat"])}</div>
     <div class="audio-actions"><button class="audio-reset" type="button">↺ 恢復預設音量</button><button class="audio-mute" type="button">${audioEnabled?"🔇 全部靜音":"🔊 開啟全部音效"}</button></div>
   </div>`;
@@ -814,7 +912,7 @@ function showAudioSettings(){
   el.querySelectorAll("[data-audio-key]").forEach(input=>input.addEventListener("input",e=>{
     const k=e.currentTarget.dataset.audioKey;setAudioVolume(k,e.currentTarget.value);
     const out=el.querySelector(`[data-audio-value="${k}"]`);if(out)out.textContent=Math.round(getAudioVolume(k)*100)+"%";
-    if(k==="setupBgm"||k==="bgm"||k==="resultBgm"){const a=AudioBank[k];if(a&&currentMusicKey===k)try{a.volume=getAudioVolume(k)}catch(err){}}
+    if(k==="setupBgm"||k==="bgm"||k==="heatBgm"||k==="resultBgm"){const a=AudioBank[k];if(a&&currentMusicKey===k)try{a.volume=getAudioVolume(k)}catch(err){}}
   }));
   el.querySelector(".audio-reset").onclick=()=>{resetAudioVolumes();renderAudioSettingsInPlace(el)};
   el.querySelector(".audio-mute").onclick=()=>{toggleAudio();renderAudioSettingsInPlace(el)};
@@ -859,11 +957,15 @@ function renderStoryResult(){
  app.innerHTML=`<section class="panel result-screen" data-outcome="${ok?'story-success':'story-failure'}"><div class="kicker">故事決鬥 · ${S.storyBattle.name}</div><h1>${ok?(S.storyBattle.mode==='surviveBoth50'?'平手 · 牽制完成':'戰勝對手'):'未達成關卡條件'}</h1><p>${ok?'接續故事，查看這場對戰的後果。':'任務目標：'+S.storyBattle.description}</p><p>回合 ${S.round} · 你 HP ${Math.max(0,S.p.hp)} / 對手 HP ${Math.max(0,S.a.hp)}</p>${ok?'<button class="start" onclick="returnFromStoryBattle(true)">繼續故事</button>':'<button class="start" onclick="startGame()">重新對戰</button><button onclick="returnFromStoryBattle(false)">返回場景</button>'}</section>`;
 }
 function startGame(){
-  NDCombatFX.cancel();
+  NDCombatFX.cancel();applyHeatMode();
   try{initAudio();switchMusic("battle",true);}catch(e){}
   document.querySelectorAll(".coin-flip-overlay").forEach(el=>el.remove());
   assassinCoinQueue=Promise.resolve();
+if(rankMode&&!storyBattleContext){const ks=Object.keys(JOBS);aiJob=ks[Math.floor(Math.random()*ks.length)];aiType=RANK_AI[rankInfo().tier]}
+if(!rankMode&&!storyBattleContext){aiType=JOB_AI[aiJob]||"strategic"}
 S={session:++gameSessionId,round:1,p:makePlayer(playerJob),a:makePlayer(aiJob),phase:"player",pending:null,reveal:false,revealFlipped:false,revealShowFront:false,revealStage:null,end:false,w:null,log:[],battleLog:[],lastResult:null,roundEvents:{player:[],ai:[]},assassinCoinResults:null};
+  S.rankRun=!!(rankMode&&!storyBattleContext);document.body.classList.toggle("mode-rank",S.rankRun);
+
   if(storyBattleContext){S.storyBattle={...storyBattleContext.config};if(S.storyBattle.mode==='surviveBoth50'){S.p.hp=S.p.maxHp=70;S.a.hp=S.a.maxHp=70;}}
   S.p.skin=window.NDSkins.equipped(playerJob);S.a.skin="base";
   draw(S.p,3);draw(S.a,3);
@@ -1895,7 +1997,7 @@ window.NDMusicHold=function(on){
       ndMusicHeld=true;
       if(ndMusicFadeFrame){cancelAnimationFrame(ndMusicFadeFrame);ndMusicFadeFrame=0;}
       if(musicFadeTimer){clearInterval(musicFadeTimer);musicFadeTimer=null;}
-      for(const k of ["setupBgm","bgm","resultBgm"]){const a=AudioBank[k];if(a&&!a.paused)try{a.pause()}catch(e){}}
+      for(const k of ["setupBgm","bgm","heatBgm","resultBgm"]){const a=AudioBank[k];if(a&&!a.paused)try{a.pause()}catch(e){}}
       ND_BGM_FALLBACK.stop();
     }else if(ndMusicHeld){
       ndMusicHeld=false;

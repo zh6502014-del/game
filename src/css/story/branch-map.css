@@ -1,0 +1,109 @@
+/* STORY-BRANCH-MAP-089: chapter overview as one branch map (origin lanes → 磷與養父 → shared line → two coin endings).
+   Connectors are an SVG layer drawn by story-campaign.js (drawBranchLinks) from the laid-out nodes. */
+.bmap-links{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:0}
+.bmap-links path{fill:none;stroke:#8a7650;stroke-width:1.5;stroke-dasharray:4 6;opacity:.55}
+.bmap-links path[data-state="open"]{stroke:var(--nd-gold-hi);stroke-dasharray:6 6;opacity:.95;animation:bmap-flow 1.4s linear infinite}
+.bmap-links path[data-state="done"]{stroke:var(--nd-gold);stroke-dasharray:none;stroke-width:2;opacity:.9}
+@keyframes bmap-flow{to{stroke-dashoffset:-12}}
+/* Node: a seal (id / ✓) beside the title. */
+.story-shell .bmap .bmap-node{position:relative;z-index:1;display:flex;align-items:center;gap:var(--nd-sp-12);min-height:76px;padding:var(--nd-sp-12) var(--nd-sp-14);border:1px solid #9c84546e;border-radius:var(--nd-r-4);background:var(--visual-enamel);box-shadow:0 10px 24px var(--nd-ink-40),inset 0 1px var(--nd-gold-wash);color:var(--visual-text);text-align:left;opacity:1}
+.story-shell .bmap .bmap-node:not(:disabled):hover{background:radial-gradient(ellipse at top left,#49634766,transparent 75%),#152d23;border-color:var(--nd-gold)}
+.story-shell .bmap .bmap-node[data-state="open"]{border-color:var(--nd-gold);box-shadow:0 0 0 1px #e5c47b33,0 0 22px #e5c47b2e,0 10px 24px var(--nd-ink-40)}
+.story-shell .bmap .bmap-node:disabled{border-style:dashed;border-color:#6b624899;background:#0b1c17;box-shadow:none;opacity:1}
+.bmap-node:disabled .bmap-copy>:not(.bmap-need){opacity:.6}
+.bmap-seal{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:var(--nd-r-round);border:1px solid var(--nd-gold-dim);background:#0a1a16;color:var(--visual-gold-light);font:600 var(--nd-fs-12)/1 var(--nd-font);font-style:normal;letter-spacing:.02em}
+.bmap-node[data-state="done"] .bmap-seal{background:radial-gradient(circle at 35% 30%,#f5dca1,#b88b33 72%);border-color:#f0d593;color:#2c1e06}
+.bmap-node[data-state="open"] .bmap-seal{border-color:var(--nd-gold-hi);box-shadow:0 0 0 3px #e5c47b22;animation:bmap-pulse 2.2s ease-in-out infinite}
+.bmap-node:disabled .bmap-seal{border-style:dashed;color:var(--visual-muted);opacity:.7}
+@keyframes bmap-pulse{50%{box-shadow:0 0 0 6px #e5c47b10,0 0 16px #e5c47b55}}
+.bmap-copy{display:grid;gap:var(--nd-sp-3);min-width:0}
+.bmap-meta{color:var(--visual-gold-light);font-size:var(--nd-fs-11);letter-spacing:.06em}
+.bmap-node strong{color:var(--visual-text);font-size:var(--nd-fs-16);font-weight:600;line-height:1.35}
+.bmap-node small{color:var(--visual-muted);font-size:var(--nd-fs-12)}
+/* H2 endings: same footprint as chapter nodes, on the row under 硬幣. */
+.story-shell .bmap .bmap-ending{position:relative;z-index:1;display:flex;align-items:center;gap:var(--nd-sp-12);min-height:76px;padding:var(--nd-sp-12) var(--nd-sp-14);border:1px dashed #6b624899;border-radius:var(--nd-r-4);background:#0b1c17;color:var(--visual-text);text-align:left}
+.bmap-ending .bmap-copy>*{opacity:.6}
+.bmap-ending .bmap-seal{border-style:dashed;color:var(--visual-muted);font-size:var(--nd-fs-16)}
+.story-shell .bmap .bmap-ending[data-seen="true"]{border:1px solid var(--nd-gold);background:var(--visual-enamel);box-shadow:0 10px 24px var(--nd-ink-40),inset 0 1px var(--nd-gold-wash)}
+.bmap-ending[data-seen="true"] .bmap-copy>*{opacity:1}
+.bmap-ending[data-seen="true"] .bmap-seal{border:1px solid #f0d593;background:radial-gradient(circle at 35% 30%,#f5dca1,#b88b33 72%);color:#2c1e06;box-shadow:0 0 8px #e4c78066}
+.bmap-ending strong{color:var(--visual-text);font-size:var(--nd-fs-16);font-weight:600;line-height:1.35}
+.bmap-ending small{color:var(--visual-muted);font-size:var(--nd-fs-12)}
+@media (max-width:480px){
+ .story-shell .bmap .bmap-node,.story-shell .bmap .bmap-ending{flex-direction:column;align-items:flex-start;gap:var(--nd-sp-8);padding:var(--nd-sp-10)}
+ .bmap-seal{width:32px;height:32px}
+ .bmap-node strong{font-size:var(--nd-fs-15)}
+}
+@media (prefers-reduced-motion:reduce){.bmap-links path,.bmap-node .bmap-seal{animation:none!important}}
+/* STORY-BRANCH-MAP-089 stage 1: chapter-recorded reveal. Delays are offset by --reveal-late / inline animation-delay
+   so a redraw mid-animation continues instead of restarting. */
+.bmap-links path[data-reveal="base"]{animation:bmap-base-in 3.2s linear both}
+.bmap-links path[data-state="open"][data-reveal="base"]{animation:bmap-base-in 3.2s linear both,bmap-flow 1.4s linear infinite}
+.bmap-links path[data-reveal="glow"]{fill:none;stroke:var(--nd-gold-pale);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;filter:drop-shadow(0 0 6px #e5c47bcc);animation:bmap-draw 3.2s ease-out both}
+@keyframes bmap-base-in{0%,55%{opacity:0}75%,100%{opacity:.95}}
+@keyframes bmap-draw{0%,15%{stroke-dashoffset:1;opacity:1}55%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.story-shell .bmap .bmap-just-done .bmap-seal{animation:bmap-seal-stamp 3.2s ease-out both;animation-delay:var(--reveal-late,0ms)}
+@keyframes bmap-seal-stamp{0%{transform:scale(1.5);box-shadow:0 0 0 0 #f5dca1}10%{transform:scale(.92)}16%{transform:scale(1);box-shadow:0 0 0 10px #f5dca100}100%{transform:scale(1)}}
+.story-shell .bmap .bmap-just-opened{animation:bmap-unlock 3.2s ease-out both;animation-delay:var(--reveal-late,0ms)}
+@keyframes bmap-unlock{0%,50%{transform:scale(.96);filter:brightness(.6)}62%{transform:scale(1.03);filter:brightness(1.35);box-shadow:0 0 0 2px #e5c47b88,0 0 34px #e5c47b77}100%{transform:scale(1);filter:none}}
+@media (prefers-reduced-motion:reduce){.bmap-links path[data-reveal="glow"]{display:none}.bmap-links path[data-reveal="base"],.bmap-just-done .bmap-seal,.bmap .bmap-just-opened{animation:none!important}}
+/* STORY-BRANCH-MAP-089 stage 2: lock requirements. */
+.bmap-need{margin-top:var(--nd-sp-4);color:#c9b48a;font-size:var(--nd-fs-11);line-height:1.4}
+.bmap-node:disabled .bmap-copy .bmap-need{opacity:1}
+.bmap-keys{display:flex;gap:var(--nd-sp-6)}
+.bmap-keys i{display:grid;place-items:center;width:22px;height:22px;border-radius:var(--nd-r-round);border:1px dashed #6b6248;color:var(--visual-muted);font:600 var(--nd-fs-11)/1 var(--nd-font);font-style:normal}
+.bmap-keys i[data-lit="true"]{border:1px solid #f0d593;background:radial-gradient(circle at 35% 30%,#f5dca1,#b88b33 72%);color:#2c1e06;box-shadow:0 0 6px #e5c47b66}
+/* STORY-BRANCH-MAP-089 stage 4: hero avatar at the head of each origin lane (equipped look). */
+.bmap-avatar{position:relative;flex:none;width:52px;height:52px;border-radius:var(--nd-r-round);overflow:hidden;border:1px solid var(--nd-gold-dim);background:#0a1a16;box-shadow:0 0 0 3px #0a1a16,0 0 0 4px #9c845466}
+.bmap-avatar img{position:absolute;max-width:none;height:auto}
+.bmap-avatar[data-finished="true"]{border-color:#f0d593;box-shadow:0 0 0 3px #0a1a16,0 0 0 4px var(--nd-gold),0 0 14px #e5c47b55}
+@media (max-width:480px){.bmap-avatar{width:40px;height:40px}}
+/* STORY-BRANCH-MAP-089 stage 5: chapter contents as an icon row. */
+/* STORY-BRANCH-MAP-089 stage 3: chapter card dialog. */
+dialog.story-log-dialog.bmap-detail-dialog{width:min(560px,calc(100vw - 32px))}
+.bmap-detail{display:grid;gap:var(--nd-sp-10)}
+.bmap-detail-art{margin:0 0 var(--nd-sp-6);aspect-ratio:16/9;overflow:hidden;border:1px solid var(--nd-gold-dim);background:#0a1a16}
+.bmap-detail-art img{display:block;width:100%;height:100%;object-fit:cover}
+.story-log-dialog .bmap-detail-meta{margin:0;color:var(--visual-gold-light);font-size:var(--nd-fs-13);letter-spacing:.08em;line-height:1.4}
+.bmap-detail h2{margin:0;color:var(--visual-text);font-size:var(--nd-fs-24);font-weight:600}
+.story-log-dialog .bmap-detail-intro{margin:var(--nd-sp-4) 0;color:var(--visual-muted);line-height:1.9}
+.bmap-detail-actions{display:flex;justify-content:flex-end}
+.story-log-dialog .bmap-detail-actions button{margin:0;min-width:140px;border-color:var(--nd-gold);color:var(--visual-gold-light)}
+dialog.story-log-dialog.bmap-detail-dialog>[data-close]{position:absolute;top:calc(var(--sf-w,12px) + 18px);right:calc(var(--sf-w,12px) + 18px);float:none;z-index:3;min-width:0;margin:0;padding:var(--nd-sp-6) var(--nd-sp-14);min-height:36px;background:#0a1a16e6}
+/* Lighter seals: an outlined ring instead of a filled gold coin (user: the node seal read too heavy). */
+.bmap-seal{width:30px;height:30px;border-color:#9c845488;background:transparent;font-size:var(--nd-fs-11);font-weight:500;color:var(--visual-muted)}
+.bmap-node[data-state="done"] .bmap-seal{background:transparent;border-color:var(--nd-gold-dim);color:var(--visual-gold-light);box-shadow:none}
+.bmap-node[data-state="open"] .bmap-seal{color:var(--visual-gold-light)}
+.bmap-ending .bmap-seal{font-size:var(--nd-fs-14)}
+.bmap-ending[data-seen="true"] .bmap-seal{background:transparent;border-color:var(--nd-gold-dim);color:var(--visual-gold-light);box-shadow:none}
+@media (max-width:480px){.bmap-seal{width:28px;height:28px}}
+/* Left → right flowchart (user: horizontal, scrolls sideways). Columns: lane heads | 3 origin chapters | 納爾瓦 head | P1 P3 |
+   shared line | endings. Rows 1–4 are the origin lanes; the converged line runs on rows 2–3. */
+.story-shell .bmap-scroll{position:relative;margin:var(--nd-sp-8) calc(-1 * var(--nd-sp-8)) 0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--nd-gold-dim) transparent;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.story-shell .bmap-scroll.is-dragging{cursor:grabbing;user-select:none}
+.story-shell .bmap-scroll:focus-visible{outline:1px solid var(--nd-gold-dim);outline-offset:2px}
+.story-shell .bmap{--bmap-col:200px;--bmap-head:96px;position:relative;display:grid;grid-template-rows:repeat(4,minmax(96px,auto));column-gap:56px;row-gap:var(--nd-sp-16);align-items:center;width:max-content;margin:0;padding:var(--nd-sp-24) 32px var(--nd-sp-24)}
+.story-shell .bmap>.bmap-node,.story-shell .bmap>.bmap-ending{align-self:center}
+.bmap-lane-head{position:relative;z-index:2;display:grid;justify-self:center;justify-items:center;gap:var(--nd-sp-4);text-align:center}
+.bmap-lane-head b{color:var(--visual-text);font-size:var(--nd-fs-15);font-weight:600;white-space:nowrap}
+.bmap-lane-head small{color:var(--visual-muted);font-size:var(--nd-fs-11)}
+@media (max-width:480px){.story-shell .bmap{--bmap-col:164px;--bmap-head:76px;column-gap:36px;padding:var(--nd-sp-16) 20px}}
+/* Connectors are continuous strokes (user: segments must join) — state is carried by colour and weight, not dashes. */
+.bmap-links path[data-state]{stroke-dasharray:none;stroke-linecap:round}
+.bmap-links path[data-state="locked"]{stroke:#6b6248;stroke-width:1.5;opacity:.7}
+.bmap-links path[data-state="open"]{stroke:var(--nd-gold-hi);stroke-width:2;opacity:.95;animation:bmap-breathe 2.4s ease-in-out infinite}
+.bmap-links path[data-state="open"][data-reveal="base"]{animation:bmap-base-in 3.2s linear both}
+@keyframes bmap-breathe{50%{opacity:.55}}
+
+/* Party head (劍客・磷・坦克): three overlapping avatars; connectors attach to the group. */
+.bmap-avatars{position:relative;display:flex;align-items:center}
+.bmap-avatars .bmap-avatar+.bmap-avatar{margin-left:-16px}
+.bmap-avatars .bmap-avatar:nth-child(2){z-index:3}
+.bmap-avatars .bmap-avatar:nth-child(1){z-index:1}
+.bmap-avatars .bmap-avatar:nth-child(3){z-index:2}
+@media (max-width:480px){.bmap-avatars .bmap-avatar+.bmap-avatar{margin-left:-12px}}
+
+/* Completion count lives in the title block (no separate framed box on the right). */
+.story-shell .story-intro p.story-progress{display:flex;align-items:baseline;gap:var(--nd-sp-8);margin:var(--nd-sp-12) 0 0;color:var(--visual-muted);font-size:var(--nd-fs-13)}
+.story-shell .story-intro p.story-progress strong{color:var(--visual-gold-light);font-family:var(--nd-font);font-size:var(--nd-fs-20);font-weight:500}
+.story-shell .story-intro p.story-progress small{font-size:var(--nd-fs-13);color:var(--visual-muted)}

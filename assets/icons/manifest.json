@@ -174,5 +174,29 @@
   "settings": {
     "label": "設定",
     "file": "settings.svg"
+  },
+  "inspect": {
+    "label": "調查",
+    "file": "inspect.svg"
+  },
+  "search": {
+    "label": "尋物",
+    "file": "search.svg"
+  },
+  "puzzle": {
+    "label": "拼圖",
+    "file": "puzzle.svg"
+  },
+  "route": {
+    "label": "路線",
+    "file": "route.svg"
+  },
+  "dialogue": {
+    "label": "劇情",
+    "file": "dialogue.svg"
+  },
+  "coin": {
+    "label": "擲硬幣",
+    "file": "coin.svg"
   }
 }

@@ -1,0 +1,38 @@
+{
+ "hero": {
+  "path": "assets/frames/hot/hero.webp",
+  "width": 768,
+  "height": 737,
+  "bytes": 270158,
+  "slice": [
+   123,
+   120,
+   127,
+   119
+  ]
+ },
+ "panel": {
+  "path": "assets/frames/hot/panel.webp",
+  "width": 768,
+  "height": 750,
+  "bytes": 221644,
+  "slice": [
+   115,
+   115,
+   115,
+   115
+  ]
+ },
+ "thin": {
+  "path": "assets/frames/hot/thin.webp",
+  "width": 768,
+  "height": 766,
+  "bytes": 170524,
+  "slice": [
+   115,
+   115,
+   115,
+   115
+  ]
+ }
+}

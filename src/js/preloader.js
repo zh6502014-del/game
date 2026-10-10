@@ -190,3 +190,10 @@
   }
   boot();
 })();
+
+/* Game art is not offered for copy/save: no context menu on images, no dragging them out. Text fields keep their menu. */
+(function(){
+  const art='img,picture,canvas,video,svg';
+  document.addEventListener('contextmenu',e=>{const t=e.target;if(t&&t.closest&&t.closest('input,textarea,[contenteditable="true"]'))return;if(t&&t.closest&&t.closest(art))e.preventDefault();},true);
+  document.addEventListener('dragstart',e=>{const t=e.target;if(t&&t.closest&&t.closest(art))e.preventDefault();},true);
+})();

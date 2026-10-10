@@ -2517,6 +2517,10 @@ body[data-environment] .app{position:relative;z-index:2}
 }
 
 /* ==== base/global.css ==== */
+/* Game UI: no text selection anywhere (rapid taps in minigames must not select text). Form fields stay editable. */
+:where(html,body,*){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+:where(img,picture,canvas,video){-webkit-user-drag:none;user-drag:none}
+:where(input,textarea,[contenteditable="true"]){-webkit-user-select:text;user-select:text}
 /* Drag mode: make the action visually obvious without dimming the arena. */
 body.nd-dragging-mode .hand{scroll-snap-type:none}
 body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){opacity:.62!important;transform:scale(.985)!important}

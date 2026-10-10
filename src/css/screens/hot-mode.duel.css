@@ -1,0 +1,96 @@
+/* HOT-MODE-090 — 熱血風格只換美術素材，不用 CSS 改色。以 body.theme-hot 啟用，由 game.js 的 applyHeatMode() 控制；故事戰鬥不啟用。
+   素材：專用九宮格框（切線依實際角飾量測，單位為 768px 寬原圖像素，見 assets/frames/hot/manifest.json）、火焰卡背（game-art.js 選圖）、餘燼層。 */
+.setup-footer .heat-mode{grid-column:1/-1;grid-row:auto;display:grid;justify-items:center;gap:var(--nd-sp-6)}
+.heat-switch{display:inline-flex;gap:var(--nd-sp-4)}
+.heat-switch button{background:linear-gradient(180deg,#14261f,#0a1613);min-width:92px;padding:var(--nd-sp-8) var(--nd-sp-14);color:#b9b49f;font:inherit;font-size:var(--nd-fs-13);letter-spacing:2px;cursor:pointer}
+.heat-switch button:hover{color:#f0e2bd;background:linear-gradient(180deg,#1a3128,#0d1c18)}
+.heat-switch button.on{color:#f0e2bd;box-shadow:inset 0 -3px var(--nd-gold)}
+.heat-switch button:focus-visible{outline:2px solid var(--nd-gold-hi);outline-offset:2px}
+.heat-icon{width:22px;height:22px;vertical-align:-6px;margin-right:2px;object-fit:contain;pointer-events:none}
+.audio-credit{padding:var(--nd-sp-6) var(--nd-sp-14) var(--nd-sp-10);font-size:var(--nd-fs-10);color:#8d8f80;letter-spacing:.5px}
+
+body.theme-hot{
+  --frame-hero:url('../../../assets/frames/hot/hero.webp');--frame-panel:url('../../../assets/frames/hot/panel.webp');--frame-thin:url('../../../assets/frames/hot/thin.webp');
+  --frame-hero-slice:123 120 127 119;--frame-panel-slice:115 115 115 115;--frame-thin-slice:115 115 115 115;
+}
+/* 餘燼層只在對戰畫面（出現 .duel-screen）顯示，備戰大廳不顯示。 */
+#nd-hot-embers{display:none}
+body.theme-hot:has(.duel-screen) #nd-hot-embers{display:block;position:fixed;inset:0;z-index:1;pointer-events:none;background:url('../../../assets/fx/hot-embers.webp') center/cover no-repeat;opacity:.92;animation:ndEmberPulse 7s ease-in-out infinite}
+@keyframes ndEmberPulse{0%,100%{opacity:.78}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){#nd-hot-embers{animation:none!important}}
+
+/* RANK-091 */
+.setup-footer .heat-mode{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.rank-panel{display:flex;justify-content:center;padding:6px 0 10px}
+.rank-card{display:flex;align-items:center;gap:14px}
+.rank-badge{width:72px;height:72px;object-fit:contain}
+.rank-meta{display:flex;flex-direction:column;gap:6px}
+.rank-name{font-size:20px;letter-spacing:.12em;color:var(--nd-gold,#d8b865)}
+.rank-stars{display:inline-flex;align-items:center;gap:4px}
+.rank-stars img{width:24px;height:24px}
+.rank-stars b{color:var(--nd-gold,#d8b865);font-size:16px}
+.rank-result{display:flex;flex-direction:column;align-items:center;gap:6px;margin:10px 0}
+.rank-delta{font-size:18px;letter-spacing:.1em;color:#d8b865}
+.rank-delta.up{color:#f0d48a}.rank-delta.down{color:#9aa79a}
+
+/* RANK-091 · 排位專屬介面 */
+.rank-setup .rank-top{display:grid;justify-items:center;gap:var(--nd-sp-8,8px)}
+.rank-hero{display:grid;justify-items:center;gap:8px;padding:6px 0 4px}
+.rank-hero-badge{width:148px;height:148px;object-fit:contain;filter:drop-shadow(0 8px 18px #000a)}
+.rank-hero-name{font-size:26px;letter-spacing:.2em;color:#e8e4d4}
+.rank-hero .rank-stars img{width:34px;height:34px}
+.rank-streak{padding:2px 14px;border:1px solid #9aa79a88;color:#d9dccf;letter-spacing:.2em;font-size:13px}
+.rank-setup .duel-side.mystery .side-inner{display:grid;gap:12px;align-content:start}
+.mystery-card{aspect-ratio:2/3;max-width:260px;width:100%;margin:0 auto;display:grid;place-items:center;border:1px solid #9aa79a55;background:linear-gradient(180deg,#0c1518,#050a0c);box-shadow:inset 0 0 40px #000c}
+.mystery-mark{font-size:84px;color:#9aa79a;opacity:.5;text-shadow:0 0 24px #9aa79a66}
+.rank-ribbon{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 16px;margin:0 auto 6px;max-width:960px;border-block:1px solid #b8c2b866;background:linear-gradient(90deg,#0a1214,#14202099,#0a1214);color:#e8e4d4}
+.rank-ribbon-side{display:flex;align-items:center;gap:8px;letter-spacing:.14em;font-size:14px}
+.rank-ribbon-side img:first-child{width:30px;height:30px}
+.rank-ribbon-side.opp img{width:30px;height:30px}
+.rank-ribbon-side .rank-stars img{width:16px;height:16px}
+.rank-ribbon-stake{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.2em}
+.rank-ribbon-stake b:first-child{color:#f0d48a}.rank-ribbon-stake b:last-child{color:#9aa79a}
+.rank-ribbon-stake i{width:1px;height:14px;background:#b8c2b8aa}
+.mode-rank .topbar .kicker{color:#b8c2b8}
+.rank-result .star-new{opacity:0;animation:rankStarIn .6s var(--d,.5s) cubic-bezier(.2,1.4,.4,1) forwards}
+.rank-result .star-lost{animation:rankStarOut .8s .5s ease-in forwards}
+.rank-result .badge-promote{animation:rankPromote 1.2s .3s ease-out both}
+.rank-result .rank-delta{opacity:0;animation:rankFade .5s 1s forwards}
+.rank-result .rank-stars img{width:30px;height:30px}
+.rank-result .rank-badge{width:92px;height:92px}
+@keyframes rankStarIn{0%{opacity:0;transform:scale(2.4) rotate(-40deg)}100%{opacity:1;transform:none}}
+@keyframes rankStarOut{0%{filter:none}50%{filter:brightness(2.2);transform:scale(1.3)}100%{filter:grayscale(1);transform:none}}
+@keyframes rankPromote{0%{transform:scale(.6);filter:brightness(3)}60%{transform:scale(1.25);filter:brightness(1.6) drop-shadow(0 0 22px #f0d48a)}100%{transform:none;filter:none}}
+@keyframes rankFade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.rank-result .star-new,.rank-result .star-lost,.rank-result .badge-promote,.rank-result .rank-delta{animation:none;opacity:1}}
+@media (max-width:640px){.rank-ribbon{flex-wrap:wrap;justify-content:center}.rank-hero-badge{width:110px;height:110px}}
+
+/* 賽事帶：固定在左上角，不壓到頂部回合標籤與對手手牌 */
+.rank-ribbon{position:fixed;top:14px;left:14px;z-index:30;display:grid;gap:6px;justify-items:start;margin:0;padding:8px 14px 8px 10px;max-width:none;border:1px solid #b8c2b855;border-block-width:1px;background:linear-gradient(180deg,#0c1618e6,#070f11e6);pointer-events:none}
+.rank-ribbon-stake{font-size:12px;gap:8px;padding-left:2px}
+@media (max-width:640px){.rank-ribbon{top:8px;left:8px;transform:scale(.85);transform-origin:top left}}
+
+/* 戰鬥面板的職業名稱縮小 */
+#app .duel-screen.nd-stage>.duel-side .duel-name{font-size:calc(26 * var(--u))!important;letter-spacing:.14em!important}
+
+/* ROUND 標籤：移到對手手牌右側，不再蓋住手牌 */
+body:has(.duel-screen.nd-stage) #app>.topbar{left:calc(50% + 150 * var(--u))!important;transform:none!important}
+
+/* ROUND 併入中央 VS 圓章：顯示在圓章正下方，原頂部標籤隱藏 */
+body:has(.duel-screen.nd-stage) #app>.topbar{display:none!important}
+#app .duel-screen.nd-stage .retro-center{position:relative!important;overflow:visible!important}
+#app .duel-screen.nd-stage .retro-center .round-mini{display:flex!important;align-items:baseline;gap:calc(6 * var(--u));position:absolute!important;top:calc(100% + 10 * var(--u));left:50%;transform:translateX(-50%);white-space:nowrap;margin:0!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important;color:#f1e2bd;letter-spacing:.16em!important;text-shadow:0 2px 6px #000}
+#app .duel-screen.nd-stage .retro-center .round-caption{font-size:calc(14 * var(--u))!important;opacity:.8}
+#app .duel-screen.nd-stage .retro-center .round-count{font-size:calc(20 * var(--u))!important;font-weight:600}
+#app .duel-screen.nd-stage .retro-center .round-limit{font-size:calc(14 * var(--u))!important;opacity:.8}
+
+/* ROUND 與 VS 圓章貼近成一組 */
+#app .duel-screen.nd-stage .retro-center .round-mini{top:calc(100% + 4 * var(--u))!important;flex-direction:column;align-items:center;gap:0!important;line-height:1!important}
+#app .duel-screen.nd-stage .retro-center .round-caption,#app .duel-screen.nd-stage .retro-center .round-count{display:block;line-height:1.05!important}
+#app .duel-screen.nd-stage .retro-center .round-caption{font-size:calc(12 * var(--u))!important;letter-spacing:.3em!important}
+
+/* 文字與 VS 外圍虛線（外擴 14px）相距 8px */
+#app .duel-screen.nd-stage .retro-center .round-mini{top:calc(100% + 24px)!important}
+
+/* 對手手牌：每張牌自成層級，後面的牌正確蓋住前面的牌（卡框偽元素不再穿透） */
+.enemy-card-back{position:relative;isolation:isolate}

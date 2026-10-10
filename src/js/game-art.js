@@ -94,13 +94,16 @@
   }
   // Every unrevealed card shares one neutral back, independent of card/job/skin.
   function backArt(host){
-    if(host.dataset.backArt==='gold-v2')return;
-    host.dataset.backArt='gold-v2';
+    // HOT-MODE-090: 熱血風格用火焰卡背；故事戰鬥與一般風格仍用金色卡背。
+    const hot=typeof heatActive==='function'&&heatActive(),variant=hot?'flame-v1':'gold-v2';
+    if(host.dataset.backArt===variant)return;
+    host.dataset.backArt=variant;
+    host.querySelectorAll('.back-art-image').forEach(n=>n.remove());host.classList.remove('has-back-art','back-art-failed');
     const img=document.createElement('img');img.className='back-art-image';
     img.alt='';img.draggable=false;img.decoding='async';
     img.addEventListener('load',()=>host.classList.add('has-back-art'));
     img.addEventListener('error',()=>{img.hidden=true;host.classList.remove('has-back-art');host.classList.add('back-art-failed')});
-    img.src='assets/cards/back-gold-v2.webp';host.append(img);
+    img.src=hot?'assets/cards/back-flame-v1.webp':'assets/cards/back-gold-v2.webp';host.append(img);
   }
   function coinArt(host,face){
     if(host.dataset.coinArt===face)return;host.dataset.coinArt=face;

@@ -2,7 +2,9 @@
 /* ---------- hands (both along the bottom) ---------- */
 #app .duel-screen.nd-stage>.duel-hand-panel{position:absolute!important;top:auto!important;z-index:6!important;width:auto!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;padding:0!important;transform:translateX(-50%)!important;background:none!important;border:0!important;box-shadow:none!important;overflow:visible!important;grid-area:auto!important}
 #app .duel-screen.nd-stage>.duel-hand-panel::before{display:none!important}
-#app .duel-screen.nd-stage>.duel-hand-panel.player{left:calc(640 * var(--u))!important;bottom:calc(40 * var(--u))!important}
-#app .duel-screen.nd-stage>.duel-hand-panel.enemy{left:calc(1075 * var(--u))!important;bottom:calc(44 * var(--u))!important}
+/* both hands: horizontally centred on the stage (enemy on top, player at the bottom), same card size and spacing */
+#app .duel-screen.nd-stage>.duel-hand-panel.player{left:50%!important;bottom:calc(40 * var(--u))!important}
+#app .duel-screen.nd-stage>.duel-hand-panel.enemy{left:50%!important;top:calc(28 * var(--u))!important;bottom:auto!important}
+#app .duel-screen.nd-stage .duel-hand.player-hand, #app .duel-screen.nd-stage .duel-hand.ai-hand{display:flex!important;width:auto!important;gap:calc(4 * var(--u))!important;justify-content:center!important;align-items:center!important}
 #app .duel-screen.nd-stage .duel-hand{height:auto!important;min-height:0!important;max-height:none!important;padding:0!important;margin:0!important;overflow:visible!important;align-items:flex-end!important;justify-content:center!important}
 }

@@ -177,7 +177,8 @@
    "screens/result.duel.css",
    "screens/setup.3.css",
    "components/modal.5.css",
-   "components/card.4.css"
+   "components/card.4.css",
+   "screens/hot-mode.duel.css"
   ],
   "Nightfall-Duel-Story.html": [
    "tokens.css",
@@ -274,6 +275,7 @@
    "story/search.shared.css",
    "story/shell.2.css",
    "story/campaign.2.css",
+   "story/branch-map.css",
    "story/sidequest.css",
    "screens/setup.3.css",
    "components/modal.5.css",

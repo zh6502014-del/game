@@ -104,7 +104,7 @@
 .story-energy-overlay .seb-result h2{font:700 28px "Noto Serif TC",serif;margin:var(--nd-sp-7) 0;color:#f4deb1}
 .story-energy-overlay .seb-result-reason{font-size:var(--nd-fs-13);color:#d7debd}
 .story-energy-overlay .seb-modal-backdrop{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:var(--nd-sp-20);background:#020806c9;backdrop-filter:blur(5px);touch-action:pan-y}
-.story-energy-overlay .seb-modal{width:min(530px,96%);max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 18px 70px var(--nd-ink-80);touch-action:pan-y;user-select:text}
+.story-energy-overlay .seb-modal{width:min(530px,96%);max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 18px 70px var(--nd-ink-80);touch-action:pan-y;user-select:none}
 .story-energy-overlay .seb-modal h2{font:700 25px "Noto Serif TC",serif;color:#ead3a0;margin-bottom:13px}
 .story-energy-overlay .seb-modal p{font-size:var(--nd-fs-14);color:#d9e0c9;margin:9px 0}
 .story-energy-overlay .seb-modal-actions{display:flex;justify-content:center;gap:var(--nd-sp-10);flex-wrap:wrap;margin-top:16px}
@@ -120,7 +120,7 @@
 .story-energy-overlay .seb-hover-preview strong{font-size:var(--nd-fs-15);color:#f4deb1}
 .story-energy-overlay .seb-preview-owner{display:block;font-size:var(--nd-fs-11);color:#c1ccb4;margin:var(--nd-sp-4) 0}
 .story-energy-overlay .seb-hover-preview p{font-size:var(--nd-fs-12);line-height:1.65}
-.story-energy-overlay .seb-log-list{max-height:45vh;overflow:auto;padding-left:24px;touch-action:pan-y;color:#d1dcc3;font-size:var(--nd-fs-13);user-select:text}
+.story-energy-overlay .seb-log-list{max-height:45vh;overflow:auto;padding-left:24px;touch-action:pan-y;color:#d1dcc3;font-size:var(--nd-fs-13);user-select:none}
 .story-energy-overlay .seb-log-list li{padding:var(--nd-sp-4) 0}
 .story-energy-overlay .seb-rotate-host{position:absolute;inset:0;z-index:20}
 .story-energy-overlay .seb-rotate{display:flex;height:100%;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--nd-sp-18);padding:32px}
@@ -758,3 +758,99 @@
 #seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"]) .seb-stat small{display:none}
 #seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"]) .seb-stat strong{font-size:var(--nd-fs-14)}
 }
+/* MOBILE-ACTION-MENU-088 (2026-10-10): upright phones drop the skill-card row. The bottom dock keeps one fixed
+   height; tapping an ally swaps its content (hint + 結束回合) for that ally's action cards, so the board never jumps. */
+@media (orientation:portrait) and (max-width:1024px){
+#seb-battle-overlay{--seb-dock:140px}
+#seb-battle-overlay .seb-hand-cards{display:none}
+#seb-battle-overlay .seb-hand{height:var(--seb-dock);grid-template-rows:1fr;grid-template-areas:"label rail";padding:var(--nd-sp-8) var(--nd-sp-4);align-items:center}
+#seb-battle-overlay .seb-end-turn{min-height:56px;min-width:118px;font-size:var(--nd-fs-17)}
+#seb-battle-overlay .seb-hand[data-menu="open"]{display:block;padding:var(--nd-sp-4) var(--nd-sp-6) var(--nd-sp-12)}
+#seb-battle-overlay .seb-unit.seb-menu-open{box-shadow:0 0 0 2px var(--nd-gold),0 0 20px rgba(216,179,106,.42)}
+#seb-battle-overlay .seb-action-menu{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr);gap:var(--nd-sp-4);animation:seb-menu-in .14s ease-out}
+#seb-battle-overlay .seb-menu-head{display:flex;align-items:center;gap:var(--nd-sp-6);min-height:44px;padding:0 var(--nd-sp-2)}
+#seb-battle-overlay .seb-menu-who{flex:1;display:flex;align-items:baseline;gap:var(--nd-sp-8);min-width:0}
+#seb-battle-overlay .seb-menu-who strong{font-size:var(--nd-fs-17);font-weight:600;color:#ecdcb4;letter-spacing:.06em}
+#seb-battle-overlay .seb-menu-who span{font-size:var(--nd-fs-12);color:#aebda5}
+#seb-battle-overlay .seb-menu-icon{width:44px;height:44px;min-height:44px;padding:0;border-radius:50%;display:grid;place-items:center;font-size:var(--nd-fs-16);line-height:1;position:relative}
+#seb-battle-overlay .seb-menu-actions{display:flex;gap:var(--nd-sp-8);min-height:0}
+#seb-battle-overlay .seb-menu-item{position:relative;flex:1 1 0;min-width:0;min-height:56px;display:flex;align-items:stretch;gap:0;padding:0;overflow:visible;text-align:left;background:linear-gradient(180deg,#1f372b,#0f1c16);border:1px solid var(--nd-gold-dim);border-radius:10px;box-shadow:inset 0 1px 0 rgba(236,220,180,.10),0 3px 10px rgba(0,0,0,.35);transition:transform .12s,border-color .12s,filter .12s}
+#seb-battle-overlay .seb-menu-item.seb-ready{border-color:var(--nd-gold)}
+#seb-battle-overlay .seb-menu-item.seb-ready:active{transform:translateY(1px) scale(.985)}
+#seb-battle-overlay .seb-menu-item.seb-menu-off{filter:saturate(.35) brightness(.78);border-color:#7d795066}
+#seb-battle-overlay .seb-menu-pic{position:relative;inset:auto;flex:0 0 46px;align-self:stretch;overflow:hidden;border-radius:9px 0 0 9px;border-right:1px solid #7d795066;background:#16281f}
+#seb-battle-overlay .seb-menu-pic .seb-art-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+#seb-battle-overlay .seb-menu-pic::after{background:linear-gradient(90deg,transparent 55%,#0f1c16cc)}
+#seb-battle-overlay .seb-menu-pic .seb-art-fallback{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-menu-emblem{background:#16281f url('../../../assets/emblems/attack.svg') center/30px no-repeat}
+#seb-battle-overlay .seb-menu-text{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:2px;padding:var(--nd-sp-4) var(--nd-sp-8)}
+#seb-battle-overlay .seb-menu-item:has(.seb-menu-cost) .seb-menu-text{padding-right:36px}
+#seb-battle-overlay .seb-menu-label{font-size:var(--nd-fs-15);font-weight:600;color:#ecdcb4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay .seb-menu-sub{font-size:var(--nd-fs-11);color:#aebda5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay .seb-menu-cost{position:absolute;top:6px;right:6px;width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2c4a3d,#0b1712);border:1.5px solid var(--nd-gold);color:#f1e6c4;font-size:var(--nd-fs-14);font-weight:600;font-variant-numeric:tabular-nums;box-shadow:0 2px 6px rgba(0,0,0,.5)}
+#seb-battle-overlay .seb-menu-off .seb-menu-cost{border-color:#7d7950}
+}
+@media (orientation:portrait) and (max-width:1024px) and (max-height:700px){
+#seb-battle-overlay{--seb-dock:128px}
+#seb-battle-overlay .seb-menu-pic{flex-basis:40px}
+}
+@media (orientation:portrait) and (max-width:1024px) and (prefers-reduced-motion:reduce){
+#seb-battle-overlay .seb-action-menu{animation:none}
+#seb-battle-overlay .seb-menu-item{transition:none}
+}
+/* MOBILE-UNIT-CARD-089 (2026-10-10): upright phones — cleaner unit plate. Small ready dots top-right instead of two
+   big emblems over the portrait; job sits next to the name; equal stat cells; status only when something is wrong. */
+.story-energy-overlay .seb-unit-jobtag{display:none}
+@media (orientation:portrait) and (max-width:1024px){
+#seb-battle-overlay .seb-roster .seb-unit .seb-allowances{left:auto;right:6px;top:6px;bottom:auto;width:auto;gap:4px;justify-content:flex-end;transform:none;z-index:3}
+#seb-battle-overlay .seb-roster .seb-unit .seb-allowance{width:18px;height:18px;border-width:1px;box-shadow:0 1px 3px rgba(0,0,0,.6)}
+#seb-battle-overlay .seb-roster .seb-unit .seb-unit-role{display:none}
+#seb-battle-overlay .seb-roster .seb-unit .seb-unit-identity{flex-direction:row;align-items:baseline;gap:var(--nd-sp-6)}
+#seb-battle-overlay .seb-roster .seb-unit .seb-unit-jobtag{display:inline;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--nd-fs-12);color:#aebda5;letter-spacing:.04em}
+#seb-battle-overlay .seb-roster .seb-unit .seb-unit-name{flex:none;max-width:none;white-space:nowrap}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat-badges{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--nd-sp-4)}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat{justify-content:center;gap:3px;padding:0 var(--nd-sp-4)}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat small{flex:none;display:inline}
+#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{object-position:50% 4%}
+#seb-battle-overlay .seb-roster .seb-unit-wrap{grid-template-rows:minmax(0,1fr)}
+#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip{display:flex;position:absolute;left:6px;top:6px;z-index:3;max-width:calc(100% - 12px);min-height:0;padding:0;gap:3px;flex-wrap:wrap;justify-content:flex-start;pointer-events:none}
+#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip.seb-status-normal{display:none}
+/* Wide plates: a narrower portrait leaves room for three readable stat cells; tight 2×3 plates keep the dots off the name. */
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-portrait{width:34%}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-unit-base{left:34%;padding-left:var(--nd-sp-6);padding-right:var(--nd-sp-6)}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat-badges{gap:3px}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat{gap:2px;padding:0 2px}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat small{font-size:var(--nd-fs-10)}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-unit .seb-unit-identity{padding-right:44px}
+#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip .seb-status{padding:1px 6px;border-radius:999px;background:#0b1712e6;border:1px solid #d8b36a88;color:#ecdcb4;font-size:var(--nd-fs-11);line-height:1.4;white-space:nowrap}
+}
+/* MOBILE-UNIT-CARD-089b: no name / job text on upright phones. Allies are known by portrait (the action menu header
+   names them); enemies carry a job emblem top-right and an A/B/C letter when several share a name. */
+.story-energy-overlay .seb-job-emblem, .story-energy-overlay .seb-dup-tag{display:none}
+@media (orientation:portrait) and (max-width:1024px){
+#seb-battle-overlay .seb-roster .seb-unit .seb-unit-identity{display:none}
+#seb-battle-overlay .seb-roster .seb-unit[data-side="enemy"] .seb-allowances{display:none}
+#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem{display:block;position:absolute;top:5px;right:5px;z-index:3;width:28px;height:28px;border-radius:50%;background:url('../../../assets/emblems/swordsman.svg') center/cover no-repeat;box-shadow:0 1px 4px rgba(0,0,0,.6);pointer-events:none}
+#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem[data-job="tank"]{background-image:url('../../../assets/emblems/tank.svg')}
+#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem[data-job="assassin"]{background-image:url('../../../assets/emblems/assassin.svg')}
+#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem[data-job="gunner"]{background-image:url('../../../assets/emblems/gunner.svg')}
+#seb-battle-overlay .seb-roster .seb-unit .seb-dup-tag{display:grid;place-items:center;position:absolute;left:5px;bottom:5px;z-index:3;min-width:22px;height:22px;padding:0 4px;border-radius:6px;background:#0b1712e6;border:1px solid #d8b36a99;color:#f1e6c4;font-size:var(--nd-fs-13);font-weight:600;line-height:1;pointer-events:none}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat{height:32px}
+#seb-battle-overlay .seb-roster .seb-unit .seb-stat strong{font-size:var(--nd-fs-18)}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit .seb-stat{height:28px}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit .seb-stat strong{font-size:var(--nd-fs-16)}
+}
+/* Tall phones only: short screens keep the one-row stats. */
+@media (orientation:portrait) and (max-width:1024px) and (min-height:741px){
+/* 2 / 4 wide plates have height to spare once the name is gone: stack 血 / 盾 / 攻 as full-width rows. */
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat-badges{grid-template-columns:1fr;gap:3px;padding-top:30px}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat{height:26px;justify-content:space-between;padding:0 var(--nd-sp-8)}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat small{font-size:var(--nd-fs-12)}
+}
+@media (orientation:portrait) and (max-width:1024px) and (max-height:740px){
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat{height:28px}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat strong{font-size:var(--nd-fs-15)}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat small{font-size:var(--nd-fs-9)}
+#seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat-badges{gap:2px;padding-top:24px}
+}
+@keyframes seb-menu-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
