@@ -1,0 +1,21 @@
+/* Secondary controls are quiet enamel. Engraving is reserved for the artwork
+   and major surfaces, while a solid gold primary action is easy to find. */
+body :is(.home-audio,
+.nd-control:not(.start):not(.audio-toggle),
+.setup-wrap .carousel-arrow,
+.battle-dock > button,
+.setup-wrap .ai-choice,
+.story-shell button:not(.story-scene),
+.story-stage-header button,
+.story-read-controls button,
+.story-actions button,
+.story-log-dialog button,
+.story-lightbox button,
+.puzzle-head > button,
+.puzzle-tools > button,
+.search-head > button,
+.search-views > button,
+.search-footer > button,
+.story-route-controls > button,
+.gallery-controls > button):not(.card):not(.carousel-card):not(.carousel-dot):not(.audio-toggle):not(.story-scene):not(.puzzle-slot){/* Match the legacy frame specificity only for its border-image reset. */
+  border-image: none !important}

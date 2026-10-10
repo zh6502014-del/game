@@ -1,0 +1,4 @@
+.story-scene img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.story-scene span{display:block;padding:var(--nd-sp-10) var(--nd-sp-12);color:#c9b896;font-size:var(--nd-fs-11)}
+.story-gallery-grid .story-scene{margin:0}
+.story-stage-panel{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:20px!important;border-image-repeat:repeat!important;border-image-outset:0!important}

@@ -1,0 +1,7 @@
+.journal-entries p{font-size:var(--nd-fs-13);line-height:1.7;color:#bfc5b4;padding:var(--nd-sp-10);border-bottom:1px solid #a28d3b22}
+.battle-log-export{margin:22px 0;text-align:left;border:1px solid #a18c5044;padding:var(--nd-sp-12);border-radius:var(--nd-r-4)}
+.battle-log-export summary{cursor:pointer;text-align:center;color:#b5b49c;font-size:var(--nd-fs-12);letter-spacing:3px}
+.battle-log-export[open] summary{margin-bottom:14px}
+.battle-log-text{background:#071719!important;color:#adbbae!important}
+.journal-overlay{font-size:var(--nd-fs-14)!important;line-height:1.6!important}
+.log, .journal-log{text-align:left!important;letter-spacing:0!important}

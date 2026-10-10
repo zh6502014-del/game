@@ -1,0 +1,15 @@
+.card{flex:0 0 var(--card-w);width:var(--card-w);height:var(--card-h);border:1px solid #3c434e;background:linear-gradient(155deg,#1a1e25,#111419);border-radius:var(--nd-r-18);padding:var(--nd-sp-12) var(--nd-sp-10);text-align:left;cursor:grab;display:flex;flex-direction:column;touch-action:none;box-shadow:0 8px 18px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.03);scroll-snap-align:start}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 24px var(--nd-ink-a28),inset 0 1px 0 rgba(255,255,255,.04)}
+.card:active{cursor:grabbing}
+.card .icon{font-size:27px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+.card b{font-size:var(--nd-fs-15);line-height:1.2;margin-top:9px}
+.card{transition:transform .16s cubic-bezier(.2,.8,.2,1),border-color .16s ease,opacity .16s ease,box-shadow .16s ease}
+.card.disabled{filter:saturate(.65);opacity:.32;cursor:not-allowed}
+[data-job=swordsman], [data-art=swordsman]{--art:url('../../../assets/emblems/swordsman.svg')}
+[data-job=tank], [data-art=tank], [data-art=defense]{--art:url('../../../assets/emblems/defense.svg')}
+[data-job=assassin], [data-art=assassin]{--art:url('../../../assets/emblems/assassin.svg')}
+[data-job=gunner], [data-art=gunner]{--art:url('../../../assets/emblems/gunner.svg')}
+[data-art=attack]{--art:url('../../../assets/emblems/attack.svg')}
+[data-art=dodge]{--art:url('../../../assets/emblems/dodge.svg')}
+[data-art=spirit], [data-art=domain]{--art:url('../../../assets/emblems/seal.svg')}
+.character-image{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;position:relative;z-index:1;pointer-events:none}

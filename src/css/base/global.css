@@ -1,0 +1,10 @@
+/* Drag mode: make the action visually obvious without dimming the arena. */
+body.nd-dragging-mode .hand{scroll-snap-type:none}
+body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){opacity:.62!important;transform:scale(.985)!important}
+body.nd-dragging-mode{overflow:hidden!important;user-select:none!important;-webkit-user-select:none!important}
+body.nd-dragging-mode .hand .card:not(.nd-drag-placeholder){opacity:.34!important}
+body.nd-dragging-mode .hand .card.nd-drag-source{opacity:.08!important;transform:scale(.97)!important}
+body.nd-dragging-mode .hand .card:not(.nd-drag-source):not(:disabled){transition:transform .12s ease,opacity .12s ease,filter .12s ease;filter:saturate(.72)}
+/* Shared control component. Loaded after the legacy theme and PNG frame layer.
+   Only .nd-control opts in; card faces, artwork and puzzle hit targets stay separate. */
+:root{--nd-control-size:44px;--nd-icon-action:20px;--nd-control-gap:8px}

@@ -1,0 +1,28 @@
+/* Badge + type line */
+.sq-eyebrow{display:flex;align-items:center;gap:var(--nd-sp-8);margin:0 0 var(--nd-sp-6);font-size:var(--nd-fs-11);line-height:1.4;letter-spacing:.1em;color:var(--sq-gold-soft)}
+.sq-badge{display:inline-flex;align-items:center;gap:var(--nd-sp-5);flex:none;padding:1px var(--nd-sp-8) 1px var(--nd-sp-6);border:1px solid var(--sq-gold);border-radius:var(--nd-r-2);background:linear-gradient(180deg,#5d4b21,#392e15);color:#ffecb9;font-style:normal;font-weight:600;font-size:var(--nd-fs-11);line-height:1.5;letter-spacing:.16em}
+.sq-badge::before{content:"";width:5px;height:5px;background:var(--sq-gold);transform:rotate(45deg)}
+/* Dialog frame */
+.sq-dialog{color:var(--sq-text);background:radial-gradient(ellipse at 50% 0,#27453a,#0c1818 66%)!important}
+.sq-dialog>header{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--nd-sp-12);margin:0 0 var(--nd-sp-14);padding:0 0 var(--nd-sp-12);border-bottom:1px solid transparent;border-image:linear-gradient(90deg,#d9b865cc,#8d795633 72%,transparent) 1}
+.sq-dialog>header h2{margin:0;font-family:var(--nd-font);font-size:1.35rem;font-weight:600;line-height:1.35;letter-spacing:.02em;color:var(--sq-ink)}
+.sq-dialog>header>button{flex:none;min-width:64px}
+.sq-dialog [data-maze-confirm], .sq-dialog [data-route-confirm]{margin-left:auto}
+.sq-dialog [data-maze-confirm], .sq-dialog [data-route-confirm], .sq-dialog [data-continue], .sq-dialog [data-search-continue]{border-color:var(--sq-gold);background:linear-gradient(180deg,#7a6330,#4a3c1c);color:#fff3d1;font-weight:600}
+.sq-dialog [data-maze-confirm]:hover:not(:disabled), .sq-dialog [data-route-confirm]:hover:not(:disabled), .sq-dialog [data-continue]:hover, .sq-dialog [data-search-continue]:hover:not(:disabled){background:linear-gradient(180deg,#8d7438,#5a4a22)}
+.sq-dialog [data-maze-confirm]:disabled, .sq-dialog [data-route-confirm]:disabled, .sq-dialog [data-search-continue]:disabled{opacity:.5;filter:saturate(.6)}
+/* "操作說明" fold-out */
+.sq-dialog details summary{color:#d9c58d;cursor:pointer}
+/* Workshop list: header + cards use the same badge language */
+.sq-list-head{margin:0 0 var(--nd-sp-6)}
+.sq-list-head h2{margin:0}
+.story-shell .story-puzzle-choices .sq-card{display:grid;gap:var(--nd-sp-6);align-content:start;position:relative;padding:var(--nd-sp-16) var(--nd-sp-20) var(--nd-sp-16) var(--nd-sp-24);min-height:104px;border-color:#6d6140;background:linear-gradient(135deg,#1d3529,#14261f)}
+.story-shell .story-puzzle-choices .sq-card::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;background:linear-gradient(180deg,var(--sq-gold),#d9b86533)}
+.story-shell .story-puzzle-choices .sq-card:hover{border-color:var(--sq-gold);background:linear-gradient(135deg,#24402f,#182c23)}
+.story-shell .story-puzzle-choices .sq-card:focus-visible{outline:3px solid #e4d295;outline-offset:3px}
+.sq-card-type{display:flex;align-items:center;gap:var(--nd-sp-8);font-size:var(--nd-fs-11);letter-spacing:.1em;color:var(--sq-gold-soft)}
+.sq-card strong{font-size:1.05rem;font-weight:600;color:var(--sq-ink);line-height:1.4}
+@media(max-width:550px){
+.sq-dialog>header h2{font-size:1.1rem}
+.sq-dialog>header>button{min-width:52px;padding-inline:8px}
+}

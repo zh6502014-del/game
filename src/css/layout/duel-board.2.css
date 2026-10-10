@@ -1,0 +1,76 @@
+.retro-center .line{display:none !important}
+@media(max-width:430px){
+.app:has(.duel-screen){padding-left:8px !important;padding-right:8px !important}
+.duel-side{min-height:100px !important;padding:var(--nd-sp-8) !important}
+}
+@media (max-width:700px){
+/* ===== extracted from <style v1239-mobile-final-fixes> ===== */
+/* V12.12.39-Test — real-device correction pass. UI-only. */
+/* The center control is the authoritative turn indicator on mobile.
+     Remove the duplicate top phase chip; keep SHOWDOWN/OPPONENT in the center. */
+.app:has(.duel-screen) .topbar .phase{display:none!important}
+}
+@media (max-width:430px){
+/* Restore readable shield value + active-state tags inside each fighter card. */
+.duel-side{padding:var(--nd-sp-7) var(--nd-sp-8)!important}
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+.retro-arena, .retro-board{height:344px !important;min-height:344px !important;max-height:344px !important}
+}
+@media (max-width:430px){
+.duel-screen>.retro-arena{grid-area:center!important}
+}
+/* ===== extracted from <style v1239-ui-repair12-motion-audio-polish> ===== */
+/* V12.12.39-Test — final visual polish pass.
+   Card-table aesthetics only: clearer hierarchy, softer depth, synchronized motion. */
+.duel-side{position:relative!important;border-color:rgba(89,99,112,.54)!important;background:linear-gradient(160deg,rgba(24,28,34,.98),rgba(11,14,19,.98))!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 8px 18px rgba(0,0,0,.18)!important;transition:border-color .22s ease,box-shadow .22s ease,transform .22s cubic-bezier(.22,1,.36,1)!important}
+.duel-side.player{border-color:rgba(216,179,106,.30)!important}
+.duel-side.enemy{border-color:rgba(115,132,151,.34)!important}
+.duel-side::after{content:"";position:absolute;left:12px;right:12px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);pointer-events:none}
+.retro-arena{isolation:isolate}
+.retro-arena::before{border-color:rgba(255,255,255,.035)!important}
+.retro-arena.phase-result{animation:ndArenaResolve .56s cubic-bezier(.22,1,.36,1) both}
+@media(prefers-reduced-motion:reduce){
+.duel-side{transition:none!important}
+.retro-arena.phase-result{animation:none!important}
+}
+.setup-stage .duel-side{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+.side-inner{border-color:#8b754335;border-radius:var(--nd-r-14)}
+.duel-screen>.duel-side{border-color:#b99a555c!important}
+.retro-arena{border-radius:var(--nd-r-18)!important;border-color:#a48a535e!important;background:radial-gradient(ellipse at center,#21403999,transparent 60%),repeating-linear-gradient(0deg,#ffffff02 0 1px,transparent 1px 4px),linear-gradient(145deg,#142c2d,#091a1f)!important;box-shadow:inset 0 0 0 5px #08171b,inset 0 0 0 6px #b3955340,inset 0 0 75px var(--nd-ink-60),0 18px 38px var(--nd-ink-33)!important}
+.retro-arena::before{inset:14px!important;border-radius:var(--nd-r-10)!important;pointer-events:none}
+.retro-arena::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);border:1px solid #c3a16519;pointer-events:none;z-index:0}
+.retro-board{position:relative;z-index:1}
+.log-panel{background:#0a1a1dbb!important;border-color:#8b795535!important;border-radius:var(--nd-r-8)!important;box-shadow:none!important}
+@media(min-width:701px){
+.retro-arena, .retro-board{height:300px!important;min-height:300px!important;max-height:300px!important}
+}
+@media(max-width:700px){
+.retro-arena, .retro-board{height:270px!important;min-height:270px!important;max-height:270px!important}
+}
+.side-inner{border:0;background:transparent;box-shadow:none}
+.app:has(.duel-screen){justify-content:flex-start;padding-top:22px!important}
+.app:has(.duel-screen) .topbar>div:first-child{display:flex;align-items:center;gap:var(--nd-sp-24)}
+.duel-screen>.duel-side{z-index:3}
+.duel-screen>.duel-side.enemy{justify-self:end!important}
+.duel-screen>.retro-arena{height:100%!important;min-height:0!important;max-height:none!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.retro-arena::before{border:0!important;background:none!important}
+.retro-board{height:100%!important;min-height:0!important;max-height:none!important;padding:var(--nd-sp-12) var(--nd-sp-4)!important}
+.duel-screen .duel-hand .card b, .duel-screen .retro-card-slot .front b{font-size:var(--nd-fs-16)!important}
+.battle-dock{align-items:center;flex:none}
+.battle-dock button{color:#c9ba94;cursor:pointer;padding:var(--nd-sp-10) var(--nd-sp-16);font-size:var(--nd-fs-14)}
+.battle-dock button:hover{background:#26372c}
+.battle-dock button span{margin-left:5px}
+.battle-state{flex:1}
+@media(max-width:700px){
+.battle-dock{flex-wrap:wrap;justify-content:center}
+.battle-state{order:-1;flex-basis:100%}
+}
+.duel-screen>.duel-side{overflow:visible!important}
+@media(prefers-reduced-motion:reduce){
+.combat-fx-layer *{animation-duration:1ms!important;transition:none!important}
+}
+.combat-fx-layer{position:fixed;inset:0;pointer-events:none;z-index:65;overflow:hidden}
+.fx-number{position:absolute;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:var(--nd-sp-5);min-width:96px;padding:var(--nd-sp-8) 11px;border:1px solid #dfb87b77;background:#111a20ee;box-shadow:0 5px 18px var(--nd-ink-53);border-radius:var(--nd-r-4);color:#ffd3ab;font-family:var(--nd-font);white-space:nowrap}

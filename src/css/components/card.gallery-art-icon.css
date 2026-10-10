@@ -1,0 +1,4 @@
+/* Nightfall visual system: local character art and original engraved icons. */
+.nd-icon{display:inline-block;flex:none;vertical-align:-.18em;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:bevel;color:inherit;pointer-events:none}
+button .nd-icon{width:20px;height:20px}
+button:has(.nd-icon):not(.card):not(.carousel-card){min-height:40px;min-width:40px}

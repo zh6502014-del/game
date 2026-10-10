@@ -6,6 +6,10 @@
 
 | ID | 狀態／唯一主責 | 範圍及交付 |
 | --- | --- | --- |
+| STORY-BATTLE-PORTRAIT-087 | 本地已實作／瀏覽器驗證通過、真機待驗 | [工單](../design/ui/STORY-BATTLE-PORTRAIT-087.md)：故事卡牌對戰新增直向版、橫向角色牌放大重排，本地 |
+| STORY-MOBILE-086 | 本地已實作／定向瀏覽器驗證通過、真機待驗 | [工單](../design/ui/STORY-MOBILE-086.md)：故事模式直向插畫鋪滿、橫向任務按鈕不被遮、小遊戲兩欄、對戰計數不重疊，本地 |
+| C4-SEARCH-RESTORE-085 | 本地已還原／流程瀏覽器驗證通過 | [工單](../design/story/C4-SEARCH-RESTORE-085.md)：還原誤刪的文件庫尋物與劇情尋物支援，本地 |
+| C4-ARCHIVE-WALL-086 | 本地已完成／瀏覽器驗證通過 | [工單](../design/story/C4-ARCHIVE-WALL-086.md)：檔案櫃 8×8 牆面尋物、每 8 個抽屜一場查勤戰，取代單一卷宗尋物與 C4 外廊戰，本地 |
 | C4-COPY-079 | 完成／本地文案與工程驗收通過 | [工單](../design/story/C4-COPY-079.md)：刪文件庫架高與燈光旁白，本地 |
 | WOLF-FACING-078 | 本地已替換／工程通過、裁切待驗 | [工單](../design/art/WOLF-FACING-078.md)：沿用封存狼朝向正確版本，本地 |
 | SHIELD-RHYTHM-077 | 本地已實作／工程複審通過、視聽與操作待驗 | [工單](../design/fx-audio/SHIELD-RHYTHM-077.md)：T3單鍵30秒撐盾，本地 |

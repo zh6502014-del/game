@@ -1,0 +1,3 @@
+.png-frame.thin{border-image-source:var(--frame-thin)!important;border-image-slice:var(--frame-thin-slice)!important;border-image-width:10px!important}
+/* Art, frame and icon specimens use the same exhibition backdrop and panels. */
+.specimens .png-frame{background: var(--visual-enamel);border-color: var(--visual-edge);box-shadow: var(--visual-shadow)}

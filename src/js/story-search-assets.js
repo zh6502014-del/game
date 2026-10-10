@@ -76,7 +76,7 @@
       ]
     },
     'archive-vault': {
-      id: 'archive-vault', title: '行政文件庫 · 乙列第四櫃',
+      id: 'archive-vault', title: '行政文件庫 · 檔案櫃',
       // 卷宗號碼只作行政標籤；玩家依來信內容查找物資去向。
       clueText: '物資去向',
       helpText: '查閱卷宗內容，找出研究物資送往礦區的紀錄。',
@@ -112,6 +112,13 @@
         { id: 'folio-0428', prop: 'archive-folder', tag: '0428', label: '件號 0428 的卷宗', action: '抽出', x: 68, y: 47, w: 14, h: 31.4, rotate: 6, targets: [], note: '領取單沒有填寫物資或去向，背面留著一段批註。', open: { x: 68, y: 63, w: 17, h: 38.1, rotate: 6 } },
         { id: 'folio-0429', prop: 'archive-folder', tag: '0429', label: '件號 0429 的卷宗', action: '抽出', x: 77, y: 49, w: 14, h: 31.4, rotate: 9, targets: [], note: '這份舊卷沒有留下可辨認的物資去向。', open: { x: 77, y: 63, w: 17, h: 38.1, rotate: 9 } }
       ]
+    },
+    'archive-wall': {
+      id: 'archive-wall', title: '行政文件庫 · 檔案櫃',
+      helpText: '一個一個抽屜地找，找出研究物資送往礦區的紀錄。',
+      noRegionHint: true,
+      background: { path: 'assets/story/backgrounds/locations/archive-wall-plate.webp', title: '一整面的檔案櫃' },
+      placements: [], covers: []
     },
     'gun-parts': {
       id: 'gun-parts', title: '保險箱 · 博士留下的槍零件',

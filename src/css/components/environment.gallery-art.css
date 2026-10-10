@@ -1,0 +1,15 @@
+#nd-environment{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .7s ease;background:#08191d}
+#nd-environment.active{opacity:1}
+.environment-backdrop{position:absolute;inset:0;background-position:center;background-size:cover;transition:opacity .7s ease;opacity:0}
+.environment-backdrop.day{background-color:#605943}
+.environment-backdrop.night{background-color:#101a31}
+#nd-environment[data-environment=day] .day, #nd-environment[data-environment=night] .night{opacity:1}
+#nd-environment::after{content:"";position:absolute;inset:0;background:linear-gradient(#07141c38,#0410196b),radial-gradient(ellipse,transparent 30%,#020d17b3)}
+.environment-fog{position:absolute;inset:45% -5% 0;background:radial-gradient(ellipse at 50% 80%,#b7c0a316,transparent 65%);animation:environmentMist 18s ease-in-out infinite alternate}
+[data-environment=night] .environment-fog{background:radial-gradient(ellipse at 50% 80%,#b39ed422,transparent 65%)}
+.environment-domain{position:absolute;inset:140px 4% 100px;z-index:0;pointer-events:none;border-radius:45%;opacity:0;background:url('../../../assets/icons/arena-engraving.svg') center/contain no-repeat,radial-gradient(ellipse,#8dccab22,transparent 65%);border:1px solid #a5cda660;transition:opacity .4s;box-shadow:inset 0 0 50px #659c7044}
+body[data-domain=true] .environment-domain{opacity:.65}
+@media(prefers-reduced-motion:reduce){
+#nd-environment, .environment-backdrop, .environment-domain{transition:none!important}
+.environment-fog{animation:none!important}
+}

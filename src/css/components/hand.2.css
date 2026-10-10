@@ -1,0 +1,146 @@
+.hand-head b{font-size:var(--nd-fs-11);letter-spacing:1.2px}
+.hand{display:flex;gap:var(--nd-sp-10);overflow-x:auto;padding:var(--nd-sp-4) var(--nd-sp-5) var(--nd-sp-20);scrollbar-width:thin;scroll-snap-type:x proximity}
+.battle-log-export .hand-head{margin-bottom:8px}
+@media(max-width:430px){
+.hand{gap:9px}
+}
+.hand-wrap{margin-top:12px}
+.hand-head{margin-bottom:7px}
+.log-panel .hand-head{margin-bottom:8px;cursor:pointer}
+.log-panel .hand-head:after{content:"⌄";margin-left:auto;color:#777e89;font-size:var(--nd-fs-12)}
+.log-panel.collapsed .hand-head:after{content:"⌃"}
+.duel-hand{display:flex;align-items:flex-end;gap:0;min-height:96px;position:relative;padding:var(--nd-sp-5) var(--nd-sp-2) var(--nd-sp-2);overscroll-behavior-x:contain}
+.duel-hand.ai-hand{padding-top:5px}
+@media(max-width:520px){
+.duel-hand{min-height:90px}
+}
+.duel-screen > .duel-hand-panel.player{align-self:end}
+.duel-screen > .duel-hand-panel.enemy{align-self:end}
+.duel-screen > .duel-hand-panel.player, .duel-screen > .duel-hand-panel.enemy{min-height:210px}
+/* Turn the two hand panels into physical card trays. */
+@media(max-width:900px){
+.duel-hand-panel.player, .duel-hand-panel.enemy{min-height:190px}
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+.duel-hand-panel.player, .duel-hand-panel.enemy{min-height:150px;padding:var(--nd-sp-7)}
+.duel-hand.player-hand, .duel-hand.ai-hand{padding-bottom:0}
+}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+.duel-screen > .duel-hand-panel.player, .duel-screen > .duel-hand-panel.enemy{min-height:164px}
+}
+@media(max-width:430px){
+}
+/* ===== extracted from <style v1239-test-spacing-micro-pass> ===== */
+/* Keep combat-board spacing on a strict 4px rhythm. */
+.duel-hand-panel{min-width:0}
+.duel-hand-panel{display:flex;flex-direction:column;justify-content:flex-start}
+.duel-hand-title{flex:0 0 auto;margin-bottom:8px !important}
+.duel-hand.player-hand, .duel-hand.ai-hand{flex:1 1 auto;overflow-x:auto;overflow-y:visible}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media (max-width:700px){
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+.duel-hand-title{margin-bottom:4px!important}
+}
+@media (max-width:430px){
+.duel-hand-title{margin-bottom:4px!important}
+}
+/* ===== extracted from <style v1239-ui-repair4> ===== */
+/* V12.12.39-Test — UI repair 4. Visual/layout only.
+   Rules: no hand scrolling, no decorative duplicate center info,
+   and profession/hand/placement must share the same side. */
+/* A. Hand is a fixed card dock, not a horizontal scroller. */
+.duel-hand{overflow:visible!important;overflow-x:visible!important;overflow-y:visible!important;scrollbar-width:none!important;-ms-overflow-style:none!important;overscroll-behavior:initial!important;justify-content:center!important}
+.duel-hand::-webkit-scrollbar{display:none!important;width:0!important;height:0!important}
+.duel-hand.player-hand, .duel-hand.ai-hand{min-width:0!important}
+.duel-hand-panel.player, .duel-hand-panel.enemy{justify-self:stretch!important}
+@media(max-width:430px){
+.duel-hand{padding-left:0!important;padding-right:0!important}
+}
+/* 4. Hands are cards on the table, not cards inside another container. */
+.duel-hand-panel.player, .duel-hand-panel.enemy{border-color:transparent !important}
+.duel-hand-title{margin:0 0 var(--nd-sp-4) !important;padding:0 var(--nd-sp-2) !important;min-height:14px !important;font-size:var(--nd-fs-8) !important;color:#737b87 !important}
+.duel-hand-title .owner{font-weight:900 !important;color:#b0b6bf !important}
+.duel-hand-title>span:last-child{color:#858d99 !important}
+.retro-log .hand-head{padding:0 !important}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+.duel-hand-title{font-size:7.5px !important}
+}
+.duel-screen > .duel-hand-panel.player{grid-area:player-hand !important}
+.duel-screen > .duel-hand-panel.enemy{grid-area:enemy-hand !important}
+/* 4. Hand trays are containers for cards, not visual cards themselves. */
+.duel-hand-panel{border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important}
+.duel-hand-title{display:none !important}
+.duel-hand.player-hand, .duel-hand.ai-hand{width:100% !important;display:flex !important;gap:0 !important}
+.duel-hand .card b{line-height:1.1 !important;margin-top:4px !important}
+.duel-hand .card .summary{display:none !important}
+@media(max-width:430px){
+}
+@media (max-width:430px){
+.duel-hand{--duel-hand-card-w:58px;--duel-hand-card-h:82px}
+}
+@media(max-width:700px){
+/* Hand and enemy back use the exact same outer card geometry. */
+.duel-hand .card b{line-height:1.15 !important;margin:0 !important}
+.duel-hand .card .summary{display:none !important}
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+/* Hand trays are layout anchors, not scroll/crop regions. Keep cards visually inside them. */
+.duel-hand{--card-w:72px;--card-h:100px;min-width:0 !important;--duel-hand-card-w:58px;--duel-hand-card-h:82px}
+}
+@media (max-width:430px){
+.duel-hand{--card-w:64px;--card-h:90px}
+.duel-screen>.duel-hand-panel.player{grid-area:player-hand!important}
+.duel-screen>.duel-hand-panel.enemy{grid-area:enemy-hand!important}
+}
+.duel-hand-panel{transform:translateZ(0)}
+.duel-hand .card b{font-family:var(--nd-font);position:relative;text-shadow:0 2px 3px var(--nd-black)}
+.log-panel .hand-head{color:#9eaa9b!important}
+.duel-hand-panel{align-self:end!important;padding:0!important}
+.duel-hand.player-hand, .duel-hand.ai-hand{align-items:flex-end!important;justify-content:center!important}
+@media(max-width:700px){
+.duel-hand .class-crest svg{width:12px;height:12px}
+}
+.duel-hand-panel, .duel-screen>.duel-hand-panel.player, .duel-screen>.duel-hand-panel.enemy, .duel-hand.player-hand, .duel-hand.ai-hand{height:190px!important;min-height:190px!important;max-height:190px!important;overflow:visible!important}
+.duel-hand.player-hand, .duel-hand.ai-hand{padding:var(--nd-sp-10) var(--nd-sp-8) var(--nd-sp-18)!important}
+.duel-hand .card b{font-size:var(--nd-fs-16)!important;letter-spacing:2px!important;color:#ffecc0!important}
+@media(max-width:700px){
+.duel-hand-panel, .duel-screen>.duel-hand-panel.player, .duel-screen>.duel-hand-panel.enemy, .duel-hand.player-hand, .duel-hand.ai-hand{height:134px!important;min-height:134px!important;max-height:134px!important}
+.duel-hand.player-hand, .duel-hand.ai-hand{padding:9px var(--nd-sp-2) 15px!important}
+}
+/* Dense hands distribute exposed card edges within each player's lane. */
+.duel-hand:has(> :nth-child(4)){display:grid!important;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);align-items:end!important;padding-right:120px!important;gap:0!important}
+@media(max-width:1000px){
+.duel-hand:has(> :nth-child(4)){padding-right:102px!important}
+}
+@media(max-width:700px){
+.duel-hand:has(> :nth-child(4)){padding-right:76px!important}
+}
+@media(max-width:370px){
+.duel-hand:has(> :nth-child(4)){padding-right:68px!important}
+}
+.duel-screen>.duel-hand-panel{z-index:2}
+.app .duel-hand-panel::before{content:"";position:absolute;left:10%;right:10%;bottom:8px;height:1px;background:linear-gradient(90deg,transparent,#c8ab6655,transparent);pointer-events:none}
+@media (orientation:landscape) and (max-height:520px){
+#app .duel-hand{min-height:0!important;height:96px!important;padding-top:2px!important}
+}
+@media (max-width:899px), (max-height:520px){
+#app .duel-screen.nd-stage>.duel-hand-panel, #app .duel-screen.nd-stage .duel-hand{min-height:0!important;max-height:none!important;height:100%!important;margin:0!important;padding:0!important;overflow:visible!important}
+#app .duel-screen.nd-stage .duel-hand{display:flex!important;align-items:center!important;justify-content:center!important;gap:var(--nd-sp-8)!important}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+#app .duel-screen.nd-stage .duel-hand{gap:var(--nd-sp-6)!important}
+}

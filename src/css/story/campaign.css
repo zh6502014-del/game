@@ -1,0 +1,55 @@
+.story-log-dialog button{font:inherit;min-height:44px;padding:11px var(--nd-sp-20);cursor:pointer}
+.story-log-dialog button:hover{background:#2c3948}
+.story-log-dialog button:focus-visible{outline:2px solid #ffe3ab;outline-offset:4px}
+.story-stage .story-challenge{border:0;padding:0;background:none}
+.story-stage .story-meters{margin:var(--nd-sp-16) 0}
+.story-stage .story-outcome{border:0;padding:0}
+.story-log-dialog{width:min(650px,calc(100vw - 32px));max-height:85dvh;overflow:auto;border:1px solid #b7a071;padding:28px;border-radius:var(--nd-r-10)}
+.story-log-dialog::backdrop{background:#020711cc}
+.story-log-dialog p{line-height:2}
+.story-log-dialog button{margin:var(--nd-sp-6)}
+@media(max-width:620px){
+.story-stage .story-meters{flex-wrap:wrap}
+}
+/* STORY-HOTKEY */
+.story-performance button .story-key{display:inline-block;margin-left:8px;padding:1px var(--nd-sp-6);border:1px solid #ffffff40;border-radius:var(--nd-r-4);background:#00000038;font:700 11px/1.5 "Noto Serif TC",serif;letter-spacing:.02em;vertical-align:1px;opacity:.85;white-space:nowrap}
+.story-performance button:disabled .story-key{opacity:.4}
+@media(hover:none){
+.story-performance button .story-key{display:none}
+}
+.campaign-routes{display:flex;gap:var(--nd-sp-8);flex-wrap:wrap;margin:var(--nd-sp-24) 0}
+.campaign-routes [aria-pressed=true]{border-color:#ddc38e;background:#343329}
+.campaign-node-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--nd-sp-16)}
+.campaign-node-grid button{display:flex;flex-direction:column;gap:var(--nd-sp-12);min-height:155px;padding:22px;background:linear-gradient(135deg,#23303c,#141d27)}
+.campaign-node-grid span{font-size:var(--nd-fs-12)}
+.campaign-node-grid strong{font-size:19px}
+.campaign-items{display:flex;gap:var(--nd-sp-8);flex-wrap:wrap;margin:var(--nd-sp-16) 0}
+.campaign-items span{border:1px solid #647477;border-radius:var(--nd-r-4);padding:var(--nd-sp-6) 9px;font-size:var(--nd-fs-12);color:#c8dbd0}
+.story-log-dialog details{padding:var(--nd-sp-12);border-bottom:1px solid #43505a}
+.campaign-investigate [aria-pressed=true]{border:2px solid #d5bb7a;background:#33413d}
+@media(max-width:650px){
+.campaign-node-grid{grid-template-columns:1fr}
+.campaign-node-grid button{min-height:115px}
+.campaign-routes button{flex:1 1 40%}
+}
+/* H2-COIN: the two faces of 凜's coin on the chapter card; a face lights up once it has been seen. */
+.campaign-coin-faces{display:inline-flex;gap:var(--nd-sp-6);margin:var(--nd-sp-4) 0 var(--nd-sp-2)}
+.campaign-node-grid .campaign-coin{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:var(--nd-r-round);font-size:var(--nd-fs-14);line-height:1;border:1px solid #6b6248;background:#1a1d16;color:#6b6555;opacity:.75}
+.campaign-node-grid .campaign-coin[data-seen="true"]{border-color:#e4c780;background:radial-gradient(circle at 35% 35%,#f7e3a6,#b88b33 70%);color:#3a2706;opacity:1;box-shadow:0 0 8px #e4c78066}
+/* H2-COIN-FX: the coin toss on the H2 coin step (see coinToss in story-campaign.js). */
+.story-coin-toss{position:absolute;inset:0;z-index:30;display:grid;place-items:center;pointer-events:none;perspective:1000px;background:radial-gradient(circle at 50% 46%,#0000 0,#0000 22%,var(--nd-ink-73) 78%);animation:story-coin-veil .35s ease-out both}
+.story-coin-lift{grid-area:1/1;width:min(34vmin,280px);aspect-ratio:1;transform-style:preserve-3d;will-change:transform}
+.story-coin{position:relative;width:100%;height:100%;transform-style:preserve-3d;will-change:transform}
+.story-coin-face{position:absolute;inset:0;width:100%;height:100%;border-radius:var(--nd-r-round);backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 14px 34px var(--nd-ink-80)}
+.story-coin-back{transform:rotateX(180deg)}
+.story-coin-glint{grid-area:1/1;width:min(56vmin,440px);aspect-ratio:1;border-radius:var(--nd-r-round);background:radial-gradient(circle,#d8fff7d9 0,#6fe3d466 26%,#0000 62%);mix-blend-mode:screen;opacity:0;transform:scale(.35)}
+.story-coin-toss.is-landed .story-coin-glint{animation:story-coin-glint .75s ease-out both}
+.story-coin-toss.is-out{animation:story-coin-out .35s ease-in forwards}
+/* H2-WHITEOUT: white light on 「白光吞沒了操控室」: it floods the room, holds, then is drawn back into the broken crystal near the top of the frame. */
+.story-fx{position:fixed;inset:0;z-index:60;pointer-events:none;overflow:hidden}
+.story-fx i{position:absolute;inset:0;display:block}
+.story-fx-whiteout .story-fx-wash{--wr:0%;background:radial-gradient(circle at 56% 7%,#fffffb 0,#f7fffc calc(var(--wr)*.7),#d3f8ec calc(var(--wr)*.9),#a5e8d800 calc(var(--wr) + 16%));animation:story-whiteout-wr 3.6s cubic-bezier(.45,0,.25,1) both}
+.story-fx-whiteout .story-fx-core{background:radial-gradient(circle at 56% 7%,var(--nd-white) 0,var(--nd-white) 3%,#c3f6e8 10%,#c3f6e800 24%);mix-blend-mode:screen;opacity:0;transform-origin:56% 7%;animation:story-whiteout-core 3.6s ease-in both}
+.story-fx-surge .story-fx-wash{background:radial-gradient(ellipse at 50% 100%,#ffd98a66 0,#ffd98a22 45%,#0000 75%);opacity:0;animation:story-surge 1.5s ease-out both}
+.story-fx-surge .story-fx-core{display:none}
+.story-shell .story-overall, .story-shell .story-skin, .story-lightbox{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:var(--sf-w)!important;border-image-repeat:repeat!important;border-image-outset:0!important}

@@ -1,0 +1,13 @@
+.summary-icon{color:#b89e66}
+details[open]>summary>.summary-icon{transform:rotate(180deg)}
+/* Feather the clipped neighbouring cards into the actual scene. Keep the
+   centred hero and its frame clear; narrow layouts have no spare fade area. */
+.setup-stage .carousel{--carousel-edge-fade:clamp(0px,calc((100% - var(--hero-w))/2 - 10px),96px);-webkit-mask-image:linear-gradient(to right,transparent,var(--nd-black) var(--carousel-edge-fade),var(--nd-black) calc(100% - var(--carousel-edge-fade)),transparent);mask-image:linear-gradient(to right,transparent,var(--nd-black) var(--carousel-edge-fade),var(--nd-black) calc(100% - var(--carousel-edge-fade)),transparent)}
+.app:has(.duel-screen) .topbar .round{color:#eee0be!important;font-variant-numeric:tabular-nums}
+@media (max-width:899px), (max-height:520px){
+/* MOBILE-UI-066: a small-screen layout layer. Desktop stage geometry and
+   the story battle's landscape layout remain owned by their existing sheets. */
+/* Dialogs scroll within the visible screen, including browser safe areas. */
+.detail{padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right))
+      max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
+}

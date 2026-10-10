@@ -1,0 +1,3 @@
+.puzzle-head > button, .puzzle-tools > button{border: 1px solid var(--visual-edge);background: linear-gradient(var(--nd-green), var(--nd-green-deep));color: var(--visual-text);box-shadow: inset 0 1px var(--nd-gold-wash), 0 3px 8px var(--nd-ink-20);border-radius: var(--nd-r-4)}
+.puzzle-dialog{background: var(--visual-enamel) !important;color: var(--visual-text);border-color: var(--visual-edge);box-shadow: 0 24px 80px var(--nd-ink-73), inset 0 1px var(--nd-gold-wash-2) !important}
+.story-puzzle-list{background: var(--visual-enamel);border-color: var(--visual-edge);box-shadow: var(--visual-shadow)}

@@ -1,0 +1,36 @@
+.back-seal{position:absolute;color:#d2b778}
+.face.back>span{display:none}
+.result-icon .nd-icon{width:120px;height:120px;stroke-width:1.1;filter:drop-shadow(0 4px 15px #ad893f66)}
+.coin-symbol .nd-icon{width:46px;height:46px;stroke-width:1.3}
+.retro-card-slot.empty::before{content:none!important}
+@media(max-width:700px){
+.front .class-crest svg{width:12px;height:12px}
+}
+.face.back::after{content:none!important}
+/* Physical flip: rotate a two-sided card through 180 degrees, then damp its landing. */
+.retro-card-slot{perspective:900px!important}
+.retro-card-slot .card3d{transition:none!important}
+.retro-card-slot .card3d .face{position:absolute!important;inset:0;width:100%;height:100%;box-sizing:border-box;backface-visibility:hidden;-webkit-backface-visibility:hidden;opacity:1!important;animation:none!important;transition:none!important}
+.retro-card-slot .card3d .front{transform:rotateY(180deg) translateZ(.7px)}
+.retro-card-slot .card3d .back{transform:translateZ(.7px)}
+.retro-card-slot .card3d.lift{animation:physicalLift .28s cubic-bezier(.2,.7,.3,1) forwards!important}
+.retro-card-slot .card3d.flip{animation:physicalFlip .68s linear forwards!important}
+.retro-card-slot .card3d.settle{animation:physicalSettle .34s linear forwards!important}
+@media(prefers-reduced-motion:reduce){
+.retro-card-slot .card3d.lift{animation:none!important;transform:none}
+.retro-card-slot .card3d.flip, .retro-card-slot .card3d.settle{animation:none!important;transform:rotateY(180deg)}
+.retro-card-slot .card3d.flip .front{animation:none!important;opacity:1}
+.retro-card-slot .card3d.flip .back{animation:none!important;opacity:0}
+}
+/* Filters flatten a preserve-3d card and hide its rotated front. Shadows stay on faces. */
+.retro-card-slot .card3d{filter:none!important;overflow:visible!important;transform-style:preserve-3d!important;opacity:1!important}
+/* A 1.4px paper core joins the two opaque faces; its edges remain visible at 90 degrees. */
+.retro-card-slot .card3d::before, .retro-card-slot .card3d::after{content:"";position:absolute;top:4px;bottom:4px;width:1.4px;background:linear-gradient(90deg,#5b5033,#c5b27e,#71623e);transform:rotateY(90deg);pointer-events:none;backface-visibility:visible}
+.retro-card-slot .card3d::before{left:-.7px}
+.retro-card-slot .card3d::after{right:-.7px}
+/* Common opaque printed back. Only the artwork is cropped, never the 3D card body. */
+.enemy-card-back{overflow:hidden}
+.enemy-card-back .back-art-image, .face.back .back-art-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:inherit;pointer-events:none;opacity:1}
+.enemy-card-back.has-back-art, .retro-card-slot .back.has-back-art{background:#071c19!important;border-color:#a88f57!important;box-shadow:0 7px 15px var(--nd-ink-53)!important}
+.has-back-art>.back-seal{visibility:hidden}
+.enemy-card-back.has-back-art::before, .enemy-card-back.has-back-art::after{content:none!important}

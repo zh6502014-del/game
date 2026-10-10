@@ -1,0 +1,1 @@
+.story-shell button:not(.story-scene), .story-stage-header button, .story-read-controls button, .story-actions button{border: 1px solid var(--visual-edge);background: linear-gradient(var(--nd-green), var(--nd-green-deep));color: var(--visual-text);box-shadow: inset 0 1px var(--nd-gold-wash), 0 3px 8px var(--nd-ink-20);border-radius: var(--nd-r-4)}

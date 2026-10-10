@@ -1,0 +1,215 @@
+.card3d{width:100%;height:100%;position:relative;transform-style:preserve-3d;will-change:transform;transform-origin:center center}
+.face{position:absolute;inset:0;border:1px solid #4a505b;border-radius:var(--nd-r-18);overflow:hidden}
+.back{transform:none;background:repeating-linear-gradient(135deg,#151920 0 8px,#222730 8px 16px);display:flex;align-items:center;justify-content:center;color:#858c97;box-shadow:inset 0 0 28px var(--nd-ink-a28);opacity:1}
+.back:after{content:"✦";font-size:34px;opacity:.6;text-shadow:0 0 16px rgba(216,179,106,.18)}
+.front{transform:none;background:linear-gradient(160deg,#2b3038,#101318);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--nd-sp-10);gap:var(--nd-sp-5);opacity:0}
+.front>*{transform:none}
+/* V7.2: flip to the 90° edge, swap faces there, then return to face-on.
+   This intentionally avoids relying on a second 180° transform for the front.
+   The swap occurs while the card is a line, so the user never sees mirrored text. */
+.card3d.lift{animation:lift .34s cubic-bezier(.2,.82,.25,1) forwards}
+.card3d.flip{animation:edgeFlip .68s cubic-bezier(.18,.72,.18,1) forwards}
+.card3d.settle{animation:settle .34s cubic-bezier(.2,.88,.28,1) forwards}
+.card3d.flip .back{animation:backEdgeSwap .68s linear forwards}
+.card3d.flip .front{animation:frontEdgeSwap .68s linear forwards}
+.card3d.settle .front{opacity:1}
+.front .icon{font-size:29px}
+.front b{font-size:var(--nd-fs-15)}
+.front small{font-size:var(--nd-fs-9);color:#a3a8b1;line-height:1.35}
+.card3d.flip .front, .card3d.settle .front{padding:var(--nd-sp-10) var(--nd-sp-8)}
+.card3d.flip .front .icon, .card3d.settle .front .icon{font-size:var(--nd-fs-38);line-height:1}
+.card3d.flip .front b, .card3d.settle .front b{font-size:var(--nd-fs-17);line-height:1.15}
+.card3d.flip .front small, .card3d.settle .front small{font-size:var(--nd-fs-10);line-height:1.35;color:#d2d4d9}
+.card .summary{font-size:var(--nd-fs-10);line-height:1.35;margin-top:5px}
+.card.class-swordsman{border-top:2px solid #b83a3a}
+.card.class-tank{border-top:2px solid #c49a4a}
+.card.class-assassin{border-top:2px solid #7653a8}
+.card.class-gunner{border-top:2px solid #4b7fa8}
+.card.special{box-shadow:inset 0 0 0 1px rgba(216,179,106,.12),0 8px 18px rgba(0,0,0,.22)}
+.card.drag-active{transform:translateY(-10px) scale(1.045) rotate(-1deg)!important;border-color:var(--nd-gold);box-shadow:0 20px 34px rgba(0,0,0,.42),0 0 0 2px rgba(216,179,106,.12),0 0 24px var(--nd-gold-a08);z-index:10}
+.card.drag-near{border-color:var(--nd-gold-hi);box-shadow:0 10px 28px rgba(0,0,0,.3),0 0 0 1px rgba(216,179,106,.16)}
+/* V9.2 — explicit hand-card states */
+.hand .card.hand-blocked{opacity:.38!important;filter:saturate(.35)!important;border-color:#6d5660!important;box-shadow:inset 0 0 0 1px rgba(150,90,105,.12),0 5px 12px rgba(0,0,0,.18)!important;cursor:not-allowed!important}
+.hand .card.hand-blocked .icon{filter:grayscale(.55) saturate(.45)!important}
+.hand .card.hand-disabled{opacity:.30!important}
+.hand .card.nd-drag-source{opacity:.10!important;border-style:dashed!important}
+/* V9.2 — body-level drag ghost */
+.hand .card{touch-action:none!important;-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important;-webkit-tap-highlight-color:transparent!important}
+.hand .card.nd-drag-placeholder{opacity:.16!important}
+.card.nd-drag-ghost{position:fixed!important;left:0;top:0;z-index:2147483647!important;margin:0!important;pointer-events:none!important;transition:none!important;transform-origin:top left!important;opacity:1!important;border-color:var(--nd-gold)!important}
+.card.nd-drag-ghost.nd-drag-valid{border-color:#ead18f!important}
+.card.nd-drag-ghost.nd-drag-invalid{border-color:#986666!important}
+/* V12.12.14 — Coin SFX is procedurally generated in this file; no third-party audio asset/license dependency. */
+/* V12.6 — Combat Feel */
+.arena.phase-placing .slot.you .card3d, .arena.phase-ai .slot.you .card3d, .arena.phase-ai .slot.enemy .card3d{animation:cardCommit .46s cubic-bezier(.2,.82,.25,1) both}
+.arena.phase-reveal .slot.enemy .card3d, .arena.phase-reveal .slot.you .card3d{filter:drop-shadow(0 14px 12px rgba(0,0,0,.36))}
+/* V12.9 — Hand UX */
+.hand .card:not(.hand-disabled):not(.hand-blocked){position:relative}
+.hand .card:not(.hand-disabled):not(.hand-blocked):hover{border-color:rgba(216,179,106,.55);box-shadow:0 14px 28px rgba(0,0,0,.3),0 0 0 1px var(--nd-gold-a08),inset 0 1px 0 rgba(255,255,255,.04)}
+.hand .card:not(.hand-disabled):not(.hand-blocked):focus-visible{transform:translateY(-3px);border-color:#ead18f;box-shadow:0 14px 28px rgba(0,0,0,.3),0 0 0 2px rgba(216,179,106,.18)}
+.hand .card.hand-disabled:not(.hand-blocked){filter:saturate(.58)}
+.card.nd-drag-ghost{will-change:left,top,transform}
+@media(prefers-reduced-motion:reduce){
+.arena.phase-placing .slot.you .card3d, .arena.phase-ai .slot.you .card3d, .arena.phase-ai .slot.enemy .card3d{animation:none!important}
+}
+.enemy-card-back{border:1px solid #4a5260}
+.enemy-card-back:after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;color:#737d8b;font-size:var(--nd-fs-18);opacity:.72}
+.retro-card-slot{display:flex;align-items:center;justify-content:center;position:relative}
+.retro-card-slot.you.ready{border-style:solid}
+.retro-card-slot.you.ready:after{content:"DROP CARD HERE";position:absolute;bottom:-18px;left:0;right:0;text-align:center;color:var(--nd-gold);font:900 7px/1 "Noto Serif TC",serif;letter-spacing:1.7px}
+@media(max-width:700px){
+}
+@media(max-width:520px){
+}
+.duel-hand .card{transform-origin:bottom center;transition:transform .18s ease,box-shadow .18s ease,z-index .18s ease}
+.duel-hand.player-hand .card:nth-child(1){transform:rotate(-7deg) translateY(6px)}
+.duel-hand.player-hand .card:nth-child(2){transform:rotate(-4deg) translateY(2px)}
+.duel-hand.player-hand .card:nth-child(3){transform:rotate(-1deg)}
+.duel-hand.player-hand .card:nth-child(4){transform:rotate(2deg)}
+.duel-hand.player-hand .card:nth-child(5){transform:rotate(5deg) translateY(2px)}
+.duel-hand.player-hand .card:nth-child(6){transform:rotate(8deg) translateY(6px)}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+.duel-hand .card{flex-basis:80px}
+.enemy-card-back{flex-basis:56px}
+.retro-card-slot.slot.you{align-self:center}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+@media(max-width:900px){
+.duel-hand .card{flex-basis:68px !important}
+.enemy-card-back{flex-basis:46px !important}
+}
+@media(max-width:700px){
+.duel-hand .card{flex-basis:54px !important}
+.enemy-card-back{flex-basis:36px !important}
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+}
+@media (max-width:430px){
+}
+/* B. One card proportion rule for both hands. */
+/* D. Explicit spatial ownership: left = player, right = enemy. */
+.retro-card-slot.slot.you{justify-self:center!important}
+.retro-card-slot.slot.enemy{justify-self:center!important;align-self:center}
+@media(max-width:430px){
+}
+.retro-card-slot.slot.you.ready{border-style:solid !important;border-color:var(--nd-gold) !important;background:rgba(216,179,106,.03) !important}
+.duel-hand .card:first-child, .enemy-card-back:first-child{margin-left:0 !important}
+.duel-hand .card .icon{min-height:30px !important}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+.duel-hand .card .icon{min-height:28px !important}
+}
+.retro-card-slot{width:78px !important;height:110px !important;aspect-ratio:78 / 110 !important;box-sizing:border-box !important;justify-self:center !important;align-self:center !important}
+.retro-card-slot.slot.you{grid-area:you !important}
+.retro-card-slot.slot.enemy{grid-area:enemy !important}
+.retro-card-slot.empty{border-color:#414954 !important}
+.retro-card-slot .card3d{position:relative !important}
+/* 5. ONE physical card spec. Hands and placement share the same size/ratio. */
+.duel-hand .card, .enemy-card-back, .retro-card-slot .card3d{flex:0 0 78px !important;width:78px !important;height:110px !important;aspect-ratio:78 / 110 !important;box-sizing:border-box !important;border-radius:var(--nd-r-14) !important}
+.duel-hand .card{margin-left:-18px !important;padding:var(--nd-sp-8) !important}
+.enemy-card-back{margin-left:-18px !important}
+/* Placement cards inherit the hand-card proportion exactly. */
+.retro-card-slot.has-card{background:transparent !important}
+@media(max-width:430px){
+.retro-card-slot{aspect-ratio:72 / 102 !important}
+.retro-card-slot .card3d, .duel-hand .card, .enemy-card-back{aspect-ratio:72 / 102 !important}
+.duel-hand .card{margin-left:-14px !important;padding:var(--nd-sp-7) !important}
+}
+@media (max-width:700px){
+/* One card ratio for both player cards and opponent card backs. */
+}
+@media(max-width:700px){
+/* ===== extracted from <style v1239-test-card-parity-pass> ===== */
+/* V12.12.39-Test — Card parity / placement-zone restoration.
+   UI only: keep the same card component language in hand and on the duel table. */
+.retro-card-slot{width:76px !important;height:106px !important;box-sizing:border-box !important;display:flex !important;align-items:center !important;justify-content:center !important}
+.retro-card-slot.has-card{border-style:solid !important}
+.retro-card-slot .card3d{width:76px !important;height:106px !important;max-width:76px !important;max-height:106px !important}
+.retro-card-slot .face{border-radius:var(--nd-r-12) !important}
+.retro-card-slot .front{padding:var(--nd-sp-8) var(--nd-sp-6) !important;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;text-align:center !important}
+.retro-card-slot .front .icon{line-height:1 !important}
+.retro-card-slot .front b{line-height:1.15 !important;margin:0 !important}
+.duel-hand .card, .enemy-card-back{flex:0 0 76px !important;width:76px !important;height:106px !important;box-sizing:border-box !important}
+.duel-hand .card{padding:var(--nd-sp-8) var(--nd-sp-6) !important;justify-content:center !important;align-items:center !important;text-align:center !important}
+.duel-hand .card .icon{line-height:1 !important}
+.enemy-card-back{border:1px solid #3c4552 !important;margin-left:-20px !important}
+.enemy-card-back:first-child{margin-left:0 !important}
+}
+@media(max-width:430px){
+.retro-card-slot, .retro-card-slot .card3d, .duel-hand .card, .enemy-card-back{width:72px !important;flex-basis:72px !important;height:100px !important}
+.enemy-card-back{margin-left:-18px !important}
+}
+@media (max-width:700px){
+.duel-hand .card, .enemy-card-back, .retro-card-slot, .retro-card-slot .card3d{width:var(--card-w)!important;height:var(--card-h)!important;flex-basis:var(--card-w)!important;box-sizing:border-box!important}
+.duel-hand .card{flex:0 0 var(--card-w)!important;margin-left:-18px!important;padding:var(--nd-sp-7)!important}
+.enemy-card-back{flex:0 0 var(--card-w)!important;margin-left:-18px!important;transform:rotate(var(--r))!important}
+.duel-hand .card:first-child, .enemy-card-back:first-child{margin-left:0!important}
+/* Placement zone is the same card footprint; empty zone remains visible for D&D. */
+.retro-card-slot{display:flex!important;align-items:center!important;justify-content:center!important}
+.retro-card-slot .card3d{max-width:none!important;max-height:none!important}
+}
+@media (max-width:430px){
+.duel-hand .card, .enemy-card-back, .retro-card-slot, .retro-card-slot .card3d{width:var(--card-w)!important;height:var(--card-h)!important;flex-basis:var(--card-w)!important}
+.duel-hand .card{margin-left:-15px!important}
+.enemy-card-back{margin-left:-15px!important}
+}
+.retro-card-slot .card3d, .enemy-card-back{transition:transform .22s cubic-bezier(.22,1,.36,1),filter .22s ease,box-shadow .22s ease,border-color .22s ease!important}
+.retro-card-slot{border-color:rgba(112,122,136,.58)!important;transition:border-color .22s ease,box-shadow .22s ease,background .22s ease,transform .22s cubic-bezier(.22,1,.36,1)!important}
+.retro-card-slot.empty:hover, .retro-card-slot.you.ready{border-color:rgba(216,179,106,.78)!important;background:rgba(216,179,106,.028)!important}
+.retro-card-slot.you.ready{box-shadow:0 0 0 3px var(--nd-gold-a045),inset 0 0 26px var(--nd-gold-a045)!important}
+.retro-card-slot.has-card{border-color:rgba(255,255,255,.06)!important}
+.duel-hand .card, .enemy-card-back, .retro-card-slot .card3d{box-shadow:0 8px 16px var(--nd-ink-a28),inset 0 1px 0 rgba(255,255,255,.045)!important}
+.duel-hand .card:hover{transform:translateY(-8px) scale(1.015)!important;filter:brightness(1.04)!important;z-index:12}
+.enemy-card-back::before{content:"";position:absolute;pointer-events:none}
+.retro-card-slot .face{border-color:#4a5260!important}
+.retro-card-slot .front .icon, .duel-hand .card .icon{text-shadow:0 5px 10px rgba(0,0,0,.35)}
+/* Presentation timeline: the board itself becomes the metronome. */
+.retro-arena.phase-placing .retro-card-slot.you.has-card .card3d{animation:ndCardCommit .38s cubic-bezier(.22,1,.36,1) both}
+.retro-arena.phase-ai .retro-card-slot.you.has-card .card3d, .retro-arena.phase-ai .retro-card-slot.enemy.has-card .card3d{animation:ndCardCommit .38s cubic-bezier(.22,1,.36,1) both}
+.retro-arena.phase-reveal .retro-card-slot.has-card .card3d{filter:drop-shadow(0 14px 14px rgba(0,0,0,.34))}
+/* Reduce small visual jumps caused by browser compositing on mobile. */
+.duel-hand .card, .enemy-card-back{transform:translateZ(0)}
+@media(prefers-reduced-motion:reduce){
+.duel-hand .card, .enemy-card-back, .retro-card-slot{transition:none!important}
+.retro-arena.phase-placing .retro-card-slot.you.has-card .card3d, .retro-arena.phase-ai .retro-card-slot.you.has-card .card3d, .retro-arena.phase-ai .retro-card-slot.enemy.has-card .card3d{animation:none!important}
+}
+.retro-card-slot{border:1px solid #bc9f6155!important;border-radius:var(--nd-r-8)!important;background:linear-gradient(#06121677,#10232177)!important;box-shadow:inset 0 0 0 4px #b59a5510,inset 0 0 30px var(--nd-ink-20)!important;overflow:visible!important}
+.retro-card-slot.empty::before{position:absolute;inset:0;display:grid;place-items:center;font:30px "Noto Serif TC",serif;color:#c6af6c33;pointer-events:none}
+.retro-card-slot.you.nd-drop-target{border-color:#f7dba0!important;box-shadow:0 0 25px #d6b36850,inset 0 0 25px #d6b36820!important}
+.duel-hand .card, .retro-card-slot .front{border-color:#c5a465!important;border-radius:var(--nd-r-8)!important;gap:var(--nd-sp-5)!important}
+.duel-hand .card .icon, .retro-card-slot .front .icon{width:48px;height:48px;font-size:0!important;filter:drop-shadow(0 3px 5px var(--nd-ink-53))}
+.retro-card-slot .front b{font-family:var(--nd-font);position:relative;text-shadow:0 2px 3px var(--nd-black)}
+.duel-hand .card:hover:not(:disabled){border-color:#ffe2a1!important;box-shadow:0 12px 26px var(--nd-ink-60),0 0 14px #dfbe6433,inset 0 0 0 3px #182b27,inset 0 0 0 4px #c7a96999!important}
+.duel-hand .card:disabled{cursor:default}
+.enemy-card-back, .retro-card-slot .back{border-radius:var(--nd-r-8)!important}
+.enemy-card-back::before{inset:7px!important;border:1px solid #b39a5644!important;border-radius:var(--nd-r-3);background:none!important}
+.enemy-card-back::after{content:none!important}
+.retro-card-slot .back span{opacity:0}
+@media(max-width:700px){
+.duel-hand .card .icon, .retro-card-slot .front .icon{width:44px;height:44px}
+}
+.duel-screen .duel-hand .card .icon, .duel-screen .retro-card-slot .front .icon{width:58px;height:58px}
+@media(max-width:700px){
+.duel-screen .duel-hand .card .icon, .duel-screen .retro-card-slot .front .icon{width:40px;height:40px}
+}
+.duel-hand .card .icon, .retro-card-slot .front .icon{position:relative;background:none!important;display:grid!important;place-items:center;color:#e3c889;overflow:hidden}
+.duel-hand .card .icon>.nd-icon, .retro-card-slot .front .icon>.nd-icon{width:90%;height:90%;filter:drop-shadow(0 2px 2px var(--nd-black))}
+.duel-hand .card .icon[data-portrait], .retro-card-slot .front .icon[data-portrait]{position:absolute!important;inset:4px 4px 25px!important;width:auto!important;height:auto!important;border-radius:var(--nd-r-3);isolation:isolate}
+.detail-icon:not([data-portrait])>.nd-icon{width:100%;height:100%}
+.enemy-card-back, .retro-card-slot .back{position:relative}

@@ -77,7 +77,7 @@
  const artById=new Map(window.NDStoryArt.scenes.map(scene=>[scene.id,scene]));
  // A voice label describes the current line; it never adds a person to the scene.
  function speakerPresentation(step,scene={}){
-  const prompts={inspect:'調查',action:'行動',puzzle:'拼合',task:'查證與接力',route:'撤離路線',battle:'戰鬥目標',choice:'選擇',complete:'收錄'};
+  const prompts={inspect:'調查',search:'尋物',action:'行動',puzzle:'拼合',task:'查證與接力',route:'撤離路線',battle:'戰鬥目標',choice:'選擇',complete:'收錄'};
   if(step.type!=='dialogue')return {name:step.type==='narration'?'旁白':step.type==='choice'?'你的選擇':step.type==='complete'?'記憶收錄':'當前任務',kind:step.type==='narration'?'narration':'task',label:step.type==='narration'?'敘述':prompts[step.type]||'提示',actorId:null};
   if(step.speaker==='納爾瓦的錄音'||step.speaker==='父親的錄音')return {name:'納爾瓦',kind:'recording',label:'錄音',actorId:null};
   if(step.speaker==='赫爾曼的信')return {name:'赫爾曼',kind:'offscreen',label:'信',actorId:null};
@@ -339,6 +339,15 @@
   if(STAGE_FIX[step.id]){const [bgKey,cast]=STAGE_FIX[step.id],speaker=step.type==='dialogue'?cast.find(id=>matchesSpeaker(actors[id],step.speaker)):null;const portraits=cast.map((id,index)=>({...actors[id],position:cast.length===1?'center':index?'right':'left',active:id===speaker}));const bg={id:bgKey,...backgrounds[bgKey]};return {id:`${nodeId}:${step.id}:${cast.join('+')}`,kind:'layered',background:bg,actors:portraits,title:bg.title};}
   {const mapped=REWRITE_ART[step.id],image=mapped&&artById.get(mapped);if(image)return {id:`${nodeId}:${step.id}:${mapped}`,kind:'illustration',background:{...image},actors:[],title:image.title};}
   const nextScene=continuation(nodeId,step);if(nextScene)return nextScene;
+  const search=window.NDStorySearchAssets?.scenes[step.searchScene];
+  if(search){
+   const covers=search.covers||[],covered=new Set(covers.flatMap(p=>p.targets));
+   // The story stage uses the same closed covers as the searching surface.
+   const visible=search.placements.filter(p=>p.decorative||!covered.has(p.id));
+   const props=visible.map(p=>({...p,path:window.NDStorySearchAssets.props[p.prop].path,name:window.NDStorySearchAssets.props[p.prop].label}));
+   props.push(...covers.map(p=>({...p,path:window.NDStorySearchAssets.props[p.prop].path,name:p.label,decorative:true})));
+   return {id:`${nodeId}:${step.id}:search`,kind:'search',background:search.background,actors:[],title:search.title,searchScene:step.searchScene,props};
+  }
   const entry=layouts[nodeId]?.[step.frame];
   if(!entry)return null;
   let {background,cast,art}=entry;

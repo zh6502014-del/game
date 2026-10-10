@@ -1,0 +1,126 @@
+.retro-center{color:#6b7480}
+.retro-center .vsx{white-space:nowrap}
+.retro-center .round-mini{border-radius:var(--nd-r-pill)}
+@media(max-width:520px){
+}
+/* V12.12.39-Test v2 — classic card-battle table composition.
+   Visual experiment only: keep gameplay/DOM hooks, reposition existing zones into a
+   left/right hand table with a central combat field. */
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+@media(max-width:900px){
+}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+/* ===== extracted from <style v1239-mobile-final-ui-pass> ===== */
+/* V12.12.39-Test — mobile real-device refinement.
+   Layout/visual only. No gameplay, AI, drag/drop, reveal/FLIP, animation or audio logic. */
+}
+@media (max-width:430px){
+}
+/* C. The center should communicate action, not repeat VS/Round/slot labels. */
+/* VS is the only passive information in the center. */
+.retro-center .line, .retro-center .round-mini{display:none !important}
+@media(max-width:700px){
+}
+@media(max-width:430px){
+}
+/* ===== extracted from <style v1239-card-table-layout-pass> ===== */
+/* V12.12.39-Test — card-table layout pass.
+   Visual/layout only. Restores explicit placement zones and enforces one card spec
+   across hand, enemy back, and revealed placement cards. */
+/* 1. Information architecture follows the physical card table sketch. */
+.duel-screen{display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;grid-template-areas:
+    "player-hud enemy-hud"
+    "center center"
+    "player-hand enemy-hand" !important;align-items:stretch !important}
+/* Keep the center readable but quiet. */
+.retro-center{grid-area:center !important;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;pointer-events:none !important}
+.retro-center .round-mini{display:block !important;border:0 !important;background:transparent !important;padding:0 !important;font:900 8px/1.1 "Noto Serif TC",serif !important;text-align:center !important}
+.retro-center .vsx{display:block !important}
+@media(max-width:430px){
+}
+@media (max-width:700px){
+/* Same physical card geometry in hand and duel placement. */
+.duel-screen{--card-w:72px;--card-h:100px}
+}
+@media (max-width:430px){
+.duel-screen{--card-w:64px;--card-h:90px}
+/* ===== extracted from <style ui-fix-20260910-layout-lock> ===== */
+.duel-screen{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-areas:
+      "player-hud enemy-hud"
+      "center center"
+      "player-hand enemy-hand"!important;align-items:stretch!important}
+}
+.retro-center .round-mini{opacity:.9}
+.duel-screen, .retro-arena, .duel-side{transform:translateZ(0)}
+.retro-center .vsx{font-family:var(--nd-font);color:#dbc38b!important;text-shadow:0 2px 15px var(--nd-black)!important}
+@media(min-width:701px){
+}
+@media(max-width:700px){
+}
+.duel-screen{position:relative;isolation:isolate;gap:0!important;border-bottom:1px solid #ac945337}
+.duel-screen::before{content:"";position:absolute;z-index:-1;border:1px solid #bca06044;pointer-events:none}
+@media(max-width:700px){
+}
+@media(max-width:700px){
+}
+/* One row height for both HUDs; shields keep their value on the same baseline. */
+@media(max-width:700px){
+}
+.duel-screen{min-height:560px!important;padding:var(--nd-sp-18) var(--nd-sp-16) 0!important;row-gap:var(--nd-sp-12)!important}
+.duel-screen::before{inset:92px 0 38px;border-radius:16px;border-color:#957a414d;box-shadow:inset 0 0 0 4px #061116, inset 0 0 0 5px #bd9d4c33,inset 0 0 75px var(--nd-ink-47),0 18px 45px var(--nd-ink-47);transform:perspective(1100px) rotateX(5deg)}
+.retro-center{width:96px!important;min-width:96px!important;justify-self:center;border:1px solid #b1924d55;border-radius:var(--nd-r-round);background:radial-gradient(circle,#3b422a66,#09181ddb 70%);box-shadow:0 0 0 6px #07191b77,0 0 0 7px #c0a25a25,inset 0 0 25px var(--nd-ink-33)}
+.retro-center .vsx{font-size:32px!important;font-weight:400!important;letter-spacing:3px!important}
+.retro-center .round-mini{color:#b5af92!important}
+@media(max-width:700px){
+.duel-screen{gap:var(--nd-sp-10)!important;padding:var(--nd-sp-14) 0 0!important}
+.duel-screen::before{inset:118px 0 25px;border-radius:var(--nd-r-10);transform:none}
+.retro-center .vsx{letter-spacing:1px!important}
+}
+/* Readability and touch controls share the same materials as the cards. */
+.duel-screen::before{background: url('../../../assets/icons/arena-engraving.svg') center/85% auto no-repeat,radial-gradient(ellipse at center,#19382be6,#091b20f5 70%)}
+.duel-screen{height:auto!important;grid-template-rows:minmax(128px,auto) minmax(250px,32svh) 190px!important;max-height:none}
+@media(max-width:700px){
+.duel-screen{min-height:0!important}
+}
+.duel-screen{flex:0 0 auto!important;align-content:start!important}
+body[data-environment=day] .duel-screen::before{box-shadow:inset 0 0 0 4px #17231c, inset 0 0 0 5px #c6b37a44,inset 0 0 70px #18180b66}
+body[data-environment=night] .duel-screen::before{background-color:#18243e!important;box-shadow:inset 0 0 0 4px #101725,inset 0 0 0 5px #a191c066,inset 0 0 70px #0a1027aa}
+.duel-screen::before{transition:background-color .7s,box-shadow .7s;background-image:url('../../../assets/icons/arena-engraving.svg')!important;background-size:85% auto!important;background-position:center!important;background-repeat:no-repeat!important;background-blend-mode:soft-light}
+.retro-center{gap:var(--nd-sp-6)!important}
+.retro-center .round-mini{font-size:var(--nd-fs-12)!important;letter-spacing:0!important}
+@media(max-width:700px){
+.duel-screen{grid-template-rows:auto minmax(220px,27svh) 134px!important}
+.retro-center{width:64px!important;min-width:64px!important;border-radius:32px}
+.retro-center .vsx{font-size:var(--nd-fs-20)!important}
+.retro-center .round-mini{font-size:var(--nd-fs-12)!important;max-width:56px}
+}
+@media(prefers-reduced-motion:reduce){
+.duel-screen::before{transition:none!important}
+}
+body[data-environment=day] .duel-screen::before{background-color:#172c27ed!important}
+/* Resource badges participate in flow so enlarged numerals cannot be clipped. */
+.retro-center{height:auto!important;min-height:96px;padding:var(--nd-sp-12) var(--nd-sp-4)!important}
+.retro-center .round-mini{white-space:normal!important;text-align:center;line-height:1.3!important}
+.retro-center .vsx{line-height:1!important}
+@media(max-width:700px){
+.retro-center{min-height:84px}
+}

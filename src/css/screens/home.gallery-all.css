@@ -1,0 +1,1 @@
+:is(.home-audio, .nd-control, .carousel-arrow, .story-shell button, .story-stage-header button, .story-read-controls button, .story-actions button, .gallery-controls button):hover:not(:disabled){border-color: var(--visual-gold);background: linear-gradient(#2d4739, #173026)}

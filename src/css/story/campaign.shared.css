@@ -1,0 +1,11 @@
+/* Story mode shares the game palette and assets; all layout rules are scoped. */
+.story-entry{display:block;color:var(--gold);text-decoration:none;border:1px solid var(--line);border-radius:var(--nd-r-10)}
+.story-intro{display:flex;justify-content:space-between;align-items:center;padding:38px 0 28px;gap:var(--nd-sp-20)}
+.story-intro h1{font-family:var(--nd-font);font-size:clamp(27px,4vw,46px);font-weight:500;letter-spacing:5px;margin:var(--nd-sp-12) 0}
+.story-overall{display:grid;gap:var(--nd-sp-8);min-width:115px;color:#a9a393;font-size:var(--nd-fs-12)}
+.story-overall strong{font-family:var(--nd-font);font-size:42px;font-weight:400}
+.story-overall small{font-size:var(--nd-fs-18);color:#817867}
+.story-challenge{border-top:1px solid #494133;margin-top:22px;padding-top:12px}
+.story-challenge h3{font-size:var(--nd-fs-16);font-weight:500}
+.story-challenge h3 small{display:block;margin-top:10px;color:#a99c85;font-size:var(--nd-fs-11)}
+.story-meters{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--nd-sp-16);font-size:var(--nd-fs-11);color:#bdb3a0}

@@ -5,38 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#09090b">
 <title>Nightfall Duel｜故事模式</title>
-<link rel="stylesheet" href="src/css/preloader.css?v=c7d7ba1f8995">
-<link rel="stylesheet" href="src/css/ui-font.css?v=5a709afe6c80">
-<link rel="stylesheet" href="src/css/styles.css?v=340f9291917f">
-<link rel="stylesheet" href="src/css/card-theme.css?v=690e7d107da4">
-<link rel="stylesheet" href="src/css/character-art.css?v=9aa9aa069a67">
-<link rel="stylesheet" href="src/css/prestige-ui.css?v=8e199fbd2cda">
-<link rel="stylesheet" href="src/css/unified-art.css?v=5a8808136c4d">
-<link rel="stylesheet" href="src/css/hud.css?v=58d2af596068">
-<link rel="stylesheet" href="src/css/arena-finish.css?v=26a51d83e6c5">
-<link rel="stylesheet" href="src/css/story-puzzles.css?v=ac835ef36b89">
-<link rel="stylesheet" href="src/css/story-route.css?v=92db3c1f5318">
-<link rel="stylesheet" href="src/css/story-maze.css?v=c586ecc034ee">
-<link rel="stylesheet" href="src/css/story-shield-rhythm.css?v=3ce1537c2909">
-<link rel="stylesheet" href="src/css/story-search.css?v=9ab88fd75d72">
+<link rel="stylesheet" href="src/css/dist/story.css?v=80b1e1db63b1">
 <link rel="preload" as="image" href="assets/cards/back-gold-v2.webp">
-<link rel="stylesheet" href="src/css/story-stage.css?v=8218ad3ea365">
-<link rel="stylesheet" href="src/css/story-performance.css?v=9d9f2ef79d90">
-<link rel="stylesheet" href="src/css/story-campaign.css?v=1c43fcfc3949">
-<link rel="stylesheet" href="src/css/png-frames.css?v=4ec164346aa1">
-<link rel="stylesheet" href="src/css/ui-controls.css?v=cad1bad09c44">
-<link rel="stylesheet" href="src/css/card-surface.css?v=a96000aedef3">
-<link rel="stylesheet" href="src/css/layout-landscape.css?v=8415669e2d6b">
-<link rel="stylesheet" href="src/css/story-energy-ui.css?v=9636e268d7c5">
-<link rel="stylesheet" href="src/css/story-battle-fx.css?v=96580be2760a">
-<link rel="stylesheet" href="src/css/visual-system.css?v=bc8bf817eb8e">
-<link rel="stylesheet" href="src/css/story-frames.css?v=580a95260832">
-<link rel="stylesheet" href="src/css/story-sidequest.css?v=e730d446f7e1">
-<link rel="stylesheet" href="src/css/mobile-layout.css?v=20e1b4a9fc63">
 </head>
 <body data-mode="story">
 <div id="app" class="app"></div>
-<script src="src/js/preload-manifest.js?v=a8cc85aa4fa3"></script>
+<script src="src/js/preload-manifest.js?v=cca3e98d229d"></script>
 <script src="src/js/preloader.js?v=f117e7b1f04b"></script>
 <script src="src/js/icon-registry.js?v=5bbe2e1202d8"></script>
 <script src="src/js/card-art.js?v=996a20449389"></script>
@@ -45,24 +19,25 @@
 <script src="src/js/game-art.js?v=0c52153c3b77"></script>
 <script src="src/js/environment.js?v=dcab52c7a19d"></script>
 <script src="src/js/combat-fx.js?v=59324d899f58"></script>
-<script src="src/js/story-search-assets.js?v=f84a5d3502c2"></script>
-<script src="src/js/story-search.js?v=99b5a9e724e4"></script>
+<script src="src/js/story-search-assets.js?v=97b11c28bbe1"></script>
+<script src="src/js/story-archive-wall.js?v=0f8fe74c379b"></script>
+<script src="src/js/story-search.js?v=9b85cab9e913"></script>
 <script src="src/js/story-puzzles.js?v=856fa33e1a91"></script>
 <script src="src/js/story-route.js?v=3f708cffa833"></script>
 <script src="src/js/story-maze.js?v=be5006af5a33"></script>
 <script src="src/js/story-shield-rhythm.js?v=225b10d857b1"></script>
 <script src="src/js/story-mode.js?v=80b026610d2e"></script>
 <script src="src/js/story-campaign-data.js?v=aad99657be20"></script>
-<script src="src/js/story-chapters.js?v=d034b79f78b2"></script>
+<script src="src/js/story-chapters.js?v=9256ae56c0b6"></script>
 <script src="src/js/story-chapter-art.js?v=23f3e368d267"></script>
-<script src="src/js/story-stage-assets.js?v=0aa62761e238"></script>
-<script src="src/js/story-campaign.js?v=848eef5f6e8d"></script>
-<script src="src/js/game.js?v=f9ef3ac3faa4"></script>
+<script src="src/js/story-stage-assets.js?v=2d447b427762"></script>
+<script src="src/js/story-campaign.js?v=f5fa31b6d6f2"></script>
+<script src="src/js/game.js?v=3a0b4377e547"></script>
 <script src="src/js/story-battle-sfx.js?v=460f376089d5"></script>
-<script src="src/js/story-skill-sfx.js?v=6555b6a5bc22"></script>
+<script src="src/js/story-skill-sfx.js?v=18aae4c9044e"></script>
 <script src="src/js/story-energy-engine.js?v=9a3357a7dcf9"></script>
 <script src="src/js/story-battle-fx.js?v=6f334a9af640"></script>
 <script src="src/js/story-skill-fx.js?v=670519ac93ef"></script>
-<script src="src/js/story-energy-ui.js?v=d42bb2c59b20"></script>
+<script src="src/js/story-energy-ui.js?v=580bcde9b559"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+/* Design tokens — single source for type, space, radius and palette values used by the UI modules. */
+:root{
+  --nd-font:"Noto Serif TC",serif;
+  /* type scale (px) */
+  --nd-fs-7:7px;
+  --nd-fs-8:8px;
+  --nd-fs-9:9px;
+  --nd-fs-10:10px;
+  --nd-fs-11:11px;
+  --nd-fs-12:12px;
+  --nd-fs-13:13px;
+  --nd-fs-14:14px;
+  --nd-fs-15:15px;
+  --nd-fs-16:16px;
+  --nd-fs-17:17px;
+  --nd-fs-18:18px;
+  --nd-fs-20:20px;
+  --nd-fs-22:22px;
+  --nd-fs-24:24px;
+  --nd-fs-28:28px;
+  --nd-fs-30:30px;
+  --nd-fs-38:38px;
+  /* spacing scale (px) */
+  --nd-sp-2:2px;
+  --nd-sp-3:3px;
+  --nd-sp-4:4px;
+  --nd-sp-5:5px;
+  --nd-sp-6:6px;
+  --nd-sp-7:7px;
+  --nd-sp-8:8px;
+  --nd-sp-10:10px;
+  --nd-sp-12:12px;
+  --nd-sp-14:14px;
+  --nd-sp-16:16px;
+  --nd-sp-18:18px;
+  --nd-sp-20:20px;
+  --nd-sp-24:24px;
+  /* radius scale */
+  --nd-r-2:2px;
+  --nd-r-3:3px;
+  --nd-r-4:4px;
+  --nd-r-6:6px;
+  --nd-r-8:8px;
+  --nd-r-10:10px;
+  --nd-r-12:12px;
+  --nd-r-14:14px;
+  --nd-r-18:18px;
+  --nd-r-pill:999px;
+  --nd-r-round:50%;
+  /* palette */
+  --nd-black:#000;
+  --nd-gold:#d8b36a;
+  --nd-gold-a045:rgba(216,179,106,.045);
+  --nd-gold-a08:rgba(216,179,106,.08);
+  --nd-gold-a10:rgba(216,179,106,.10);
+  --nd-gold-dim:#a78d58;
+  --nd-gold-hi:#e5c47b;
+  --nd-gold-line:#a58a5666;
+  --nd-gold-pale:#f5dca1;
+  --nd-gold-wash:#ead7a310;
+  --nd-gold-wash-2:#e8d3a31a;
+  --nd-green:#20392f;
+  --nd-green-deep:#10261f;
+  --nd-ink-20:#0003;
+  --nd-ink-27:#0004;
+  --nd-ink-33:#0005;
+  --nd-ink-40:#0006;
+  --nd-ink-47:#0007;
+  --nd-ink-53:#0008;
+  --nd-ink-60:#0009;
+  --nd-ink-67:#000a;
+  --nd-ink-73:#000b;
+  --nd-ink-80:#000c;
+  --nd-ink-a28:rgba(0,0,0,.28);
+  --nd-line:#343a45;
+  --nd-line-2:#3a404b;
+  --nd-surface:#11141a;
+  --nd-surface-2:#171a21;
+  --nd-white:#fff;
+  --nd-white-a02:rgba(255,255,255,.018);
+}

@@ -1,0 +1,28 @@
+.audio-actions>.nd-control, .detail-actions>.nd-control:not(.start), .copy-log-btn.nd-control, .story-battle-banner>.nd-control, .story-log-dialog>.nd-control{font-size:var(--nd-fs-14);letter-spacing:0}
+.result-screen>.nd-control{display:flex!important;width:min(350px,100%);margin:var(--nd-sp-16) auto;white-space:normal}
+.story-header>a.nd-control{min-width:44px;font-size:var(--nd-fs-14);padding:var(--nd-sp-8) var(--nd-sp-12);box-shadow:none;background:transparent;border-color:transparent}
+.story-battle-banner>.nd-control{margin:0 0 var(--nd-sp-8) var(--nd-sp-16)}
+@media(max-width:700px){
+.audio-actions>.nd-control{flex:1 1 160px;min-width:0}
+.story-header>a.nd-control{padding:var(--nd-sp-8)}
+}
+/* 2026-09-28 可讀性：出牌限制提示、狀態徽章說明、回合結算摘要、章節解鎖條件 */
+.nd-hint-toast{position:fixed;z-index:9000;max-width:min(320px,calc(100vw - 16px));padding:var(--nd-sp-8) var(--nd-sp-12);border:1px solid #c9a96a;border-radius:var(--nd-r-4);background:#07181af2;color:#f3e6c4;font-size:var(--nd-fs-13);line-height:1.5;box-shadow:0 8px 20px var(--nd-ink-67);pointer-events:none;animation:nd-hint-in .16s ease-out}
+.nd-status-tip{font:inherit;color:inherit;cursor:help;appearance:none;-webkit-appearance:none}
+.nd-status-tip:focus-visible{outline:2px solid var(--nd-gold-pale);outline-offset:2px}
+.nd-round-summary{position:absolute;left:50%;top:calc(100% + 8px);translate:-50% 0;display:flex;gap:var(--nd-sp-6);white-space:nowrap;pointer-events:none;animation:nd-hint-in .2s ease-out}
+.nd-round-summary>span{display:flex;align-items:baseline;gap:var(--nd-sp-4);padding:var(--nd-sp-3) var(--nd-sp-8);border:1px solid #b89a5c80;border-radius:var(--nd-r-3);background:#06141acc;color:#f1e2bd;font-size:var(--nd-fs-12);font-weight:600}
+.nd-round-summary small{color:#b8a987;font-weight:400;font-size:var(--nd-fs-10)}
+@media(prefers-reduced-motion:reduce){
+.nd-hint-toast, .nd-round-summary{animation:none}
+}
+@media (orientation:landscape) and (max-height:520px){
+#app:has(.duel-screen) .topbar{display:none!important}
+}
+.nd-control:not(.start):not(.audio-toggle){border: 1px solid var(--visual-edge);background: linear-gradient(var(--nd-green), var(--nd-green-deep));color: var(--visual-text);box-shadow: inset 0 1px var(--nd-gold-wash), 0 3px 8px var(--nd-ink-20);border-radius: var(--nd-r-4)}
+.nd-control.start, .nd-control.start:hover:not(:disabled), .setup-footer .start, .setup-footer .start:hover:not(:disabled), .detail-actions .start{background: linear-gradient(120deg, #d2b57a, #b09159);color: #13241b;border-color: #e3c98b;box-shadow: inset 0 1px #fff0b955, 0 5px 16px var(--nd-ink-33);text-shadow: none}
+.setup-footer .skin-controls{background: #0c211bd9;border-color: var(--visual-edge)}
+.skin-controls button[aria-pressed=true]{border-color: var(--visual-gold);box-shadow: inset 0 -3px var(--visual-gold)}
+@media (max-width:899px), (max-height:520px){
+body:has(.duel-screen.nd-stage) #app>.topbar{display:none!important}
+}

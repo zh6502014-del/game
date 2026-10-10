@@ -1,0 +1,36 @@
+.story-shell .campaign-routes button[aria-pressed=true]{background: #304533;border-color: var(--visual-gold);color: var(--visual-gold-light);box-shadow: inset 0 -3px var(--visual-gold)}
+.story-shell .campaign-node-grid button{position: relative;background: var(--visual-enamel);border: 1px solid #9c84546e;padding: var(--nd-sp-24);gap: var(--nd-sp-14);box-shadow: var(--visual-shadow)}
+.story-shell .campaign-node-grid button:not(:disabled):hover{background: radial-gradient(ellipse at top left, #49634766, transparent 75%), #152d23}
+.story-shell .campaign-node-grid button:disabled{opacity: .65;box-shadow: none;border-style: dashed;background: #0b1f18c9}
+.story-shell .story-puzzle-choices button{background: #1a3227;border-color: var(--visual-edge)}
+.story-shell .story-skin > img{display: block;width: 100%;height: auto;aspect-ratio: 3/4;object-fit: cover;object-position: center top}
+.story-shell .story-skin > div{position: relative;width: 100%;padding: var(--nd-sp-16);flex: 1;background: linear-gradient(#183125, #0d221b);border-top: 1px solid var(--visual-edge)}
+.story-shell .story-skin h3{font-size: var(--nd-fs-17);line-height: 1.5;margin: 0 0 var(--nd-sp-8);color: var(--visual-gold-light)}
+.story-shell .story-skin :is(p, small){font-size: var(--nd-fs-12);color: var(--visual-muted);line-height: 1.7}
+.story-shell .story-skin > div button{font-size: var(--nd-fs-12);width: 100%;margin-top: 8px}
+.story-shell .story-scene span{background: #11281f;color: var(--visual-gold-light);font-size: var(--nd-fs-13);padding: var(--nd-sp-12) var(--nd-sp-16);line-height: 1.6}
+.story-performance .story-line-speaker strong, .story-performance .story-speaker strong{color: var(--visual-gold-light)}
+@media (max-width: 700px){
+.story-shell .campaign-node-grid button{padding: var(--nd-sp-20)}
+.story-shell .story-skin > div{padding: var(--nd-sp-12)}
+.story-shell .story-skin h3{font-size: var(--nd-fs-16)}
+}
+@media (max-width: 390px){
+.story-shell .story-skin > img{aspect-ratio: 1}
+}
+@media (max-width:899px), (max-height:520px){
+.story-performance .story-read-controls button{min-width:96px;min-height:44px}
+.story-performance .story-stage-header h1{margin:var(--nd-sp-4) 0}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+.story-performance .story-stage-header>div{grid-column:2;grid-row:1;order:0;width:auto;margin:0!important}
+.story-performance .story-stage-header>button:first-child{grid-column:1;grid-row:1}
+.story-performance .story-stage-header>button:last-child{grid-column:3;grid-row:1}
+.story-performance .story-stage-header button{min-width:44px;padding-inline:12px}
+}
+@media (max-width:620px){
+.story-performance .story-stage-header>div{margin-top:2px}
+}
+@media (hover:none) and (pointer:coarse){
+.story-performance button kbd{display:none!important}
+}

@@ -1,0 +1,4 @@
+.story-layout{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.6fr);gap:26px;align-items:start}
+.story-reader{padding:26px 30px;border:1px solid #393a38;border-radius:var(--nd-r-6)}
+.story-reader h2{font-family:var(--nd-font);font-size:27px;font-weight:500;letter-spacing:2px;margin:13px 0 var(--nd-sp-20)}
+.story-reader p{line-height:2;font-size:var(--nd-fs-14)}

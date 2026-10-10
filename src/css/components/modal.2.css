@@ -1,0 +1,41 @@
+.audio-label small{display:block;color:#777f8d;font-weight:600;margin-top:3px}
+.audio-range{width:100%;cursor:pointer}
+.audio-value{color:var(--nd-gold);font-weight:900}
+.audio-actions{display:flex;gap:var(--nd-sp-8);margin-top:14px}
+.audio-reset{flex:1;border:1px solid var(--nd-line-2);background:var(--nd-surface);border-radius:var(--nd-r-12);padding:var(--nd-sp-10) var(--nd-sp-12);font-weight:850;cursor:pointer}
+.audio-mute{flex:1;border:1px solid #4b3e26;background:linear-gradient(180deg,#2a2418,#18150f);color:#f0d18d;border-radius:var(--nd-r-12);padding:var(--nd-sp-10) var(--nd-sp-12);font-weight:900;cursor:pointer}
+@media(max-width:560px){
+.audio-row{grid-template-columns:1fr 44px}
+.audio-range{grid-column:1 / -1;grid-row:2}
+.audio-value{grid-column:2;grid-row:1}
+.audio-label{grid-column:1;grid-row:1}
+}
+.audio-toggle{position:fixed;z-index:50;border:1px solid rgba(255,255,255,.14);background:rgba(10,12,18,.78);color:#dfe7f2;border-radius:var(--nd-r-10);padding:var(--nd-sp-7) var(--nd-sp-10);font:800 12px/1 "Noto Serif TC",serif;cursor:pointer;backdrop-filter:blur(8px)}
+.setup-footer .rules-btn{margin-top:8px}
+.rules-btn{margin-top:8px}
+@media (max-width:700px){
+.audio-toggle{position:fixed;padding:var(--nd-sp-8) 9px;border-radius:var(--nd-r-12);display:grid;place-items:center;z-index:60}
+}
+@media(max-width:430px){
+.audio-toggle{padding:var(--nd-sp-7);border-radius:11px}
+}
+.rules-btn, .audio-settings-btn{background:linear-gradient(180deg,#172b2e,#0c1c21)!important;border-color:#9e895b44!important;color:#c3c3af!important;border-radius:var(--nd-r-8)!important}
+.rules-modal, .audio-modal, .modal{background:linear-gradient(145deg,#1a3031,#0b191e)!important;border-color:#a48d5855!important}
+.setup-footer .audio-settings-btn{grid-column:1;grid-row:1;justify-self:end}
+.setup-footer .rules-btn{grid-column:3;grid-row:1;justify-self:start}
+.setup-footer .audio-settings-btn, .setup-footer .rules-btn{width:auto!important;margin:0!important;background:none!important;border:0!important;box-shadow:none!important;font-size:var(--nd-fs-11)!important;padding:var(--nd-sp-12)!important}
+.rules-overlay, .audio-overlay{backdrop-filter:blur(12px);background:#020b0ed9!important;align-items:center!important;z-index:80}
+.rules-modal, .audio-modal{max-height:85svh!important}
+.rules-head, .audio-head{background:#12282b!important}
+.rules-title, .audio-title{font-family:var(--nd-font);color:#e6d5ac;font-weight:500}
+.rules-close, .audio-close{min-height:40px;color:#deca98!important;background:#152c2c!important;border:1px solid #9f8b5855!important}
+.audio-group-title{color:#c3ab72!important;letter-spacing:4px}
+.audio-sub{color:#a6b1a8!important}
+.result-screen>.audio-settings-btn{background:none!important;border:0!important;font-size:var(--nd-fs-12)!important}
+.audio-toggle{right:22px!important;top:19px!important;width:34px!important;height:34px!important;font-size:var(--nd-fs-13)!important;opacity:.8}
+@media(max-width:700px){
+.setup-footer .audio-settings-btn{grid-row:2;grid-column:1}
+.setup-footer .rules-btn{grid-row:2;grid-column:2}
+.audio-toggle{right:13px!important;top:10px!important}
+}
+.rules-title, .audio-title{font-size:23px;letter-spacing:3px}

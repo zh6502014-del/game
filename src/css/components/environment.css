@@ -1,0 +1,17 @@
+.environment-cast{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;overflow:hidden}
+.duel-screen>.environment-cast{inset:136px 0 10px;border-radius:var(--nd-r-12);z-index:0}
+.cast-tank{background:radial-gradient(ellipse at 20% 80%,transparent 30%,#8fd1ce80 55%,transparent 75%);box-shadow:inset 0 0 65px #91c8ca55}
+.cast-assassin{background:linear-gradient(100deg,#08051666 20%,#a58bc75c 50%,#08051677 80%)}
+.cast-gunner{background:radial-gradient(ellipse at 70% 60%,#d48b5688,transparent 70%);box-shadow:inset 0 -40px 100px #9f483c66}
+.cast-domain{background:url('../../../assets/icons/arena-engraving.svg') center/85% no-repeat,radial-gradient(ellipse,#90be8755,transparent);box-shadow:inset 0 0 80px #a8cc8077}
+.environment-cast[data-side=ai]{transform:scaleX(-1)}
+@media(prefers-reduced-motion:reduce){
+.environment-cast{display:none}
+}
+/* Directional scene accents move through the field; the outer layer controls intensity. */
+.cast-swordsman, .cast-spirit{background:none}
+.cast-swordsman::before, .cast-spirit::before{content:"";position:absolute;inset:-50%;background:linear-gradient(135deg,transparent 43%,#f8e6bca0 49%,transparent 56%);animation:sceneSweep .3s ease-out both}
+.cast-spirit::before{background:linear-gradient(155deg,transparent 42%,#fff1c8a0 49%,#c6ab6770 51%,transparent 57%)}
+.cast-assassin::before{content:"";position:absolute;inset:-20%;background:linear-gradient(100deg,transparent 35%,#a088c15c 50%,transparent 63%);animation:sceneSweep .3s ease-out both}
+.cast-tank::before{content:"";position:absolute;inset:8%;border:2px solid #b2e4de99;border-radius:var(--nd-r-round);box-shadow:0 0 24px #87b6b966;animation:sceneWard .3s ease-out both}
+.cast-gunner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 65%,#f6c178 0 2px,transparent 3px),radial-gradient(circle at 62% 73%,#f6c178 0 2px,transparent 3px),radial-gradient(circle at 78% 56%,#f6c178 0 1px,transparent 3px);animation:sceneEmbers .3s ease-out both}

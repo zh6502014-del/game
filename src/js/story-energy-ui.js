@@ -189,6 +189,8 @@ function node(tag, cls, text) {
     if(!legal)card.append(node('span','seb-skill-lock',reason));
     holder.append(card);return holder;
   }
+  // STORY-BATTLE-PORTRAIT-087: phones can now play upright (story-battle-mobile.css); the rotate prompt stays available but off.
+  const PORTRAIT_GATE=false;
   function rotatePrompt(s) {
     const box=node('section','seb-rotate');box.setAttribute('aria-label','請旋轉裝置');
     const icon=node('span','seb-rotate-icon','↻');icon.setAttribute('aria-hidden','true');
@@ -226,7 +228,7 @@ function node(tag, cls, text) {
     const hand=node('footer','seb-hand');hand.setAttribute('aria-label','全隊常駐招式卡');
     const handLabel=node('div','seb-hand-label');
     const prompt=s.pending?(s.pending.type==='attack'?'選擇目標':'選擇招式目標'):(s.busy?'戰鬥演出中':s.message||'選擇角色或招式，再選擇目標');
-    handLabel.append(node('strong','',prompt),node('span','',s.pending?'點擊亮框角色，或按取消。':'拖曳可直接操作；點角色圖片查看說明；按 E 結束回合。'));
+    handLabel.append(node('strong','',prompt),node('span','',s.pending?'點擊亮框角色，或按取消。':(window.matchMedia?.('(hover:none) and (pointer:coarse)').matches?'拖曳可直接操作；點角色圖片查看說明。':'拖曳可直接操作；點角色圖片查看說明；按 E 結束回合。')));
     const cards=node('div','seb-hand-cards');for(const u of st.units.filter(x=>x.side==='player')){cards.append(skillCard(s,u));if(u.cone&&u.hp>0)cards.append(coneCard(s,u));}
     const rail=node('aside','seb-action-rail');rail.setAttribute('aria-label','回合操作');
     // The selected-name label ("凜 · 普攻") was removed with the attack button; the rail now only holds cancel + end turn.
@@ -704,7 +706,7 @@ function node(tag, cls, text) {
     else if(!e.shiftKey&&(document.activeElement===last||!scope.contains(document.activeElement))){e.preventDefault();first.focus();}
   }
   function resize(s) {
-    const next=innerWidth<=1024&&innerHeight>innerWidth;
+    const next=(PORTRAIT_GATE&&innerWidth<=1024&&innerHeight>innerWidth);
     cancelGesture(s);hidePreview(s);s.pending=null;
     if(s.busy)cancelPlayback(s,false);
     if(next!==s.rotated){closeModal(s);s.rotated=next;}
@@ -730,7 +732,7 @@ function node(tag, cls, text) {
     live.setAttribute('role','status');live.setAttribute('aria-live','polite');live.setAttribute('aria-atomic','true');fx.setAttribute('aria-hidden','true');
     const arrow=document.createElementNS('http://www.w3.org/2000/svg','svg');arrow.setAttribute('class','seb-drag-arrow');arrow.setAttribute('aria-hidden','true');
     root.append(shell,rotate,fx,arrow,live);
-    const s={config:copied,state,engine,root,shell,live,fx,arrow,rotate,onReturn,actorId:'hero',pending:null,message:'',busy:false,view:null,returned:false,modal:null,gesture:null,playToken:0,waiters:new Map(),animations:new Set(),poses:new Map(),suppressClickUntil:0,rotated:innerWidth<=1024&&innerHeight>innerWidth,reduced:matchMedia('(prefers-reduced-motion: reduce)'),previousFocus:document.activeElement,bodyOverflow:document.body.style.overflow,inertElements:[]};
+    const s={config:copied,state,engine,root,shell,live,fx,arrow,rotate,onReturn,actorId:'hero',pending:null,message:'',busy:false,view:null,returned:false,modal:null,gesture:null,playToken:0,waiters:new Map(),animations:new Set(),poses:new Map(),suppressClickUntil:0,rotated:(PORTRAIT_GATE&&innerWidth<=1024&&innerHeight>innerWidth),reduced:matchMedia('(prefers-reduced-motion: reduce)'),previousFocus:document.activeElement,bodyOverflow:document.body.style.overflow,inertElements:[]};
     s.fxCanvas=document.createElement('canvas');s.fxCanvas.className='seb-skill-canvas';s.fxCanvas.setAttribute('aria-hidden','true');root.append(s.fxCanvas);
     for(const el of [...document.body.children])if(el instanceof HTMLElement&&!['SCRIPT','STYLE','LINK'].includes(el.tagName)){s.inertElements.push([el,el.inert]);el.inert=true;}
     root.addEventListener('click',e=>onClick(s,e));root.addEventListener('keydown',e=>onKey(s,e),true);

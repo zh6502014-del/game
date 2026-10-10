@@ -1,0 +1,31 @@
+/*
+ * Nightfall Duel — CSS maintenance map
+ * Layer order is intentionally preserved from the Test baseline.
+ * Base/components → responsive overrides → final UI polish/motion.
+ * Only provably redundant root rules are removed; cascade-sensitive overrides stay intact.
+ */
+/* ===== extracted from <style style-block-1> ===== */
+:root{--bg:#07080b;--surface:#101217;--surface2:var(--nd-surface-2);--line:#2b303a;--danger:#ef7777;--good:#83d39a;--blue:#7da7d9;--cyan:#76c7d8;--radius:18px;--card-w:122px;--card-h:140px;--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px}
+*{box-sizing:border-box}
+html, body{margin:0;font-family:var(--nd-font)}
+body{position:relative}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;mask-image:linear-gradient(to bottom,black,transparent 88%)}
+button{font:inherit;color:inherit}
+@media(prefers-reduced-motion:reduce){
+*, *::before, *::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body[data-mode="story"]{background:radial-gradient(ellipse at 75% 0%,#262524 0,transparent 55%),#0b0e12}
+/* Nightfall Atelier — presentation only. Loaded after the legacy cascade.
+   Important declarations bridge existing important rules without moving them. */
+:root{--accent:#d4b477;--gold:#ebd29c;--text:#f0eadc;--muted:#97aaa8;--ornament:rgba(199,165,99,.38)}
+html, body{background-image:radial-gradient(ellipse at 50% 0,rgba(52,94,87,.36),transparent 64%),radial-gradient(ellipse at 0 80%,rgba(140,101,44,.08),transparent 50%);color:var(--text)}
+body:before{background-image:repeating-linear-gradient(45deg,transparent 0 7px,rgba(192,173,130,.04) 7px 8px);background-size:auto}
+/* Immersive game shell: lobby, arena, overlays and results share one stage. */
+html{min-height:100%;background:#061012}
+body{min-height:100svh}
+body::after{content:"";position:fixed;border:1px solid #ad93572c;pointer-events:none;z-index:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,0 0)}
+@media(max-width:700px){
+}
+/* Benchmark pass: artwork hierarchy, readable resources, crafted materials.
+   Original UI assets; references documented in UI-BENCHMARKS.md. */
+:root{--ivory:#f1e5c7;--antique:#c5a469;--bronze:#765936;--ink:#081419;--hero-h:370px;--hero-w:260px}

@@ -1,0 +1,5 @@
+@media (min-width:900px) and (min-height:521px) and (orientation:landscape){
+/* ---------- top round badge ---------- */
+body:has(.duel-screen.nd-stage) #app>.topbar{position:absolute!important;left:50%!important;top:calc(50svh - 450 * var(--u) + 22 * var(--u))!important;z-index:7!important;transform:translateX(-50%)!important;width:auto!important;min-height:0!important;margin:0!important;padding:calc(8 * var(--u)) calc(36 * var(--u)) calc(10 * var(--u))!important;border:0!important;background:linear-gradient(#0f2a2bee,#081a1cee)!important;box-shadow:inset 0 0 0 1px var(--gold2)!important;clip-path:polygon(calc(14 * var(--u)) 0,calc(100% - 14 * var(--u)) 0,100% 50%,calc(100% - 14 * var(--u)) 100%,calc(14 * var(--u)) 100%,0 50%)}
+body:has(.duel-screen.nd-stage) #app>.topbar::after{display:none!important}
+}

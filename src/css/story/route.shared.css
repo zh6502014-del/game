@@ -1,0 +1,9 @@
+.story-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--nd-sp-8);margin-bottom:18px}
+.story-route button{padding:var(--nd-sp-16) var(--nd-sp-12);display:grid;gap:9px;border-color:#36383a}
+.story-route button[aria-current="step"]{border-color:#b59863;background:#24231f}
+.story-route span{font-size:var(--nd-fs-20);font-family:var(--nd-font);color:#c5a56a}
+.story-route b{font-size:var(--nd-fs-13);font-weight:500;line-height:1.6}
+.story-route small{font-size:var(--nd-fs-10);color:#b3a58e}
+@media(max-width:620px){
+.story-route b{font-size:var(--nd-fs-12)}
+}

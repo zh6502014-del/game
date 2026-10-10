@@ -1,0 +1,11 @@
+@media (min-width:900px) and (min-height:521px) and (orientation:landscape){
+#app .duel-screen.nd-stage .retro-card-slot{width:calc(190 * var(--u))!important;height:calc(270 * var(--u))!important;min-width:0!important;max-width:none!important;max-height:none!important;flex:0 0 auto!important;border-radius:calc(9 * var(--u))!important}
+#app .duel-screen.nd-stage .retro-card-slot .card3d{width:100%!important;height:100%!important;min-width:0!important;max-width:none!important;max-height:none!important;flex-basis:auto!important}
+#app .duel-screen.nd-stage .retro-card-slot.you{order:0}
+#app .duel-screen.nd-stage .retro-card-slot.enemy{order:2}
+#app .duel-screen.nd-stage .duel-hand .card{/* whole pixels: the drag ghost copies offsetWidth/offsetHeight, which round */
+ width:round(calc(120 * var(--u)),1px)!important;height:round(calc(172 * var(--u)),1px)!important;min-width:0!important;max-width:none!important;max-height:none!important;flex-basis:round(calc(120 * var(--u)),1px)!important}
+#app .duel-screen.nd-stage .duel-hand .card .icon[data-card-illustration], body:has(.duel-screen.nd-stage) .card.nd-drag-ghost .icon[data-card-illustration]{inset:4px 4px calc(32 * var(--u))!important}
+#app .duel-screen.nd-stage .enemy-card-back{width:calc(120 * var(--u))!important;height:calc(172 * var(--u))!important;min-width:0!important;max-width:none!important;max-height:none!important;flex-basis:calc(120 * var(--u))!important;margin-left:calc(-54 * var(--u))!important}
+#app .duel-screen.nd-stage .enemy-card-back:first-child{margin-left:0!important}
+}

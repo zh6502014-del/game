@@ -1,0 +1,12 @@
+.story-reader>button{background:#ad8d57;color:#100f0e;font-weight:600;border:0;width:100%;text-align:center}
+.story-actions{display:grid;gap:var(--nd-sp-8)}
+.story-actions button{font-size:var(--nd-fs-12);line-height:1.8}
+@media(max-width:850px){
+.story-layout{grid-template-columns:240px minmax(0,1fr);gap:15px}
+.story-reader{padding:var(--nd-sp-20)}
+}
+@media(max-width:620px){
+.story-layout{grid-template-columns:1fr}
+.story-reader{padding:var(--nd-sp-20)}
+}
+.story-scene{display:block!important;width:100%;padding:0!important;overflow:hidden;margin:var(--nd-sp-16) 0;background:#0b1115!important}

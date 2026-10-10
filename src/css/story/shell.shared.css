@@ -1,0 +1,24 @@
+.story-shell{position:relative}
+.story-shell button{border:1px solid #544735;background:#171a1e;border-radius:5px;padding:var(--nd-sp-12) var(--nd-sp-16);cursor:pointer;text-align:left;transition:background .15s}
+.story-shell button:hover:not(:disabled){background:#33302a}
+.story-shell button:disabled{opacity:.4;cursor:not-allowed}
+.story-shell a{color:#c9bb9d;text-decoration:none}
+.story-header{display:flex;align-items:center;border-bottom:1px solid #494133;padding-bottom:20px;font-size:var(--nd-fs-12)}
+.story-header>span{letter-spacing:3px;color:#968d7c}
+.story-eyebrow{font-size:var(--nd-fs-11);letter-spacing:3px;color:#c5a56a;text-transform:uppercase}
+.story-intro p:not(.story-eyebrow){color:#aaa99f;font-size:var(--nd-fs-14)}
+.story-roles{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--nd-sp-12)}
+.story-roles button{display:flex;align-items:center;gap:15px;border-color:#373a3d;padding:var(--nd-sp-16)}
+.story-roles button[aria-pressed="true"]{background:linear-gradient(100deg,#383023,#191a1d);border-color:#c2a164}
+.story-roles img{width:30px;height:30px}
+.story-roles span{font-size:var(--nd-fs-17)}
+.story-roles small{display:block;color:#a39a86;font-size:var(--nd-fs-11);margin-top:7px}
+.story-notice{min-height:19px;margin:var(--nd-sp-12) 0;color:#ddc38e;font-size:var(--nd-fs-13)}
+.story-portrait{height:620px;position:relative;overflow:hidden;border:1px solid #4b4233;background:#171a1d;border-radius:var(--nd-r-6)}
+.story-portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.story-portrait>div{position:absolute;bottom:0;left:0;right:0;padding:100px 28px 30px;background:linear-gradient(transparent,rgba(7,10,14,.94) 48%)}
+.story-portrait span{font-size:var(--nd-fs-11);letter-spacing:4px;color:#dbc396}
+.story-portrait h2{font-family:var(--nd-font);font-size:35px;letter-spacing:5px;font-weight:400;margin:var(--nd-sp-12) 0}
+.story-portrait p{font-size:var(--nd-fs-13);color:#d5cdbd;line-height:1.8}
+.story-portrait small{color:#aaa192;font-size:var(--nd-fs-10)}
+.story-objective{border-left:2px solid #ae8c53;padding:0 var(--nd-sp-18);margin:var(--nd-sp-24) 0}

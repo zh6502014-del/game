@@ -1,0 +1,5 @@
+/* ART-UI-021 — shared presentation layer.
+   Enamel surfaces, restrained antique metal, warm reading ink. Artwork keeps its
+   own palette. No card geometry, game state, hit-target or 3D face rules live here. */
+:root{--visual-ink: #081916;--visual-panel: #102720;--visual-raised: #1a332b;--visual-gold: #c2a36b;--visual-gold-light: #ecd5a3;--visual-edge: #9c845452;--visual-text: #efe6d2;--visual-muted: #b8c4b8;--visual-enamel: radial-gradient(ellipse at 12% 0%, #35534352, transparent 65%), linear-gradient(125deg, #132c25, #0a1c18);--visual-shadow: 0 16px 40px var(--nd-ink-40), inset 0 1px var(--nd-gold-wash);--nd-control-text: var(--visual-text);--nd-control-gold: var(--visual-gold);--nd-control-ink: var(--visual-ink);--nd-control-edge: var(--visual-edge)}
+:is(button, a, summary, input):focus-visible{outline-color: var(--visual-gold-light);outline-offset: 4px}

@@ -1,0 +1,3 @@
+.story-route-controls > button{border: 1px solid var(--visual-edge);background: linear-gradient(var(--nd-green), var(--nd-green-deep));color: var(--visual-text);box-shadow: inset 0 1px var(--nd-gold-wash), 0 3px 8px var(--nd-ink-20);border-radius: var(--nd-r-4)}
+.story-route-controls [data-route-confirm]{background: linear-gradient(120deg, #d2b57a, #b09159);color: #13241b;border-color: #e3c98b;box-shadow: inset 0 1px #fff0b955, 0 5px 16px var(--nd-ink-33);text-shadow: none}
+.story-route-dialog{background: var(--visual-enamel) !important;color: var(--visual-text);border-color: var(--visual-edge);box-shadow: 0 24px 80px var(--nd-ink-73), inset 0 1px var(--nd-gold-wash-2) !important}

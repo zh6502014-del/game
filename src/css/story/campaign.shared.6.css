@@ -1,0 +1,22 @@
+.story-gallery p{color: var(--visual-muted)}
+/* Collected art is a picture with its own caption rail. Keeping that rail in
+   document flow prevents long unlock descriptions from covering the portrait. */
+.story-shell .story-skin{aspect-ratio: auto;display: flex;flex-direction: column;background: #0d221b;border-color: var(--visual-edge);border-radius: var(--nd-r-4);box-shadow: var(--visual-shadow)}
+@media (max-width: 700px){
+.story-shell .story-overall{padding: var(--nd-sp-12)}
+.story-shell .story-collection{padding: var(--nd-sp-16)}
+.story-shell .story-cards{gap: var(--nd-sp-12)}
+}
+@media (max-width: 390px){
+.story-shell .story-cards{grid-template-columns: 1fr}
+}
+@media (prefers-reduced-motion: reduce){
+.campaign-node-grid button{transition: none}
+}
+@media (max-width:899px), (max-height:520px){
+.story-log-dialog{box-sizing:border-box;max-height:calc(100dvh - max(8px,env(safe-area-inset-top)) - max(8px,env(safe-area-inset-bottom)));overflow:auto;overscroll-behavior:contain;padding:var(--nd-sp-16)}
+.story-performance button .story-key{display:none!important}
+}
+@media (hover:none) and (pointer:coarse){
+.story-performance button .story-key{display:none!important}
+}

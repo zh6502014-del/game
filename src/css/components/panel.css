@@ -1,0 +1,50 @@
+.muted{color:var(--muted);font-size:var(--nd-fs-12)}
+.panel{background:linear-gradient(180deg,rgba(22,25,32,.96),rgba(12,14,18,.96));border:1px solid #2a2f39;border-radius:var(--radius);padding:var(--nd-sp-16);box-shadow:0 14px 40px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.025)}
+.title{font-size:var(--nd-fs-30);font-weight:900;letter-spacing:-.7px;text-shadow:0 2px 20px rgba(255,255,255,.08)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--nd-sp-10)}
+.section{margin-top:20px}
+.class-icon{font-size:var(--nd-fs-30);line-height:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,.35))}
+.class-name{font-size:var(--nd-fs-17);font-weight:850;margin-top:7px}
+.class-tag{font-size:var(--nd-fs-11);color:#858b96;margin-top:3px}
+.class-desc{font-size:var(--nd-fs-10);color:#696f7b;line-height:1.45;margin-top:7px}
+.rule-note{border-left:2px solid var(--nd-gold);padding-left:10px}
+.lock{color:#e6bd72;margin-top:5px;font-size:var(--nd-fs-11)}
+.pills{display:flex;flex-wrap:wrap;gap:var(--nd-sp-4);margin-top:5px}
+.pill{border:1px solid #383f4a;border-radius:var(--nd-r-pill);padding:var(--nd-sp-3) var(--nd-sp-6);font-size:var(--nd-fs-9);color:#aaaeb7;background:var(--nd-white-a02)}
+.detail{position:fixed;inset:0;display:flex;justify-content:center;padding:var(--nd-sp-16)}
+.stat{border:1px solid #353b45;border-radius:var(--nd-r-12);padding:9px var(--nd-sp-12);font-size:var(--nd-fs-11);background:#15181e}
+@media(max-width:430px){
+.title{font-size:27px}
+}
+.phase-copy .muted{font-size:var(--nd-fs-11);color:#a5aab3}
+.phase-copy .lock{font-size:var(--nd-fs-10)}
+@media(max-width:430px){
+.phase-copy .muted{font-size:var(--nd-fs-10)}
+}
+.arena-hud .lock-status{color:#dfb971;border-color:rgba(223,185,113,.35)}
+/* V12.9.3 — VS only: preserve surrounding information, keep the breathing gradient */
+.vs{color:#777d88;text-shadow:0 0 18px rgba(216,179,106,.16);height:22px;line-height:1;font-size:var(--nd-fs-11);font-weight:950;letter-spacing:3px;position:relative;display:grid;place-items:center;justify-self:stretch;width:100%;text-align:center;pointer-events:none}
+.carousel{position:relative;overflow:hidden;border-radius:var(--nd-r-14)}
+.compact-rules{padding:var(--nd-sp-8) var(--nd-sp-12);font-size:var(--nd-fs-11)}
+.retro-log .muted{font-size:var(--nd-fs-10)}
+@media(max-width:430px){
+.app:has(.duel-screen) .topbar .round{font-size:var(--nd-fs-20);line-height:1.05}
+}
+.compact-rules{margin-top:8px !important}
+@media (max-width:700px){
+/* ===== extracted from <style ui-fix-20260910-duplicate-overlap> ===== */
+/* Final mobile UI correction: one round indicator + contained, symmetric card lanes. */
+/* ROUND is already shown in the duel center. Keep the brand only in the topbar. */
+.app:has(.duel-screen) .topbar .round{display:none!important}
+}
+.duel-card{transition:transform .22s cubic-bezier(.22,1,.36,1),filter .22s ease,box-shadow .22s ease,border-color .22s ease!important}
+.round{font-family:var(--nd-font);font-weight:400!important;color:#ead9b4!important;letter-spacing:1px;font-size:23px!important;margin-top:5px}
+@media(max-width:700px){
+.round{font-size:var(--nd-fs-20)!important}
+}
+.app:has(.duel-screen) .round{font-size:var(--nd-fs-18)!important;margin:0}
+.detail{backdrop-filter:blur(12px);background:#020b0ed9!important;align-items:center!important;z-index:80}
+.result-stats .stat{background:none!important;border:0!important;color:#d6c59e!important;letter-spacing:1px;font-size:var(--nd-fs-13)}
+@media(max-width:700px){
+.result-stats .stat{font-size:var(--nd-fs-11)}
+}

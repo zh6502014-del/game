@@ -1,0 +1,23 @@
+@media (max-width:899px), (max-height:520px){
+.detail-actions button{min-height:44px;min-width:0;flex:1}
+.detail-icon[data-portrait]{max-height:28dvh}
+}
+@media (max-width:620px){
+/* One complete portrait at a time; arrows and swipe retain the carousel. */
+.setup-wrap{--hero-w:200px;--hero-h:284px}
+.setup-wrap .setup-stage{grid-template-columns:minmax(0,1fr)!important;gap:var(--nd-sp-18)}
+.setup-stage .vs-column{display:none}
+.setup-stage .side-label{font-size:var(--nd-fs-14);letter-spacing:2px}
+.setup-stage .carousel-nav{gap:var(--nd-sp-16)}
+.setup-wrap .carousel-arrow{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important}
+.setup-stage .carousel-card .carousel-name{font-size:var(--nd-fs-24)!important;bottom:66px}
+.setup-stage .carousel-card .carousel-tag{font-size:var(--nd-fs-12)!important;bottom:42px}
+.setup-stage .carousel-card .carousel-hint{font-size:var(--nd-fs-12);bottom:18px}
+.setup-wrap .choice-detail{max-width:none}
+.setup-wrap .choice-detail summary{min-height:44px;box-sizing:border-box;font-size:var(--nd-fs-14)}
+.setup-wrap .choice-detail .detail-body{font-size:var(--nd-fs-14)}
+.setup-wrap .detail-pill{font-size:var(--nd-fs-12)}
+.setup-wrap .ai-choice{min-height:52px}
+.setup-wrap .ai-choice .ai-name{font-size:var(--nd-fs-16)}
+.setup-wrap .ai-choice .ai-desc{font-size:var(--nd-fs-14)}
+}

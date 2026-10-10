@@ -3,7 +3,7 @@
   "dependency_groups": {
     "browser": [
       "src/js/*.js",
-      "src/css/*.css",
+      "src/css/**/*.css",
       "*.html",
       "assets/**",
       "config/**",
@@ -20,9 +20,9 @@
         "src/js/story-mode.js",
         "src/js/story-stage-assets.js",
         "src/js/story-art.js",
-        "src/css/story-performance.css",
-        "src/css/story-stage.css",
-        "src/css/story-campaign.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
         "src/js/story-search-assets.js",
         "src/js/skin-store.js"
       ],
@@ -60,9 +60,9 @@
         "src/js/story-mode.js",
         "src/js/story-stage-assets.js",
         "src/js/story-art.js",
-        "src/css/story-performance.css",
-        "src/css/story-stage.css",
-        "src/css/story-campaign.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
         "src/js/story-search-assets.js",
         "src/js/skin-store.js",
         "Nightfall-Duel-Story.html"
@@ -72,7 +72,9 @@
       "task": "場景搜尋、放大、拖曳和命中",
       "files": [
         "src/js/story-search.js",
-        "src/css/story-search.css",
+        "src/css/dist/story.css",
+        "src/js/story-archive-wall.js",
+        "src/css/dist/story.css",
         "src/js/story-search-assets.js"
       ],
       "globals": [
@@ -97,7 +99,7 @@
       "task": "拼圖和解謎回饋",
       "files": [
         "src/js/story-puzzles.js",
-        "src/css/story-puzzles.css",
+        "src/css/dist/story.css",
         "scripts/export-map-puzzles.py"
       ],
       "globals": [
@@ -121,9 +123,9 @@
       "files": [
         "src/js/story-energy-engine.js",
         "src/js/story-energy-ui.js",
-        "src/css/story-energy-ui.css",
+        "src/css/dist/story.css",
         "src/js/story-battle-fx.js",
-        "src/css/story-battle-fx.css",
+        "src/css/dist/story.css",
         "src/js/story-battle-sfx.js"
       ],
       "globals": [
@@ -151,30 +153,30 @@
         "src/js/game-art.js",
         "src/js/card-art.js",
         "src/js/icon-registry.js",
-        "src/css/png-frames.css",
-        "src/css/prestige-ui.css",
-        "src/css/styles.css",
-        "src/css/story-performance.css",
-        "src/css/card-surface.css",
-        "src/css/hud.css",
-        "src/css/unified-art.css",
-        "src/css/arena-finish.css",
-        "src/css/story-energy-ui.css",
-        "src/css/story-battle-fx.css",
-        "src/css/story-puzzles.css",
-        "src/css/story-search.css",
-        "src/css/story-stage.css",
-        "src/css/character-art.css",
-        "src/css/ui-controls.css",
-        "src/css/card-theme.css",
-        "src/css/story-campaign.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/story.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/story.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/story.css",
         "index.html",
         "art-gallery.html",
         "icon-gallery.html",
         "Nightfall-Duel-Story.html",
         "frame-gallery.html",
         "Nightfall-Duel-V12.12.39-Test.html",
-        "src/css/visual-system.css"
+        "src/css/dist/duel.css"
       ],
       "globals": [
         "game.js script globals: S, render, startGame",
@@ -207,22 +209,22 @@
         "src/js/game-art.js",
         "src/js/card-art.js",
         "src/js/icon-registry.js",
-        "src/css/png-frames.css",
-        "src/css/prestige-ui.css",
-        "src/css/styles.css",
-        "src/css/card-surface.css",
-        "src/css/hud.css",
-        "src/css/unified-art.css",
-        "src/css/arena-finish.css",
-        "src/css/character-art.css",
-        "src/css/ui-controls.css",
-        "src/css/card-theme.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css",
         "index.html",
         "art-gallery.html",
         "icon-gallery.html",
         "frame-gallery.html",
         "Nightfall-Duel-V12.12.39-Test.html",
-        "src/css/visual-system.css"
+        "src/css/dist/duel.css"
       ]
     },
     "fx-audio": {
@@ -420,8 +422,8 @@
       ],
       "dependencies": [
         "src/js/game.js",
-        "src/css/card-surface.css",
-        "src/css/styles.css"
+        "src/css/dist/duel.css",
+        "src/css/dist/duel.css"
       ],
       "timeout": 600,
       "notes": "40%可見卡面重疊門檻、合法目標、鬆手重算及清理；獨立Chrome測試，不驗戰鬥平衡。",

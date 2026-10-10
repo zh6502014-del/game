@@ -1,0 +1,2 @@
+/* One face everywhere: buttons, inputs, headings, pseudo-elements and SVG text included. */
+html, body, *, *::before, *::after{font-family:var(--nd-font)!important}

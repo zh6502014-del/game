@@ -77,6 +77,7 @@ git push -u origin main
 
 ```sh
 python3 scripts/workflow.py map
+# 會先重建 src/css/dist 的 CSS bundle（模組見 src/css/README.md），再更新版本號
 python3 scripts/version-assets.py
 python3 tests/tooling/asset-versions.py
 python3 tests/tooling/workflow.py

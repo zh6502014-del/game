@@ -1,0 +1,2 @@
+.gallery .art-panel, .role-pair{background: var(--visual-enamel);border-color: var(--visual-edge);box-shadow: var(--visual-shadow)}
+.gallery p, .role-pair small{color: var(--visual-muted)}

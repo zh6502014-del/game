@@ -1,0 +1,35 @@
+@media(max-width:620px){
+.story-skin>div{padding:30px var(--nd-sp-10) var(--nd-sp-12)}
+.story-skin h3{font-size:var(--nd-fs-12)}
+}
+.story-gallery p{font-size:var(--nd-fs-13);line-height:1.8}
+.story-gallery h3{font-weight:500;letter-spacing:2px;margin-top:32px}
+.story-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--nd-sp-18)}
+.story-skin>div button{padding:var(--nd-sp-7) var(--nd-sp-10);font-size:var(--nd-fs-11);background:#312a1d}
+.story-skin{aspect-ratio:2/3}
+.story-lightbox{width:min(1250px,95vw);max-height:94vh;padding:var(--nd-sp-20);border:1px solid #a98b57;border-radius:var(--nd-r-8);overflow:auto}
+.story-lightbox::backdrop{background:#000d}
+.story-lightbox figure{margin:35px 0 var(--nd-sp-12)}
+.story-lightbox figure img{display:block;width:100%;max-height:70vh;object-fit:contain}
+.story-lightbox figcaption{padding:var(--nd-sp-16) 0;text-align:center}
+.story-lightbox button{padding:var(--nd-sp-10) 15px;cursor:pointer}
+.story-lightbox button:disabled{opacity:.4;cursor:default}
+.story-lightbox-close{position:absolute;top:10px;right:12px}
+.story-lightbox-nav{display:flex;align-items:center;justify-content:space-between;gap:15px}
+@media(max-width:850px){
+.story-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+.story-gallery-grid{grid-template-columns:1fr}
+.story-lightbox{padding:var(--nd-sp-10)}
+.story-lightbox figcaption{font-size:var(--nd-fs-13)}
+.story-lightbox-nav{font-size:var(--nd-fs-12)}
+.story-skin>div button{font-size:var(--nd-fs-10);padding:var(--nd-sp-6)}
+}
+.story-entry{font-size:var(--nd-fs-14);line-height:1.5;padding:var(--nd-sp-12);text-align:center}
+.setup-footer .story-entry{grid-column:auto}
+@media(max-width:700px){
+.setup-footer .story-entry{grid-column:1/-1!important;grid-row:auto!important}
+}
+.story-log-dialog, .story-collection, .story-shell>.story-outcome, .story-shell>.story-challenge{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:20px!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.campaign-lock-reason{display:block;margin-top:4px;font-style:normal;font-size:var(--nd-fs-12);color:#f4dc9f}

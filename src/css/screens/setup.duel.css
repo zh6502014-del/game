@@ -1,0 +1,3 @@
+@media (min-width:900px) and (min-height:521px) and (orientation:landscape){
+body:has(.duel-screen.nd-stage) #app>.topbar .kicker{display:none!important}
+}

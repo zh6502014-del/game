@@ -298,7 +298,7 @@
       dialog.dataset.reading = String(reading);
       if (!current) {
         const done = targets.every(id => found.has(id));
-        detail.append(element('p', 'search-reader-kicker', '乙列第四櫃'));
+        detail.append(element('p', 'search-reader-kicker', '檔案櫃'));
         detail.append(element('h3', '', done ? '線索已歸檔' : '查找物資去向'));
         detail.append(element('p', 'search-reader-empty', done ? '可重讀已收取的紀錄，或繼續劇情。' : '翻閱卷宗，留意研究物資的運送項目與收貨地點。'));
         detail.append(element('p', 'search-reader-keys', 'Tab / Enter 操作 · Esc 關閉'));
@@ -314,7 +314,7 @@
       const backTop = button('返回翻找', 'data-search-detail-close');
       backTop.classList.add('search-reader-back-top');
       top.append(backTop, heading);
-      detail.append(top, element('p', 'search-reader-kicker', '乙列第四櫃'));
+      detail.append(top, element('p', 'search-reader-kicker', '檔案櫃'));
       const sheet = element('article', 'search-archive-sheet');
       sheet.tabIndex = 0;
       sheet.setAttribute('aria-label', `件號 ${cover.tag} ${title}`);

@@ -1,0 +1,10 @@
+@media (max-width:899px), (max-height:520px){
+.audio-label small, .audio-sub{font-size:var(--nd-fs-12)}
+.audio-value{font-size:var(--nd-fs-14)}
+.audio-range{min-height:44px;touch-action:pan-y}
+.rules-scroll{overscroll-behavior-x:contain}
+body:has(.duel-screen.nd-stage)>.audio-toggle{display:none!important}
+}
+@media (max-width:620px){
+.setup-footer .audio-settings-btn, .setup-footer .rules-btn{font-size:var(--nd-fs-14)!important;min-height:44px!important}
+}

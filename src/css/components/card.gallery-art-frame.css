@@ -1,0 +1,5 @@
+.png-frame{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:20px!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.png-frame.hero{border-image-source:var(--frame-hero)!important;border-image-slice:var(--frame-hero-slice)!important;border-image-width:28px!important}
+button:not(.card):not(.carousel-card):not(.carousel-dot):not(.audio-toggle):not(.story-scene):not(.puzzle-slot){border-image-source:var(--frame-thin)!important;border-image-slice:var(--frame-thin-slice)!important;border-image-width:8px!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.png-frame.selected{outline:2px solid var(--nd-gold-pale);outline-offset:3px}
+.png-frame.disabled{opacity:.55}

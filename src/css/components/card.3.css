@@ -1,0 +1,79 @@
+.carousel-icon .character-image{object-fit:cover;object-position:center top}
+.duel-screen .retro-card-slot, .duel-screen .retro-card-slot .card3d, .duel-screen .duel-hand .card, .duel-screen .enemy-card-back{width:112px!important;min-width:112px!important;max-width:112px!important;height:158px!important;max-height:158px!important;flex-basis:112px!important;aspect-ratio:56/79!important;border-radius:7px!important}
+.retro-card-slot.empty{border:1px solid #b6975c66!important;background:linear-gradient(#01080baa,#17302a55)!important;box-shadow:inset 0 0 0 5px #a78f4810,inset 0 0 26px var(--nd-ink-47)!important}
+.retro-card-slot.empty::after{content:""!important;position:absolute;inset:28%!important;background:url('../../../assets/icons/seal.svg') center/contain no-repeat;opacity:.22;pointer-events:none}
+.duel-hand .card, .retro-card-slot .front{background:radial-gradient(ellipse at 45% 20%,#38554a,#152c2d 60%,#07191f)!important;border:1px solid #cfb079!important}
+.duel-hand .card .icon:not([data-portrait]), .retro-card-slot .front .icon:not([data-portrait]){width:65px!important;height:65px!important;padding:11px!important;background:radial-gradient(circle at 35% 25%,#406055,#10272b 68%)!important;border:1px solid #9c8755;border-radius:var(--nd-r-round);box-shadow:inset 0 0 0 3px #07181b,0 4px 7px var(--nd-ink-40)}
+.retro-card-slot .front b{font-size:var(--nd-fs-16)!important;letter-spacing:2px!important;color:#ffecc0!important}
+.duel-hand .card:not(:disabled){border-color:#d9be85!important}
+.duel-hand .card:disabled{filter:saturate(.4) brightness(.72)!important}
+.duel-hand .card:focus-visible{outline:2px solid #f8d98e;outline-offset:3px;z-index:20}
+.duel-hand .card:hover:not(:disabled){transform:translateY(-16px) scale(1.04)!important;filter:brightness(1.08)!important;z-index:22}
+.enemy-card-back, .retro-card-slot .back{border-color:#9aa28a!important;background:repeating-linear-gradient(45deg,#a8925520 0 1px,transparent 1px 6px),linear-gradient(135deg,#254047,#081922)!important;box-shadow:inset 0 0 0 4px #06141a,inset 0 0 0 5px #bb9d5866,0 7px 15px var(--nd-ink-53)!important}
+.back-seal{width:48%;height:48%;left:26%;top:26%;padding:var(--nd-sp-6);border:1px solid #bda56866;transform:rotate(0deg);border-radius:var(--nd-r-round);background:#071b24cc;box-shadow:0 0 0 4px #0c212780,0 0 0 5px #a78d4733}
+@media(max-width:1000px){
+.duel-screen .retro-card-slot, .duel-screen .retro-card-slot .card3d, .duel-screen .duel-hand .card, .duel-screen .enemy-card-back{width:94px!important;min-width:94px!important;max-width:94px!important;height:132px!important;max-height:132px!important;flex-basis:94px!important}
+.duel-screen .duel-hand .card .icon:not([data-portrait]), .duel-screen .retro-card-slot .front .icon:not([data-portrait]){width:53px!important;height:53px!important;padding:var(--nd-sp-8)!important}
+}
+@media(max-width:700px){
+.duel-screen .retro-card-slot, .duel-screen .retro-card-slot .card3d, .duel-screen .duel-hand .card, .duel-screen .enemy-card-back{width:68px!important;min-width:68px!important;max-width:68px!important;height:96px!important;max-height:96px!important;flex-basis:68px!important}
+.duel-screen .duel-hand .card .icon:not([data-portrait]), .duel-screen .retro-card-slot .front .icon:not([data-portrait]){width:40px!important;height:40px!important;padding:var(--nd-sp-6)!important}
+}
+@media(max-width:370px){
+.duel-screen .retro-card-slot, .duel-screen .retro-card-slot .card3d, .duel-screen .duel-hand .card, .duel-screen .enemy-card-back{width:60px!important;min-width:60px!important;max-width:60px!important;flex-basis:60px!important;height:85px!important;max-height:85px!important}
+}
+@media(prefers-reduced-motion:reduce){
+.duel-hand .card{transition:none!important}
+.duel-hand .card:hover:not(:disabled){transform:none!important}
+}
+.duel-hand:has(> :nth-child(4))>.card, .duel-hand:has(> :nth-child(4))>.enemy-card-back{margin:0!important;transform:none!important}
+.retro-card-slot.empty.slot.you{border-color:#c3b27599!important}
+/* A single illustration window and title rail for all playable cards. */
+.duel-screen .duel-hand .card .icon[data-card-illustration], .duel-screen .retro-card-slot .front .icon[data-card-illustration]{position:absolute!important;inset:4px 4px 29px!important;width:auto!important;height:auto!important;max-width:none!important;padding:0!important;border:0!important;border-radius:var(--nd-r-3)!important;background:#102024!important;box-shadow:none!important;filter:none!important}
+.detail-icon[data-card-illustration] .character-image{object-fit:contain}
+.coin-symbol>.nd-icon{position:absolute;inset:25%;width:50%;height:50%}
+.coin-symbol>.nd-icon{z-index:0}
+/* Absolute artwork must remain anchored even when dense hands remove transforms. */
+.duel-hand .card{position:relative!important;overflow:hidden!important}
+.battle-hud[data-job=tank]{--portrait-accent:#a3c9c5}
+.battle-hud[data-job=assassin]{--portrait-accent:#b9acd3}
+.battle-hud[data-job=gunner]{--portrait-accent:#d0a08a}
+.duel-avatar .character-image{position:absolute;display:block;width:var(--portrait-width);height:auto;max-width:none;left:var(--portrait-left);top:var(--portrait-top);object-fit:contain;filter:contrast(1.04)}
+.duel-avatar .portrait-fallback{inset:24%;width:52%;height:52%;color:var(--portrait-accent)}
+.duel-hp .nd-icon, .duel-shield-row .nd-icon{width:14px;height:14px;flex:none}
+.duel-status .nd-icon{width:14px;height:14px;flex:none;color:var(--portrait-accent)}
+/* Bound images even if an older presentation adapter is still cached. */
+.duel-avatar>.character-image{inset:3px;width:calc(100% - 6px);height:calc(100% - 6px);max-width:100%;object-fit:cover;object-position:50% 0;border-radius:inherit}
+.app .retro-card-slot{border-color:#b29a6766!important;border-radius:5px!important;background:linear-gradient(145deg,#020c1199,#16292350)!important}
+.app .retro-card-slot.empty::after{background:url('../../../assets/icons/seal.svg') center/45% auto no-repeat!important;opacity:.4!important}
+.app .retro-card-slot.you.nd-drop-target{border-color:#efd398!important;box-shadow:inset 0 0 0 2px #d8ba7350,0 0 22px #d7af4838!important}
+.duel-hand .card, .retro-card-slot .front{box-shadow:0 9px 15px var(--nd-ink-60)!important}
+.app .retro-card-slot{border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:14px!important;border-image-repeat:repeat!important;box-shadow:inset 0 8px 14px var(--nd-ink-33)!important}
+.nd-control>.nd-icon{width:var(--nd-icon-action);height:var(--nd-icon-action);flex:0 0 var(--nd-icon-action);margin:0;vertical-align:middle}
+.rules-title>.nd-icon, .audio-title>.nd-icon{flex:none;width:24px;height:24px}
+.detail-pill>.nd-icon{width:16px;height:16px;flex:none}
+.duel-hand .card[disabled]{cursor:not-allowed}
+/* One printed surface for hand cards and the body-level drag preview.
+   Hand layout owns size/fanning; the drag controller owns position and elevation. */
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost){box-sizing:border-box!important;display:flex;flex-direction:column;align-items:center;padding:0!important;gap:var(--nd-sp-5)!important;overflow:hidden!important;border:1px solid #d9be85!important;border-radius:7px!important;background:radial-gradient(ellipse at 45% 20%,#38554a,#152c2d 60%,#07191f)!important}
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost) .icon[data-portrait]{position:absolute!important;inset:4px 4px 25px!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;display:grid!important;place-items:center;overflow:hidden;isolation:isolate;border:0!important;border-radius:var(--nd-r-3)!important;background:#102024!important;box-shadow:none!important;filter:none!important;color:#e3c889}
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost) .icon[data-card-illustration]{inset:4px 4px 29px!important}
+/* A dragged card stays rigid; target highlighting belongs to the receiving zone. */
+.card.nd-drag-ghost{min-width:0!important;max-width:none!important;min-height:0!important;max-height:none!important;transform:translateY(-14px) scale(1.04)!important;filter:none!important;box-shadow:0 24px 38px var(--nd-ink-60)!important}
+.card.nd-drag-ghost.nd-drag-valid{transform:translateY(-14px) scale(1.04)!important;box-shadow:0 24px 38px var(--nd-ink-60),0 0 0 2px #d8b36a55!important}
+.card.nd-drag-ghost.nd-drag-invalid{transform:translateY(-14px) scale(1.04)!important;box-shadow:0 24px 38px var(--nd-ink-60),0 0 0 2px #98666680!important}
+.duel-hand .card.nd-drag-source{opacity:.12!important;filter:none!important}
+@media(prefers-reduced-motion:reduce){
+.card.nd-drag-ghost, .card.nd-drag-ghost.nd-drag-valid, .card.nd-drag-ghost.nd-drag-invalid{transform:none!important}
+}
+@media (orientation:landscape) and (max-height:520px){
+#app .retro-card-slot{width:60px!important;height:84px!important;min-height:0!important}
+#app .retro-card-slot .card3d{width:60px!important;height:84px!important}
+#app .duel-screen .duel-hand .card, #app .duel-screen .duel-hand .enemy-card-back{flex-basis:64px!important;width:64px!important;min-width:0!important;max-width:64px!important;height:90px!important;min-height:0!important;max-height:90px!important;margin-left:-14px!important}
+}
+.detail-icon[data-card-illustration] .character-image{background: #071a14}
+/* A definite image window prevents the grid item's intrinsic portrait height
+   from overflowing the preview. Keep the complete painting centered here;
+   hand cards and rotating faces retain their own crop rules. */
+.detail-card .detail-icon[data-portrait] > .character-image{position: absolute;inset: 0;width: 100%;height: 100%;min-width: 0;min-height: 0;object-fit: contain;object-position: 50% 50% !important}
+.detail-card .detail-icon > .character-image[hidden]{display: none}

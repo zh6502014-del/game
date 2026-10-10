@@ -1,0 +1,37 @@
+.audio-toggle.nd-control{border-radius:var(--nd-r-12);background:#102725ed;color:var(--nd-control-text);opacity:1}
+.result-screen>.audio-settings-btn.nd-control{font-size:var(--nd-fs-12)!important;letter-spacing:.5px}
+.rules-title, .audio-title{display:flex;align-items:center;gap:var(--nd-sp-8)}
+/* Keep the native slider's keyboard/pointer behavior, with a generous touch target. */
+.audio-range{height:var(--nd-control-size);margin:0;accent-color:var(--nd-control-gold);background:transparent}
+.audio-value{font-size:var(--nd-fs-12);line-height:1.5;min-width:4ch;white-space:nowrap}
+@media(max-width:700px){
+.audio-actions{flex-wrap:wrap}
+}
+@media (orientation:landscape) and (max-height:520px){
+body:has(.duel-screen) .audio-toggle{display:none!important}
+}
+.rules-modal, .audio-modal{background: var(--visual-enamel) !important;color: var(--visual-text);border-color: var(--visual-edge);box-shadow: 0 24px 80px var(--nd-ink-73), inset 0 1px var(--nd-gold-wash-2) !important}
+.rules-modal, .audio-modal{border-image-width: 16px !important}
+.rules-table th{background: #294031;color: var(--visual-gold-light)}
+.rules-table td{background: #10271fcc;color: #d5dece;border-color: #a38b5738}
+.audio-row{border-color: var(--visual-edge)}
+/* Scroll-stability fix: the sticky audio-settings header (.audio-head) combined
+   with the modal's border-image frame and inset box-shadow can trigger a
+   compositing/repaint glitch during scroll, where old row text briefly shows
+   through or doubles up under the header ("滾動跑版"). Promoting the header to
+   its own GPU layer and re-locking its background as the final, authoritative
+   declaration (after the other five files' competing !important rules) fixes
+   this without touching the existing cascade. */
+.audio-modal{isolation: isolate}
+.audio-head{background-color: #12282b !important;transform: translateZ(0);-webkit-transform: translateZ(0);backface-visibility: hidden;-webkit-backface-visibility: hidden;will-change: transform}
+.audio-sub{color: #d5dece}
+@media (max-width:899px), (max-height:520px){
+.audio-overlay, .rules-overlay{padding:max(8px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right))
+      max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))}
+.audio-modal, .rules-modal{box-sizing:border-box;max-height:calc(100dvh - max(8px,env(safe-area-inset-top)) - max(8px,env(safe-area-inset-bottom)));overflow:auto;overscroll-behavior:contain;padding:var(--nd-sp-16)}
+.audio-head, .rules-head{top:-16px;margin:-16px -16px 0;padding:var(--nd-sp-16);background:#102725}
+.audio-head>div, .rules-head>div{min-width:0}
+.audio-close, .rules-close{flex-shrink:0;min-width:44px;min-height:44px}
+.audio-group{padding:var(--nd-sp-12)}
+.audio-label{font-size:var(--nd-fs-14)}
+}

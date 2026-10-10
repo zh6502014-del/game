@@ -1,0 +1,8 @@
+.class-crest{position:absolute;z-index:4;right:5px;top:5px;width:25px;height:25px;display:grid;place-items:center;background:#0b1b21ed;color:#e4c783;border:1px solid #b99c63;border-radius:var(--nd-r-3);pointer-events:none}
+.class-crest svg{width:18px;height:18px}
+.portrait-failed .class-crest{display:none}
+@media(max-width:700px){
+.class-crest{width:21px;height:21px}
+}
+[data-category=special] .class-crest{border-style:double;border-width:3px;color:#ffe9b4;background:#354532}
+[data-category=basic] .class-crest{border-radius:var(--nd-r-round);background:#182c29e8}

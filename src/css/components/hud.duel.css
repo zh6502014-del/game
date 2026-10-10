@@ -1,0 +1,20 @@
+@media (min-width:900px) and (min-height:521px) and (orientation:landscape){
+#app .duel-screen.nd-stage>.duel-side .duel-avatar{display:none!important}
+#app .duel-screen.nd-stage>.duel-side .duel-identity{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:calc(2 * var(--u))!important;border:0!important;padding:0!important;margin:0!important;width:auto!important}
+#app .duel-screen.nd-stage>.duel-side.enemy .duel-identity{align-items:flex-end!important}
+#app .duel-screen.nd-stage>.duel-side .duel-identity, #app .duel-screen.nd-stage>.duel-side .duel-copy{text-align:inherit!important;align-self:stretch!important;flex:0 0 auto!important;background:none!important}
+#app .duel-screen.nd-stage>.duel-side .duel-owner{order:0;font-size:calc(14 * var(--u))!important;letter-spacing:.3em!important;color:#d2c194!important;margin:0!important}
+#app .duel-screen.nd-stage>.duel-side .duel-name{order:1;font-size:calc(34 * var(--u))!important;font-weight:900!important;letter-spacing:.18em!important;line-height:1.1!important;color:#f1e2bd!important;text-shadow:0 2px 8px var(--nd-black)!important;margin:0!important}
+#app .duel-screen.nd-stage>.duel-side .duel-copy{display:flex!important;flex-direction:column!important;margin-top:auto!important;width:100%!important;gap:0!important}
+#app .duel-screen.nd-stage>.duel-side .duel-hp{display:flex!important;align-items:baseline!important;gap:calc(8 * var(--u))!important;margin:0!important;padding:0!important;border:0!important;background:none!important;height:auto!important}
+#app .duel-screen.nd-stage>.duel-side.enemy .duel-hp{flex-direction:row-reverse!important}
+#app .duel-screen.nd-stage>.duel-side .duel-hp{justify-content:flex-start!important}
+#app .duel-screen.nd-stage>.duel-side .duel-hpbar{height:calc(6 * var(--u))!important;margin:calc(10 * var(--u)) 0 0!important}
+#app .duel-screen.nd-stage>.duel-side.enemy .duel-hpbar{transform:scaleX(-1)}
+#app .duel-screen.nd-stage>.duel-side .duel-shield-row{display:flex!important;justify-content:space-between!important;margin:calc(10 * var(--u)) 0 0!important;font-size:calc(13 * var(--u))!important;letter-spacing:.15em!important;color:#cbd6c8!important}
+#app .duel-screen.nd-stage>.duel-side.enemy .duel-shield-row{flex-direction:row-reverse!important}
+#app .duel-screen.nd-stage>.duel-side .duel-shield{height:calc(6 * var(--u))!important;margin-top:calc(6 * var(--u))!important}
+#app .duel-screen.nd-stage>.duel-side .duel-status-row{position:absolute!important;top:calc(-60 * var(--u))!important;left:0!important;right:0!important;margin:0!important;padding:0!important;border:0!important;display:flex!important;gap:var(--nd-sp-6)!important;justify-content:flex-start!important}
+#app .duel-screen.nd-stage>.duel-side.enemy .duel-status-row{justify-content:flex-end!important}
+#app .duel-screen.nd-stage>.duel-side .duel-status-row:empty{display:none!important}
+}

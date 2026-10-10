@@ -1,0 +1,48 @@
+[
+ {
+  "id": "archive-drawer-closed",
+  "category": "prop",
+  "folder": "props",
+  "refs": [
+   "assets/story/props/chapter-props/archive-drawer-front.webp",
+   "assets/story/props/chapter-props/archive-cabinet-body.webp"
+  ],
+  "prompt": "Use case: stylized-concept. Single transparent game prop asset, detailed realistic dark-fantasy, deep green and antique gold palette, restrained lantern warmth, same painterly style, lighting and colour grade as the existing story paintings. Same riveted dark-green painted steel with worn antique-gold edge trim and brass fittings as reference1 (existing drawer front) and reference2 (existing cabinet body). ONE closed small card-catalogue-style steel drawer front seen straight-on, orthographic and flat, SQUARE proportions (1:1), filling about 94% of the 512x512 canvas with an identical thin transparent margin on all four sides, centred. A slightly raised square panel with one small rivet at each of the four corners; a small EMPTY rectangular brass label-holder frame in the upper third (the label area inside is dark, flat and completely blank); one compact heavy brass pull handle centred in the lower third. Clean even light from above, subtle wear and fine scratches, understated and heavy rather than ornate. The silhouette must be a perfectly straight square with sharp clean edges so 64 copies tile edge to edge in an 8x8 grid. NO letters, numbers, readable text, title, UI, logo or watermark anywhere, no markings on the label frame, no crystals, no wooden parts, no hands, no papers sticking out. Genuine transparent alpha outside the drawer silhouette, no floor, no backdrop, no cast shadow halo. Produce three variants with exactly the same silhouette, panel layout, label frame and handle position, differing ONLY in surface wear: variant A cleanest, with the lightest scratches; variant B more worn gold edges and a few darker stains; variant C a faint shallow dent near one corner and slightly duller brass."
+ },
+ {
+  "id": "archive-drawer-pulled",
+  "category": "prop",
+  "folder": "props",
+  "refs": [
+   "GENERATED:【先生成】B 的成品（關閉的抽屜）",
+   "assets/story/backgrounds/locations/archive-drawer-closeup.webp"
+  ],
+  "prompt": "Use case: stylized-concept. Single transparent game prop asset, detailed realistic dark-fantasy, deep green and antique gold palette, restrained lantern warmth, same painterly style, lighting and colour grade as the existing story paintings. The SAME drawer as reference1 (the closed drawer front, exact match of panel design, rivets, label frame and brass handle) now pulled out about one third of its depth toward the viewer. Seen straight-on with a slight top-down tilt (about 20 degrees): the front panel keeps exactly the same size and position on the canvas as in reference1; above it, a narrow strip of the dark empty drawer interior and the two brass runner rails become visible, with the interior material and lantern light matching reference2. The drawer interior is COMPLETELY EMPTY: no folders, no papers, no files, no objects. A soft contact shadow falls just below the panel inside the canvas. NO letters, numbers, readable text, title, UI, logo or watermark anywhere, no crystals, no wooden parts, no hands. Genuine transparent alpha outside the drawer silhouette, no floor, no backdrop. 512x512 canvas, subject centred."
+ },
+ {
+  "id": "archive-wall-plate",
+  "category": "background",
+  "folder": "backgrounds",
+  "refs": [
+   "assets/story/backgrounds/locations/c4-archive.webp",
+   "assets/story/props/chapter-props/archive-cabinet-body.webp",
+   "assets/story/props/chapter-props/archive-drawer-front.webp",
+   "assets/story/backgrounds/locations/archive-drawer-closeup.webp"
+  ],
+  "prompt": "Use case: illustration-story. Nightfall Duel wide 1536x864 background plate for a hidden-object wall, detailed realistic dark-fantasy, deep green and antique gold palette, restrained lantern warmth, same painterly style, lighting and colour grade as the existing story paintings, same materials as reference1 (the archive hall) and references 2 and 3 (riveted dark-green steel cabinet with worn antique-gold trim). Straight-on, orthographic, symmetrical view of one gigantic floor-to-ceiling steel filing wall filling the whole frame. In the exact centre sits a perfectly SQUARE, flat, recessed backing panel of plain dark green-black steel, about 830x830 px (96% of the frame height), with razor-straight edges, surrounded by a thick riveted steel frame with antique-gold edge trim. The panel interior must be COMPLETELY EMPTY and nearly uniform: no drawers, no grid lines, no handles, no labels, no shelves, no objects, no papers, because 64 drawer sprites will be overlaid by code. To the left and right of the frame, the steel wall continues with a few riveted vertical girders and shallow shadow, one wall lantern at the upper left and one at the upper right casting warm pools of light, faint dust in the air, cool shadow at the bottom edge. No characters, no hands, no crystals, no wooden parts, NO letters, numbers, readable text, title, UI, logo or watermark anywhere."
+ },
+ {
+  "id": "archive-patrol-prebattle",
+  "category": "background",
+  "folder": "illustrations/chapters",
+  "refs": [
+   "assets/story/illustrations/chapters/c4-outer-blockade.webp",
+   "assets/story/actors/gun-unify/eve-armed.webp",
+   "assets/story/actors/shuo.webp",
+   "assets/story/actors/phosphor.webp",
+   "assets/story/backgrounds/locations/c4-archive.webp",
+   "GENERATED:【先生成】A 的成品（檔案牆底板）"
+  ],
+  "prompt": "Use case: illustration-story. Nightfall Duel wide 1536x864 single narrative painting, detailed realistic dark-fantasy, deep green and antique gold palette, restrained lantern warmth, same painterly style, lighting and colour grade as the existing story paintings. No readable text, title, UI or logo on any surface. C4 archive, the instant a patrol arrives while the party is searching the filing wall: the setting and painterly composition match reference1 (existing patrol-arrival painting) and reference5 (the archive hall); the giant steel drawer wall matches reference6 (the wall plate). Background and right side: the huge riveted dark-green steel drawer wall rising out of frame, with several small drawers standing pulled open at different distances, their interiors dark and EMPTY. Down a long dim archive aisle at the far end, wall lanterns are igniting one after another toward the viewer, and TWO soldiers approach carrying lanterns, shown only as dark backlit silhouettes with their weapons not identifiable in detail. Foreground left, our side, exactly three characters: Eve in her armed stance (reference2, exact match) half-turned toward the aisle with her hand on her gun; Shuo (reference3, exact match) half-drawing his blade and keeping child Phosphor (reference4, exact match, clearly much smaller and younger) behind him with his free arm. A few loose folders and sheets lie on the floor near their feet, with no readable writing. No other named characters, no crystals, no wooden parts, NO letters, numbers, readable text, title, UI, logo or watermark anywhere."
+ }
+]

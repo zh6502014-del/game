@@ -1,0 +1,27 @@
+.rules-btn{width:100%;border:1px solid var(--nd-line-2);padding:11px var(--nd-sp-14);font-weight:850;cursor:pointer;transition:.16s ease}
+.rules-btn:hover{transform:translateY(-1px);border-color:#666f7c}
+.rules-overlay{position:fixed;inset:0;display:flex;justify-content:center;padding:var(--nd-sp-12)}
+.rules-modal{width:min(760px,100%);overflow:auto}
+.rules-head{display:flex;justify-content:space-between;position:sticky;top:0;padding-bottom:10px;z-index:2}
+.rules-close{border-radius:var(--nd-r-10);padding:var(--nd-sp-7) var(--nd-sp-10);cursor:pointer}
+.rules-section{margin-top:16px;padding-top:14px;border-top:1px solid #292f38}
+.rules-section h3{font-size:var(--nd-fs-14);margin:0 0 var(--nd-sp-8);font-weight:950}
+.rules-section p{font-size:var(--nd-fs-12);line-height:1.65;color:#b8bec8;margin:var(--nd-sp-6) 0}
+.rules-table{width:100%;border-collapse:collapse;font-size:var(--nd-fs-11);margin-top:8px;min-width:620px}
+.rules-table th, .rules-table td{border:1px solid #303641;padding:var(--nd-sp-7) var(--nd-sp-6);text-align:center;vertical-align:middle}
+.rules-table th{font-weight:900}
+.rules-table td:first-child, .rules-table th:first-child{text-align:left;font-weight:850;color:#f0f1f3}
+.rules-scroll{overflow-x:auto}
+/* V12.12.39 — Audio Settings */
+.audio-settings-btn{width:100%;border:1px solid var(--nd-line);padding:11px var(--nd-sp-14);font-weight:900;cursor:pointer;margin-top:10px;transition:.16s ease}
+.audio-settings-btn:hover{transform:translateY(-1px);border-color:#69717e}
+.audio-overlay{position:fixed;inset:0;display:flex;justify-content:center;padding:var(--nd-sp-12)}
+.audio-modal{width:min(680px,100%);overflow:auto}
+.audio-head{display:flex;justify-content:space-between;position:sticky;top:0;padding-bottom:12px;z-index:2}
+.audio-sub{margin-top:4px}
+.audio-close{border-radius:var(--nd-r-10);padding:var(--nd-sp-7) var(--nd-sp-10);cursor:pointer}
+.audio-group{margin-top:16px;padding:var(--nd-sp-14);border:1px solid #2b303a;border-radius:16px;background:rgba(10,12,16,.56)}
+.audio-group-title{font-size:var(--nd-fs-11);font-weight:950;margin-bottom:10px}
+.audio-row{display:grid;grid-template-columns:minmax(128px,1.15fr) 1.5fr 48px;align-items:center;border-top:1px solid rgba(255,255,255,.055)}
+.audio-row:first-of-type{border-top:0;padding-top:2px}
+.audio-label{font-size:var(--nd-fs-12);font-weight:800;color:#e5e7eb}

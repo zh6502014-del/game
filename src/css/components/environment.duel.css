@@ -1,0 +1,3 @@
+@media (min-width:900px) and (min-height:521px) and (orientation:landscape){
+#app .duel-screen.nd-stage>.environment-domain{display:none!important}
+}

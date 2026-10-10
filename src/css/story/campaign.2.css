@@ -1,0 +1,7 @@
+/* Frame overlaps the padding, so give each surface room to clear it. */
+.story-shell .story-overall{padding:calc(var(--sf-w) + 6px) calc(var(--sf-w) + 10px);box-shadow:var(--visual-shadow)}
+.story-lightbox{padding:max(var(--sf-pad),calc(var(--sf-w) + 6px))}
+.story-shell .story-skin{overflow:hidden}
+/* SIDEQUEST-UI-054: log dialogs (線索紀錄, 已讀故事紀錄) keep their close button at the top right, pinned while the list scrolls,
+   the same place every side-game dialog puts it. It is the first child so it sticks from the start. */
+dialog.story-log-dialog>[data-close]{position:sticky;top:calc(var(--sf-w) + 2px);z-index:2;float:right;min-width:72px;margin:0 0 var(--nd-sp-8) var(--nd-sp-12)}

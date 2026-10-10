@@ -1,0 +1,329 @@
+.fighter{position:relative;padding:var(--nd-sp-10) var(--nd-sp-12);margin-bottom:8px;background:linear-gradient(180deg,rgba(20,23,29,.96),rgba(12,14,18,.96));overflow:hidden}
+.fighter:before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:#444b56;opacity:.8}
+.fighter.enemy:before{background:#65707d}
+.fighter.player:before{background:var(--accent)}
+.fighter.enemy{border-color:#292f39}
+.fighter.player{border-color:#3a3e47}
+.fighter-head{display:flex;justify-content:space-between;gap:var(--nd-sp-10);align-items:center}
+.fighter-name{font-weight:900;font-size:var(--nd-fs-14);line-height:1.15}
+.fighter-role{font-size:var(--nd-fs-9);color:#777e89;margin-top:2px}
+.hp-row{display:flex;justify-content:space-between;margin-top:7px;font-size:var(--nd-fs-9);color:#8b919c}
+.hpbar{height:6px;border-radius:var(--nd-r-pill);background:#242a33;overflow:hidden;margin-top:4px;box-shadow:inset 0 1px 2px rgba(0,0,0,.45)}
+.hpfill{height:100%;background:linear-gradient(90deg,#bfc2c8,#f0f0f2);transition:width .35s ease;box-shadow:0 0 10px rgba(255,255,255,.16)}
+.shield-row{display:flex;justify-content:space-between;margin-top:5px;font-size:var(--nd-fs-9);color:#8b919c}
+.shieldbar{height:4px;border-radius:var(--nd-r-pill);background:#202630;overflow:hidden;margin-top:3px}
+.shieldfill{height:100%;background:linear-gradient(90deg,#6388b5,#9ec1ea);transition:width .35s ease;box-shadow:0 0 9px rgba(125,167,217,.22)}
+.fighter.combat-hit{animation:combatShake .55s ease both}
+@media(max-width:430px){
+.fighter{padding:9px var(--nd-sp-10);margin-bottom:7px}
+}
+/* V6.4 — Refined Combat UI
+   Principle: remove containers before removing information. */
+.arena-hud.enemy-hud{top:10px}
+.arena-hud .fighter{border-radius:11px;border:1px solid rgba(62,68,78,.62);backdrop-filter:blur(5px)}
+.arena-hud .fighter:before{width:2px}
+.arena-hud .fighter-head{align-items:center}
+.arena-hud .fighter-id{display:flex;align-items:center}
+.arena-hud .fighter-avatar{display:grid;place-items:center;border:1px solid #383f49;flex:none;filter:drop-shadow(0 2px 4px rgba(0,0,0,.3))}
+.arena-hud .fighter-name{font-weight:900;line-height:1.05;white-space:nowrap}
+.arena-hud .fighter-role{color:#737a86;white-space:nowrap}
+.arena-hud .fighter-hand{border:1px solid #343a44;color:#b8bdc6;white-space:nowrap}
+.arena-hud .stat-line{position:relative;color:#747b86;line-height:1}
+.arena-hud .mini-bar{grid-column:1 / -1;border-radius:var(--nd-r-pill);overflow:hidden;margin-top:1px}
+.arena-hud .hpfill{height:100%;transition:width .35s ease}
+.arena-hud .shieldfill{height:100%;background:linear-gradient(90deg,#5e82ad,#94b8df);transition:width .35s ease}
+.arena-hud .status{border:1px solid #353b45;border-radius:var(--nd-r-pill);color:#a8adb6;background:var(--nd-white-a02)}
+.arena-hud.player-hud .fighter:before{background:var(--accent)}
+@media(max-width:430px){
+.arena-hud.enemy-hud{top:8px}
+}
+.arena-hud{position:relative;left:auto;right:auto;top:auto;bottom:auto;z-index:4;pointer-events:none;display:flex;align-items:center}
+.arena-hud.enemy-hud{grid-row:1}
+.arena-hud.player-hud{grid-row:3;bottom:10px}
+.arena-hud .fighter{width:100%;margin:0;min-height:0}
+@media(max-width:430px){
+.arena-hud.enemy-hud, .arena-hud.player-hud{left:0;right:0}
+}
+/* V7.3 — status semantics */
+.arena-hud .night-status{color:#a9c5dc;border-color:rgba(169,197,220,.28)}
+.arena-hud .spirit-status{color:#d8c28a;border-color:rgba(216,194,138,.3)}
+/* V7.4 — Shield as six discrete points */
+.shield-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--nd-sp-2);width:100%;height:5px;margin-top:4px;box-sizing:border-box}
+.shield-steps i{display:block;height:5px;border-radius:var(--nd-r-2);background:#242a33;border:1px solid #3a414c;box-sizing:border-box;transition:background .18s ease,border-color .18s ease,box-shadow .18s ease}
+.shield-steps i.filled{background:#b9c9d8;border-color:#d6e4ef;box-shadow:0 0 7px rgba(185,201,216,.18)}
+.night-status{min-width:74px;text-align:center}
+.night-status.is-night{color:#c9d8e8;border-color:rgba(201,216,232,.38);background:rgba(105,125,150,.11)}
+.night-status.is-day{color:var(--nd-gold);border-color:rgba(216,179,106,.34);background:rgba(216,179,106,.07)}
+/* V7.7 — HP and Shield stacked at identical full width */
+.arena-hud .combat-bars{display:grid;grid-template-columns:1fr}
+.arena-hud .stat-line{display:grid;grid-template-columns:auto auto;width:100%}
+.arena-hud .stat-line .mini-bar, .arena-hud .stat-line .shield-steps{grid-column:1 / -1;width:100%}
+.card-state-badge{margin-top:auto;align-self:flex-start;padding:var(--nd-sp-3) var(--nd-sp-7);border:1px solid rgba(150,90,105,.38);border-radius:var(--nd-r-pill);color:#c28b95;background:rgba(80,35,45,.18);font-size:var(--nd-fs-7);font-weight:900;letter-spacing:.8px}
+.status.lock-status{border-color:rgba(150,90,105,.42)!important;color:#c28b95!important;background:rgba(80,35,45,.16)!important}
+/* V12.12.28 — Character State Tags
+   Show active fighter states directly on each character card and classify
+   them by semantic color: buff, debuff, and special/state. */
+.arena-hud .status-strip{min-height:17px;overflow:hidden}
+.arena-hud .status{display:inline-flex;align-items:center;min-height:16px;box-sizing:border-box;white-space:nowrap;font-weight:800;letter-spacing:.15px}
+.arena-hud .status.buff-status{color:#9fd0ff;border-color:rgba(105,166,222,.40);background:rgba(50,105,155,.16)}
+.arena-hud .status.debuff-status{color:#ff9e9e;border-color:rgba(211,92,92,.44);background:rgba(115,34,43,.18)}
+.arena-hud .status.special-status{color:#c9b0ff;border-color:rgba(144,109,214,.42);background:rgba(79,53,130,.17)}
+.arena-hud .status.state-status{color:#f3cf76;border-color:rgba(218,177,79,.42);background:rgba(121,86,26,.15)}
+.arena-hud .status.domain-status{color:#8fe0d3;border-color:rgba(72,181,166,.42);background:rgba(32,112,102,.17)}
+.arena-hud .status.burn-status{color:#ffb273;border-color:rgba(231,120,54,.46);background:rgba(135,59,23,.18)}
+/* V10.3 — semantic drop zones */
+.fighter.nd-drop-target{border-color:var(--nd-gold)!important;box-shadow:0 0 0 3px rgba(216,179,106,.16),0 0 28px rgba(216,179,106,.14),inset 0 0 24px rgba(216,179,106,.07)!important}
+.fighter.nd-drop-target::after{content:"放到角色上";position:absolute;right:8px;bottom:6px;padding:var(--nd-sp-3) var(--nd-sp-6);border:1px solid rgba(216,179,106,.35);border-radius:var(--nd-r-pill);color:var(--nd-gold);background:rgba(20,16,8,.72);font:900 7px/1 "Noto Serif TC",serif;letter-spacing:.7px;pointer-events:none}
+.fighter.nd-drop-invalid{border-color:#986666!important;box-shadow:0 0 0 3px rgba(152,102,102,.12),inset 0 0 22px rgba(152,102,102,.07)!important}
+/* V11.1 — Centralized battle status
+   Status belongs to the battle state, not the fighter HUD. Keep HP/Shield/hand
+   count on each fighter card and move contextual states into the showdown area. */
+.battle-status-center{width:min(92%,360px);height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--nd-sp-5);z-index:6;pointer-events:none}
+.battle-status-title{font-size:var(--nd-fs-10);font-weight:950;letter-spacing:4px;color:#7b828d;line-height:1}
+.battle-status-row{display:flex;justify-content:center;align-items:center;gap:var(--nd-sp-5);flex-wrap:wrap;min-height:18px}
+.battle-status-row .status{border:1px solid #353b45;border-radius:var(--nd-r-pill);padding:var(--nd-sp-3) var(--nd-sp-7);font-size:var(--nd-fs-8);color:#a8adb6;background:rgba(10,12,16,.72);backdrop-filter:blur(4px);white-space:nowrap}
+.battle-status-row.enemy .status{border-color:rgba(120,130,145,.35)}
+.battle-status-row.player .status{border-color:rgba(216,179,106,.34)}
+.battle-status-empty{font-size:var(--nd-fs-7);color:#555c67;letter-spacing:1px}
+@media(max-width:430px){
+.battle-status-center{width:96%}
+.battle-status-title{font-size:var(--nd-fs-9)}
+.battle-status-row .status{font-size:var(--nd-fs-7);padding:var(--nd-sp-3) var(--nd-sp-6)}
+}
+/* V12.9.1 — Inline battle status beside profession */
+.arena-hud .fighter-id{flex:1;min-width:0}
+.arena-hud .fighter-copy{display:flex;align-items:center;gap:var(--nd-sp-7);min-width:0}
+.arena-hud .fighter-copy > div:first-child{flex:none}
+@media(max-width:430px){
+.arena-hud .fighter-copy{gap:var(--nd-sp-5)}
+}
+@media(prefers-reduced-motion:reduce){
+.fighter.combat-hit{animation:none!important}
+}
+.arena-hud .fighter{padding:var(--nd-sp-8) var(--nd-sp-10) var(--nd-sp-7);border-color:rgba(72,78,90,.72);background:linear-gradient(90deg,rgba(10,13,18,.94),rgba(18,20,26,.74));box-shadow:0 7px 18px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.025)}
+.arena-hud.player-hud .fighter{border-color:rgba(216,179,106,.30);background:linear-gradient(90deg,rgba(20,19,18,.76),rgba(22,20,17,.93))}
+.arena-hud .fighter-id{gap:var(--nd-sp-8)}
+.arena-hud .fighter-avatar{width:28px;height:28px;border-radius:var(--nd-r-8);font-size:var(--nd-fs-15);background:linear-gradient(145deg,#20242c,var(--nd-surface));border-color:#444b57}
+.arena-hud .fighter-name{font-size:var(--nd-fs-11)}
+.arena-hud .fighter-role{font-size:7.5px;margin-top:0;overflow:hidden;text-overflow:ellipsis}
+.arena-hud .fighter-hand{padding:var(--nd-sp-4) var(--nd-sp-7);border-radius:var(--nd-r-8);font-size:var(--nd-fs-8);background:rgba(255,255,255,.028)}
+.arena-hud .combat-bars{gap:var(--nd-sp-7);margin-top:6px}
+.arena-hud .stat-line{gap:var(--nd-sp-4);font-size:7.5px}
+.arena-hud .stat-line strong{font-size:var(--nd-fs-8);color:#dde0e5;font-weight:900;justify-self:end}
+.arena-hud .hp-line > span{color:#c9cbd0;font-weight:850}
+.arena-hud .shield-line > span{color:#88a9cc;font-weight:850}
+.arena-hud .mini-bar{height:6px;background:#1b2028;border:1px solid rgba(255,255,255,.03)}
+.arena-hud .hpfill{background:linear-gradient(90deg,#8f939a,#f2f2f4)}
+.arena-hud .shield-steps{height:6px;gap:var(--nd-sp-3)}
+.arena-hud .shield-steps i{height:6px;border-radius:var(--nd-r-2)}
+.arena-hud .status{padding:var(--nd-sp-3) var(--nd-sp-6);font-size:var(--nd-fs-7)}
+.arena-hud .fighter.player.nd-drop-target::after{content:"FREE · 放到角色上";right:8px;bottom:7px;padding:var(--nd-sp-3) var(--nd-sp-7);border:1px solid rgba(216,179,106,.48);border-radius:var(--nd-r-pill);color:#ead18f;background:rgba(20,16,8,.82);font:900 7px/1 "Noto Serif TC",serif;letter-spacing:.8px;box-shadow:0 0 16px var(--nd-gold-a08)}
+.arena-hud .fighter.player.nd-drop-target{border-color:rgba(216,179,106,.72)!important;box-shadow:0 0 0 3px var(--nd-gold-a10),0 0 30px var(--nd-gold-a10),inset 0 0 26px var(--nd-gold-a08)!important}
+.arena-hud .fighter.enemy.nd-drop-invalid::after{content:"✕ 不可放置";right:8px;bottom:7px;padding:var(--nd-sp-3) var(--nd-sp-7);border:1px solid rgba(152,102,102,.42);border-radius:var(--nd-r-pill);color:#c4868e;background:rgba(32,12,16,.80);font:900 7px/1 "Noto Serif TC",serif;letter-spacing:.8px}
+@media(max-width:430px){
+.arena-hud .fighter{padding:var(--nd-sp-7) var(--nd-sp-8) var(--nd-sp-6)}
+.arena-hud .fighter-avatar{width:25px;height:25px;font-size:var(--nd-fs-14)}
+.arena-hud .fighter-name{font-size:var(--nd-fs-10)}
+.arena-hud .fighter-role{font-size:6.8px}
+}
+/* V12.12.28 — final HUD override: character status tags stay visible. */
+.arena-hud .status-strip{display:flex!important;gap:var(--nd-sp-4);margin-top:5px;align-items:center}
+/* V12.12.30 — Inline character status tags beside profession name.
+   UI-only: keep active-state visibility while removing the dedicated status row. */
+.arena-hud .fighter-title-row{display:flex;align-items:center;gap:var(--nd-sp-5);min-width:0;width:100%}
+.arena-hud .fighter-title-row .fighter-name{flex:0 1 auto;min-width:0}
+.arena-hud .fighter-title-row .status-strip{display:flex!important;align-items:center;gap:var(--nd-sp-3);min-height:0;margin:0;overflow:hidden}
+.arena-hud .fighter-title-row .status{min-height:15px;padding:var(--nd-sp-2) var(--nd-sp-5);font-size:var(--nd-fs-7);line-height:1;border-radius:var(--nd-r-pill)}
+.arena-hud .fighter-title-row .status.buff-status{color:#9fd0ff}
+.arena-hud .fighter-title-row .status.debuff-status{color:#ff9e9e}
+.arena-hud .fighter-title-row .status.special-status{color:#c9b0ff}
+.arena-hud .fighter-title-row .status.domain-status{color:#8fe0d3}
+.arena-hud .fighter-title-row .status.burn-status{color:#ffb273}
+/* V12.12.33 — Status tag strip shrink-wrap fix.
+   Keep the strip sized by its actual tag content instead of stretching across the card. */
+.arena-hud .fighter-title-row .status-strip{width:auto!important;flex:0 0 auto!important;max-width:calc(100% - 4px);align-self:center}
+.arena-hud .fighter-title-row .status{width:auto!important;flex:0 0 auto!important}
+@media(max-width:430px){
+.arena-hud .fighter-title-row{gap:var(--nd-sp-4)}
+.arena-hud .fighter-title-row .status{font-size:6.5px;padding:var(--nd-sp-2) var(--nd-sp-4)}
+}
+.side-head{display:flex;align-items:center;justify-content:space-between;gap:var(--nd-sp-8);margin-bottom:8px}
+.duel-tag{letter-spacing:1.8px;font-weight:950;color:#737b87}
+.duel-role{color:#7c838e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:700px){
+}
+/* HUDs become compact character plaques in the two top corners. */
+.duel-tag{font-size:var(--nd-fs-8)}
+.duel-role{font-size:var(--nd-fs-8)}
+@media(max-width:430px){
+}
+.duel-role{margin-top:4px}
+@media(max-width:430px){
+.duel-tag, .duel-role{font-size:var(--nd-fs-8)}
+}
+/* V12.12.39-Test information reduction */
+.duel-tag, .duel-role{display:none!important}
+.fighter-hand{display:none}
+@media(max-width:700px){
+.duel-hand .card .card-state-badge{display:none !important}
+}
+.setup-stage .side-head{justify-content:center;gap:var(--nd-sp-12)}
+.setup-wrap>.side-head{justify-content:center;margin-bottom:12px}
+@media(max-width:700px){
+}
+.detail-card .class-crest{width:32px;height:32px}
+@media(max-width:700px){
+.duel-hand .class-crest, .front .class-crest{width:16px;height:16px;right:2px;top:2px}
+}
+.setup-stage .side-head{height:22px;margin-bottom:10px}
+.carousel-card .class-crest{top:8px;right:8px;width:34px;height:38px;background:linear-gradient(#283c39,#09191e);border-color:#d4b378;clip-path:polygon(0 0,100% 0,100% 77%,50% 100%,0 77%);border-radius:0}
+@media(max-width:700px){
+.carousel-card .class-crest{width:24px;height:29px;right:5px;top:5px}
+}
+/* Authoritative battle HUD. Art, numbers and status each have their own layout area. */
+.battle-hud{--portrait-accent:#d4c498;--hud-edge:#9a8553;--hud-ink:#112925}
+.duel-screen>.battle-hud.duel-side{width:96%!important;height:auto!important;min-height:0!important;max-height:none!important;align-self:stretch!important;padding:var(--nd-sp-20)!important;overflow:visible!important;border:1px solid #9a855366!important;border-radius:var(--nd-r-8)!important;background:radial-gradient(ellipse at 0 0,#40625238,transparent 70%),linear-gradient(120deg,#102624f5,#091b20f5)!important;box-shadow:inset 0 1px #e7d5a22e,inset 0 0 0 4px #07151380,0 12px 24px var(--nd-ink-33)!important}
+.duel-screen>.battle-hud.enemy{background:radial-gradient(ellipse at 100% 0,#57616b25,transparent 70%),linear-gradient(240deg,#15282bf5,#0b1c22f5)!important;border-color:#9a855366!important}
+.battle-hud::before{content:"";position:absolute;inset:8px;border:1px solid #b6a06a1f;border-radius:var(--nd-r-3);pointer-events:none}
+.duel-identity{grid-area:identity;min-width:0;display:flex;align-items:baseline;gap:var(--nd-sp-12);border-bottom:1px solid #cab57c26;padding-bottom:8px}
+.enemy .duel-identity{flex-direction:row-reverse}
+.duel-owner{color:#a2b4ad;font-size:var(--nd-fs-12);line-height:1.5;letter-spacing:2px;white-space:nowrap}
+.duel-name{color:#f1ddb1;font:700 22px/1.4 "Noto Serif TC",serif;letter-spacing:3px;margin:0;white-space:nowrap}
+.duel-copy{grid-area:resources;min-width:0}
+.battle-hud .duel-avatar{grid-area:portrait;position:relative;align-self:start;margin:0;width:96px;height:116px;display:block;overflow:visible;font-size:0;border:0;border-radius:0;background:#061518;isolation:isolate;box-shadow:0 8px 16px var(--nd-ink-40)}
+.portrait-window{position:absolute;inset:4px 4px 8px;overflow:hidden;clip-path:polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px);background:#0b1c20}
+.duel-avatar::before{content:"";position:absolute;inset:4px;border-radius:inherit;box-shadow:inset 0 -20px 18px -14px #051619,inset 0 0 12px #07151870;z-index:1;pointer-events:none}
+.duel-avatar .class-crest{position:absolute;display:grid;place-items:center;inset:auto auto 0 calc(50% - 13px);width:26px;height:22px;box-sizing:border-box;z-index:3;border:1px solid #b59b60;background:linear-gradient(#254039,#0b2020);color:var(--portrait-accent);box-shadow:0 2px 5px var(--nd-ink-60)}
+.duel-avatar .class-crest svg{width:16px;height:16px;margin:0}
+.duel-avatar.portrait-failed .class-crest{display:none}
+.duel-hp, .duel-shield-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--nd-sp-8);margin:0;font:500 12px/1.5 "Noto Serif TC",serif;color:#b8c9bf}
+.duel-hp>span, .duel-shield-row>span{display:flex;align-items:center;gap:var(--nd-sp-4);letter-spacing:1px;flex:none;white-space:nowrap}
+.duel-hp strong{position:relative;isolation:isolate;display:block;box-sizing:content-box;margin-left:auto;min-width:min(5ch,calc(100cqw - 16px));padding:var(--nd-sp-2) var(--nd-sp-8);text-align:right;font:500 26px/1.4 "Noto Serif TC",serif;font-variant-numeric:lining-nums tabular-nums;letter-spacing:0;white-space:nowrap;color:#f8e6bd;text-shadow:0 2px 3px var(--nd-black);clip-path:none;overflow:visible;border:0;background:none}
+.duel-hp strong::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#ac875010,#b8995830);border-right:2px solid #b99c60;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%,0 8px)}
+.duel-hpbar{height:8px;margin:var(--nd-sp-4) 0 var(--nd-sp-8);padding:1px;box-sizing:border-box;overflow:hidden;border:1px solid #bca36a50;border-radius:var(--nd-r-2);background:#020d10;box-shadow:inset 0 2px 3px var(--nd-ink-73)}
+.duel-hpfill{height:100%;background:linear-gradient(90deg,#56745d,#bed298);transition:width .35s ease}
+.enemy .duel-hpfill{background:linear-gradient(90deg,#775766,#d1a29b)}
+.duel-shield-row{color:#a5c0c7}
+.duel-shield-row strong{margin-left:auto;min-width:6.5ch;text-align:right;font:600 14px/1.5 "Noto Serif TC",serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#c9dddf}
+.duel-shield-row small{font:inherit;color:#91a8ac}
+.duel-shield{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--nd-sp-4);height:4px;margin-top:4px}
+.duel-shield i{height:4px;width:auto;border:1px solid #527d784d;border-radius:1px;background:#142e30}
+.duel-shield i.filled{background:#9bbfbe;box-shadow:0 0 6px #9bbfbe20}
+.duel-status-row{grid-area:statuses;display:flex;flex-wrap:wrap;align-content:start;gap:var(--nd-sp-8);margin-top:8px;padding-top:12px;border-top:1px solid #a6905d26;min-width:0}
+.duel-status-row:empty{display:none}
+.enemy .duel-status-row{justify-content:flex-end}
+.duel-status{display:inline-flex;align-items:center;gap:var(--nd-sp-4);border:1px solid #a7b8ab38;border-radius:var(--nd-r-3);background:linear-gradient(#35514650,#162e2d80);color:#d0dfd5;font:500 12px/1.5 "Noto Serif TC",serif;padding:var(--nd-sp-4) var(--nd-sp-8);white-space:normal;overflow-wrap:anywhere;max-width:100%;box-sizing:border-box}
+.battle-hud.low-hp .duel-hp strong{color:#ffc0a6}
+.battle-hud.low-hp .duel-hpbar{border-color:#d5907066;box-shadow:0 0 8px #b6502820}
+@media(max-width:1000px){
+.duel-screen>.battle-hud.duel-side{padding:var(--nd-sp-16)!important}
+.battle-hud .duel-avatar{width:80px;height:100px}
+.duel-name{font-size:var(--nd-fs-20)}
+}
+@media(max-width:700px){
+.duel-screen>.battle-hud.duel-side{width:100%!important;padding:var(--nd-sp-12)!important}
+.battle-hud .duel-avatar{width:56px;height:70px;margin:0;flex:none}
+.duel-copy, .duel-status-row{flex:1 0 100%}
+.duel-avatar .class-crest{width:22px;height:18px;left:calc(50% - 11px);bottom:0}
+.duel-avatar .class-crest svg{width:14px;height:14px}
+.duel-identity, .enemy .duel-identity{display:flex;flex-direction:column;align-items:flex-start;gap:var(--nd-sp-4);border:0;padding:0;flex:1 0 max-content}
+.duel-owner{font-size:var(--nd-fs-12);letter-spacing:0}
+.duel-name{font-size:var(--nd-fs-16);letter-spacing:1px;line-height:1.5}
+.duel-hp strong{font-size:var(--nd-fs-20);padding:var(--nd-sp-2) var(--nd-sp-4)}
+.duel-hp, .duel-shield-row{gap:var(--nd-sp-4)}
+.duel-hp>span, .duel-shield-row>span{letter-spacing:0}
+.duel-shield-row strong{font-size:var(--nd-fs-12)}
+.duel-status-row, .enemy .duel-status-row{justify-content:flex-start;gap:var(--nd-sp-4);margin:0;padding-top:8px}
+.duel-status{padding:var(--nd-sp-4)}
+}
+/* Container width also responds to enlarged text, without clipping resource values. */
+.duel-copy{container-type:inline-size}
+@media(prefers-reduced-motion:reduce){
+.duel-hpfill{transition:none}
+}
+/* Shared enamel treatment; silhouettes and labels carry meaning as well as tint. */
+.duel-status:has([data-icon=lock]){border-color:#b8875366;color:#ebc79e;background:#392b2080}
+.duel-status:has([data-icon=burn]){border-color:#c9785766;color:#f0ba9f;background:#3c251f80}
+.duel-status:has([data-icon=night]){border-color:#9b89bf66;color:#d7cef1;background:#2b254580}
+.duel-status:has([data-icon=shield]){border-color:#81aba866;color:#c4e0df;background:#203a3b80}
+.duel-status:has([data-icon=domain]){border-color:#9eb88766;color:#d5e8c3}
+.app .duel-screen>.battle-hud.duel-side{border-radius:var(--nd-r-4)!important;border-color:#ad925b8a!important;background:radial-gradient(ellipse at 10% 0,#55745a24,transparent 65%),repeating-linear-gradient(0deg,#fff1 0px,transparent .25px,transparent 4px),linear-gradient(120deg,#152e2bfa,#091b1efa)!important;box-shadow:inset 0 1px #f1d7a044,inset 0 -3px var(--nd-ink-47),0 8px 18px var(--nd-ink-40)!important}
+.app .battle-hud::before{border-image:url('../../../assets/icons/collector-corners.svg') 40 stretch;box-sizing:border-box;border-radius:0}
+.app .duel-identity{background:linear-gradient(90deg,#ccb3750a,transparent);border-bottom-color:#c6a56155;padding-bottom:8px}
+.app .enemy .duel-identity{background:linear-gradient(270deg,#ccb3750a,transparent)}
+.app .duel-name{color:#f1e0b9;text-shadow:0 2px 2px var(--nd-ink-60)}
+.app .duel-owner{color:#93aaa0;letter-spacing:1px}
+.app .duel-hp strong::before{border-right:2px solid #d5b576;background:linear-gradient(130deg,#6d563a26,#2f382a70);box-shadow:inset 0 1px #f9df971a}
+.app .duel-hpbar{height:9px;padding:var(--nd-sp-2);border-color:#9e855967;box-shadow:0 1px #e0c57c12,inset 0 2px 3px var(--nd-ink-73)}
+.app .duel-hpfill{background:linear-gradient(#d7d9a3,#8fab7b 45%,#708857);box-shadow:inset 0 1px #eaf1c785}
+.app .enemy .duel-hpfill{background:linear-gradient(#ddb5a1,#b48379 45%,#845b58)}
+.app .duel-shield i{border-color:#779b906b;background:#0a191c;box-shadow:inset 0 1px var(--nd-ink-73)}
+.app .duel-shield i.filled{background:linear-gradient(#bfd6ca,#759c9c);box-shadow:0 0 5px #8bbdab18}
+.app .duel-status-row{border-top-color:#b59b5a2e}
+.app .duel-status{border-radius:var(--nd-r-2);box-shadow:inset 0 1px #edd49b0d,0 2px 3px var(--nd-ink-20)}
+@media(max-width:700px){
+.app .battle-hud::before{background-size:100% 100%}
+.app .duel-identity, .app .enemy .duel-identity{background:none;padding:0}
+}
+/* Non-interactive overlays keep the frame above character and card illustrations. */
+.duel-avatar::after{content:""!important;position:absolute!important;inset:0!important;box-sizing:border-box;background:none!important;border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-hero)!important;border-image-slice:var(--frame-hero-slice)!important;border-image-repeat:repeat!important;border-image-outset:0!important;pointer-events:none!important;z-index:6!important;opacity:1!important;transform:none!important}
+.duel-avatar::after{border-image-width:16px!important}
+.duel-avatar .portrait-window{inset:4px 4px 6px;clip-path:none}
+/* Panels and the table retain their enamel, lighting and independent night layer. */
+.app .battle-hud::before{inset:0!important;border:1px solid var(--nd-gold-dim)!important;background:none!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-repeat:repeat!important;opacity:1!important;pointer-events:none;z-index:0}
+.app .duel-hp strong::before{clip-path:none;border:1px solid #a78d5866;border-image:var(--frame-thin) var(--frame-thin-slice) / 8px repeat}
+.duel-status, .duel-avatar .class-crest{border-image-source:var(--frame-thin)!important;border-image-slice:var(--frame-thin-slice)!important;border-image-width:8px!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.duel-avatar .class-crest{border-radius:0}
+@media(max-width:700px){
+.duel-avatar::after{border-image-width:10px!important}
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost) .class-crest{width:16px;height:16px;right:2px;top:2px}
+}
+@media (orientation:landscape) and (max-height:520px){
+#app .duel-side .duel-avatar{width:44px!important;height:54px!important;min-height:0!important}
+#app .duel-side .duel-identity{min-height:0!important;padding:0!important;margin:0!important;border:0!important}
+#app .duel-side .duel-name{font-size:var(--nd-fs-15)!important;line-height:1.2!important}
+#app .duel-side .duel-owner{font-size:var(--nd-fs-10)!important}
+#app .duel-side .duel-copy{gap:var(--nd-sp-2)!important}
+#app .duel-side .duel-hp{height:22px!important;min-height:0!important;margin:0!important}
+#app .duel-side .duel-hpbar{margin:var(--nd-sp-2) 0!important}
+#app .duel-side .duel-shield-row{font-size:var(--nd-fs-10)!important;min-height:0!important;margin:0!important;line-height:1.3!important}
+#app .duel-side .duel-shield{display:none!important}
+}
+.setup-stage .carousel-card .class-crest{background: #11291fea;border-color: var(--visual-edge);color: var(--visual-gold-light)}
+/* Duel: the board, HUD and toolbar share one material; health and status colours
+   and opaque, physically rotating card faces are deliberately left intact. */
+.app .battle-hud{background: var(--visual-enamel) !important;box-shadow: var(--visual-shadow) !important}
+.app .battle-hud::before{border-image-width: 16px !important}
+.duel-side .duel-name{color: var(--visual-gold-light)}
+.duel-screen .duel-avatar::after{border-image-width: 12px !important}
+@media (max-width: 700px){
+.app .battle-hud::before{border-image-width: 12px !important}
+.duel-screen .duel-avatar::after{border-image-width: 10px !important}
+}
+@media (max-width:899px), (max-height:520px){
+#app .duel-screen.nd-stage .duel-avatar{width:36px!important;height:46px!important;min-height:0!important}
+#app .duel-screen.nd-stage .duel-identity{flex-direction:column!important;align-items:flex-start!important;gap:0!important;border:0;padding:0}
+#app .duel-screen.nd-stage .duel-name{font-size:var(--nd-fs-16)!important;line-height:1.4!important;letter-spacing:1px}
+#app .duel-screen.nd-stage .duel-owner{font-size:var(--nd-fs-12)!important;letter-spacing:0}
+#app .duel-screen.nd-stage .duel-hp{height:auto!important;min-height:0!important;gap:var(--nd-sp-4)!important;flex-wrap:wrap}
+#app .duel-screen.nd-stage .duel-hpbar{height:6px!important;margin:var(--nd-sp-3) 0!important}
+#app .duel-screen.nd-stage .duel-shield-row{font-size:var(--nd-fs-12)!important;line-height:1.5!important;gap:var(--nd-sp-2)!important;margin:0!important}
+#app .duel-screen.nd-stage .duel-shield{display:none!important}
+/* Status labels retain their full text. An unusually buff-heavy fighter
+     gets a horizontal status strip rather than pushing cards off screen. */
+#app .duel-screen.nd-stage .duel-status-row{gap:var(--nd-sp-4);margin:0;padding-top:4px;max-width:100%;flex-wrap:nowrap!important;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x}
+#app .duel-screen.nd-stage .duel-status{font-size:var(--nd-fs-12);padding:var(--nd-sp-2) var(--nd-sp-4);flex:0 0 auto;white-space:nowrap}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+#app .duel-screen.nd-stage .duel-identity{flex-direction:row!important;align-items:baseline!important;gap:var(--nd-sp-8)!important}
+#app .duel-screen.nd-stage .duel-copy{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--nd-sp-2) var(--nd-sp-12)}
+#app .duel-screen.nd-stage .duel-hpbar{grid-column:1/-1;grid-row:2}
+#app .duel-screen.nd-stage .duel-shield-row{gap:var(--nd-sp-8)!important}
+}
+@media (max-height:340px) and (orientation:landscape){
+#app .duel-screen.nd-stage .duel-copy{column-gap:var(--nd-sp-4)}
+#app .duel-screen.nd-stage .duel-shield-row{gap:var(--nd-sp-4)!important}
+}
+@media (max-width:620px){
+.setup-stage .side-head{margin:0 0 var(--nd-sp-8)}
+}

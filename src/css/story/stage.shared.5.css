@@ -1,0 +1,27 @@
+.story-read-controls button:last-child:not(:first-child){background: linear-gradient(120deg, #d2b57a, #b09159);color: #13241b;border-color: #e3c98b;box-shadow: inset 0 1px #fff0b955, 0 5px 16px var(--nd-ink-33);text-shadow: none}
+.story-reader{background: var(--visual-enamel);border-color: var(--visual-edge);box-shadow: var(--visual-shadow)}
+.story-reader p{color: var(--visual-muted)}
+.story-shell .story-scene{border: 1px solid var(--visual-edge);border-radius: var(--nd-r-4);box-shadow: var(--visual-shadow)}
+/* Story stage: change the subtitle material only; actor crops, prop coordinates,
+   layered lighting and the story's fixed-stage layout remain scene-owned. */
+.story-stage .story-stage-panel{background: linear-gradient(115deg, #0a211beF, #102a21f5);color: var(--visual-text)}
+.story-performance .story-stage-panel.story-dialogue-panel{background: linear-gradient(115deg, #0a211bef, #102a21f5)}
+.story-stage-header{background: linear-gradient(#061811b3, #06181100)}
+.story-performance .story-reading-line[data-voice-kind=narration]{color: #c4d0be}
+.story-performance .story-reading-heading{color: var(--visual-gold)}
+.story-performance .story-voice-kind{color: var(--visual-muted);border-color: var(--visual-edge)}
+.story-performance .story-read-controls{border-color: var(--visual-edge)}
+.story-performance .performance-speaker-marker{background: #102b21ed;border-color: var(--visual-gold)}
+@media (max-width:899px), (max-height:520px){
+/* The reading area yields space to the text instead of enforcing a tall
+     decorative spacer. Long choices remain scrollable at normal font size. */
+.story-stage.story-performance{height:100dvh;min-height:100dvh}
+.story-performance .story-stage-header{flex-shrink:0;padding-top:max(10px,env(safe-area-inset-top));padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+.story-performance .story-stage-space{min-height:24px;flex:1 1 auto}
+.story-performance .story-stage-bottom{flex:0 1 auto;max-height:calc(100dvh - 160px);overflow:auto;overscroll-behavior:contain;padding-top:24px;padding-bottom:max(12px,env(safe-area-inset-bottom))}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+.story-performance .story-stage-header{display:grid;grid-template-columns:max-content minmax(0,1fr) max-content;align-items:center;gap:var(--nd-sp-8);flex-wrap:nowrap;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:8px}
+.story-performance .story-stage-bottom{min-height:0;max-height:none;padding-top:22px}
+.story-performance .story-dialogue-panel>.story-read-controls{position:sticky;bottom:0;z-index:1;background:#102725;padding:var(--nd-sp-4) 0}
+}

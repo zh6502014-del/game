@@ -1,0 +1,12 @@
+.story-objective span{display:block;font-size:var(--nd-fs-11);color:#a39375;margin-bottom:8px}
+.story-objective strong{font-size:var(--nd-fs-14);font-weight:500}
+.story-objective p{font-size:var(--nd-fs-12);margin-bottom:0}
+.story-reward{display:flex;gap:var(--nd-sp-14);align-items:center;padding-top:22px;margin-top:24px;border-top:1px solid #393831;font-size:var(--nd-fs-12);color:#bcb5a6}
+.story-reward img{width:30px;height:36px}
+.story-reward b{color:#e0c593;margin-left:6px}
+.story-reward small{display:block;font-size:var(--nd-fs-10);color:#a49e90;margin-top:7px;line-height:1.7}
+.story-footer{display:flex;justify-content:space-between;gap:var(--nd-sp-16);border-top:1px solid #353531;margin-top:30px;padding:var(--nd-sp-20) 0;color:#9c978a;font-size:var(--nd-fs-11);line-height:1.8}
+@media(max-width:850px){
+.story-roles button{padding:var(--nd-sp-12);gap:var(--nd-sp-8)}
+.story-roles span{font-size:var(--nd-fs-14)}
+}

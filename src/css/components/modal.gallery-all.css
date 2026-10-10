@@ -1,0 +1,1 @@
+:is(.rules-modal, .audio-modal, .detail-card, .story-log-dialog, .story-lightbox, .puzzle-dialog, .story-search-dialog, .story-route-dialog, .story-maze-dialog) :is(h2,h3){color: var(--visual-gold-light)}

@@ -1,0 +1,10 @@
+.story-puzzle-list p{color: var(--visual-muted)}
+.story-puzzle-choices small{color: var(--visual-muted);font-size: var(--nd-fs-13)}
+/* Puzzle and search artwork stays unfiltered, at its authored coordinates.
+   Their tray, inventory and detail panels carry the common materials. */
+.puzzle-dialog .puzzle-board{border-color: #9c84546e;background: radial-gradient(ellipse, #28432f, #0c2118)}
+.puzzle-dialog .puzzle-piece{background: #182f25;border-color: #9c845478;color: var(--visual-text)}
+.puzzle-dialog .puzzle-piece[aria-pressed=true]{background: #314531;border-color: var(--visual-gold-light);box-shadow: inset 0 -3px var(--visual-gold)}
+.puzzle-dialog .puzzle-piece:disabled{border-style: dashed;background: #10241c}
+.puzzle-feedback{border-color: var(--visual-edge)}
+.puzzle-asset-state{background: #10281f;color: var(--visual-text)}

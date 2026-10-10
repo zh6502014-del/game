@@ -1,0 +1,18 @@
+@media (max-width:899px), (max-height:520px){
+#app .duel-screen.nd-stage .retro-card-slot, #app .duel-screen.nd-stage .retro-card-slot .card3d{width:64px!important;min-width:64px!important;max-width:64px!important;height:90px!important;max-height:90px!important;flex-basis:64px!important}
+#app .duel-screen.nd-stage .duel-hand .card{width:72px!important;min-width:72px!important;max-width:72px!important;height:102px!important;max-height:102px!important;flex:0 0 72px!important;margin:0!important;transform:none!important}
+#app .duel-screen.nd-stage .player-hand:has(> :nth-child(4))>.card{touch-action:pan-x!important}
+#app .duel-screen.nd-stage .enemy-card-back{margin:0!important;transform:none!important}
+}
+@media (max-width:899px) and (orientation:portrait){
+#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:30px!important;min-width:30px!important;max-width:30px!important;height:42px!important;max-height:42px!important;flex:0 0 30px!important}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+#app .duel-screen.nd-stage .duel-hand .card, #app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:64px!important;min-width:64px!important;max-width:64px!important;height:90px!important;max-height:90px!important;flex:0 0 64px!important}
+}
+@media (max-height:340px) and (orientation:landscape){
+#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:24px!important;min-width:24px!important;max-width:24px!important;height:34px!important;max-height:34px!important;flex:0 0 24px!important}
+}
+@media (hover:none) and (pointer:coarse){
+#app .duel-screen.nd-stage .duel-hand .card:hover:not(:disabled){transform:none!important}
+}

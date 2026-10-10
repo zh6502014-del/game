@@ -1,0 +1,20 @@
+.story-shell .story-skin>img{margin:calc(var(--sf-w) - 4px) calc(var(--sf-w) - 4px) 0;width:calc(100% - 2*(var(--sf-w) - 4px))}
+/* Chapter cards are buttons: draw the frame on a non-interactive overlay with the hero frame, exactly how duel cards do it. */
+.story-shell .campaign-node-grid button{position:relative;border-color:var(--nd-gold-dim)!important;border-radius:0;padding:calc(var(--sf-w) + 10px) calc(var(--sf-w) + 14px)}
+.story-shell .campaign-node-grid button::before{content:"";position:absolute;inset:0;box-sizing:border-box;pointer-events:none;z-index:1;border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-hero);border-image-slice:var(--frame-hero-slice);border-image-width:calc(var(--sf-w) - 2px);border-image-repeat:repeat;border-image-outset:0}
+.story-shell .campaign-node-grid button:disabled{border-style:solid}
+.story-shell .campaign-node-grid button:disabled::before{opacity:.55;filter:saturate(.6)}
+.story-shell .campaign-node-grid button:not(:disabled):hover::before{filter:brightness(1.18)}
+.story-shell .campaign-node-grid button:not(:disabled)::after{right:calc(var(--sf-w) + 8px);bottom:calc(var(--sf-w) + 4px)}
+.story-shell .story-puzzle-choices .sq-card small{margin:0;font-size:var(--nd-fs-12)}
+@media (orientation:landscape) and (max-height:520px){
+.story-performance .story-stage-header span{font-size:var(--nd-fs-11)}
+.story-performance .story-stage-header h1{font-size:var(--nd-fs-17);margin:0}
+.story-performance .story-dialogue-panel[data-presentation=subtitle]>.story-read-controls button{min-width:104px;min-height:40px;padding-block:6px}
+.story-performance .story-dialogue-panel[data-presentation=interaction]>*{grid-column:1 / -1}
+.story-performance .story-dialogue-panel[data-presentation=interaction] h2{font-size:var(--nd-fs-17);margin:var(--nd-sp-6) 0 var(--nd-sp-4)}
+.story-performance .story-dialogue-panel[data-presentation=interaction] p{margin:0 0 var(--nd-sp-6);line-height:1.55}
+.story-performance .story-dialogue-panel[data-presentation=interaction]>.story-actions button{min-height:44px}
+.story-performance .story-dialogue-panel[data-presentation=interaction]>button{grid-column:2;grid-row:20;align-self:end;min-width:180px;min-height:44px;margin:0}
+.story-performance .story-dialogue-panel[data-presentation=interaction]>p:empty{display:none}
+}

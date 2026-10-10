@@ -1,0 +1,312 @@
+{
+ "preloader.css": [
+  "components/preloader.css"
+ ],
+ "ui-font.css": [
+  "base/global.gallery-all.css"
+ ],
+ "styles.css": [
+  "base/global.css",
+  "base/global.gallery-art.css",
+  "components/card.css",
+  "components/card.gallery-art.css",
+  "components/control.css",
+  "components/hand.2.css",
+  "components/hand.css",
+  "components/hud.css",
+  "components/log.css",
+  "components/modal.2.css",
+  "components/modal.css",
+  "components/panel.css",
+  "layout/app.css",
+  "layout/duel-board.2.css",
+  "layout/duel-board.css",
+  "layout/duel-board.gallery-art.css",
+  "screens/result.css",
+  "screens/setup.css",
+  "story/campaign.shared.2.css",
+  "story/campaign.shared.3.css",
+  "story/campaign.shared.4.css",
+  "story/campaign.shared.css",
+  "story/route.shared.css",
+  "story/shell.shared.2.css",
+  "story/shell.shared.3.css",
+  "story/shell.shared.4.css",
+  "story/shell.shared.css",
+  "story/stage.shared.2.css",
+  "story/stage.shared.3.css",
+  "story/stage.shared.css"
+ ],
+ "card-theme.css": [
+  "base/global.gallery-art.css",
+  "components/card.css",
+  "components/card.gallery-art.css",
+  "components/control.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/log.2.css",
+  "components/log.css",
+  "components/modal.2.css",
+  "components/panel.css",
+  "layout/app.css",
+  "layout/duel-board.2.css",
+  "layout/duel-board.gallery-art.css",
+  "screens/result.css",
+  "screens/setup.css"
+ ],
+ "prestige-ui.css": [
+  "base/global.gallery-art.2.css",
+  "base/global.gallery-art.css",
+  "components/card.3.css",
+  "components/card.gallery-art.2.css",
+  "components/card.gallery-art.3.css",
+  "components/control.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/modal.2.css",
+  "components/modal.3.css",
+  "components/panel.2.css",
+  "layout/app.css",
+  "layout/duel-board.3.css",
+  "layout/duel-board.gallery-art.css",
+  "screens/home.css",
+  "screens/result.css",
+  "screens/setup.2.css",
+  "screens/setup.css"
+ ],
+ "character-art.css": [
+  "base/global.gallery-art-icon.css",
+  "components/card.2.css",
+  "components/card.css",
+  "components/card.gallery-art-icon.css",
+  "components/card.gallery-art.2.css",
+  "components/card.gallery-art.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/hud.gallery-art.css",
+  "components/panel.2.css",
+  "layout/app.css",
+  "layout/duel-board.2.css",
+  "layout/duel-board.3.css",
+  "screens/result.css",
+  "screens/setup.css"
+ ],
+ "unified-art.css": [
+  "base/global.gallery-art.2.css",
+  "components/card.3.css",
+  "components/card.gallery-art.3.css",
+  "components/control.css",
+  "components/environment.css",
+  "components/environment.gallery-art.css",
+  "components/hand.2.css",
+  "components/hud.gallery-art.css",
+  "components/log.2.css",
+  "components/modal.3.css",
+  "layout/app.css",
+  "layout/duel-board.3.css",
+  "layout/duel-board.gallery-art.css",
+  "screens/home.css",
+  "screens/result.css",
+  "screens/setup.2.css",
+  "story/campaign.shared.4.css"
+ ],
+ "arena-finish.css": [
+  "components/card.3.css",
+  "components/control.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/panel.2.css",
+  "layout/duel-board.3.css",
+  "screens/setup.2.css"
+ ],
+ "png-frames.css": [
+  "base/global.gallery-art-frame.css",
+  "components/card.3.css",
+  "components/card.gallery-art-frame.css",
+  "components/card.gallery-art.3.css",
+  "components/card.gallery-frame.css",
+  "components/control.css",
+  "components/hud.css",
+  "components/modal.3.css",
+  "layout/duel-board.3.css",
+  "screens/home.css",
+  "screens/result.css",
+  "screens/setup.2.css",
+  "story/campaign.shared.4.css",
+  "story/stage.shared.3.css"
+ ],
+ "hud.css": [
+  "components/card.3.css",
+  "components/hud.css",
+  "layout/duel-board.3.css",
+  "story/shell.shared.4.css"
+ ],
+ "card-surface.css": [
+  "components/card.3.css",
+  "components/hud.css",
+  "layout/duel-board.3.css"
+ ],
+ "layout-landscape.css": [
+  "components/card.3.css",
+  "components/control.3.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/modal.4.css",
+  "layout/duel-board.3.css"
+ ],
+ "visual-system.css": [
+  "base/global.gallery-all.2.css",
+  "components/card.3.css",
+  "components/card.gallery-all.css",
+  "components/card.gallery-frame.css",
+  "components/control.3.css",
+  "components/hud.css",
+  "components/modal.4.css",
+  "components/modal.gallery-all.css",
+  "layout/duel-board.3.css",
+  "layout/duel-board.gallery-art.2.css",
+  "screens/gallery.gallery-art-icon.css",
+  "screens/gallery.gallery-art.css",
+  "screens/gallery.gallery-icon.css",
+  "screens/home.css",
+  "screens/home.gallery-all.css",
+  "screens/setup.2.css",
+  "story/battle.shared.css",
+  "story/campaign.shared.5.css",
+  "story/campaign.shared.6.css",
+  "story/maze.shared.css",
+  "story/puzzle.shared.2.css",
+  "story/puzzle.shared.css",
+  "story/route.shared.2.css",
+  "story/search.shared.css",
+  "story/shell.shared.4.css",
+  "story/shell.shared.5.css",
+  "story/shell.shared.6.css",
+  "story/stage.shared.4.css",
+  "story/stage.shared.5.css"
+ ],
+ "mobile-layout.css": [
+  "components/card.4.css",
+  "components/control.3.css",
+  "components/hand.2.css",
+  "components/hud.css",
+  "components/modal.4.css",
+  "components/modal.5.css",
+  "components/panel.2.css",
+  "layout/duel-board.3.css",
+  "screens/setup.2.css",
+  "screens/setup.3.css",
+  "story/campaign.shared.6.css",
+  "story/shell.shared.6.css",
+  "story/stage.shared.5.css"
+ ],
+ "ui-controls.css": [
+  "base/global.css",
+  "components/card.3.css",
+  "components/control.2.css",
+  "components/control.3.css",
+  "components/modal.3.css",
+  "components/modal.4.css",
+  "screens/setup.2.css",
+  "story/battle.shared.css",
+  "story/campaign.shared.4.css",
+  "story/shell.shared.4.css"
+ ],
+ "story-puzzles.css": [
+  "story/puzzle.css",
+  "story/shared.css"
+ ],
+ "story-frames.css": [
+  "story/battle.css",
+  "story/campaign.2.css",
+  "story/campaign.css",
+  "story/maze.css",
+  "story/puzzle.css",
+  "story/route.css",
+  "story/search.css",
+  "story/shared.css",
+  "story/shell.2.css",
+  "story/stage.css"
+ ],
+ "story-sidequest.css": [
+  "story/maze.css",
+  "story/puzzle.css",
+  "story/route.css",
+  "story/search.css",
+  "story/shared.css",
+  "story/shell.2.css",
+  "story/sidequest.css"
+ ],
+ "story-mobile.css": [
+  "story/battle.css",
+  "story/maze.css",
+  "story/puzzle.css",
+  "story/shell.2.css",
+  "story/stage.2.css",
+  "story/stage.css"
+ ],
+ "story-shield-rhythm.css": [
+  "story/shared.css",
+  "story/shield-rhythm.css"
+ ],
+ "story-battle-mobile.css": [
+  "story/battle.css",
+  "story/shared.css"
+ ],
+ "story-route.css": [
+  "story/route.css"
+ ],
+ "story-maze.css": [
+  "story/maze.css"
+ ],
+ "story-search.css": [
+  "story/search.css",
+  "story/stage.css"
+ ],
+ "story-archive-wall.css": [
+  "story/archive-wall.css",
+  "story/search.css"
+ ],
+ "story-stage.css": [
+  "story/campaign.css",
+  "story/shell.css",
+  "story/stage.css"
+ ],
+ "story-performance.css": [
+  "story/campaign.css",
+  "story/shell.css",
+  "story/stage.css"
+ ],
+ "story-campaign.css": [
+  "story/battle.css",
+  "story/campaign.css",
+  "story/shell.css",
+  "story/stage.css"
+ ],
+ "story-energy-ui.css": [
+  "story/battle.css"
+ ],
+ "story-battle-fx.css": [
+  "story/battle.css"
+ ],
+ "gallery-art.css": [
+  "screens/gallery.art.css"
+ ],
+ "gallery-frame.css": [
+  "screens/gallery.frame.css"
+ ],
+ "gallery-icon.css": [
+  "screens/gallery.icon.css"
+ ],
+ "duel-stage.css": [
+  "components/card.duel.css",
+  "components/control.duel.css",
+  "components/environment.duel.css",
+  "components/hand.duel.css",
+  "components/hud.duel.css",
+  "components/panel.duel.css",
+  "layout/duel-board.duel.css",
+  "screens/result.duel.css",
+  "screens/setup.duel.css"
+ ]
+}

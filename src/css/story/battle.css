@@ -1,0 +1,760 @@
+.story-battle-banner{padding:var(--nd-sp-12) var(--nd-sp-18);border:1px solid #b69b68;line-height:1.6;margin-bottom:12px}
+.story-battle-banner button{float:right;margin-left:15px}
+/* STORY-BATTLE-UI-001: isolated landscape story arena; no global combat styles. */
+.story-energy-overlay{--seb-hand:clamp(100px,21vh,190px);position:fixed;inset:0;z-index:10000;overflow:hidden;isolation:isolate;background:#07120f;color:var(--seb-text);font:400 14px/1.5 "Noto Serif TC",serif;color-scheme:dark;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.story-energy-overlay *, .story-energy-overlay *::before, .story-energy-overlay *::after{box-sizing:border-box}
+.story-energy-overlay [hidden]{display:none!important}
+.story-energy-overlay h1, .story-energy-overlay h2, .story-energy-overlay p{margin:0;padding:0;overflow-wrap:anywhere}
+.story-energy-overlay button{font:inherit;letter-spacing:normal;text-transform:none;touch-action:none}
+#seb-battle-overlay .seb-button{border-image:none!important}
+.story-energy-overlay .seb-button{appearance:none;position:relative;margin:0;min-height:44px;min-width:44px;max-width:100%;padding:9px 13px;color:var(--seb-text);background:linear-gradient(#23382d,#14261f);border:1px solid #8b7c55;border-radius:var(--nd-r-4);border-image:none!important;cursor:pointer;text-align:center;font-weight:600;overflow-wrap:anywhere;box-shadow:inset 0 1px #ffffff10;transition:filter .14s,border-color .14s,box-shadow .14s}
+.story-energy-overlay .seb-button:hover{filter:brightness(1.15);border-color:#e9cc8a}
+.story-energy-overlay .seb-button:focus-visible{outline:3px solid #ffe6ad;outline-offset:3px;z-index:8}
+.story-energy-overlay .seb-button:disabled{opacity:.6;cursor:wait}
+.story-energy-overlay .seb-button[aria-disabled="true"]{cursor:help}
+.story-energy-overlay .seb-primary{border-color:#ead2a0;font-weight:800;text-shadow:0 1px #fff3;box-shadow:inset 0 1px #fff5,0 4px 12px var(--nd-ink-40)}
+.story-energy-overlay .seb-shell{height:100%;width:min(1540px,100%);min-width:0;margin:auto;display:grid;gap:var(--nd-sp-8);padding:10px max(14px,env(safe-area-inset-left)) max(8px,env(safe-area-inset-bottom));background:radial-gradient(ellipse at 50% 30%,#243c2c99,transparent 75%)}
+.story-energy-overlay .seb-header{display:grid;grid-template-columns:minmax(160px,1fr) minmax(200px,2fr) auto;align-items:center;gap:var(--nd-sp-18);min-width:0}
+.story-energy-overlay .seb-title-block{min-width:0}
+.story-energy-overlay .seb-eyebrow{display:block;color:#bba774;font-size:var(--nd-fs-10);letter-spacing:2.4px;font-weight:700}
+.story-energy-overlay .seb-title{font-family:var(--nd-font);font-size:clamp(17px,1.9vw,25px);font-weight:700;line-height:1.25;color:#f1ddaf}
+.story-energy-overlay .seb-meta{display:flex;justify-content:center;align-items:center;column-gap:var(--nd-sp-12);row-gap:1px;flex-wrap:wrap;text-align:center;min-width:0}
+.story-energy-overlay .seb-round{font-size:var(--nd-fs-16);color:var(--seb-bright);font-variant-numeric:tabular-nums}
+.story-energy-overlay .seb-phase{font-size:var(--nd-fs-12);color:#c0ddbc;border:1px solid #76836a;border-radius:20px;padding:1px var(--nd-sp-8)}
+.story-energy-overlay .seb-objective{font-size:var(--nd-fs-12);color:#c5ccba;flex:1 1 100%;white-space:nowrap}
+.story-energy-overlay .seb-nav{display:flex;gap:var(--nd-sp-6)}
+.story-energy-overlay .seb-nav .seb-button{padding:var(--nd-sp-8) 11px;font-size:var(--nd-fs-12);background:#10211c}
+.story-energy-overlay .seb-theatre{grid-template-columns:minmax(0,1fr) 142px;min-height:0;gap:var(--nd-sp-12)}
+.story-energy-overlay .seb-field{position:relative;display:grid;grid-template-rows:minmax(0,1fr) 30px minmax(0,1fr);min-width:0;min-height:0;border:2px solid #998153;border-radius:42px 42px 18px 18px;background:radial-gradient(ellipse at 50% 42%,#1c382ced,#0a201dd9 70%),url('../../../assets/characters/nightfall-hall.webp') center 53%/cover;box-shadow:inset 0 0 0 5px #17231a,inset 0 0 0 7px #94825566,inset 0 0 70px var(--nd-ink-60),0 8px 20px var(--nd-ink-53)}
+.story-energy-overlay .seb-field::before{content:"";position:absolute;inset:12px;border:1px solid #cab67a25;border-radius:29px;pointer-events:none;background:radial-gradient(ellipse at center,transparent 44%,#040d0a44)}
+.story-energy-overlay .seb-field::after{content:"";position:absolute;left:15%;right:15%;top:50%;height:1px;background:linear-gradient(90deg,transparent,#c1b07765,transparent);pointer-events:none}
+.story-energy-overlay .seb-roster{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:minmax(0,1fr);gap:clamp(10px,3vw,42px);align-items:stretch;justify-items:center;width:min(650px,86%);height:100%;min-height:0;margin:auto;z-index:1}
+.story-energy-overlay .seb-roster-enemy{grid-row:1;padding-top:1px;padding-bottom:4px}
+.story-energy-overlay .seb-roster-player{grid-row:3;padding-top:4px;padding-bottom:0}
+.story-energy-overlay .seb-unit-wrap{position:relative;display:grid;grid-row:1;height:100%;min-height:0;align-self:center;isolation:isolate}
+.story-energy-overlay .seb-unit{position:relative;display:block;width:100%;height:100%;min-height:44px;border:3px solid #9b885d;border-bottom-width:4px;box-shadow:0 8px 16px var(--nd-ink-60),inset 0 0 0 2px #2e3824;transform-origin:center center;z-index:1}
+.story-energy-overlay .seb-unit[data-side="enemy"]{border-color:#a18563}
+.story-energy-overlay .seb-unit.seb-selected{border-color:#f0d59b;box-shadow:0 0 0 2px #655231,0 0 17px #dfc07744,0 8px 16px var(--nd-ink-53)}
+.story-energy-overlay .seb-unit[data-attack-ready="true"][data-side="player"]::after{content:"";position:absolute;inset:-6px;border:1px solid #a8c78550;border-radius:inherit;pointer-events:none}
+.story-energy-overlay .seb-unit.seb-targetable{border-color:#d7edb2;box-shadow:0 0 0 3px #66824f,0 0 20px #c2ed8266}
+.story-energy-overlay .seb-unit.seb-drop-hover{border-color:#fff3c8;box-shadow:0 0 0 5px #d6bc74,0 0 30px #f5dc92aa}
+.story-energy-overlay .seb-portrait{display:block;position:absolute;overflow:hidden;background:radial-gradient(ellipse,#506149,#18281c)}
+.story-energy-overlay .seb-art-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#e0c792;font:700 25px "Noto Serif TC",serif;letter-spacing:7px}
+.story-energy-overlay .seb-art-image{position:absolute;display:block;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 14%;pointer-events:none;-webkit-user-drag:none}
+.story-energy-overlay .seb-unit-crown{position:absolute;left:50%;top:-9px;transform:translateX(-50%);padding:0 var(--nd-sp-10);border:1px solid #a48a53;border-radius:30px;background:#18281e;font-size:var(--nd-fs-10);color:#f0d6a1;white-space:nowrap;z-index:2}
+.story-energy-overlay .seb-allowances{position:absolute;display:flex;gap:var(--nd-sp-3)}
+.story-energy-overlay .seb-allowance{font-weight:600;white-space:nowrap}
+.story-energy-overlay .seb-stat-badges{bottom:18px;left:-13px;right:-13px;pointer-events:none}
+.story-energy-overlay .seb-stat{display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+.story-energy-overlay .seb-stat small{font-weight:600;white-space:nowrap}
+.story-energy-overlay .seb-stat strong{line-height:1;white-space:nowrap}
+.story-energy-overlay .seb-hp{color:#fff0d9}
+.story-energy-overlay .seb-shield{right:-12px;top:43%;display:flex;align-items:center;gap:var(--nd-sp-3);min-width:35px;padding:1px var(--nd-sp-6);border:1px solid #83aca0;font-variant-numeric:tabular-nums;z-index:3}
+.story-energy-overlay .seb-shield small{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-shield strong{font-size:var(--nd-fs-15)}
+.story-energy-overlay .seb-unit-name{left:0;right:0;bottom:0;align-items:center;justify-content:center;border-top:1px solid #a58a56;font-family:var(--nd-font);font-weight:700;text-shadow:0 2px var(--nd-black);overflow-wrap:anywhere}
+.story-energy-overlay .seb-status-strip{display:flex;justify-content:center;gap:var(--nd-sp-3);min-width:0;line-height:1.25}
+.story-energy-overlay .seb-unit-job{color:#b8c1a8}
+.story-energy-overlay .seb-status{display:inline-block;color:#f2ddb0;background:#293622;border:1px solid #8d8e60;padding:1px var(--nd-sp-3);border-radius:var(--nd-r-3)}
+.story-energy-overlay .seb-unit-info{position:absolute}
+.story-energy-overlay .seb-unit-info:focus-visible, .story-energy-overlay .seb-unit-wrap:hover .seb-unit-info{opacity:1;border:1px solid #ac9565;border-radius:var(--nd-r-round);width:44px!important;height:44px!important;pointer-events:auto}
+.story-energy-overlay .seb-target-label{display:none;position:absolute;left:50%;transform:translate(-50%,-50%);background:#dce7b7;color:#142412;border:1px solid #faf2c4;border-radius:var(--nd-r-4);font-weight:800;white-space:nowrap;box-shadow:0 2px 7px var(--nd-ink-53);z-index:4}
+.story-energy-overlay .seb-targetable .seb-target-label{display:block}
+.story-energy-overlay .seb-down .seb-portrait{filter:grayscale(1)}
+.story-energy-overlay .seb-down .seb-unit-name{color:#bdc0ad}
+.story-energy-overlay .seb-battle-message{position:relative;grid-row:2;display:flex;justify-content:center;gap:var(--nd-sp-8);min-width:0;text-align:center;color:#e1d7b3;z-index:3;line-height:1.25}
+.story-energy-overlay .seb-battle-message>span{max-width:90%;border-radius:20px}
+.story-energy-overlay .seb-battle-message .seb-button{font-size:var(--nd-fs-11);min-height:44px;padding:var(--nd-sp-4) var(--nd-sp-8);background:#182a20f5}
+.story-energy-overlay .seb-action-rail{flex-direction:column;min-width:0}
+.story-energy-overlay .seb-energy{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;column-gap:var(--nd-sp-8);row-gap:var(--nd-sp-2);font-variant-numeric:tabular-nums}
+.story-energy-overlay .seb-gems{display:flex;gap:var(--nd-sp-6);justify-content:center;flex:1 1 100%}
+.story-energy-overlay .seb-gem{display:block}
+.story-energy-overlay .seb-energy-value{font-size:var(--nd-fs-22);color:#e7edc8;line-height:1.2}
+.story-energy-overlay .seb-energy-label{font-size:var(--nd-fs-11);color:#bcccb6}
+.story-energy-overlay .seb-enemy-energy, .story-energy-overlay .seb-player-energy{z-index:2;max-width:112px;gap:var(--nd-sp-4);padding:var(--nd-sp-6);background:#0e211a9c;border:1px solid #7d795044;border-radius:var(--nd-r-8)}
+.story-energy-overlay .seb-enemy-energy{position:absolute;top:14px;left:18px}
+.story-energy-overlay .seb-player-energy{position:absolute;bottom:14px;right:18px;text-align:right}
+.story-energy-overlay .seb-enemy-energy .seb-gems, .story-energy-overlay .seb-player-energy .seb-gems{gap:var(--nd-sp-4);padding:0}
+.story-energy-overlay .seb-enemy-energy .seb-energy-value, .story-energy-overlay .seb-player-energy .seb-energy-value{font-size:var(--nd-fs-14)}
+.story-energy-overlay .seb-player-energy .seb-gems{justify-content:flex-end}
+.story-energy-overlay .seb-selected-name{font-family:var(--nd-font);color:#e7d4aa;margin-top:4px}
+.story-energy-overlay .seb-attack-control[aria-disabled="true"]{color:#a8b4a2;border-style:dashed;background:#17261e}
+.story-energy-overlay .seb-rail-note{color:#aebda7;font-size:var(--nd-fs-11);line-height:1.5}
+.story-energy-overlay .seb-hand{position:relative;min-height:0}
+.story-energy-overlay .seb-hand-label{display:flex;flex-direction:column}
+.story-energy-overlay .seb-hand-label strong{font-family:var(--nd-font);font-weight:600;color:#dfcba1}
+.story-energy-overlay .seb-hand-label span{color:#aebda5}
+.story-energy-overlay .seb-hand-note{font-size:var(--nd-fs-11);color:#aebda5;white-space:pre-line}
+.story-energy-overlay .seb-hand-cards{display:flex;align-items:flex-end;height:100%;min-height:0}
+.story-energy-overlay .seb-skill-wrap{position:relative;height:100%;aspect-ratio:7/10;align-self:flex-end;min-width:0;filter:drop-shadow(0 5px 6px var(--nd-ink-53))}
+.story-energy-overlay .seb-skill-card{position:relative;display:block;width:100%;height:100%;padding:0;min-width:0;min-height:0;overflow:hidden;background:#14271f;transition:transform .14s,filter .14s,border-color .14s}
+.story-energy-overlay .seb-skill-card:hover{transform:translateY(-5px);filter:brightness(1.12)}
+.story-energy-overlay .seb-skill-card[aria-pressed="true"]{border-color:#f2dea5;box-shadow:0 0 0 2px #d7c381,0 0 18px #e8d59866;transform:translateY(-5px)}
+.story-energy-overlay .seb-skill-card[aria-disabled="true"]{border-color:#746e52;filter:saturate(.65)}
+.story-energy-overlay .seb-skill-art{position:absolute;display:block;inset:0;background:#243b2e}
+.story-energy-overlay .seb-skill-art::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,#09160a77 60%,#0a170cf5)}
+.story-energy-overlay .seb-skill-art .seb-art-image{object-position:50% 25%}
+.story-energy-overlay .seb-skill-cost{position:absolute;top:1px;left:1px;display:flex;align-items:center;justify-content:center;width:32px;height:32px;font-size:var(--nd-fs-20);font-weight:900;z-index:2;line-height:1}
+.story-energy-overlay .seb-skill-owner{position:absolute;bottom:28px;left:1px;right:1px;font-size:var(--nd-fs-11);font-weight:500;color:#e0d2b0;text-shadow:0 1px 3px var(--nd-black);line-height:1.3}
+.story-energy-overlay .seb-skill-name{font:700 15px "Noto Serif TC",serif;line-height:1.3;color:#f4dfaf;text-shadow:0 1px 3px var(--nd-black);white-space:nowrap}
+.story-energy-overlay .seb-skill-lock{position:absolute;top:42%;left:0;right:0;padding:var(--nd-sp-2);font-size:var(--nd-fs-11);z-index:2}
+.story-energy-overlay .seb-skill-info{position:absolute;top:0;right:-6px;min-width:44px;min-height:44px;padding:0;border:0;background:transparent;color:#f3e5bd;font:italic 700 15px "Noto Serif TC",serif;text-shadow:0 1px 4px var(--nd-black);box-shadow:none;z-index:3}
+.story-energy-overlay .seb-skill-info::before{content:"";position:absolute;inset:11px;border:1px solid #c8b37c;background:#13251bcf;border-radius:var(--nd-r-round);z-index:-1}
+.story-energy-overlay .seb-result{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:9;width:min(440px,86%);text-align:center;box-shadow:0 16px 60px #000e,inset 0 0 0 4px #ffffff05}
+.story-energy-overlay .seb-result h2{font:700 28px "Noto Serif TC",serif;margin:var(--nd-sp-7) 0;color:#f4deb1}
+.story-energy-overlay .seb-result-reason{font-size:var(--nd-fs-13);color:#d7debd}
+.story-energy-overlay .seb-modal-backdrop{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:var(--nd-sp-20);background:#020806c9;backdrop-filter:blur(5px);touch-action:pan-y}
+.story-energy-overlay .seb-modal{width:min(530px,96%);max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 18px 70px var(--nd-ink-80);touch-action:pan-y;user-select:text}
+.story-energy-overlay .seb-modal h2{font:700 25px "Noto Serif TC",serif;color:#ead3a0;margin-bottom:13px}
+.story-energy-overlay .seb-modal p{font-size:var(--nd-fs-14);color:#d9e0c9;margin:9px 0}
+.story-energy-overlay .seb-modal-actions{display:flex;justify-content:center;gap:var(--nd-sp-10);flex-wrap:wrap;margin-top:16px}
+.story-energy-overlay .seb-modal-actions .seb-button{min-width:125px}
+.story-energy-overlay .seb-detail-body{min-height:120px}
+.story-energy-overlay .seb-detail-body>.seb-skill-art, .story-energy-overlay .seb-detail-body>.seb-portrait{position:relative;float:left;width:98px;height:140px;margin:0 var(--nd-sp-18) var(--nd-sp-10) 0;border:2px solid #bca06e;border-radius:9px;overflow:hidden}
+.story-energy-overlay .seb-detail-body>.seb-skill-art::after{display:none}
+.story-energy-overlay .seb-detail-owner{color:#f1dab0!important;font-weight:700}
+.story-energy-overlay .seb-detail-cost{color:#c1e6b5!important}
+.story-energy-overlay .seb-detail-availability{font-size:var(--nd-fs-12)!important;color:#c1cbb6!important;clear:both;padding-top:8px}
+.story-energy-overlay .seb-hover-preview{position:fixed;z-index:24;width:285px;padding:var(--nd-sp-14);min-height:130px;box-shadow:0 10px 35px var(--nd-ink-73);pointer-events:none;color:#e9dfc1}
+.story-energy-overlay .seb-hover-preview>.seb-skill-art{position:relative;float:left;width:70px;height:100px;margin:0 var(--nd-sp-12) var(--nd-sp-6) 0;border:1px solid #bca06e;border-radius:5px;overflow:hidden}
+.story-energy-overlay .seb-hover-preview strong{font-size:var(--nd-fs-15);color:#f4deb1}
+.story-energy-overlay .seb-preview-owner{display:block;font-size:var(--nd-fs-11);color:#c1ccb4;margin:var(--nd-sp-4) 0}
+.story-energy-overlay .seb-hover-preview p{font-size:var(--nd-fs-12);line-height:1.65}
+.story-energy-overlay .seb-log-list{max-height:45vh;overflow:auto;padding-left:24px;touch-action:pan-y;color:#d1dcc3;font-size:var(--nd-fs-13);user-select:text}
+.story-energy-overlay .seb-log-list li{padding:var(--nd-sp-4) 0}
+.story-energy-overlay .seb-rotate-host{position:absolute;inset:0;z-index:20}
+.story-energy-overlay .seb-rotate{display:flex;height:100%;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--nd-sp-18);padding:32px}
+.story-energy-overlay .seb-rotate-icon{display:block;font-size:80px;color:#dcc48d;line-height:1}
+.story-energy-overlay .seb-rotate h2{font:700 26px "Noto Serif TC",serif;color:#f3dca6}
+.story-energy-overlay .seb-rotate p{max-width:300px;color:#c5d1b7;font-size:var(--nd-fs-14);line-height:1.8}
+.story-energy-overlay[data-rotated="true"] .seb-shell{visibility:hidden}
+.story-energy-overlay[data-busy="true"] .seb-skill-card, .story-energy-overlay[data-busy="true"] .seb-unit{cursor:wait}
+.story-energy-overlay .seb-drag-arrow, .story-energy-overlay .seb-fx-layer{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:18}
+.story-energy-overlay .seb-drag-line{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:9 5;filter:drop-shadow(0 2px 3px var(--nd-black))}
+.story-energy-overlay .seb-drag-tip{stroke-width:3}
+.story-energy-overlay .seb-drag-source{filter:brightness(1.3)!important;box-shadow:0 0 20px #e8d799!important}
+.story-energy-overlay .seb-fx{position:absolute;pointer-events:none;display:block}
+.story-energy-overlay .seb-projectile{height:3px;transform-origin:0 50%;background:linear-gradient(90deg,transparent,#f8dfa4,#fff7d5);box-shadow:0 0 8px #ecd185;animation:seb-projectile .32s ease-out both}
+.story-energy-overlay .seb-slash{width:80px;height:4px;transform:translate(-50%,-50%) rotate(-35deg);background:#f3e2b4;box-shadow:0 0 12px #e5d395;animation:seb-slash .35s ease-out both}
+.story-energy-overlay .seb-ground-ring, .story-energy-overlay .seb-shield-ring, .story-energy-overlay .seb-dot-ring, .story-energy-overlay .seb-status-ring, .story-energy-overlay .seb-shadow-ring, .story-energy-overlay .seb-unity-ring{width:100px;height:80px;border:3px solid #cfb477;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);box-shadow:0 0 15px #d2bb7766;animation:seb-ring .35s ease-out both}
+.story-energy-overlay .seb-ground-ring{height:30px;border-color:#d0a26f}
+.story-energy-overlay .seb-shield-ring{border-color:#a0e3dd;box-shadow:0 0 16px #8ce9df77}
+.story-energy-overlay .seb-dot-ring{border-color:#dbbb83;animation-duration:.22s;border-style:double}
+.story-energy-overlay .seb-shadow-ring{border-color:#c3c2e6;box-shadow:0 0 12px #8a7bc4}
+.story-energy-overlay .seb-unity-ring{width:30px;height:110px;border-color:#ebdea4}
+.story-energy-overlay .seb-afterimage{transform:translate(-50%,-50%);border:2px solid #cfc6e380;border-radius:45% 45% 8px 8px;background:#82719533;animation:seb-afterimage .3s ease-out both}
+.story-energy-overlay .seb-float{color:#ffe1bc;font-size:23px;font-weight:900;white-space:nowrap;text-shadow:0 2px 2px var(--nd-black),0 0 7px #2b0c04;transform:translate(-50%,-50%);animation:seb-float .24s ease-out both}
+.story-energy-overlay .seb-float-shield{color:#c4efeb}
+.story-energy-overlay .seb-float-evade{color:#e5e4ff}
+.story-energy-overlay .seb-float-critical{color:#ffe7a1;font-size:var(--nd-fs-28)}
+.story-energy-overlay .seb-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-height:740px){
+.story-energy-overlay{--seb-hand:clamp(98px,22vh,156px)}
+.story-energy-overlay .seb-shell{gap:var(--nd-sp-6);padding-top:5px}
+.story-energy-overlay .seb-field{grid-template-rows:minmax(0,1fr) 24px minmax(0,1fr)}
+}
+@media(max-height:500px) and (orientation:landscape){
+.story-energy-overlay .seb-shell{gap:var(--nd-sp-4);padding:4px max(7px,env(safe-area-inset-left)) 3px}
+.story-energy-overlay .seb-header{grid-template-columns:minmax(125px,1fr) minmax(180px,2fr) auto;gap:var(--nd-sp-8)}
+.story-energy-overlay .seb-eyebrow{font-size:var(--nd-fs-8);letter-spacing:1px}
+.story-energy-overlay .seb-title{font-size:var(--nd-fs-15);white-space:nowrap}
+.story-energy-overlay .seb-round{font-size:var(--nd-fs-13)}
+.story-energy-overlay .seb-phase{font-size:var(--nd-fs-10);padding:0 var(--nd-sp-6)}
+.story-energy-overlay .seb-objective{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-meta{column-gap:var(--nd-sp-7)}
+.story-energy-overlay .seb-nav{gap:var(--nd-sp-2)}
+.story-energy-overlay .seb-nav .seb-button{min-height:44px;padding:var(--nd-sp-5) var(--nd-sp-7);font-size:var(--nd-fs-11);border-color:#7e7552}
+.story-energy-overlay .seb-theatre{grid-template-columns:minmax(0,1fr) 100px;gap:var(--nd-sp-6)}
+.story-energy-overlay .seb-field{border-radius:28px 28px 12px 12px}
+.story-energy-overlay .seb-roster-enemy{padding:var(--nd-sp-2) 0 1px}
+.story-energy-overlay .seb-roster-player{padding:1px 0 0}
+.story-energy-overlay .seb-portrait{bottom:17px}
+.story-energy-overlay .seb-unit-crown{font-size:var(--nd-fs-8);top:-5px;padding:0 var(--nd-sp-6)}
+.story-energy-overlay .seb-allowances{gap:1px}
+.story-energy-overlay .seb-stat-badges{bottom:14px;left:-10px;right:-10px}
+.story-energy-overlay .seb-stat{border-width:1px}
+.story-energy-overlay .seb-shield{right:-8px;top:-8px;height:17px;line-height:1;min-width:26px;padding:0 var(--nd-sp-4);gap:var(--nd-sp-2)}
+.story-energy-overlay .seb-shield small{font-size:var(--nd-fs-8)}
+.story-energy-overlay .seb-shield strong{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-status-strip{gap:var(--nd-sp-2)}
+.story-energy-overlay .seb-status{padding:0 var(--nd-sp-2)}
+.story-energy-overlay .seb-battle-message{line-height:1.2}
+.story-energy-overlay .seb-battle-message>span{max-width:94%}
+.story-energy-overlay .seb-battle-message .seb-button{padding:var(--nd-sp-2) var(--nd-sp-5);font-size:var(--nd-fs-10);position:absolute;right:-8px;top:-13px}
+.story-energy-overlay .seb-enemy-energy, .story-energy-overlay .seb-player-energy{max-width:70px;padding:var(--nd-sp-3);gap:var(--nd-sp-2)}
+.story-energy-overlay .seb-enemy-energy{left:8px;top:8px}
+.story-energy-overlay .seb-player-energy{right:8px;bottom:8px}
+.story-energy-overlay .seb-enemy-energy .seb-energy-label, .story-energy-overlay .seb-player-energy .seb-energy-label{font-size:var(--nd-fs-8)}
+.story-energy-overlay .seb-enemy-energy .seb-energy-value, .story-energy-overlay .seb-player-energy .seb-energy-value{font-size:var(--nd-fs-11)}
+.story-energy-overlay .seb-gems{gap:var(--nd-sp-4)}
+.story-energy-overlay .seb-energy-value{font-size:var(--nd-fs-16)}
+.story-energy-overlay .seb-energy-label{font-size:var(--nd-fs-9)}
+.story-energy-overlay .seb-rail-note{font-size:var(--nd-fs-8);line-height:1.2}
+.story-energy-overlay .seb-hand-label span, .story-energy-overlay .seb-hand-note{font-size:var(--nd-fs-9)}
+.story-energy-overlay .seb-skill-card{border-width:2px}
+.story-energy-overlay .seb-skill-cost{border-width:1px}
+.story-energy-overlay .seb-skill-lock{font-size:var(--nd-fs-9);padding:0}
+.story-energy-overlay .seb-skill-info{right:-12px;top:-6px;font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-result{width:min(410px,88%)}
+.story-energy-overlay .seb-result h2{font-size:var(--nd-fs-22);margin:var(--nd-sp-3) 0}
+.story-energy-overlay .seb-result-reason{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-modal-actions{margin-top:10px}
+.story-energy-overlay .seb-modal h2{font-size:21px;margin-bottom:7px}
+.story-energy-overlay .seb-modal p{font-size:var(--nd-fs-13);margin:var(--nd-sp-6) 0}
+.story-energy-overlay .seb-detail-body>.seb-skill-art, .story-energy-overlay .seb-detail-body>.seb-portrait{width:77px;height:110px}
+}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay *, .story-energy-overlay *::before, .story-energy-overlay *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* STORY-BATTLE-UI-010: fixed information bases and one bottom decision area. */
+.story-energy-overlay .seb-shell{grid-template-rows:62px minmax(0,1fr) var(--seb-hand)}
+.story-energy-overlay .seb-theatre{display:contents}
+.story-energy-overlay .seb-field{grid-row:2;padding:var(--nd-sp-12) 28px var(--nd-sp-8)}
+.story-energy-overlay .seb-unit-wrap{grid-template-rows:minmax(0,1fr) minmax(22px,auto);width:min(100%,184px);max-height:270px}
+.story-energy-overlay .seb-unit{overflow:hidden;border-radius:34px 34px 9px 9px;padding:0;background:#101f17}
+.story-energy-overlay .seb-portrait{inset:2px 2px 74px;border-radius:31px 31px 0 0}
+.story-energy-overlay .seb-unit-base{position:absolute;inset:auto 0 0;display:grid;gap:var(--nd-sp-4);padding:var(--nd-sp-5) var(--nd-sp-7) var(--nd-sp-7);min-height:72px;background:linear-gradient(#23392ee8,#101d17f8 36%);border-top:1px solid var(--nd-gold-line);z-index:2}
+.story-energy-overlay .seb-unit-identity{display:flex;min-width:0;align-items:baseline;gap:var(--nd-sp-6);text-align:left}
+.story-energy-overlay .seb-unit-name{position:static;display:block;flex:0 1 auto;height:auto;min-width:0;padding:0;border:0;font-size:var(--nd-fs-14);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.story-energy-overlay .seb-unit-role{min-width:0;color:#c8c9af;font-size:var(--nd-fs-11);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.story-energy-overlay .seb-stat-badges{position:static;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--nd-sp-4);justify-content:stretch;z-index:auto}
+.story-energy-overlay .seb-stat{min-width:0;height:25px;padding:var(--nd-sp-2) var(--nd-sp-4);gap:var(--nd-sp-2);border:1px solid #bda66f;border-radius:var(--nd-r-4);background:linear-gradient(#4d452d,#2b291d);box-shadow:inset 0 1px #ffffff12;color:#f8e5b5}
+.story-energy-overlay .seb-stat strong{font-size:var(--nd-fs-15)}
+.story-energy-overlay .seb-stat small{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-hp{background:linear-gradient(#6b403a,#381d1c);border-color:#a97569}
+.story-energy-overlay .seb-shield{position:static;background:linear-gradient(#315858,#1d3838);border-color:#79a8a1;border-radius:var(--nd-r-4);color:#d8f0ec}
+.story-energy-overlay .seb-allowances{left:7px;right:7px;top:auto;bottom:79px;justify-content:center;z-index:3;pointer-events:none}
+.story-energy-overlay .seb-allowance{border-color:#78836d}
+.story-energy-overlay .seb-unit-crown{display:none}
+.story-energy-overlay .seb-status-strip{min-height:22px;align-items:flex-start;flex-wrap:wrap;white-space:normal;padding:var(--nd-sp-2) var(--nd-sp-4);text-align:center}
+.story-energy-overlay .seb-unit-job, .story-energy-overlay .seb-status{font-size:var(--nd-fs-11);line-height:1.25}
+.story-energy-overlay .seb-unit-info{top:50%;bottom:auto;left:auto;right:-48px;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;padding:0;border:1px solid #b79c67;border-radius:var(--nd-r-round);background:#13251bef;color:#f3dfb1;box-shadow:0 3px 9px var(--nd-ink-60);font:italic 700 15px "Noto Serif TC",serif;line-height:1;opacity:1;pointer-events:auto;z-index:6}
+.story-energy-overlay .seb-unit-info:focus-visible, .story-energy-overlay .seb-unit-wrap:hover .seb-unit-info{color:#f3dfb1;background:#27412f;border-color:#e4ca8e}
+.story-energy-overlay .seb-target-label{top:38%;font-size:var(--nd-fs-12);padding:var(--nd-sp-4) var(--nd-sp-10)}
+.story-energy-overlay .seb-battle-message{font-size:var(--nd-fs-12);align-items:center}
+.story-energy-overlay .seb-battle-message>span{padding:var(--nd-sp-3) var(--nd-sp-10);background:#10231ee6}
+.story-energy-overlay .seb-hand{grid-row:3;display:grid;grid-template-columns:minmax(175px,1fr) auto minmax(190px,1fr);gap:var(--nd-sp-14);align-items:center;padding:var(--nd-sp-5) var(--nd-sp-16) var(--nd-sp-8)}
+.story-energy-overlay .seb-hand-label{align-items:flex-start;gap:var(--nd-sp-3);min-width:0}
+.story-energy-overlay .seb-hand-label strong{font-size:var(--nd-fs-14);line-height:1.25}
+.story-energy-overlay .seb-hand-label span{font-size:var(--nd-fs-11);line-height:1.35}
+.story-energy-overlay .seb-hand-cards{gap:var(--nd-sp-12);padding:0;justify-content:center}
+.story-energy-overlay .seb-skill-wrap{max-height:calc(var(--seb-hand) - 10px)}
+.story-energy-overlay .seb-action-rail{display:grid;grid-template-columns:minmax(0,1fr) minmax(76px,auto) minmax(84px,auto);align-items:center;justify-content:stretch;gap:var(--nd-sp-7);padding:var(--nd-sp-4) 0;border:0;border-radius:0;box-shadow:none;text-align:left}
+.story-energy-overlay .seb-action-rail .seb-energy{justify-content:flex-start;gap:var(--nd-sp-3)}
+.story-energy-overlay .seb-action-rail .seb-energy-value{font-size:var(--nd-fs-16)}
+.story-energy-overlay .seb-action-rail .seb-energy-label{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-selected-name{margin:0;min-width:0;font-size:var(--nd-fs-12);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-energy-overlay .seb-attack-control, .story-energy-overlay .seb-end-turn{min-height:44px;padding:var(--nd-sp-7) 9px;font-size:var(--nd-fs-12);border-radius:5px}
+.story-energy-overlay .seb-end-turn{letter-spacing:0}
+.story-energy-overlay .seb-action-rail [data-seb-action="cancel-target"]{min-height:44px;padding:var(--nd-sp-7);font-size:var(--nd-fs-11)}
+@media(max-height:740px){
+.story-energy-overlay .seb-shell{grid-template-rows:53px minmax(0,1fr) var(--seb-hand)}
+.story-energy-overlay .seb-field{padding:var(--nd-sp-8) 22px var(--nd-sp-5)}
+.story-energy-overlay .seb-unit-wrap{width:min(100%,156px);max-height:230px}
+.story-energy-overlay .seb-portrait{bottom:68px}
+.story-energy-overlay .seb-unit-base{min-height:66px;padding:var(--nd-sp-4) var(--nd-sp-5) var(--nd-sp-5)}
+.story-energy-overlay .seb-allowances{bottom:71px}
+.story-energy-overlay .seb-hand{padding:var(--nd-sp-3) var(--nd-sp-12) var(--nd-sp-5)}
+.story-energy-overlay .seb-skill-name{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-skill-owner{font-size:var(--nd-fs-10);bottom:23px}
+}
+@media(max-height:500px) and (orientation:landscape){
+.story-energy-overlay{--seb-hand:104px}
+.story-energy-overlay .seb-shell{grid-template-rows:44px minmax(0,1fr) var(--seb-hand)}
+.story-energy-overlay .seb-field{padding:var(--nd-sp-5) 15px var(--nd-sp-2);grid-template-rows:minmax(0,1fr) 18px minmax(0,1fr)}
+.story-energy-overlay .seb-roster{width:min(540px,88%);gap:var(--nd-sp-16)}
+.story-energy-overlay .seb-unit-wrap{width:min(100%,142px);grid-template-rows:minmax(16px,auto) minmax(18px,auto);max-height:126px}
+.story-energy-overlay .seb-unit{border-width:2px;border-bottom-width:3px;border-radius:16px 16px 6px 6px}
+.story-energy-overlay .seb-portrait{inset:2px auto 2px 2px;width:42%;border-radius:14px 0 0 4px}
+.story-energy-overlay .seb-art-image{object-position:50% 12%}
+.story-energy-overlay .seb-unit-base{inset:0 0 0 42%;min-height:0;align-content:center;padding:var(--nd-sp-3) var(--nd-sp-4);gap:var(--nd-sp-3);border-top:0;border-left:1px solid var(--nd-gold-line)}
+.story-energy-overlay .seb-unit-name{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-unit-role{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-stat{height:22px;padding:1px var(--nd-sp-2)}
+.story-energy-overlay .seb-stat strong{font-size:var(--nd-fs-13)}
+.story-energy-overlay .seb-stat small{font-size:var(--nd-fs-9)}
+.story-energy-overlay .seb-allowances{left:3px;right:3px;bottom:3px;justify-content:flex-start;transform:scale(.86);transform-origin:left bottom}
+.story-energy-overlay .seb-status-strip{min-height:18px;padding:1px var(--nd-sp-2)}
+.story-energy-overlay .seb-status, .story-energy-overlay .seb-unit-job{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-unit-info{top:50%;right:-48px;bottom:auto;width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;font-size:var(--nd-fs-14)}
+.story-energy-overlay .seb-hand{grid-template-columns:minmax(126px,1fr) auto minmax(190px,1fr);gap:var(--nd-sp-8);padding:var(--nd-sp-3) var(--nd-sp-8) var(--nd-sp-4)}
+.story-energy-overlay .seb-hand-label strong{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-hand-label span{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-hand-cards{gap:var(--nd-sp-8)}
+.story-energy-overlay .seb-skill-wrap{max-height:96px}
+.story-energy-overlay .seb-skill-name{font-size:var(--nd-fs-11)}
+.story-energy-overlay .seb-skill-owner{font-size:var(--nd-fs-10);bottom:19px}
+.story-energy-overlay .seb-skill-cost{width:22px;height:22px;font-size:var(--nd-fs-14)}
+.story-energy-overlay .seb-action-rail{grid-template-columns:minmax(0,1fr) minmax(68px,auto);gap:var(--nd-sp-4)}
+.story-energy-overlay .seb-action-rail .seb-energy-value{font-size:var(--nd-fs-14)}
+.story-energy-overlay .seb-action-rail .seb-energy-label{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-selected-name{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-attack-control, .story-energy-overlay .seb-end-turn{min-height:44px;padding:var(--nd-sp-4);font-size:var(--nd-fs-11)}
+.story-energy-overlay .seb-action-rail [data-seb-action="cancel-target"]{display:block}
+}
+/* STORY-BATTLE-SWORD-BUFF: raised attack (人劍合一 / 武士魂) turns amber and shows the real value. */
+.story-energy-overlay .seb-atk.seb-buffed{border-color:#ffd27a;box-shadow:0 0 10px #ffb84d99}
+.story-energy-overlay .seb-atk.seb-buffed strong, .story-energy-overlay .seb-atk.seb-buffed small{color:#ffcf6b;text-shadow:0 0 8px #ff9d2e}
+.story-energy-overlay .seb-atk.seb-buffed strong{animation:seb-buff-pop .5s ease-out}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-atk.seb-buffed strong{animation:none}
+}
+/* ALLOWANCE-ICONS: a lit icon means the action can be used now; a dim icon means it cannot. */
+.story-energy-overlay .seb-allowance{display:inline-grid;place-items:center;width:30px;height:30px;padding:0;border-radius:var(--nd-r-round);font-size:0;line-height:0;border:1.5px solid #4c5648;color:#5b6555}
+.story-energy-overlay .seb-allowance svg{width:64%;height:64%;display:block}
+.story-energy-overlay .seb-allowance.seb-ready{border-color:#f0da8a;color:#ffe9a0}
+.story-energy-overlay .seb-allowance-skill.seb-ready{border-color:#9fd0ff;color:#d8eeff}
+@media(max-width:700px){
+.story-energy-overlay .seb-allowance{width:24px;height:24px}
+}
+/* LARGE-ROSTER: 4+ units per side get equal columns, a wider row, and the detail button tucked inside the card.
+   7-8 (STORY-H1-KING-ROSTER: 王室衛兵 x3 + 路易斯 + 水晶鼠 x4 can all be on the field together) reuse the
+   same equal-column layout but with a tighter per-card budget and smaller type so the row never
+   falls back to the fixed 3-column base grid, which used to overlap/truncate the extra cards. */
+.story-energy-overlay .seb-roster[data-count="4"], .story-energy-overlay .seb-roster[data-count="5"], .story-energy-overlay .seb-roster[data-count="6"], .story-energy-overlay .seb-roster[data-count="7"], .story-energy-overlay .seb-roster[data-count="8"]{grid-template-columns:repeat(var(--seb-count),minmax(0,1fr));width:min(96%,calc(var(--seb-count)*190px));gap:clamp(6px,1.2vw,16px)}
+.story-energy-overlay .seb-roster[data-count="4"] .seb-unit-wrap, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-wrap, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-wrap{width:100%;max-width:184px}
+.story-energy-overlay .seb-roster[data-count="7"] .seb-unit-wrap, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-wrap{width:100%;max-width:140px}
+.story-energy-overlay .seb-roster[data-count="4"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-info{top:6px;right:6px;bottom:auto;left:auto;transform:none;width:26px!important;height:26px!important;min-width:26px!important;min-height:26px!important;padding:0;border-radius:var(--nd-r-round);font-size:var(--nd-fs-13)}
+.story-energy-overlay .seb-roster[data-count="5"] .seb-unit-name, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-name{font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-roster[data-count="5"] .seb-unit-role, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-role{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-roster[data-count="7"] .seb-unit-name, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-name{font-size:var(--nd-fs-11)}
+.story-energy-overlay .seb-roster[data-count="7"] .seb-unit-role, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-role{font-size:var(--nd-fs-9)}
+.story-energy-overlay .seb-roster[data-count="7"] .seb-stat, .story-energy-overlay .seb-roster[data-count="8"] .seb-stat{padding:1px var(--nd-sp-2)}
+.story-energy-overlay .seb-roster[data-count="7"] .seb-stat strong, .story-energy-overlay .seb-roster[data-count="8"] .seb-stat strong{font-size:var(--nd-fs-12)}
+@media(max-height:560px){
+.story-energy-overlay .seb-roster[data-count="4"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-info{top:2px;left:2px;right:auto;width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;padding:0;font-size:var(--nd-fs-11);border-radius:var(--nd-r-round)}
+}
+/* STORY-STATUS-FX: persistent, CSS-only stun/burn indicators on the unit card itself, so an
+   active status stays visible for its whole duration (not just the one-off ring pulse played
+   when it's first applied). No new art assets: dots and glow are drawn with gradients. */
+.story-energy-overlay .seb-status-fx{position:absolute;top:6px;left:6px;right:6px;display:flex;justify-content:flex-start;gap:var(--nd-sp-6);z-index:4;pointer-events:none}
+.story-energy-overlay .seb-fx-badge{width:22px;height:22px;border-radius:var(--nd-r-round);box-shadow:0 2px 6px var(--nd-ink-67),0 0 0 1px #00000055}
+.story-energy-overlay .seb-fx-stun{background:radial-gradient(circle 2.6px at 50% 14%,#eaf5ff 92%,transparent 100%),radial-gradient(circle 2.6px at 86% 68%,#eaf5ff 92%,transparent 100%),radial-gradient(circle 2.6px at 14% 68%,#eaf5ff 92%,transparent 100%),#16283aeb;border:1.5px solid #9fd0ff88;animation:seb-fx-stun-spin 1.1s linear infinite}
+.story-energy-overlay .seb-fx-burn{background:radial-gradient(circle at 50% 66%,#ffe1a0,#ff8a3d 55%,#7a2408 100%);border:1.5px solid #ffb87799;animation:seb-fx-burn-flicker .7s ease-in-out infinite}
+.story-energy-overlay .seb-unit.seb-has-burn .seb-portrait::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,#ff5b1e55,transparent 65%);mix-blend-mode:screen;animation:seb-fx-burn-tint 1.3s ease-in-out infinite;pointer-events:none}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-fx-stun, .story-energy-overlay .seb-fx-burn, .story-energy-overlay .seb-unit.seb-has-burn .seb-portrait::after{animation:none}
+}
+/* STORY-BATTLE-VISUAL-002: reuse the game's metal-frame material for the scene shell, refine the
+   shared 幕晶 gems and skill cards, and give the attack/skill drag line green/red hit feedback plus
+   a padded, forgiving drop target (see targetAt() in story-energy-ui.js). */
+.story-energy-overlay .seb-shell::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-hero);border-image-slice:var(--frame-hero-slice);border-image-width:26px;border-image-repeat:repeat;border-image-outset:0;box-shadow:inset 0 0 60px var(--nd-ink-47)}
+.story-energy-overlay .seb-header{position:relative;z-index:0;border-bottom:0;padding:var(--nd-sp-4) var(--nd-sp-10) var(--nd-sp-10);margin-bottom:2px}
+.story-energy-overlay .seb-header::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-thin);border-image-slice:var(--frame-thin-slice);border-image-width:9px;border-image-repeat:repeat;border-image-outset:0;background:linear-gradient(180deg,#233626d0,#13251c 88%)}
+.story-energy-overlay .seb-hand{z-index:0;border-top:0;background:none}
+.story-energy-overlay .seb-hand::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-thin);border-image-slice:var(--frame-thin-slice);border-image-width:9px;border-image-repeat:repeat;border-image-outset:0;background:linear-gradient(180deg,#10241cd6,#081410f0)}
+.story-energy-overlay .seb-hover-preview{border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-thin);border-image-slice:var(--frame-thin-slice);border-image-width:9px;border-image-repeat:repeat;border-image-outset:0}
+/* Skill cards borrow the same nine-slice frame the main duel's hand cards use. */
+.story-energy-overlay .seb-skill-card{border:1px solid var(--nd-gold-dim);border-radius:var(--nd-r-3);z-index:0;box-shadow:inset 0 0 0 1px #00000055,0 6px 14px var(--nd-ink-60)}
+.story-energy-overlay .seb-skill-card::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;border:1px solid var(--nd-gold-dim);border-radius:0;border-image-source:var(--frame-hero);border-image-slice:var(--frame-hero-slice);border-image-width:15px;border-image-repeat:repeat;border-image-outset:0}
+.story-energy-overlay .seb-skill-card[aria-pressed="true"]::before{filter:brightness(1.35) saturate(1.2)}
+.story-energy-overlay .seb-skill-lock{background:linear-gradient(#1c130dd8,#0d0a06ec);border-top:1px solid #6b5a3a;border-bottom:1px solid #6b5a3a;letter-spacing:1.5px;text-align:center;color:#f0c98a}
+.story-energy-overlay .seb-skill-name{position:absolute;bottom:5px;left:1px;right:1px}
+.story-energy-overlay .seb-skill-name::before{content:"";position:absolute;left:6px;right:6px;top:-4px;height:1px;background:linear-gradient(90deg,transparent,#e3cf98cc,transparent)}
+@media(max-height:500px) and (orientation:landscape){
+.story-energy-overlay .seb-skill-card::before{border-image-width:9px}
+.story-energy-overlay .seb-shell::before{border-image-width:14px}
+}
+/* Shared energy gems: a carved metal tray with sockets that light up as 幕晶 fills. */
+.story-energy-overlay .seb-gems{background:linear-gradient(180deg,#0000,#00000066);border-radius:9px;padding:var(--nd-sp-4) var(--nd-sp-7);box-shadow:inset 0 2px 5px var(--nd-ink-67),inset 0 -1px 0 #ffffff14}
+.story-energy-overlay .seb-gem{position:relative;transition:background .18s,box-shadow .18s}
+.story-energy-overlay .seb-energy-value{padding:var(--nd-sp-2) 9px;border-radius:20px;background:linear-gradient(#2c4632,#152a1e);box-shadow:inset 0 1px #ffffff20,0 2px 4px var(--nd-ink-47);border:1px solid #6f8567}
+.story-energy-overlay .seb-action-rail .seb-gems{display:flex;padding:var(--nd-sp-3) var(--nd-sp-6)}
+.story-energy-overlay .seb-action-rail .seb-energy{min-width:0}
+/* Attack/skill drag line: red while no legal target is under the cursor, green the instant one is. */
+.story-energy-overlay .seb-drag-line{stroke:#ff6b5c;transition:stroke .1s}
+.story-energy-overlay .seb-drag-tip{fill:#ff9080;stroke:#3a0f0c;transition:fill .1s,stroke .1s}
+.story-energy-overlay .seb-drag-arrow[data-can-hit="true"] .seb-drag-line{stroke:#8ce85c}
+.story-energy-overlay .seb-drag-arrow[data-can-hit="true"] .seb-drag-tip{fill:#c8f7a0;stroke:#173a12}
+/* STORY-BATTLE-VISUAL-003: attack/skill icons and 幕晶 now reuse the game's existing gold
+   emblem medallions (assets/emblems/*.svg -- the same set the card-battle mode uses for job and
+   attack/skill art) instead of hand-drawn placeholders, and skill cards now show each unit's own
+   portrait instead of one shared per-job stand-in (see localArt() in story-energy-ui.js and the
+   updated encounter portraits in story-campaign.js). */
+.story-energy-overlay .seb-allowance{background:url('../../../assets/emblems/attack.svg') center/cover no-repeat;filter:grayscale(.85) brightness(.62);opacity:1;box-shadow:0 2px 6px var(--nd-ink-67),0 0 0 1px #00000055;transition:filter .18s,box-shadow .18s,transform .18s}
+.story-energy-overlay .seb-allowance-skill{background-image:url('../../../assets/emblems/seal.svg')}
+.story-energy-overlay .seb-allowance.seb-ready{filter:none;opacity:1;transform:scale(1.1);box-shadow:0 0 10px #f0da8a99}
+.story-energy-overlay .seb-allowance-skill.seb-ready{box-shadow:0 0 10px #9fd0ff99}
+.story-energy-overlay .seb-gem{width:24px;height:24px;clip-path:none}
+.story-energy-overlay .seb-enemy-energy .seb-gem, .story-energy-overlay .seb-player-energy .seb-gem{width:15px;height:15px}
+.story-energy-overlay .seb-action-rail .seb-gem{width:18px;height:18px}
+@media(max-height:500px) and (orientation:landscape){
+.story-energy-overlay .seb-enemy-energy .seb-gem, .story-energy-overlay .seb-player-energy .seb-gem{width:11px;height:11px}
+.story-energy-overlay .seb-action-rail .seb-gem{width:14px;height:14px}
+}
+/* STORY-INFO-ROUND-027: unified-art.css `button:not(.card):not(.carousel-card):not(.puzzle-slot){min-height:44px!important}`
+   has higher specificity than the .seb-unit-info size rules, which stretched the circle into an oval.
+   Re-pin the size with higher specificity; hover/focus keep the same circle size. */
+.story-energy-overlay .seb-roster .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster .seb-unit-wrap button.seb-unit-info.seb-unit-info:focus-visible{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important;padding:0;border-radius:var(--nd-r-round);aspect-ratio:1/1;box-sizing:border-box}
+.story-energy-overlay .seb-roster[data-count="4"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="4"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info{width:26px!important;height:26px!important;min-width:26px!important;min-height:26px!important;max-width:26px!important;max-height:26px!important}
+@media(max-height:560px){
+.story-energy-overlay .seb-roster[data-count="4"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-wrap button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="4"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="5"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="6"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="7"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info, .story-energy-overlay .seb-roster[data-count="8"] .seb-unit-wrap:hover button.seb-unit-info.seb-unit-info{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important;max-width:20px!important;max-height:20px!important}
+}
+/* STORY-HOTKEY: small key hint on the end-turn button (hidden on touch-only screens). */
+.story-energy-overlay .seb-end-turn .seb-key{display:inline-block;margin-left:8px;padding:1px var(--nd-sp-6);border:1px solid #0000004d;border-radius:var(--nd-r-4);background:#0000001f;font:700 11px/1.4 "Noto Serif TC",serif;letter-spacing:0;vertical-align:middle;opacity:.75}
+@media(hover:none){
+.story-energy-overlay .seb-end-turn .seb-key{display:none}
+}
+/* STORY-STUN-HALO: refined stun marker — a faint ring above the head with four stars orbiting it in 3D-ish depth
+   (back stars smaller/dimmer/behind, front stars larger/brighter/in front). Pure CSS, no art assets. */
+.story-energy-overlay .seb-stun-halo{position:absolute;left:50%;top:15px;width:0;height:0;z-index:6;pointer-events:none;--s:1;transform:scale(var(--s));transform-origin:0 0}
+.story-energy-overlay .seb-stun-ring{position:absolute;left:-38px;top:-10px;width:76px;height:20px;border-radius:var(--nd-r-round);border:1px solid #f8e7aa55;box-shadow:0 0 7px 1px #ffe08a40,inset 0 0 6px #ffe08a30;animation:seb-stun-ring-pulse 1.6s ease-in-out infinite}
+.story-energy-overlay .seb-stun-star{position:absolute;left:0;top:0;width:12px;height:12px;filter:drop-shadow(0 0 3px #ffe08a) drop-shadow(0 1px 1px var(--nd-ink-53));animation:seb-stun-orbit 2.4s linear infinite;animation-delay:calc(var(--i)*-.6s)}
+.story-energy-overlay .seb-stun-star::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#fffbe0 0,#ffe27a 38%,#f2b84a 100%);clip-path:polygon(50% 0,61% 35%,98% 38%,68% 59%,79% 95%,50% 73%,21% 95%,32% 59%,2% 38%,39% 35%);animation:seb-stun-spin 1.8s linear infinite}
+.story-energy-overlay .seb-unit.seb-has-stun .seb-portrait img{filter:saturate(.72) brightness(.93)}
+.story-energy-overlay .seb-roster[data-count="4"] .seb-stun-halo, .story-energy-overlay .seb-roster[data-count="5"] .seb-stun-halo, .story-energy-overlay .seb-roster[data-count="6"] .seb-stun-halo, .story-energy-overlay .seb-roster[data-count="7"] .seb-stun-halo, .story-energy-overlay .seb-roster[data-count="8"] .seb-stun-halo{--s:.68;top:11px}
+@media(max-height:560px){
+.story-energy-overlay .seb-stun-halo{--s:.6;top:9px}
+}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-stun-star, .story-energy-overlay .seb-stun-star::before, .story-energy-overlay .seb-stun-ring{animation-play-state:paused}
+}
+/* STORY-RAIL-CLEAN: the rail holds only [cancel] and [end turn], right-aligned. */
+.story-energy-overlay .seb-hand .seb-action-rail{display:flex;flex-direction:row;align-items:center;justify-content:flex-end;gap:var(--nd-sp-8);padding:var(--nd-sp-4) 0;border:0;border-radius:0;background:none;box-shadow:none}
+.story-energy-overlay .seb-hand .seb-action-rail .seb-end-turn{flex:0 0 auto;min-width:112px}
+/* ART-MANA-053: shared faceted dusk crystal; cost numerals stay live text. */
+.story-energy-overlay .seb-gem{background:transparent url('../../../assets/emblems/mana-faceted-053.svg') center/contain no-repeat;border-radius:0;box-shadow:none;filter:saturate(.15) brightness(.55);opacity:.8}
+.story-energy-overlay .seb-gem.seb-filled{background:transparent url('../../../assets/emblems/mana-faceted-053.svg') center/contain no-repeat;box-shadow:none;filter:drop-shadow(0 0 3px #85bda16b);opacity:1}
+.story-energy-overlay .seb-skill-cost{background:transparent url('../../../assets/emblems/mana-cost-053.svg') center/contain no-repeat;border:0;border-radius:0;box-shadow:none;color:#fff2cd;text-shadow:0 1px 2px #020b09,1px 0 1px #020b09,-1px 0 1px #020b09}
+/* H2-COIN: the awakened 凜's 晶錐 card, the in-battle narration line and the fallback crystal beam */
+.story-energy-overlay .seb-cone-card{border-color:#7fd9cf;box-shadow:inset 0 0 0 2px #2f6f6a,0 0 14px #6fe3d455}
+.story-energy-overlay .seb-cone-card[aria-disabled="true"]{border-color:#5b7c78;box-shadow:inset 0 0 0 2px #2b4644}
+.story-energy-overlay .seb-narrate{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);z-index:46;max-width:min(86vw,760px);padding:var(--nd-sp-14) 28px;text-align:center;font:700 clamp(18px,2.6vw,28px)/1.5 "Noto Serif TC",serif;letter-spacing:.08em;color:#eafffb;text-shadow:0 0 12px #6fe3d4,0 2px 0 #06201d;background:radial-gradient(closest-side,#04151399,#04151300);pointer-events:none;animation:seb-narrate 1.6s ease-out both}
+.story-energy-overlay .seb-projectile.seb-cone-beam{height:5px;background:linear-gradient(90deg,transparent,#9ff2e6,#effffb);box-shadow:0 0 10px #6fe3d4}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-narrate{animation:none}
+}
+.story-energy-overlay .seb-skill-art.seb-cone-art{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#1d4a46,#08181a 75%)}
+.story-energy-overlay .seb-skill-art.seb-cone-art .seb-art-image{position:static;width:120%;height:auto;max-height:none;object-fit:contain;transform:rotate(-38deg) translateY(-8%);filter:drop-shadow(0 0 8px #6fe3d4aa)}
+.story-energy-overlay .seb-toast{position:fixed;z-index:25;top:max(10px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(460px,calc(100vw - 24px));padding:9px var(--nd-sp-14) var(--nd-sp-10);border:1px solid #b9a068;border-left:3px solid #e3c27a;border-radius:var(--nd-r-8);background:#0b1d17ec;box-shadow:0 6px 18px var(--nd-ink-60);color:#e1d7b3;pointer-events:auto;cursor:pointer;animation:seb-toast-in .28s ease-out both,seb-toast-out .4s ease-in 4.8s forwards}
+.story-energy-overlay .seb-toast .seb-toast-title{display:block;font:700 13px "Noto Serif TC",serif;color:#ead3a0;margin-bottom:3px}
+.story-energy-overlay .seb-toast p{margin:var(--nd-sp-2) 0;font-size:var(--nd-fs-12);line-height:1.45;color:#d9e0c9}
+.story-energy-overlay .seb-toast .seb-toast-line{color:#f1deae}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-toast{animation:none}
+}
+/* Story battle effects stylesheet (STORY-BATTLE-FX): everything the rat-king fight draws on top of the battle UI.
+ * Loaded after story-energy-ui.css so these rules keep the cascade order they had when they were appended there.
+ * Matching behaviour and timings: story-battle-fx.js. Sound recipes: story-battle-sfx.js.
+ *   burning flames (+rim)   transform / awakening scene   trap blast   death shatter-fade-vanish   rat devour & throw
+ */
+/* STORY-BURN-FLAMES: burning units get a glowing edge and flame tongues around the token's rim.
+   Pure CSS (no art assets). Flames sit outside the border (overflow is visible on .seb-unit). */
+.story-energy-overlay .seb-burn-flames{position:absolute;grid-area:1/1/2/2;inset:0;z-index:5;pointer-events:none}
+.story-energy-overlay .seb-flame{position:absolute;left:var(--x);top:var(--y);margin:0;background:none;transform-origin:50% 100%;transform:translate(-50%,-97%) rotate(var(--r)) scale(1);mix-blend-mode:screen;animation:seb-flame-lick var(--t) ease-in-out var(--d) infinite}
+.story-energy-overlay .seb-flame::before, .story-energy-overlay .seb-flame::after{content:"";position:absolute;left:0;right:0;bottom:0;clip-path:polygon(50% 0%,57% 16%,68% 34%,80% 56%,86% 76%,76% 93%,50% 100%,24% 93%,14% 76%,20% 56%,32% 34%,43% 16%)}
+.story-energy-overlay .seb-flame::before{top:0;background:linear-gradient(to top,#d8350f 0,#ff6a1e 30%,#ff9d38 62%,#ffcf5a 100%)}
+.story-energy-overlay .seb-flame::after{left:24%;right:24%;top:34%;background:linear-gradient(to top,#fff2b0 0,#ffe37a 55%,#ffd35a00 100%)}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-unit.seb-has-burn, .story-energy-overlay .seb-flame{animation:none}
+.story-energy-overlay .seb-unit.seb-has-burn{box-shadow:0 0 0 2px #ff7a2a99,0 0 12px 4px #ff6a1ecc,0 8px 16px var(--nd-ink-60)}
+}
+@media(max-height:560px){
+}
+/* STORY-TRANSFORM: boss second-phase staging (charge -> flash/shockwave/shards -> rebuilt unit). CSS only. */
+.story-energy-overlay .seb-shell.seb-quake{animation:seb-quake .82s linear both}
+.story-energy-overlay .seb-fx.seb-transform-aura{width:150px;height:150px;border-radius:var(--nd-r-round);background:radial-gradient(circle,#f2e3ffcc 0,#b98cff88 38%,#6fd9ff22 62%,transparent 72%);transform:translate(-50%,-50%);animation:seb-tf-aura .82s ease-in both}
+.story-energy-overlay .seb-fx.seb-transform-aura-2{width:230px;height:230px;background:radial-gradient(circle,#9fe9ff55 0,#8f6bd633 50%,transparent 70%);animation-delay:.14s}
+.story-energy-overlay .seb-fx.seb-transform-flash{width:1900px;height:1900px;border-radius:var(--nd-r-round);background:radial-gradient(circle,var(--nd-white) 0,#f3e6ffcc 14%,#9d72e655 38%,#4fd0e822 55%,transparent 68%);transform:translate(-50%,-50%);animation:seb-tf-flash .8s ease-out both}
+.story-energy-overlay .seb-fx.seb-transform-ring{width:40px;height:40px;border:4px solid #efdcff;border-radius:var(--nd-r-round);box-shadow:0 0 18px #c6a0ff,inset 0 0 12px #c6a0ff88;transform:translate(-50%,-50%);animation:seb-tf-ring .85s cubic-bezier(.15,.7,.3,1) both}
+.story-energy-overlay .seb-fx.seb-transform-ring-2{border-color:#a8ecff;box-shadow:0 0 18px #6fe0ff,inset 0 0 12px #6fe0ff88;animation-delay:.12s}
+.story-energy-overlay .seb-fx.seb-transform-shard{width:7px;height:26px;background:linear-gradient(var(--nd-white),#c9a4ff 55%,#6fe0ff);clip-path:polygon(50% 0,100% 55%,50% 100%,0 55%);transform:translate(-50%,-50%) rotate(var(--a));animation:seb-tf-shard .75s ease-out both}
+.story-energy-overlay .seb-unit.seb-transform-emerge{animation:seb-tf-emerge 1s cubic-bezier(.2,.8,.25,1) both}
+.story-energy-overlay .seb-unit.seb-summon-in, .story-energy-overlay .seb-unit-wrap:has(.seb-summon-in){animation:seb-summon .62s cubic-bezier(.2,.8,.3,1) both}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-shell.seb-quake, .story-energy-overlay .seb-unit.seb-transform-charge, .story-energy-overlay .seb-unit.seb-transform-emerge, .story-energy-overlay .seb-unit.seb-summon-in{animation:none}
+}
+/* STORY-BLAST: trap (crystal rat) self-detonation */
+.story-energy-overlay .seb-fx.seb-blast{width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:var(--nd-r-round);pointer-events:none;background:radial-gradient(circle,#fff6d8 0,#ffc261 28%,#ff6a2a 52%,#ff6a2a00 72%);mix-blend-mode:screen;animation:seb-blast 520ms ease-out forwards}
+.story-energy-overlay .seb-fx.seb-blast-2{background:none;border:3px solid #ffb35a;box-shadow:0 0 14px #ff7a30,inset 0 0 12px #ff7a3099;animation-duration:620ms;animation-delay:60ms}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-fx.seb-blast{animation:none;opacity:0}
+}
+/* STORY-BURN-SUBTLE: quieter burn — thin warm rim, fewer, smaller, translucent flames, no corner orb. */
+.story-energy-overlay .seb-unit.seb-has-burn .seb-portrait::after{display:none}
+.story-energy-overlay .seb-unit.seb-has-burn:not(.seb-selected){border-color:#c9843f;animation:seb-burn-rim 1.6s ease-in-out infinite}
+.story-energy-overlay .seb-unit.seb-has-burn.seb-selected{animation:seb-burn-rim 1.6s ease-in-out infinite}
+.story-energy-overlay .seb-flame{width:calc(11px*var(--k));height:calc(17px*var(--k));filter:drop-shadow(0 0 2px #ff7a2a88);opacity:.6}
+@media(max-height:560px){
+.story-energy-overlay .seb-flame{width:calc(7px*var(--k));height:calc(11px*var(--k))}
+}
+/* STORY-DEATH: shatter then fade out (fallen units stay as a faint ghost so the slot and its history remain readable). */
+.story-energy-overlay .seb-unit.seb-down{opacity:.3;filter:grayscale(.9) brightness(.85)}
+.story-energy-overlay .seb-down .seb-portrait{opacity:1}
+.story-energy-overlay .seb-unit.seb-down.seb-dying{animation:seb-shatter-fade 1.1s ease-out both}
+.story-energy-overlay .seb-fx.seb-death-flash{width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:var(--nd-r-round);pointer-events:none;background:radial-gradient(circle,var(--nd-white) 0,#ffe8b8 22%,#ffb86a55 48%,transparent 70%);mix-blend-mode:screen;animation:seb-death-flash .45s ease-out forwards}
+.story-energy-overlay .seb-fx.seb-death-crack{width:130px;height:130px;margin:-65px 0 0 -65px;pointer-events:none;background:var(--nd-white);clip-path:polygon(50% 0,54% 30%,78% 14%,62% 42%,100% 46%,64% 56%,86% 84%,54% 66%,48% 100%,42% 66%,12% 90%,36% 56%,0 50%,38% 40%,18% 12%,46% 30%);mix-blend-mode:screen;filter:drop-shadow(0 0 6px #ffd9a0);animation:seb-death-crack .5s ease-out forwards}
+.story-energy-overlay .seb-fx.seb-death-shard{width:calc(9px*var(--s,1));height:calc(13px*var(--s,1));margin:0;pointer-events:none;background:linear-gradient(135deg,#e8e0c8,#6b6a5c 60%,#2b2e28);clip-path:polygon(50% 0,100% 62%,70% 100%,12% 88%,0 36%);filter:drop-shadow(0 0 3px #00000099);animation:seb-death-shard .8s cubic-bezier(.2,.7,.4,1) forwards}
+/* STORY-RAT-KING: devour heal + thrown rat */
+.story-energy-overlay .seb-float.seb-float-heal{color:#9be8b0;text-shadow:0 0 8px #2f9e5a}
+.story-energy-overlay .seb-fx.seb-heal-ring{width:110px;height:90px;border:3px solid #7fe0a0;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);box-shadow:0 0 16px #5fdc8a88;animation:seb-ring .6s ease-out both}
+.story-energy-overlay .seb-fx.seb-thrown{width:44px;height:44px;border-radius:var(--nd-r-round);border:2px solid #d9c27c;background:#222 center/cover no-repeat;box-shadow:0 0 12px #ff8a3acc;pointer-events:none}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-unit.seb-down.seb-dying, .story-energy-overlay .seb-fx.seb-death-flash, .story-energy-overlay .seb-fx.seb-death-crack, .story-energy-overlay .seb-fx.seb-death-shard{animation:none}
+.story-energy-overlay .seb-fx.seb-death-flash, .story-energy-overlay .seb-fx.seb-death-crack, .story-energy-overlay .seb-fx.seb-death-shard{opacity:0}
+}
+/* STORY-DEATH-VANISH: after the shatter the whole slot (card + status line) fades away and is then removed from the roster. */
+.story-energy-overlay .seb-unit-wrap.seb-wrap-dying{animation:seb-wrap-vanish 1.1s ease-in both;pointer-events:none}
+/* STORY-RAT-THROW: tether, lifted card, trail */
+.story-energy-overlay .seb-fx.seb-thrown-card{margin:0;pointer-events:none;transform-origin:50% 50%;filter:drop-shadow(0 10px 14px var(--nd-ink-67)) drop-shadow(0 0 12px #ff8a3acc);z-index:30}
+.story-energy-overlay .seb-fx.seb-thrown-card .seb-unit{box-shadow:0 0 0 2px #ffb15c,0 0 22px 6px #ff7a2e99}
+.story-energy-overlay .seb-fx.seb-tether{height:3px;margin-top:-1px;transform-origin:0 50%;pointer-events:none;background:linear-gradient(90deg,#ffe9b0,#ff9a3c 60%,#ff6a1e00);box-shadow:0 0 10px #ff9a3c;animation:seb-tether .45s ease-out forwards}
+.story-energy-overlay .seb-fx.seb-grab-ring{width:120px;height:150px;border:3px solid #ffcf7a;border-radius:20px;transform:translate(-50%,-50%);box-shadow:0 0 18px #ff9a3caa;pointer-events:none;animation:seb-ring .55s ease-out both}
+.story-energy-overlay .seb-float.seb-float-grab{color:#ffd9a0;text-shadow:0 0 8px #ff7a2e,0 2px 0 var(--nd-black)}
+.story-energy-overlay .seb-fx.seb-trail{width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:var(--nd-r-round);pointer-events:none;background:radial-gradient(circle,#ffd9a0cc,#ff7a2e66 55%,#ff7a2e00 75%);animation:seb-trail .38s ease-out forwards}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-fx.seb-tether, .story-energy-overlay .seb-fx.seb-trail{animation:none;opacity:0}
+}
+/* STORY-RAT-DEVOUR: green tether, swallowed card, heal pulse */
+.story-energy-overlay .seb-fx.seb-tether.seb-tether-green{background:linear-gradient(90deg,#d8ffd0,#6fdc86 60%,#3fb86a00);box-shadow:0 0 10px #5fdc8a}
+.story-energy-overlay .seb-fx.seb-grab-ring.seb-grab-ring-green{border-color:#8af0a4;box-shadow:0 0 18px #5fdc8aaa}
+.story-energy-overlay .seb-fx.seb-devoured-card{filter:drop-shadow(0 8px 12px var(--nd-ink-67)) drop-shadow(0 0 12px #5fdc8acc)}
+.story-energy-overlay .seb-fx.seb-devoured-card .seb-unit{box-shadow:0 0 0 2px #8af0a4,0 0 22px 6px #3fb86a99}
+.story-energy-overlay .seb-float.seb-float-devour{color:#c8ffd2;text-shadow:0 0 8px #2f9e5a,0 2px 0 var(--nd-black)}
+.story-energy-overlay .seb-fx.seb-trail.seb-trail-green{background:radial-gradient(circle,#d8ffd0cc,#4fd47a66 55%,#4fd47a00 75%)}
+.story-energy-overlay .seb-fx.seb-heal-ring.seb-heal-ring-2{width:150px;height:120px;animation-delay:.12s;border-width:2px}
+/* STORY-AWAKEN: a bigger awakening scene - dark veil, growing crystal spikes, inward motes, white-out, banner, lasting crystal glow */
+.story-energy-overlay .seb-fx.seb-awaken-veil{left:0!important;top:0!important;width:100%;height:100%;background:radial-gradient(circle at var(--cx,50%) var(--cy,38%),#2b145800 0,#2b145800 90px,#1a0c3dcc 300px,#05030fe6 100%);animation:seb-aw-veil .5s ease-out both;z-index:2}
+.story-energy-overlay .seb-fx.seb-awaken-veil.seb-awaken-veil-out{animation:seb-aw-veil-out .9s ease-in forwards}
+.story-energy-overlay .seb-fx.seb-awaken-whiteout{left:0!important;top:0!important;width:100%;height:100%;background:var(--nd-white);animation:seb-aw-white .55s ease-out both;z-index:40}
+.story-energy-overlay .seb-fx.seb-awaken-pulse{width:120px;height:120px;border-radius:var(--nd-r-round);border:3px solid #d9b8ff;box-shadow:0 0 22px #b98cff,inset 0 0 18px #b98cff88;transform:translate(-50%,-50%);animation:seb-aw-pulse 1.15s ease-out infinite;z-index:6}
+.story-energy-overlay .seb-fx.seb-awaken-pulse-2{border-color:#8fe8ff;animation-delay:.5s}
+.story-energy-overlay .seb-fx.seb-awaken-spike{width:16px;height:var(--h);margin:0;background:linear-gradient(#f4eaff,#a982f0 55%,#4a2c9a);clip-path:polygon(50% 0,100% 100%,0 100%);transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(var(--a)) translateY(-50px) scaleY(0);filter:drop-shadow(0 0 8px #b98cff);animation:seb-aw-spike .6s cubic-bezier(.2,.9,.3,1.2) forwards;z-index:7}
+.story-energy-overlay .seb-fx.seb-awaken-mote{width:9px;height:9px;margin:-4px 0 0 -4px;border-radius:var(--nd-r-round);background:radial-gradient(circle,var(--nd-white),#c9a4ff 55%,#c9a4ff00 75%);transform:translate(var(--x),var(--y));opacity:0;animation:seb-aw-mote .55s ease-in infinite;z-index:7}
+.story-energy-overlay .seb-fx.seb-transform-ring-3{border-color:var(--nd-white);box-shadow:0 0 22px var(--nd-white),inset 0 0 14px #fff8;animation-delay:.22s}
+.story-energy-overlay .seb-fx.seb-awaken-banner{transform:translate(-50%,-50%);white-space:nowrap;font:900 clamp(34px,6vw,72px)/1 "ND Awaken Serif","Noto Serif TC",serif;letter-spacing:.3em;padding-left:.3em;color:var(--nd-white);text-shadow:0 0 14px #d9b8ff,0 0 34px #8f6bd6,0 4px 0 #2b1458;animation:seb-aw-banner 1.5s cubic-bezier(.2,.8,.25,1) both;z-index:45}
+.story-energy-overlay .seb-shell.seb-quake-hard{animation:seb-quake-hard .5s linear both}
+.story-energy-overlay .seb-unit.seb-transform-charge{animation:seb-tf-charge 1.15s ease-in both}
+.story-energy-overlay .seb-unit.seb-awakened{border-color:#b98cff;box-shadow:0 0 0 2px #b98cffcc,0 0 22px 6px #8f6bd6aa,0 8px 16px var(--nd-ink-60);animation:seb-awakened-glow 2.2s ease-in-out infinite}
+.story-energy-overlay .seb-unit.seb-awakened.seb-transform-emerge{animation:seb-tf-emerge 1s cubic-bezier(.2,.8,.25,1) both}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-shell.seb-quake-hard{animation:none}
+.story-energy-overlay .seb-unit.seb-awakened{animation:none}
+.story-energy-overlay .seb-fx.seb-awaken-spike{animation-duration:.01s}
+}
+.story-energy-overlay .seb-fx.seb-sk-smoke{width:150px;height:150px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);background:radial-gradient(circle,#2a1a4acc 0,#5b3f9a88 38%,#9b7be033 58%,transparent 72%);filter:blur(5px);animation:seb-sk-smoke .62s ease-out both;z-index:3}
+.story-energy-overlay .seb-fx.seb-sk-smoke-2{width:210px;height:120px;background:radial-gradient(ellipse,#7b5cc455 0,#3a275e33 50%,transparent 70%);animation-delay:.08s}
+.story-energy-overlay .seb-fx.seb-sk-ghost{margin:0;transform:translate(-50%,-50%);pointer-events:none;filter:saturate(.2) brightness(.8) blur(1.2px) drop-shadow(0 0 10px #9b7be0);mix-blend-mode:screen;animation:seb-sk-ghost .6s cubic-bezier(.2,.7,.3,1) both;z-index:4}
+.story-energy-overlay .seb-fx.seb-sk-mote{width:5px;height:5px;margin:-2px 0 0 -2px;border-radius:var(--nd-r-round);opacity:0;animation:seb-sk-mote .6s ease-out both;z-index:5}
+.story-energy-overlay .seb-fx.seb-sk-mote-violet{background:radial-gradient(circle,#f1e9ff,#a88ae8 60%,transparent 75%);box-shadow:0 0 6px #9b7be0}
+.story-energy-overlay .seb-fx.seb-sk-mote-gold{background:radial-gradient(circle,#fffbe8,#f0cf7a 60%,transparent 75%);box-shadow:0 0 6px #e8c06a}
+.story-energy-overlay .seb-fx.seb-sk-pillar{transform:translate(-50%,-100%);transform-origin:50% 100%;background:linear-gradient(90deg,transparent,#f5d78a66 30%,#fff6dc 50%,#f5d78a66 70%,transparent);-webkit-mask-image:linear-gradient(to top,var(--nd-black) 55%,transparent);mask-image:linear-gradient(to top,var(--nd-black) 55%,transparent);filter:drop-shadow(0 0 12px #f0c86a);mix-blend-mode:screen;animation:seb-sk-pillar .62s cubic-bezier(.2,.8,.3,1) both;z-index:5}
+.story-energy-overlay .seb-fx.seb-sk-glyph{transform:translate(-50%,-50%);border-radius:var(--nd-r-round);border:2px solid #f0d28a;box-shadow:0 0 14px #e8c06a99,inset 0 0 10px #e8c06a66;animation:seb-sk-glyph .68s ease-out both;z-index:1}
+.story-energy-overlay .seb-fx.seb-sk-glyph::before{content:"";position:absolute;inset:16%;border-radius:var(--nd-r-round);border:1.5px dashed #f6e2a8cc}
+.story-energy-overlay .seb-fx.seb-sk-glint{height:3px;margin-top:-1px;transform:translate(-50%,-50%) rotate(-32deg);background:linear-gradient(90deg,transparent,#fff6d8 45%,var(--nd-white) 50%,#fff6d8 55%,transparent);box-shadow:0 0 10px #f3d68a;mix-blend-mode:screen;animation:seb-sk-glint .42s .16s ease-in-out both;z-index:6}
+.story-energy-overlay .seb-fx.seb-sk-dust{height:34px;transform:translate(-50%,-50%);border-radius:var(--nd-r-round);background:radial-gradient(ellipse,#b89a6a88 0,#6d583a55 45%,transparent 70%);filter:blur(3px);animation:seb-sk-dust .5s ease-out both;z-index:1}
+.story-energy-overlay .seb-fx.seb-sk-fissure{height:12px;margin-top:-6px;transform-origin:0 50%;background:linear-gradient(#ffd99a,#ff9a3c 45%,#7a3a12);clip-path:polygon(0 50%,6% 20%,12% 60%,19% 25%,26% 70%,33% 30%,40% 65%,47% 22%,54% 68%,61% 28%,68% 72%,75% 30%,82% 66%,89% 24%,95% 62%,100% 45%,100% 60%,95% 78%,89% 40%,82% 82%,75% 46%,68% 88%,61% 44%,54% 84%,47% 38%,40% 80%,33% 46%,26% 86%,19% 40%,12% 76%,6% 36%,0 60%);filter:drop-shadow(0 0 6px #ff9a3c) drop-shadow(0 0 2px #fff0c8);-webkit-mask-image:linear-gradient(90deg,var(--nd-black) var(--sk-p),transparent calc(var(--sk-p) + 4%));mask-image:linear-gradient(90deg,var(--nd-black) var(--sk-p),transparent calc(var(--sk-p) + 4%));animation:seb-sk-fissure .56s .14s cubic-bezier(.3,.6,.4,1) both;z-index:2}
+.story-energy-overlay .seb-fx.seb-sk-spike{width:15px;height:var(--h);margin:0;transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(var(--a)) scaleY(0);background:linear-gradient(#f4fff8,#a9e6cf 35%,#4f7a64 80%,#2c3a30);clip-path:polygon(50% 0,100% 100%,0 100%);filter:drop-shadow(0 0 7px #8fe0c0aa);animation:seb-sk-spike .3s cubic-bezier(.2,.9,.3,1.25) both;z-index:6}
+.story-energy-overlay .seb-fx.seb-sk-gather{width:70px;height:70px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);border:2px solid #8ff0e0;box-shadow:0 0 12px #5fe0d0,inset 0 0 8px #5fe0d088;animation:seb-sk-gather .26s ease-in both;z-index:5}
+.story-energy-overlay .seb-fx.seb-sk-gather-2{animation-delay:.08s;border-color:#e6fffa}
+.story-energy-overlay .seb-fx.seb-sk-wave{height:24px;margin-top:-12px;transform-origin:0 50%;overflow:visible;z-index:4}
+.story-energy-overlay .seb-fx.seb-sk-wave svg{display:block;overflow:visible}
+.story-energy-overlay .seb-sk-wave path{fill:none;stroke-dasharray:1;stroke-dashoffset:1;stroke-linecap:round;animation:seb-sk-wave .52s .2s ease-out both}
+.story-energy-overlay .seb-sk-wave .seb-sk-wave-glow{stroke:#5fe0d0;stroke-width:7;opacity:.35;filter:blur(2px)}
+.story-energy-overlay .seb-sk-wave .seb-sk-wave-core{stroke:#e8fffb;stroke-width:1.6}
+.story-energy-overlay .seb-fx.seb-sk-orb{width:18px;height:18px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);background:radial-gradient(circle,var(--nd-white) 0,#c9fff6 35%,#5fe0d0 60%,transparent 72%);box-shadow:0 0 14px #5fe0d0,0 0 28px #5fe0d066;animation:seb-sk-orb .32s .2s cubic-bezier(.4,0,.7,1) both;z-index:6}
+.story-energy-overlay .seb-fx.seb-sk-hit{width:100px;height:100px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);background:radial-gradient(circle,var(--nd-white) 0,#c9fff6aa 25%,#5fe0d044 50%,transparent 70%);mix-blend-mode:screen;animation:seb-sk-hit .3s ease-out both;z-index:6}
+.story-energy-overlay .seb-fx.seb-sk-ripple{width:60px;height:60px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);border:2px solid #8ff0e0;box-shadow:0 0 10px #5fe0d0;animation:seb-sk-ripple .42s ease-out both;z-index:5}
+.story-energy-overlay .seb-fx.seb-sk-ripple-soft{border-width:1.5px;opacity:.7;animation-duration:.5s}
+.story-energy-overlay .seb-fx.seb-sk-lock{width:120px;height:120px;border-radius:var(--nd-r-round);transform:translate(-50%,-50%);border:3px dashed #bfe4ff;box-shadow:0 0 14px #8fc8ff,inset 0 0 12px #8fc8ff66;animation:seb-sk-lock .38s cubic-bezier(.2,.8,.3,1) both;z-index:5}
+.story-energy-overlay .seb-fx.seb-sk-lock-2{width:86px;height:86px;border-style:solid;border-width:2px;animation-delay:.06s;animation-direction:normal}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-fx[class*="seb-sk-"], .story-energy-overlay .seb-sk-wave path{animation:none;opacity:0}
+}
+/* STORY-SKILL-FX v2: canvas overlay for the hand-painted skill effects (story-skill-fx.js). Never takes input. */
+.story-energy-overlay .seb-skill-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:19}
+/* STORY-AWAKEN-ART: banner layer above the skill canvas (z 19) */
+.story-energy-overlay .seb-fx-layer.seb-fx-layer-top{z-index:21}
+/* 2026-10-05 TREMOR: a unit that still has shock damage pending trembles and blurs (no flames, no badge). */
+.story-energy-overlay .seb-unit.seb-has-tremor .seb-portrait img{animation:seb-tremor .42s linear infinite;will-change:transform,filter}
+@media(prefers-reduced-motion:reduce){
+.story-energy-overlay .seb-unit.seb-has-tremor .seb-portrait img{animation:none;filter:blur(.8px)}
+}
+.story-energy-overlay .seb-modal, .story-energy-overlay .seb-result{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-width:var(--sf-w)!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.story-energy-overlay .seb-modal, .story-energy-overlay .seb-result{padding:calc(var(--sf-w) + 10px)}
+@media (orientation:landscape) and (max-height:520px){
+/* ── 4. Card battle on rotated phones ─────────────────────────────────────── */
+/* The two 暮晶 counters sat on top of the first enemy and last ally cards:
+    reserve a side gutter for them instead. */
+.story-energy-overlay .seb-field{padding-left:clamp(62px,9vw,86px);padding-right:clamp(62px,9vw,86px)}
+.story-energy-overlay .seb-roster{width:100%;max-width:none;gap:var(--nd-sp-10)}
+.story-energy-overlay .seb-enemy-energy, .story-energy-overlay .seb-player-energy{max-width:min(72px,calc(9vw - 10px));min-width:54px;padding-inline:2px}
+.story-energy-overlay .seb-enemy-energy .seb-energy-value, .story-energy-overlay .seb-player-energy .seb-energy-value{white-space:nowrap;padding-inline:6px}
+/* Wider unit plates so names such as 赫爾曼博士 / 王室衛兵 are not cut to one glyph. */
+.story-energy-overlay .seb-unit-wrap{width:min(100%,168px)}
+.story-energy-overlay .seb-unit-identity{flex-direction:column;align-items:flex-start;gap:0}
+.story-energy-overlay .seb-unit-identity .seb-unit-name{max-width:100%;font-size:var(--nd-fs-12)}
+.story-energy-overlay .seb-unit-identity .seb-unit-role{max-width:100%;font-size:var(--nd-fs-10)}
+/* Smallest labels raised to a readable 10px minimum. */
+.story-energy-overlay .seb-eyebrow, .story-energy-overlay .seb-enemy-energy .seb-energy-label, .story-energy-overlay .seb-player-energy .seb-energy-label{font-size:var(--nd-fs-10)}
+.story-energy-overlay .seb-phase, .story-energy-overlay .seb-objective{font-size:var(--nd-fs-11)}
+.story-energy-overlay .seb-rail-note{font-size:var(--nd-fs-10)}
+}
+@media (orientation:portrait) and (max-width:1024px){
+/* Shell: header / battlefield / hand, top to bottom. */
+#seb-battle-overlay .seb-shell{width:100%;grid-template-rows:auto minmax(0,1fr) auto;gap:var(--nd-sp-6);padding:max(6px,env(safe-area-inset-top)) max(10px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left))}
+/* Header: title + menu on one row, round / phase / goal on the next. */
+#seb-battle-overlay .seb-header{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"title nav" "meta meta";gap:var(--nd-sp-4) var(--nd-sp-8);padding:0 var(--nd-sp-2) var(--nd-sp-6);align-items:center}
+#seb-battle-overlay .seb-title-block{grid-area:title;min-width:0}
+#seb-battle-overlay .seb-eyebrow{display:none}
+#seb-battle-overlay .seb-title{font-size:var(--nd-fs-18);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay .seb-nav{grid-area:nav;gap:var(--nd-sp-4)}
+#seb-battle-overlay .seb-nav .seb-button{min-height:40px;min-width:44px;padding:var(--nd-sp-6) 9px;font-size:var(--nd-fs-13)}
+#seb-battle-overlay .seb-meta{grid-area:meta;justify-content:flex-start;flex-wrap:nowrap;column-gap:var(--nd-sp-8);text-align:left}
+#seb-battle-overlay .seb-round{font-size:var(--nd-fs-15);white-space:nowrap}
+#seb-battle-overlay .seb-phase{font-size:var(--nd-fs-12);white-space:nowrap}
+#seb-battle-overlay .seb-objective{flex:1 1 auto;min-width:0;font-size:var(--nd-fs-12);overflow:hidden;text-overflow:ellipsis}
+/* Battlefield: enemies on top, a status line with both 暮晶 counters, allies below. */
+#seb-battle-overlay .seb-field{grid-row:2;display:grid;grid-template-columns:auto minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr) auto minmax(0,1fr);grid-template-areas:"enemy enemy enemy" "ee msg pe" "player player player";gap:var(--nd-sp-8) var(--nd-sp-6);padding:var(--nd-sp-12) var(--nd-sp-8) var(--nd-sp-10);border-radius:24px 24px 14px 14px}
+#seb-battle-overlay .seb-field::before{inset:6px;border-radius:var(--nd-r-18)}
+#seb-battle-overlay .seb-roster-enemy{grid-area:enemy}
+#seb-battle-overlay .seb-roster-player{grid-area:player}
+#seb-battle-overlay .seb-battle-message{grid-area:msg;grid-row:auto;font-size:var(--nd-fs-12);min-width:0}
+#seb-battle-overlay .seb-battle-message>span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay .seb-enemy-energy, #seb-battle-overlay .seb-player-energy{position:static;inset:auto;max-width:none;min-width:0;display:flex;flex-wrap:nowrap;align-items:center;gap:var(--nd-sp-4);padding:var(--nd-sp-3) var(--nd-sp-7);border-radius:var(--nd-r-14)}
+#seb-battle-overlay .seb-enemy-energy{grid-area:ee}
+#seb-battle-overlay .seb-player-energy{grid-area:pe}
+#seb-battle-overlay .seb-enemy-energy .seb-gems, #seb-battle-overlay .seb-player-energy .seb-gems{display:none}
+#seb-battle-overlay .seb-enemy-energy .seb-energy-value, #seb-battle-overlay .seb-player-energy .seb-energy-value{font-size:var(--nd-fs-13);padding:1px var(--nd-sp-7);white-space:nowrap}
+#seb-battle-overlay .seb-enemy-energy .seb-energy-label, #seb-battle-overlay .seb-player-energy .seb-energy-label{font-size:var(--nd-fs-11);white-space:nowrap}
+/* Rosters: 1–3 units in one row, 4 as 2×2, 5–6 as 3×2, 7–8 as 4×2. */
+#seb-battle-overlay .seb-roster{--pb-cols:var(--seb-count);width:100%;max-width:none;height:100%;margin:0;padding:0;grid-template-columns:repeat(var(--pb-cols),minmax(0,1fr));grid-template-rows:minmax(0,1fr);gap:var(--nd-sp-8);align-items:center;justify-items:center}
+#seb-battle-overlay .seb-roster[data-count="4"]{--pb-cols:2}
+#seb-battle-overlay .seb-roster[data-count="5"], #seb-battle-overlay .seb-roster[data-count="6"]{--pb-cols:3}
+#seb-battle-overlay .seb-roster[data-count="7"], #seb-battle-overlay .seb-roster[data-count="8"]{--pb-cols:4}
+#seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]){grid-template-rows:repeat(2,minmax(0,1fr));gap:var(--nd-sp-6)}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"]) .seb-unit-wrap{grid-column:auto!important}
+#seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit-wrap{grid-row:auto}
+#seb-battle-overlay .seb-unit-wrap{width:100%;max-width:none;height:100%;max-height:none;min-height:0;grid-template-rows:minmax(0,1fr) auto;align-self:stretch}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-unit-wrap{width:min(100%,280px)}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="3"]) .seb-unit-wrap{max-height:min(100%,230px);align-self:center}
+#seb-battle-overlay .seb-unit{border-width:2px;border-bottom-width:3px;border-radius:18px 18px 8px 8px}
+#seb-battle-overlay .seb-status-strip{min-height:0;padding:var(--nd-sp-2) var(--nd-sp-2) 0}
+#seb-battle-overlay .seb-unit-job, #seb-battle-overlay .seb-status{font-size:var(--nd-fs-11)}
+#seb-battle-overlay .seb-unit-identity{flex-direction:column;align-items:flex-start;gap:0;min-width:0}
+#seb-battle-overlay .seb-unit-name, #seb-battle-overlay .seb-unit-role{max-width:100%}
+#seb-battle-overlay .seb-stat-badges{gap:var(--nd-sp-4)}
+#seb-battle-overlay .seb-stat{height:28px;padding:var(--nd-sp-2) var(--nd-sp-3);gap:var(--nd-sp-2)}
+#seb-battle-overlay .seb-stat small{font-size:var(--nd-fs-11)}
+#seb-battle-overlay .seb-stat strong{font-size:var(--nd-fs-16)}
+#seb-battle-overlay .seb-allowance{width:24px;height:24px}
+/* Wide plate (1, 2 or 4 units): portrait on the left, name and numbers on the right. */
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="4"]) .seb-portrait{inset:2px auto 2px 2px;width:40%;border-radius:16px 0 0 6px}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="4"]) .seb-unit-base{inset:0 0 0 40%;min-height:0;align-content:center;gap:var(--nd-sp-6);padding:var(--nd-sp-6) var(--nd-sp-8);border-top:0;border-left:1px solid var(--nd-gold-line);background:linear-gradient(90deg,#1d3328f0,#101d17f8)}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="4"]) .seb-unit-name{font-size:var(--nd-fs-16)}
+#seb-battle-overlay .seb-roster[data-count="4"] .seb-unit-name{font-size:var(--nd-fs-15)}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="4"]) .seb-unit-role{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-roster:is([data-count="1"],[data-count="2"],[data-count="4"]) .seb-allowances{left:5px;right:auto;top:auto;bottom:5px;width:calc(40% - 10px);justify-content:flex-start;transform:none}
+/* Tall plate (3, 5–8 units): portrait above, numbers below. */
+#seb-battle-overlay .seb-roster:is([data-count="3"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-portrait{inset:2px 2px 70px;width:auto;border-radius:16px 16px 0 0}
+#seb-battle-overlay .seb-roster:is([data-count="3"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit-base{inset:auto 0 0;min-height:70px;gap:var(--nd-sp-3);padding:var(--nd-sp-4) var(--nd-sp-5) var(--nd-sp-5)}
+#seb-battle-overlay .seb-roster:is([data-count="3"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit-name{font-size:var(--nd-fs-14)}
+#seb-battle-overlay .seb-roster:is([data-count="3"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit-role{font-size:var(--nd-fs-11)}
+#seb-battle-overlay .seb-roster:is([data-count="3"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-allowances{left:4px;right:4px;top:auto;bottom:74px;justify-content:center;transform:none}
+/* 5–8 units: drop the role line so the portrait keeps its height. */
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]) .seb-unit-role{display:none}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-portrait{bottom:56px}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-unit-base{min-height:56px}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-allowances{bottom:60px}
+/* 7–8 units (路易斯 + 衛兵 + 水晶鼠): numbers only, smaller type. */
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-portrait{bottom:56px}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-unit-base{min-height:56px;padding:var(--nd-sp-3)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-unit-name{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat{height:24px}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat small{display:none}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat strong{font-size:var(--nd-fs-14)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-allowances{bottom:60px}
+/* Hand: prompt + end turn on top, skill cards in one row underneath. */
+#seb-battle-overlay .seb-hand{grid-row:3;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"label rail" "cards cards";gap:var(--nd-sp-6) var(--nd-sp-10);padding:var(--nd-sp-6) var(--nd-sp-2) 0;align-items:center}
+#seb-battle-overlay .seb-hand-label{grid-area:label;align-items:flex-start;gap:var(--nd-sp-2);min-width:0}
+#seb-battle-overlay .seb-hand-label strong{font-size:var(--nd-fs-15);line-height:1.3}
+#seb-battle-overlay .seb-hand-label span{font-size:var(--nd-fs-12);line-height:1.35}
+#seb-battle-overlay .seb-action-rail{grid-area:rail;display:flex;gap:var(--nd-sp-6);padding:0}
+#seb-battle-overlay .seb-end-turn, #seb-battle-overlay .seb-action-rail [data-seb-action="cancel-target"]{min-height:46px;min-width:96px;padding:var(--nd-sp-8) var(--nd-sp-12);font-size:var(--nd-fs-15)}
+#seb-battle-overlay .seb-hand-cards{grid-area:cards;height:var(--pb-card-h);gap:var(--nd-sp-10);padding:0 var(--nd-sp-4);justify-content:center;align-items:stretch}
+#seb-battle-overlay .seb-skill-wrap{height:100%;max-height:none;flex:0 1 auto}
+#seb-battle-overlay .seb-skill-name{font-size:var(--nd-fs-14);bottom:4px}
+#seb-battle-overlay .seb-skill-owner{font-size:var(--nd-fs-11);bottom:24px}
+#seb-battle-overlay .seb-skill-lock{font-size:var(--nd-fs-11)}
+#seb-battle-overlay .seb-skill-cost{width:28px;height:28px;font-size:var(--nd-fs-17)}
+#seb-battle-overlay .seb-skill-card::before{border-image-width:10px}
+/* Result / details dialogs fit the narrow screen. */
+#seb-battle-overlay .seb-result{width:min(360px,calc(100% - 16px));padding:var(--nd-sp-16)}
+#seb-battle-overlay .seb-modal{width:min(420px,calc(100vw - 20px));max-height:calc(100dvh - 32px);overflow:auto}
+}
+@media (orientation:portrait) and (max-width:1024px) and (max-height:700px){
+#seb-battle-overlay .seb-hand-label span{display:none}
+#seb-battle-overlay .seb-field{padding:var(--nd-sp-8) var(--nd-sp-6);gap:var(--nd-sp-6)}
+#seb-battle-overlay .seb-stat{height:25px}
+#seb-battle-overlay .seb-stat strong{font-size:var(--nd-fs-14)}
+#seb-battle-overlay .seb-roster[data-count="3"] .seb-portrait{bottom:64px}
+#seb-battle-overlay .seb-roster[data-count="3"] .seb-unit-base{min-height:64px}
+#seb-battle-overlay .seb-roster[data-count="3"] .seb-allowances{bottom:68px}
+}
+@media (orientation:portrait) and (max-width:1024px) and (min-height:740px){
+/* Tall portrait phones: 5–6 units read better as 2 columns × 3 rows of wide plates. */
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]){--pb-cols:2;grid-template-rows:repeat(3,minmax(0,1fr));gap:var(--nd-sp-5) var(--nd-sp-8)}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-portrait{inset:2px auto 2px 2px;width:34%;border-radius:14px 0 0 6px}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-unit-base{inset:0 0 0 34%;min-height:0;align-content:center;gap:var(--nd-sp-4);padding:var(--nd-sp-4) var(--nd-sp-6);border-top:0;border-left:1px solid var(--nd-gold-line);background:linear-gradient(90deg,#1d3328f0,#101d17f8)}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-allowances{left:4px;right:auto;top:auto;bottom:4px;width:calc(34% - 8px);justify-content:flex-start}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-status-strip{display:none}
+}
+@media (orientation:portrait) and (max-width:1024px){
+/* A single unit gets a large, poster-like plate. */
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-unit-name{font-size:var(--nd-fs-20)}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-unit-role{font-size:var(--nd-fs-13)}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-stat{height:34px}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-stat strong{font-size:var(--nd-fs-20)}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-stat small{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-roster[data-count="1"] .seb-unit-base{gap:var(--nd-sp-10);padding:var(--nd-sp-10) var(--nd-sp-12)}
+}
+@media (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay .seb-shell{grid-template-rows:40px minmax(0,1fr) var(--seb-hand);gap:var(--nd-sp-4);padding-top:max(4px,env(safe-area-inset-top))}
+#seb-battle-overlay .seb-header{grid-template-columns:auto minmax(0,1fr) auto;gap:var(--nd-sp-12);padding:0 var(--nd-sp-2) var(--nd-sp-2)}
+#seb-battle-overlay .seb-eyebrow{display:none}
+#seb-battle-overlay .seb-title{font-size:var(--nd-fs-16);white-space:nowrap}
+#seb-battle-overlay .seb-meta{flex-wrap:nowrap;justify-content:center;column-gap:var(--nd-sp-8)}
+#seb-battle-overlay .seb-round{font-size:var(--nd-fs-14);white-space:nowrap}
+#seb-battle-overlay .seb-phase{font-size:var(--nd-fs-11);white-space:nowrap}
+#seb-battle-overlay .seb-objective{flex:0 1 auto;min-width:0;font-size:var(--nd-fs-11);overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay .seb-nav .seb-button{min-height:38px;padding:var(--nd-sp-4) 9px;font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-field{grid-template-rows:minmax(0,1fr) 20px minmax(0,1fr);padding:6px clamp(62px,9vw,86px) 4px}
+#seb-battle-overlay .seb-roster{width:100%;max-width:none;height:100%;gap:var(--nd-sp-8);padding:0;align-items:stretch}
+#seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"],[data-count="7"],[data-count="8"]){grid-template-columns:repeat(var(--seb-count),minmax(0,1fr));width:100%;gap:var(--nd-sp-6)}
+#seb-battle-overlay .seb-unit-wrap{width:min(100%,210px);max-width:none;height:100%;max-height:none;grid-template-rows:minmax(0,1fr) auto;align-self:stretch}
+#seb-battle-overlay .seb-unit{border-width:2px;border-bottom-width:3px;border-radius:14px 14px 6px 6px}
+#seb-battle-overlay .seb-status-strip{min-height:0;padding:1px var(--nd-sp-2) 0}
+#seb-battle-overlay .seb-unit-job, #seb-battle-overlay .seb-status{font-size:var(--nd-fs-10);line-height:1.2}
+/* Wide plate for up to 6 per side. */
+#seb-battle-overlay .seb-portrait{inset:2px auto 2px 2px;width:38%;border-radius:12px 0 0 4px}
+#seb-battle-overlay .seb-unit-base{inset:0 0 0 38%;min-height:0;align-content:center;gap:var(--nd-sp-4);padding:var(--nd-sp-3) var(--nd-sp-5);border-top:0;border-left:1px solid var(--nd-gold-line)}
+#seb-battle-overlay .seb-unit-identity{flex-direction:column;align-items:flex-start;gap:0}
+#seb-battle-overlay .seb-unit-name{font-size:var(--nd-fs-14);max-width:100%}
+#seb-battle-overlay .seb-unit-role{font-size:var(--nd-fs-11);max-width:100%}
+#seb-battle-overlay .seb-stat-badges{gap:var(--nd-sp-3)}
+#seb-battle-overlay .seb-stat{height:26px;padding:1px var(--nd-sp-2);gap:1px}
+#seb-battle-overlay .seb-stat small{font-size:var(--nd-fs-10)}
+#seb-battle-overlay .seb-stat strong{font-size:var(--nd-fs-15)}
+#seb-battle-overlay .seb-allowances{left:3px;right:auto;top:auto;bottom:3px;width:calc(38% - 6px);justify-content:flex-start;transform:none}
+#seb-battle-overlay .seb-allowance{width:20px;height:20px}
+#seb-battle-overlay .seb-roster:is([data-count="5"],[data-count="6"]) .seb-unit-role{display:none}
+/* 7–8 per side (路易斯 + 衛兵 + 水晶鼠): portrait above, numbers only. */
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-portrait{inset:2px 2px 46px;width:auto;border-radius:12px 12px 0 0}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-unit-base{inset:auto 0 0;min-height:46px;gap:var(--nd-sp-2);padding:var(--nd-sp-2) var(--nd-sp-3) var(--nd-sp-3);border-left:0;border-top:1px solid var(--nd-gold-line)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-unit-name{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-unit-role, #seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat small{display:none}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat{height:22px}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-stat strong{font-size:var(--nd-fs-13)}
+#seb-battle-overlay .seb-roster:is([data-count="7"],[data-count="8"]) .seb-allowances{left:2px;right:2px;bottom:48px;width:auto;justify-content:center}
+/* Hand: bigger prompt and card text. */
+#seb-battle-overlay .seb-hand-label strong{font-size:var(--nd-fs-14)}
+#seb-battle-overlay .seb-hand-label span{font-size:var(--nd-fs-11)}
+#seb-battle-overlay .seb-skill-name{font-size:var(--nd-fs-12)}
+#seb-battle-overlay .seb-skill-owner{font-size:var(--nd-fs-10)}
+#seb-battle-overlay .seb-end-turn{font-size:var(--nd-fs-14)}
+}
+@media (orientation:landscape) and (max-height:520px) and (max-width:720px){
+/* Narrow rotated phones (≤720px wide): with 4+ per side keep the numbers, drop the 血/盾/攻 labels (badge colours carry them). */
+#seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"]) .seb-stat small{display:none}
+#seb-battle-overlay .seb-roster:is([data-count="4"],[data-count="5"],[data-count="6"]) .seb-stat strong{font-size:var(--nd-fs-14)}
+}

@@ -1,0 +1,6 @@
+/* Local engraved PNG nine-slice system. Corners remain square at every aspect ratio.
+   No fill: art/text are independent of the transparent center. Plain borders survive
+   failed image loads. Never apply flattening/opacity to the 3D card container. */
+:root{--frame-hero:url('../../../assets/frames/v2/hero.webp');--frame-panel:url('../../../assets/frames/v2/panel.webp');--frame-thin:url('../../../assets/frames/v2/thin.webp');--frame-hero-slice:151.871199 151.837599 151.871199 151.837599;--frame-panel-slice:143.525606 143.467626 143.525606 143.467626;--frame-thin-slice:119.311446 119.300971 119.311446 119.300971}
+button:focus-visible, a:focus-visible{outline:2px solid var(--nd-gold-pale);outline-offset:3px}
+button:disabled{cursor:not-allowed}

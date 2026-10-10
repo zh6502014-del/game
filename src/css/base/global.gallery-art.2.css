@@ -1,0 +1,19 @@
+body{background:linear-gradient(180deg,#04101550,#041013b3),url('../../../assets/characters/nightfall-hall.webp') center/cover fixed!important}
+body::after{border-color:#c2a06755;inset:10px;box-shadow:inset 0 0 0 4px #020b0e55}
+@media(max-width:1000px){
+:root{--hero-w:220px;--hero-h:335px}
+}
+@media(max-width:700px){
+:root{--hero-w:140px;--hero-h:248px}
+}
+@media(max-width:370px){
+:root{--hero-w:124px;--hero-h:230px}
+}
+button:focus-visible, summary:focus-visible{outline:2px solid #ffe0a3!important;outline-offset:4px}
+/* Final shared art/layout layer. Scene decoration never captures input. */
+:root{--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px}
+/* Shared spacing and typography. Titles center; reading text aligns left. */
+summary{min-height:44px!important}
+@media(max-width:360px){
+:root{--hero-w:120px;--hero-h:238px}
+}

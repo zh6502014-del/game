@@ -1,0 +1,11 @@
+.story-battle-banner{display:flow-root}
+.story-battle-banner{background: var(--visual-enamel);border-color: var(--visual-edge);color: var(--visual-text)}
+/* The story battle keeps its landscape contract, status colours and shaped
+   cards. Only surrounding plates and dialog materials are reconciled. */
+.story-energy-overlay{--seb-gold: var(--visual-gold);--seb-bright: var(--visual-gold-light);--seb-text: var(--visual-text);--seb-muted: var(--visual-muted)}
+.story-energy-overlay .seb-action-rail{background: var(--visual-enamel);border-color: #9c845478}
+.story-energy-overlay .seb-modal, .story-energy-overlay .seb-result, .story-energy-overlay .seb-hover-preview{background: var(--visual-enamel);border-color: var(--visual-gold)}
+.story-energy-overlay .seb-primary{background: linear-gradient(120deg, #d2b57a, #b09159);color: #13241b}
+.story-energy-overlay .seb-header{border-color: var(--visual-edge)}
+.story-energy-overlay .seb-unit-name{background: linear-gradient(#2b4331, #12271e);color: var(--visual-gold-light)}
+.story-energy-overlay .seb-rotate-host{background: radial-gradient(ellipse at 50% 35%, #304c37, #081e16 80%)}

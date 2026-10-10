@@ -1,0 +1,5 @@
+.story-meters b{display:block;color:#e6d8ba;margin:var(--nd-sp-6) 0}
+.story-meters meter{width:100%;height:7px;accent-color:#c5a56a}
+.story-challenge>small{display:block;margin-top:14px;color:#aaa193;font-size:var(--nd-fs-10);line-height:1.8}
+.story-outcome{border-top:1px solid #756242;padding-top:15px}
+.story-outcome h3{color:#ddc38e;font-size:var(--nd-fs-16)}

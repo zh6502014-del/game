@@ -1,0 +1,242 @@
+.fx-number strong{font-size:var(--nd-fs-22);text-shadow:0 2px var(--nd-black)}
+.fx-number small{flex-basis:100%;font:9px "Noto Serif TC",serif;text-align:center;letter-spacing:2px}
+.fx-shield{color:#a6e6ef;border-color:#75bcca}
+.fx-miss{color:#d4c9f4;border-color:#b6a6da}
+.fx-domain{color:#b0e9ba}
+.fx-burn, .fx-critical{color:#ffb17f;border-color:#e59258}
+.fx-counter{color:#e9cd85}
+.fx-ward, .fx-domain:not(.fx-number){position:absolute;transform:translate(-50%,-50%);color:#b6d9dc;filter:drop-shadow(0 0 8px #8bb0a655)}
+.fx-domain:not(.fx-number){color:#b3d6af}
+@media(max-width:700px){
+.fx-number{min-width:78px;padding:var(--nd-sp-6) var(--nd-sp-7)}
+.fx-number strong{font-size:var(--nd-fs-17)}
+.fx-number small{font-size:var(--nd-fs-8)}
+}
+/* Job-specific weapons share anchors and timing, not silhouettes. */
+.fx-attack-motion, .fx-strike, .fx-muzzle{position:absolute;pointer-events:none;transform:translate(-50%,-50%);color:#f0dfb0;--fx-light:#fff4d5;--fx-metal:#cab174;--fx-dark:#695735}
+.fx-attack-motion[data-attack-job=assassin], .fx-strike[data-attack-job=assassin]{color:#b8a0e0;--fx-light:#eee4ff;--fx-metal:#ad94da;--fx-dark:#332b4e}
+.fx-attack-motion[data-attack-job=tank], .fx-strike[data-attack-job=tank]{color:#8ac3cb;--fx-light:#d6f5f3;--fx-metal:#8bafb9;--fx-dark:#244149}
+.fx-attack-motion[data-attack-job=gunner], .fx-strike[data-attack-job=gunner], .fx-muzzle{color:#e4a66d;--fx-light:#fff0c9;--fx-metal:#c58150;--fx-dark:#723d26}
+.fx-attack-motion[data-attack-style=spirit], .fx-strike[data-attack-style=spirit]{color:#f2e6bc;--fx-light:#fffbea;--fx-metal:#e3d28f;--fx-dark:#867541}
+.fx-attack-motion>svg, .fx-strike>svg, .fx-muzzle>svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fx-metal-fill, .fx-blade-fill{fill:var(--fx-light);stroke:var(--fx-metal);stroke-width:1}
+.fx-sword-sweep{width:var(--fx-sweep-size,150px);height:var(--fx-sweep-size,150px);filter:drop-shadow(0 0 5px #e8d5a366)}
+.fx-sweep-body{fill:var(--fx-metal);opacity:.66}
+.fx-sweep-edge{stroke:var(--fx-light);stroke-width:3.5}
+.fx-sweep-echo{stroke:var(--fx-metal);stroke-width:1.5;opacity:.45}
+.fx-spirit-sweep .fx-sweep-body{fill:var(--fx-light);opacity:.72}
+.fx-spirit-sweep .fx-sweep-edge{stroke-width:5}
+.fx-assassin-rush{width:clamp(105px,12vw,156px);height:clamp(84px,10vw,126px);filter:drop-shadow(0 0 4px #9c79c950)}
+.fx-shadow-body{fill:var(--fx-dark);stroke:var(--fx-metal);stroke-width:1.5;opacity:.9}
+.fx-shadow-echo{fill:var(--fx-metal);opacity:.2}
+.fx-assassin-rush .fx-blade-fill{stroke-width:1.5}
+.fx-shield-bash{width:clamp(74px,8vw,100px);height:clamp(86px,10vw,120px);filter:drop-shadow(0 4px 6px #03151899)}
+.fx-shield-body{fill:var(--fx-dark);stroke:var(--fx-metal);stroke-width:3}
+.fx-engraved-line{stroke:var(--fx-light);stroke-width:1.5;opacity:.7}
+.fx-projectile{width:30px;height:3px;border-radius:var(--nd-r-round);background:linear-gradient(90deg,transparent,#f8d99b);box-shadow:0 0 7px #c98650}
+.fx-muzzle{width:42px;height:42px;filter:drop-shadow(0 0 4px #dcad6555)}
+/* Damage traces are made only at contact. Fully absorbed blows strike the ward. */
+.fx-strike{width:clamp(72px,9vw,118px);height:clamp(84px,10vw,130px);background:none;box-shadow:none;filter:drop-shadow(0 0 4px #dfd3aa55)}
+.fx-strike-critical{width:clamp(90px,10vw,142px);height:clamp(100px,12vw,152px)}
+.fx-cut-fill{fill:var(--fx-metal);opacity:.8}
+.fx-cut-edge{stroke:var(--fx-light);stroke-width:2}
+.fx-impact-ambush{width:clamp(60px,7vw,94px);height:clamp(76px,9vw,112px)}
+.fx-impact-spirit{width:clamp(104px,13vw,170px);height:clamp(120px,15vw,185px)}
+.fx-impact-shield, .fx-impact-shield-bash{width:clamp(82px,10vw,132px);height:clamp(82px,10vw,132px);--fx-light:#d6f5f3;--fx-metal:#8bafb9;--fx-dark:#244149}
+.fx-pressure-ring{stroke:var(--fx-metal);stroke-width:2;opacity:.7}
+.fx-impact-shield-shape{stroke:var(--fx-light);stroke-width:2;fill:var(--fx-dark);fill-opacity:.35}
+.fx-pressure-rays{stroke:var(--fx-light);stroke-width:2}
+.fx-impact-bullet{width:clamp(58px,7vw,90px);height:clamp(58px,7vw,90px)}
+/* Small material fragments follow ballistic paths; the card itself stays rigid. */
+.fx-spark{position:absolute;width:3px;height:3px;border-radius:var(--nd-r-round);background:#ffe4a5;box-shadow:0 0 4px #dcad65}
+.fx-spark-tank{background:#c9e8e9;box-shadow:0 0 4px #81b6bb}
+.fx-spark-gunner{background:#ffc38a;box-shadow:0 0 4px #ce7a42}
+.fx-ember{position:absolute;width:75px;height:95px;transform:translate(-50%,-50%);background:radial-gradient(ellipse at 50% 80%,#db6d2988,transparent 65%)}
+@media(prefers-reduced-motion:reduce){
+.fx-attack-motion, .fx-muzzle, .fx-strike, .fx-spark, .fx-ember{display:none}
+}
+.side-inner{padding:0}
+/* Battle composition: shorter approach lanes, strong hero resources, anchored hand. */
+.app:has(.duel-screen){max-width:1280px!important;min-height:100svh;padding:22px 36px var(--nd-sp-12)!important}
+.duel-screen>.duel-side{position:relative;width:91%!important;min-height:128px!important;padding:15px var(--nd-sp-18)!important;border:1px solid #9e85525c!important;border-radius:6px 6px 14px 6px!important;background:linear-gradient(115deg,#1e3937ed,#08171cf2)!important;box-shadow:inset 0 3px #c2a26733,inset 0 0 0 4px #06121680,0 10px 22px var(--nd-ink-47)!important}
+.duel-screen>.duel-side.enemy{border-radius:6px 6px 6px 14px!important;background:linear-gradient(245deg,#382e35ed,#101922f2)!important;border-color:#99767977!important}
+.retro-board{grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr)!important;gap:var(--nd-sp-12)!important}
+.retro-arena::after{width:180px;height:180px;border-color:#b18e4628;box-shadow:0 0 0 30px #a88d4205,0 0 0 31px #a88d4213}
+.battle-dock{display:grid;grid-template-columns:auto 1fr auto auto;border-top:1px solid #b2995d33;background:linear-gradient(180deg,#06121799,#020a0de6);min-height:62px;border-radius:0 0 6px 6px}
+.battle-state{color:#d0c5a3;letter-spacing:2px}
+.battle-dock button{background:linear-gradient(#243530,#091a1c);border:1px solid #a98d4e66;box-shadow:inset 0 1px #d1b36a1a,0 3px 7px var(--nd-ink-33);border-radius:var(--nd-r-3)}
+.battle-dock button:hover{color:#ffe5af;border-color:#d5b376}
+@media(max-width:1000px){
+.duel-screen>.duel-side{width:96%!important;padding:var(--nd-sp-12)!important}
+}
+@media(max-width:700px){
+.duel-screen>.duel-side{width:98%!important;min-height:128px!important}
+.retro-board{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr)!important;gap:var(--nd-sp-3)!important}
+.retro-arena::after{width:100px;height:100px}
+.battle-dock{grid-template-columns:repeat(3,1fr)}
+.battle-state{grid-column:1/-1;grid-row:1;padding:var(--nd-sp-4) 0 var(--nd-sp-6)}
+.battle-dock button{padding:var(--nd-sp-8) var(--nd-sp-4)}
+}
+.retro-card-slot.empty.slot.you .slot-label{display:block!important;top:auto;bottom:-24px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:var(--nd-fs-10);color:#d6c495;letter-spacing:1px}
+@media(max-width:700px){
+.battle-state{letter-spacing:0}
+}
+.duel-screen>.duel-side{height:fit-content!important;max-height:none!important;align-self:start!important}
+.duel-screen>.retro-arena{z-index:2}
+.battle-state, .battle-dock button span{font-size:var(--nd-fs-12)!important}
+.battle-dock{gap:var(--nd-sp-12);padding:var(--nd-sp-12) var(--nd-sp-16)}
+.battle-state{text-align:center}
+@media(max-width:700px){
+.app:has(.duel-screen){padding:var(--nd-sp-16)!important}
+.duel-screen>.duel-side{padding:var(--nd-sp-12) var(--nd-sp-8)!important}
+.retro-card-slot.empty.slot.you .slot-label{font-size:var(--nd-fs-12)}
+.duel-screen .duel-hand .card b, .duel-screen .retro-card-slot .front b{font-size:var(--nd-fs-12)!important;letter-spacing:0!important}
+.battle-dock{gap:var(--nd-sp-8);padding:var(--nd-sp-12) var(--nd-sp-8)}
+.battle-state{line-height:1.5}
+}
+.duel-side-inner{display:grid;grid-template-columns:96px minmax(0,1fr);grid-template-areas:"portrait identity" "portrait resources" "statuses statuses";gap:var(--nd-sp-8) var(--nd-sp-20);min-width:0;min-height:0;align-items:center;text-align:left}
+.enemy .duel-side-inner{grid-template-columns:minmax(0,1fr) 96px;grid-template-areas:"identity portrait" "resources portrait" "statuses statuses";text-align:left}
+.duel-screen{grid-template-rows:auto minmax(250px,1fr) 160px!important}
+@media(max-width:1000px){
+.duel-side-inner{grid-template-columns:80px minmax(0,1fr);column-gap:var(--nd-sp-16)}
+.enemy .duel-side-inner{grid-template-columns:minmax(0,1fr) 80px}
+}
+@media(max-width:700px){
+.duel-side-inner, .enemy .duel-side-inner{display:flex;flex-wrap:wrap;gap:var(--nd-sp-12) var(--nd-sp-8);text-align:left}
+.duel-screen{grid-template-rows:auto minmax(220px,27svh) 134px!important}
+}
+/* Collector table: decoration remains behind game content and never clips the 3D cards. */
+.app:has(.duel-screen){--table-gold:#bea16c;--table-metal:#685338;--table-ink:#0b2020}
+/* Flat physical desk: bevel, leather grain and faint original engraved geometry. */
+body[data-environment] .app .duel-screen::before{inset:100px 0 16px!important;border-radius:var(--nd-r-14)!important;transform:none!important;border:1px solid #bda3728c!important;background-image:url('../../../assets/icons/table-inlay.svg'),repeating-linear-gradient(110deg,#e5ebce04 0 1px,transparent 1px 4px),radial-gradient(ellipse at 50% 30%,#47766230,transparent 70%)!important;background-size:100% 100%,6px 6px,100% 100%!important;background-blend-mode:normal!important}
+body[data-environment=day] .app .duel-screen::before{background-color:#142e29f2!important}
+body[data-environment=night] .app .duel-screen::before{background-color:#111e33f5!important;border-color:#a89bbe88!important}
+/* Keep old board decoration from competing with the single table inlay. */
+.app .retro-arena::after{content:none!important}
+.app .retro-field-mark, .app .retro-field-line{opacity:.18!important}
+.app .retro-card-slot .slot-label{color:#d5c39e!important;font-size:var(--nd-fs-12)!important;line-height:1.5!important;letter-spacing:1px!important}
+.app .retro-center{position:relative;isolation:isolate;width:112px!important;min-width:112px!important;min-height:112px!important;border:1px solid #b5a07780!important;border-radius:var(--nd-r-round)!important;background:radial-gradient(circle at 35% 22%,#3f5036,#132622 62%,#071718)!important;box-shadow:0 0 0 4px #0b1b1c,0 0 0 5px #bba57036,inset 0 0 0 4px #a68e4e15,0 10px 22px var(--nd-ink-40)!important;gap:var(--nd-sp-8)!important;padding:var(--nd-sp-16) var(--nd-sp-8)!important}
+.app .retro-center::before{content:"";position:absolute;inset:-14px;border:1px dashed #baa16836;border-radius:var(--nd-r-round);pointer-events:none;z-index:-1}
+.app .retro-center .vsx{font-size:36px!important;line-height:1!important;color:#ecd5a2!important;letter-spacing:2px!important}
+.app .retro-center .round-mini{font-size:var(--nd-fs-12)!important;color:#b5bda9!important;line-height:1.4!important}
+body[data-environment=night] .app .retro-center{background:radial-gradient(circle at 35% 22%,#34374a,#192437 62%,#111a28)!important}
+.app .battle-dock{background:linear-gradient(#172c29ed,#071719f5)!important;box-shadow:inset 0 1px #d9bd7926,0 8px 16px var(--nd-ink-33);padding:var(--nd-sp-12) var(--nd-sp-16)}
+.app .battle-dock button{min-height:44px;border:1px solid #b29a6260;background:linear-gradient(#304239,#152824);border-radius:var(--nd-r-3);box-shadow:inset 0 1px #e0c89229,0 2px 4px var(--nd-ink-33);color:#ebd8ae;display:flex;justify-content:center;align-items:center;gap:var(--nd-sp-8)}
+.app .battle-dock button:hover{background:linear-gradient(#435640,#20382d);border-color:#d9bd7b}
+.app .battle-dock button:focus-visible{outline:2px solid #efd79e;outline-offset:3px}
+.app .battle-dock button span{margin:0;font-size:var(--nd-fs-14)!important}
+.app .battle-state{color:#b9c1ae;letter-spacing:.5px;font-size:var(--nd-fs-12)!important;line-height:1.5}
+@media(max-width:1000px){
+.app .retro-center{width:96px!important;min-width:96px!important;min-height:104px!important}
+}
+@media(max-width:700px){
+body[data-environment] .app .duel-screen::before{inset:100px 0 16px!important;border-radius:var(--nd-r-8)!important;background-size:auto 100%,6px 6px,100% 100%!important}
+.app .retro-center{width:64px!important;min-width:64px!important;min-height:100px!important;padding:var(--nd-sp-12) var(--nd-sp-4)!important;gap:var(--nd-sp-6)!important;border-radius:var(--nd-r-6)!important}
+.app .retro-center::before{inset:4px;border-style:solid;border-color:#cfb6711a;border-radius:var(--nd-r-2)}
+.app .retro-center .vsx{font-size:26px!important}
+.app .retro-center .round-mini{font-size:var(--nd-fs-12)!important}
+.app .retro-card-slot .slot-label{letter-spacing:0!important}
+.app .battle-dock{padding:var(--nd-sp-12) var(--nd-sp-8)!important;gap:var(--nd-sp-8)}
+.app .battle-dock button{gap:var(--nd-sp-4);padding:var(--nd-sp-8) var(--nd-sp-4)}
+.app .battle-dock button span{font-size:var(--nd-fs-12)!important}
+}
+/* A deliberate two-line round counter never strands the round limit on its own. */
+.app .retro-center .round-mini{display:flex!important;flex-direction:column;align-items:center;gap:var(--nd-sp-2);max-width:100%}
+.app .round-caption{font-size:var(--nd-fs-12);letter-spacing:1px;line-height:1.2}
+.app .round-count{font:600 16px/1.3 "Noto Serif TC",serif;font-variant-numeric:tabular-nums;white-space:nowrap;color:#f1ddb3}
+.app .round-limit{font:inherit;color:#a5b1a2}
+@media(max-width:700px){
+.app .round-count{font-size:var(--nd-fs-14)}
+}
+.app .battle-dock{border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-panel)!important;border-image-slice:var(--frame-panel-slice)!important;border-image-repeat:repeat!important;border-image-outset:0!important}
+.duel-side-inner{position:relative}
+body[data-environment] .app .duel-screen::before{border-image-source:var(--frame-hero)!important;border-image-slice:var(--frame-hero-slice)!important;border-image-width:32px!important;border-image-repeat:repeat!important;box-shadow:inset 0 0 100px var(--nd-ink-60),0 18px 40px var(--nd-ink-53)!important}
+@media(max-width:700px){
+body[data-environment] .app .duel-screen::before{border-image-width:22px!important}
+}
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost)>b{position:absolute!important;left:4px;right:4px;bottom:6px!important;z-index:5;margin:0!important;padding:0!important;text-align:center;font-family:var(--nd-font);font-size:var(--nd-fs-16)!important;line-height:1.2!important;font-weight:700;letter-spacing:0!important;color:#ffecc0!important;text-shadow:0 2px 3px var(--nd-black)}
+@media(max-width:700px){
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost)>b{font-size:var(--nd-fs-12)!important}
+:is(.duel-screen .duel-hand .card, .card.nd-drag-ghost) .class-crest svg{width:12px;height:12px}
+}
+@media (orientation:landscape) and (max-height:520px){
+/* 2026-09-28 手機橫放（高度 ≤ 520px）決鬥版面：
+   原版面約 800px 高，橫放時 HUD 與手牌無法同屏。本檔只在短橫螢幕生效，
+   壓縮頂列、HUD、戰場與手牌尺寸，讓血量、出牌區與手牌同時可見；不改規則或互動。
+   選擇器以 #app 提高權重，覆蓋既有多層 !important 樣式。 */
+#app:has(.duel-screen){padding:var(--nd-sp-6) var(--nd-sp-10)!important;min-height:0!important;height:100svh;display:flex!important;flex-direction:column;overflow:hidden}
+#app .duel-screen{flex:1 1 auto!important;min-height:0!important;max-height:none!important;height:auto!important;grid-template-rows:auto minmax(0,1fr) 96px!important;row-gap:var(--nd-sp-4)!important;padding:var(--nd-sp-6) var(--nd-sp-10) 0!important}
+#app .duel-screen>.duel-side{padding:0!important;min-height:0!important;height:auto!important}
+#app .duel-side .duel-side-inner{display:grid!important;padding:var(--nd-sp-6) var(--nd-sp-10)!important;gap:0 var(--nd-sp-10)!important;min-height:0!important;grid-template-columns:44px minmax(0,1fr)!important;grid-template-areas:"portrait identity" "portrait resources"!important}
+#app .duel-side.enemy .duel-side-inner{grid-template-columns:minmax(0,1fr) 44px!important;grid-template-areas:"identity portrait" "resources portrait"!important}
+#app .duel-side .duel-hp strong{font-size:var(--nd-fs-17)!important;height:22px!important;min-height:0!important;line-height:20px!important;padding:0 var(--nd-sp-8)!important}
+#app .retro-arena, #app .retro-board{height:100%!important;min-height:0!important;max-height:none!important}
+#app .retro-center{transform:scale(.7);transform-origin:center}
+#app .retro-card-slot .slot-label{display:none!important}
+#app .duel-screen .duel-hand .card b{font-size:var(--nd-fs-11)!important}
+#app .battle-dock{min-height:0!important;padding:var(--nd-sp-3) var(--nd-sp-10)!important;margin-top:4px;flex:none}
+#app .battle-dock button{padding:var(--nd-sp-4) var(--nd-sp-12)!important;min-height:32px!important}
+#app .battle-dock{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto auto!important;grid-template-rows:auto!important;align-items:center}
+#app .battle-dock>*{grid-column:auto!important;grid-row:auto!important;order:0!important}
+}
+.battle-dock > button{border: 1px solid var(--visual-edge);background: linear-gradient(var(--nd-green), var(--nd-green-deep));color: var(--visual-text);box-shadow: inset 0 1px var(--nd-gold-wash), 0 3px 8px var(--nd-ink-20);border-radius: var(--nd-r-4)}
+.app .battle-dock{background: var(--visual-enamel);border-image-width: 14px !important}
+.battle-dock .battle-state{color: var(--visual-muted)}
+@media (max-width:899px), (max-height:520px){
+/* Free duel: keep the controls in the viewport; retain a real centre board
+     for drag/drop, visible resources, and the existing card proportions. */
+body:has(.duel-screen.nd-stage) #app{width:100%!important;max-width:none!important;height:auto!important;min-height:100dvh!important;margin:0!important;padding:max(6px,env(safe-area-inset-top)) max(8px,env(safe-area-inset-right))
+      max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left))!important;display:flex!important;flex-direction:column;gap:var(--nd-sp-6);overflow:visible}
+#app .duel-screen.nd-stage{/* Intrinsic rows are never compressed underneath their contents. On a
+       short viewport or with extra statuses, the page can scroll naturally. */
+    flex:1 0 auto!important;height:auto!important;min-height:min-content!important;max-height:none!important;padding:0!important;margin:0!important;gap:var(--nd-sp-6)!important;align-content:stretch!important}
+#app .duel-screen.nd-stage>.duel-side{width:100%!important;min-height:min-content!important;padding:var(--nd-sp-8)!important;align-self:stretch!important;height:auto!important}
+#app .duel-screen.nd-stage .duel-side-inner{display:grid!important;grid-template-columns:36px minmax(0,1fr)!important;grid-template-areas:"portrait identity" "resources resources" "statuses statuses"!important;gap:var(--nd-sp-4) var(--nd-sp-8)!important;padding:0!important}
+#app .duel-screen.nd-stage .duel-hp strong{min-width:0!important;width:auto!important;height:auto!important;padding:0 var(--nd-sp-6)!important;font-size:var(--nd-fs-22)!important;line-height:1.25!important}
+#app .duel-screen.nd-stage .duel-shield-row strong{min-width:0;font-size:var(--nd-fs-12)!important}
+#app .duel-screen.nd-stage .retro-arena, #app .duel-screen.nd-stage .retro-board{height:100%!important;min-height:0!important;max-height:none!important;overflow:visible!important}
+#app .duel-screen.nd-stage .retro-board{padding:var(--nd-sp-8) var(--nd-sp-4) var(--nd-sp-20)!important;grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr)!important;gap:var(--nd-sp-4)!important}
+#app .duel-screen.nd-stage .retro-center{width:64px!important;min-width:64px!important;height:78px!important;min-height:0!important;padding:var(--nd-sp-4)!important;transform:none!important;gap:var(--nd-sp-4)!important}
+#app .duel-screen.nd-stage .retro-center .round-mini{font-size:var(--nd-fs-12)!important;line-height:1.3!important;letter-spacing:0!important}
+#app .duel-screen.nd-stage .retro-center .vsx{font-size:var(--nd-fs-24)!important}
+#app .duel-screen.nd-stage .retro-card-slot.empty .slot-label{font-size:var(--nd-fs-12);letter-spacing:0;bottom:-20px}
+#app .duel-screen.nd-stage .duel-hand .card b{font-size:var(--nd-fs-14)!important;letter-spacing:0!important}
+#app .duel-screen.nd-stage .duel-hand:has(> :nth-child(4)){justify-content:flex-start!important;overflow-x:auto!important;overflow-y:hidden!important;padding:var(--nd-sp-4)!important;scroll-padding:4px;touch-action:pan-x}
+body:has(.duel-screen.nd-stage) #app>.battle-dock{flex:0 0 auto;min-height:0!important;margin:0!important;padding:var(--nd-sp-6)!important;gap:var(--nd-sp-4)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock button{min-height:44px!important;padding:var(--nd-sp-8)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock .battle-state{font-size:var(--nd-fs-12)!important;letter-spacing:0;line-height:1.4}
+}
+@media (max-width:899px) and (orientation:portrait){
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;grid-template-rows:auto 44px minmax(116px,1fr) 110px!important}
+body[data-environment] #app .duel-screen.nd-stage::before{inset:138px 0 0!important;transform:none}
+body:has(.duel-screen.nd-stage) #app>.battle-dock{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto auto!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{grid-column:1/-1!important;grid-row:1!important;text-align:center;padding:0 var(--nd-sp-2) var(--nd-sp-2)}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>button{grid-row:2!important;grid-column:auto!important}
+}
+@media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
+#app .duel-screen.nd-stage{grid-template-rows:auto minmax(94px,1fr) 94px!important;gap:var(--nd-sp-4)!important}
+#app .duel-screen.nd-stage>.duel-side{padding:var(--nd-sp-6)!important}
+#app .duel-screen.nd-stage .duel-side-inner{grid-template-columns:36px minmax(0,1fr)!important;grid-template-areas:"portrait identity" "portrait resources" "statuses statuses"!important;gap:0 var(--nd-sp-8)!important}
+#app .duel-screen.nd-stage .retro-board{padding:0 var(--nd-sp-4)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock{grid-template-columns:auto minmax(0,1fr) auto auto!important;padding:var(--nd-sp-3) var(--nd-sp-6)!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{text-align:center}
+}
+@media (max-height:340px) and (orientation:landscape){
+/* A rotated small phone cannot stack a HUD, board and full-size hand in
+   320px. Share the lower row between the board and the two hand trays.
+   If enlarged text or safe areas need more room, let the page grow instead
+   of compressing the HUD's grid row underneath the cards. */
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;grid-template-rows:auto 36px 94px!important}
+#app .duel-screen.nd-stage .retro-center{min-height:0!important;max-height:none!important}
+}
+@media (max-width:620px){
+.setup-stage .duel-side{padding:0 var(--nd-sp-4)!important}
+}
+@media (max-width:899px) and (orientation:portrait){
+/* DUEL-LEAVE-068: one extra control only in the free-duel dock. */
+body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave){grid-template-columns:repeat(4,minmax(0,1fr))!important}
+body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave)>button{min-width:0!important;gap:var(--nd-sp-4)!important;padding:var(--nd-sp-8) var(--nd-sp-4)!important}
+}
+@media (orientation:landscape) and (max-height:520px), (orientation:landscape) and (max-width:899px){
+body:has(.duel-screen.nd-stage) #app>.battle-dock:has(>.duel-leave){grid-template-columns:auto minmax(0,1fr) auto auto auto!important}
+}

@@ -1,0 +1,11 @@
+.card:has([data-portrait])>b, .front:has([data-portrait])>b{bottom:7px!important;font-size:var(--nd-fs-14)!important}
+.icon[data-card-illustration] .character-image{width:100%;height:100%;object-fit:cover}
+.card:has([data-card-illustration])>b, .front:has([data-card-illustration])>b{position:absolute!important;left:4px;right:4px;bottom:6px!important;font-size:var(--nd-fs-14)!important;line-height:1.2!important;letter-spacing:0!important;text-align:center}
+.card[data-category=special], .card3d[data-category=special] .front{outline:1px solid #d4cb9180;outline-offset:2px}
+button:not(.card):not(.carousel-card):not(.puzzle-slot){min-height:44px!important}
+button .nd-icon{vertical-align:middle}
+.duel-hand .card::before, .card.nd-drag-ghost::before, .art-states .card::before, .retro-card-slot .front::before, .enemy-card-back.has-back-art::after, .face.back.has-back-art::after{content:""!important;position:absolute!important;inset:0!important;box-sizing:border-box;background:none!important;border:1px solid var(--nd-gold-dim)!important;border-radius:0!important;border-image-source:var(--frame-hero)!important;border-image-slice:var(--frame-hero-slice)!important;border-image-repeat:repeat!important;border-image-outset:0!important;pointer-events:none!important;z-index:6!important;opacity:1!important;transform:none!important}
+.duel-hand .card::before, .card.nd-drag-ghost::before, .art-states .card::before, .retro-card-slot .front::before, .enemy-card-back.has-back-art::after, .face.back.has-back-art::after{border-image-width:14px!important}
+@media(max-width:700px){
+.duel-hand .card::before, .card.nd-drag-ghost::before, .art-states .card::before, .retro-card-slot .front::before, .enemy-card-back.has-back-art::after, .face.back.has-back-art::after{border-image-width:10px!important}
+}

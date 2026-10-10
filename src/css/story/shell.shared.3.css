@@ -1,0 +1,19 @@
+@media(max-width:850px){
+.story-roles img{width:23px}
+.story-header>span{display:none}
+}
+@media(max-width:620px){
+.story-roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--nd-sp-8)}
+.story-intro p:not(.story-eyebrow){font-size:var(--nd-fs-12)}
+.story-portrait{height:240px}
+.story-portrait>div{padding:25px var(--nd-sp-20);background:linear-gradient(90deg,rgba(7,10,14,.94),rgba(7,10,14,.2));top:0;display:flex;flex-direction:column;justify-content:end}
+.story-portrait h2{font-size:var(--nd-fs-28)}
+.story-footer{flex-direction:column}
+.story-header{font-size:var(--nd-fs-11)}
+.story-header button{padding:9px}
+}
+/* Story illustrations, accessible gallery and cosmetic controls. */
+.story-header{flex-wrap:wrap}
+.story-header>span{margin-left:auto}
+@media(max-width:620px){
+}

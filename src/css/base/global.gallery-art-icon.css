@@ -1,0 +1,7 @@
+body{background:linear-gradient(180deg,#04101570,#041013a8),url('../../../assets/characters/nightfall-hall.webp') center/cover fixed!important}
+body:before{background:radial-gradient(ellipse at center,transparent 35%,#010a0dd9)!important;opacity:1!important}
+summary{display:flex;align-items:center;justify-content:center;gap:var(--nd-sp-8);list-style:none}
+summary::-webkit-details-marker{display:none}
+@media(prefers-reduced-motion:reduce){
+*, *::before, *::after{scroll-behavior:auto!important}
+}

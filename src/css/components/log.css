@@ -1,0 +1,18 @@
+.float{font-size:var(--nd-fs-30);font-weight:950;animation:float .85s ease both;text-align:right;text-shadow:0 5px 18px rgba(0,0,0,.5)}
+.float small{display:block;font-size:var(--nd-fs-8);letter-spacing:1px;color:#888e99}
+.float.neg{color:var(--danger)}
+.float.pos{color:var(--good)}
+.float.miss{color:#d9dde5;letter-spacing:1.5px;text-shadow:0 5px 18px rgba(255,255,255,.16)}
+.stage-title{position:absolute;top:14px;left:0;right:0;text-align:center;font-size:var(--nd-fs-9);letter-spacing:4px;color:#686f7b;font-weight:800}
+.stage-title:before, .stage-title:after{content:"";display:inline-block;width:28px;height:1px;background:#343943;vertical-align:middle;margin:0 9px}
+.log{max-height:170px;overflow:auto}
+.log div{font-size:var(--nd-fs-11);color:#8f959f;background:#15181e;border:1px solid #222831;border-radius:9px;padding:var(--nd-sp-7) var(--nd-sp-8);margin:var(--nd-sp-5) 0}
+.log div:first-child{color:#d4d7dc;border-color:var(--nd-line-2);background:#1a1e25}
+.battle-log-export{margin-top:18px}
+.battle-log-text{width:100%;min-height:180px;max-height:320px;resize:vertical;box-sizing:border-box;border:1px solid #353b45;border-radius:var(--nd-r-12);padding:var(--nd-sp-10);font:11px/1.5 "Noto Serif TC",serif;white-space:pre;overflow:auto}
+.arena-hud .float{font-size:var(--nd-fs-22)}
+.log-panel.collapsed .log{display:none}
+/* V12.5 — shield gains use the same floating combat-number language as damage */
+/* V12.9.6 — Combat number feedback */
+.arena-hud .float.pos{font-weight:950}
+.log-panel .log{color:#a9bcb3}
