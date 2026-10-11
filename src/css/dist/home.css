@@ -3988,6 +3988,37 @@ body:has(.duel-screen.nd-stage)>.audio-toggle{display:none!important}
 @media (max-width:620px){
 .setup-footer .audio-settings-btn, .setup-footer .rules-btn{font-size:var(--nd-fs-14)!important;min-height:44px!important}
 }
+/* AUDIO-MODAL-LAYOUT — 標題固定在上方，只有 .audio-body 捲動；不再用 sticky + 負 margin 去抵 padding（padding 在桌機 24px／手機 16px 會對不上而破版） */
+.audio-modal.audio-modal{display:flex;flex-direction:column;overflow:hidden!important}
+.audio-modal .audio-head{position:static!important;flex:none;margin:0!important;padding:0 0 var(--nd-sp-12)!important;background:transparent!important;border-bottom:1px solid var(--nd-gold-dim);transform:none;will-change:auto}
+.audio-modal .audio-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-top:var(--nd-sp-12)}
+/* ABOUT 區塊：標籤與內容分兩欄對齊，版權小字靠左、與標題同一條邊線 */
+.audio-modal .audio-about{padding-bottom:var(--nd-sp-4)}
+.audio-modal .about-name{margin:0 0 var(--nd-sp-10);font-size:var(--nd-fs-14);color:#e6d5ac;letter-spacing:1px}
+.audio-modal .about-list{margin:0;padding:0;display:grid;gap:var(--nd-sp-6)}
+.audio-modal .about-row{display:grid;grid-template-columns:4.5em 1fr;align-items:baseline;column-gap:var(--nd-sp-12);margin:0}
+.audio-modal .about-row dt{margin:0;font-size:var(--nd-fs-12);color:#8d9a90;letter-spacing:1px}
+.audio-modal .about-row dd{margin:0;display:flex;flex-wrap:wrap;gap:4px var(--nd-sp-16);font-size:var(--nd-fs-14);color:#d5dece;min-width:0;overflow-wrap:anywhere}
+.audio-modal .about-row a{color:#c3ab72;text-decoration:none;border-bottom:1px solid rgba(195,171,114,.4)}
+.audio-modal .about-row a:hover{color:#e0c98c;border-bottom-color:#e0c98c}
+.audio-modal .about-copy{margin-top:var(--nd-sp-12);padding-top:var(--nd-sp-10);border-top:1px solid var(--nd-gold-dim);font-size:var(--nd-fs-11);color:#8d8f80;letter-spacing:.5px}
+/* RULES / JOURNAL / DETAIL — 同音效設定：標題（或底部按鈕）固定，只有內容區捲動，不用 sticky + 負 margin */
+.rules-modal.rules-modal{display:flex;flex-direction:column;overflow:hidden!important}
+.rules-modal .rules-head{position:static!important;flex:none;margin:0!important;padding:0 0 var(--nd-sp-12)!important;background:transparent!important;border-bottom:1px solid var(--nd-gold-dim);transform:none;will-change:auto}
+.rules-modal .rules-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-top:var(--nd-sp-12)}
+.detail-card.detail-card{display:flex;flex-direction:column;overflow:hidden!important}
+.detail-card .detail-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.detail-card .detail-actions{position:static!important;flex:none;margin-top:var(--nd-sp-12);padding:var(--nd-sp-12) 0 0;background:transparent;border-top:1px solid var(--nd-gold-dim)}
+/* ABOUT 獨立彈窗：按鈕放在「音效設定」左邊 */
+.footer-audio{display:flex;align-items:center;justify-content:flex-end;gap:var(--nd-sp-4);grid-column:1;grid-row:1;justify-self:end;min-width:0}
+.home-tools{display:flex;align-items:center;gap:var(--nd-sp-8)}
+.about-modal.about-modal{width:min(480px,100%)}
+@media(max-width:700px){
+.footer-audio{grid-row:2;grid-column:1;justify-self:stretch;justify-content:center}
+}
+@media(max-width:620px){
+.footer-audio{grid-column:1!important;grid-row:auto!important;justify-self:stretch}
+}
 
 /* ==== components/card.4.css ==== */
 @media (max-width:899px), (max-height:520px){

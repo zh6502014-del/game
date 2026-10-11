@@ -1,6 +1,6 @@
 """Master the DUEL-SFX-062 wavs: trim tail below -60 dB, set each cue's max momentary loudness (EBU R128, measured by ffmpeg)
 to its tier target at the default in-game level, keep true peak <= -1 dBTP, encode mono MP3 (libmp3lame q2).
-Run: python3 scripts/master_duel_sfx.py <rawdir> <outdir>"""
+Run: python3 scripts/master-duel-sfx.py <rawdir> <outdir>"""
 import sys, os, re, subprocess, json, numpy as np
 from scipy.io import wavfile
 DEFAULT_VOL = .8          # AUDIO_DEFAULTS for every duel cue in game.js
@@ -31,7 +31,7 @@ def main(raw, out):
             if abs(m2 - file_target) < .3: break
             y = y * 10 ** ((file_target - m2) / 20)
         wavfile.write(tmp, sr, (np.clip(y, -1, 1) * 32767).astype(np.int16))
-        dst = os.path.join(out, name + '.mp3')
+        dst = os.path.join(out, re.sub(r'[A-Z]', lambda m: '-' + m.group(0).lower(), name) + '.mp3')  # camelCase recipe key -> kebab-case file
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', tmp, '-ac', '1', '-ar', '48000', '-c:a', 'libmp3lame', '-q:a', '2', dst], check=True)
         mm, tp = measure(dst)
         report[name] = dict(seconds=round(len(y) / sr, 2), file_Mmax=round(mm, 1), heard_Mmax=round(mm + 20 * np.log10(DEFAULT_VOL), 1),

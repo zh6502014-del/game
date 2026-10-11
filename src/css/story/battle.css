@@ -854,3 +854,58 @@
 #seb-battle-overlay .seb-roster:is([data-count="2"],[data-count="4"]) .seb-unit .seb-stat-badges{gap:2px;padding-top:24px}
 }
 @keyframes seb-menu-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* MOBILE-UNIT-WIDTH-044 (2026-10-11): phones (upright and rotated) — every unit card is exactly 44px wide with auto
+   height. Portrait and stats stack vertically in normal flow so the content, not the grid row, sets the height. The
+   doubled id lifts these above the per-count plate rules earlier in this file. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;align-content:center;height:100%;gap:var(--nd-sp-6)}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap{display:block;width:54px;min-width:54px;max-width:54px;height:auto;min-height:0;max-height:none;align-self:center;grid-column:auto;grid-row:auto}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit{display:flex;flex-direction:column;width:100%;height:auto;min-height:44px;border-radius:10px 10px 6px 6px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:3/4;flex:none;border-radius:8px 8px 0 0}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-unit-base{position:relative;inset:auto;min-height:0;padding:2px;gap:2px;align-content:start;border-left:0;border-top:1px solid var(--nd-gold-line);background:linear-gradient(#23392ee8,#101d17f8)}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat-badges{grid-template-columns:1fr;gap:2px;padding-top:0}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat{height:20px;padding:0 1px;justify-content:center}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat small{display:none}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat strong{font-size:var(--nd-fs-12)}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem{width:18px;height:18px;top:2px;right:2px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-dup-tag{min-width:16px;height:16px;left:2px;bottom:auto;top:2px;font-size:var(--nd-fs-10)}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-allowances{right:2px;top:auto;bottom:auto;position:absolute;margin-top:0}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-allowance{width:12px;height:12px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip{left:2px;top:auto;max-width:calc(100% - 4px)}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip .seb-status{font-size:var(--nd-fs-9);padding:0 3px}
+}
+/* MOBILE-UNIT-WIDTH-044b: rotated phones have ~110px per side — drop name/role (the portrait and the action menu name
+   the unit), make the portrait square and the stat cells shorter so a 44px card stays under that. */
+@media (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-unit-identity{display:none}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait{aspect-ratio:4/3}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat{height:14px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap .seb-status-strip.seb-status-normal{display:none}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat-badges{gap:1px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat strong{font-size:var(--nd-fs-11)}
+}
+/* MOBILE-SKILL-NO-OWNER (2026-10-11): phones (upright and rotated) — skill cards and action-menu items show no owner name. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-skill-owner{display:none}
+}
+/* MOBILE-UNIT-WIDTH-044c: stats sit side by side (血 / 盾 / 攻) in the 44px card. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat-badges{grid-template-columns:repeat(3,minmax(0,1fr));gap:1px}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat{height:18px;min-width:0;padding:0;border-radius:4px;overflow:hidden}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-stat strong{font-size:var(--nd-fs-10);letter-spacing:-.04em}
+}
+/* MOBILE-NO-DUP-TAG (2026-10-11): phones — no A/B/C tag on same-name enemies. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-dup-tag{display:none}
+}
+/* MOBILE-NO-JOB-EMBLEM (2026-10-11): phones — no job emblem on unit cards. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-job-emblem{display:none}
+}
+/* MOBILE-ALLOWANCE-BOTTOM (2026-10-11): phones — the attack / skill ready icons sit centred at the bottom of the portrait, just above the stats. */
+@media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-allowances{position:absolute;left:50%;right:auto;top:auto;bottom:27px;width:auto;justify-content:center;transform:translateX(-50%);gap:3px}
+}
+@media (orientation:landscape) and (max-height:520px){
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-allowances{bottom:23px}
+}

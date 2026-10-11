@@ -82,7 +82,7 @@
 
 ## DUEL-STAGE（2026-10-06，Claude）卡牌對戰版面改版
 - 範圍：只限卡牌對戰（`.duel-screen.nd-stage`，非 storyBattle），且只在橫向、寬 ≥900px、高 ≥521px 時生效；手機直向與短橫螢幕維持舊版面。
-- 改動：新增 `src/css/duel-stage.css`（只在 Nightfall-Duel-V12.12.39-Test.html 載入）；`src/js/game.js` 新增 `ndDuelHero()`，左右兩側用故事模式立繪（劍客=朔、坦克=格蘭、刺客=凜、槍手=伊芙，依朝向自動鏡像），名字維持職業名；自用卡（護盾／領域展開）可拖到玩家立繪，拖曳時立繪出現光暈＋提示，重疊時加亮。
+- 改動：新增 `src/css/duel-stage.css`（只在 duel.html 載入）；`src/js/game.js` 新增 `ndDuelHero()`，左右兩側用故事模式立繪（劍客=朔、坦克=格蘭、刺客=凜、槍手=伊芙，依朝向自動鏡像），名字維持職業名；自用卡（護盾／領域展開）可拖到玩家立繪，拖曳時立繪出現光暈＋提示，重疊時加亮。
 - 驗證：card-drop-area、drag-surface、drag-multitouch、job-attacks、basic-art、asset-versions PASS；hud-polish 在改版前就失敗（依賴 backups/hud-polish 舊基準），其中針對舊 HUD 版面的斷言需要更新。
 - 原檔備份：backups/pre-duel-stage-2026-10-06/
 

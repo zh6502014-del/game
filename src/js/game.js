@@ -50,13 +50,13 @@ const AUDIO_URLS={
   "hit":"https://opengameart.org/sites/default/files/skill_hit.mp3",
   "burn":"https://opengameart.org/sites/default/files/fire_sound_effect.mp3",
   "counter":"https://opengameart.org/sites/default/files/attack_hit.mp3",
-  "coinFlip":"assets/coinFlip.wav",
+  "coinFlip":"assets/audio/coin-flip.wav",
   "victory":"https://opengameart.org/sites/default/files/winfretless.ogg",
-  // DUEL-SFX-062 — local, synthesized duel combat cues (scripts/gen_duel_sfx.py). Played from the presentation timeline
+  // DUEL-SFX-062 — local, synthesized duel combat cues (scripts/gen-duel-sfx.py). Played from the presentation timeline
   // (combat-fx.js impact/launch, environment.js casts), not from rules code, so each sound lands on its visual.
   ...Object.fromEntries(["swingBlade","swingHeavy","swingShadow","shot","swingSpirit","hitBlade","hitHeavy","hitShadow","hitBullet","hitCrit","hitSpirit",
     "counter","blockShield","ward","evade","burn","shieldUp","castClass","castSpirit","castDomain","domainHeal","nightfall"]
-    .map(n=>["duel"+n[0].toUpperCase()+n.slice(1),"assets/audio/duel/"+n+".mp3"]))
+    .map(n=>["duel"+n[0].toUpperCase()+n.slice(1),"assets/audio/duel/"+n.replace(/[A-Z]/g,c=>"-"+c.toLowerCase())+".mp3"]))
   // AUDIO-MIX-061: "shield" and "lock" used to reuse the hit / cardInvalid files and sounded identical to them; they now use their own synthesized cues.
   // "defeat" has no remote file: the downloaded sad-trumpet clip sounded comical, so the synthesized low toll plays instead.
 };
@@ -102,10 +102,10 @@ const ND_MIX={
 };
 function sfxVolume(k,kind){const t=ND_MIX[kind]?.[k]||0;return getAudioVolume(k)*Math.pow(10,t/20);}
 let audioEnabled=true;
-/* HOT-MODE-090 — 「一般／熱血」風格：只換戰鬥音樂與介面配色（body.theme-hot），不碰規則、AI 與存檔。故事戰鬥一律用一般風格。 */
+/* HOT-MODE-090 — 「一般／熱血」風格：只換戰鬥音樂與介面配色（body.theme-hot），不碰規則、AI 與存檔。故事戰鬥與入口大廳（data-mode=home）一律用一般風格。 */
 let heatMode=false,heatBgmFailed=false,heatSwitching=false;
 try{heatMode=localStorage.getItem("nightfallHeatV1")==="1"}catch(e){}
-function heatActive(){try{return !!rankMode&&!storyBattleContext}catch(e){return false}}
+function heatActive(){try{return !!rankMode&&!storyBattleContext&&document.body.dataset.mode!=="story"&&document.body.dataset.mode!=="home"}catch(e){return false}}
 const HEAT_ART=["assets/ui/hot-badge.webp","assets/cards/back-flame-v1.webp","assets/fx/hot-embers.webp","assets/frames/hot/hero.webp","assets/frames/hot/panel.webp","assets/frames/hot/thin.webp"];
 let heatArtWarm=false;
 function applyHeatMode(){
@@ -446,9 +446,9 @@ function renderSetup(){
         </div>
       </div>
       <a class="home-return" href="index.html">← 返回首頁</a>
-      <a class="story-entry" href="Nightfall-Duel-Story.html">故事模式 · 追尋鐘聲背後的名字 →</a>
+      <a class="story-entry" href="story.html">故事模式 · 追尋鐘聲背後的名字 →</a>
       ${window.NDSkins.controls(playerJob)}
-      <button class="audio-settings-btn" onclick="showAudioSettings()">🔊 音效設定</button>
+      <div class="footer-audio"><button class="audio-settings-btn" onclick="showAbout()">ⓘ 關於作者</button><button class="audio-settings-btn" onclick="showAudioSettings()">🔊 音效設定</button></div>
       <button class="rules-btn" onclick="showRules()">📖 遊戲規則與判定矩陣</button>
     </div>`;
   if(rankMode){renderRankSetup({entries,playerIndex,playerJob,role,renderCarousel,dots,footerHtml});return}
@@ -635,11 +635,11 @@ function arena(){
     p.burn>0?ndStatusTag("burn",`🔥 ${p.burn}`):"",
     p.job==="assassin"&&p.night?ndStatusTag("night","🌙 夜襲"):"",
     p.spirit?ndStatusTag("spirit","✨ 劍氣"):"",
-    p.domainActive?ndStatusTag("domain","🌌 領域"):""
+    p.domainActive?ndStatusTag("domain","🌌 領域・受擊回血"):""
   ].filter(Boolean).join("");
   const side=(p,which)=>{
     const pct=Math.max(0,Math.min(100,p.hp/p.maxHp*100));
-    return `<section class="duel-side battle-hud ${which===`enemy`?`enemy`:`player`} ${p.hp<3?"low-hp":""}" data-job="${p.job}" aria-label="${which===`enemy`?`對手資訊`:`你的資訊`}">
+    return `<section class="duel-side battle-hud ${which===`enemy`?`enemy`:`player`} ${p.hp<3?"low-hp":""}" data-job="${p.job}"${which==="player"&&S.rankRun?` data-rank-tier="${rankInfo().tier+1}"`:""} aria-label="${which===`enemy`?`對手資訊`:`你的資訊`}">
       <div class="duel-side-inner">
         ${which==='enemy'&&S.storyBattle?`<div class="duel-avatar"><img class="story-npc-emblem" src="assets/icons/${p.job}.svg" alt="${S.storyBattle.name}徽記"></div>`:`<div class="duel-avatar" data-art="${p.job}" data-skin="${p.skin||'base'}">${JOBS[p.job]?.i||"🎴"}</div>`}
         <div class="duel-identity"><span class="duel-owner">${which===`enemy`?`對手`:`玩家`}</span><div class="duel-name">${which==='enemy'&&S.storyBattle?S.storyBattle.name:JOBS[p.job]?.n||p.job}</div></div>
@@ -649,7 +649,7 @@ function arena(){
           <div class="duel-shield-row"><span>SHIELD</span><strong>${hudNumber(p.shield)} <small>/ 6</small></strong></div>
           <div class="duel-shield" aria-label="Shield ${p.shield} of 6">${Array.from({length:6},(_,i)=>`<i class="${i<p.shield?"filled":""}"></i>`).join("")}</div>
         </div>
-          <div class="duel-status-row">${p.shield>0?ndStatusTag("shield","🛡️ 護盾","buff-status"):""}${statusTags(p)}</div>
+          <div class="duel-status-row">${statusTags(p)}</div>
       </div>
     </section>`;
   };
@@ -770,6 +770,7 @@ function showRules(){
         <div><div class="kicker">NIGHTFALL DUEL · V12.12.34</div><div class="rules-title">📖 完整遊戲規則</div></div>
         <button class="rules-close" aria-label="關閉">✕</button>
       </div>
+      <div class="rules-body">
 
       <div class="rules-section">
         <h3>1｜基本流程</h3>
@@ -853,6 +854,7 @@ function showRules(){
         <h3>8｜無牌可出的處理</h3>
         <p>如果一方沒有任何合法的正常戰鬥牌，系統會自動結束該回合，不會讓戰鬥卡死。坦克若仍有合法免費效果，系統會先保留操作機會，讓玩家決定是否使用；AI 也會依相同規則處理免費效果。</p>
       </div>
+      </div>
     </div>`;
   const close=()=>el.remove();
   el.querySelector(".rules-close").onclick=close;
@@ -865,9 +867,9 @@ function showCard(i){
   const c=S.p.hand[i], session=S, previousFocus=document.activeElement;
   const el=document.createElement("div");el.className="detail";
   el.innerHTML=`<div class="detail-card" role="dialog" aria-modal="true" aria-label="${c.n}詳情" data-art="${c.k==='class'?c.job:c.k}" data-owner="player">
-    <div class="detail-icon">${cardIcon(c)}</div><div class="detail-name">${c.n}</div>
+    <div class="detail-body"><div class="detail-icon">${cardIcon(c)}</div><div class="detail-name">${c.n}</div>
     <div class="detail-type">${cardTypeName(c)}</div>
-    <div class="detail-text">${summary(c)}${c.job?`<br><br>職業：${JOBS[c.job].n}`:""}</div>
+    <div class="detail-text">${summary(c)}${c.job?`<br><br>職業：${JOBS[c.job].n}`:""}</div></div>
     <div class="detail-actions"><button class="close">返回手牌</button><button class="play-card start" ${canPlay(S.p,c)?"":"disabled"}>${c.k==="domain"?"展開領域":c.target==="self"?"施放護盾":"打出此牌"}</button></div>
   </div>`;
   const close=()=>{el.remove();if(previousFocus?.isConnected)previousFocus.focus({preventScroll:true})};
@@ -889,6 +891,34 @@ function showCard(i){
   el.querySelector(".close").focus({preventScroll:true});
 }
 
+function showAbout(){
+  const old=document.getElementById("aboutOverlay");
+  if(old)old.remove();
+  const el=document.createElement("div");
+  el.id="aboutOverlay";el.className="audio-overlay about-overlay";
+  el.innerHTML=`<div class="audio-modal about-modal" role="dialog" aria-modal="true" aria-label="關於作者">
+    <div class="audio-head"><div><div class="audio-title">ⓘ 關於作者</div></div><button class="audio-close" type="button" aria-label="關閉">✕</button></div>
+    <div class="audio-body">
+    <div class="audio-group audio-about">
+      <div class="about-name">夜幕決鬥 Nightfall Duel</div>
+      <dl class="about-list">
+        <div class="about-row"><dt>製作</dt><dd>林艾奭</dd></div>
+        <div class="about-row"><dt>聯絡</dt><dd><a href="https://www.linkedin.com/in/%E8%89%BE%E5%A5%AD-%E6%9E%97-347ba8167" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:zh6502014@gmail.com">zh6502014@gmail.com</a></dd></div>
+        <div class="about-row"><dt>作品集</dt><dd><a href="https://zh6502014-del.github.io/portfolio/index.html" target="_blank" rel="noopener noreferrer">Portfolio</a></dd></div>
+        <div class="about-row"><dt>音樂</dt><dd>Battle March by PlayOnLoop.com（CC BY 3.0）</dd></div>
+      </dl>
+      <div class="about-copy">© 2026 林艾奭</div>
+    </div>
+    </div>
+  </div>`;
+  const close=()=>{el.remove();document.removeEventListener("keydown",onKey)};
+  const onKey=e=>{if(e.key==="Escape")close()};
+  el.querySelector(".audio-close").onclick=close;
+  el.addEventListener("click",e=>{if(e.target===el)close()});
+  document.addEventListener("keydown",onKey);
+  document.body.appendChild(el);
+  el.querySelector(".audio-close").focus();
+}
 function showAudioSettings(){
   try{initAudio();}catch(e){}
   const old=document.getElementById("audioSettingsOverlay");
@@ -902,9 +932,11 @@ function showAudioSettings(){
   el.id="audioSettingsOverlay";el.className="audio-overlay";
   el.innerHTML=`<div class="audio-modal" role="dialog" aria-modal="true" aria-label="音效設定">
     <div class="audio-head"><div><div class="audio-title">🔊 音效設定</div><div class="audio-sub">分開調整每一層音樂與戰鬥音效。調整會立即生效並自動保存。</div></div><button class="audio-close" type="button">✕</button></div>
+    <div class="audio-body">
     <div class="audio-group"><div class="audio-group-title">MUSIC</div>${makeRows(["setupBgm","bgm","heatBgm","resultBgm"])}<div class="audio-credit">熱血戰鬥音樂：Battle March by PlayOnLoop.com（CC BY 3.0）</div></div>
     <div class="audio-group"><div class="audio-group-title">SOUND EFFECTS</div>${makeRows(["cardPickup","cardPlace","cardFlip","cardInvalid","hit","shield","lock","burn","counter","coinFlip","victory","defeat"])}</div>
     <div class="audio-actions"><button class="audio-reset" type="button">↺ 恢復預設音量</button><button class="audio-mute" type="button">${audioEnabled?"🔇 全部靜音":"🔊 開啟全部音效"}</button></div>
+    </div>
   </div>`;
   const close=()=>el.remove();
   el.querySelector(".audio-close").onclick=close;
@@ -1143,6 +1175,7 @@ async function applyCard(p,o,c,opponentCard=null){
   }
   if(c.k==="domain"){
     p.domainActive=true;
+    try{ndDomainBanner(p)}catch(e){}
     return true;
   }
   // V12.12.27 — Attack Lock is a next-round effect. A committed Attack card
@@ -1442,19 +1475,18 @@ async function nextRound(sessionId=S?.session){
 function renderHome(){
   window.NDEnvironment?.leave();
   app.innerHTML=`<main class="home-shell" aria-labelledby="home-title">
-    <header class="home-top"><span>NIGHTFALL DUEL</span><button class="home-audio" onclick="showAudioSettings()">🔊 音效設定</button></header>
+    <header class="home-top"><span>NIGHTFALL DUEL</span><div class="home-tools"><button class="home-audio" onclick="showAbout()">ⓘ 關於作者</button><button class="home-audio" onclick="showAudioSettings()">🔊 音效設定</button></div></header>
     <section class="home-intro"><p class="home-eyebrow">暮色降臨 · 由你啟程</p><h1 id="home-title">黑夜之中，<br>選擇你的道路。</h1><p>走進四位英雄的往事，或以手中卡牌迎接一場決鬥。</p></section>
     <nav class="home-modes" aria-label="選擇遊戲玩法">
-      <a class="home-mode home-story" href="Nightfall-Duel-Story.html" aria-labelledby="home-story-title">
+      <a class="home-mode home-story" href="story.html" aria-labelledby="home-story-title">
         <img class="home-mode-art" src="assets/characters/assassin.webp" alt="">
         <div class="home-mode-copy"><p class="home-eyebrow">01 / CHRONICLES</p><h2 id="home-story-title">故事玩法</h2><p>追尋鐘聲背後的名字。探索四條起源故事線，完成節點挑戰，解鎖記憶卡面。</p><div class="home-tags"><span>四位英雄</span><span>章節挑戰</span><span>卡面收藏</span></div><span class="home-enter">進入故事 <span aria-hidden="true">→</span></span></div>
       </a>
-      <a class="home-mode home-duel" href="Nightfall-Duel-V12.12.39-Test.html" aria-labelledby="home-duel-title">
+      <a class="home-mode home-duel" href="duel.html" aria-labelledby="home-duel-title">
         <img class="home-mode-art" src="assets/characters/swordsman.webp" alt="">
         <div class="home-mode-copy"><p class="home-eyebrow">02 / CARD BATTLE</p><h2 id="home-duel-title">卡牌對戰玩法</h2><p>選擇職業與對手戰術。掌握攻擊、防禦與閃躲的時機，在回合交鋒中取得勝利。</p><div class="home-tags"><span>四種職業</span><span>策略出牌</span><span>AI 對戰</span></div><span class="home-enter">進入決鬥 <span aria-hidden="true">→</span></span></div>
       </a>
     </nav>
-    <footer class="home-footer"><span>同一片黑夜，兩種冒險。</span><span>故事進度會保存在目前的瀏覽器。</span></footer>
   </main>`;
 }
 
@@ -2119,6 +2151,14 @@ const ND_STATUS_TIPS={
   spirit:"劍氣出竅：HP < 5 時取得一次。2 傷害，命中後 50% 封鎖對手下一回合攻擊。",
   domain:"領域：下一次未被閃躲的攻擊，將防禦減傷後的傷害轉為 HP 回復；不超過 HP 上限，只生效一次。"
 };
+function ndDomainBanner(p){
+  document.querySelectorAll(".nd-domain-banner").forEach(e=>e.remove());
+  const who=p===S?.p?"你":"對手";
+  const el=document.createElement("div");el.className="nd-domain-banner";el.setAttribute("role","status");
+  el.innerHTML=`<b>🌌 領域展開</b><span>${who}的下一次未被閃躲的攻擊，將轉為坦克的回血</span>`;
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),3200);
+}
 function ndStatusTag(key,label,extra=""){
   const tip=ND_STATUS_TIPS[key]||"";
   return `<button type="button" class="duel-status ${extra} nd-status-tip" data-tip="${tip}" aria-label="${label.replace(/^\S+\s/,"")}：${tip}">${label}</button>`;
@@ -2168,7 +2208,7 @@ function showBattleJournal(){
   document.querySelector('.journal-overlay')?.remove();
   const overlay=document.createElement('div');overlay.className='rules-overlay journal-overlay';
   const modal=document.createElement('section');modal.className='rules-modal';modal.setAttribute('role','dialog');modal.setAttribute('aria-modal','true');modal.setAttribute('aria-label','戰況紀錄');
-  modal.innerHTML='<div class="rules-head"><div class="rules-title">戰況紀錄</div><button class="rules-close" aria-label="關閉戰況">✕</button></div><div class="journal-entries"></div>';
+  modal.innerHTML='<div class="rules-head"><div class="rules-title">戰況紀錄</div><button class="rules-close" aria-label="關閉戰況">✕</button></div><div class="journal-entries rules-body"></div>';
   const entries=modal.querySelector('.journal-entries');
   for(const line of S.log){const row=document.createElement('p');row.textContent=line;entries.appendChild(row);}
   overlay.appendChild(modal);document.body.appendChild(overlay);

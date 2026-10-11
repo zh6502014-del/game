@@ -15,8 +15,8 @@ python3 -m http.server 8765 --bind 127.0.0.1
 | 入口 | 用途 |
 | --- | --- |
 | `index.html` | 首頁，選擇故事或自由決鬥 |
-| `Nightfall-Duel-Story.html` | 故事、探索、解謎與暮晶戰鬥 |
-| `Nightfall-Duel-V12.12.39-Test.html` | 自由決鬥 |
+| `story.html` | 故事、探索、解謎與暮晶戰鬥 |
+| `duel.html` | 自由決鬥 |
 | `art-gallery.html`、`icon-gallery.html`、`frame-gallery.html` | 開發用素材展示 |
 
 遊戲圖片與字型保存在 `assets/`。部分音訊仍使用外部來源並有合成備援，不能保證完全離線時與線上聽感相同。

@@ -39,7 +39,7 @@ function draw(){
  if(view==='play'){drawStage();return;}
  const r=routes[job],n=r.nodes[selected],total=Object.values(progress).reduce((a,b)=>a+b,0);
  const collectibleJobs=Object.keys(routes).filter(key=>window.NDStoryArt.skins[key]),owned=collectibleJobs.filter(key=>window.NDSkins.unlocked(key)).length;
- root.innerHTML=`<div class="story-shell"><header class="story-header"><a class="home-return" href="index.html">← 返回首頁</a><a href="Nightfall-Duel-V12.12.39-Test.html">← 決鬥大廳</a><span>NIGHTFALL DUEL / CHRONICLES</span><button data-action="puzzles">拼圖工坊</button><button data-action="gallery">故事圖鑑</button><button data-action="collection">外觀收藏 ${owned} / ${collectibleJobs.length}</button></header>
+ root.innerHTML=`<div class="story-shell"><header class="story-header"><a class="home-return" href="index.html">← 返回首頁</a><a href="duel.html">← 決鬥大廳</a><span>NIGHTFALL DUEL / CHRONICLES</span><button data-action="puzzles">拼圖工坊</button><button data-action="gallery">故事圖鑑</button><button data-action="collection">外觀收藏 ${owned} / ${collectibleJobs.length}</button></header>
  <section class="story-intro"><div><p class="story-eyebrow">第一階段 · 起源篇</p><h1>鐘聲以外的名字</h1><p>四段往事，通往同一場尚未揭曉的黑夜。</p></div><div class="story-overall"><strong>${String(total).padStart(2,'0')} <small>/ 12</small></strong><span>已完成故事節點</span></div></section>
  <nav class="story-roles" aria-label="職業故事線">${Object.entries(routes).map(([key,x])=>`<button data-job="${key}" aria-pressed="${job===key}"><img src="assets/icons/${key}.svg" alt=""><span>${x.name}<small>${x.job} · ${x.org}　${progress[key]}/3</small></span></button>`).join('')}</nav>
  ${!storageOK?'<p role="status">瀏覽器無法保存進度，目前僅於本頁保留。</p>':''}

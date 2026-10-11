@@ -7,3 +7,9 @@
 - 存檔：localStorage `nightfallRankV1`（{stars,streak}）、`nightfallModeV1`（free/rank）。
 - 程式：`src/js/game.js`（RANK-091 區塊、`setRankMode`、`applyRankResult`）；樣式 `src/css/screens/hot-mode.duel.css` 末段。
 - 素材：`assets/ui/rank/badge-1..6.webp`、`star-on/off.webp`；造型框已入庫，傳說框與 4 張造型圖待補。
+
+## 段位角色邊框（已接入）
+- 排位戰鬥時，玩家面板外框依段位換 6 套：`assets/frames/rank/tier-1..6.webp`（768 寬，高品質 WebP，皆 ≤350KiB）。原圖在 `storage/source-art-rank-frames/`。
+- 接法：玩家面板加 `data-rank-tier="N"`，樣式在 `hot-mode.duel.css` 末段，每階各自的九宮格切線（依實際角飾量測）。自由模式、敵方面板、故事模式不受影響。
+- 先前掛在面板右上角的段位徽章已移除（邊框取代）。
+- 大廳選角卡尚未套用段位邊框。

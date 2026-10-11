@@ -35,7 +35,7 @@
         "NDSkins"
       ],
       "depends_on": [
-        "Nightfall-Duel-Story.html 載入順序",
+        "story.html 載入順序",
         "NDStorySearch",
         "NDStoryPuzzles",
         "NDStoryEnergyBattle",
@@ -65,7 +65,7 @@
         "src/css/dist/story.css",
         "src/js/story-search-assets.js",
         "src/js/skin-store.js",
-        "Nightfall-Duel-Story.html"
+        "story.html"
       ]
     },
     "story-search": {
@@ -173,9 +173,9 @@
         "index.html",
         "art-gallery.html",
         "icon-gallery.html",
-        "Nightfall-Duel-Story.html",
+        "story.html",
         "frame-gallery.html",
-        "Nightfall-Duel-V12.12.39-Test.html",
+        "duel.html",
         "src/css/dist/duel.css"
       ],
       "globals": [
@@ -223,7 +223,7 @@
         "art-gallery.html",
         "icon-gallery.html",
         "frame-gallery.html",
-        "Nightfall-Duel-V12.12.39-Test.html",
+        "duel.html",
         "src/css/dist/duel.css"
       ]
     },
@@ -233,7 +233,7 @@
         "src/js/game.js",
         "src/js/combat-fx.js",
         "src/js/environment.js",
-        "assets/coinFlip.wav",
+        "assets/audio/coin-flip.wav",
         "assets/audio/**"
       ],
       "globals": [
@@ -244,7 +244,7 @@
       "depends_on": [
         "game.js 已結算結果、AudioBank 與音量儲存",
         "共用 CSS",
-        "assets/coinFlip.wav",
+        "assets/audio/coin-flip.wav",
         "assets/audio（未來新增時人工核對）"
       ],
       "tests": [

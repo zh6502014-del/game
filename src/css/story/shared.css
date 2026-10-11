@@ -20,7 +20,7 @@
 :root{--sq-gold:#d9b865;--sq-gold-soft:#cbb77e;--sq-line:#8d795655;--sq-ink:#ead9ad;--sq-text:#e6dfcb}
 @media (orientation:portrait) and (max-width:1024px){
 /* STORY-BATTLE-PORTRAIT-087: upright phone/tablet layout for the story card battle.
-   Loaded last by Nightfall-Duel-Story.html. Presentation only — engine, AI, RNG and saves untouched.
+   Loaded last by story.html. Presentation only — engine, AI, RNG and saves untouched.
    #seb-battle-overlay is the battle root; the id keeps these rules above the layered base sheet. */
 #seb-battle-overlay{--pb-gap:8px;--pb-card-h:clamp(92px,15dvh,136px)}
 }

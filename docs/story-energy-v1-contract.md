@@ -70,6 +70,6 @@ UI（STORY-BATTLE-UI-001 取代初版長列表）：橫向戰场敵上我下，�
 - engine：combat_design_audit，仅 story-energy-engine.js。
 - UI：story_energy_ui，僅 story-energy-ui.js、story-energy-ui.css。
 - 規則測試：story_balance_review，僅 tests/story/story-energy-engine.cjs，等待引擎落地可先寫測試。
-- 故事接線：既有「開發故事模式玩法」任務；story-campaign.js／必要資料／Nightfall-Duel-Story.html／故事相關測試、docs/story-energy-integration.md。不能修改新 engine/UI。
+- 故事接線：既有「開發故事模式玩法」任務；story-campaign.js／必要資料／story.html／故事相關測試、docs/story-energy-integration.md。不能修改新 engine/UI。
 - 主產品：本契約、WORKBOARD、新 UI／整合驗收腳本與報告；待各方寫入停穩後序列執行版本腳本及資源驗證。產品整合修正需先收回該檔案寫入權。
 - 不重載使用者現行對局、不寫真實存檔；用獨立瀏覽器與樣本存檔。證據分為規則分支、種子抽樣、UI與故事回呼，不把抽樣宣稱全覆蓋。

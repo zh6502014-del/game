@@ -77,7 +77,7 @@ ENG-REVIEW-001 建立角色與流程，工程師初審發現拖曳多指競態�
 | `scripts/check-change-scope.py`、`tests/tooling/change-scope.py` | ENG-REVIEW-001 產品 | 新工具與自身測試，工程師另行審查；不能拿 FIX 白名單替它自證 |
 | `docs/agents/WORKBOARD.md` | 兩張產品工單各寫自身區段 | 工程師建立／補正與故事結案紀錄共用；沒有把另一工單的進度算成本工單修改 |
 | `docs/story-completion-audit.md` | STORY-SYNC-004 故事產品 | 工程師要求補齊八檔交付清單及測試證據，已獨立核對 |
-| `index.html`、`Nightfall-Duel-Story.html`、`Nightfall-Duel-V12.12.39-Test.html` | STORY-SYNC-004 指定版本整合者 | 已收到凍結及兩次版本同步交接；最終 80 筆本機 JS／CSS 引用通過。這些原文未存於 FIX before，不能由此快照逐字證明只改版本引用 |
+| `index.html`、`story.html`、`duel.html` | STORY-SYNC-004 指定版本整合者 | 已收到凍結及兩次版本同步交接；最終 80 筆本機 JS／CSS 引用通過。這些原文未存於 FIX before，不能由此快照逐字證明只改版本引用 |
 
 上述核對依工單、交接訊息、當前內容與檢查證據；是協作範圍審查，並非修改者的不可否認鑑識。沒有將原基線允許清單擴大或把工具退出 1 改寫成 0。
 

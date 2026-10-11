@@ -2,7 +2,7 @@
 Everything is synthesized from physical ingredients (air whooshes, pitched body thumps, filtered noise crunches,
 damped inharmonic metal partials, a small dark room), so no sample is copied from anywhere. 48 kHz mono.
 House style: dark and restrained. No bright chimes, rising arpeggios or cartoon accents.
-Run: python3 scripts/gen_duel_sfx.py <outdir>   (writes <name>.wav; scripts/encode below converts to mp3)."""
+Run: python3 scripts/gen-duel-sfx.py <outdir>   (writes <name>.wav; scripts/encode below converts to mp3)."""
 import sys, os, numpy as np
 from scipy import signal
 from scipy.io import wavfile

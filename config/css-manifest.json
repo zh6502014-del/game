@@ -85,7 +85,7 @@
    "components/modal.5.css",
    "components/card.4.css"
   ],
-  "Nightfall-Duel-V12.12.39-Test.html": [
+  "duel.html": [
    "tokens.css",
    "base/fonts.gallery-all.css",
    "base/keyframes.gallery-art-icon.css",
@@ -180,7 +180,7 @@
    "components/card.4.css",
    "screens/hot-mode.duel.css"
   ],
-  "Nightfall-Duel-Story.html": [
+  "story.html": [
    "tokens.css",
    "base/fonts.gallery-all.css",
    "base/keyframes.gallery-art-icon.css",
@@ -340,8 +340,8 @@
  },
  "bundles": {
   "index.html": "src/css/dist/home.css",
-  "Nightfall-Duel-V12.12.39-Test.html": "src/css/dist/duel.css",
-  "Nightfall-Duel-Story.html": "src/css/dist/story.css",
+  "duel.html": "src/css/dist/duel.css",
+  "story.html": "src/css/dist/story.css",
   "art-gallery.html": "src/css/dist/art-gallery.css",
   "frame-gallery.html": "src/css/dist/frame-gallery.css",
   "icon-gallery.html": "src/css/dist/icon-gallery.css"

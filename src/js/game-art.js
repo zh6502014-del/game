@@ -3,7 +3,7 @@
   'use strict';
   const defs=window.ND_ICON_DEFS;
   const jobs=['swordsman','tank','assassin','gunner'];
-  const glyphs={ '⚔':'attack','🛡':'shield','👁':'dodge','🗡':'flash','🔫':'critical','✨':'spirit','🌌':'domain','🌙':'night','☀':'sun','🚫':'lock','🔥':'burn','↩':'counter','🥷':'counter','🎯':'critical','🎴':'card','🃏':'card','🏆':'victory','💀':'defeat','⚖':'draw','📖':'rules','🔊':'audio','🔇':'mute','♫':'audio','♪':'audio','☷':'journal','◇':'rules','◆':'selected','✕':'close','×':'close','✅':'selected','✓':'selected','⚠':'warning','⏱':'round','⏭':'right','↻':'retry','↺':'retry','➜':'play','‹':'left','›':'right','＋':'expand','－':'collapse','→':'right','←':'left','↓':'expand','↑':'collapse'};
+  const glyphs={ '⚔':'attack','🛡':'shield','👁':'dodge','🗡':'flash','🔫':'critical','✨':'spirit','🌌':'domain','🌙':'night','☀':'sun','🚫':'lock','🔥':'burn','↩':'counter','🥷':'counter','🎯':'critical','🎴':'card','🃏':'card','🏆':'victory','💀':'defeat','⚖':'draw','📖':'rules','🔊':'audio','🔇':'mute','♫':'audio','♪':'audio','☷':'journal','ⓘ':'info','◇':'rules','◆':'selected','✕':'close','×':'close','✅':'selected','✓':'selected','⚠':'warning','⏱':'round','⏭':'right','↻':'retry','↺':'retry','➜':'play','‹':'left','›':'right','＋':'expand','－':'collapse','→':'right','←':'left','↓':'expand','↑':'collapse'};
   const glyphRE=new RegExp('('+Object.keys(glyphs).join('|')+')[\\uFE0E\\uFE0F]?','gu');
   function semantic(glyph,tail=''){
     // Match the adjacent label only; another character later in a log is not this icon's identity.
@@ -151,7 +151,7 @@
     if(mute){const name=mute.querySelector('svg')?.dataset.icon;mute.setAttribute('aria-label',name==='mute'?'開啟音效':'全部靜音');mute.setAttribute('aria-pressed',String(name==='mute'));}
     // Opt-in controls: card hit targets, story choices and puzzle geometry retain their layouts.
     root.querySelectorAll('.rules-close,.audio-close,.audio-toggle,.carousel-arrow,.story-lightbox-close').forEach(el=>el.classList.add('nd-control','nd-icon-button'));
-    root.querySelectorAll('.setup-footer>button,.audio-actions>button,.copy-log-btn,.detail-actions>button,.result-screen>button,.story-battle-banner>button,.story-log-dialog>button,.story-header>a').forEach(el=>el.classList.add('nd-control'));
+    root.querySelectorAll('.setup-footer>button,.footer-audio>button,.audio-actions>button,.copy-log-btn,.detail-actions>button,.result-screen>button,.story-battle-banner>button,.story-log-dialog>button,.story-header>a').forEach(el=>el.classList.add('nd-control'));
     for(const [selector,name] of [
       ['.detail-actions>.close,.story-battle-banner>button,.result-screen[data-outcome^="story-"]>button:not(.start),.story-log-dialog>[data-exit]','back'],
       ['.result-screen[data-outcome="story-failure"]>.start','retry'],

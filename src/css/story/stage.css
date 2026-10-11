@@ -219,7 +219,7 @@
 .story-performance .story-stage-panel.story-dialogue-panel{padding:calc(var(--sf-w) + 4px) calc(var(--sf-w) + 6px)}
 }
 @media (max-width:600px) and (orientation:portrait){
-/* STORY-MOBILE-086: story-mode phone layer. Loaded last by Nightfall-Duel-Story.html only.
+/* STORY-MOBILE-086: story-mode phone layer. Loaded last by story.html only.
    Presentation only: no rules, RNG, saves or art files change. Desktop (>900px wide and
    >520px tall) never matches these queries. */
 /* ── 1. Portrait phones: wide illustrations fill the stage ──────────────────────
