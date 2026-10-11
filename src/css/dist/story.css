@@ -5910,9 +5910,9 @@ body.story-playing .app{padding:0!important;max-width:none!important;width:100%;
 .story-energy-overlay .seb-art-loaded .seb-art-fallback{display:none}
 /* Cut-out portraits get the mine scene (darkened) as their backdrop. */
 .story-energy-overlay .seb-art-cutout{background:linear-gradient(#0b1712aa,#0b1712cc),url('../../../assets/story/illustrations/gun-unify/mine-griffin-battle.webp') center/cover no-repeat}
-/* MOBILE-PORTRAIT-ZOOM (2026-10-11): phones — unit portraits are scaled up 10%, anchored to the top edge. */
+/* MOBILE-PORTRAIT-ZOOM (2026-10-11): phones — unit portraits are scaled up 50%, anchored to the top edge. */
 @media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
-#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{transform:scale(1.1);transform-origin:50% 0}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{transform:scale(1.5);transform-origin:50% 0}
 }
 
 /* ==== base/global.gallery-art-frame.css ==== */
