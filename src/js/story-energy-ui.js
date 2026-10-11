@@ -76,6 +76,11 @@ function node(tag, cls, text) {
     wrap.append(node('span','seb-art-fallback',JOBS[u.job]));
     const img = node('img', 'seb-art-image'); img.alt = ''; img.draggable = false; img.decoding = 'async';
     let [src, fallback] = localArt(u, card);
+    img.addEventListener('load', () => {
+      wrap.classList.add('seb-art-loaded');
+      // Transparent cut-out art (e.g. 晶化獅鷲) has no scene behind it: tag it so CSS can supply a backdrop.
+      try { const c = document.createElement('canvas'); c.width = c.height = 8; const g = c.getContext('2d', {willReadFrequently: true}); g.drawImage(img, 0, 0, 8, 8); const d = g.getImageData(0, 0, 8, 8).data; if (d[3] < 40 && d[(7 * 4) + 3] < 40 && d[(7 * 8 * 4) + 3] < 40) wrap.classList.add('seb-art-cutout'); } catch (_) {}
+    });
     img.addEventListener('error', () => { if (src !== fallback) { src = fallback; img.src = fallback; } else { img.hidden = true; wrap.classList.add('seb-art-failed'); } });
     img.src = src; wrap.append(img); return wrap;
   }
