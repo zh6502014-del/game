@@ -4293,7 +4293,7 @@ dialog.shield-rhythm-dialog{--pressure:0;--advance:0;--push:0%;--beat:0;--judge:
 .shield-rhythm-dialog.shake-l .sr-stage{animation:sr-shake-l .32s linear}
 .shield-rhythm-dialog button:focus-visible{outline:3px solid #f8dea1;outline-offset:3px}
 .shield-rhythm-dialog button:disabled{opacity:.5;cursor:default}
-#shield-rhythm-dialog button.sr-hit{position:relative;display:block;width:100%;margin-top:12px;min-height:64px;font-size:1.25rem;font-weight:700;letter-spacing:.3em;overflow:hidden;background:linear-gradient(#2c4636,#14281f 60%,#0f201a);border-color:#c6aa66;box-shadow:inset 0 1px 0 #f6dc9a44,inset 0 0 0 3px #0b1a16,inset 0 0 0 4px #c6aa6633,0 0 calc(var(--beat) * 18px) #e6c06a55}
+#shield-rhythm-dialog button.sr-hit{position:relative;display:block;width:100%;margin-top:12px;min-height:64px;font-size:1.25rem;font-weight:700;letter-spacing:.3em;overflow:hidden;background:linear-gradient(#2c4636,#14281f 60%,#0f201a);border-color:#c6aa66;box-shadow:inset 0 1px 0 #f6dc9a44,inset 0 0 0 3px #0b1a16,inset 0 0 0 4px #c6aa6633}
 #shield-rhythm-dialog button.sr-hit:not(:disabled){color:#fbe9b6;text-shadow:0 0 10px #e6c06a88}
 #shield-rhythm-dialog button.sr-hit.pressed{animation:sr-press .14s ease-out}
 .shield-rhythm-dialog kbd{margin-left:12px;padding:var(--nd-sp-2) 9px;border:1px solid #c6aa6666;border-radius:var(--nd-r-3);font-size:.66em;letter-spacing:.06em;opacity:.85;background:#0b1a16}
@@ -5908,11 +5908,30 @@ body.story-playing .app{padding:0!important;max-width:none!important;width:100%;
 }
 /* Transparent cut-out portraits (晶化獅鷲): once the image has loaded, the job-name fallback text must not show through it. */
 .story-energy-overlay .seb-art-loaded .seb-art-fallback{display:none}
-/* Cut-out portraits get the mine scene (darkened) as their backdrop. */
-.story-energy-overlay .seb-art-cutout{background:linear-gradient(#0b1712aa,#0b1712cc),url('../../../assets/story/illustrations/gun-unify/mine-griffin-battle.webp') center/cover no-repeat}
+/* Cut-out portraits get the darkened night environment as their backdrop (a plain scene, no text, no second griffin). */
+.story-energy-overlay .seb-art-cutout{background:linear-gradient(#0b1712aa,#0b1712cc),url('../../../assets/environments/night.webp') center/cover no-repeat}
 /* MOBILE-PORTRAIT-ZOOM (2026-10-11): phones — unit portraits are scaled up 50%, anchored to the top edge. */
 @media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
 #seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{transform:scale(1.5);transform-origin:50% 0}
+}
+/* No job-name text behind any portrait; it only appears if the image failed to load. */
+.story-energy-overlay .seb-portrait:not(.seb-art-failed) .seb-art-fallback{display:none}
+/* MOBILE-MENU-SCROLL (2026-10-11): upright phones — the action menu never widens the page. Header buttons stay on
+   screen, the action cards scroll sideways when there are three (普攻 / 招式 / 晶錐), and the cone picture is
+   drawn inside its box instead of spilling out. */
+@media (orientation:portrait) and (max-width:1024px){
+#seb-battle-overlay#seb-battle-overlay .seb-shell{grid-template-columns:minmax(0,1fr);min-width:0;max-width:100%}
+#seb-battle-overlay#seb-battle-overlay .seb-hand, #seb-battle-overlay#seb-battle-overlay .seb-hand[data-menu="open"]{min-width:0;max-width:100%;overflow:hidden}
+#seb-battle-overlay#seb-battle-overlay .seb-action-menu{min-width:0;max-width:100%}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-head{min-width:0}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-who{min-width:0;overflow:hidden}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-who strong{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-icon{flex:none}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-actions{min-width:0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;touch-action:pan-x;scrollbar-width:none;padding-bottom:var(--nd-sp-4)}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-actions::-webkit-scrollbar{display:none}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-item{flex:1 0 150px;scroll-snap-align:start}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-pic.seb-cone-art{display:block;position:relative;overflow:hidden;background:#16281f}
+#seb-battle-overlay#seb-battle-overlay .seb-menu-pic.seb-cone-art .seb-art-image{position:absolute;inset:auto;left:50%;top:50%;width:150%;height:auto;max-height:none;object-fit:contain;transform:translate(-50%,-50%) rotate(-38deg);filter:drop-shadow(0 0 4px #6fe3d4aa)}
 }
 
 /* ==== base/global.gallery-art-frame.css ==== */

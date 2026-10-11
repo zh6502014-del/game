@@ -89,7 +89,7 @@ dialog.shield-rhythm-dialog{--pressure:0;--advance:0;--push:0%;--beat:0;--judge:
 .shield-rhythm-dialog.shake-l .sr-stage{animation:sr-shake-l .32s linear}
 .shield-rhythm-dialog button:focus-visible{outline:3px solid #f8dea1;outline-offset:3px}
 .shield-rhythm-dialog button:disabled{opacity:.5;cursor:default}
-#shield-rhythm-dialog button.sr-hit{position:relative;display:block;width:100%;margin-top:12px;min-height:64px;font-size:1.25rem;font-weight:700;letter-spacing:.3em;overflow:hidden;background:linear-gradient(#2c4636,#14281f 60%,#0f201a);border-color:#c6aa66;box-shadow:inset 0 1px 0 #f6dc9a44,inset 0 0 0 3px #0b1a16,inset 0 0 0 4px #c6aa6633,0 0 calc(var(--beat) * 18px) #e6c06a55}
+#shield-rhythm-dialog button.sr-hit{position:relative;display:block;width:100%;margin-top:12px;min-height:64px;font-size:1.25rem;font-weight:700;letter-spacing:.3em;overflow:hidden;background:linear-gradient(#2c4636,#14281f 60%,#0f201a);border-color:#c6aa66;box-shadow:inset 0 1px 0 #f6dc9a44,inset 0 0 0 3px #0b1a16,inset 0 0 0 4px #c6aa6633}
 #shield-rhythm-dialog button.sr-hit:not(:disabled){color:#fbe9b6;text-shadow:0 0 10px #e6c06a88}
 #shield-rhythm-dialog button.sr-hit.pressed{animation:sr-press .14s ease-out}
 .shield-rhythm-dialog kbd{margin-left:12px;padding:var(--nd-sp-2) 9px;border:1px solid #c6aa6666;border-radius:var(--nd-r-3);font-size:.66em;letter-spacing:.06em;opacity:.85;background:#0b1a16}
