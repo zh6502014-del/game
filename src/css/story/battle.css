@@ -859,7 +859,7 @@
    doubled id lifts these above the per-count plate rules earlier in this file. */
 @media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
 #seb-battle-overlay#seb-battle-overlay .seb-roster{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;align-content:center;height:100%;gap:var(--nd-sp-6)}
-#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap{display:block;width:56px;min-width:56px;max-width:56px;height:auto;min-height:0;max-height:none;align-self:center;grid-column:auto;grid-row:auto}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit-wrap{display:block;width:64px;min-width:64px;max-width:64px;height:auto;min-height:0;max-height:none;align-self:center;grid-column:auto;grid-row:auto}
 #seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit{display:flex;flex-direction:column;width:100%;height:auto;min-height:44px;border-radius:10px 10px 6px 6px}
 #seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:3/4;flex:none;border-radius:8px 8px 0 0}
 #seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-unit-base{position:relative;inset:auto;min-height:0;padding:2px;gap:2px;align-content:start;border-left:0;border-top:1px solid var(--nd-gold-line);background:linear-gradient(#23392ee8,#101d17f8)}
