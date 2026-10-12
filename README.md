@@ -36,9 +36,9 @@ scripts/                      素材生成、版本更新與檢查工具
 tests/                        自動化測試，依領域分資料夾（見 tests/README.md）
 docs/
   agents/                     協作入口與工作板
-  design/                     現行設計與工單，依領域分 story／art／fx-audio／ui／project
-  archive/                    歷史決策與研究文件
-storage/                      本機原稿、備份、預覽、暫存及未採用素材
+  design/                     現用美術規範及工單封存索引
+  archive/                    測試依賴文件及歷史封存索引
+storage/                      設計與驗收封存、索引及原稿外移說明
 test-results/                 本機測試產物，不加入 Git
 ```
 
@@ -46,14 +46,11 @@ test-results/                 本機測試產物，不加入 Git
 
 程式導覽：`src/js/game.js` 為自由決鬥核心，`src/js/story-*.js` 為故事模式；樣式仍依各 HTML 的載入順序套用。JS 產生的素材網址以 HTML 頁面位置為基準，CSS 中素材網址以 CSS 檔案位置為基準。
 
-[存放區說明](storage/README.md)及[搬移索引](storage/moved-files.json)可查找舊資料。原始美術與生成紀錄已無損封存在本機 `storage/source-art.tar.gz`，逐檔清單為 `storage/source-art-manifest.json`。改圖或執行原稿生成工具前，先執行下方恢復指令；大封存包不包含在 GitHub 版本中，請另外備份。
+原稿與備份完整保存在桌面的 **`Game_claude_存放資料夾`**，與本專案分開。遊戲素材仍在 `assets/`，畫質及程式皆未因本次整理更動。原稿不會隨 GitHub clone 提供，請另外備份。
 
-```sh
-python3 scripts/source-art-archive.py verify
-python3 scripts/source-art-archive.py restore
-```
+設計工單與歷次驗收資料無損封存在 `storage/project-history.tar.gz`；現用美術規範及測試依賴文件保留原位。舊文件連結若不存在，先按 [存放區說明](storage/README.md) 還原至專案外，再讀取同名路徑。查閱封存不代表那些工單已完成。
 
-`restore` 會還原至 `storage/source-art/`，拒絕覆寫既有目錄。恢復後會重新占用約 837 MiB；封存包仍保留。工具目前支援 macOS 與 Linux 的安全安裝目的目錄，封存本身是標準 tar.gz 格式；若改用一般解壓工具，可能保留 hard-link，編輯前須拆成獨立檔案並避免覆寫。
+原稿恢復、封存驗證及搬移清單都見 [存放區說明](storage/README.md)。解壓、測試或新增素材會再增加專案項目數；本次容量與數量驗收見 [PROJECT-BUDGET-090](docs/PROJECT-BUDGET-090.md)。
 
 ## 上傳 GitHub
 
@@ -93,4 +90,4 @@ JS/CSS 修改後更新版本，再驗證引用。新增圖片另執行 `python3 
 - [工程審查流程](docs/engineering-workflow.md)：基線、差異審查與驗收。
 - [素材預算](docs/art-asset-budget.md)：尺寸與容量。
 - [暮晶戰鬥規則](docs/story-energy-v1-contract.md)：故事戰鬥契約。
-- [本次整理紀錄](docs/design/project/PROJECT-CLEANUP-062.md)：範圍、驗證及限制。
+- [本次整理紀錄](docs/PROJECT-BUDGET-090.md)：容量、項目數、保存驗證及限制。
