@@ -3166,7 +3166,7 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock button{min-height:44px!importa
 body:has(.duel-screen.nd-stage) #app>.battle-dock .battle-state{font-size:var(--nd-fs-12)!important;letter-spacing:0;line-height:1.4}
 }
 @media (max-width:899px) and (orientation:portrait){
-#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;grid-template-rows:auto 44px minmax(116px,1fr) 110px!important}
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;grid-template-rows:auto 110px minmax(116px,1fr) 110px!important}
 body[data-environment] #app .duel-screen.nd-stage::before{inset:138px 0 0!important;transform:none}
 body:has(.duel-screen.nd-stage) #app>.battle-dock{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto auto!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{grid-column:1/-1!important;grid-row:1!important;text-align:center;padding:0 var(--nd-sp-2) var(--nd-sp-2)}
@@ -3185,7 +3185,7 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{text-align:cente
    320px. Share the lower row between the board and the two hand trays.
    If enlarged text or safe areas need more room, let the page grow instead
    of compressing the HUD's grid row underneath the cards. */
-#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;grid-template-rows:auto 36px 94px!important}
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;grid-template-rows:auto 94px 94px!important}
 #app .duel-screen.nd-stage .retro-center{min-height:0!important;max-height:none!important}
 }
 @media (max-width:620px){
@@ -4204,13 +4204,13 @@ body:has(.duel-screen.nd-stage)>.audio-toggle{display:none!important}
 #app .duel-screen.nd-stage .enemy-card-back{margin:0!important;transform:none!important}
 }
 @media (max-width:899px) and (orientation:portrait){
-#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:30px!important;min-width:30px!important;max-width:30px!important;height:42px!important;max-height:42px!important;flex:0 0 30px!important}
+#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:72px!important;min-width:72px!important;max-width:72px!important;height:102px!important;max-height:102px!important;flex:0 0 72px!important}
 }
 @media (max-width:899px) and (orientation:landscape), (max-height:520px) and (orientation:landscape){
 #app .duel-screen.nd-stage .duel-hand .card, #app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:64px!important;min-width:64px!important;max-width:64px!important;height:90px!important;max-height:90px!important;flex:0 0 64px!important}
 }
 @media (max-height:340px) and (orientation:landscape){
-#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:24px!important;min-width:24px!important;max-width:24px!important;height:34px!important;max-height:34px!important;flex:0 0 24px!important}
+#app .duel-screen.nd-stage .duel-hand .enemy-card-back{width:64px!important;min-width:64px!important;max-width:64px!important;height:90px!important;max-height:90px!important;flex:0 0 64px!important}
 }
 @media (hover:none) and (pointer:coarse){
 #app .duel-screen.nd-stage .duel-hand .card:hover:not(:disabled){transform:none!important}
@@ -4287,7 +4287,8 @@ body.theme-hot:has(.duel-screen) #nd-hot-embers{display:block;position:fixed;ins
 /* 賽事帶：固定在左上角，不壓到頂部回合標籤與對手手牌 */
 .rank-ribbon{position:fixed;top:14px;left:14px;z-index:30;display:grid;gap:6px;justify-items:start;margin:0;padding:8px 14px 8px 10px;max-width:none;border:1px solid #b8c2b855;border-block-width:1px;background:linear-gradient(180deg,#0c1618e6,#070f11e6);pointer-events:none}
 .rank-ribbon-stake{font-size:12px;gap:8px;padding-left:2px}
-@media (max-width:640px){.rank-ribbon{top:8px;left:8px;transform:scale(.85);transform-origin:top left}}
+/* 小螢幕不顯示賽事帶（徽章／勝敗資訊），避免蓋住我方 HUD */
+@media (max-width:899px),(max-height:520px){.rank-ribbon{display:none!important}}
 
 /* 戰鬥面板的職業名稱縮小 */
 #app .duel-screen.nd-stage>.duel-side .duel-name{font-size:calc(26 * var(--u))!important;letter-spacing:.14em!important}

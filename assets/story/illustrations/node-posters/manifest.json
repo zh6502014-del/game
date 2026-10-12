@@ -153,28 +153,22 @@
       "title": "擋住師父掩護逃亡",
       "artId": "swordsman-master",
       "source": {
-        "path": "storage/source-art/legacy-png/assets/story/swordsman-master.png",
-        "width": 1672,
-        "height": 941,
-        "bytes": 2650773,
-        "sha256": "82466aa657ef150a1bc5b2d3c9f0b2d08af34cfc057788c33515c4fd5d6427ce"
+        "path": "assets/story/illustrations/swordsman-stills/swordsman-master.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 258780,
+        "sha256": "f024f73e25b578885df830088b05945db42e0b7ea758a3cc5f63617f5a514efe"
       },
       "runtime": {
         "path": "assets/story/illustrations/node-posters/s3.webp",
         "width": 1535,
         "height": 864,
-        "bytes": 251068,
-        "sha256": "d58ee558df59557700f7b799e08012bdf5af162ca312e95df0c3440d2de5edae"
+        "bytes": 258780,
+        "sha256": "f024f73e25b578885df830088b05945db42e0b7ea758a3cc5f63617f5a514efe"
       },
       "derivation": {
-        "operation": "proportional resize and WebP conversion; no new generation",
-        "maxSize": [
-          1536,
-          864
-        ],
-        "quality": 86,
-        "method": 6,
-        "alpha": false
+        "operation": "byte-identical copy of corrected scene",
+        "ticket": "CHARACTER-ALIGN-20261012"
       }
     },
     {
@@ -182,87 +176,78 @@
       "title": "暮鐘提前與撤離",
       "artId": "tank-bell",
       "source": {
-        "path": "storage/source-art/legacy-png/assets/story/tank-bell.png",
-        "width": 1672,
-        "height": 941,
-        "bytes": 2568870,
-        "sha256": "847d2068efb53dda25a09747177a6e172d1805b3c5104b00a238133b07742295"
+        "path": "assets/story/illustrations/class-origin/tank-bell.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 230578,
+        "sha256": "14e3f94cce09d917bb64267afdae8bc02b64b7fdbdd3b687458f8e46338def78"
       },
       "runtime": {
         "path": "assets/story/illustrations/node-posters/t1.webp",
         "width": 1535,
         "height": 864,
-        "bytes": 245536,
-        "sha256": "efd31abcd2d114d45f6201e8dff0ab1d61e59a170267c77947b65c3638222594"
+        "bytes": 230578,
+        "sha256": "14e3f94cce09d917bb64267afdae8bc02b64b7fdbdd3b687458f8e46338def78"
       },
       "derivation": {
-        "operation": "proportional resize and WebP conversion; no new generation",
-        "maxSize": [
-          1536,
-          864
-        ],
-        "quality": 86,
-        "method": 6,
-        "alpha": false
-      }
+        "operation": "byte-identical copy of corrected scene",
+        "ticket": "CHARACTER-ALIGN-20261012"
+      },
+      "revisionTicket": "TANK-ALIGN-20261011"
     },
     {
       "nodeId": "T2",
       "title": "折返接應母女",
       "artId": "tank-return",
       "source": {
-        "path": "storage/source-art/legacy-png/assets/story/tank-return.png",
-        "width": 1672,
-        "height": 941,
-        "bytes": 2539422,
-        "sha256": "4e466f005216fadf27bf2a226049f0af319c01db69a85fec9aede453a163d962"
+        "path": "assets/story/illustrations/class-origin/tank-return.webp",
+        "width": 1535,
+        "height": 864,
+        "bytes": 210546,
+        "sha256": "cb5472cf4fc46a93af0d016a2f9708a19b6feabaef090942a8619cadce38fc34"
       },
       "runtime": {
         "path": "assets/story/illustrations/node-posters/t2.webp",
         "width": 1535,
         "height": 864,
-        "bytes": 242920,
-        "sha256": "34b8816c4b62cc62c0ac626db74759f48f433adad1367b8203f38db2fe1ee454"
+        "bytes": 210546,
+        "sha256": "cb5472cf4fc46a93af0d016a2f9708a19b6feabaef090942a8619cadce38fc34"
       },
       "derivation": {
-        "operation": "proportional resize and WebP conversion; no new generation",
-        "maxSize": [
-          1536,
-          864
-        ],
-        "quality": 86,
-        "method": 6,
-        "alpha": false
-      }
+        "operation": "byte-identical copy of corrected scene",
+        "ticket": "CHARACTER-ALIGN-20261012"
+      },
+      "revisionTicket": "TANK-ALIGN-20261011"
     },
     {
       "nodeId": "T3",
       "title": "第一面盾崩裂前的救援",
       "artId": "tank-shield",
       "source": {
-        "path": "storage/source-art/legacy-png/assets/story/tank-shield.png",
+        "path": "storage/source-art/TANK-ALIGN-20261011/tank-shield.png",
         "width": 1672,
         "height": 941,
-        "bytes": 2543730,
-        "sha256": "be8395446b461d8d655dfc0f7a3310b7ad2ce213edce25a887fbe0d541f3aa6d"
+        "bytes": 2548447,
+        "sha256": "44f08915aeecca920d2fca92eed8b8dbbedadb5dae561b1adc0bbedac34bef9d"
       },
       "runtime": {
         "path": "assets/story/illustrations/node-posters/t3.webp",
         "width": 1535,
         "height": 864,
-        "bytes": 245832,
-        "sha256": "654935d421fea5a624ea5ff1c0df511b020b48ed6bea9e58e4a50ee68f1bb6d6"
+        "bytes": 214886,
+        "sha256": "eb673c782f469e4f5cba93c361e0f2aa10743c6a4c3db0cc6b35db1ea273c604"
       },
       "derivation": {
-        "operation": "proportional resize and WebP conversion; no new generation",
+        "operation": "proportional resize and WebP conversion; shared corrected young Gran source",
         "maxSize": [
           1536,
           864
         ],
-        "quality": 86,
+        "quality": 85,
         "method": 6,
         "alpha": false
-      }
+      },
+      "revisionTicket": "TANK-ALIGN-20261011"
     },
     {
       "nodeId": "E1",
@@ -787,6 +772,6 @@
       }
     }
   ],
-  "runtimeBytes": 7028398,
-  "sourceBytes": 71116085
+  "runtimeBytes": 6746038,
+  "sourceBytes": 61690794
 }

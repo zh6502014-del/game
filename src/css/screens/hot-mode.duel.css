@@ -68,7 +68,8 @@ body.theme-hot:has(.duel-screen) #nd-hot-embers{display:block;position:fixed;ins
 /* 賽事帶：固定在左上角，不壓到頂部回合標籤與對手手牌 */
 .rank-ribbon{position:fixed;top:14px;left:14px;z-index:30;display:grid;gap:6px;justify-items:start;margin:0;padding:8px 14px 8px 10px;max-width:none;border:1px solid #b8c2b855;border-block-width:1px;background:linear-gradient(180deg,#0c1618e6,#070f11e6);pointer-events:none}
 .rank-ribbon-stake{font-size:12px;gap:8px;padding-left:2px}
-@media (max-width:640px){.rank-ribbon{top:8px;left:8px;transform:scale(.85);transform-origin:top left}}
+/* 小螢幕不顯示賽事帶（徽章／勝敗資訊），避免蓋住我方 HUD */
+@media (max-width:899px),(max-height:520px){.rank-ribbon{display:none!important}}
 
 /* 戰鬥面板的職業名稱縮小 */
 #app .duel-screen.nd-stage>.duel-side .duel-name{font-size:calc(26 * var(--u))!important;letter-spacing:.14em!important}

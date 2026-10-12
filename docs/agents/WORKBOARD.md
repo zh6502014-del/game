@@ -113,3 +113,13 @@
 - 改動 `src/js/story-energy-ui.js`（名字旁加 `.seb-unit-jobtag`、正常狀態加 `.seb-status-normal`）、`src/css/story/battle.css` 檔尾。asset-versions PASS；雲端 390×844、375×667 觸控測試 PASS，4 人版數值不溢出；6 人版職業字會被截成「坦‥」、數值格有 2 處溢出，已依使用者選擇處理（089b）：
 - 089b：直式手機卡片不顯示名字與職業；我方靠立繪辨識（選單標題列顯示名字＋職業）；敵方右上角改為職業徽章（assets/emblems/<job>.svg），同名敵人在立繪左下加 A/B/C（依全部同名敵人的順序，倒下不改字母）；2／4 人寬版在高螢幕（>740px）把血盾攻改為三列直排，矮螢幕維持一列並縮字。雲端 390×844、375×667 測試 PASS，數值零溢出。
 - 未做：戰報文字仍用原名（引擎產生），尚未帶 A/B/C。
+
+## TANK-ALIGN-20261011｜坦克時間軸造型（2026-10-11）
+
+- 本地完成：7情境圖＋3章節衍生依年輕/成年統一；strict10檔2.14MiB、版本63引用PASS，隔離圖片載入10/10。工程可交付，產品素材驗收通過，未發布。
+- [工單](../design/art/TANK-ALIGN-20261011.md)。後續全角色設定與一致性：CHARACTER-BIBLE-20261011。
+
+## CHARACTER-BIBLE-20261011／CHARACTER-ALIGN-20261012｜角色設定與造型統一
+
+- 2026-10-12：38張設定圖、142素材盤點及24個runtime修正完成；工程複審通過。
+- [完整工單及限制](../design/art/CHARACTER-BIBLE-20261011.md)，[設定集](../design/art/character-bible-20261011/index.html)。

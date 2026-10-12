@@ -27,6 +27,7 @@
  const matchesSpeaker = (actor, speaker) => actor.name === speaker || (actor.id === 'father' && speaker === '父親') || (actor.id === 'father-young' && speaker === '鳴者');
  const actors=Object.fromEntries(Object.entries(names).map(([id,name])=>[id,{id,name,path:`assets/story/actors/${id}.webp`}]));
  actors['eve-armed'].path='assets/story/actors/gun-unify/eve-armed.webp';
+ actors.ito.path='assets/story/actors/ito-young.webp';
  for(const id of ['father','father-young'])actors[id].path=`assets/story/actors/narva/${id}.webp`;
  actors['father-wounded']={id:'father-wounded',name:'納爾瓦',path:'assets/story/actors/narva/father-wounded.webp'};
  // A frame identifies a narrative beat, not a new bitmap. Locations and cast are shared.

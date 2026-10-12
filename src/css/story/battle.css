@@ -915,7 +915,7 @@
 .story-energy-overlay .seb-art-cutout{background:linear-gradient(#0b1712aa,#0b1712cc),url('../../../assets/environments/night.webp') center/cover no-repeat}
 /* MOBILE-PORTRAIT-ZOOM (2026-10-11): phones — unit portraits are scaled up 50%, anchored to the top edge. */
 @media (orientation:portrait) and (max-width:1024px), (orientation:landscape) and (max-height:520px){
-#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{transform:scale(1.5);transform-origin:50% 0}
+#seb-battle-overlay#seb-battle-overlay .seb-roster .seb-unit .seb-portrait .seb-art-image{--seb-zoom:1.5;transform:scale(var(--seb-zoom));transform-origin:50% 0}
 }
 /* No job-name text behind any portrait; it only appears if the image failed to load. */
 .story-energy-overlay .seb-portrait:not(.seb-art-failed) .seb-art-fallback{display:none}
@@ -935,4 +935,8 @@
 #seb-battle-overlay#seb-battle-overlay .seb-menu-item{flex:1 0 150px;scroll-snap-align:start}
 #seb-battle-overlay#seb-battle-overlay .seb-menu-pic.seb-cone-art{display:block;position:relative;overflow:hidden;background:#16281f}
 #seb-battle-overlay#seb-battle-overlay .seb-menu-pic.seb-cone-art .seb-art-image{position:absolute;inset:auto;left:50%;top:50%;width:150%;height:auto;max-height:none;object-fit:contain;transform:translate(-50%,-50%) rotate(-38deg);filter:drop-shadow(0 0 4px #6fe3d4aa)}
+}
+/* MOBILE-MENU-SCROLL fix: .story-energy-overlay button{touch-action:none} stopped touch panning that starts on a card. */
+@media (orientation:portrait) and (max-width:1024px){
+#seb-battle-overlay#seb-battle-overlay .seb-menu-actions, #seb-battle-overlay#seb-battle-overlay .seb-menu-actions .seb-menu-item{touch-action:pan-x}
 }

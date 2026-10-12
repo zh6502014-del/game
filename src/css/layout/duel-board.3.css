@@ -207,7 +207,7 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock button{min-height:44px!importa
 body:has(.duel-screen.nd-stage) #app>.battle-dock .battle-state{font-size:var(--nd-fs-12)!important;letter-spacing:0;line-height:1.4}
 }
 @media (max-width:899px) and (orientation:portrait){
-#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;grid-template-rows:auto 44px minmax(116px,1fr) 110px!important}
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "enemy-hand enemy-hand" "center center" "player-hand player-hand"!important;grid-template-rows:auto 110px minmax(116px,1fr) 110px!important}
 body[data-environment] #app .duel-screen.nd-stage::before{inset:138px 0 0!important;transform:none}
 body:has(.duel-screen.nd-stage) #app>.battle-dock{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto auto!important}
 body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{grid-column:1/-1!important;grid-row:1!important;text-align:center;padding:0 var(--nd-sp-2) var(--nd-sp-2)}
@@ -226,7 +226,7 @@ body:has(.duel-screen.nd-stage) #app>.battle-dock>.battle-state{text-align:cente
    320px. Share the lower row between the board and the two hand trays.
    If enlarged text or safe areas need more room, let the page grow instead
    of compressing the HUD's grid row underneath the cards. */
-#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;grid-template-rows:auto 36px 94px!important}
+#app .duel-screen.nd-stage{grid-template-areas:"player-hud enemy-hud" "center enemy-hand" "center player-hand"!important;grid-template-rows:auto 94px 94px!important}
 #app .duel-screen.nd-stage .retro-center{min-height:0!important;max-height:none!important}
 }
 @media (max-width:620px){
