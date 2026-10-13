@@ -1,6 +1,6 @@
 /* Nightfall Duel asset cache. Only same-origin /assets/ media is handled (pages, JS and CSS keep their ?v= versioning).
    Cache-first for instant loads; each file is revalidated once per service-worker lifetime so replaced art still arrives. */
-const CACHE = 'nd-assets-v1';
+const CACHE = 'nd-assets-art-canon-20261014';
 const revalidated = new Set();
 
 self.addEventListener('install', () => self.skipWaiting());
