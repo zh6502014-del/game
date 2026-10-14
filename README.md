@@ -38,7 +38,7 @@ docs/
   agents/                     協作入口與工作板
   design/                     現用美術規範及工單封存索引
   archive/                    測試依賴文件及歷史封存索引
-storage/                      設計與驗收封存、索引及原稿外移說明
+storage/                      外部封存查找說明與早期索引
 test-results/                 本機測試產物，不加入 Git
 ```
 
@@ -46,11 +46,11 @@ test-results/                 本機測試產物，不加入 Git
 
 程式導覽：`src/js/game.js` 為自由決鬥核心，`src/js/story-*.js` 為故事模式；樣式仍依各 HTML 的載入順序套用。JS 產生的素材網址以 HTML 頁面位置為基準，CSS 中素材網址以 CSS 檔案位置為基準。
 
-原稿與備份完整保存在桌面的 **`Game_claude_存放資料夾`**，與本專案分開。遊戲素材仍在 `assets/`，畫質及程式皆未因本次整理更動。原稿不會隨 GitHub clone 提供，請另外備份。
+原稿與備份完整保存在桌面的 **`Game_claude_存放資料夾`**，與本專案分開。現用遊戲素材仍在 `assets/`，圖片品質不變；已停用的 61 張舊圖另存，預載清單與入口版本已同步。原稿不會隨 GitHub clone 提供，請另外備份。
 
-設計工單與歷次驗收資料無損封存在 `storage/project-history.tar.gz`；現用美術規範及測試依賴文件保留原位。舊文件連結若不存在，先按 [存放區說明](storage/README.md) 還原至專案外，再讀取同名路徑。查閱封存不代表那些工單已完成。
+設計工單與歷次驗收資料無損封存在桌面的 `Game_claude_存放資料夾`，新增內容採獨立 091 批次，早期內容保留原封存；現用美術規範及測試依賴文件保留原位。舊文件連結若不存在，先按 [存放區說明](storage/README.md) 還原至專案外，再讀取同名路徑。查閱封存不代表那些工單已完成。
 
-原稿恢復、封存驗證及搬移清單都見 [存放區說明](storage/README.md)。解壓、測試或新增素材會再增加專案項目數；本次容量與數量驗收見 [PROJECT-BUDGET-090](docs/PROJECT-BUDGET-090.md)。
+原稿恢復、封存驗證及搬移清單都見 [存放區說明](storage/README.md)。解壓、測試或新增素材會再增加專案項目數；本次容量與數量驗收見 [PROJECT-SLIM-091](docs/PROJECT-SLIM-091.md)。
 
 ## 上傳 GitHub
 
@@ -90,4 +90,4 @@ JS/CSS 修改後更新版本，再驗證引用。新增圖片另執行 `python3 
 - [工程審查流程](docs/engineering-workflow.md)：基線、差異審查與驗收。
 - [素材預算](docs/art-asset-budget.md)：尺寸與容量。
 - [暮晶戰鬥規則](docs/story-energy-v1-contract.md)：故事戰鬥契約。
-- [本次整理紀錄](docs/PROJECT-BUDGET-090.md)：容量、項目數、保存驗證及限制。
+- [本次整理紀錄](docs/PROJECT-SLIM-091.md)：容量、項目數、保存驗證及限制。

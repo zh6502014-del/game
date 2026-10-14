@@ -4,7 +4,7 @@
 
 ## 目前原稿存放方式（2026-10-07）
 
-ART-STORAGE-063 的原稿封存於 PROJECT-BUDGET-090 移到桌面的 `../Game_claude_存放資料夾/storage/source-art.tar.gz`，清單仍在本專案 `storage/source-art-manifest.json`。需要改圖／生成衍生檔時，先依 [存放區還原指引](../storage/README.md#原稿驗證與恢復) 指定外部封存位置並還原至專案外的獨立目錄，再將本次需要的原稿放回工具要求的位置；勿執行使用舊預設路徑的無參數 `restore`。原稿的圖片像素、原始 bytes 及生成紀錄均保留。下方早期 `source-art/` 路徑對應工具工作區 `storage/source-art/`，現在平時保存於外部存放區；較新的散檔與新增封存也依存放區說明查找。新增原稿仍應只保留一份，完成後重新封存必須涵蓋新修改，不能沿用舊封存當備份。
+ART-STORAGE-063 的原稿封存於 PROJECT-BUDGET-090 移到桌面的 `../Game_claude_存放資料夾/storage/source-art.tar.gz`，清單仍在本專案 `storage/source-art-manifest.json`。需要改圖／生成衍生檔時，先依 [存放區還原指引](../storage/README.md#原稿驗證與恢復) 指定外部封存位置並還原至專案外的獨立目錄，再將本次需要的原稿放回工具要求的位置；勿執行使用舊預設路徑的無參數 `restore`。原稿的圖片像素、原始 bytes 及生成紀錄均保留。下方早期 `source-art/` 路徑對應工具工作區 `storage/source-art/`，現在平時保存於外部存放區；較新的散檔與新增封存也依存放區說明查找；2026-10-12 之後的原稿及設定圖集優先查外部 `batches/PROJECT-SLIM-091/manifest.json`，同名文件以 091 新版為準。新增原稿仍應只保留一份，完成後重新封存必須涵蓋新修改，不能沿用舊封存當備份。
 
 ## 先確認用途，再生成
 

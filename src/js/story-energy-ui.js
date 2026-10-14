@@ -65,6 +65,8 @@ function node(tag, cls, text) {
   }
   function localArt(u, card) {
     const fallback = u.job === 'gunner' ? 'assets/story/actors/gun-unify/' + (card ? 'gunner-card' : 'gunner') + '.webp' : 'assets/' + (card ? 'cards/' : 'characters/') + u.job + '.webp';
+    // Shuo uses the scene artwork in battle; his cutout remains available for dialogue.
+    if (u.job === 'swordsman' && u.portrait === 'assets/story/actors/shuo.webp') return [fallback, fallback];
     if (u.portrait) {
       try { const url = new URL(u.portrait, document.baseURI); if (url.origin === location.origin && /^(https?:|file:)$/.test(url.protocol)) return [u.portrait, fallback]; } catch (_) {}
     }
