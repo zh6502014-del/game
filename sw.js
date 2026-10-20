@@ -1,11 +1,21 @@
-/* Nightfall Duel asset cache. Only same-origin /assets/ media is handled (pages, JS and CSS keep their ?v= versioning).
-   Cache-first for instant loads; each file is revalidated once per service-worker lifetime so replaced art still arrives. */
+/* Nightfall Duel service worker (PWA).
+   - /assets/ media: cache-first; each file is revalidated once per service-worker lifetime so replaced art still arrives.
+   - Pages (HTML): network-first, cached copy when offline.
+   - src/ JS/CSS and the manifest: cached by full URL (their ?v= changes when content changes), so the app opens offline. */
 const CACHE = 'nd-assets-art-canon-20261014';
+const SHELL = 'nd-shell-20261020';
+const SHELL_PRECACHE = ['./', 'index.html', 'story.html', 'duel.html', 'manifest.webmanifest'];
 const revalidated = new Set();
 
-self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('install', event => {
+  self.skipWaiting();
+  event.waitUntil(caches.open(SHELL).then(c => c.addAll(SHELL_PRECACHE)).catch(() => {}));
+});
 self.addEventListener('activate', event => event.waitUntil((async () => {
-  for (const key of await caches.keys()) if (key.startsWith('nd-assets-') && key !== CACHE) await caches.delete(key);
+  for (const key of await caches.keys()) {
+    if (key.startsWith('nd-assets-') && key !== CACHE) await caches.delete(key);
+    if (key.startsWith('nd-shell-') && key !== SHELL) await caches.delete(key);
+  }
   await self.clients.claim();
 })()));
 
@@ -13,9 +23,32 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.origin !== location.origin || !url.pathname.includes('/assets/') || url.pathname.endsWith('.json')) return;
+  if (url.origin !== location.origin) return;
+  if (req.mode === 'navigate') { event.respondWith(page(req)); return; }
+  if (url.pathname.includes('/src/') || url.pathname.endsWith('.webmanifest')) { event.respondWith(shell(req)); return; }
+  if (!url.pathname.includes('/assets/') || url.pathname.endsWith('.json')) return;
   event.respondWith(handle(req, url, event));
 });
+
+async function page(req) {
+  const cache = await caches.open(SHELL);
+  try {
+    const res = await fetch(req);
+    if (res.ok && res.status === 200) { try { await cache.put(req, res.clone()); } catch (e) { /* quota */ } }
+    return res;
+  } catch (e) {
+    return (await cache.match(req, { ignoreSearch: true })) || (await cache.match('index.html')) || Response.error();
+  }
+}
+
+async function shell(req) {
+  const cache = await caches.open(SHELL);
+  const hit = await cache.match(req);
+  if (hit) return hit;
+  const res = await fetch(req);
+  if (res.ok && res.status === 200) { try { await cache.put(req, res.clone()); } catch (e) { /* quota */ } }
+  return res;
+}
 
 async function fromNetwork(key, cache) {
   const res = await fetch(key);

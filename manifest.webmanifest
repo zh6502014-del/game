@@ -1,0 +1,33 @@
+{
+  "name": "夜幕決鬥 Nightfall Duel",
+  "short_name": "夜幕決鬥",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "lang": "zh-Hant",
+  "description": "故事從四位主角各自的過往展開。他們因一名尋找父親的女孩而相遇，帶著不完整的線索與各自的傷痕，逐步追查暮晶、鐘聲與失蹤者背後的秘密。",
+  "icons": [
+    {
+      "src": "assets/app-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/app-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/app-icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
