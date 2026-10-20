@@ -904,7 +904,6 @@ function showAbout(){
       <dl class="about-list">
         <div class="about-row"><dt>製作</dt><dd>林艾奭</dd></div>
         <div class="about-row"><dt>聯絡</dt><dd><a href="https://www.linkedin.com/in/%E8%89%BE%E5%A5%AD-%E6%9E%97-347ba8167" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:zh6502014@gmail.com">zh6502014@gmail.com</a></dd></div>
-        <div class="about-row"><dt>作品集</dt><dd><a href="https://zh6502014-del.github.io/portfolio/index.html" target="_blank" rel="noopener noreferrer">Portfolio</a></dd></div>
         <div class="about-row"><dt>音樂</dt><dd>Battle March by PlayOnLoop.com（CC BY 3.0）</dd></div>
       </dl>
       <div class="about-copy">© 2026 林艾奭</div>
