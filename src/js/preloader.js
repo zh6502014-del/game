@@ -1,5 +1,6 @@
-/* PRELOADER: loads the core asset set behind a loading screen (first visit only), registers the asset cache
-   service worker, then quietly prefetches story art for the nodes the player can reach next.
+/* PRELOADER: first visit shows a loading screen until the page's first screen (its own images + web font) is ready,
+   registers the asset cache service worker, then loads the core asset set in the background (images before audio)
+   and quietly prefetches story art for the nodes the player can reach next.
    Needs src/js/preload-manifest.js (scripts/build-preload-manifest.py). Never blocks or alters game logic. */
 (function () {
   'use strict';
@@ -66,7 +67,7 @@
   }
 
   /* ---------- loading screen ---------- */
-  var overlay, bar, count, hintEl, hintTimer;
+  var overlay, bar, count, hintEl, hintTimer, fakeTimer;
   var HINTS = ['正在準備卡牌與角色…', '夜域退去之前，先整理好牌組。', '第一次進入會稍久，之後會直接開始。'];
   function showOverlay() {
     overlay = document.createElement('div');
@@ -78,17 +79,21 @@
     (document.body || document.documentElement).appendChild(overlay);
     bar = overlay.querySelector('i'); count = overlay.querySelector('.nd-loading-count'); hintEl = overlay.querySelector('.nd-loading-hint');
     var h = 0; hintEl.textContent = HINTS[0];
+    // The first screen has no fixed file count, so the bar eases toward 90% and jumps to 100% when it is ready.
+    var t0 = Date.now();
+    fakeTimer = setInterval(function () { var pct = Math.round(90 * (1 - Math.exp(-(Date.now() - t0) / 1800))); bar.style.width = pct + '%'; count.textContent = '準備素材 ' + pct + '%'; }, 120);
     hintTimer = setInterval(function () { h = (h + 1) % HINTS.length; hintEl.style.opacity = 0; setTimeout(function () { hintEl.textContent = HINTS[h]; hintEl.style.opacity = 1; }, 250); }, 2800);
   }
   function progress(done, total) {
     if (!overlay) return;
+    clearInterval(fakeTimer);
     var pct = Math.round(done / total * 100);
     bar.style.width = pct + '%';
     count.textContent = '準備素材 ' + pct + '%';
   }
   function hideOverlay() {
     if (!overlay) return;
-    clearInterval(hintTimer);
+    clearInterval(hintTimer); clearInterval(fakeTimer);
     overlay.classList.add('is-done');
     var el = overlay; overlay = null;
     setTimeout(function () { el.remove(); }, 600);
@@ -171,21 +176,34 @@
     }).catch(function () {});
   }
 
+  // LOAD-PERF-2026-10-21: the loading screen only covers the first screen (the page's own images + web font), not the
+  // whole core set. The core set (battle art, frames, then audio) keeps loading behind the menu, then story prefetch.
+  function pageLoaded() {
+    return new Promise(function (r) { if (document.readyState === 'complete') r(); else window.addEventListener('load', function () { r(); }, { once: true }); });
+  }
+  function fontsReady() {
+    try { return document.fonts && document.fonts.ready ? document.fonts.ready.then(function () {}, function () {}) : Promise.resolve(); } catch (e) { return Promise.resolve(); }
+  }
+  var coreOrder = M.core.filter(function (u) { return !isAudio(u); }).concat(M.core.filter(isAudio));
+
   function boot() {
     if (!seen) showOverlay();
     var started = Date.now();
-    registerSW().then(function () {
-      var cap = new Promise(function (r) { setTimeout(r, 20000); });
-      return Promise.race([runPool(M.core, 6, true, progress), cap]);
-    }).then(function () {
+    var firstScreen = Promise.race([pageLoaded().then(fontsReady), new Promise(function (r) { setTimeout(r, 8000); })]);
+    firstScreen.then(function () {
       var wait = overlay ? Math.max(0, 450 - (Date.now() - started)) : 0;
-      setTimeout(function () {
-        hideOverlay();
-        if (!failed) { try { localStorage.setItem(KEY, M.version); } catch (e) {} }
-        document.dispatchEvent(new Event('nd:assets-ready'));
-        idle(pump);
-        setInterval(function () { if (!document.hidden) pump(); }, 20000);
-      }, wait);
+      if (overlay) progress(1, 1);
+      setTimeout(hideOverlay, wait);
+    });
+    // Core assets start after the first screen so they never compete with what the player is looking at.
+    Promise.all([firstScreen, registerSW()]).then(function () {
+      var cap = new Promise(function (r) { setTimeout(r, 60000); });
+      return Promise.race([runPool(coreOrder, 4, true), cap]);
+    }).then(function () {
+      if (!failed) { try { localStorage.setItem(KEY, M.version); } catch (e) {} }
+      document.dispatchEvent(new Event('nd:assets-ready'));
+      idle(pump);
+      setInterval(function () { if (!document.hidden) pump(); }, 20000);
     });
   }
   boot();

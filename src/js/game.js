@@ -50,7 +50,7 @@ const AUDIO_URLS={
   "hit":"https://opengameart.org/sites/default/files/skill_hit.mp3",
   "burn":"https://opengameart.org/sites/default/files/fire_sound_effect.mp3",
   "counter":"https://opengameart.org/sites/default/files/attack_hit.mp3",
-  "coinFlip":"assets/audio/coin-flip.wav",
+  "coinFlip":"assets/audio/coin-flip.mp3",
   "victory":"https://opengameart.org/sites/default/files/winfretless.ogg",
   // DUEL-SFX-062 — local, synthesized duel combat cues (scripts/gen-duel-sfx.py). Played from the presentation timeline
   // (combat-fx.js impact/launch, environment.js casts), not from rules code, so each sound lands on its visual.

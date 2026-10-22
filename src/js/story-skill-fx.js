@@ -7,7 +7,7 @@
 (() => {
   'use strict';
   const FILES = {
-    dust:'fx-dust-burst.webp', spikes:'fx-crystal-spikes.webp', fissure:'fx-ground-fissure.webp', shackle:'fx-crystal-shackle.webp',
+    dust:'fx-dust-burst.webp', fissure:'fx-ground-fissure.webp', // FX-SLIM-2026-10-21: unused spikes/shackle sprites removed (originals in storage/)
     smoke:'fx-shadow-smoke.webp', arc:'fx-sword-arc.webp', shock:'fx-gold-shockwave.webp', orb:'fx-resonance-orb.webp', ripple:'fx-resonance-ripple.webp',
     rock1:'fx-rock-debris-1.webp', rock2:'fx-rock-debris-2.webp', rock3:'fx-rock-debris-3.webp', rock4:'fx-rock-debris-4.webp', rock5:'fx-rock-debris-5.webp', rock6:'fx-rock-debris-6.webp',
     wisp1:'fx-smoke-wisps-1.webp', wisp2:'fx-smoke-wisps-2.webp', wisp3:'fx-smoke-wisps-3.webp', wisp4:'fx-smoke-wisps-4.webp',
@@ -326,9 +326,15 @@
     return ok;
   }
   window.NDSkillFX = {load, play, timeScale: 1, kinds: Object.keys(SKILLS), ready: false};
-  // In the game the sprites load from assets/story/fx/awaken as soon as this file runs; the preview page loads its own copies.
+  // In the game the sprites load from assets/story/fx/awaken once the page has finished its first screen (LOAD-PERF-2026-10-21:
+  // ~1.8 MB that only battles need, so it no longer competes with the menu); the preview page loads its own copies.
   if (!window.ND_SKILL_FX_NO_AUTOLOAD && document.currentScript) {
     const base = 'assets/story/fx/awaken';
-    load(base).then(() => { window.NDSkillFX.ready = true; }).catch(e => console.warn('skill fx sprites not loaded; using the simple fallback', e));
+    let started = false;
+    const start = () => { if (started) return; started = true;
+      load(base).then(() => { window.NDSkillFX.ready = true; }).catch(e => console.warn('skill fx sprites not loaded; using the simple fallback', e)); };
+    window.NDSkillFX.warm = start;
+    const later = () => (window.requestIdleCallback ? requestIdleCallback(start, {timeout: 1500}) : setTimeout(start, 300));
+    if (document.readyState === 'complete') later(); else window.addEventListener('load', later, {once: true});
   }
 })();

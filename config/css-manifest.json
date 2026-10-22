@@ -3,7 +3,7 @@
  "pages": {
   "index.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/keyframes.gallery-art-icon.css",
    "base/keyframes.gallery-art.css",
    "base/keyframes.css",
@@ -87,7 +87,7 @@
   ],
   "duel.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/keyframes.gallery-art-icon.css",
    "base/keyframes.gallery-art.css",
    "base/keyframes.css",
@@ -182,7 +182,7 @@
   ],
   "story.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/keyframes.gallery-art-icon.css",
    "base/keyframes.gallery-art.css",
    "base/keyframes.css",
@@ -284,7 +284,7 @@
   ],
   "art-gallery.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/keyframes.gallery-art-icon.css",
    "base/keyframes.gallery-art.css",
    "base/global.gallery-all.css",
@@ -311,7 +311,7 @@
   ],
   "frame-gallery.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/global.gallery-all.css",
    "base/global.gallery-art-frame.css",
    "components/card.gallery-art-frame.css",
@@ -324,7 +324,7 @@
   ],
   "icon-gallery.html": [
    "tokens.css",
-   "base/fonts.gallery-all.css",
+   "base/fonts.game.css",
    "base/keyframes.gallery-art-icon.css",
    "base/global.gallery-all.css",
    "components/card.gallery-art-icon.css",

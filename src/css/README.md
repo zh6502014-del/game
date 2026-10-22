@@ -52,7 +52,7 @@ python3 tests/tooling/css-snapshot.py diff before.json after.json noise.json
 | 模組 | KB | 載入的頁面 |
 |---|---|---|
 | `tokens.css` | 1.7 | 首頁、對戰、劇情、art-gallery、frame-gallery、icon-gallery |
-| `base/fonts.gallery-all.css` | 106.7 | 首頁、對戰、劇情、art-gallery、frame-gallery、icon-gallery |
+| `base/fonts.game.css` | 10 | 首頁、對戰、劇情、art-gallery、frame-gallery、icon-gallery（由 `scripts/subset-fonts.py` 產生，勿手改；改遊戲文字後重跑） |
 | `base/fonts.story.css` | 0.2 | 劇情 |
 | `base/global.css` | 0.9 | 首頁、對戰、劇情 |
 | `base/global.gallery-all.2.css` | 0.9 | 首頁、對戰、劇情、art-gallery、frame-gallery、icon-gallery |

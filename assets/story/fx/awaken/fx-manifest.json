@@ -44,16 +44,6 @@
    }
   ]
  },
- "fx-crystal-spikes": {
-  "blend": "normal",
-  "frames": [
-   {
-    "file": "fx-crystal-spikes.webp",
-    "w": 370,
-    "h": 400
-   }
-  ]
- },
  "fx-ground-fissure": {
   "blend": "add-alpha",
   "frames": [
@@ -61,16 +51,6 @@
     "file": "fx-ground-fissure.webp",
     "w": 512,
     "h": 120
-   }
-  ]
- },
- "fx-crystal-shackle": {
-  "blend": "normal",
-  "frames": [
-   {
-    "file": "fx-crystal-shackle.webp",
-    "w": 400,
-    "h": 400
    }
   ]
  },
