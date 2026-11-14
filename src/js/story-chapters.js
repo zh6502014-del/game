@@ -2469,7 +2469,7 @@
       set('assassin', 2, null, '尺烏沒有其他生還者。告示指控尺烏叛國，畫的是凜的臉。她隱藏身分，開始去找那晚被趕出研究室的紅髮女子。');
       set('tank', 0, '暮城士兵團新兵格蘭第一次出任務：撤離蘭維爾。廣場上卻還貼著無須撤離，居民不肯拋下家業。', '夜域比預估更早到，光先暗了。隊伍放棄集合點，轉向高地。高地只是暫時在夜域外，不是永遠安全。');
       set('tank', 2, null, '母女活了下來，隊員在盾崩裂前把格蘭拖出通道。報告寫著「撤離部分成功」。撤離令為什麼來得這麼晚，沒有人回答他。');
-      set('gunner', 0, null, '舊名冊裡有一名年紀相符、沒有名字的孩子。伊芙說這不是設備的聲音，赫爾曼沒有回答，把樣本鎖進櫃子。');
+      set('gunner', 0, null, '舊名冊裡有年紀相符的孩子。伊芙說這不是設備的聲音，赫爾曼沒有回答，把樣本鎖進櫃子。');
       set('gunner', 1, null, '赫爾曼要她走，別再回來。伊芙摔門而出，沒有看見暗處有人在看著她。');
       set('gunner', 2, '隔天，博士死了。伊芙潛回被翻過的研究室，移開畫框，打開只有她知道的保險箱。', '博士在信裡說出頭戴裝置的事，留給她一把槍。伊芙組好槍，擊退士兵逃出研究所。屋頂上，凜看著她離開。');
       const S = window.NDCampaignSpecs;
@@ -2658,18 +2658,6 @@
     setText('H2', 'H2-r81', '收錄這段記憶，保存本節點進度。');
     const door = step('E3', 'E3-step-05');
     door.label = '擊碎門邊的燈';
-  }
-
-  // STORY-COPY-094: E1 voice is a nameless child from the destroyed village (user-confirmed wording B).
-  {
-    const P = window.NDStoryPerformances;
-    const step = P.E1.steps.find(item => item.id === 'E1-step-07');
-    if (!step) throw new Error('STORY-COPY-094: missing E1-step-07');
-    step.text = '伊芙查了樣本的來源。這批暮晶出自數十年前毀滅的村莊；舊名冊裡，有一名年紀相符卻沒有名字的孩子。那句話，可能就是她留下的。';
-    const row = (window.NDCampaignSpecs.E1 || []).find(entry => entry[0] === '礦物來源');
-    if (!row) throw new Error('STORY-COPY-094: missing evidence 礦物來源');
-    row[1] = '來源是數十年前毀滅的村莊。死亡名冊上有一名年紀相符、沒有留下名字的孩子；那句話可能就是她留下的。';
-    window.NDStoryOrigins.gunner.nodes[0][4] = '舊名冊裡有一名年紀相符、沒有名字的孩子。伊芙說這不是設備的聲音，赫爾曼沒有回答，把樣本鎖進櫃子。';
   }
 
   window.NDStoryChapters = Object.freeze(chapters.map(({ id, title, background }) => ({ id, title, background })));
