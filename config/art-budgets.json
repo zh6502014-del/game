@@ -52,6 +52,16 @@
       "max_short": 512,
       "max_bytes": 102400
     },
+    "skill-card": {
+      "max_long": 800,
+      "max_short": 560,
+      "max_bytes": 122880
+    },
+    "fx-sprite": {
+      "max_long": 640,
+      "max_short": 512,
+      "max_bytes": 122880
+    },
     "source": {
       "max_long": 2048,
       "max_short": 1536,
@@ -94,6 +104,14 @@
     {
       "pattern": "assets/story/props/*",
       "kind": "prop"
+    },
+    {
+      "pattern": "assets/story/fx/skill-cards/*",
+      "kind": "skill-card"
+    },
+    {
+      "pattern": "assets/story/fx/sequel/*",
+      "kind": "fx-sprite"
     },
     {
       "pattern": "assets/story/*",
