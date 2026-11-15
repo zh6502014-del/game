@@ -65,9 +65,9 @@
 | 51 | `docs/design/art/bible/royal-sheet.png` | `docs/design/art/bible/royal-sheet.png` | NEW | 928 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 52 | `docs/design/art/bible/serson-sheet.png` | `docs/design/art/bible/serson-sheet.png` | NEW | 965 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 53 | `docs/design/art/bible/shuo-sheet.png` | `docs/design/art/bible/shuo-sheet.png` | NEW | 854 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
-| 54 | `assets/story/actors/sequel/herman-mecha.webp` | `assets/story/actors/sequel/herman-mecha.webp` | NEW（赫爾曼 v4） | 182 KB | 853×1280 RGBA | 現代主線赫爾曼立繪：敵人，全身只剩大腦是人類（左太陽穴有大腦窗），後腦有 創造神控制夾（正面視角看不到，設定圖背面有），胸前是古金六角齒輪墜飾 |
+| 54 | `assets/story/actors/sequel/herman-mecha.webp` | `assets/story/actors/sequel/herman-mecha.webp` | NEW（赫爾曼 v4） | 182 KB | 853×1280 RGBA | 現代主線赫爾曼立繪：敵人，全身只剩大腦是人類（左太陽穴有大腦窗），後腦有神經接駁夾（正面視角看不到，設定圖背面有），胸前是古金六角齒輪墜飾 |
 | 55 | `assets/characters/enemies/herman-battle.webp` | `assets/characters/enemies/herman-battle.webp` | NEW（赫爾曼 v4） | 114 KB | 640×960 RGBA | 赫爾曼敵人戰鬥肖像，跟立繪同一份設計，全身構圖跟 royal-guard 一致（目標約 126KB） |
-| 56 | `docs/design/art/bible/herman-sheet.png` | `docs/design/art/bible/herman-sheet.png` | NEW（赫爾曼 v4） | 1261 KB | 1280×720 RGB | 赫爾曼設定圖（無文字）：側後頭部特寫（大腦窗＋創造神控制夾）、面罩特寫、背面、正面 3/4、正面；只是文件，不給遊戲讀取 |
+| 56 | `docs/design/art/bible/herman-sheet.png` | `docs/design/art/bible/herman-sheet.png` | NEW（赫爾曼 v4） | 1261 KB | 1280×720 RGB | 赫爾曼設定圖（無文字）：側後頭部特寫（大腦窗＋神經接駁夾）、面罩特寫、背面、正面 3/4、正面；只是文件，不給遊戲讀取 |
 
 ## 規格核對
 - 立繪：853×1280 RGBA 透明，全部 ≤450KB（136–203KB）
@@ -79,15 +79,15 @@
 - 技能牌：560×800 WebP，全部 ≤120KB
 
 ## 赫爾曼 v4（2026-11-15）
-- **定位**：他是**敵人**。前傳在 A2 肉身死亡，全身只剩**大腦**是人類；大腦被裝進機體，受「創造神」控制（劇中不用「AI」一詞）。陣營：自成一方，不屬於機體派，所以不用機體派鏽紅。詳見 art-bible §6A。
+- **定位**：他是**敵人**。前傳在 A2 肉身死亡，全身只剩**大腦**是人類；大腦被裝進機體；改造過度讓大腦錯亂，長出另一個人格「創世神」，並已被它完全佔據（劇中不用「AI」一詞）。陣營：自成一方，由創世神人格主導，不屬於機體派，所以不用機體派鏽紅。詳見 art-bible §6A。
 - **造型**：延續前傳 `assets/story/actors/herman.webp`。
   - 頭部是發黑鑄鐵大腦艙，面罩是它的正面板，兩片圓形黃銅鏡片是光學感測器（前傳眼鏡是圓框）
   - **左太陽穴**有一個小圓窗，看得到泡在琥珀液裡的大腦；液體不發光
   - 外套是深咖啡底配古金藤蔓和星盤紋，裡面是機械軀幹和機械腿
   - 右臂和右胸改造最徹底，右肩有藍白電弧，右前臂內建儀器（不是槍）
   - 胸前的徽記是**古金六角齒輪墜飾**：實心六角外框、小齒、中央圓孔；刻意畫成齒輪，不是六芒星
-- **創造神控制夾**：固定設計，之後用來連結創造神的大機體。位置在後腦到上背脊椎，材質是發黑鑄鐵加銀灰護角，接出粗黑纜線。唯一的光是一個極小的警示紅點。
-- **美術例外（art-bible §12 #11）**：創造神控制硬體可以帶**一個極小的 #B3261E 警示紅點光**，這是發光清單唯一的例外。這個紅不能當表面色；鏽紅 #8C2F1E 保留給機體派。
+- **神經接駁夾**（舊稱創造神／AI 控制夾，外型不變）：固定設計，大腦接上機體的主介面；創造神設定已作廢，改為大腦錯亂後長出的創世神人格。位置在後腦到上背脊椎，材質是發黑鑄鐵加銀灰護角，接出粗黑纜線。唯一的光是一個極小的警示紅點。
+- **美術例外（art-bible §12 #11）**：神經接駁硬體（紅點代表過載警示）可以帶**一個極小的 #B3261E 警示紅點光**，這是發光清單唯一的例外。這個紅不能當表面色；鏽紅 #8C2F1E 保留給機體派。
 - **路徑**：立繪放 `assets/story/actors/sequel/`，跟其他續篇立繪一致；戰鬥肖像跟 royal-guard 一樣放 `assets/characters/enemies/`；設定圖放 `docs/design/art/bible/`。整合時沿用美術 Bot 的路徑，沒有調整。
 
 ## 路徑有疑義的項目（我選的路徑）
