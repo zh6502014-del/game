@@ -261,6 +261,10 @@ Dr. Herman, an imposing ENEMY: the elderly scholar from the prequel, now a full-
 | cg-runaway-train | 1 | 瑟爾遜獨自在失控列車車尾平台撬開連結器；壓力錶過紅線（無數字）、上方支撐梁崩落、火花、塵土 |
 | cg-three-paths | 1 | 瑟爾遜背影站在醫護所門口；遠方三束光：空輪椅、空的 mecha-body、掛著義肢的黑市攤 |
 | cg-hub-retake-* | 3 | 璐易絲（左）、朔（中）、瑟爾遜路線版（右）在中央鎖輪旁，巨門打開、蒸汽光湧入 |
+| cg-accident-pinned（J3） | 3 | 隧道深處、失控列車停下後：瑟爾遜（中右）趴在石地上撐著手肘，**雙小腿被倒下的鐵箍木支架壓住**，靴子從支架下露出；**不見血**、看不到傷口。璐易絲（左）跪著，雙手扶住他的肩。朔（右）用雙前臂撐住支架想抬起來；**右臂套碎裂、冒白蒸汽**（damaged 版），直劍在左腰 |
+| cg-infirmary-bed（J3） | 2 | 邊境醫護所（同 bg-infirmary）：瑟爾遜（左中）坐在鐵床邊，**灰色毛毯蓋住雙腿**，雙腿不動；沒穿斗篷，雙手纏繃帶放在腿上，抬頭看人。璐易絲（右中）站著低頭看他，左腕錶看得見 |
+| cg-blackmarket-clinic（J4 黑市路線開場） | 2 | 鐵道拱橋下的地下診所：瑟爾遜（左中）坐在鐵手術台上；黑市醫師（右中）只畫背影和手，正把粗糙的黃銅鐵義肢綁上他的**左小腿**；配對的**右小腿義肢**放在左邊的鐵盤上待裝。雙前臂都還是人手 |
+| bg-blackmarket-stall（背景） | 0 | 鐵道高架橋下的地下黑市拱廊：右側是帆布棚攤，掛著黃銅義肢，木箱裡裝閥門和齒輪；黃銅提燈、柱間飄著蒸汽、濕石板地反光；左前景和下方留空給 UI；沒有招牌、沒有文字 |
 
 ## 9. 檔案規格
 - 角色立繪：853×1280 透明 WebP，≤450KB（目標 150–215KB）
@@ -304,3 +308,9 @@ Dr. Herman, an imposing ENEMY: the elderly scholar from the prequel, now a full-
    `Herman is an ENEMY, brain-only human, fully possessed by 'the Creator' (創世神), a second personality born from his own over-modified, deranged brain (no external AI; never called 'AI' in-world); the rear neural-link clamp is a fixed design element; own faction (not Mechanist), never Mechanist rust-red; no clamp-off variant; menace from posture, not glow.`
 11. **神經接駁硬體的紅點例外**（2026-11-15 改版：原「創造神控制硬體」，創造神設定作廢後改指赫爾曼的神經接駁夾，紅點代表過載警示；創世神之後的新機體若有接駁硬體也適用）：第 0.3 節的發光清單只有燈火和琥珀儀錶背光。神經接駁硬體可以例外，帶**一個極小的警示紅點光 #B3261E**，只能是點光源，**絕不當成表面顏色**。鏽紅 #8C2F1E 保留給機體派陣營，不用在神經接駁硬體上。在隧道深處的紅色警示光場景裡，這個紅點可能看不出來，要靠構圖讓它被看見。
    `Creator-God control hardware may carry ONE tiny warning-red #B3261E point light, the only exception to the emissive list; never a surface colour; rust-red #8C2F1E stays reserved for the Mechanist faction.`
+12. **黑市路線的美術設定（2026-11-15，情境圖）**：
+   - **義肢的順序**：需求文件寫「接上第一副義肢」「prosthetic leg only」，所以開場的 `cg-blackmarket-clinic` 只畫**一副（一對）小腿義肢**：左小腿正在綁，右小腿那支放在盤上待裝；雙前臂都還是人手。`serson-blackmarket` 立繪的完成型（雙小腿義肢＋**左前臂**機械臂）維持不變，代表之後的樣子。左前臂什麼時候換，由劇情決定，美術不預設。
+   - **黑市醫師**：還沒設計，一律只畫背影和手，臉完全藏在兜帽陰影裡。穿無紋飾的炭灰褐兜帽外衣，配沾污的棕皮圍裙和舊皮手套。**不放任何陣營或組織紋章**（特別是自由派的鳶尾紋），也不用綠色衣服，以免看起來屬於某個陣營。
+   - **黑市的色調**：跟全作一樣是深綠環境光加暖黃銅燈。義肢一律是粗糙、不成套的黃銅和鐵，跟赫爾曼精工成套的機體明顯不同。**不用機體派鏽紅**，黑市不等於機體派。
+   - **事故不見血**：J3 事故只畫「被壓住」，不畫血跡和傷口（依需求文件的暫定）。
+   `Black-market route: the opening clinic shows only the lower-leg pair (left being fitted, right waiting on a tray), forearms still human; the surgeon is back-and-hands only, plain charcoal-brown hooded coat, no emblem, no green; black-market prosthetics are crude mismatched brass-and-iron; no Mechanist rust-red; J3 accident shows no blood.`

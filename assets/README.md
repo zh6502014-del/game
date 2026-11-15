@@ -13,8 +13,8 @@
 | `frames/v1` `frames/v2` | UI 框架（v2 為現行） |
 | `puzzles/` | 支線小遊戲素材（`recorder/` 錄音機等） |
 | `story/actors/` | 劇情角色立繪（`narva/` `extra/` `gun-unify/` 為各版本補充；`sequel/` 為續篇 J1–J4 立繪） |
-| `story/backgrounds/` | 場景背景（`locations/` 章節場景、`street-scenes/`、`h1-control-room/`） |
-| `story/illustrations/` | 整張插圖（`chapters/` 主線章節、`gun-unify/` 槍械統一版、`class-origin/` 職業前傳、`node-posters/`、`swordsman-stills/`、`corrections/`、`wolf-facing/`、`rin-wanted/`、`h1-valve-action/`） |
+| `story/backgrounds/` | 場景背景（`locations/` 章節場景、`street-scenes/`、`h1-control-room/`、`sequel/` 續篇背景） |
+| `story/illustrations/` | 整張插圖（`chapters/` 主線章節、`gun-unify/` 槍械統一版、`class-origin/` 職業前傳、`node-posters/`、`swordsman-stills/`、`corrections/`、`wolf-facing/`、`rin-wanted/`、`h1-valve-action/`、`sequel/` 續篇情境圖） |
 | `story/props/` | 道具（`archive-materials/` `guns/` `map-art/` `chapter-props/`） |
 | `story/fx/awaken/` | 覺醒特效序列圖 |
 | `story/fx/sequel/` | 續篇特效小圖（蒸汽、火焰、冷凝、電弧等） |

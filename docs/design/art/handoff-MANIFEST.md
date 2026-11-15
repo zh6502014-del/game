@@ -68,6 +68,10 @@
 | 54 | `assets/story/actors/sequel/herman-mecha.webp` | `assets/story/actors/sequel/herman-mecha.webp` | NEW（赫爾曼 v4） | 182 KB | 853×1280 RGBA | 現代主線赫爾曼立繪：敵人，全身只剩大腦是人類（左太陽穴有大腦窗），後腦有神經接駁夾（正面視角看不到，設定圖背面有），胸前是古金六角齒輪墜飾 |
 | 55 | `assets/characters/enemies/herman-battle.webp` | `assets/characters/enemies/herman-battle.webp` | NEW（赫爾曼 v4） | 114 KB | 640×960 RGBA | 赫爾曼敵人戰鬥肖像，跟立繪同一份設計，全身構圖跟 royal-guard 一致（目標約 126KB） |
 | 56 | `docs/design/art/bible/herman-sheet.png` | `docs/design/art/bible/herman-sheet.png` | NEW（赫爾曼 v4） | 1261 KB | 1280×720 RGB | 赫爾曼設定圖（無文字）：側後頭部特寫（大腦窗＋神經接駁夾）、面罩特寫、背面、正面 3/4、正面；只是文件，不給遊戲讀取 |
+| 57 | `assets/story/illustrations/sequel/cg-accident-pinned.webp` | `assets/story/illustrations/sequel/cg-accident-pinned.webp` | NEW（情境圖 2026-11-15） | 196 KB | 1536×864 RGB | J3 事故：3 人。瑟爾遜雙小腿被支架壓住，不見血；璐易絲在左邊扶著他；朔在右邊用雙臂撐支架，右臂套碎裂冒蒸汽。用在「瑟爾遜！」「我感覺不到腿了」「別動」這三句 |
+| 58 | `assets/story/illustrations/sequel/cg-infirmary-bed.webp` | `assets/story/illustrations/sequel/cg-infirmary-bed.webp` | NEW（情境圖 2026-11-15） | 191 KB | 1536×864 RGB | J3 醫護所：2 人。瑟爾遜坐在床邊，毛毯蓋腿；璐易絲站在右邊。房間跟 bg-infirmary 相同。用在「我不能再跟著你們走了，對嗎？」那兩句 |
+| 59 | `assets/story/illustrations/sequel/cg-blackmarket-clinic.webp` | `assets/story/illustrations/sequel/cg-blackmarket-clinic.webp` | NEW（情境圖 2026-11-15） | 150 KB | 1536×864 RGB | J4 黑市路線開場：2 人。黑市醫師只畫背影和手，正在接左小腿義肢；右小腿義肢放在盤上；雙前臂還是人手（見 art-bible §12 #12） |
+| 60 | `assets/story/backgrounds/sequel/bg-blackmarket-stall.webp` | `assets/story/backgrounds/sequel/bg-blackmarket-stall.webp` | NEW（情境圖 2026-11-15） | 303 KB | 1536×864 RGB | 黑市市集背景：沒有人物、沒有文字，左前景留給 UI |
 
 ## 規格核對
 - 立繪：853×1280 RGBA 透明，全部 ≤450KB（136–203KB）
