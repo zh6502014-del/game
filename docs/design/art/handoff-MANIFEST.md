@@ -4,7 +4,7 @@
 - 來源：/workspace/nightfall/out、/workspace/nightfall-fx/out、/workspace/nightfall-fx/cards、/workspace/nightfall/art-bible.md、/workspace/nightfall/bible
 - 比對對象：/workspace/repos/game（HEAD 1307432，只讀；沒有修改，沒有 commit）
 - 共 53 個檔案：全部是 **NEW**。repo 的 assets/ 裡沒有任何同路徑的檔案，所以沒有需要覆蓋的。
-- 「取代借用圖」指的是劇情程式目前借用的舊圖，例如 shuo-steam 對應 shuo.webp。（更正：luis / luis-cmd 是續篇新角色圖（成年磷），臉部延續 phosphor.webp，不取代 rin.webp 或 phosphor.webp。）新圖不同名，整合時要改程式的引用路徑，不是覆蓋檔案。repo 程式裡目前搜不到任何續篇的檔名。
+- 「取代借用圖」指的是劇情程式目前借用的舊圖。（更正：luis / luis-cmd 是續篇新角色圖（成年磷），臉部延續 phosphor.webp，不取代 rin.webp 或 phosphor.webp。）新圖不同名，整合時要改程式的引用路徑，不是覆蓋檔案。repo 程式裡目前搜不到任何續篇的檔名。
 - 格式：遊戲素材全部是 WebP，規格都已經符合需求文件；只有設定集附的設定圖是 PNG 文件。
 
 ## 檔案清單
