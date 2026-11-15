@@ -7,7 +7,7 @@
 | `audio/duel/` | 決鬥音效與環境音 |
 | `audio/story/` | 劇情音樂與特效音（`fx/`、`shield-rhythm/`） |
 | `cards/` | 卡面、卡背 |
-| `characters/` | 四職業立繪與敵人（`enemies/`，包含續篇的 `royal-guard`） |
+| `characters/` | 四職業立繪與敵人（`enemies/`，包含續篇的 `royal-guard`、`herman-battle`） |
 | `coins/` `emblems/` `environments/` `icons/` `maps/` `skins/` | 硬幣、徽章、場景、圖示、地圖、皮膚 |
 | `fonts/` | 本機字型（Noto Serif TC 分片） |
 | `frames/v1` `frames/v2` | UI 框架（v2 為現行） |

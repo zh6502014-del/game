@@ -3,7 +3,8 @@
 - 產生時間：2026-11-15（UTC+8）
 - 來源：/workspace/nightfall/out、/workspace/nightfall-fx/out、/workspace/nightfall-fx/cards、/workspace/nightfall/art-bible.md、/workspace/nightfall/bible
 - 比對對象：/workspace/repos/game（HEAD 1307432，只讀；沒有修改，沒有 commit）
-- 共 53 個檔案：全部是 **NEW**。repo 的 assets/ 裡沒有任何同路徑的檔案，所以沒有需要覆蓋的。
+- 共 56 個檔案。第 1～53 項是第一批，全部 **NEW**；repo 的 assets/ 裡沒有任何同路徑的檔案，所以沒有需要覆蓋的。
+- **2026-11-15 赫爾曼 v4 追加**：第 54～56 項是 NEW；第 48 項 art-bible.md 是 UPDATE，覆蓋 art/sequel-assets 分支上的現有版本（保留整合時改寫的 repo 內路徑）。
 - 「取代借用圖」指的是劇情程式目前借用的舊圖。（更正：luis / luis-cmd 是續篇新角色圖（成年磷），臉部延續 phosphor.webp，不取代 rin.webp 或 phosphor.webp。）新圖不同名，整合時要改程式的引用路徑，不是覆蓋檔案。repo 程式裡目前搜不到任何續篇的檔名。
 - 格式：遊戲素材全部是 WebP，規格都已經符合需求文件；只有設定集附的設定圖是 PNG 文件。
 
@@ -58,20 +59,36 @@
 | 45 | `assets/story/fx/skill-cards/card-recoil.webp` | `assets/story/fx/skill-cards/card-recoil.webp` | NEW | 109 KB | 560×800 RGB | 路徑照 new-req.txt |
 | 46 | `assets/story/fx/skill-cards/card-shield.webp` | `assets/story/fx/skill-cards/card-shield.webp` | NEW | 118 KB | 560×800 RGB | 路徑照 new-req.txt |
 | 47 | `assets/story/fx/skill-cards/card-up.webp` | `assets/story/fx/skill-cards/card-up.webp` | NEW | 70 KB | 560×800 RGB | 路徑照 new-req.txt |
-| 48 | `docs/design/art/art-bible.md` | `docs/design/art/art-bible.md` | NEW | 24 KB | text | 續篇美術設定集；文件內的參考圖路徑原本指向 /workspace/nightfall/，整合時已改成 repo 內的 `bible/` 與 `assets/story/actors/sequel/` |
+| 48 | `docs/design/art/art-bible.md` | `docs/design/art/art-bible.md` | UPDATE（2026-11-15 赫爾曼 v4；第一批為 NEW 24 KB） | 33 KB | text | 續篇美術設定集。赫爾曼 v4 版覆蓋第一批版本：新增或改寫 §6A 赫爾曼、§10 設定圖表、§12 #9～#11。文件內的參考圖路徑原本指向 /workspace/nightfall/，整合時已改成 repo 內的 `bible/`、`assets/story/actors/sequel/` 與 `assets/characters/enemies/` |
 | 49 | `docs/design/art/bible/luis-sheet.png` | `docs/design/art/bible/luis-sheet.png` | NEW | 674 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 50 | `docs/design/art/bible/mecha-sheet.png` | `docs/design/art/bible/mecha-sheet.png` | NEW | 1190 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 51 | `docs/design/art/bible/royal-sheet.png` | `docs/design/art/bible/royal-sheet.png` | NEW | 928 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 52 | `docs/design/art/bible/serson-sheet.png` | `docs/design/art/bible/serson-sheet.png` | NEW | 965 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
 | 53 | `docs/design/art/bible/shuo-sheet.png` | `docs/design/art/bible/shuo-sheet.png` | NEW | 854 KB | 1280×720 RGB | 設定圖（無文字），PNG 1280×720；只是文件，不給遊戲讀取 |
+| 54 | `assets/story/actors/sequel/herman-mecha.webp` | `assets/story/actors/sequel/herman-mecha.webp` | NEW（赫爾曼 v4） | 182 KB | 853×1280 RGBA | 現代主線赫爾曼立繪：敵人，全身只剩大腦是人類（左太陽穴有大腦窗），後腦有 創造神控制夾（正面視角看不到，設定圖背面有），胸前是古金六角齒輪墜飾 |
+| 55 | `assets/characters/enemies/herman-battle.webp` | `assets/characters/enemies/herman-battle.webp` | NEW（赫爾曼 v4） | 114 KB | 640×960 RGBA | 赫爾曼敵人戰鬥肖像，跟立繪同一份設計，全身構圖跟 royal-guard 一致（目標約 126KB） |
+| 56 | `docs/design/art/bible/herman-sheet.png` | `docs/design/art/bible/herman-sheet.png` | NEW（赫爾曼 v4） | 1261 KB | 1280×720 RGB | 赫爾曼設定圖（無文字）：側後頭部特寫（大腦窗＋創造神控制夾）、面罩特寫、背面、正面 3/4、正面；只是文件，不給遊戲讀取 |
 
 ## 規格核對
 - 立繪：853×1280 RGBA 透明，全部 ≤450KB（136–203KB）
 - royal-guard：640×960 RGBA，約 113KB（目標約 126KB）
+- herman-mecha：853×1280 RGBA，182KB（≤450KB）；herman-battle：640×960 RGBA，114KB（目標約 126KB）
 - 背景與劇情圖：1536×864，全部 ≤600KB
 - 特效：尺寸與需求一致（119×512、512×512、256×384、640×155、512×199、512×256、128×128），RGBA
 - 狀態圖示：128×128 RGBA，各約 8KB
 - 技能牌：560×800 WebP，全部 ≤120KB
+
+## 赫爾曼 v4（2026-11-15）
+- **定位**：他是**敵人**。前傳在 A2 肉身死亡，全身只剩**大腦**是人類；大腦被裝進機體，受「創造神」控制（劇中不用「AI」一詞）。陣營：自成一方，不屬於機體派，所以不用機體派鏽紅。詳見 art-bible §6A。
+- **造型**：延續前傳 `assets/story/actors/herman.webp`。
+  - 頭部是發黑鑄鐵大腦艙，面罩是它的正面板，兩片圓形黃銅鏡片是光學感測器（前傳眼鏡是圓框）
+  - **左太陽穴**有一個小圓窗，看得到泡在琥珀液裡的大腦；液體不發光
+  - 外套是深咖啡底配古金藤蔓和星盤紋，裡面是機械軀幹和機械腿
+  - 右臂和右胸改造最徹底，右肩有藍白電弧，右前臂內建儀器（不是槍）
+  - 胸前的徽記是**古金六角齒輪墜飾**：實心六角外框、小齒、中央圓孔；刻意畫成齒輪，不是六芒星
+- **創造神控制夾**：固定設計，之後用來連結創造神的大機體。位置在後腦到上背脊椎，材質是發黑鑄鐵加銀灰護角，接出粗黑纜線。唯一的光是一個極小的警示紅點。
+- **美術例外（art-bible §12 #11）**：創造神控制硬體可以帶**一個極小的 #B3261E 警示紅點光**，這是發光清單唯一的例外。這個紅不能當表面色；鏽紅 #8C2F1E 保留給機體派。
+- **路徑**：立繪放 `assets/story/actors/sequel/`，跟其他續篇立繪一致；戰鬥肖像跟 royal-guard 一樣放 `assets/characters/enemies/`；設定圖放 `docs/design/art/bible/`。整合時沿用美術 Bot 的路徑，沒有調整。
 
 ## 路徑有疑義的項目（我選的路徑）
 1. **劇情圖 cg-***：需求只寫了 actors 和 backgrounds/locations 兩個路徑，沒寫劇情圖。我放在 `assets/story/illustrations/chapters/`，因為現有的劇情圖都在這裡。
@@ -95,3 +112,10 @@
 - 全部素材都還沒接入遊戲流程，只登錄在 `docs/design/art/sequel-gallery.html` 展示頁（從 `art-gallery.html` 有連結）。這頁放在 docs/，所以不會被 `build-preload-manifest.py` 掃描，也不會讓玩家在背景下載。
 - `royal-guard.webp` 在 `assets/characters/` 底下，依 `build-preload-manifest.py` 的規則會自動進入 core 預載。
 - `config/art-budgets.json` 新增規則 `assets/ui/status/*` → `icon`。`check-art-budget.py --strict` 檢查 47 個遊戲素材，結果是 WITHIN_BUDGET。
+
+## 整合紀錄（2026-11-15，赫爾曼 v4）
+- 新增 `assets/story/actors/sequel/herman-mecha.webp`、`assets/characters/enemies/herman-battle.webp`、`docs/design/art/bible/herman-sheet.png`，路徑照交接，沒有調整。
+- `art-bible.md` 以交接版覆蓋：比對後 repo 版沒有交接版缺少的內容，唯一差異是第一批整合時改寫的參考圖路徑，已保留；新段落裡的 `out/herman-*.webp` 也改成 repo 路徑。
+- 兩張圖登錄在 `sequel-gallery.html`，沒有接入遊戲劇情程式。
+- `herman-battle.webp` 在 `assets/characters/` 底下，跟 royal-guard 一樣，下次執行 `build-preload-manifest.py` 時會自動進入 core 預載（約 114KB）。`herman-mecha.webp` 在 `assets/story/` 底下，程式沒有引用，不會被預載。
+- `herman-sheet.png` 在 docs/，不屬於任何 `config/art-budgets.json` 規則，也不會被預載。

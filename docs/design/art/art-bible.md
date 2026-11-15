@@ -1,7 +1,7 @@
 # Nightfall 續篇（J1–J4）美術設定集 Art Bible v1
 
 > 往後所有立繪、劇情圖、情境圖都以本文件為準。每一張圖的 prompt 都要「整段貼上」對應角色的 **Character Token**，再加上場景描述。左右一律以**角色本人的左右**為準（正面 3/4 視角時，角色的左手在畫面右側）。
-> 視覺參考：`docs/design/art/bible/<id>-sheet.png`（設定圖，本文件下稱 `bible/`）與 `assets/story/actors/sequel/<id>.webp`（定稿立繪；皇權派衛兵是 `assets/characters/enemies/royal-guard.webp`）。
+> 視覺參考：`docs/design/art/bible/<id>-sheet.png`（設定圖，本文件下稱 `bible/`）與 `assets/story/actors/sequel/<id>.webp`（定稿立繪；敵人戰鬥肖像是 `assets/characters/enemies/<id>.webp`，例如 `royal-guard.webp`、`herman-battle.webp`）。
 
 ---
 
@@ -201,6 +201,49 @@ A royalist guard of about 30, stocky, square face with short black stubble and a
 
 ---
 
+## 6A. 赫爾曼博士 Dr. Herman｜現代主線・**敵人**・全機體共生者
+> **身分參考**：前傳 `assets/story/actors/herman.webp`。前傳的眼鏡是**圓框**（依前傳圖為準；文件寫的「窄框」待更正），外套是深褐配古金藤蔓與星盤紋，胸前掛金鏈圓齒輪墜飾。續篇造型的所有特徵都從這些演變而來。
+> **已定（使用者＋遊戲編劇 Bot，2026-11-15）**：他是**敵人**。前傳在 **A2** 實驗銃反噬那一夜肉身死亡（不是 H2）。王室把驗屍交給曜火研究所自己的人（機體派激進派的前身），驗屍時保存了他的**大腦**，死訊是真的。之後「**創造神**」把大腦裝進一具機體。創造神是從國王頭戴裝置的遠端調度系統衍生出來的，靠隧道的蒸汽管線供能，不靠暮晶；劇中不用「AI」這個詞。他是唯一的全機體共生者，**全身只有大腦是人類**，意識**已經被創造神同化**。終章打倒他之後，創造神轉移到它自己更大的機體（另案設計）。大腦保存了十多年（暫定）。
+> **陣營（已定）**：自成一方，受創造神控制，**不屬於機體派**，所以外觀**永遠不用機體派鏽紅**。**不做「抑制夾脫落」版**，因為他的意識已經被同化，被打倒後也不會恢復清醒。美術上不能出現暮晶、晶體或現代電子；創造神相關的設備走蒸汽管線和鑄鐵工業風。
+> 威脅感靠**姿態與輪廓**來表現（高、挺直、方肩、下巴水平），不靠更亮的光。設計是原創的，避免看起來像任何現成角色。
+- **身高／體型**：真人尺寸，約 180 cm，瘦長、站姿挺直、肩膀方正
+- **頭部＝大腦艙**：整顆頭是密封、有鉚釘的**發黑鑄鐵大腦艙**。
+  - **面罩就是大腦艙的正面面板**：兩個**圓形黃銅框護目鏡片**是他的光學感測器（延續前傳的圓眼鏡），裝在黃銅鏡片橫桿上；鏡片是深色玻璃，裡面只有**一點小小的琥珀儀錶背光**，不能有大片光暈。下半部是有細孔的鐵護顎
+  - **大腦窗**：**一個**厚玻璃小圓窗，黃銅框，開在**他本人左側太陽穴／頭頂偏左**（正面視角在畫面右側）。透過窗可以隱約看到蒼白的大腦泡在混濁的深琥珀液體裡；液體**只透光、不發光**。**絕對不開在額頭正中央**（以免像國王的額前晶體頭戴裝置），後腦也不開窗
+  - 面罩和額頭沒有晶體、沒有額箍
+- **頸部**：一節節疊起來的鐵環，加上纜線構成的機械頸柱
+- **創造神控制夾（固定設計，之後用來連結創造神的機體）**：一個獨立的方角密封模組，**夾在後腦底部到上背脊椎**。
+  - 材質：**發黑鑄鐵**，銳角加小鉚釘，四角有**銀灰色護角件**
+  - 沒有鉤爪、沒有亮鉻。工藝冷硬精確，跟他自己的古典黃銅工藝明顯不同
+  - 下方接出一束粗黑纜線，沿上背脊椎鑽進外套。背面圖的上背中央另有一塊圓形鐵接線蓋板
+  - 唯一的光是**一個極小的警示紅點 #B3261E**，外殼完全不塗紅（見第 12 節 #11）
+  - 正面視角看不到它，背面和側後視角一定要畫出來
+- **身體**：全部是機械，**看不到任何肉或皮膚，也看不出衣服底下有人體**。外套敞開處露出**分段肋狀鑄鐵軀幹**，下面是**有關節的鐵製機械腿**，膝蓋有活塞（沒有背心、襯衫、長褲）。材質是帶鏽的深灰鑄鐵、黃銅關節、銅管，精工打造、整套封閉
+- **外套**：破舊的深咖啡色長外套，及小腿，下襬磨損、有鬚邊；布面是褪色的古金藤蔓紋和星盤紋（背後中央有大星盤紋）；大翻領、高立領，**不戴兜帽**，後背開衩，兩肩都有覆蓋。右袖沒有了
+- **固定細節（左右以角色本人為準）**：
+  - **右臂＋右胸**改造最徹底：分段厚鐵甲，右肩到右胸有燒焦裂開的焊縫，冒出少量**藍白電弧**
+  - **右前臂**內建黃銅科學儀器：全空白錶盤（只有指針和刻度，沒有數字）、黃銅放大鏡、黃銅卡尺，外面纏一圈古金環箍。**整組要看得出是儀器，不能像槍**
+  - **左臂**是較細的素面鑄鐵手臂，穿在外套袖子裡。兩手都空著，沒有武器
+  - **唯一徽記**：胸前中央，金鏈下掛一枚**古金六角齒輪墜飾**（由前傳的圓形齒輪墜飾改造）：實心六角形外框，每邊有小齒，中央一個圓孔。**絕不能畫成六芒星或星形**，以免被看成宗教符號。不加任何組織或陣營徽章
+- **色票**：外套 #2E2219 ~ #3B2B1F｜古金紋 #A8823A ~ #C29A4B｜發黑／鏽鑄鐵 #2A2826 ~ #4A4440（鏽斑 #6B3F26）｜黃銅 #B5873A｜銅管 #9A5A34｜鏡片背光 #E8A54A（小點）｜大腦液 #3A2812 ~ #6A4A22（不發光）｜控制夾紅點 #B3261E（單一小點）｜電弧 #DDE8FF（只限右肩到右胸）
+- **禁止**：
+  - 顏色：綠色；機體派鏽紅 #8C2F1E（外殼、布料、光都不行）；紅色塗裝；青色或藍綠色光；電弧以外的藍色；亮銀、鉻、亮面槍鐵
+  - 頭部：大腦窗開在額頭正中或後腦；鏡片大片光暈；人臉形面具、一字眼縫、T 字目鏡；兜帽；額頭晶體或額箍；發光晶體
+  - 身體：露出肉或皮膚；看起來像衣服底下有人體（背心、長褲）
+  - 配件：六芒星或星形墜飾；單肩披風；噴射背包；槍或實驗銃（右臂儀器不能像槍）；法杖；螢幕和任何現代電子；組織徽章
+  - 文字、數字、字母、Logo
+  - 機甲的特徵：八角形胸艙、大圓肩甲、方塊鐵拳
+- **視覺參考**：
+  - `bible/herman-sheet.png`：左上是側後頭部特寫（左太陽穴大腦窗＋控制夾）；左下是正側面罩特寫；右側依序是背面（控制夾、纜線、接線蓋板）、正面 3/4、正面
+  - `assets/story/actors/sequel/herman-mecha.webp`：853×1280 立繪
+  - `assets/characters/enemies/herman-battle.webp`：640×960 敵人戰鬥肖像
+- **Character Token（herman-mecha）**
+```
+Dr. Herman, an imposing ENEMY: the elderly scholar from the prequel, now a full-machine symbiont whose ONLY human part is his brain; human-sized, about 180 cm, lean, tall, upright, shoulders squared, chin level; menace from posture and silhouette, not glow. Head = a sealed riveted blackened cast-iron brain vessel; its front panel is a goggle mask with TWO ROUND brass-framed goggle lenses as optical sensors (echoing his round glasses), dark glass with only a tiny warm amber instrument backlight inside each, no bloom; a perforated iron jaw plate. ONE small thick round brass-rimmed glass porthole on his LEFT temple / upper-left of the skull (never the forehead centre, never the back) showing a pale brain dimly in murky dark-amber liquid that does not glow. Neck: a column of stacked iron rings and cables. At the back of the head and upper spine: a separate angular control clamp of blackened cast iron with sharp edges, small rivets and silver-grey corner fittings, no hooks, no chrome, a bundle of heavy black cables running down the upper spine into the coat, and ONE tiny pinpoint warning-red light as its only light; no red paint. Worn frayed dark-coffee-brown long coat with faded antique-gold vine scrollwork and circular astrolabe patterns, wide lapels, tall stand-up collar, no hood, open over a ribbed segmented cast-iron mechanical torso and jointed iron mechanical legs with knee pistons; no waistcoat, no trousers, no skin anywhere. A small antique-gold HEXAGONAL GEAR medallion on a gold chain at the centre of the chest: a solid hexagon outline with small cog teeth and a round centre hole, never a six-pointed star or hexagram. RIGHT arm and right chest most heavily converted, no sleeve, scorched cracked welded seam at the right shoulder with a few small blue-white electric arcs; built into the RIGHT forearm: a blank white gauge dial with only a needle and ticks, a brass loupe and brass calipers bound by an antique-gold ring band, clearly scientific instruments, nothing gun-like. LEFT arm slimmer plain cast iron in the coat sleeve. Hands empty. Rusted dark-grey cast iron, brass and copper pipe only. No green, no cyan or teal, no rust-red, no glowing crystals, no shiny silver, no screens, no text.
+```
+
+---
+
 ## 7. 場景筆記（背景圖）
 | id | 場景 | 時間／光 | 必要元素 | 禁止 |
 |---|---|---|---|---|
@@ -232,6 +275,7 @@ A royalist guard of about 30, stocky, square face with short black stubble and a
 | `bible/serson-sheet.png` | 瑟爾遜：原始、輪椅、黑市三版同比例並排＋臉部特寫（機甲版請看 `assets/story/actors/sequel/serson-mecha.webp`） |
 | `bible/mecha-sheet.png` | 機甲：正面 3/4＋背面（後腰電纜接口）＋駕駛艙、拳頭、電纜接口特寫 |
 | `bible/royal-sheet.png` | 皇權派軍官＋衛兵＋皇冠徽章、大鑰匙、頭盔特寫 |
+| `bible/herman-sheet.png` | 赫爾曼博士（敵人、只剩大腦是人類）：左上側後頭部特寫（左太陽穴大腦窗＋創造神控制夾）、左下面罩特寫＋背面（控制夾、纜線）、正面 3/4、正面 |
 
 ## 11. 生成新情境圖的流程
 1. 貼 Global Token → 貼場景描述（參考第 7、8 節）→ 依出場角色逐一貼 Character Token（變體再加追加句）。
@@ -254,3 +298,9 @@ A royalist guard of about 30, stocky, square face with short black stubble and a
    `Spiralling mist streams are drawn INTO the armband vents, the amber glow inside the vents dims to cold; no outward heat haze.`
 8. **氣劍視覺規則**：一律畫出朔的直劍（黑鞘、黃銅護手，平時佩於左腰）；蒸汽月牙沿著揮劍的弧線延伸，白熱核心＋外緣琥珀色。
    `Qi slash: Shuo's straight steel sword is always shown; the white-hot, amber-edged steam crescent follows the blade's swing arc.`
+9. **成年磷**：移除前傳「不製作成年未來磷」的限制。現代主線的成年磷就是璐易絲（見第 1 節），可以正常製作成年磷／璐易絲的所有圖。
+   `The prequel rule "no adult future Lin" is lifted: in the modern storyline adult Lin = Luis.`
+10. **赫爾曼的定位**：他是**敵人**，全身只有大腦是人類，受創造神控制。造型以前傳 `herman.webp` 延續：圓鏡片面具、深咖啡古金外套、六角齒輪墜飾。後腦的 創造神控制夾是固定設計。陣營已定：自成一方，不屬於機體派，永遠不用機體派鏽紅；不做控制夾脫落版。他身上不發綠光或青光，也沒有發光晶體；藍白電弧只出現在右肩到右胸。威脅感靠姿態，不靠加亮光。
+   `Herman is an ENEMY, brain-only human, assimilated and puppeted by the Creator God (創造神; never called 'AI' in-world); the rear Creator-God clamp is a fixed design element; own faction (not Mechanist), never Mechanist rust-red; no clamp-off variant; menace from posture, not glow.`
+11. **創造神控制硬體的紅點例外**：第 0.3 節的發光清單只有燈火和琥珀儀錶背光。創造神的控制硬體可以例外，帶**一個極小的警示紅點光 #B3261E**，只能是點光源，**絕不當成表面顏色**。鏽紅 #8C2F1E 保留給機體派陣營，不用在創造神的硬體上。在隧道深處的紅色警示光場景裡，這個紅點可能看不出來，要靠構圖讓它被看見。
+   `Creator-God control hardware may carry ONE tiny warning-red #B3261E point light, the only exception to the emissive list; never a surface colour; rust-red #8C2F1E stays reserved for the Mechanist faction.`
