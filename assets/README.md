@@ -7,16 +7,19 @@
 | `audio/duel/` | 決鬥音效與環境音 |
 | `audio/story/` | 劇情音樂與特效音（`fx/`、`shield-rhythm/`） |
 | `cards/` | 卡面、卡背 |
-| `characters/` | 四職業立繪與敵人（`enemies/`） |
+| `characters/` | 四職業立繪與敵人（`enemies/`，包含續篇的 `royal-guard`） |
 | `coins/` `emblems/` `environments/` `icons/` `maps/` `skins/` | 硬幣、徽章、場景、圖示、地圖、皮膚 |
 | `fonts/` | 本機字型（Noto Serif TC 分片） |
 | `frames/v1` `frames/v2` | UI 框架（v2 為現行） |
 | `puzzles/` | 支線小遊戲素材（`recorder/` 錄音機等） |
-| `story/actors/` | 劇情角色立繪（`narva/` `extra/` `gun-unify/` 為各版本補充） |
+| `story/actors/` | 劇情角色立繪（`narva/` `extra/` `gun-unify/` 為各版本補充；`sequel/` 為續篇 J1–J4 立繪） |
 | `story/backgrounds/` | 場景背景（`locations/` 章節場景、`street-scenes/`、`h1-control-room/`） |
 | `story/illustrations/` | 整張插圖（`chapters/` 主線章節、`gun-unify/` 槍械統一版、`class-origin/` 職業前傳、`node-posters/`、`swordsman-stills/`、`corrections/`、`wolf-facing/`、`rin-wanted/`、`h1-valve-action/`） |
 | `story/props/` | 道具（`archive-materials/` `guns/` `map-art/` `chapter-props/`） |
 | `story/fx/awaken/` | 覺醒特效序列圖 |
+| `story/fx/sequel/` | 續篇特效小圖（蒸汽、火焰、冷凝、電弧等） |
+| `story/fx/skill-cards/` | 續篇技能牌面（560×800） |
+| `ui/status/` | 狀態圖示（128×128 單檔，例如 `ui-status-burn.webp`） |
 | `story/minigames/shield-rhythm/` | 盾牌節奏小遊戲素材 |
 | `story/_records/` | 生成紀錄與提示詞（不載入遊戲） |
 

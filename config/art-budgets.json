@@ -140,6 +140,10 @@
       "kind": "coin"
     },
     {
+      "pattern": "assets/ui/status/*",
+      "kind": "icon"
+    },
+    {
       "pattern": "assets/fx/*",
       "kind": "background"
     }
