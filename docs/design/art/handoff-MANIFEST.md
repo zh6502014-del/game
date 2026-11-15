@@ -4,15 +4,15 @@
 - 來源：/workspace/nightfall/out、/workspace/nightfall-fx/out、/workspace/nightfall-fx/cards、/workspace/nightfall/art-bible.md、/workspace/nightfall/bible
 - 比對對象：/workspace/repos/game（HEAD 1307432，只讀；沒有修改，沒有 commit）
 - 共 53 個檔案：全部是 **NEW**。repo 的 assets/ 裡沒有任何同路徑的檔案，所以沒有需要覆蓋的。
-- 「取代借用圖」指的是劇情程式目前借用的舊圖，例如 luis 借用 rin.webp。新圖不同名，整合時要改程式的引用路徑，不是覆蓋檔案。repo 程式裡目前搜不到任何續篇的檔名。
+- 「取代借用圖」指的是劇情程式目前借用的舊圖，例如 shuo-steam 對應 shuo.webp。（更正：luis / luis-cmd 是續篇新角色圖（成年磷），臉部延續 phosphor.webp，不取代 rin.webp 或 phosphor.webp。）新圖不同名，整合時要改程式的引用路徑，不是覆蓋檔案。repo 程式裡目前搜不到任何續篇的檔名。
 - 格式：遊戲素材全部是 WebP，規格都已經符合需求文件；只有設定集附的設定圖是 PNG 文件。
 
 ## 檔案清單
 
 | # | 交接檔案（相對 /workspace/art-handoff/） | 目標路徑 | 狀態 | 大小 | 規格 | 備註 |
 |---|---|---|---|---|---|---|
-| 1 | `assets/story/actors/luis.webp` | `assets/story/actors/sequel/luis.webp` | NEW | 150 KB | 853×1280 RGBA | 取代借用中的 rin.webp（非同名，不覆蓋） |
-| 2 | `assets/story/actors/luis-cmd.webp` | `assets/story/actors/sequel/luis-cmd.webp` | NEW | 136 KB | 853×1280 RGBA | 取代借用中的 rin.webp（非同名） |
+| 1 | `assets/story/actors/luis.webp` | `assets/story/actors/sequel/luis.webp` | NEW | 150 KB | 853×1280 RGBA | 續篇新角色圖（成年磷） |
+| 2 | `assets/story/actors/luis-cmd.webp` | `assets/story/actors/sequel/luis-cmd.webp` | NEW | 136 KB | 853×1280 RGBA | 續篇新角色圖（成年磷） |
 | 3 | `assets/story/actors/shuo-steam.webp` | `assets/story/actors/sequel/shuo-steam.webp` | NEW | 170 KB | 853×1280 RGBA | 取代借用中的 shuo.webp（非同名，不覆蓋） |
 | 4 | `assets/story/actors/shuo-steam-damaged.webp` | `assets/story/actors/sequel/shuo-steam-damaged.webp` | NEW | 168 KB | 853×1280 RGBA |  |
 | 5 | `assets/story/actors/serson.webp` | `assets/story/actors/sequel/serson.webp` | NEW | 149 KB | 853×1280 RGBA | 取代借用中的 gran-young.webp（非同名） |
