@@ -28,7 +28,7 @@
 | 15 | `assets/story/backgrounds/locations/bg-tunnel-entrance.webp` | `assets/story/backgrounds/locations/bg-tunnel-entrance.webp` | NEW | 252 KB | 1536×864 RGB |  |
 | 16 | `assets/story/backgrounds/locations/bg-tunnel-deep.webp` | `assets/story/backgrounds/locations/bg-tunnel-deep.webp` | NEW | 317 KB | 1536×864 RGB |  |
 | 17 | `assets/story/backgrounds/locations/bg-infirmary.webp` | `assets/story/backgrounds/locations/bg-infirmary.webp` | NEW | 268 KB | 1536×864 RGB |  |
-| 18 | `assets/story/backgrounds/locations/bg-hub-station.webp` | `assets/story/backgrounds/locations/bg-hub-station.webp` | NEW | 282 KB | 1536×864 RGB | 三面旗配色是 11/14 你回覆的暫定色；11/15 新清單把三面旗列為「顏色未定」 |
+| 18 | `assets/story/backgrounds/locations/bg-hub-station.webp` | `assets/story/backgrounds/locations/bg-hub-station.webp` | NEW | 282 KB | 1536×864 RGB | 三面旗配色已於 11/14 核准，旗幟圖未製作 |
 | 19 | `assets/story/backgrounds/locations/bg-hub-control.webp` | `assets/story/backgrounds/locations/bg-hub-control.webp` | NEW | 282 KB | 1536×864 RGB |  |
 | 20 | `assets/story/illustrations/chapters/cg-runaway-train.webp` | `assets/story/illustrations/chapters/cg-runaway-train.webp` | NEW | 230 KB | 1536×864 RGB | 需求沒寫劇情圖路徑；選現有劇情圖所在的 illustrations/chapters/ |
 | 21 | `assets/story/illustrations/chapters/cg-three-paths.webp` | `assets/story/illustrations/chapters/cg-three-paths.webp` | NEW | 260 KB | 1536×864 RGB | 需求沒寫劇情圖路徑；選現有劇情圖所在的 illustrations/chapters/ |
@@ -83,7 +83,7 @@
 7. **立繪資料夾不一致**：新需求把 serson-mecha-out 放在 `actors/sequel/`，舊需求寫 `actors/`，所以其他 10 張續篇立繪原本交在 `actors/` 根目錄。**整合時（2026-11-15）已統一移到 `actors/sequel/`**，表格的「目標路徑」欄已更新；「交接檔案」欄保留交接資料夾的原始位置。
 8. **mecha-body**：需求的用途寫「道具／戰鬥肖像」，但列在 A｜角色立繪，所以放在立繪資料夾（整合後是 `actors/sequel/`）。
 9. **設定集**：放在 `docs/design/art/art-bible.md`，設定圖放在 `docs/design/art/bible/`，不跟現有的 CHARACTER-BIBLE-* 檔案衝突。文件內的參考圖路徑原本是 `/workspace/nightfall/...`，整合時已改成 repo 內路徑。
-10. **bg-hub-station 的三面旗**：配色是 11/14 使用者同意的暫定色（自由派綠、皇權派藏青金、機體派鏽紅銅），但 11/15 的新需求清單又把三面旗列為「顏色還沒定」。
+10. **bg-hub-station 的三面旗**：三面旗配色已於 11/14 核准（自由派綠＋三角、皇權派藏青金＋方框、機體派鏽紅黃銅＋六角，以 art-bible 為準），旗幟圖未製作。
 
 ## 沒有放進來的
 - raw、picks、替代版本、預覽圖、contact sheet、舊的 zip
